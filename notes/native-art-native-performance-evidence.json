@@ -1,0 +1,82 @@
+{
+  "romSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "scope": "E01 reproduced rendering regression acceptance: independent original-renderer control, fresh paired entry, both response offsets and608-frame raw deployment cadence. No E02-E05 completion claim.",
+  "files": [
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/report.json",
+      "sha256": "dce9e34ef41d7105b1f0d39547355e910af0c0ee2a943a90c086fbb297355fd7"
+    },
+    {
+      "path": "build/art/native-palette-response/20260919T071143.467631Z/report.json",
+      "sha256": "2294805a5f452c05173b9225410f828941053155e955386916afb281c89e7bb1"
+    },
+    {
+      "path": "build/art/native-palette-deployment/20260919T071432.102714Z/report.json",
+      "sha256": "d8cdd1e482426ddec9ed4359984ecee065d76a06d68cb9dadcaf5b6c9654e4fb"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T070814.886679Z/report.json",
+      "sha256": "0171141c4b26a873a61b09120d9fc676640fd9be09b04a69fe22decd9a84d964"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T071142.675194Z/report.json",
+      "sha256": "6725bd8a90a0e29190ac85a41627ffdd0aed043b6e9978eb96570cade3a23432"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T071431.436280Z/report.json",
+      "sha256": "a95be6f729f690ad9aa33e8200e29005d40df6033f00b4660a18b115d6e5568d"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/control-ready.state",
+      "sha256": "701720eec9e90671a5a6433a658b0591b74f3aaea6624c15d54d9f20033173be"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/control-ready.ram",
+      "sha256": "420f85e4ef666397d0289e9c9fc825c097b1db2feb37b012b1a44691288f0a32"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/control-ready.iwram",
+      "sha256": "6f79fbf771da0a0b9c5243aa095ce7dcc8e1dc6cef9104e34888884178e4affe"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/control-entry-6.state",
+      "sha256": "3f151d604b40249ba563e6eada1acab56c7fcaa76d86d3afc76a2fceb18895e0"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/control-entry-6.ram",
+      "sha256": "ca853c10314ded0866cde3a2e19b88aad29f6e3d978147cd1a2a1c608bd9b000"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/control-entry-6.iwram",
+      "sha256": "d543851a60f295dce7d9c69765af6d46b984e4440083350c86094edb5a6c4639"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-ready.state",
+      "sha256": "729482f1eb53f6e1513dcb48f3291bb9826256c7b59cc76120f56eb827724d9b"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-ready.ram",
+      "sha256": "75c47c61a1d248f9eb3691514d3ef51f4ebd7ef5eef7e702d16631246b8fb062"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-ready.iwram",
+      "sha256": "9967342e48cbf3e91d61e7045e428d32536806626a3b6135e96d5f92fd2ce179"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-entry-6.state",
+      "sha256": "651e08626fb064c65567eb5af8f49ed5d34bc95756f9b497f1102e4281ce59bf"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-entry-6.ram",
+      "sha256": "ea95970f05848629b88652893e0e4e983e6419562be57e6c51cf7237ed7a4569"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-entry-6.iwram",
+      "sha256": "d543851a60f295dce7d9c69765af6d46b984e4440083350c86094edb5a6c4639"
+    },
+    {
+      "path": "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json",
+      "sha256": "9ea2a9f08521e78d19ec4895a2fdeb50ca45c3da9ce736bd344647921dba4f85"
+    }
+  ]
+}

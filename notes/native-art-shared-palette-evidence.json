@@ -1,0 +1,102 @@
+{
+  "romSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "scope": "Native shared-palette conversion and bounded all-ten capacity. Diagnostic, failed and passing reports are distinct; no final performance/engineering acceptance.",
+  "files": [
+    {
+      "path": "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json",
+      "sha256": "9ea2a9f08521e78d19ec4895a2fdeb50ca45c3da9ce736bd344647921dba4f85"
+    },
+    {
+      "path": "build/art/native-palettes/tests/20260919T065415.714225Z/report.json",
+      "sha256": "cd532f52f87d57ec39c756380ed16e9ce100bf88044df94beef04c6e40672017"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T070003.108000Z/report.json",
+      "sha256": "2a65eb86c74a5fbbd6139ffd1ce16f6d8912f6a7d7e4cec2015462c0c67b0c01"
+    },
+    {
+      "path": "build/art/capacity-entry/20260919T065732.199504Z/report.json",
+      "sha256": "5d6e6e167cac56044fc39e42a464618e0d91414d9840429ce4c25505bc0945ca"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T065332.379083Z/report.json",
+      "sha256": "e9c8ccd303f5e38d3c1a746cd34547c7e7e17dde2b8f1064694937e95696f128"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T065414.902630Z/report.json",
+      "sha256": "89f380604a9c7286f493457647149cfd1873ae1380367ff2f9cd9c2ca77ad180"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T065652.133770Z/report.json",
+      "sha256": "fdd71162043af6eea68edb7df74c8c64269c1853ba087fa2f4d77b3bc592f618"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T065731.327343Z/report.json",
+      "sha256": "4423548e40d857105423075617b504b5fbcc014dd46498d548df3e0134592af7"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T065827.573035Z/report.json",
+      "sha256": "cbb852e900fc290efedf8bd24f3832bc71ac0fe77e81ecacf545ad14f77689f7"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T070002.202864Z/report.json",
+      "sha256": "a4870e6429f8db528a51289ccd481c99ca344d576ed9a7895e7fc95266fec65a"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065417.931001Z/failed.json",
+      "sha256": "cbca49290eff1b03029ca587bd58422cd6ffe0a171ccd85d5dc8e19049cb663f"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065417.931001Z/failed.ram",
+      "sha256": "a857d8c6a18123ea7488e1ec1f67d8886f624123260e928bee85d295b9505743"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065417.931001Z/failed.iwram",
+      "sha256": "1368c0db3655a75b8d4c0ad23540faa692ed927c4c51b61b2a61a4a359b02f8a"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065417.931001Z/failed.oam",
+      "sha256": "0a4c03b9cd7a847b2123d6defaaf9fd6c6ac1d7a59ac7138c6a09d91d94f1fe2"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065417.931001Z/failed.palette",
+      "sha256": "cc90a27e4fe2ed63076bf1ea1ec97a4ce0f09311ee257d0645e92d7bb3905ceb"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065417.931001Z/failed.state",
+      "sha256": "6c2cb35037356e6874b02f35adb0371986628c54092ec061bb6cd71f418fe02c"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065417.931001Z/fixture.gba",
+      "sha256": "2103742b9cb06fbd9d5f7dc2c3f0d072f87079f99dc4f13e04d20b3477fc8fc6"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065828.442231Z/failed.json",
+      "sha256": "425c76b6b577cbe14465192ad832df27beedb0ccc5451a204b4d3915bd223439"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065828.442231Z/failed.ram",
+      "sha256": "0a0227ec64ff59b2f9fbb214cb092f99f6ad23fa2cf28ec264bb8a4e60d01275"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065828.442231Z/failed.iwram",
+      "sha256": "03e38f88eea763870f175a75fa71b3ff9caedb901f6ca7608d5fcf9590a25a1d"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065828.442231Z/failed.oam",
+      "sha256": "915a8b60740a3cf003c64bf86b60264e34f76280cc707dd4f5b1a5de1ff512f7"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065828.442231Z/failed.palette",
+      "sha256": "ef1371f0984510bca0eb079cf0c9d108ef9d43076d42b5305e8557b651caf02f"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065828.442231Z/failed.state",
+      "sha256": "d70ba7225bf06718541ddb154d44c65f76e0fc3c03bdccac9d72057dcea391c0"
+    },
+    {
+      "path": "build/art/all-class-capacity/20260919T065828.442231Z/fixture.gba",
+      "sha256": "2103742b9cb06fbd9d5f7dc2c3f0d072f87079f99dc4f13e04d20b3477fc8fc6"
+    }
+  ]
+}

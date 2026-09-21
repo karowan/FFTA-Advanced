@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "files": {
+    "failed.json": {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/failed.json",
+      "sha256": "7d27444f82387483397e50e4a5a94d217a2ca4b2b9089e466bfb45b35627a0cd"
+    },
+    "earned-world.state": {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/earned-world.state",
+      "sha256": "6b27f6919cd3b3294e626a53bfb70e391a12de89494f1013398f3039d8cb20e5"
+    },
+    "earned-world.ram": {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/earned-world.ram",
+      "sha256": "29eeb24051d0629abd7a12bbb5d62beff098019fceef16fe3dde18c20496dffb"
+    },
+    "earned-world.iwram": {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/earned-world.iwram",
+      "sha256": "074011b4867fce42715bd520baffb8acdb0689a9d351eea566e1913fbff3da61"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Turn the fifth sprite into a cook job using the SAME underlying Human pixel base as the others. Keep the shared face, eyes, anatomy, pose and pixel positions unchanged. Change only the job-specific appearance: bald head, cream rolled sleeves, mustard apron and teal sash. Keep the entire row and its layout.",
+  "references": [
+    "build/art/race-study-2026-09-19/shared-base-template.png"
+  ],
+  "status": "Exact shared pixels preserved for four aligned native Human references. Design/native integration not accepted.",
+  "source": "build/art/race-study-2026-09-19/shared-base-v1-generated.png",
+  "sourceSha256": "8d8a05a9b1519ca6cfe70266d5b2b04e319d7468d45587cbc568c65f1dc523f2",
+  "referenceSha256": [
+    "89d51c0a66507dc54232c72b94aabef247852b9398d78837f4d043a437788810"
+  ],
+  "assembled": "build/art/race-study-2026-09-19/shared-base-v1-locked.png",
+  "assembledSha256": "5188317e55cd89d54e32d63d9fba06708d221fd18f7482e8f7ad0ff9da2ddd3f",
+  "proof": "build/art/race-study-2026-09-19/shared-base-v1-proof.json",
+  "sharedForegroundPixels": 68,
+  "preservedExactly": 68,
+  "productionAccepted": false
+}

@@ -1,0 +1,342 @@
+{
+  "romSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "scope": "Native primary and secondary casting, held axe and projectile/impact coexistence; retained failures and bounded queued-upload proof. E02-E05 remain open.",
+  "files": [
+    {
+      "path": "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json",
+      "sha256": "9ea2a9f08521e78d19ec4895a2fdeb50ca45c3da9ce736bd344647921dba4f85"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074713.986119Z/365-active-composition-events.json",
+      "sha256": "2ac689d5ec4e8886c4772e5b38a2fc1e4855a3bd084dce152373cbb109d1d6e3"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074713.986119Z/365-bypass-composition-events.json",
+      "sha256": "ea91d3334f320f474ef4898c9985fb72741af056cbed2dd8c7549e1e2058e88b"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074713.986119Z/report.json",
+      "sha256": "b1f1a2ce568e9af8e9edd54864bcedf849f2653c00b9514c52bcca9df2e60a22"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074726.050562Z/371-active-composition-events.json",
+      "sha256": "36b7685777b3e09579a9d23243bcd7662a86c4190be5cd42ce47e763d490dcf9"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074726.050562Z/371-active-highlight-events.json",
+      "sha256": "40120b64d446cb359bf9e8c034b0dbd55b418e24da2165b0a98e95cea0fc557a"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074726.050562Z/371-bypass-composition-events.json",
+      "sha256": "8b1816b2854330d172ff3083943daf04a07f5baf264e794fc971d53b55172067"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074726.050562Z/371-bypass-highlight-events.json",
+      "sha256": "8a3dc2704cf4806353cc2df6ada711150624887ca501d695ff89134cde27c743"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074726.050562Z/report.json",
+      "sha256": "83919101bc2c4986283f168eb30c7fa2a97c64a2ae961654faf028db6d86e995"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074757.707687Z/365-active-failed.iwram",
+      "sha256": "ae243e67b8932228d889e7c540d1bb0c3a2f248bebac25f02c177bbf9340b141"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074757.707687Z/365-active-failed.oam",
+      "sha256": "377fb5b797f698e38631dfa853c29e2e32443b3ee6f3f9851859c02d6a9df0e7"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074757.707687Z/365-active-failed.palette",
+      "sha256": "944d6cdc98b4a8316a83aba14430b5e8eb6a143f39a3fdf18e89b8d85c3fc8de"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074757.707687Z/365-active-failed.png",
+      "sha256": "532f150915aae54ea620454301bd41c51195b31f5fb675667b26211c8b7865ea"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074757.707687Z/365-active-failed.ram",
+      "sha256": "2a770e252fe167e26667675a5a0aa94ce5d781208378780f34a27c6e24a4035b"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074757.707687Z/365-active-failed.state",
+      "sha256": "9bb61167ab02b016a4702f675b556c5ba9c954aa91a2b1961f93d707ecc906ea"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074757.707687Z/365-active-failed.vram",
+      "sha256": "01545fc7df2238b6504380db360ca09ba22b820439447f4fa441aea259bda68c"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074757.707687Z/failed.json",
+      "sha256": "bbde7faecd582a3f94f99af684958b7f00d0aaf54fb3287cb5ca2c1279a715ec"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074921.714001Z/365-active-composition-events.json",
+      "sha256": "529f09e91e7261acc5be3d328a37becc86d521fa64448ff0fdd53aa3e7edd74b"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074921.714001Z/365-bypass-composition-events.json",
+      "sha256": "d940a0b75b7c8f95e8c24ec8522f960ea8f583e8cb87b5eca972a4777522423d"
+    },
+    {
+      "path": "build/art/connected/casting/20260919T074921.714001Z/report.json",
+      "sha256": "0c8ffefbad5fd09e7bba5abb6fb20ff81956b7d6e3ecf1a1d11965f51d795101"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075211.235512Z/baseline-failed.iwram",
+      "sha256": "2f7d0d8b4c5682557f6a3a9c415ca921d40d51ba97769cf3600b92182377f1d0"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075211.235512Z/baseline-failed.oam",
+      "sha256": "1b82e4032835d14237eb8261fd1728b961bf323c8454862a435b85f9c8c24193"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075211.235512Z/baseline-failed.palette",
+      "sha256": "e4f36fd8c6ba2534fb73a6e5cd0ba0206f2352a9b6f14d65b9f5fa821a138f60"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075211.235512Z/baseline-failed.png",
+      "sha256": "10d66caa888f3cae3745dc24f0479452b0bdac26ff8c1dfcd9c45a6f21a93ecf"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075211.235512Z/baseline-failed.ram",
+      "sha256": "6279d7f4d388a333f1dcdc9fd3984f060bca3ca0fe1204965251a62f2570a6fa"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075211.235512Z/baseline-failed.state",
+      "sha256": "f682ad89808c46f2e10e335aa05459893c1fa40b20a08870e38675a433f7722e"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075211.235512Z/baseline-failed.vram",
+      "sha256": "4a7dcfd473696cffcd7c93da3e9c214e1a31ea2b31fcfc37821b0739feec7036"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075211.235512Z/failed.json",
+      "sha256": "b64daa2e911db9ecfdc8aeede6adcd7021996593d9e8cf18fecb6cb74b3795c0"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075306.888734Z/baseline-failed.iwram",
+      "sha256": "2f7d0d8b4c5682557f6a3a9c415ca921d40d51ba97769cf3600b92182377f1d0"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075306.888734Z/baseline-failed.oam",
+      "sha256": "1b82e4032835d14237eb8261fd1728b961bf323c8454862a435b85f9c8c24193"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075306.888734Z/baseline-failed.palette",
+      "sha256": "e4f36fd8c6ba2534fb73a6e5cd0ba0206f2352a9b6f14d65b9f5fa821a138f60"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075306.888734Z/baseline-failed.png",
+      "sha256": "10d66caa888f3cae3745dc24f0479452b0bdac26ff8c1dfcd9c45a6f21a93ecf"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075306.888734Z/baseline-failed.ram",
+      "sha256": "6279d7f4d388a333f1dcdc9fd3984f060bca3ca0fe1204965251a62f2570a6fa"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075306.888734Z/baseline-failed.state",
+      "sha256": "f682ad89808c46f2e10e335aa05459893c1fa40b20a08870e38675a433f7722e"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075306.888734Z/baseline-failed.vram",
+      "sha256": "4a7dcfd473696cffcd7c93da3e9c214e1a31ea2b31fcfc37821b0739feec7036"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075306.888734Z/failed.json",
+      "sha256": "6ed8e4fac3de23954fcf2ecd357003c3b9734779ab26935ac23ba43429863792"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T075501.346555Z/failed.json",
+      "sha256": "a2ed6d1c876bc556d75c80f8226ac2d6d55aedea8261820a4c1b7169cf2ed0bf"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T080308.889227Z/native-held-donor.gba",
+      "sha256": "26256a6005bdd7f827b81e428407f35860f8ae30c3f4fc3a7b8d0291745e2fc8"
+    },
+    {
+      "path": "build/art/generated-actions/battle/20260919T080308.889227Z/report.json",
+      "sha256": "8c259de602ae99dd9089d12da5769401245915b47d1cffd92d1a3d8af3110c5d"
+    },
+    {
+      "path": "build/art/generated-projectile/20260919T080358.267462Z/report.json",
+      "sha256": "d75625f9a60b4ef238b818734b48f64620118d41c556bf765a7c6d52493edc79"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-ready.iwram",
+      "sha256": "9967342e48cbf3e91d61e7045e428d32536806626a3b6135e96d5f92fd2ce179"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-ready.ram",
+      "sha256": "75c47c61a1d248f9eb3691514d3ef51f4ebd7ef5eef7e702d16631246b8fb062"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-ready.state",
+      "sha256": "729482f1eb53f6e1513dcb48f3291bb9826256c7b59cc76120f56eb827724d9b"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/control-ready.iwram",
+      "sha256": "6f79fbf771da0a0b9c5243aa095ce7dcc8e1dc6cef9104e34888884178e4affe"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/control-ready.ram",
+      "sha256": "420f85e4ef666397d0289e9c9fc825c097b1db2feb37b012b1a44691288f0a32"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/control-ready.state",
+      "sha256": "701720eec9e90671a5a6433a658b0591b74f3aaea6624c15d54d9f20033173be"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/native-control.gba",
+      "sha256": "f83e770d6f6d26d7c223def35eb9b98844c710c9f3a8fd48038abcd3db273a99"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/report.json",
+      "sha256": "dce9e34ef41d7105b1f0d39547355e910af0c0ee2a943a90c086fbb297355fd7"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T074738.250216Z/candidate-ready.iwram",
+      "sha256": "48cae98de6a69e71f952932414d7966ef7d68f844ae43b7385b56096630cb4b3"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T074738.250216Z/candidate-ready.ram",
+      "sha256": "84420e4f318e00ed78f02ca27d0dee9039da3e1c904ce6230c34a0fadf36568d"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T074738.250216Z/candidate-ready.state",
+      "sha256": "48d494f02a8e9db95380e600bcec65a9ca79691b8d8d2eabef2c5f6699a0c40a"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T074738.250216Z/control-ready.iwram",
+      "sha256": "7a324cd50aff0de85ca66282207a5230ff5275beab392490ca23ec4f29cfac3a"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T074738.250216Z/control-ready.ram",
+      "sha256": "49158cf92b08f3f74bd1a9abcefb645e9595c3cd8d4f6f1dbf5144d8fcf89347"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T074738.250216Z/control-ready.state",
+      "sha256": "08f1bbfdaae9182e564a8ac281346ee162653ca05d74b1bfd13ba466394795b6"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T074738.250216Z/native-control.gba",
+      "sha256": "f83e770d6f6d26d7c223def35eb9b98844c710c9f3a8fd48038abcd3db273a99"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T074738.250216Z/report.json",
+      "sha256": "9180e9237684ecb4c81502cec95aa6aea55c1d2ef7973f5605fba916f1962db7"
+    },
+    {
+      "path": "build/art/native-palettes/current.json",
+      "sha256": "9ea2a9f08521e78d19ec4895a2fdeb50ca45c3da9ce736bd344647921dba4f85"
+    },
+    {
+      "path": "build/art/queued-trail-upload/20260919T080100.509804Z/failed.json",
+      "sha256": "4cf1f61e91c16a7db49df22f42385fe461b514201c122db6db53d33ecadc35eb"
+    },
+    {
+      "path": "build/art/queued-trail-upload/20260919T080152.739816Z/failed.json",
+      "sha256": "4cf1f61e91c16a7db49df22f42385fe461b514201c122db6db53d33ecadc35eb"
+    },
+    {
+      "path": "build/art/queued-trail-upload/20260919T080152.739816Z/native-update-0.json",
+      "sha256": "579aada7030fffad61fc1e13dd59be22e78dd33b62d544bbf6d0cc4e80e69706"
+    },
+    {
+      "path": "build/art/queued-trail-upload/20260919T080308.215166Z/input-index.json",
+      "sha256": "4eb7f1f8e8e887918f7035152d7344e02c3190f5013042ac860bce503f7d90a9"
+    },
+    {
+      "path": "build/art/queued-trail-upload/20260919T080308.215166Z/report.json",
+      "sha256": "1e07386049a49837e3cdab86db46c5e77e2a5270acafbce1370231abd9237853"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T074713.118518Z/001-test-art-native-viking-thunder.log",
+      "sha256": "f6af1e6baeba111c8b51378be43c7eb1eed3c76c2ec9b4a4a2514eb9d477a298"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T074713.118518Z/002-test-art-native-viking-thundaga.log",
+      "sha256": "4daff6589bf76a38bd5fdeb528c59305506a966202ac2c3abc04689e727aa0dc"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T074713.118518Z/003-test-art-native-secondary-entry.log",
+      "sha256": "2d43ebe0a74addbab545bbb21318d8f534006991785be27037c4f8475d79e409"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T074713.118518Z/004-test-art-native-secondary-thunder.log",
+      "sha256": "5709ae6d42668c5be23bc23c4f2f5b7d14efe39b76bdee37062174bf2a3f1d58"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T074713.118518Z/report.json",
+      "sha256": "1619256637de375fba600e943a324323413f41dc358e432fe639fb202b110313"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T074920.831827Z/001-test-art-native-secondary-thunder.log",
+      "sha256": "5656d0432eae16b1f2a371df30898b6f8af91ab0f1e6dda75061a331a800835f"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T074920.831827Z/report.json",
+      "sha256": "845b00c0788fd51ee9991e5dc9ee9b94151b855297ca6134031b7f5b5c1e0cd8"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T075210.339258Z/001-test-art-native-held-weapon.log",
+      "sha256": "ac99a2bb4c2f80de35d8a374fdf8d75b3af8f487641ea13ecbba795314e3d5b1"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T075210.339258Z/report.json",
+      "sha256": "6b5165c22a735733c350e5e5bd5d53a36b78adb913be7c7b1e37a5ea82e43418"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T075305.997124Z/001-test-art-native-held-weapon.log",
+      "sha256": "d64c0952963a2883f0734be9fd9d5da7536363e4132d3a7c78d9712583c154e4"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T075305.997124Z/report.json",
+      "sha256": "1db6942a8b30701f63637aed40d065c9e55c1a157e6a8689f5459a9b68196dd5"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T075500.462756Z/001-test-art-native-held-weapon.log",
+      "sha256": "9b2cf0d8b41cfdcce981db1fa11387d36f6d635b40b07a9230fae811694770df"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T075500.462756Z/report.json",
+      "sha256": "bf96d513b829b8bf3927c91e28f8f79126c3e3c80ab2a0814b69795958a54884"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T080059.345286Z/001-test-art-queued-trail-upload.log",
+      "sha256": "699dc0dd89f1bd321a4e12d968b685370d52e835e750ecc680819a0067e97b81"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T080059.345286Z/report.json",
+      "sha256": "08d8c28537a597da1fe8a81c95fdf9e831827bcd7b17ab9ac1a335c3a1e6f574"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T080151.526196Z/001-test-art-queued-trail-upload.log",
+      "sha256": "bec101cfa9f45c043923186100859588fd6f8ec6b8399cb1ee099f3f19fcc28b"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T080151.526196Z/report.json",
+      "sha256": "c7b0012c50daf7cc491d4b9b7e9db1d30b4a8d1a3217b86ca24e42ee737981b8"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T080307.041530Z/001-test-art-queued-trail-upload.log",
+      "sha256": "6ed584e935bd9359e6cbceb5a7a561d433d12b1b08e5e2b6be2389ac9f9d2405"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T080307.041530Z/002-test-art-native-held-weapon.log",
+      "sha256": "27740c2fda9ba8719ac17d269fa395412921d6ae9c04032a846c2596d1cdfde3"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T080307.041530Z/003-test-art-native-projectile-impact.log",
+      "sha256": "636a20b384fe0ff206ed89678aae6e1b5c3ff3745c97104e539884e170da4e8f"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T080307.041530Z/report.json",
+      "sha256": "2554c9d780b21bb5c733daa58b0cccb98ed71b349e937b624115c709fb630e46"
+    },
+    {
+      "path": "notes/native-art-queued-trail-inputs.json",
+      "sha256": "669a7dca5051094925967264731823a490d7206eaa6c64749b5e493e11b30022"
+    }
+  ]
+}

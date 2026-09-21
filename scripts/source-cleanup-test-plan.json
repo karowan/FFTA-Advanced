@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "description": "Source-only cleanup: staged asset/credential rejection, portable runtime selection, redacted provenance, and exact historical source bundle identity. No emulator or gameplay execution.",
+  "timeoutSeconds": 180,
+  "steps": [
+    {"id":"test-source-cleanup","runtime":"python","kind":"static","suites":["source-cleanup"],"args":["scripts/test-source-cleanup.py"]},
+    {"id":"test-source-git-guard","runtime":"python","kind":"static","suites":["source-cleanup"],"args":["scripts/test-git-content.py"]},
+    {"id":"audit-public-source","runtime":"python","kind":"static","suites":["source-cleanup"],"args":["scripts/audit-public-source.py"]}
+  ]
+}

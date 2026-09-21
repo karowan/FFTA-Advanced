@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "units": [
+    {"slot": 2, "copyFrom": 4, "job": 121, "hp": 500, "mp": 100, "lessons": ["GEO-A7", "GEO-A9"]},
+    {"slot": 4, "job": 121, "hp": 500, "mp": 100, "lessons": ["GEO-A7", "GEO-A9"]}
+  ]
+}

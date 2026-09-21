@@ -1,0 +1,23 @@
+{
+  "round": 2,
+  "maxRounds": 5,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Edit ONE original FFTA bald cook sprite. Image1 is native FFTA style/face/body authority. Image2 is our current cook at TRUE32x32 logical resolution enlarged8x, the edit target.\nCorrect these precise failures identified by two independent reviewers:\n1. The far eye vanishes into the left face contour. WIDEN the visible facial plane enough for TWO independent dark eye clusters. There must be a skin-colored logical pixel separating the far eye from the outer dark outline. The near eye is slightly larger; both eyes remain visibly distinct at32x32. Keep a left-facing nose and the original FFTA three-quarter face angle in image1. Not profile and not straight-on. Do not solve this with enormous white eyes.\n2. Cook is too thin and tall beside native sprites. Make silhouette16-17 logical pixels wide by26-27 tall, broader shoulders and short slightly bent legs with broad planted boots. Current silhouette is about13 pixels wide. Widen body and head appropriately; shorten lower face/beard and legs. Keep native compact head/body proportions.\n3. Retain clear cream rolled sleeves, ochre apron bib, teal sash and knot in broad flat clusters. Beard should be a small warm brown jaw shadow, not a heavy black neck band. Bald forehead should be shorter with muted skin highlight, not bright white crown.\nPreserve original bald tan cook with cream sleeves, ochre split apron, teal sash/tail at anatomical LEFT hip, dark trousers and brown boots. No hats/hair/armor/weapons or copied donor costume.\nOUTPUT one 1024 square transparent image that is EXACTLY a32x32 logical pixel cell enlarged32x. A logical pixel is32x32 output pixels; every shape and color boundary uses this coarse grid. No tiny high resolution detail. Max15 opaque flat colors. The character sits centered inside this cell and does not touch edges. No ground oval, shadows, glow, background texture, text, extra sprites or labels.",
+  "references": [
+    "build/art/race-study-2026-09-19/user-face-reference.png",
+    "build/art/race-study-2026-09-19/review-loop-1-native/native-review.png"
+  ],
+  "priorReview": {
+    "a": "Needs refinement: far eye merges into outline; narrow upright body; beard/neck band and bright crown too strong.",
+    "b": "Needs refinement: retain skin pixel between far eye and outline; broaden torso and shorten face/legs; simplify sleeves/apron to survive reduction."
+  },
+  "source": "build\\art\\race-study-2026-09-19\\review-loop-2.png",
+  "sourceSha256": "0be890de9529750ca524a318557fa482b8608e666a367491cd2744805c2a8d78",
+  "referenceSha256": [
+    "ce3f98d107f0328a6bb3728330f6de901f23a50364a82f99e0949773cd7101ee",
+    "146ddba8397c90ba9eb9a86e357b4520e4884a4e9c3b2577b332547a7008ad48"
+  ],
+  "productionAccepted": false,
+  "status": "reviewed; see review-loop-outcome.json; not user accepted"
+}

@@ -1,0 +1,26 @@
+{
+  "round": 3,
+  "maxRounds": 5,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Image1 is a five-cell horizontal FFTA style-matching workbench: four original small native characters occupy cells1-4, and cell5 at far right is EMPTY. Image2 is our original bald cook design identity.\nEDIT IMAGE1: preserve the four existing characters, their scale, layout and plain neutral background. Add ONE newly redrawn cook in empty cell5 at far right, same ground line, same tiny pixel scale and height as the adjacent originals. The cook must look as though the SAME original FFTA sprite artist drew it for this row. Return the entire five-character comparison row.\nCook identity: bald tan Human, small brown jaw beard, cream rolled sleeves, muted ochre apron, dark teal sash and tail, brown trousers and boots. No donor hat/hair/armor or weapons. Retain this identity but DISCARD the previous cook's elongated forehead, large white eyes and narrow proportions.\nCritical FACE: use the actual facial construction of the adjacent four reference sprites, not image2's face geometry. A LEFT-facing shallow three-quarter face, BOTH eyes visibly placed inside the skin region. Move the far eye INWARD at least one logical pixel so it does NOT TOUCH the outside head outline. A skin-colored pixel separates far eye from outline. Two small dark eye clusters separated by skin bridge; no big white eye rectangles. Compact low rounded bald forehead with muted skin highlight, no glossy white highlight. Small jaw beard beneath mouth, no black neck ring. Head angle/body camera must match the neighbors.\nMatch neighboring head/body proportions, compact shoulders, very short legs, broad feet and sparse color clusters. Each character approximately16 logical pixels wide by27 tall, one logical pixel outline, at most15 flat cook colors. Logical pixels same size as neighboring native sprites. No smoothing, texture or gradients. No extra cook shadow or ground oval.\nOutput a landscape1280x512 workbench in the EXACT same five equal256-wide cells. All sprites retain original placement; fifth cook is centered at x1152 and grounded at y368, approximately128 pixels wide and216 high. Entire background flat #e4e2dc. No text, labels, frames or grid.",
+  "references": [
+    "build/art/race-study-2026-09-19/context-template.png",
+    "build/art/race-study-2026-09-19/review-loop-2.png"
+  ],
+  "priorReview": {
+    "a": "Far eye correction did not happen; eye white and crown too bright; forehead/legs too tall.",
+    "b": "Far eye still touches outline; oversized forehead; torso/clothing improved."
+  },
+  "method": "contextual row generation then technical extraction of fifth cell",
+  "source": "build\\art\\race-study-2026-09-19\\review-loop-3.png",
+  "sourceSha256": "6fb6d4dba2c124f9b0ed5f658e4f07d2a4d8604ac629b9992bebb7ebc56ec5ea",
+  "referenceSha256": [
+    "19597cd38ab3772b00cce49382149e771bf49d7cdfd68d531d779fcb85f5620c",
+    "0be890de9529750ca524a318557fa482b8608e666a367491cd2744805c2a8d78"
+  ],
+  "rawGeneratedSource": "build\\art\\race-study-2026-09-19\\review-loop-3-context.png",
+  "rawGeneratedSha256": "608935ecb77c88281f9c2c6ab4101ebd653184fe4ccd484e12e0d9a31a695e05",
+  "productionAccepted": false,
+  "status": "reviewed; see review-loop-outcome.json; not user accepted"
+}

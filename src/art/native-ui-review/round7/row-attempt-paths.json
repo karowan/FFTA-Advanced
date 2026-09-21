@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "human-samurai",
+    "kind": "icon",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-799f16a7-c285-45fe-bd5e-e4fab12c1840.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Opaque black letterboxing: crop to visible reference strip rows with over 50% non-black pixels. Alpha alone cannot detect this border."
+    }
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "status": "Idle import draft, not production accepted",
+  "source": "build/art/imagegen/samurai/samurai-idle-v3.png",
+  "selectedPrivatePath": "build/art/imagegen/samurai/samurai-idle-v4.png",
+  "prompt": "Use case: precise-object-edit. Edit the attached original Samurai idle sheet for reliable native GBA sprite import. Keep the same original red-lamellar Samurai, four facings, two idle poses, costume construction and transparent background. Fix layout and tiny-face readability. Output a square sheet of 4 columns by 2 rows, with every full character centered in its own equal cell and at least 15 percent completely transparent margin on every side of EVERY cell. No part of the boots, sheathed sword or crest may cross cell boundaries. Keep all characters the same scale. Make the face a little wider in the four front-facing figures so the eyes remain distinct dark one-pixel shapes with light cheeks even when the whole body is reduced to 30 pixels tall. Simplify every character into real large square pixel clusters: about 22 pixels across and 30 pixels high, not fine pixel texture or gradients. Use only 15 flat colors shared across the sheet: dark navy outline, two indigos, three reds, two golds, two skin tones, near-white face/eye highlight, two warm gray boot colors and two muted shadow colors. Keep clean dark outlines, clear small hands, boots and coherent samurai armor. Change no costume identity or facing direction. No labels, letters, numbers, frames, ground, shadows, glow, gradient or invented backdrop. Transparent alpha background."
+}

@@ -1,0 +1,27 @@
+# Grace native integration review
+
+Accepted private ROM `0e5f3193d77afe7a64b254cc0bdab0377cc02836`, built on the accepted Dark Sword overlay `e3193a7e639d935e4c722011975029dc26177776`. Main-build acceptance requires the current adapters below; these results do not claim a hook already installed in production.
+
+Grace is global support140, Viera lesson94. Its approved rule is frontal Evade for ordinary A accuracy from every direction, without a flat Evade bonus, SRes change, positional damage change, or bypass of ordinary prevention/status/cap rules. The existing draft Grace functions in `src/engine/mobility-supports.c` and `.s` satisfy this contract. No Light Foot source was changed.
+
+## Exact native contract
+
+Native A accuracy `0812C7F4` receives attacker/defender/item/actorX in R0–R3, followed by actorY/targetX/targetY/defenderFacing/reactionCheck/physicalKind on the caller stack. `12C834` checks automatic hit states through `12C56C`; `12C850/12C860` check native reaction availability/prevention. `12C874` obtains Evade through `12C7B8`. `12C894` computes relative direction through `12C700`; table `083A8444` supplies divisors1/2/2/4. The sole Grace patch is `12C89C..12C8A8`, replacing bytes `00214156301c15f009ff041c`. At entry R0 addresses the signed divisor byte, R6 is Evade, R7 is the evaluated defender. Resume `0812C8A8` is immediately after the displaced divide and result assignment.
+
+The shim changes only the selected divisor to1 when native `CD50C(defender)` returns140. It runs the same native signed divide `1426B8`, preserves all live R0–R12, NZCV, SP and caller frame, and dynamically aligns the C boundary at either native stack residue. LR is not live across this slice: the next native BL at `12C8AC` replaces it. Native status adjustments `12C634`, attacker accuracy support `12C610` and Evade cap5..95 `12C670` remain downstream.
+
+Native S accuracy is the separate eight-argument `12D1DC` path. It resolves status resistance/immunity at `12C97C`, native support/status logic including `12D0BC` and `12D1B8`, and uses its own direction table `083A8448`. It never calls the replaced divisor slice. Grace leaves its entire behavior unchanged. Native attacker support13/4 supplies Concentrate/Turbo MP adjustments; support11 controls are also included in both attacker/defender S matrices.
+
+Player preview `B55CC` copies battle-wrapper+1F facing into unit+F8 at `B56A8..B56AC`, then restores unit fields on return. Changing only unit+F8 in a real-frame fixture is therefore a vacuous facing test. The actual-game harness resolves the target wrapper through the native display caller and sets both fields before preview. No production change is needed at this site.
+
+## Verification
+
+`scripts/test-grace-native.py`: **97,334 assertions pass**. Coverage includes560 exact installed-slice register/flags/frame comparisons (signed edge values, all four divisor entries, SP0/4);2304 full A physical/magic direction cases;14,336 full native status/reaction cases;46,848 independent S comparisons;33,284 unit-isolation checks; aligned C entry. A nonvacuity assertion confirms actual prevention0, capped95 and automatic-hit100 outputs occurred. Reaction fixtures patch their own native pointer literal `CD500` as well as support literal `CD538`; otherwise assigned synthetic reactions would silently resolve from the wrong bank.
+
+`scripts/test-grace-in-game.py`: fresh native battle fixture, disposable hostile target explicitly constructed from the native Viera Archer record, Grace lesson94 mastered. Legal Jona Dark Knight uses Sanguine Sword357 and Infernal Strike358 through real movement, command selection, preview, cancellation, confirmation and animation. Both actions are compared with an independent native control whose divisor table alone is all1. Across defender facings0/1/2/3, ordinary displayed75/50/75/88% becomes50% throughout; displayed damage14 stays identical. Committed hit/miss resources match that native control, including Dark Sword riders and MP costs. Position, equipped Grace/mastery, AP, inventory and reserved-memory guard remain intact. Native end-turn, Save Now and SRAM-only cold resume pass for both actions. The final repeatable adapter passes **332 assertions**, including dynamic-wrapper preflight,32 committed seed/control executions and two native cold resumes.
+
+Artifacts are under `build/expansion/probes/grace/0e5f3193d77afe7a64b254cc0bdab0377cc02836/`: `native-report.json`, `game-report.json`, fresh `fixture/`, and `game-357/` / `game-358/` screenshots and native states. Actual magical/status menu animations were not separately replayed; their accuracy is covered by complete native function execution, while the real UI cases cover the two new physical actions and their committed riders.
+
+## Main composition
+
+Import `patchGraceSupport` from `scripts/patch-grace-support.mjs` and apply it once to the composed ROM after the mobility source symbols have been linked. The helper guards the exact12 displaced bytes and missing symbols. No data-bank or save-format changes are required. Run `test-grace-native.py --current` first, then generate the matching battle fixture and run `test-grace-in-game.py --current`. The game adapter rejects a stale main ROM or fixture; `--fixture PATH` permits a matching private fixture. The default native test builds an isolated overlay on the frozen Dark Sword input, preserving production artifacts.

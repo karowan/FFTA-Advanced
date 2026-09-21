@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "description": "Package and launch resolution only: exact BPS application, deterministic share ZIP, release switching, corrupt/missing inputs, and save isolation. Reuses accepted gameplay evidence for the unchanged ROM.",
+  "timeoutSeconds": 180,
+  "steps": [
+    {"id":"test-mod-release","runtime":"python","kind":"static","suites":["mod-release"],"args":["scripts/test-mod-release.py"]}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source": "build/art/generated-actions/battle/20260919T075501.346555Z",
+  "controlSha1": "a2a0cf9e38ebd1a3a501706e770f4c3fd2dda753",
+  "sha256": {
+    "failed.json": "a2ed6d1c876bc556d75c80f8226ac2d6d55aedea8261820a4c1b7169cf2ed0bf",
+    "native-held-donor.gba": "26256a6005bdd7f827b81e428407f35860f8ae30c3f4fc3a7b8d0291745e2fc8",
+    "baseline-attack-53.vram": "8bbb590d89830feda0d14d8cc878a2e6c555243166720a7de7458dbe5ce175e2",
+    "baseline-attack-57.ram": "1fea88a9fb78fdee3e640442a3e1b136e06965d42cfc618f45a74763ba4c947f",
+    "baseline-attack-57.vram": "61d9e967e3d85abeecc4dbd0c3128eec690b5c416d7036756f9ada29208375e0",
+    "baseline-attack-57.oam": "1bef77c4b778d70b8fd6e9e06aeb6482fd3170e334f6bed146dd4cb8027c2973",
+    "baseline-attack-57.palette": "afae4770146cb3479b3a392a516cf56480501d26982274a98b5cc483e3760991"
+  }
+}

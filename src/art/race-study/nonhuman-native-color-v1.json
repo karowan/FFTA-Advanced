@@ -1,0 +1,770 @@
+{
+  "schema": 1,
+  "status": "Native bases primary-reviewed; animation and runtime acceptance pending",
+  "bases": [
+    {
+      "job": 118,
+      "slug": "bangaa-viking",
+      "nativePalette": 0,
+      "sourceBase": {
+        "path": "build/art/approved-class-animation-2026-09-19/bangaa-viking/front-neutral.png",
+        "sha256": "4d79bf0b485903ab4022ee84b67690f134f94f78afdf0ce0c6b4a730c6f736e1"
+      },
+      "generatedReference": {
+        "prompt": "Recolor this Bangaa Viking using only the native colors in image 2. Preserve the exact chunky pixel grid, silhouette, horns, long snout, pose and detail. Keep the blue cloak, warm brown leather, golden skin and ivory horn highlights distinct and bright. Avoid turning the leather and helmet green. Transparent background, one sprite.",
+        "tool": "image_gen.imagegen",
+        "references": [
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\bangaa-viking\\source-reference.png",
+            "sha256": "be15f38fb360010f200bb8a152565f9e1b39037d0abb0b0cd3965dbf08c5385c"
+          },
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "model": "built-in; tool-managed",
+        "output": "build\\art\\native-color-study-2026-09-20\\bangaa-viking\\generated-v1.png",
+        "outputSha256": "9cd7fc7f5821ccbf5aea2b361acec0704b6d711c7460ca293c4f968c04efd8fe",
+        "converted": "build\\art\\native-color-study-2026-09-20\\bangaa-viking\\generated-v1-native.png",
+        "convertedSha256": "7072d4ec014eb125e77b8cc176423dba84e25b4971627c943790f5e512e9494d",
+        "tileSha256": "3fbd2ad90691be5bcf9f3e194a8f5d71981e1a1c5f0a9ed165f3bedd66d98a74",
+        "nativePalette": 0,
+        "nativePaletteWordsUnchanged": true,
+        "logicalCanvas": [
+          32,
+          32
+        ],
+        "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+        "status": "review-only-not-approved",
+        "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+      },
+      "converted": "build\\art\\native-nonhuman-integration-2026-09-20\\bangaa-viking\\calibrated-base.png",
+      "convertedSha256": "70c5986ad9f2f47cc246e09edd9fb953d3c039a31069533e1af2a6eb8059cd93",
+      "alphaGridAgreement": 0.9150390625,
+      "method": "Inverse-distance nearest reference-color voting in Oklab; five neighbors; original alpha",
+      "status": "native-base-primary-reviewed-for-integration",
+      "meanReferenceDistance": 0.0004956794022065428,
+      "maxReferenceDistance": 0.014496466284839249,
+      "reviewer": "primary agent; not user approval",
+      "review": "Native-size and enlarged comparison inspected. Original alpha retained; face, costume and outline readable. All-pose review and in-game acceptance remain."
+    },
+    {
+      "job": 119,
+      "slug": "bangaa-dark-knight",
+      "nativePalette": 1,
+      "sourceBase": {
+        "path": "build/art/approved-class-animation-2026-09-19/bangaa-dark-knight/front-neutral.png",
+        "sha256": "c708fd80429df300144b7470cb8e753be9709631c0403849224d7441133da49a"
+      },
+      "generatedReference": {
+        "tool": "image_gen.imagegen",
+        "model": "built-in; tool-managed",
+        "prompt": "Recolor this Bangaa Dark Knight using only the native colors in image 2. Keep armor predominantly near-black, with bright gold trim and a muted purple cloth accent. Preserve the exact chunky pixel grid, silhouette, closed helmet, long snout, pose and detail. Do not turn the armor pink. Transparent background, one sprite. Keep the armor readable with gray-plum highlights from swatches 2 and 12, deep plum shadows from swatch 4, and black outlines from swatch 1. Preserve the black outline and ground shadow. Keep the gold trim clearly visible.",
+        "references": [
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\source-reference.png",
+            "sha256": "835d622a28830c00cb34d55fefdc8bbcf822c4cc6e20b1a57ad0239972312c75"
+          },
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-1.png",
+            "sha256": "2bf068b72d7b35f133ee633037ce9deee087cd5c4ba55c12cecb8cca53cad3cb"
+          }
+        ],
+        "output": "build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\generated-v2.png",
+        "outputSha256": "d53c7b5b49eb845c1365838d4863e2d40c4b720b2e921b1b1b13e04bca7ef208",
+        "converted": "build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\generated-v2-native.png",
+        "convertedSha256": "f7863945e88fe44c869aba36ce4c1f2c6b654a8f31abe17b69c5c48f7d22b54e",
+        "tileSha256": "89a22f6b49f7814775d0574c624f98d18ba8ea2ded6bff6148f49923df60ece0",
+        "nativePalette": 1,
+        "nativePaletteWordsUnchanged": true,
+        "logicalCanvas": [
+          32,
+          32
+        ],
+        "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+        "status": "review-only-not-approved",
+        "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+      },
+      "converted": "build\\art\\native-nonhuman-integration-2026-09-20\\bangaa-dark-knight\\calibrated-base.png",
+      "convertedSha256": "3c4220fbd351c08829e1cc7af09333bb6b8fb398c4da8fd2c747cce7af880f53",
+      "alphaGridAgreement": 0.98828125,
+      "method": "Inverse-distance nearest reference-color voting in Oklab; five neighbors; original alpha",
+      "status": "native-base-primary-reviewed-for-integration",
+      "meanReferenceDistance": 0.00011265366085288764,
+      "maxReferenceDistance": 0.037622683299795,
+      "reviewer": "primary agent; not user approval",
+      "review": "Native-size and enlarged comparison inspected. Original alpha retained; face, costume and outline readable. All-pose review and in-game acceptance remain. Supplemental water reference inspected across all 64 poses; ivory/lilac ripples and unchanged standing base verified. Native runtime acceptance pending.",
+      "supplementalReferences": [
+        {
+          "tool": "image_gen.imagegen",
+          "model": "built-in; tool-managed",
+          "prompt": "Recolor the water-pose sprite in image 1 to match the Dark Knight colors in image 2, using only palette swatches in image 3. The small ripples along the bottom must be ivory and pale gray-lilac, never gold. Keep the exact pixel grid, pose, silhouette and waterline. Transparent background, one sprite.",
+          "references": [
+            {
+              "path": "<LOCAL_USER>/coding/ffta/build/art/native-color-study-2026-09-20/bangaa-dark-knight/water-source-reference.png",
+              "sha256": "285c35a320f17647f136dd24b5e8f2da4e0df8b63cf4f73c6323472a71ce4fc5"
+            },
+            {
+              "path": "<LOCAL_USER>/coding/ffta/build/art/native-color-study-2026-09-20/bangaa-dark-knight/generated-v2.png",
+              "sha256": "d53c7b5b49eb845c1365838d4863e2d40c4b720b2e921b1b1b13e04bca7ef208"
+            },
+            {
+              "path": "<LOCAL_USER>/coding/ffta/build/art/native-color-study-2026-09-20/palette-1.png",
+              "sha256": "2bf068b72d7b35f133ee633037ce9deee087cd5c4ba55c12cecb8cca53cad3cb"
+            }
+          ],
+          "output": "build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\generated-water-v1.png",
+          "outputSha256": "a8ce23fcb46225d4ed098f6f56173dc3d5c0280ba1a0e7a42c7abbab6e83e297",
+          "converted": "build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\generated-water-v1-native.png",
+          "convertedSha256": "406ec1d09a25efa672245721af7d263025cd53ce01231cd2397c2b6af53d0533",
+          "tileSha256": "29e1631c579e97c4e1a5f668d3f1b1c34778c18fba3f2b77ea35f96e09e3b0b5",
+          "nativePalette": 1,
+          "nativePaletteWordsUnchanged": true,
+          "logicalCanvas": [
+            32,
+            32
+          ],
+          "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+          "status": "review-only-not-approved",
+          "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet.",
+          "source": {
+            "path": "build/art/reviewed-integration/bangaa-dark-knight/p042.png",
+            "sha256": "734db6744b3d59c0949f4c02d15cbf64bee6188f9d2dd72691b8517982cdba44"
+          }
+        }
+      ]
+    },
+    {
+      "job": 120,
+      "slug": "nu-mou-chemist",
+      "nativePalette": 0,
+      "sourceBase": {
+        "path": "build/art/approved-class-animation-2026-09-19/nu-mou-chemist/front-neutral.png",
+        "sha256": "773ec62ffe8ef74d42afc5956001f8a2af3b059dbae145403730fa4e6326d9bd"
+      },
+      "generatedReference": {
+        "prompt": "Recolor this Nu Mou Chemist using only the native colors in image 2. Keep the light blue head, warm brown leather clothing, cream apron and green cap clearly distinct. Use brighter colors and clear contrast like original FFTA sprites. Preserve the exact chunky pixel grid, head size, silhouette, pose and detail. Transparent background, one sprite.",
+        "tool": "image_gen.imagegen",
+        "references": [
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\nu-mou-chemist\\source-reference.png",
+            "sha256": "21339107958f370e3a7af08774dd9419ebc9eaa572756a034aeb1a2aaeb833ac"
+          },
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "model": "built-in; tool-managed",
+        "output": "build\\art\\native-color-study-2026-09-20\\nu-mou-chemist\\generated-v1.png",
+        "outputSha256": "fa684e374a27b46848d8dfe52568b789dadbeb3c1c253cde902d556046ac2c20",
+        "converted": "build\\art\\native-color-study-2026-09-20\\nu-mou-chemist\\generated-v1-native.png",
+        "convertedSha256": "02e1bdd22a24febea63dc00c2bd4dc0ac7dd939674879a4a12437989491ba8d5",
+        "tileSha256": "b70bf8bdf170f0a25257b815700a7c7fb64a41724fcef2d7c097d49882ebadfc",
+        "nativePalette": 0,
+        "nativePaletteWordsUnchanged": true,
+        "logicalCanvas": [
+          32,
+          32
+        ],
+        "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+        "status": "review-only-not-approved",
+        "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+      },
+      "converted": "build\\art\\native-nonhuman-integration-2026-09-20\\nu-mou-chemist\\calibrated-base.png",
+      "convertedSha256": "3c7b195fb55f880d40f66416fd87f1a3220e14dee28532dc07f06ce88f76cc85",
+      "alphaGridAgreement": 0.95703125,
+      "method": "Inverse-distance nearest reference-color voting in Oklab; five neighbors; original alpha",
+      "status": "native-base-primary-reviewed-for-integration",
+      "meanReferenceDistance": 0.00011992964594764624,
+      "maxReferenceDistance": 0.004130587970375978,
+      "reviewer": "primary agent; not user approval",
+      "review": "Native-size and enlarged comparison inspected. Original alpha retained; face, costume and outline readable. All-pose review and in-game acceptance remain."
+    },
+    {
+      "job": 121,
+      "slug": "nu-mou-geomancer",
+      "nativePalette": 0,
+      "sourceBase": {
+        "path": "build/art/approved-class-animation-2026-09-19/nu-mou-geomancer/front-neutral.png",
+        "sha256": "af786fe354ed16cd8b689538989f92e779d5c2ab446993802872ced7ae3343e4"
+      },
+      "generatedReference": {
+        "tool": "image_gen.imagegen",
+        "model": "built-in; tool-managed",
+        "prompt": "Recolor this Nu Mou Geomancer using only the native colors in image 2. Use a clear royal-blue hood and robe, pale blue skin, and cream trim. Keep the hood distinct from the head. Preserve the exact chunky pixel grid, head size, silhouette, pose and detail. Bright original FFTA color contrast. Transparent background, one sprite. Keep every dark outline and the ground shadow black, using swatch 1. Do not recolor those black pixels blue. Preserve the pale blue face and bright blue hood.",
+        "references": [
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\nu-mou-geomancer\\source-reference.png",
+            "sha256": "ef73afa10f0395fcfdc4598e180f875afac5d1e17e5cb84444c5f2f645ff44b2"
+          },
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "output": "build\\art\\native-color-study-2026-09-20\\nu-mou-geomancer\\generated-v2.png",
+        "outputSha256": "3564330533715491f48fa0019ff522dc6eb3c9cf5aa07912b8b10931331f3dee",
+        "converted": "build\\art\\native-color-study-2026-09-20\\nu-mou-geomancer\\generated-v2-native.png",
+        "convertedSha256": "99fb7a988ecf1b3e9e66ab376ca5c48f1a55e3a58c8bc45bd2b27ea5182b18dd",
+        "tileSha256": "89b451c062207d1c6a5b7310af764b2bc0bcc2d05eb8be7626fd82054858d12d",
+        "nativePalette": 0,
+        "nativePaletteWordsUnchanged": true,
+        "logicalCanvas": [
+          32,
+          32
+        ],
+        "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+        "status": "review-only-not-approved",
+        "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+      },
+      "converted": "build\\art\\native-nonhuman-integration-2026-09-20\\nu-mou-geomancer\\calibrated-base.png",
+      "convertedSha256": "38f880c34a27f725b5d2c01c6fca7791c21567c03f028e270ae2a341e4e393a2",
+      "alphaGridAgreement": 1.0,
+      "method": "Inverse-distance nearest reference-color voting in Oklab; five neighbors; original alpha",
+      "status": "native-base-primary-reviewed-for-integration",
+      "meanReferenceDistance": 0.0,
+      "maxReferenceDistance": 0.0,
+      "reviewer": "primary agent; not user approval",
+      "review": "Native-size and enlarged comparison inspected. Original alpha retained; face, costume and outline readable. All-pose review and in-game acceptance remain."
+    },
+    {
+      "job": 122,
+      "slug": "moogle-chemist",
+      "nativePalette": 0,
+      "sourceBase": {
+        "path": "build/art/approved-class-animation-2026-09-19/moogle-chemist/front-neutral.png",
+        "sha256": "ed36397ef34ea1c4a2b48d219930171aa071810ee53394190093c15478fa843a"
+      },
+      "generatedReference": {
+        "prompt": "Recolor this Moogle Chemist using only the native colors in image 2. Keep cream fur with pale blue shadows, a green cap, warm brown leather coat and gold details. Keep these materials distinct and bright. Preserve the exact chunky pixel grid, face, ears, pompom, silhouette, pose and detail. Transparent background, one sprite.",
+        "tool": "image_gen.imagegen",
+        "references": [
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\moogle-chemist\\source-reference.png",
+            "sha256": "6a3cc6dd0eca06d41fa4bf9afc0363ca48d717e4e3e1f1f74c0b125c4a55b6df"
+          },
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "model": "built-in; tool-managed",
+        "output": "build\\art\\native-color-study-2026-09-20\\moogle-chemist\\generated-v1.png",
+        "outputSha256": "528784044e65a5f2dfbfa69b9f8bbdfa199b4aee97032d9dfd51532dc64bdda8",
+        "converted": "build\\art\\native-color-study-2026-09-20\\moogle-chemist\\generated-v1-native.png",
+        "convertedSha256": "eb41d7748a3da132c2e34ef3f21412de149068ebceea68905fcba1087dde43de",
+        "tileSha256": "feeffbc047a135c94a30031a394b97c0de314af87a851dd12b35183ac5ea8f66",
+        "nativePalette": 0,
+        "nativePaletteWordsUnchanged": true,
+        "logicalCanvas": [
+          32,
+          32
+        ],
+        "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+        "status": "review-only-not-approved",
+        "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+      },
+      "converted": "build\\art\\native-nonhuman-integration-2026-09-20\\moogle-chemist\\calibrated-base.png",
+      "convertedSha256": "c7ce704fa0e32a4c732c0887250a2a90a64fa7158f6abdb65cd39ad32750fefd",
+      "alphaGridAgreement": 0.90625,
+      "method": "Inverse-distance nearest reference-color voting in Oklab; five neighbors; original alpha",
+      "status": "native-base-primary-reviewed-for-integration",
+      "meanReferenceDistance": 0.0005557975030851489,
+      "maxReferenceDistance": 0.02182701010664273,
+      "reviewer": "primary agent; not user approval",
+      "review": "Native-size and enlarged comparison inspected. Original alpha retained; face, costume and outline readable. All-pose review and in-game acceptance remain."
+    },
+    {
+      "job": 123,
+      "slug": "moogle-bard",
+      "nativePalette": 1,
+      "sourceBase": {
+        "path": "build/art/approved-class-animation-2026-09-19/moogle-bard/front-neutral.png",
+        "sha256": "c48fa237bd542583ecdcd48a9b93668f75e9fb90ca70f563feec829c7745a5f1"
+      },
+      "generatedReference": {
+        "prompt": "Recolor this Moogle Bard using only the native colors in image 2. Preserve the red scarf, golden feather and cream fur. Adapt the hat to muted gray-plum within the palette, distinct from the red scarf. Keep bright original FFTA contrast. Preserve the exact chunky pixel grid, face, ears, pompom, silhouette, pose and detail. Transparent background, one sprite.",
+        "tool": "image_gen.imagegen",
+        "references": [
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\moogle-bard\\source-reference.png",
+            "sha256": "1efca29766fcbc2c6c402cf6f371d7ff3a1d34dcfcebf40ad44089c655ea0e3f"
+          },
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-1.png",
+            "sha256": "2bf068b72d7b35f133ee633037ce9deee087cd5c4ba55c12cecb8cca53cad3cb"
+          }
+        ],
+        "model": "built-in; tool-managed",
+        "output": "build\\art\\native-color-study-2026-09-20\\moogle-bard\\generated-v1.png",
+        "outputSha256": "db71d5cdcfd2bbc702e5179073ca4e72ef1ad7bb7e87ead0edc3c1c43c76bbb6",
+        "converted": "build\\art\\native-color-study-2026-09-20\\moogle-bard\\generated-v1-native.png",
+        "convertedSha256": "8a90de85c2091c144a89343c00c3702c734c6faeb1ac7a4a72f71b5dcef8331f",
+        "tileSha256": "6b53cd023f1f396a858e46fb36f49ddc2ce4fb72b77d12a583c91e5724fba2db",
+        "nativePalette": 1,
+        "nativePaletteWordsUnchanged": true,
+        "logicalCanvas": [
+          32,
+          32
+        ],
+        "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+        "status": "review-only-not-approved",
+        "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+      },
+      "converted": "build\\art\\native-nonhuman-integration-2026-09-20\\moogle-bard\\calibrated-base.png",
+      "convertedSha256": "1d15c0a86400df3e4b2ca9c506c9827857e10aa027753a5cb3d519c297f7f834",
+      "alphaGridAgreement": 0.951171875,
+      "method": "Inverse-distance nearest reference-color voting in Oklab; five neighbors; original alpha",
+      "status": "native-base-primary-reviewed-for-integration",
+      "meanReferenceDistance": 9.467133178821866e-05,
+      "maxReferenceDistance": 0.003044214772133523,
+      "reviewer": "primary agent; not user approval",
+      "review": "Native-size and enlarged comparison inspected. Original alpha retained; face, costume and outline readable. All-pose review and in-game acceptance remain."
+    },
+    {
+      "job": 124,
+      "slug": "viera-dancer",
+      "nativePalette": 1,
+      "sourceBase": {
+        "path": "build/art/approved-class-animation-2026-09-19/viera-dancer/front-neutral.png",
+        "sha256": "04059122e9372e98300777ffa048f407ec11dd7a798095ecaf89edaeadcec2bc"
+      },
+      "generatedReference": {
+        "prompt": "Recolor this Viera Dancer using only the native colors in image 2. Keep the red and gold costume vibrant, with warm ochre skin and very pale gray-lilac hair from the available palette. Preserve the exact chunky pixel grid, long ears, silhouette, pose and detail. Keep face, hair and costume distinct. Transparent background, one sprite.",
+        "tool": "image_gen.imagegen",
+        "references": [
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\viera-dancer\\source-reference.png",
+            "sha256": "dc6f21df564a754e9ca1349619e768741f5b32f781528c9f43cb87111ca48129"
+          },
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-1.png",
+            "sha256": "2bf068b72d7b35f133ee633037ce9deee087cd5c4ba55c12cecb8cca53cad3cb"
+          }
+        ],
+        "model": "built-in; tool-managed",
+        "output": "build\\art\\native-color-study-2026-09-20\\viera-dancer\\generated-v1.png",
+        "outputSha256": "e2738bbeeb8e4b0f719ec521d72c7567b7187dd598c56fcbb9c0b21f8176f379",
+        "converted": "build\\art\\native-color-study-2026-09-20\\viera-dancer\\generated-v1-native.png",
+        "convertedSha256": "cc85b1a90adac0c38324a8d254bd891a58841ed109647b113860acfd43f4ffaf",
+        "tileSha256": "e1b2c88a2405f9783bc52b81cd98255d6ea89e8cb4d517a7ef6a3641c4de2ef8",
+        "nativePalette": 1,
+        "nativePaletteWordsUnchanged": true,
+        "logicalCanvas": [
+          32,
+          32
+        ],
+        "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+        "status": "review-only-not-approved",
+        "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+      },
+      "converted": "build\\art\\native-nonhuman-integration-2026-09-20\\viera-dancer\\calibrated-base.png",
+      "convertedSha256": "b2416d9fc4aeb7545836807a4f08163544c92afe99c7bc8064586c0db7d88150",
+      "alphaGridAgreement": 0.95703125,
+      "method": "Inverse-distance nearest reference-color voting in Oklab; five neighbors; original alpha",
+      "status": "native-base-primary-reviewed-for-integration",
+      "meanReferenceDistance": 7.578760057710011e-05,
+      "maxReferenceDistance": 0.004044836887199409,
+      "reviewer": "primary agent; not user approval",
+      "review": "Native-size and enlarged comparison inspected. Original alpha retained; face, costume and outline readable. All-pose review and in-game acceptance remain."
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "nativePalette": 0,
+      "sourceBase": {
+        "path": "build/art/approved-class-animation-2026-09-19/viera-mystic-knight/front-neutral.png",
+        "sha256": "305dfaefaa04979e07e1ff0118fded7fe225faf94f7ad67ed2e67bc6c65c406d"
+      },
+      "generatedReference": {
+        "prompt": "Recolor this Viera Mystic Knight using only the native colors in image 2. Keep pale blue hair, clear blue clothing, warm brown leather and bright gold trim distinct. Use the original FFTA warm ochre skin colors. Preserve the exact chunky pixel grid, long ears, silhouette, pose and detail. Transparent background, one sprite.",
+        "tool": "image_gen.imagegen",
+        "references": [
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\viera-mystic-knight\\source-reference.png",
+            "sha256": "9f5ba95ee43b383b52c0d34f83dd5a0bbf8fe3c53cadca64df6ca6dc6ba2b5bf"
+          },
+          {
+            "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "model": "built-in; tool-managed",
+        "output": "build\\art\\native-color-study-2026-09-20\\viera-mystic-knight\\generated-v1.png",
+        "outputSha256": "ccaa48c9e056a0b21500b98d91dfb4dec70357f04c441936183ea715982a69fc",
+        "converted": "build\\art\\native-color-study-2026-09-20\\viera-mystic-knight\\generated-v1-native.png",
+        "convertedSha256": "e032056bb8ccbf446b6ff0badeed80165759550ba57338645907a2c63bfd0a70",
+        "tileSha256": "60d3c7475ccf7286ddf8af93da4d83fa82674130ef99d1641f08fb7e1ca492d0",
+        "nativePalette": 0,
+        "nativePaletteWordsUnchanged": true,
+        "logicalCanvas": [
+          32,
+          32
+        ],
+        "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+        "status": "review-only-not-approved",
+        "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+      },
+      "converted": "build\\art\\native-nonhuman-integration-2026-09-20\\viera-mystic-knight\\calibrated-base.png",
+      "convertedSha256": "6b9ce797b3d778c4a2fde8a83049fe1dbe81c3d486407d216299548387c3b1f1",
+      "alphaGridAgreement": 0.9228515625,
+      "method": "Inverse-distance nearest reference-color voting in Oklab; five neighbors; original alpha",
+      "status": "native-base-primary-reviewed-for-integration",
+      "meanReferenceDistance": 0.0005484713053555898,
+      "maxReferenceDistance": 0.033710461813759356,
+      "reviewer": "primary agent; not user approval",
+      "review": "Native-size and enlarged comparison inspected. Original alpha retained; face, costume and outline readable. All-pose review and in-game acceptance remain."
+    }
+  ],
+  "generations": [
+    {
+      "prompt": "Recolor this Bangaa Viking using only the native colors in image 2. Preserve the exact chunky pixel grid, silhouette, horns, long snout, pose and detail. Keep the blue cloak, warm brown leather, golden skin and ivory horn highlights distinct and bright. Avoid turning the leather and helmet green. Transparent background, one sprite.",
+      "tool": "image_gen.imagegen",
+      "references": [
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\bangaa-viking\\source-reference.png",
+          "sha256": "be15f38fb360010f200bb8a152565f9e1b39037d0abb0b0cd3965dbf08c5385c"
+        },
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+          "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+        }
+      ],
+      "model": "built-in; tool-managed",
+      "output": "build\\art\\native-color-study-2026-09-20\\bangaa-viking\\generated-v1.png",
+      "outputSha256": "9cd7fc7f5821ccbf5aea2b361acec0704b6d711c7460ca293c4f968c04efd8fe",
+      "converted": "build\\art\\native-color-study-2026-09-20\\bangaa-viking\\generated-v1-native.png",
+      "convertedSha256": "7072d4ec014eb125e77b8cc176423dba84e25b4971627c943790f5e512e9494d",
+      "tileSha256": "3fbd2ad90691be5bcf9f3e194a8f5d71981e1a1c5f0a9ed165f3bedd66d98a74",
+      "nativePalette": 0,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "prompt": "Recolor this Bangaa Dark Knight using only the native colors in image 2. Keep armor predominantly near-black, with bright gold trim and a muted purple cloth accent. Preserve the exact chunky pixel grid, silhouette, closed helmet, long snout, pose and detail. Do not turn the armor pink. Transparent background, one sprite.",
+      "tool": "image_gen.imagegen",
+      "references": [
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\source-reference.png",
+          "sha256": "835d622a28830c00cb34d55fefdc8bbcf822c4cc6e20b1a57ad0239972312c75"
+        },
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-1.png",
+          "sha256": "2bf068b72d7b35f133ee633037ce9deee087cd5c4ba55c12cecb8cca53cad3cb"
+        }
+      ],
+      "model": "built-in; tool-managed",
+      "output": "build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\generated-v1.png",
+      "outputSha256": "40a860270184fbb464b6318b3b81d31909d7e6a74cff099999cce64bc481bfb8",
+      "converted": "build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\generated-v1-native.png",
+      "convertedSha256": "1e78064c2eb1236974c63f6f87231e45677d0030a57efbeb135b0b316c860a9e",
+      "tileSha256": "867476625d9323da6763b8dbef423498564567743f81a4b4b326dfb76077ec2b",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "prompt": "Recolor this Bangaa Dark Knight using only the native colors in image 2. Keep armor predominantly near-black, with bright gold trim and a muted purple cloth accent. Preserve the exact chunky pixel grid, silhouette, closed helmet, long snout, pose and detail. Do not turn the armor pink. Transparent background, one sprite. Keep the armor readable with gray-plum highlights from swatches 2 and 12, deep plum shadows from swatch 4, and black outlines from swatch 1. Preserve the black outline and ground shadow. Keep the gold trim clearly visible.",
+      "references": [
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\source-reference.png",
+          "sha256": "835d622a28830c00cb34d55fefdc8bbcf822c4cc6e20b1a57ad0239972312c75"
+        },
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-1.png",
+          "sha256": "2bf068b72d7b35f133ee633037ce9deee087cd5c4ba55c12cecb8cca53cad3cb"
+        }
+      ],
+      "output": "build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\generated-v2.png",
+      "outputSha256": "d53c7b5b49eb845c1365838d4863e2d40c4b720b2e921b1b1b13e04bca7ef208",
+      "converted": "build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\generated-v2-native.png",
+      "convertedSha256": "f7863945e88fe44c869aba36ce4c1f2c6b654a8f31abe17b69c5c48f7d22b54e",
+      "tileSha256": "89a22f6b49f7814775d0574c624f98d18ba8ea2ded6bff6148f49923df60ece0",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "prompt": "Recolor this Nu Mou Chemist using only the native colors in image 2. Keep the light blue head, warm brown leather clothing, cream apron and green cap clearly distinct. Use brighter colors and clear contrast like original FFTA sprites. Preserve the exact chunky pixel grid, head size, silhouette, pose and detail. Transparent background, one sprite.",
+      "tool": "image_gen.imagegen",
+      "references": [
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\nu-mou-chemist\\source-reference.png",
+          "sha256": "21339107958f370e3a7af08774dd9419ebc9eaa572756a034aeb1a2aaeb833ac"
+        },
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+          "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+        }
+      ],
+      "model": "built-in; tool-managed",
+      "output": "build\\art\\native-color-study-2026-09-20\\nu-mou-chemist\\generated-v1.png",
+      "outputSha256": "fa684e374a27b46848d8dfe52568b789dadbeb3c1c253cde902d556046ac2c20",
+      "converted": "build\\art\\native-color-study-2026-09-20\\nu-mou-chemist\\generated-v1-native.png",
+      "convertedSha256": "02e1bdd22a24febea63dc00c2bd4dc0ac7dd939674879a4a12437989491ba8d5",
+      "tileSha256": "b70bf8bdf170f0a25257b815700a7c7fb64a41724fcef2d7c097d49882ebadfc",
+      "nativePalette": 0,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "prompt": "Recolor this Nu Mou Geomancer using only the native colors in image 2. Use a clear royal-blue hood and robe, pale blue skin, and cream trim. Keep the hood distinct from the head. Preserve the exact chunky pixel grid, head size, silhouette, pose and detail. Bright original FFTA color contrast. Transparent background, one sprite.",
+      "tool": "image_gen.imagegen",
+      "references": [
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\nu-mou-geomancer\\source-reference.png",
+          "sha256": "ef73afa10f0395fcfdc4598e180f875afac5d1e17e5cb84444c5f2f645ff44b2"
+        },
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+          "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+        }
+      ],
+      "model": "built-in; tool-managed",
+      "output": "build\\art\\native-color-study-2026-09-20\\nu-mou-geomancer\\generated-v1.png",
+      "outputSha256": "180d0db716cb04d2ce299e727ce6ee66073dde0772957ca26f9003e15598af54",
+      "converted": "build\\art\\native-color-study-2026-09-20\\nu-mou-geomancer\\generated-v1-native.png",
+      "convertedSha256": "c0a6908425c0a9d2dee541c93447183e0637a27a6b835d90894ff74d52dfac75",
+      "tileSha256": "b0c814bfe8964f2316277e5d9b1a95da419f0d44a2bb4469812bab696141be84",
+      "nativePalette": 0,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "prompt": "Recolor this Nu Mou Geomancer using only the native colors in image 2. Use a clear royal-blue hood and robe, pale blue skin, and cream trim. Keep the hood distinct from the head. Preserve the exact chunky pixel grid, head size, silhouette, pose and detail. Bright original FFTA color contrast. Transparent background, one sprite. Keep every dark outline and the ground shadow black, using swatch 1. Do not recolor those black pixels blue. Preserve the pale blue face and bright blue hood.",
+      "references": [
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\nu-mou-geomancer\\source-reference.png",
+          "sha256": "ef73afa10f0395fcfdc4598e180f875afac5d1e17e5cb84444c5f2f645ff44b2"
+        },
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+          "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+        }
+      ],
+      "output": "build\\art\\native-color-study-2026-09-20\\nu-mou-geomancer\\generated-v2.png",
+      "outputSha256": "3564330533715491f48fa0019ff522dc6eb3c9cf5aa07912b8b10931331f3dee",
+      "converted": "build\\art\\native-color-study-2026-09-20\\nu-mou-geomancer\\generated-v2-native.png",
+      "convertedSha256": "99fb7a988ecf1b3e9e66ab376ca5c48f1a55e3a58c8bc45bd2b27ea5182b18dd",
+      "tileSha256": "89b451c062207d1c6a5b7310af764b2bc0bcc2d05eb8be7626fd82054858d12d",
+      "nativePalette": 0,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "prompt": "Recolor this Moogle Chemist using only the native colors in image 2. Keep cream fur with pale blue shadows, a green cap, warm brown leather coat and gold details. Keep these materials distinct and bright. Preserve the exact chunky pixel grid, face, ears, pompom, silhouette, pose and detail. Transparent background, one sprite.",
+      "tool": "image_gen.imagegen",
+      "references": [
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\moogle-chemist\\source-reference.png",
+          "sha256": "6a3cc6dd0eca06d41fa4bf9afc0363ca48d717e4e3e1f1f74c0b125c4a55b6df"
+        },
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+          "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+        }
+      ],
+      "model": "built-in; tool-managed",
+      "output": "build\\art\\native-color-study-2026-09-20\\moogle-chemist\\generated-v1.png",
+      "outputSha256": "528784044e65a5f2dfbfa69b9f8bbdfa199b4aee97032d9dfd51532dc64bdda8",
+      "converted": "build\\art\\native-color-study-2026-09-20\\moogle-chemist\\generated-v1-native.png",
+      "convertedSha256": "eb41d7748a3da132c2e34ef3f21412de149068ebceea68905fcba1087dde43de",
+      "tileSha256": "feeffbc047a135c94a30031a394b97c0de314af87a851dd12b35183ac5ea8f66",
+      "nativePalette": 0,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "prompt": "Recolor this Moogle Bard using only the native colors in image 2. Preserve the red scarf, golden feather and cream fur. Adapt the hat to muted gray-plum within the palette, distinct from the red scarf. Keep bright original FFTA contrast. Preserve the exact chunky pixel grid, face, ears, pompom, silhouette, pose and detail. Transparent background, one sprite.",
+      "tool": "image_gen.imagegen",
+      "references": [
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\moogle-bard\\source-reference.png",
+          "sha256": "1efca29766fcbc2c6c402cf6f371d7ff3a1d34dcfcebf40ad44089c655ea0e3f"
+        },
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-1.png",
+          "sha256": "2bf068b72d7b35f133ee633037ce9deee087cd5c4ba55c12cecb8cca53cad3cb"
+        }
+      ],
+      "model": "built-in; tool-managed",
+      "output": "build\\art\\native-color-study-2026-09-20\\moogle-bard\\generated-v1.png",
+      "outputSha256": "db71d5cdcfd2bbc702e5179073ca4e72ef1ad7bb7e87ead0edc3c1c43c76bbb6",
+      "converted": "build\\art\\native-color-study-2026-09-20\\moogle-bard\\generated-v1-native.png",
+      "convertedSha256": "8a90de85c2091c144a89343c00c3702c734c6faeb1ac7a4a72f71b5dcef8331f",
+      "tileSha256": "6b53cd023f1f396a858e46fb36f49ddc2ce4fb72b77d12a583c91e5724fba2db",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "prompt": "Recolor this Viera Dancer using only the native colors in image 2. Keep the red and gold costume vibrant, with warm ochre skin and very pale gray-lilac hair from the available palette. Preserve the exact chunky pixel grid, long ears, silhouette, pose and detail. Keep face, hair and costume distinct. Transparent background, one sprite.",
+      "tool": "image_gen.imagegen",
+      "references": [
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\viera-dancer\\source-reference.png",
+          "sha256": "dc6f21df564a754e9ca1349619e768741f5b32f781528c9f43cb87111ca48129"
+        },
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-1.png",
+          "sha256": "2bf068b72d7b35f133ee633037ce9deee087cd5c4ba55c12cecb8cca53cad3cb"
+        }
+      ],
+      "model": "built-in; tool-managed",
+      "output": "build\\art\\native-color-study-2026-09-20\\viera-dancer\\generated-v1.png",
+      "outputSha256": "e2738bbeeb8e4b0f719ec521d72c7567b7187dd598c56fcbb9c0b21f8176f379",
+      "converted": "build\\art\\native-color-study-2026-09-20\\viera-dancer\\generated-v1-native.png",
+      "convertedSha256": "cc85b1a90adac0c38324a8d254bd891a58841ed109647b113860acfd43f4ffaf",
+      "tileSha256": "e1b2c88a2405f9783bc52b81cd98255d6ea89e8cb4d517a7ef6a3641c4de2ef8",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "prompt": "Recolor this Viera Mystic Knight using only the native colors in image 2. Keep pale blue hair, clear blue clothing, warm brown leather and bright gold trim distinct. Use the original FFTA warm ochre skin colors. Preserve the exact chunky pixel grid, long ears, silhouette, pose and detail. Transparent background, one sprite.",
+      "tool": "image_gen.imagegen",
+      "references": [
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\viera-mystic-knight\\source-reference.png",
+          "sha256": "9f5ba95ee43b383b52c0d34f83dd5a0bbf8fe3c53cadca64df6ca6dc6ba2b5bf"
+        },
+        {
+          "path": "<LOCAL_USER>\\coding\\ffta\\build\\art\\native-color-study-2026-09-20\\palette-0.png",
+          "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+        }
+      ],
+      "model": "built-in; tool-managed",
+      "output": "build\\art\\native-color-study-2026-09-20\\viera-mystic-knight\\generated-v1.png",
+      "outputSha256": "ccaa48c9e056a0b21500b98d91dfb4dec70357f04c441936183ea715982a69fc",
+      "converted": "build\\art\\native-color-study-2026-09-20\\viera-mystic-knight\\generated-v1-native.png",
+      "convertedSha256": "e032056bb8ccbf446b6ff0badeed80165759550ba57338645907a2c63bfd0a70",
+      "tileSha256": "60d3c7475ccf7286ddf8af93da4d83fa82674130ef99d1641f08fb7e1ca492d0",
+      "nativePalette": 0,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "prompt": "Recolor the water-pose sprite in image 1 to match the Dark Knight colors in image 2, using only palette swatches in image 3. The small ripples along the bottom must be ivory and pale gray-lilac, never gold. Keep the exact pixel grid, pose, silhouette and waterline. Transparent background, one sprite.",
+      "references": [
+        {
+          "path": "<LOCAL_USER>/coding/ffta/build/art/native-color-study-2026-09-20/bangaa-dark-knight/water-source-reference.png",
+          "sha256": "285c35a320f17647f136dd24b5e8f2da4e0df8b63cf4f73c6323472a71ce4fc5"
+        },
+        {
+          "path": "<LOCAL_USER>/coding/ffta/build/art/native-color-study-2026-09-20/bangaa-dark-knight/generated-v2.png",
+          "sha256": "d53c7b5b49eb845c1365838d4863e2d40c4b720b2e921b1b1b13e04bca7ef208"
+        },
+        {
+          "path": "<LOCAL_USER>/coding/ffta/build/art/native-color-study-2026-09-20/palette-1.png",
+          "sha256": "2bf068b72d7b35f133ee633037ce9deee087cd5c4ba55c12cecb8cca53cad3cb"
+        }
+      ],
+      "output": "build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\generated-water-v1.png",
+      "outputSha256": "a8ce23fcb46225d4ed098f6f56173dc3d5c0280ba1a0e7a42c7abbab6e83e297",
+      "converted": "build\\art\\native-color-study-2026-09-20\\bangaa-dark-knight\\generated-water-v1-native.png",
+      "convertedSha256": "406ec1d09a25efa672245721af7d263025cd53ce01231cd2397c2b6af53d0533",
+      "tileSha256": "29e1631c579e97c4e1a5f668d3f1b1c34778c18fba3f2b77ea35f96e09e3b0b5",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet.",
+      "source": {
+        "path": "build/art/reviewed-integration/bangaa-dark-knight/p042.png",
+        "sha256": "734db6744b3d59c0949f4c02d15cbf64bee6188f9d2dd72691b8517982cdba44"
+      }
+    }
+  ],
+  "selectorChanges": [
+    {
+      "job": 123,
+      "before": 16,
+      "after": 1,
+      "reason": "Existing palette 1 preserves the Bard red scarf"
+    },
+    {
+      "job": 124,
+      "before": 16,
+      "after": 1,
+      "reason": "Existing palette 1 preserves the Dancer red costume"
+    },
+    {
+      "job": 125,
+      "before": 1,
+      "after": 16,
+      "reason": "Existing palette 0 preserves Mystic Knight blue hair and clothing"
+    }
+  ]
+}

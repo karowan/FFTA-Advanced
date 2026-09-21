@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "recorded": "2026-09-16",
+  "cleanRomSha1": "4ac05441f4de70a4ec3dd932116346c61b8783d9",
+  "upstreamEngineCommit": "14ad10060ee21474c56272fd94bcc21d5a92264c",
+  "compiler": "Arm GNU14.3.Rel1 / GCC14.3.1 20250623",
+  "digestFormat": "SHA256 of sorted compact JSON mapping relative POSIX filenames to file SHA256; a single file uses the empty name.",
+  "inputs": [
+    {
+      "path": "tools/arm-gnu",
+      "files": 7185,
+      "treeSha256": "ceb178252b8877486e2ef37c11c7af42653eb99a33694a63b4f0a5e3f7451e4b"
+    },
+    {
+      "path": "tools/event-assembler",
+      "files": 153,
+      "treeSha256": "d824e2fa911d443cb5fe49ba69191eca96bd0bfb1a8a5bca4447da8277f13478"
+    },
+    {
+      "path": "tools/ffta-engine-hacks/Engine Hacks",
+      "files": 1136,
+      "treeSha256": "98ad24a17a82508bce748a9bfa039803cea2e25d0f9b32adf1152a7349412080"
+    },
+    {
+      "path": "tools/ffta-randomizer-source/src/main/ffta/utils/charLookup.json",
+      "files": 1,
+      "treeSha256": "dc499da3e7b98771c47c82ce1805bd5b92b60d87169c6a586a061b370886fe15"
+    }
+  ]
+}

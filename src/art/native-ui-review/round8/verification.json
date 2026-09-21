@@ -1,0 +1,79 @@
+{
+  "changedPoses": [
+    [
+      116,
+      "p000"
+    ],
+    [
+      116,
+      "p002"
+    ],
+    [
+      116,
+      "p003"
+    ],
+    [
+      116,
+      "p005"
+    ]
+  ],
+  "neutralFramesUnchanged": true,
+  "originalAlphaPreserved": true,
+  "nativePaletteUnchanged": true,
+  "sequenceRecordsUnchanged": true,
+  "otherArtUnchanged": true,
+  "counts": {
+    "jobs": 10,
+    "poses": 675,
+    "sequences": 796,
+    "draws": 3025,
+    "controls": 1116,
+    "emptySlots": 884
+  },
+  "reviewFiles": [
+    {
+      "path": "assets/human-samurai-p000-colors-v8-ally.png",
+      "sha256": "da1228f8873bbf257e723b101f5381a6d973f756b36b7392954c1c08f46d3357"
+    },
+    {
+      "path": "assets/human-samurai-p000-colors-v8-enemy.png",
+      "sha256": "07561a94fbd566545f0e56728d8fb05d8e535dca1b1b38a175cee2ac1988950f"
+    },
+    {
+      "path": "assets/human-samurai-p002-colors-v8-ally.png",
+      "sha256": "bdac557031dab7a0790ebaccb2089032775b0c0f01f2564192394c5a9adb6a0a"
+    },
+    {
+      "path": "assets/human-samurai-p002-colors-v8-enemy.png",
+      "sha256": "af0ae64f356cc5be82be1dbcf84dde6f9a4616db6497f6558db08cac99caea52"
+    },
+    {
+      "path": "assets/human-samurai-p003-colors-v8-ally.png",
+      "sha256": "eb3a87ca6b351b5eba7fa7c94151aa335e304e6a0c3e4e04478cd27237722b86"
+    },
+    {
+      "path": "assets/human-samurai-p003-colors-v8-enemy.png",
+      "sha256": "cf0ec1854409ed7c0d71371397670b7c5d4d0971a649734e523ae7d4a2a632e1"
+    },
+    {
+      "path": "assets/human-samurai-p005-colors-v8-ally.png",
+      "sha256": "45a3866fb2194508e483e0eef96eab9d51bbdd48588f6100901fa08cd30385c9"
+    },
+    {
+      "path": "assets/human-samurai-p005-colors-v8-enemy.png",
+      "sha256": "eef9fe7e9965d3d715e4e7c7af9435b10d3bc4fd16381293c2591337a4eae053"
+    }
+  ],
+  "markedArm": {
+    "region": [
+      7,
+      16,
+      14,
+      22
+    ],
+    "paleBefore": 8,
+    "paleAfter": 3,
+    "scope": "Diagnostic sleeve/hand region, not a universal material classifier."
+  },
+  "runtimeTestRun": false
+}

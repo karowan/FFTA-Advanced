@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "candidateSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "fixtureRomSha1": "83dabe12f029e83e459bf95c47ff7f4e2b58a901",
+  "scope": "Reuse exact retained all-ten 13-actor ready checkpoint; no new entry fixture. Thundaga mastery/HP/MP are declared private scenario inputs.",
+  "files": {
+    "report.json": {
+      "path": "build/art/all-class-capacity/20260919T070003.108000Z/report.json",
+      "sha256": "2a65eb86c74a5fbbd6139ffd1ce16f6d8912f6a7d7e4cec2015462c0c67b0c01"
+    },
+    "fixture.gba": {
+      "path": "build/art/all-class-capacity/20260919T070003.108000Z/fixture.gba",
+      "sha256": "2103742b9cb06fbd9d5f7dc2c3f0d072f87079f99dc4f13e04d20b3477fc8fc6"
+    },
+    "ready.state": {
+      "path": "build/art/all-class-capacity/20260919T070003.108000Z/ready.state",
+      "sha256": "e2cfb62ec77864e8d200f9ea93798b1537cfe5f8e34ca69a081c171012264940"
+    },
+    "ready.ram": {
+      "path": "build/art/all-class-capacity/20260919T070003.108000Z/ready.ram",
+      "sha256": "85e70775686a4409dc2f82c2fc64c2bfe7c6c9879dd6a9d6faaff50223bdd93b"
+    },
+    "ready.iwram": {
+      "path": "build/art/all-class-capacity/20260919T070003.108000Z/ready.iwram",
+      "sha256": "6d867194ac3bc16245c5322100147dee3b697e3afbc65d8db94494087e755eb3"
+    }
+  },
+  "targetingResume": {
+    "failed.json": {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.json",
+      "sha256": "c9b4cbc61918d7d18d96a431142a620f46b05a2fd5eb5a29da9fc6dd5ae49ee7"
+    },
+    "failed.state": {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.state",
+      "sha256": "657ecf8efddae783bb03b7d57ef1754fdde7dde9162b27c025ae1ea58fd67e48"
+    },
+    "failed.ram": {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.ram",
+      "sha256": "9e2c270cb4611fc38249b6f51f1c9ce9ff6787171bc1da6222c3876351e5ab3f"
+    },
+    "failed.iwram": {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.iwram",
+      "sha256": "8a73fc3801931c4c6e87dd75817bd82519639c431cc71b92d5b3489cf07241e1"
+    }
+  },
+  "executionResume": {
+    "failed.json": {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/failed.json",
+      "sha256": "2d42ed9a44ee9ff872f6665e02ea1f3643e8e4c9fe14bbc6a6ffa1ad4147bf89"
+    },
+    "confirmation.ram": {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/confirmation.ram",
+      "sha256": "5c0b754bdc07d1e8f7b281e08110f92319bb55525eb1a9041ba8593d3f78a49c"
+    },
+    "executed.state": {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/executed.state",
+      "sha256": "1445248eaa12261400731bf7ed2ee2e0b594aa17854ebb873990527c86c967ba"
+    },
+    "executed.ram": {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/executed.ram",
+      "sha256": "492517d21e749b3a6ae4ecabacdee0f66d8970d891ce9940d734823772cc19b3"
+    },
+    "executed.iwram": {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/executed.iwram",
+      "sha256": "c24232e9031f984b9d5572768a841abd78d7685866dfa697acefefc8c938ab89"
+    }
+  }
+}

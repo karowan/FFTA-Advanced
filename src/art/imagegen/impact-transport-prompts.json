@@ -1,0 +1,8 @@
+{
+  "model": "built-in imagegen",
+  "settings": "Tool defaults; transparent PNG requested",
+  "source": "build/art/imagegen/effects/impact-transport-v1.png",
+  "prompt": "Create a transparent PNG sprite sheet for a technical Game Boy Advance tactical RPG impact animation. Exactly three equal square cells in one horizontal row, each cell separated by generous transparent margins. Each cell contains an original, compact axe-hit impact burst centered in the cell: frame 1 a small diagonal slash flash with two detached sparks; frame 2 an angular six-point expanding burst with a curved diagonal slash crossing its center; frame 3 a dissipating broken arc and three separated spark clusters. No axe, no people, no objects, no text, no labels, no cell borders. Render crisp deliberate pixel art, an underlying 24 by 24 pixel grid per effect with hard square pixel edges, enlarged by nearest-neighbor. Each effect must fit entirely within its cell. At most three opaque colors: dark saturated cyan, pale cyan and white; transparency as the fourth value. GBA era pixel clusters, no antialiasing, no gradients, no glow, no blur, no soft semi-transparent pixels. Clear readable compact silhouettes suitable for a very tiny combat impact. New design from scratch, faithful to early 2000s handheld tactical RPG pixel density. Transparent background is mandatory.",
+  "purpose": "Temporary native impact transport; final artwork deferred",
+  "sourceSha256": "35a0dbd5701347d4c973ed702e105ecf6ea4b5c53f2e515906d90c2a43acfb63"
+}

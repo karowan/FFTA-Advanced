@@ -1,0 +1,16 @@
+* text=auto
+*.py text eol=lf
+*.mjs text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.s text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+.githooks/* text eol=lf
+# Artwork receipts authenticate exact JSON bytes, including historical CRLF.
+src/art/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+src/art/race-study/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Public bootstrap snapshots are authenticated byte-for-byte, including newlines.
+bootstrap/** -text -whitespace

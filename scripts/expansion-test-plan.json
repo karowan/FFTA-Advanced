@@ -1,0 +1,2120 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 1800,
+  "scope": "Installed feature regression. Private experiments excluded. Does not prove completion of all129 lessons.",
+  "steps": [
+    {
+      "id": "test-git-content",
+      "runtime": "python",
+      "args": [
+        "scripts/test-git-content.py"
+      ],
+      "suites": [
+        "core",
+        "full"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-runner-self",
+      "runtime": "python",
+      "args": [
+        "scripts/test-test-runner.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test"
+    },
+    {
+      "runtime": "node",
+      "args": [
+        "scripts/test-hook-continuations.mjs"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-hook-continuations",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-persistent-engine.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-persistent-engine",
+      "kind": "test"
+    },
+    {
+      "runtime": "node",
+      "args": [
+        "scripts/build-storage-probe.mjs"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "prepare-storage",
+      "kind": "fixture"
+    },
+    {
+      "runtime": "node",
+      "args": [
+        "scripts/build-storage-probe.mjs",
+        "--setup",
+        "--inventory-core"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "prepare-startup",
+      "kind": "fixture"
+    },
+    {
+      "runtime": "node",
+      "args": [
+        "scripts/build-storage-probe.mjs",
+        "--inventory-core",
+        "--menus"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "prepare-inventory-menu",
+      "kind": "fixture"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-data.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-job-data",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-content-data.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-content-data",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-name-widths.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-equipment-name-widths",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-battle-inventory.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-battle-inventory",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-legality.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-equipment-legality",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-icons.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-equipment-icons",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-acquisition-gates.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-acquisition-gates",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-ability-core.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-ability-core",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-ap-inline.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-ap-inline",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-ap-writers.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-ap-writers",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-ap-counts.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-ap-counts",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-command-data.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-command-data",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-command-predicates.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-command-predicates",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-command-iteration.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-command-iteration",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-action-data.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-action-data",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-relocated-table-domains.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-relocated-table-domains",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-axe-visuals.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-axe-visuals",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-physical-final.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-physical-final",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-chop-native.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-chop-native",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-chop-eligibility.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-chop-eligibility",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-unit-copies.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-unit-copies",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-racial-bank-domain.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-racial-bank-domain",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-reward-popup.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-reward-popup",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-projectile-icons.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-projectile-icons",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-combos-native.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-combos-native",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-chop-geometry.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-chop-geometry",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-tomahawk-geometry.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-tomahawk-geometry",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-custom-physical-commit.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-custom-physical-commit",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-physical-riders.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-physical-riders",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-executioner-preview.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-executioner-preview",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-gladiator-finishers.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-gladiator-finishers",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-storage.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-exposed-storage",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-storage-in-game.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-exposed-storage-in-game",
+      "kind": "test",
+      "requires": [
+        "test-exposed-storage"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-evaluated-units.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-evaluated-units",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-combat-area.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-combat-area",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-arc-facing-hooks.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-arc-facing-hooks",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-arc-ai-direction.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-arc-ai-direction",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-lesson-help.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-lesson-help",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-dark-sword.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-dark-sword",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-mobility-supports.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-mobility-supports",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-grace-native.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-grace-native",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-recruit-prerequisites.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-recruit-prerequisites",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-projectile-los.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-projectile-los",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-copy-constructors.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-copy-constructors",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-wheel.py"
+      ],
+      "suites": [
+        "full",
+        "core"
+      ],
+      "id": "test-job-wheel",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-storage-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-storage-in-game",
+      "kind": "test",
+      "requires": [
+        "prepare-storage"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-inventory-startup.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-inventory-startup",
+      "kind": "test",
+      "requires": [
+        "prepare-startup"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-inventory-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-inventory-in-game",
+      "kind": "test",
+      "requires": [
+        "prepare-inventory-menu"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-shop-wide-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-shop-wide-in-game",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-shop-native-compatibility.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-shop-native-compatibility",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-new-equipment-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-new-equipment-in-game",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-unit-sidecars.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-unit-sidecars",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-quest-icons-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-quest-icons-in-game",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-party-command-lists.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-party-command-lists",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-all-new-jobs-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-all-new-jobs-in-game",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-new-equipment-in-game.py",
+        "--abilities"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-new-equipment-in-game-abilities",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-battle-lifecycle-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-battle-lifecycle-in-game",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-wheel-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-job-wheel-in-game",
+      "kind": "test"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/create-battle-fixture.py",
+        "--rom",
+        "build/expansion/probes/combat.gba"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "prepare-battle",
+      "kind": "fixture"
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-axes-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-axes-in-game",
+      "kind": "test",
+      "requires": [
+        "prepare-battle"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-chop-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-chop-in-game",
+      "kind": "test",
+      "requires": [
+        "prepare-battle"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-tomahawk-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-tomahawk-in-game",
+      "kind": "test",
+      "requires": [
+        "prepare-battle"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-physical-riders-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-physical-riders-in-game",
+      "kind": "test",
+      "requires": [
+        "prepare-battle"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-executioner-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-executioner-in-game",
+      "kind": "test",
+      "requires": [
+        "prepare-battle"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-arcs-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-arcs-in-game",
+      "kind": "test",
+      "requires": [
+        "prepare-battle"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-combos-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-combos-in-game",
+      "kind": "test",
+      "requires": [
+        "prepare-battle"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-combo-weapon-visuals-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-combo-weapon-visuals-in-game",
+      "kind": "test",
+      "requires": [
+        "prepare-battle"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-dark-sword-in-game.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-dark-sword-in-game",
+      "kind": "test",
+      "requires": [
+        "test-dark-sword",
+        "prepare-battle"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-dark-sword-resource-edges.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-dark-sword-resource-edges",
+      "kind": "test",
+      "requires": [
+        "test-dark-sword-in-game"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-mobility-supports-in-game.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-mobility-supports-in-game",
+      "kind": "test",
+      "requires": [
+        "test-mobility-supports",
+        "prepare-battle"
+      ]
+    },
+    {
+      "runtime": "python",
+      "args": [
+        "scripts/test-grace-in-game.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "id": "test-grace-in-game",
+      "kind": "test",
+      "requires": [
+        "test-grace-native",
+        "prepare-battle"
+      ]
+    },
+    {
+      "id": "test-quin-history",
+      "runtime": "python",
+      "args": [
+        "scripts/test-quin-history.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "quin"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "prepare-quin-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/create-battle-fixture.py",
+        "--rom",
+        "build/expansion/probes/combat.gba",
+        "--out",
+        "build/expansion/probes/quin-current-fixture"
+      ],
+      "suites": [
+        "full",
+        "quin"
+      ],
+      "kind": "fixture"
+    },
+    {
+      "id": "test-quin-history-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-quin-history-in-game.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "quin"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-quin-history",
+        "prepare-quin-battle"
+      ]
+    },
+    {
+      "id": "test-quin-lifecycle-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-quin-lifecycle-in-game.py"
+      ],
+      "suites": [
+        "full",
+        "quin"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-quin-battle"
+      ]
+    },
+    {
+      "id": "prepare-fell-fixture",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-fell-fixture.py"
+      ],
+      "suites": [
+        "fell"
+      ],
+      "kind": "fixture"
+    },
+    {
+      "id": "test-fell-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-fell-native.py"
+      ],
+      "suites": [
+        "fell"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-fell-incoming-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-incoming.py",
+        "--fell"
+      ],
+      "suites": [
+        "fell"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-fell-original-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-native-executor.py",
+        "--fell"
+      ],
+      "suites": [
+        "fell"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-fell-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-fell-in-game.py"
+      ],
+      "suites": [
+        "fell"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-fell-retaliation",
+      "runtime": "python",
+      "args": [
+        "scripts/test-fell-retaliation.py"
+      ],
+      "suites": [
+        "fell"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-fell-in-game"
+      ]
+    },
+    {
+      "id": "test-fell-expiry-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-expiry-in-game.py",
+        "--fell"
+      ],
+      "suites": [
+        "fell"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-fell-incoming-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-incoming-in-game.py",
+        "--fell"
+      ],
+      "suites": [
+        "fell"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-fell-weapon-effects",
+      "runtime": "python",
+      "args": [
+        "scripts/test-custom-physical-commit.py",
+        "--fell"
+      ],
+      "suites": [
+        "fell"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "prepare-installed-fell-fixture",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-fell-fixture.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "fixture"
+    },
+    {
+      "id": "test-installed-fell-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-fell-native.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-incoming-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-incoming.py",
+        "--fell",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-original-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-native-executor.py",
+        "--fell",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-fell-in-game.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-retaliation",
+      "runtime": "python",
+      "args": [
+        "scripts/test-fell-retaliation.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-installed-fell-in-game"
+      ]
+    },
+    {
+      "id": "test-installed-fell-expiry-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-expiry-in-game.py",
+        "--fell",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-incoming-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-incoming-in-game.py",
+        "--fell",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-weapon-effects",
+      "runtime": "python",
+      "args": [
+        "scripts/test-custom-physical-commit.py",
+        "--fell",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-status-display-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-status-display-native.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-status-display-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-status-display-in-game.py",
+        "--current"
+      ],
+      "suites": [
+        "full",
+        "battle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "build-samurai-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-samurai-probe.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "prepare-samurai-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-executor.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private",
+        "test-installed-fell-original-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-native.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-lifecycle.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-laws",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-laws.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "prepare-samurai-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-battle.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "test-samurai-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-battle"
+      ]
+    },
+    {
+      "id": "test-samurai-retaliation",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-retaliation.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-samurai-in-game"
+      ]
+    },
+    {
+      "id": "test-samurai-protect-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-protect-native.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-restoration",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-restoration.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-restoration-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-restoration-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-battle"
+      ]
+    },
+    {
+      "id": "test-samurai-wind",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-wind.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-wind-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-wind-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-battle"
+      ]
+    },
+    {
+      "id": "test-samurai-moon",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-moon.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-moon-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-moon-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-battle"
+      ]
+    },
+    {
+      "id": "test-blade-wound-record",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-wound-record.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": []
+    },
+    {
+      "id": "test-samurai-wound",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-wound.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "trace-native-periodic-damage",
+      "runtime": "python",
+      "args": [
+        "scripts/trace-native-periodic-damage.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-battle"
+      ]
+    },
+    {
+      "id": "test-samurai-pulse-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-pulse-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-battle"
+      ]
+    },
+    {
+      "id": "test-samurai-wound-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-wound-lifecycle.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-wound-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-wound-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-battle"
+      ]
+    },
+    {
+      "id": "test-samurai-status-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-status-native.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-battle"
+      ]
+    },
+    {
+      "id": "test-samurai-status-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-status-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-battle"
+      ]
+    },
+    {
+      "id": "test-samurai-help",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-help.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "test-samurai-wound-reference",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-wound-reference.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "trace-samurai-laws",
+      "runtime": "python",
+      "args": [
+        "scripts/trace-samurai-laws.py"
+      ],
+      "suites": [],
+      "kind": "diagnostic",
+      "requires": [
+        "test-samurai-wound-in-game"
+      ]
+    },
+    {
+      "id": "test-samurai-wound-laws",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-wound-laws.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-wound-laws-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-wound-laws-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-samurai-wound-in-game"
+      ]
+    },
+    {
+      "id": "test-samurai-judge-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-judge-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-samurai-wound-in-game"
+      ]
+    },
+    {
+      "id": "trace-samurai-move-state",
+      "runtime": "python",
+      "args": [
+        "scripts/trace-samurai-move-state.py"
+      ],
+      "suites": [],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-battle"
+      ]
+    },
+    {
+      "id": "test-poise-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-poise-native.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-poise-counter-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-poise-counter-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-samurai-in-game"
+      ]
+    },
+    {
+      "id": "trace-poise-counter",
+      "runtime": "python",
+      "args": [
+        "scripts/trace-poise-counter.py"
+      ],
+      "suites": [],
+      "kind": "test",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "test-poise-cold-save-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-poise-cold-save-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "test-poise-mp-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-poise-mp-native.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-poise-mp-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-poise-mp-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-samurai-in-game"
+      ]
+    },
+    {
+      "id": "test-blade-ward-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-ward-native.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-blade-ward-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-ward-executor.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-blade-ward-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-ward-in-game.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-samurai-in-game"
+      ]
+    },
+    {
+      "id": "test-blade-ward-cold-save-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-poise-cold-save-in-game.py",
+        "--ward"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "probe-job-save-footer",
+      "runtime": "python",
+      "args": [
+        "scripts/probe-job-save-footer.py"
+      ],
+      "suites": [
+        "historical-job-state-experiment"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-job-state-record",
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-state-record.py"
+      ],
+      "suites": [
+        "job-state"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "build-job-state-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-job-state-probe.py"
+      ],
+      "suites": [
+        "job-state"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "test-job-state-copy-constructors",
+      "runtime": "python",
+      "args": [
+        "scripts/test-copy-constructors.py",
+        "--job-state"
+      ],
+      "suites": [
+        "job-state"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "test-job-state-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-state-in-game.py"
+      ],
+      "suites": [
+        "job-state"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "test-job-state-evaluated",
+      "runtime": "python",
+      "args": [
+        "scripts/test-evaluated-units.py",
+        "--job-state"
+      ],
+      "suites": [
+        "job-state"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-job-state-in-game"
+      ]
+    },
+    {
+      "id": "test-job-state-roster-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-state-roster-in-game.py"
+      ],
+      "suites": [
+        "job-state"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "test-job-state-copies",
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-state-copies.py"
+      ],
+      "suites": [
+        "job-state"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-job-state-in-game"
+      ]
+    },
+    {
+      "id": "test-action-context",
+      "runtime": "python",
+      "args": [
+        "scripts/test-action-context.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-job-state-samurai-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-in-game.py",
+        "--job-state"
+      ],
+      "suites": [
+        "job-state-combat"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-job-state-in-game"
+      ]
+    },
+    {
+      "id": "test-job-state-poise-counter-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-poise-counter-in-game.py",
+        "--job-state"
+      ],
+      "suites": [
+        "job-state-combat"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-job-state-samurai-in-game"
+      ]
+    },
+    {
+      "id": "test-job-state-poise-mp-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-poise-mp-in-game.py",
+        "--job-state"
+      ],
+      "suites": [
+        "job-state-combat"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-job-state-samurai-in-game"
+      ]
+    },
+    {
+      "id": "test-samurai-preview-context",
+      "runtime": "python",
+      "args": ["scripts/test-samurai-preview-context.py"],
+      "suites": ["samurai"],
+      "kind": "test",
+      "requires": ["prepare-samurai-executor"]
+    },
+    {
+      "id": "test-job-state-preview-context",
+      "runtime": "python",
+      "args": ["scripts/test-samurai-preview-context.py", "--job-state"],
+      "suites": ["job-state"],
+      "kind": "test",
+      "requires": ["test-job-state-in-game"]
+    },
+    {
+      "id": "trace-composure-action-entry",
+      "runtime": "python",
+      "args": ["scripts/trace-composure-action-entry.py"],
+      "suites": ["samurai-analysis"],
+      "kind": "test",
+      "requires": ["test-job-state-in-game"]
+    },
+    {
+      "id": "trace-ward-rng-entry",
+      "runtime": "python",
+      "args": ["scripts/trace-ward-rng-entry.py"],
+      "suites": ["job-state-analysis"],
+      "kind": "test"
+    },
+    {
+      "id": "test-job-state-blade-ward-retained-fixture",
+      "runtime": "python",
+      "args": ["scripts/test-blade-ward-in-game.py", "--job-state"],
+      "suites": ["job-state-combat-recheck"],
+      "kind": "test",
+      "scope": "Focused harness recheck using an existing passed game-report with matching candidate SHA1; full combat suite recreates it."
+    },
+    {
+      "id": "test-job-state-blade-ward-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-ward-in-game.py",
+        "--job-state"
+      ],
+      "suites": [
+        "job-state-combat"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-job-state-samurai-in-game"
+      ]
+    },
+    {
+      "id": "test-reaction-queue",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reaction-queue.py"
+      ],
+      "suites": [
+        "samurai"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    }
+  ]
+}

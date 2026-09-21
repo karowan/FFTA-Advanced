@@ -1,0 +1,42 @@
+[
+  {
+    "pose": "p000",
+    "prompt": "Precise pixel COLOR EDIT only. Image 1 is the 32x32 logical pixel sprite to edit; image 2 is the accepted color reference for this SAME character facing the same direction. Match image 1 costume colors to image 2, while keeping EVERY pixel boundary, cluster shape, silhouette, face, limb position and pose from image 1 unchanged. Do not redraw, rescale, shift, sharpen or add detail. Use the same RED armor ramp, GOLD trim and shins, DARK cloth sleeves/trousers, MUTED gray-mauve waist scarf, and small pale skin areas as image 2. Remove stray white/skin highlights from armor and cloth; restrict pale skin to face and small hands, cream cuffs only at wrists. Image 3 is original concept to distinguish sleeve/armor/scarf/skin, NOT a new style to reproduce. Image 4 is the existing native palette; use only these colors. Preserve the exact 32x32 source grid and all shapes. Return the same single sprite on the same 640x640 canvas with transparent background. Change colors only.",
+    "references": [
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p000-edit.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p001-edit.png",
+      "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png"
+    ]
+  },
+  {
+    "pose": "p002",
+    "prompt": "Precise pixel COLOR EDIT only. Image 1 is the 32x32 logical pixel sprite to edit; image 2 is the accepted color reference for this SAME character facing the same direction. Match image 1 costume colors to image 2, while keeping EVERY pixel boundary, cluster shape, silhouette, face, limb position and pose from image 1 unchanged. Do not redraw, rescale, shift, sharpen or add detail. Use the same RED armor ramp, GOLD trim and shins, DARK cloth sleeves/trousers, MUTED gray-mauve waist scarf, and small pale skin areas as image 2. Remove stray white/skin highlights from armor and cloth; restrict pale skin to face and small hands, cream cuffs only at wrists. Image 3 is original concept to distinguish sleeve/armor/scarf/skin, NOT a new style to reproduce. Image 4 is the existing native palette; use only these colors. Preserve the exact 32x32 source grid and all shapes. Return the same single sprite on the same 640x640 canvas with transparent background. Change colors only.",
+    "references": [
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p002-edit.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p001-edit.png",
+      "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png"
+    ]
+  },
+  {
+    "pose": "p003",
+    "prompt": "Precise pixel COLOR EDIT only. Image 1 is the 32x32 logical pixel sprite to edit; image 2 is the accepted color reference for this SAME character facing the same direction. Match image 1 costume colors to image 2, while keeping EVERY pixel boundary, cluster shape, silhouette, face, limb position and pose from image 1 unchanged. Do not redraw, rescale, shift, sharpen or add detail. Use the same RED armor ramp, GOLD trim and shins, DARK cloth sleeves/trousers, MUTED gray-mauve waist scarf, and small pale skin areas as image 2. Remove stray white/skin highlights from armor and cloth; restrict pale skin to face and small hands, cream cuffs only at wrists. Image 3 is original concept to distinguish sleeve/armor/scarf/skin, NOT a new style to reproduce. Image 4 is the existing native palette; use only these colors. Preserve the exact 32x32 source grid and all shapes. Return the same single sprite on the same 640x640 canvas with transparent background. Change colors only.",
+    "references": [
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p003-edit.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p004-edit.png",
+      "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png"
+    ]
+  },
+  {
+    "pose": "p005",
+    "prompt": "Precise pixel COLOR EDIT only. Image 1 is the 32x32 logical pixel sprite to edit; image 2 is the accepted color reference for this SAME character facing the same direction. Match image 1 costume colors to image 2, while keeping EVERY pixel boundary, cluster shape, silhouette, face, limb position and pose from image 1 unchanged. Do not redraw, rescale, shift, sharpen or add detail. The extended screen-left arm must have a DARK cloth sleeve and RED shoulder guard, not a big pale skin-colored forearm; only the small hand is pale. Use the same RED armor ramp, GOLD trim and shins, DARK cloth sleeves/trousers, MUTED gray-mauve waist scarf, and small pale skin areas as image 2. Remove stray white/skin highlights from armor and cloth; restrict pale skin to face and small hands, cream cuffs only at wrists. Image 3 is original concept to distinguish sleeve/armor/scarf/skin, NOT a new style to reproduce. Image 4 is the existing native palette; use only these colors. Preserve the exact 32x32 source grid and all shapes. Return the same single sprite on the same 640x640 canvas with transparent background. Change colors only.",
+    "references": [
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p005-edit.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p004-edit.png",
+      "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png"
+    ]
+  }
+]

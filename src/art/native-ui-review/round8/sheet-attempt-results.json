@@ -1,0 +1,115 @@
+{
+  "records": [
+    {
+      "pose": "p000",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p000.png",
+        "sha256": "5752a6413395ad20851766e9e8aa59f65ad6dd56ec3817ca061f89753fb689fd"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p000-native.png",
+        "sha256": "c54313432e0b34ba8fed43dd9d75a078cd2f60ddb67b37a4bc7009156f2aa429"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p000-sampled.png",
+        "sha256": "1e9089bfb30cad4282be27f17f9ce561d18337178a07c9d14f819a597ad2349e"
+      },
+      "changedPixels": 166,
+      "originalAlphaPreserved": true
+    },
+    {
+      "pose": "p001",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p001.png",
+        "sha256": "2fbe4a56e9b68e9a919cf8b6eb9cc76e4ae7b5aaafee5cf711b72ef63178b76b"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p001-native.png",
+        "sha256": "2fbe4a56e9b68e9a919cf8b6eb9cc76e4ae7b5aaafee5cf711b72ef63178b76b"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p001-sampled.png",
+        "sha256": "fcf2f1f01b6d9b3e7de080a44a998f4240266c6ceb29a050a16bb7df9916d5de"
+      },
+      "changedPixels": 0,
+      "originalAlphaPreserved": true
+    },
+    {
+      "pose": "p002",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p002.png",
+        "sha256": "6e0ed8c207d05f733c119b6ddfa70b51b4e957a60b93b75f7042770767c93905"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p002-native.png",
+        "sha256": "cd8625f1efda1f23870a1367cb8d716e7e7b1b9f110b240fc6a93864688cfb73"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p002-sampled.png",
+        "sha256": "cb89c2b6cafed0f7cbb2e466a41c99afa4f7fb01ac9e31359a06a957ec719efb"
+      },
+      "changedPixels": 207,
+      "originalAlphaPreserved": true
+    },
+    {
+      "pose": "p003",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p003.png",
+        "sha256": "d4d9dabdcea4b85ad4752d66cb3e690e82c0c485cf46a443c43e432f6733e007"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p003-native.png",
+        "sha256": "2238210dd05a1815a558f20dd9f8a8d0288fd09ed99e866b78719df73d4077cf"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p003-sampled.png",
+        "sha256": "e6bc95b4a62c2b1e571f23c1c1c03e9db0395fd56da8ccc9702f5cee66b7b858"
+      },
+      "changedPixels": 226,
+      "originalAlphaPreserved": true
+    },
+    {
+      "pose": "p004",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p004.png",
+        "sha256": "a234812767b4499859c03dc4a981abb6128cee26c9c3c147ea42d70b74b43e21"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p004-native.png",
+        "sha256": "a234812767b4499859c03dc4a981abb6128cee26c9c3c147ea42d70b74b43e21"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p004-sampled.png",
+        "sha256": "e5187893cd846cba6ce3e28fad5212987d8b77bbb7e69b18ad7bcc578f6f3556"
+      },
+      "changedPixels": 0,
+      "originalAlphaPreserved": true
+    },
+    {
+      "pose": "p005",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p005.png",
+        "sha256": "c15bd7194ed675e988264355c769608add4d386f8c0e1708b8dba28ee972e9e4"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p005-native.png",
+        "sha256": "6c56b2f4cf1b0d2188c5b91d908bec621ec84ae024f33c4b8f18233bca26a924"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p005-sampled.png",
+        "sha256": "4c8422f1776a0d99e62f65124ec459e97ee7009f51cdaee80b556bb94b889175"
+      },
+      "changedPixels": 232,
+      "originalAlphaPreserved": true
+    }
+  ],
+  "raw": {
+    "path": "build/art/samurai-walk-consistency-2026-09-20/generated-sheet.png",
+    "sha256": "90628f769d9c0b6e1aadc696046f69cbd697f6d539b5cc1cce403796059b9e94"
+  },
+  "plan": {
+    "path": "build/art/samurai-walk-consistency-2026-09-20/plan.json",
+    "sha256": "06de9bc4048ad3ea9f0f804bcaed404b3ec4c66ae0a6c2b6eb5448bb9d993029"
+  },
+  "method": "Generated color reference, fixed grid nearest sampling, native palette quantization. Original alpha/contact footprint retained; neutral indices unchanged. Offline proposal only."
+}

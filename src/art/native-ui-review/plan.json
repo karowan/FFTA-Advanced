@@ -1,0 +1,3317 @@
+{
+  "schema": 1,
+  "tool": "image_gen.imagegen",
+  "model": "Built-in tool managed",
+  "jobs": [
+    {
+      "job": 116,
+      "slug": "human-samurai",
+      "label": "Human Samurai",
+      "concept": {
+        "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+        "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+      },
+      "assets": [
+        {
+          "kind": "portrait",
+          "logicalSize": [
+            144,
+            112
+          ],
+          "crop": [
+            96,
+            56,
+            144,
+            112
+          ],
+          "nativeSize": [
+            48,
+            56
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\portrait-template.png",
+            "sha256": "255aff6799e44c91671257ff3445da53201ad8af9c3b5b8e3fcea650e6bbf819"
+          },
+          "prompt": "Draw a new Human Samurai menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. Preserve the gold crescent and red helmet. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\original-2-portrait.png",
+              "sha256": "4caafc94fdbe730081549f937273dbfcd068b081b16e6b642619f9b05c50977b"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\original-4-portrait.png",
+              "sha256": "5e2f5c3a85d5f6ab2137065c7ca03167e948f4348de0263d339b0a62db78a59d"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\original-7-portrait.png",
+              "sha256": "e35a265e6dddec591ab6f81891a4390443d80d9cf6470bba8c7f7836870a5a9f"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\original-9-portrait.png",
+              "sha256": "76ffad4444d5105b1d0158e0a73c0d1d4cd9077d40f744cbaa182c305f133d56"
+            }
+          ]
+        },
+        {
+          "kind": "icon",
+          "logicalSize": [
+            48,
+            28
+          ],
+          "crop": [
+            32,
+            14,
+            48,
+            28
+          ],
+          "nativeSize": [
+            16,
+            14
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\icon-template.png",
+            "sha256": "838c90f63579c84ef8dcecc4079711d3aec565c0851c614b45881b290d4c366d"
+          },
+          "prompt": "Draw a new Human Samurai tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. Preserve the gold crescent and red helmet. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\original-2-icon.png",
+              "sha256": "908e18832548f15ae7f0e5499ea0e78a217b7dddabd49ff78ef54c57afd74266"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\original-4-icon.png",
+              "sha256": "7f1e30f7c5b7f5e7b6013b947a1ee617edd00d6dbaa038ab25a3c16dddd48a41"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\original-7-icon.png",
+              "sha256": "0d27c2c113bb9ee55556c75d5cf94ae11a052abd088e4d5e502afac4744423fc"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\original-9-icon.png",
+              "sha256": "97ba9c4fa879cb5c26a8abea186918610425fb4e66bebbbd5141dfc5cfbb0c9d"
+            }
+          ]
+        }
+      ],
+      "iconPalette": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\native-icon-palette.png",
+        "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+      },
+      "iconPaletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "portraitPalettes": [
+        {
+          "job": 2,
+          "index": 0,
+          "words": [
+            1841,
+            992,
+            992,
+            209,
+            1299,
+            3381,
+            5526,
+            8631,
+            9754,
+            992,
+            992,
+            7266,
+            12448,
+            18656,
+            21792,
+            28032,
+            29088,
+            30148,
+            31208,
+            32298,
+            32462,
+            31504,
+            3174,
+            140,
+            3274,
+            6411,
+            7532,
+            9645,
+            9678,
+            12783,
+            14896,
+            20147,
+            23285,
+            24342,
+            25398,
+            26486,
+            29596,
+            15004,
+            16063,
+            16095,
+            23263,
+            20287,
+            24351,
+            25439,
+            26495,
+            27519,
+            28607,
+            32767
+          ]
+        },
+        {
+          "job": 4,
+          "index": 4,
+          "words": [
+            1841,
+            33,
+            5319,
+            7433,
+            9580,
+            2151,
+            3242,
+            6381,
+            7438,
+            8465,
+            9521,
+            9554,
+            12691,
+            13781,
+            14838,
+            12827,
+            15928,
+            17050,
+            21210,
+            19167,
+            23325,
+            24383,
+            26463,
+            25439,
+            29503,
+            27519,
+            28575,
+            28607,
+            29663,
+            30719,
+            32767,
+            32767,
+            7330,
+            11558,
+            14760,
+            14761,
+            13773,
+            15887,
+            20015,
+            21137,
+            24273,
+            24306,
+            25332,
+            26389,
+            27478,
+            30617,
+            32698,
+            32765
+          ]
+        },
+        {
+          "job": 7,
+          "index": 10,
+          "words": [
+            1841,
+            964,
+            9515,
+            13776,
+            15889,
+            24347,
+            25437,
+            2151,
+            3307,
+            4366,
+            7570,
+            7637,
+            9751,
+            13914,
+            16029,
+            19167,
+            27487,
+            27487,
+            27551,
+            27551,
+            27583,
+            28607,
+            29663,
+            31743,
+            32767,
+            5195,
+            5196,
+            4205,
+            4208,
+            4180,
+            4214,
+            3160,
+            1271,
+            1241,
+            215,
+            155,
+            156,
+            220,
+            222,
+            4445,
+            9694,
+            11774,
+            13886,
+            14942,
+            26459,
+            27551,
+            22299,
+            17048
+          ]
+        },
+        {
+          "job": 9,
+          "index": 14,
+          "words": [
+            1841,
+            108,
+            274,
+            308,
+            3514,
+            2523,
+            4603,
+            5660,
+            6749,
+            9950,
+            11007,
+            12063,
+            13151,
+            14175,
+            14175,
+            20415,
+            22495,
+            25599,
+            195,
+            2439,
+            4585,
+            5741,
+            4781,
+            8976,
+            12116,
+            11745,
+            15975,
+            21226,
+            28659,
+            10706,
+            13844,
+            20250,
+            24413,
+            24479,
+            25599,
+            14941,
+            19167,
+            23327,
+            25439,
+            27551,
+            29663,
+            3275,
+            2318,
+            3475,
+            8695,
+            14903,
+            18106,
+            23325
+          ]
+        }
+      ]
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "label": "Human Dark Knight",
+      "concept": {
+        "path": "build/art/illustrated-class-concepts-v2-2026-09-19/human-dark-knight-fft-redesign.png",
+        "sha256": "388ef4e98c901adcdb55015653984931762533e0dc96ff6d76419ebd6e2ccc56"
+      },
+      "assets": [
+        {
+          "kind": "portrait",
+          "logicalSize": [
+            144,
+            112
+          ],
+          "crop": [
+            96,
+            56,
+            144,
+            112
+          ],
+          "nativeSize": [
+            48,
+            56
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\portrait-template.png",
+            "sha256": "ce7e6fb786b1e5bcdf060b28eaba7369378c75a9679c8e315f3af212463aa054"
+          },
+          "prompt": "Draw a new Human Dark Knight menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. Wear the closed helmet. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\original-2-portrait.png",
+              "sha256": "4caafc94fdbe730081549f937273dbfcd068b081b16e6b642619f9b05c50977b"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\original-4-portrait.png",
+              "sha256": "5e2f5c3a85d5f6ab2137065c7ca03167e948f4348de0263d339b0a62db78a59d"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\original-7-portrait.png",
+              "sha256": "e35a265e6dddec591ab6f81891a4390443d80d9cf6470bba8c7f7836870a5a9f"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\original-9-portrait.png",
+              "sha256": "76ffad4444d5105b1d0158e0a73c0d1d4cd9077d40f744cbaa182c305f133d56"
+            }
+          ]
+        },
+        {
+          "kind": "icon",
+          "logicalSize": [
+            48,
+            28
+          ],
+          "crop": [
+            32,
+            14,
+            48,
+            28
+          ],
+          "nativeSize": [
+            16,
+            14
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\icon-template.png",
+            "sha256": "87d9c1d0ebfad81fab33506e64eecdd33a1ffe676404029c2af12c5383c70dc1"
+          },
+          "prompt": "Draw a new Human Dark Knight tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. Wear the closed helmet. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\original-2-icon.png",
+              "sha256": "908e18832548f15ae7f0e5499ea0e78a217b7dddabd49ff78ef54c57afd74266"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\original-4-icon.png",
+              "sha256": "7f1e30f7c5b7f5e7b6013b947a1ee617edd00d6dbaa038ab25a3c16dddd48a41"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\original-7-icon.png",
+              "sha256": "0d27c2c113bb9ee55556c75d5cf94ae11a052abd088e4d5e502afac4744423fc"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\original-9-icon.png",
+              "sha256": "97ba9c4fa879cb5c26a8abea186918610425fb4e66bebbbd5141dfc5cfbb0c9d"
+            }
+          ]
+        }
+      ],
+      "iconPalette": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\native-icon-palette.png",
+        "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+      },
+      "iconPaletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "portraitPalettes": [
+        {
+          "job": 2,
+          "index": 0,
+          "words": [
+            1841,
+            992,
+            992,
+            209,
+            1299,
+            3381,
+            5526,
+            8631,
+            9754,
+            992,
+            992,
+            7266,
+            12448,
+            18656,
+            21792,
+            28032,
+            29088,
+            30148,
+            31208,
+            32298,
+            32462,
+            31504,
+            3174,
+            140,
+            3274,
+            6411,
+            7532,
+            9645,
+            9678,
+            12783,
+            14896,
+            20147,
+            23285,
+            24342,
+            25398,
+            26486,
+            29596,
+            15004,
+            16063,
+            16095,
+            23263,
+            20287,
+            24351,
+            25439,
+            26495,
+            27519,
+            28607,
+            32767
+          ]
+        },
+        {
+          "job": 4,
+          "index": 4,
+          "words": [
+            1841,
+            33,
+            5319,
+            7433,
+            9580,
+            2151,
+            3242,
+            6381,
+            7438,
+            8465,
+            9521,
+            9554,
+            12691,
+            13781,
+            14838,
+            12827,
+            15928,
+            17050,
+            21210,
+            19167,
+            23325,
+            24383,
+            26463,
+            25439,
+            29503,
+            27519,
+            28575,
+            28607,
+            29663,
+            30719,
+            32767,
+            32767,
+            7330,
+            11558,
+            14760,
+            14761,
+            13773,
+            15887,
+            20015,
+            21137,
+            24273,
+            24306,
+            25332,
+            26389,
+            27478,
+            30617,
+            32698,
+            32765
+          ]
+        },
+        {
+          "job": 7,
+          "index": 10,
+          "words": [
+            1841,
+            964,
+            9515,
+            13776,
+            15889,
+            24347,
+            25437,
+            2151,
+            3307,
+            4366,
+            7570,
+            7637,
+            9751,
+            13914,
+            16029,
+            19167,
+            27487,
+            27487,
+            27551,
+            27551,
+            27583,
+            28607,
+            29663,
+            31743,
+            32767,
+            5195,
+            5196,
+            4205,
+            4208,
+            4180,
+            4214,
+            3160,
+            1271,
+            1241,
+            215,
+            155,
+            156,
+            220,
+            222,
+            4445,
+            9694,
+            11774,
+            13886,
+            14942,
+            26459,
+            27551,
+            22299,
+            17048
+          ]
+        },
+        {
+          "job": 9,
+          "index": 14,
+          "words": [
+            1841,
+            108,
+            274,
+            308,
+            3514,
+            2523,
+            4603,
+            5660,
+            6749,
+            9950,
+            11007,
+            12063,
+            13151,
+            14175,
+            14175,
+            20415,
+            22495,
+            25599,
+            195,
+            2439,
+            4585,
+            5741,
+            4781,
+            8976,
+            12116,
+            11745,
+            15975,
+            21226,
+            28659,
+            10706,
+            13844,
+            20250,
+            24413,
+            24479,
+            25599,
+            14941,
+            19167,
+            23327,
+            25439,
+            27551,
+            29663,
+            3275,
+            2318,
+            3475,
+            8695,
+            14903,
+            18106,
+            23325
+          ]
+        }
+      ]
+    },
+    {
+      "job": 118,
+      "slug": "bangaa-viking",
+      "label": "Bangaa Viking",
+      "concept": {
+        "path": "build/art/illustrated-class-concepts-v2-2026-09-19/bangaa-viking.png",
+        "sha256": "ef4f762284585f7cf9887225fcafa51f2ab9319ad93ec4998d5947ea971db3ef"
+      },
+      "assets": [
+        {
+          "kind": "portrait",
+          "logicalSize": [
+            144,
+            112
+          ],
+          "crop": [
+            96,
+            56,
+            144,
+            112
+          ],
+          "nativeSize": [
+            48,
+            56
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\portrait-template.png",
+            "sha256": "faed0b0dc2d31481d12b10aab16f610894c956365f286c3996e74a71a63cc6d7"
+          },
+          "prompt": "Draw a new Bangaa Viking menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\original-13-portrait.png",
+              "sha256": "7b199d5562ecf883e256c540b542e58a87f3b69b6b8e7cdc4984267d7c6a0d2e"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\original-15-portrait.png",
+              "sha256": "6b13151554f24c3781d0db1f424b44d87535a2f805d994773159e454487a3216"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\original-16-portrait.png",
+              "sha256": "d35ea2ac57d20d157d848e151e9bff0eeb3e734544972982c984179742d7b1b9"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\original-18-portrait.png",
+              "sha256": "8cb0159bdf9b16014431f184134b9608aeeb06b9b18ca236ba9bfc9bfbf0051d"
+            }
+          ]
+        },
+        {
+          "kind": "icon",
+          "logicalSize": [
+            48,
+            28
+          ],
+          "crop": [
+            32,
+            14,
+            48,
+            28
+          ],
+          "nativeSize": [
+            16,
+            14
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\icon-template.png",
+            "sha256": "493dce278d43934d5cf9c7859862ee6c1e3af271d59a44ac803ec2c990f70a3a"
+          },
+          "prompt": "Draw a new Bangaa Viking tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\original-13-icon.png",
+              "sha256": "9281a26492c16f5b95a9cd3909c70a19d2162824054397e51676a761a56717f8"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\original-15-icon.png",
+              "sha256": "2735dd828958cbbd88842e89e961326e7b41d581c53d2cfcbff782e46b211184"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\original-16-icon.png",
+              "sha256": "bd3d106732607e18c4a2e73ffadf7a0c5af0a05bad137847523017a0932a02fa"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\original-18-icon.png",
+              "sha256": "a65f97623fb488f2c84f4305e88b7e275a199f406f6af8fce7a266cbe4c1dbbb"
+            }
+          ]
+        }
+      ],
+      "iconPalette": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\native-icon-palette.png",
+        "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+      },
+      "iconPaletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "portraitPalettes": [
+        {
+          "job": 13,
+          "index": 22,
+          "words": [
+            1841,
+            0,
+            1059,
+            72,
+            204,
+            238,
+            1330,
+            1428,
+            1461,
+            4567,
+            4600,
+            5658,
+            6715,
+            6748,
+            6814,
+            6847,
+            6879,
+            6911,
+            13119,
+            18271,
+            24479,
+            992,
+            992,
+            992,
+            17632,
+            20768,
+            22913,
+            27076,
+            30213,
+            992,
+            7469,
+            9682,
+            14902,
+            19127,
+            6376,
+            12647,
+            16876,
+            20015,
+            22160,
+            24274,
+            25332,
+            26389,
+            27478,
+            29559,
+            32699,
+            31742,
+            32767,
+            992
+          ]
+        },
+        {
+          "job": 15,
+          "index": 26,
+          "words": [
+            1841,
+            10674,
+            15991,
+            19129,
+            22298,
+            22332,
+            26493,
+            24479,
+            13715,
+            15829,
+            17944,
+            19996,
+            6421,
+            5372,
+            5375,
+            8543,
+            10687,
+            16895,
+            19007,
+            24223,
+            26399,
+            28511,
+            32767,
+            3276,
+            4366,
+            7474,
+            9620,
+            13752,
+            15867,
+            171,
+            38,
+            141,
+            140,
+            240,
+            306,
+            371,
+            3477,
+            3511,
+            3544,
+            4602,
+            4635,
+            4669,
+            4702,
+            4767,
+            4799,
+            11039,
+            16191,
+            18367
+          ]
+        },
+        {
+          "job": 16,
+          "index": 28,
+          "words": [
+            1841,
+            7,
+            107,
+            205,
+            3310,
+            3346,
+            307,
+            4436,
+            4502,
+            5591,
+            4602,
+            4636,
+            5691,
+            4669,
+            6749,
+            9884,
+            10941,
+            6847,
+            8927,
+            5919,
+            7999,
+            12159,
+            18399,
+            28671,
+            6679,
+            10809,
+            9695,
+            9,
+            2253,
+            4369,
+            6288,
+            6386,
+            6419,
+            6389,
+            9526,
+            7447,
+            9560,
+            10587,
+            9662,
+            14878,
+            15935,
+            17087,
+            18143,
+            20255,
+            23327,
+            19199,
+            26495,
+            30655
+          ]
+        },
+        {
+          "job": 18,
+          "index": 32,
+          "words": [
+            1841,
+            2251,
+            2320,
+            3412,
+            4535,
+            4602,
+            5660,
+            5726,
+            6847,
+            6879,
+            6911,
+            6943,
+            6975,
+            7007,
+            12159,
+            18367,
+            21471,
+            25599,
+            32767,
+            9515,
+            13806,
+            20083,
+            22197,
+            24344,
+            28505,
+            30619,
+            32733,
+            32767,
+            20108,
+            24334,
+            65,
+            166,
+            8590,
+            10708,
+            12852,
+            13943,
+            17081,
+            16158,
+            18271,
+            3368,
+            1449,
+            1548,
+            1644,
+            1742,
+            10034,
+            12279,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "job": 119,
+      "slug": "bangaa-dark-knight",
+      "label": "Bangaa Dark Knight",
+      "concept": {
+        "path": "build/art/illustrated-class-concepts-v2-2026-09-19/bangaa-dark-knight.png",
+        "sha256": "6b0ed68c312ed39afb824bc442074d7f3a136e4a6d938a10b735c200b385968a"
+      },
+      "assets": [
+        {
+          "kind": "portrait",
+          "logicalSize": [
+            144,
+            112
+          ],
+          "crop": [
+            96,
+            56,
+            144,
+            112
+          ],
+          "nativeSize": [
+            48,
+            56
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\portrait-template.png",
+            "sha256": "3dbd961883fb687257c05075e48c455f755993698a7dfe0846eca0acd18721fd"
+          },
+          "prompt": "Draw a new Bangaa Dark Knight menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. Wear the closed helmet. The blue cloth comes out BEHIND the helmet, tucked behind the rear metal edge; it must not cross the face or front of the helmet. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\original-13-portrait.png",
+              "sha256": "7b199d5562ecf883e256c540b542e58a87f3b69b6b8e7cdc4984267d7c6a0d2e"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\original-15-portrait.png",
+              "sha256": "6b13151554f24c3781d0db1f424b44d87535a2f805d994773159e454487a3216"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\original-16-portrait.png",
+              "sha256": "d35ea2ac57d20d157d848e151e9bff0eeb3e734544972982c984179742d7b1b9"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\original-18-portrait.png",
+              "sha256": "8cb0159bdf9b16014431f184134b9608aeeb06b9b18ca236ba9bfc9bfbf0051d"
+            }
+          ]
+        },
+        {
+          "kind": "icon",
+          "logicalSize": [
+            48,
+            28
+          ],
+          "crop": [
+            32,
+            14,
+            48,
+            28
+          ],
+          "nativeSize": [
+            16,
+            14
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\icon-template.png",
+            "sha256": "0ee448b5f2ac95dd53ade4934295a104b0c60e569b80a38513707d6bd2eff70a"
+          },
+          "prompt": "Draw a new Bangaa Dark Knight tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. Wear the closed helmet. The blue cloth comes out BEHIND the helmet, tucked behind the rear metal edge; it must not cross the face or front of the helmet. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\original-13-icon.png",
+              "sha256": "9281a26492c16f5b95a9cd3909c70a19d2162824054397e51676a761a56717f8"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\original-15-icon.png",
+              "sha256": "2735dd828958cbbd88842e89e961326e7b41d581c53d2cfcbff782e46b211184"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\original-16-icon.png",
+              "sha256": "bd3d106732607e18c4a2e73ffadf7a0c5af0a05bad137847523017a0932a02fa"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\original-18-icon.png",
+              "sha256": "a65f97623fb488f2c84f4305e88b7e275a199f406f6af8fce7a266cbe4c1dbbb"
+            }
+          ]
+        }
+      ],
+      "iconPalette": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\native-icon-palette.png",
+        "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+      },
+      "iconPaletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "portraitPalettes": [
+        {
+          "job": 13,
+          "index": 22,
+          "words": [
+            1841,
+            0,
+            1059,
+            72,
+            204,
+            238,
+            1330,
+            1428,
+            1461,
+            4567,
+            4600,
+            5658,
+            6715,
+            6748,
+            6814,
+            6847,
+            6879,
+            6911,
+            13119,
+            18271,
+            24479,
+            992,
+            992,
+            992,
+            17632,
+            20768,
+            22913,
+            27076,
+            30213,
+            992,
+            7469,
+            9682,
+            14902,
+            19127,
+            6376,
+            12647,
+            16876,
+            20015,
+            22160,
+            24274,
+            25332,
+            26389,
+            27478,
+            29559,
+            32699,
+            31742,
+            32767,
+            992
+          ]
+        },
+        {
+          "job": 15,
+          "index": 26,
+          "words": [
+            1841,
+            10674,
+            15991,
+            19129,
+            22298,
+            22332,
+            26493,
+            24479,
+            13715,
+            15829,
+            17944,
+            19996,
+            6421,
+            5372,
+            5375,
+            8543,
+            10687,
+            16895,
+            19007,
+            24223,
+            26399,
+            28511,
+            32767,
+            3276,
+            4366,
+            7474,
+            9620,
+            13752,
+            15867,
+            171,
+            38,
+            141,
+            140,
+            240,
+            306,
+            371,
+            3477,
+            3511,
+            3544,
+            4602,
+            4635,
+            4669,
+            4702,
+            4767,
+            4799,
+            11039,
+            16191,
+            18367
+          ]
+        },
+        {
+          "job": 16,
+          "index": 28,
+          "words": [
+            1841,
+            7,
+            107,
+            205,
+            3310,
+            3346,
+            307,
+            4436,
+            4502,
+            5591,
+            4602,
+            4636,
+            5691,
+            4669,
+            6749,
+            9884,
+            10941,
+            6847,
+            8927,
+            5919,
+            7999,
+            12159,
+            18399,
+            28671,
+            6679,
+            10809,
+            9695,
+            9,
+            2253,
+            4369,
+            6288,
+            6386,
+            6419,
+            6389,
+            9526,
+            7447,
+            9560,
+            10587,
+            9662,
+            14878,
+            15935,
+            17087,
+            18143,
+            20255,
+            23327,
+            19199,
+            26495,
+            30655
+          ]
+        },
+        {
+          "job": 18,
+          "index": 32,
+          "words": [
+            1841,
+            2251,
+            2320,
+            3412,
+            4535,
+            4602,
+            5660,
+            5726,
+            6847,
+            6879,
+            6911,
+            6943,
+            6975,
+            7007,
+            12159,
+            18367,
+            21471,
+            25599,
+            32767,
+            9515,
+            13806,
+            20083,
+            22197,
+            24344,
+            28505,
+            30619,
+            32733,
+            32767,
+            20108,
+            24334,
+            65,
+            166,
+            8590,
+            10708,
+            12852,
+            13943,
+            17081,
+            16158,
+            18271,
+            3368,
+            1449,
+            1548,
+            1644,
+            1742,
+            10034,
+            12279,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "job": 120,
+      "slug": "nu-mou-chemist",
+      "label": "Nu Mou Chemist",
+      "concept": {
+        "path": "build/art/illustrated-class-concepts-v2-2026-09-19/nu-mou-chemist.png",
+        "sha256": "f7233c9e7573e11e8ce03d057a04df6de41e9a66e6413a9ab4a100c5ce9c4f44"
+      },
+      "assets": [
+        {
+          "kind": "portrait",
+          "logicalSize": [
+            144,
+            112
+          ],
+          "crop": [
+            96,
+            56,
+            144,
+            112
+          ],
+          "nativeSize": [
+            48,
+            56
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\portrait-template.png",
+            "sha256": "247a207bb68d21fc74f21104f2c87a927bde751e578a1799c3358fe531e6c36b"
+          },
+          "prompt": "Draw a new Nu Mou Chemist menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\original-20-portrait.png",
+              "sha256": "848716de2ba732798379c44f6d20a5724bc081fae7b658c31d573c1150e09130"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\original-22-portrait.png",
+              "sha256": "a6a81deb577e4c8596e278ef82a825145425d729d9f9ee83a2a0be564b70cbb1"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\original-23-portrait.png",
+              "sha256": "eb1742436245f45fa13021c66cb3ab6e5cc4fcb41a4ca6c0ef97177749b52066"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\original-27-portrait.png",
+              "sha256": "0d28ac82e3d908fa3e54e4d68cca67b3cc3c01ee655db976ab2a6c770e656ff3"
+            }
+          ]
+        },
+        {
+          "kind": "icon",
+          "logicalSize": [
+            48,
+            28
+          ],
+          "crop": [
+            32,
+            14,
+            48,
+            28
+          ],
+          "nativeSize": [
+            16,
+            14
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\icon-template.png",
+            "sha256": "0c443f9712ad762ba2d04344b41a95a78aa580d03dbea4e1ae22f36f3f13df6f"
+          },
+          "prompt": "Draw a new Nu Mou Chemist tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\original-20-icon.png",
+              "sha256": "b10d9d029356e874fe8a11eebd76e581c9db9e5088cdbc388456f5a047fb709f"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\original-22-icon.png",
+              "sha256": "fd347b062284c98e272e925363c3619a8ae695c408f383dbbbab59369daab7f9"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\original-23-icon.png",
+              "sha256": "fe31db13615e56a3cf4d7b0d4773e38db1b2a5af7a0410a7e177a20c17788eda"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\original-27-icon.png",
+              "sha256": "9e6f35c8511f2d6942bd39ba03353e22933b708906e9f08c5d1902adfb916915"
+            }
+          ]
+        }
+      ],
+      "iconPalette": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\native-icon-palette.png",
+        "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+      },
+      "iconPaletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "portraitPalettes": [
+        {
+          "job": 20,
+          "index": 36,
+          "words": [
+            1841,
+            3242,
+            8558,
+            13811,
+            17014,
+            21209,
+            24380,
+            27551,
+            30687,
+            31743,
+            9,
+            2216,
+            109,
+            145,
+            6411,
+            2196,
+            1237,
+            3289,
+            3323,
+            5373,
+            5405,
+            5469,
+            6622,
+            8767,
+            9887,
+            32,
+            6404,
+            7527,
+            11689,
+            14826,
+            14894,
+            20110,
+            16017,
+            23249,
+            19156,
+            24338,
+            24372,
+            25397,
+            22326,
+            27478,
+            25464,
+            28535,
+            28569,
+            26522,
+            28571,
+            28603,
+            29628,
+            32767
+          ]
+        },
+        {
+          "job": 22,
+          "index": 40,
+          "words": [
+            1841,
+            9517,
+            10671,
+            13811,
+            15991,
+            17081,
+            19193,
+            22298,
+            23388,
+            25469,
+            26557,
+            28638,
+            18206,
+            20319,
+            22431,
+            4237,
+            18,
+            6354,
+            6358,
+            7412,
+            7413,
+            9526,
+            6361,
+            8474,
+            7421,
+            10588,
+            8478,
+            9535,
+            12703,
+            14879,
+            18079,
+            24383,
+            3212,
+            6414,
+            6381,
+            9615,
+            12722,
+            12757,
+            13814,
+            14871,
+            15992,
+            16985,
+            18106,
+            21213,
+            22268,
+            24348,
+            26463,
+            29631
+          ]
+        },
+        {
+          "job": 23,
+          "index": 42,
+          "words": [
+            1841,
+            2278,
+            354,
+            6564,
+            7654,
+            8710,
+            9832,
+            10890,
+            10924,
+            15086,
+            17232,
+            564,
+            2681,
+            5786,
+            11039,
+            14207,
+            7565,
+            1389,
+            8724,
+            13975,
+            17113,
+            18170,
+            19227,
+            20284,
+            22367,
+            25503,
+            25436,
+            26493,
+            26527,
+            28607,
+            29663,
+            31743,
+            5286,
+            12684,
+            16879,
+            20016,
+            21137,
+            23218,
+            24274,
+            25332,
+            26421,
+            26422,
+            28503,
+            28537,
+            29595,
+            31676,
+            32767,
+            32767
+          ]
+        },
+        {
+          "job": 27,
+          "index": 50,
+          "words": [
+            1841,
+            487,
+            4781,
+            15049,
+            11089,
+            15351,
+            23253,
+            24343,
+            28504,
+            104,
+            8492,
+            10639,
+            15923,
+            22233,
+            26460,
+            26459,
+            30655,
+            109,
+            1298,
+            5525,
+            7606,
+            8663,
+            9722,
+            11834,
+            15005,
+            6448,
+            9749,
+            13878,
+            18072,
+            17114,
+            21242,
+            22299,
+            3235,
+            6374,
+            9512,
+            12681,
+            14796,
+            16910,
+            21104,
+            23218,
+            24276,
+            25333,
+            26423,
+            27480,
+            28537,
+            29595,
+            31709,
+            32767
+          ]
+        }
+      ]
+    },
+    {
+      "job": 121,
+      "slug": "nu-mou-geomancer",
+      "label": "Nu Mou Geomancer",
+      "concept": {
+        "path": "build/art/illustrated-class-concepts-v2-2026-09-19/nu-mou-geomancer.png",
+        "sha256": "31265b713e0b323579456016cd1c25a31c1104a9b5d5f4636a02b4f3b5ad445f"
+      },
+      "assets": [
+        {
+          "kind": "portrait",
+          "logicalSize": [
+            144,
+            112
+          ],
+          "crop": [
+            96,
+            56,
+            144,
+            112
+          ],
+          "nativeSize": [
+            48,
+            56
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\portrait-template.png",
+            "sha256": "06a0dc1a70c213070637a5d3f939e205e8f818555a8c756f8a74907b1d0d715f"
+          },
+          "prompt": "Draw a new Nu Mou Geomancer menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\original-20-portrait.png",
+              "sha256": "848716de2ba732798379c44f6d20a5724bc081fae7b658c31d573c1150e09130"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\original-22-portrait.png",
+              "sha256": "a6a81deb577e4c8596e278ef82a825145425d729d9f9ee83a2a0be564b70cbb1"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\original-23-portrait.png",
+              "sha256": "eb1742436245f45fa13021c66cb3ab6e5cc4fcb41a4ca6c0ef97177749b52066"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\original-27-portrait.png",
+              "sha256": "0d28ac82e3d908fa3e54e4d68cca67b3cc3c01ee655db976ab2a6c770e656ff3"
+            }
+          ]
+        },
+        {
+          "kind": "icon",
+          "logicalSize": [
+            48,
+            28
+          ],
+          "crop": [
+            32,
+            14,
+            48,
+            28
+          ],
+          "nativeSize": [
+            16,
+            14
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\icon-template.png",
+            "sha256": "5a41ce07e483f15993a5554759c5b0b2fb81aba46dd84259e962686440dce39c"
+          },
+          "prompt": "Draw a new Nu Mou Geomancer tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\original-20-icon.png",
+              "sha256": "b10d9d029356e874fe8a11eebd76e581c9db9e5088cdbc388456f5a047fb709f"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\original-22-icon.png",
+              "sha256": "fd347b062284c98e272e925363c3619a8ae695c408f383dbbbab59369daab7f9"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\original-23-icon.png",
+              "sha256": "fe31db13615e56a3cf4d7b0d4773e38db1b2a5af7a0410a7e177a20c17788eda"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\original-27-icon.png",
+              "sha256": "9e6f35c8511f2d6942bd39ba03353e22933b708906e9f08c5d1902adfb916915"
+            }
+          ]
+        }
+      ],
+      "iconPalette": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\native-icon-palette.png",
+        "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+      },
+      "iconPaletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "portraitPalettes": [
+        {
+          "job": 20,
+          "index": 36,
+          "words": [
+            1841,
+            3242,
+            8558,
+            13811,
+            17014,
+            21209,
+            24380,
+            27551,
+            30687,
+            31743,
+            9,
+            2216,
+            109,
+            145,
+            6411,
+            2196,
+            1237,
+            3289,
+            3323,
+            5373,
+            5405,
+            5469,
+            6622,
+            8767,
+            9887,
+            32,
+            6404,
+            7527,
+            11689,
+            14826,
+            14894,
+            20110,
+            16017,
+            23249,
+            19156,
+            24338,
+            24372,
+            25397,
+            22326,
+            27478,
+            25464,
+            28535,
+            28569,
+            26522,
+            28571,
+            28603,
+            29628,
+            32767
+          ]
+        },
+        {
+          "job": 22,
+          "index": 40,
+          "words": [
+            1841,
+            9517,
+            10671,
+            13811,
+            15991,
+            17081,
+            19193,
+            22298,
+            23388,
+            25469,
+            26557,
+            28638,
+            18206,
+            20319,
+            22431,
+            4237,
+            18,
+            6354,
+            6358,
+            7412,
+            7413,
+            9526,
+            6361,
+            8474,
+            7421,
+            10588,
+            8478,
+            9535,
+            12703,
+            14879,
+            18079,
+            24383,
+            3212,
+            6414,
+            6381,
+            9615,
+            12722,
+            12757,
+            13814,
+            14871,
+            15992,
+            16985,
+            18106,
+            21213,
+            22268,
+            24348,
+            26463,
+            29631
+          ]
+        },
+        {
+          "job": 23,
+          "index": 42,
+          "words": [
+            1841,
+            2278,
+            354,
+            6564,
+            7654,
+            8710,
+            9832,
+            10890,
+            10924,
+            15086,
+            17232,
+            564,
+            2681,
+            5786,
+            11039,
+            14207,
+            7565,
+            1389,
+            8724,
+            13975,
+            17113,
+            18170,
+            19227,
+            20284,
+            22367,
+            25503,
+            25436,
+            26493,
+            26527,
+            28607,
+            29663,
+            31743,
+            5286,
+            12684,
+            16879,
+            20016,
+            21137,
+            23218,
+            24274,
+            25332,
+            26421,
+            26422,
+            28503,
+            28537,
+            29595,
+            31676,
+            32767,
+            32767
+          ]
+        },
+        {
+          "job": 27,
+          "index": 50,
+          "words": [
+            1841,
+            487,
+            4781,
+            15049,
+            11089,
+            15351,
+            23253,
+            24343,
+            28504,
+            104,
+            8492,
+            10639,
+            15923,
+            22233,
+            26460,
+            26459,
+            30655,
+            109,
+            1298,
+            5525,
+            7606,
+            8663,
+            9722,
+            11834,
+            15005,
+            6448,
+            9749,
+            13878,
+            18072,
+            17114,
+            21242,
+            22299,
+            3235,
+            6374,
+            9512,
+            12681,
+            14796,
+            16910,
+            21104,
+            23218,
+            24276,
+            25333,
+            26423,
+            27480,
+            28537,
+            29595,
+            31709,
+            32767
+          ]
+        }
+      ]
+    },
+    {
+      "job": 122,
+      "slug": "moogle-chemist",
+      "label": "Moogle Chemist",
+      "concept": {
+        "path": "build/art/illustrated-class-concepts-v2-2026-09-19/moogle-chemist.png",
+        "sha256": "fe8c11b29aca62d39e35588c9648669e31ddaaddaffa104764cd78c12981e0da"
+      },
+      "assets": [
+        {
+          "kind": "portrait",
+          "logicalSize": [
+            144,
+            112
+          ],
+          "crop": [
+            96,
+            56,
+            144,
+            112
+          ],
+          "nativeSize": [
+            48,
+            56
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\portrait-template.png",
+            "sha256": "19f4a6c9735b4a1c332bdfb857b8a8b2248c1c2e327dea7083c4b877b14674ba"
+          },
+          "prompt": "Draw a new Moogle Chemist menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\original-37-portrait.png",
+              "sha256": "329709bfad415a609fa4bfdb8ec7886687daeb4619a2b72a578c81e9557c1dbd"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\original-36-portrait.png",
+              "sha256": "a9cae15c8f532e87837d8da14e3047bc2540fd749f23e0d002cfc58baa9a10f6"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\original-39-portrait.png",
+              "sha256": "625461b4db401d6bc857a9a7c4552eabd6b5e37cbddffa2894ca40f8f0f53cdd"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\original-41-portrait.png",
+              "sha256": "0a870c50d80f999756976c13ef9adaf7047262ec8120fb3d2ba46c2150d7ea01"
+            }
+          ]
+        },
+        {
+          "kind": "icon",
+          "logicalSize": [
+            48,
+            28
+          ],
+          "crop": [
+            32,
+            14,
+            48,
+            28
+          ],
+          "nativeSize": [
+            16,
+            14
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\icon-template.png",
+            "sha256": "e06b619d717300251da0ee91f1ff0158405b554baa96e8b18fc96003e5e0d433"
+          },
+          "prompt": "Draw a new Moogle Chemist tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\original-37-icon.png",
+              "sha256": "22cf5fc1f24afbb516a3375bb26d252de4b6ae12fc8200a553cb43f9324cfc70"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\original-36-icon.png",
+              "sha256": "adbf4cc93850d6af2c349351a127d69228ee9b91b733dcfda70eba2ff4fd58ff"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\original-39-icon.png",
+              "sha256": "81ae4ebda87a31f252c49147b086b971f5b062d12f882d67559d2cf90b9144c0"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\original-41-icon.png",
+              "sha256": "47b0a8b31962be62f908728c2497aede871016b3767189ec428a5c5db13a0f1c"
+            }
+          ]
+        }
+      ],
+      "iconPalette": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\native-icon-palette.png",
+        "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+      },
+      "iconPaletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "portraitPalettes": [
+        {
+          "job": 37,
+          "index": 70,
+          "words": [
+            1841,
+            3174,
+            7368,
+            12588,
+            14701,
+            18896,
+            19953,
+            23157,
+            7313,
+            11569,
+            13715,
+            16852,
+            33,
+            2150,
+            4298,
+            15894,
+            15927,
+            17015,
+            18073,
+            23258,
+            23291,
+            25403,
+            27485,
+            29567,
+            22232,
+            24412,
+            26525,
+            28607,
+            29663,
+            29695,
+            32767,
+            11,
+            18,
+            92,
+            13677,
+            14734,
+            8557,
+            8530,
+            10708,
+            13846,
+            21213,
+            16989,
+            24351,
+            26431,
+            28511,
+            28575,
+            87,
+            6413
+          ]
+        },
+        {
+          "job": 36,
+          "index": 68,
+          "words": [
+            1841,
+            103,
+            2152,
+            2248,
+            6284,
+            7374,
+            8430,
+            4396,
+            9615,
+            992,
+            12,
+            17,
+            21,
+            26,
+            60,
+            992,
+            13779,
+            14964,
+            14905,
+            18106,
+            19159,
+            20249,
+            23356,
+            26431,
+            28511,
+            28543,
+            29599,
+            30719,
+            29663,
+            27582,
+            26493,
+            360,
+            459,
+            1613,
+            3694,
+            4783,
+            5808,
+            8945,
+            12084,
+            17336,
+            992,
+            23188,
+            27448,
+            29529,
+            30586,
+            32699,
+            32733,
+            32767
+          ]
+        },
+        {
+          "job": 39,
+          "index": 74,
+          "words": [
+            1841,
+            0,
+            3,
+            165,
+            992,
+            3271,
+            4330,
+            7467,
+            9615,
+            9712,
+            12851,
+            18070,
+            23289,
+            25435,
+            26492,
+            28511,
+            28575,
+            29662,
+            30719,
+            31743,
+            32767,
+            992,
+            992,
+            12,
+            18,
+            21,
+            25,
+            91,
+            60,
+            124,
+            125,
+            992,
+            992,
+            260,
+            360,
+            1449,
+            1610,
+            4781,
+            4782,
+            6864,
+            8977,
+            10004,
+            11060,
+            11061,
+            12086,
+            15224,
+            17338,
+            20477
+          ]
+        },
+        {
+          "job": 41,
+          "index": 78,
+          "words": [
+            1841,
+            3072,
+            5283,
+            10470,
+            11622,
+            13767,
+            16905,
+            19018,
+            20109,
+            21167,
+            11328,
+            19618,
+            25824,
+            18662,
+            27938,
+            28004,
+            29095,
+            30186,
+            6,
+            76,
+            15,
+            20,
+            90,
+            124,
+            141,
+            3348,
+            5526,
+            8797,
+            11007,
+            14175,
+            6446,
+            9552,
+            10674,
+            12854,
+            23322,
+            24412,
+            26525,
+            27582,
+            29663,
+            29663,
+            31743,
+            32767,
+            32767,
+            28575,
+            28511,
+            30252,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "job": 123,
+      "slug": "moogle-bard",
+      "label": "Moogle Bard",
+      "concept": {
+        "path": "build/art/illustrated-class-concepts-v2-2026-09-19/moogle-bard.png",
+        "sha256": "92c3771c2cbb2ad04209fed5cda02528ebdbabceff7d08baea8847a1fb8ee3cb"
+      },
+      "assets": [
+        {
+          "kind": "portrait",
+          "logicalSize": [
+            144,
+            112
+          ],
+          "crop": [
+            96,
+            56,
+            144,
+            112
+          ],
+          "nativeSize": [
+            48,
+            56
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\portrait-template.png",
+            "sha256": "3001eb90fc0caf827465a4c9309161828aac72dcf150d1bc67b92fb8484ab0e9"
+          },
+          "prompt": "Draw a new Moogle Bard menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\original-37-portrait.png",
+              "sha256": "329709bfad415a609fa4bfdb8ec7886687daeb4619a2b72a578c81e9557c1dbd"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\original-36-portrait.png",
+              "sha256": "a9cae15c8f532e87837d8da14e3047bc2540fd749f23e0d002cfc58baa9a10f6"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\original-39-portrait.png",
+              "sha256": "625461b4db401d6bc857a9a7c4552eabd6b5e37cbddffa2894ca40f8f0f53cdd"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\original-41-portrait.png",
+              "sha256": "0a870c50d80f999756976c13ef9adaf7047262ec8120fb3d2ba46c2150d7ea01"
+            }
+          ]
+        },
+        {
+          "kind": "icon",
+          "logicalSize": [
+            48,
+            28
+          ],
+          "crop": [
+            32,
+            14,
+            48,
+            28
+          ],
+          "nativeSize": [
+            16,
+            14
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\icon-template.png",
+            "sha256": "25be4b4fbaf314802b55b282343c1e259cafe23030023fdef398d2ce53339cd5"
+          },
+          "prompt": "Draw a new Moogle Bard tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\original-37-icon.png",
+              "sha256": "22cf5fc1f24afbb516a3375bb26d252de4b6ae12fc8200a553cb43f9324cfc70"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\original-36-icon.png",
+              "sha256": "adbf4cc93850d6af2c349351a127d69228ee9b91b733dcfda70eba2ff4fd58ff"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\original-39-icon.png",
+              "sha256": "81ae4ebda87a31f252c49147b086b971f5b062d12f882d67559d2cf90b9144c0"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\original-41-icon.png",
+              "sha256": "47b0a8b31962be62f908728c2497aede871016b3767189ec428a5c5db13a0f1c"
+            }
+          ]
+        }
+      ],
+      "iconPalette": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\native-icon-palette.png",
+        "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+      },
+      "iconPaletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "portraitPalettes": [
+        {
+          "job": 37,
+          "index": 70,
+          "words": [
+            1841,
+            3174,
+            7368,
+            12588,
+            14701,
+            18896,
+            19953,
+            23157,
+            7313,
+            11569,
+            13715,
+            16852,
+            33,
+            2150,
+            4298,
+            15894,
+            15927,
+            17015,
+            18073,
+            23258,
+            23291,
+            25403,
+            27485,
+            29567,
+            22232,
+            24412,
+            26525,
+            28607,
+            29663,
+            29695,
+            32767,
+            11,
+            18,
+            92,
+            13677,
+            14734,
+            8557,
+            8530,
+            10708,
+            13846,
+            21213,
+            16989,
+            24351,
+            26431,
+            28511,
+            28575,
+            87,
+            6413
+          ]
+        },
+        {
+          "job": 36,
+          "index": 68,
+          "words": [
+            1841,
+            103,
+            2152,
+            2248,
+            6284,
+            7374,
+            8430,
+            4396,
+            9615,
+            992,
+            12,
+            17,
+            21,
+            26,
+            60,
+            992,
+            13779,
+            14964,
+            14905,
+            18106,
+            19159,
+            20249,
+            23356,
+            26431,
+            28511,
+            28543,
+            29599,
+            30719,
+            29663,
+            27582,
+            26493,
+            360,
+            459,
+            1613,
+            3694,
+            4783,
+            5808,
+            8945,
+            12084,
+            17336,
+            992,
+            23188,
+            27448,
+            29529,
+            30586,
+            32699,
+            32733,
+            32767
+          ]
+        },
+        {
+          "job": 39,
+          "index": 74,
+          "words": [
+            1841,
+            0,
+            3,
+            165,
+            992,
+            3271,
+            4330,
+            7467,
+            9615,
+            9712,
+            12851,
+            18070,
+            23289,
+            25435,
+            26492,
+            28511,
+            28575,
+            29662,
+            30719,
+            31743,
+            32767,
+            992,
+            992,
+            12,
+            18,
+            21,
+            25,
+            91,
+            60,
+            124,
+            125,
+            992,
+            992,
+            260,
+            360,
+            1449,
+            1610,
+            4781,
+            4782,
+            6864,
+            8977,
+            10004,
+            11060,
+            11061,
+            12086,
+            15224,
+            17338,
+            20477
+          ]
+        },
+        {
+          "job": 41,
+          "index": 78,
+          "words": [
+            1841,
+            3072,
+            5283,
+            10470,
+            11622,
+            13767,
+            16905,
+            19018,
+            20109,
+            21167,
+            11328,
+            19618,
+            25824,
+            18662,
+            27938,
+            28004,
+            29095,
+            30186,
+            6,
+            76,
+            15,
+            20,
+            90,
+            124,
+            141,
+            3348,
+            5526,
+            8797,
+            11007,
+            14175,
+            6446,
+            9552,
+            10674,
+            12854,
+            23322,
+            24412,
+            26525,
+            27582,
+            29663,
+            29663,
+            31743,
+            32767,
+            32767,
+            28575,
+            28511,
+            30252,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "job": 124,
+      "slug": "viera-dancer",
+      "label": "Viera Dancer",
+      "concept": {
+        "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-dancer.png",
+        "sha256": "38f1c29837fe0e540e4f751e34fa1654ce0fca57da763eca4d2ccf9723dc8b5e"
+      },
+      "assets": [
+        {
+          "kind": "portrait",
+          "logicalSize": [
+            144,
+            112
+          ],
+          "crop": [
+            96,
+            56,
+            144,
+            112
+          ],
+          "nativeSize": [
+            48,
+            56
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\portrait-template.png",
+            "sha256": "eec592991986c9ce50fa512feb510e2695f90d350ad644c17ca457fcf94ff1f4"
+          },
+          "prompt": "Draw a new Viera Dancer menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\original-28-portrait.png",
+              "sha256": "f307cb39192f5a873dbebcf7ad2eea5cb93831ddd4f0ba3e0bfc49b4e71426b5"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\original-29-portrait.png",
+              "sha256": "08d40b2850aa3594001fc2251d403eace4f8e351faab8c15b1c86902021fb7b2"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\original-31-portrait.png",
+              "sha256": "71e440a50a9c8803f8353ba8a6a0fd30eae5526f091462c6a76a5998b390fe9c"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\original-33-portrait.png",
+              "sha256": "3a428a9bc2e947e48614edfc6a20e45aebb006d02fc3991affd2bc7d74d4d005"
+            }
+          ]
+        },
+        {
+          "kind": "icon",
+          "logicalSize": [
+            48,
+            28
+          ],
+          "crop": [
+            32,
+            14,
+            48,
+            28
+          ],
+          "nativeSize": [
+            16,
+            14
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\icon-template.png",
+            "sha256": "f7422290b629d387e8b3b6842d2a0dc26478789ebe062330c9da8fd6e61d8a43"
+          },
+          "prompt": "Draw a new Viera Dancer tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\original-28-icon.png",
+              "sha256": "5d3a9b24a3e660651f62afcd14f1eaa208f395a7474ce95e977ba8d0e2d3f26a"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\original-29-icon.png",
+              "sha256": "24b488ae057eb023a1e70b657cfb83ed8b5ecc6024e3df036311e10e1bf454b8"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\original-31-icon.png",
+              "sha256": "d7054b193dc226ba09009f35ce097ebfac6730536bf2e61635380d5d78b42e56"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\original-33-icon.png",
+              "sha256": "a082e2e94c682033df88c35826315004dfc1ffce1fd1d6afc1d765458491df38"
+            }
+          ]
+        }
+      ],
+      "iconPalette": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\native-icon-palette.png",
+        "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+      },
+      "iconPaletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "portraitPalettes": [
+        {
+          "job": 28,
+          "index": 52,
+          "words": [
+            1841,
+            11533,
+            16950,
+            20250,
+            26527,
+            27583,
+            29663,
+            32767,
+            9,
+            6284,
+            12557,
+            12654,
+            14767,
+            17905,
+            16848,
+            15859,
+            10640,
+            8592,
+            10708,
+            13880,
+            13880,
+            7607,
+            10806,
+            12856,
+            15001,
+            17116,
+            18204,
+            20252,
+            24447,
+            20222,
+            20191,
+            26335,
+            14735,
+            17905,
+            16621,
+            24017,
+            25142,
+            30359,
+            29336,
+            31448,
+            31482,
+            32571,
+            32636,
+            32703,
+            32702,
+            32766,
+            32767,
+            0
+          ]
+        },
+        {
+          "job": 29,
+          "index": 54,
+          "words": [
+            1841,
+            2215,
+            6411,
+            7534,
+            10672,
+            12755,
+            13812,
+            15925,
+            18071,
+            19161,
+            21242,
+            22299,
+            23356,
+            25471,
+            26591,
+            32767,
+            0,
+            3270,
+            7463,
+            9641,
+            10702,
+            12809,
+            14924,
+            14957,
+            16013,
+            17071,
+            18128,
+            21266,
+            22324,
+            23381,
+            24438,
+            27577,
+            98,
+            3299,
+            6440,
+            8619,
+            10732,
+            14831,
+            15920,
+            18035,
+            6467,
+            7556,
+            13767,
+            15943,
+            10829,
+            13967,
+            15025,
+            19157
+          ]
+        },
+        {
+          "job": 31,
+          "index": 58,
+          "words": [
+            1841,
+            7463,
+            4328,
+            7470,
+            9616,
+            10674,
+            13780,
+            14869,
+            17048,
+            17049,
+            18105,
+            19162,
+            22300,
+            20252,
+            24413,
+            26495,
+            27551,
+            30687,
+            14762,
+            16812,
+            19950,
+            21999,
+            22128,
+            23153,
+            27316,
+            27382,
+            32536,
+            29465,
+            32602,
+            32635,
+            32668,
+            32700,
+            32733,
+            32766,
+            5222,
+            8427,
+            9518,
+            9552,
+            8511,
+            22030,
+            32760,
+            22267,
+            29460,
+            25437,
+            28607,
+            30687,
+            31743,
+            32767
+          ]
+        },
+        {
+          "job": 33,
+          "index": 62,
+          "words": [
+            1841,
+            11561,
+            14701,
+            18864,
+            22069,
+            25239,
+            27321,
+            28442,
+            29500,
+            30589,
+            30623,
+            31647,
+            31679,
+            27516,
+            29629,
+            32766,
+            104,
+            112,
+            2189,
+            3312,
+            6449,
+            4436,
+            7606,
+            5656,
+            5788,
+            2782,
+            2815,
+            5919,
+            6975,
+            10079,
+            13215,
+            16319,
+            18399,
+            20479,
+            6443,
+            9648,
+            12787,
+            14902,
+            16024,
+            17081,
+            18140,
+            20252,
+            23391,
+            24447,
+            25503,
+            27583,
+            28607,
+            30687
+          ]
+        }
+      ]
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "label": "Viera Mystic Knight",
+      "concept": {
+        "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-mystic-knight.png",
+        "sha256": "791865c5d5065c1b8a5348b8f9bbcd69bd3f4a0ccc104a7fbc8466e21b919a5e"
+      },
+      "assets": [
+        {
+          "kind": "portrait",
+          "logicalSize": [
+            144,
+            112
+          ],
+          "crop": [
+            96,
+            56,
+            144,
+            112
+          ],
+          "nativeSize": [
+            48,
+            56
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\portrait-template.png",
+            "sha256": "af3d9e3cd8a65235bcf7cc0c70851f69b04b525c67034a14e99715ee91ec1813"
+          },
+          "prompt": "Draw a new Viera Mystic Knight menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-28-portrait.png",
+              "sha256": "f307cb39192f5a873dbebcf7ad2eea5cb93831ddd4f0ba3e0bfc49b4e71426b5"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-29-portrait.png",
+              "sha256": "08d40b2850aa3594001fc2251d403eace4f8e351faab8c15b1c86902021fb7b2"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-31-portrait.png",
+              "sha256": "71e440a50a9c8803f8353ba8a6a0fd30eae5526f091462c6a76a5998b390fe9c"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-33-portrait.png",
+              "sha256": "3a428a9bc2e947e48614edfc6a20e45aebb006d02fc3991affd2bc7d74d4d005"
+            }
+          ]
+        },
+        {
+          "kind": "icon",
+          "logicalSize": [
+            48,
+            28
+          ],
+          "crop": [
+            32,
+            14,
+            48,
+            28
+          ],
+          "nativeSize": [
+            16,
+            14
+          ],
+          "template": {
+            "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\icon-template.png",
+            "sha256": "cd4a6975a20ae925a7878df02b3b9b573c04dd0ba5c5d00d0ad05b4c3303a81e"
+          },
+          "prompt": "Draw a new Viera Mystic Knight tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+          "refs": [
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-28-icon.png",
+              "sha256": "5d3a9b24a3e660651f62afcd14f1eaa208f395a7474ce95e977ba8d0e2d3f26a"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-29-icon.png",
+              "sha256": "24b488ae057eb023a1e70b657cfb83ed8b5ecc6024e3df036311e10e1bf454b8"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-31-icon.png",
+              "sha256": "d7054b193dc226ba09009f35ce097ebfac6730536bf2e61635380d5d78b42e56"
+            },
+            {
+              "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-33-icon.png",
+              "sha256": "a082e2e94c682033df88c35826315004dfc1ffce1fd1d6afc1d765458491df38"
+            }
+          ]
+        }
+      ],
+      "iconPalette": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\native-icon-palette.png",
+        "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+      },
+      "iconPaletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "portraitPalettes": [
+        {
+          "job": 28,
+          "index": 52,
+          "words": [
+            1841,
+            11533,
+            16950,
+            20250,
+            26527,
+            27583,
+            29663,
+            32767,
+            9,
+            6284,
+            12557,
+            12654,
+            14767,
+            17905,
+            16848,
+            15859,
+            10640,
+            8592,
+            10708,
+            13880,
+            13880,
+            7607,
+            10806,
+            12856,
+            15001,
+            17116,
+            18204,
+            20252,
+            24447,
+            20222,
+            20191,
+            26335,
+            14735,
+            17905,
+            16621,
+            24017,
+            25142,
+            30359,
+            29336,
+            31448,
+            31482,
+            32571,
+            32636,
+            32703,
+            32702,
+            32766,
+            32767,
+            0
+          ]
+        },
+        {
+          "job": 29,
+          "index": 54,
+          "words": [
+            1841,
+            2215,
+            6411,
+            7534,
+            10672,
+            12755,
+            13812,
+            15925,
+            18071,
+            19161,
+            21242,
+            22299,
+            23356,
+            25471,
+            26591,
+            32767,
+            0,
+            3270,
+            7463,
+            9641,
+            10702,
+            12809,
+            14924,
+            14957,
+            16013,
+            17071,
+            18128,
+            21266,
+            22324,
+            23381,
+            24438,
+            27577,
+            98,
+            3299,
+            6440,
+            8619,
+            10732,
+            14831,
+            15920,
+            18035,
+            6467,
+            7556,
+            13767,
+            15943,
+            10829,
+            13967,
+            15025,
+            19157
+          ]
+        },
+        {
+          "job": 31,
+          "index": 58,
+          "words": [
+            1841,
+            7463,
+            4328,
+            7470,
+            9616,
+            10674,
+            13780,
+            14869,
+            17048,
+            17049,
+            18105,
+            19162,
+            22300,
+            20252,
+            24413,
+            26495,
+            27551,
+            30687,
+            14762,
+            16812,
+            19950,
+            21999,
+            22128,
+            23153,
+            27316,
+            27382,
+            32536,
+            29465,
+            32602,
+            32635,
+            32668,
+            32700,
+            32733,
+            32766,
+            5222,
+            8427,
+            9518,
+            9552,
+            8511,
+            22030,
+            32760,
+            22267,
+            29460,
+            25437,
+            28607,
+            30687,
+            31743,
+            32767
+          ]
+        },
+        {
+          "job": 33,
+          "index": 62,
+          "words": [
+            1841,
+            11561,
+            14701,
+            18864,
+            22069,
+            25239,
+            27321,
+            28442,
+            29500,
+            30589,
+            30623,
+            31647,
+            31679,
+            27516,
+            29629,
+            32766,
+            104,
+            112,
+            2189,
+            3312,
+            6449,
+            4436,
+            7606,
+            5656,
+            5788,
+            2782,
+            2815,
+            5919,
+            6975,
+            10079,
+            13215,
+            16319,
+            18399,
+            20479,
+            6443,
+            9648,
+            12787,
+            14902,
+            16024,
+            17081,
+            18140,
+            20252,
+            23391,
+            24447,
+            25503,
+            27583,
+            28607,
+            30687
+          ]
+        }
+      ]
+    }
+  ]
+}

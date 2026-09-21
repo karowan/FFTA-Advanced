@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "job": 116,
+  "coverage": "partial",
+  "productionAccepted": false,
+  "cleanRomSha1": "4ac05441f4de70a4ec3dd932116346c61b8783d9",
+  "assets": {
+    "march": {
+      "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v7.png",
+      "sourceSha256": "de749df2f468578406e8c9a542a2721cfca6e38e70220d528092f1364c4a05d0",
+      "conversionManifest": "build/art/imagegen/samurai/native-scale-study/march-v7-own/manifest.json",
+      "conversionManifestSha256": "814291ab91b1f201f9c4fd0194ff871d42fa9ae76eccb658a5ac60ede81b4f8b"
+    },
+    "support": {
+      "source": "build/art/imagegen/samurai/action-study/samurai-support-v1.png",
+      "sourceSha256": "b90e9ce8420ee23b07d8e278bcd0ef347e8bc59eff2a890474a4e190e1f4cac3",
+      "conversionManifest": "build/art/imagegen/samurai/action-study/support-v1-own/manifest.json",
+      "conversionManifestSha256": "ca7eed46a2e9fc12cc9f4cf79f7221046b6e73a45c0aea21b27dcbe55bb29fa8"
+    }
+  },
+  "resources": [
+    {
+      "lifetime": "land",
+      "nativeResource": 4,
+      "poses": [
+        {
+          "nativePose": "0132c0-000000",
+          "nativeTileSha256": "92769f04c1212782a5e9f59073af0c6677f96fe84ea8ef7270507d4ea77189a8",
+          "asset": "march",
+          "frame": 1,
+          "role": "neutral front"
+        },
+        {
+          "nativePose": "013680-000000",
+          "nativeTileSha256": "659123c7dfaf3c91d8ba7d4f5b3279bfe0a0ee60553c3444f79366adac4d4539",
+          "asset": "march",
+          "frame": 4,
+          "role": "neutral back"
+        },
+        {
+          "nativePose": "014040-000000",
+          "nativeTileSha256": "6c84ab530271d64ce19189cbd354a6f13dd22c99c83c7d628060675fc5d7366b",
+          "asset": "support",
+          "frame": 1,
+          "role": "raised arms front"
+        },
+        {
+          "nativePose": "014180-000000",
+          "nativeTileSha256": "c7cb5d230a0109ab7b8896c83e4e599fc7219e0277f7a0348f1b78cf1d4ebeda",
+          "asset": "support",
+          "frame": 6,
+          "role": "raised arms back"
+        },
+        {
+          "nativePose": "013a40-000026",
+          "nativeTileSha256": "c7bc16b18b3048675d270783bca1883adbc0cd38b92ca02744fc84714479bb82",
+          "asset": "support",
+          "frame": 2,
+          "role": "recoil front"
+        },
+        {
+          "nativePose": "013b40-000026",
+          "nativeTileSha256": "0bc3c8255d07604f7d5d1157cee287674657433a1e0f1d56059250a532ee29ad",
+          "asset": "support",
+          "frame": 7,
+          "role": "recoil back"
+        },
+        {
+          "nativePose": "013c40-000026",
+          "nativeTileSha256": "db24a5439f87039b71312520d56a870d56c01bbde2379e6d1a0d0bd2cc681c67",
+          "asset": "support",
+          "frame": 3,
+          "role": "kneeling front"
+        },
+        {
+          "nativePose": "013d40-000026",
+          "nativeTileSha256": "212132e27fdcdf0144533dbb3ea27d2b8f1bbd585a903ad89b17957b452d023b",
+          "asset": "support",
+          "frame": 8,
+          "role": "kneeling back"
+        },
+        {
+          "nativePose": "013e40-000026",
+          "nativeTileSha256": "b038e245cc2276c6d56b67eced9f594bd8857b6b7d4b3275e987f858e18b4666",
+          "asset": "support",
+          "frame": 4,
+          "role": "fallen front"
+        },
+        {
+          "nativePose": "013f40-000026",
+          "nativeTileSha256": "0c4c90cd9140775eee942249f3d3f88d0d874fdcdc626924d29ef58e7d7f3617",
+          "asset": "support",
+          "frame": 9,
+          "role": "fallen back"
+        }
+      ]
+    }
+  ],
+  "scope": "Eight generated support poses plus v7 neutral body assignments. Original native pose identity determines replacement in every consuming sequence. Other action poses and water remain temporary march transports."
+}

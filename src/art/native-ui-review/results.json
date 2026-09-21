@@ -1,0 +1,1835 @@
+{
+  "schema": 1,
+  "assets": [
+    {
+      "job": 116,
+      "slug": "human-samurai",
+      "kind": "portrait",
+      "prompt": "Draw a new Human Samurai menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. Preserve the gold crescent and red helmet. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\portrait-template.png",
+          "sha256": "255aff6799e44c91671257ff3445da53201ad8af9c3b5b8e3fcea650e6bbf819"
+        },
+        {
+          "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+          "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\generated-portrait.png",
+        "sha256": "97fda073cc066fab55d7ed020afd2168d7a7a780d7a301092e7401ab2582547c",
+        "size": [
+          1422,
+          1106
+        ]
+      },
+      "logicalSize": [
+        144,
+        112
+      ],
+      "crop": [
+        96,
+        56,
+        144,
+        112
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\portrait-sampled.png",
+        "sha256": "8143dfb0521a4a50695698b37b039fb4bafe1bd906f94f15c03a59cc6c82a489"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\portrait-native.png",
+        "sha256": "0fbfdccde1754a2b50c4a9c7e33a46416b200ab9534fffd8f152b31f9d3ae094"
+      },
+      "nativeSize": [
+        48,
+        56
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "job": 7,
+        "index": 10,
+        "words": [
+          1841,
+          964,
+          9515,
+          13776,
+          15889,
+          24347,
+          25437,
+          2151,
+          3307,
+          4366,
+          7570,
+          7637,
+          9751,
+          13914,
+          16029,
+          19167,
+          27487,
+          27487,
+          27551,
+          27551,
+          27583,
+          28607,
+          29663,
+          31743,
+          32767,
+          5195,
+          5196,
+          4205,
+          4208,
+          4180,
+          4214,
+          3160,
+          1271,
+          1241,
+          215,
+          155,
+          156,
+          220,
+          222,
+          4445,
+          9694,
+          11774,
+          13886,
+          14942,
+          26459,
+          27551,
+          22299,
+          17048
+        ]
+      },
+      "paletteMatchError": 555.1111652852268,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 116,
+      "slug": "human-samurai",
+      "kind": "icon",
+      "prompt": "Draw a new Human Samurai tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. Preserve the gold crescent and red helmet. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\icon-template.png",
+          "sha256": "838c90f63579c84ef8dcecc4079711d3aec565c0851c614b45881b290d4c366d"
+        },
+        {
+          "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+          "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\native-icon-palette.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\generated-icon.png",
+        "sha256": "bf96cd325750a6bb11879714c4111de3c31e37d0f7c9ddb8e29f670d0901eada",
+        "size": [
+          1642,
+          958
+        ]
+      },
+      "logicalSize": [
+        48,
+        28
+      ],
+      "crop": [
+        32,
+        14,
+        48,
+        28
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\icon-sampled.png",
+        "sha256": "c6ef07f2ad69388f8eb83a8f11087e487be9881c17920f2b38364c29164bb3ab"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\icon-native.png",
+        "sha256": "a40e59aa21b250d2b2ec6a816161511e4ba5467e02a8a08ce9eb278749dc19c3"
+      },
+      "nativeSize": [
+        16,
+        14
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "index": "badge",
+        "words": [
+          18991,
+          1090,
+          14769,
+          30719,
+          10412,
+          1365,
+          573,
+          959,
+          1079,
+          7453,
+          20159,
+          32606,
+          25304,
+          27792,
+          32245,
+          32506
+        ]
+      },
+      "paletteMatchError": 1614.6637931034484,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "kind": "portrait",
+      "prompt": "Draw a new Human Dark Knight menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. Wear the closed helmet. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\portrait-template.png",
+          "sha256": "ce7e6fb786b1e5bcdf060b28eaba7369378c75a9679c8e315f3af212463aa054"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/human-dark-knight-fft-redesign.png",
+          "sha256": "388ef4e98c901adcdb55015653984931762533e0dc96ff6d76419ebd6e2ccc56"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\generated-portrait.png",
+        "sha256": "124564dc6de84cbc49acf265f74deabd24b88b32a05e344cfd98346979a7fd0d",
+        "size": [
+          1422,
+          1106
+        ]
+      },
+      "logicalSize": [
+        144,
+        112
+      ],
+      "crop": [
+        96,
+        56,
+        144,
+        112
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\portrait-sampled.png",
+        "sha256": "65774fc62209364bef704f7b9c517ea9c5ae0b6d30f3e15995879e5758405807"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\portrait-native.png",
+        "sha256": "3adf510ad03e192e24faf336f597b4424e16a5289e4172cb1d354091639dd67a"
+      },
+      "nativeSize": [
+        48,
+        56
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "job": 2,
+        "index": 0,
+        "words": [
+          1841,
+          992,
+          992,
+          209,
+          1299,
+          3381,
+          5526,
+          8631,
+          9754,
+          992,
+          992,
+          7266,
+          12448,
+          18656,
+          21792,
+          28032,
+          29088,
+          30148,
+          31208,
+          32298,
+          32462,
+          31504,
+          3174,
+          140,
+          3274,
+          6411,
+          7532,
+          9645,
+          9678,
+          12783,
+          14896,
+          20147,
+          23285,
+          24342,
+          25398,
+          26486,
+          29596,
+          15004,
+          16063,
+          16095,
+          23263,
+          20287,
+          24351,
+          25439,
+          26495,
+          27519,
+          28607,
+          32767
+        ]
+      },
+      "paletteMatchError": 1036.3501577287066,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "kind": "icon",
+      "prompt": "Draw a new Human Dark Knight tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. Wear the closed helmet. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\icon-template.png",
+          "sha256": "87d9c1d0ebfad81fab33506e64eecdd33a1ffe676404029c2af12c5383c70dc1"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/human-dark-knight-fft-redesign.png",
+          "sha256": "388ef4e98c901adcdb55015653984931762533e0dc96ff6d76419ebd6e2ccc56"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\generated-icon.png",
+        "sha256": "067b0a6310ef750755b31058197b998510f91f295b0df85e7ec7ea82b0894364",
+        "size": [
+          1642,
+          958
+        ]
+      },
+      "logicalSize": [
+        48,
+        28
+      ],
+      "crop": [
+        32,
+        14,
+        48,
+        28
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\icon-sampled.png",
+        "sha256": "9d5d82469742734c0d62dd2058b893fcf8eae197eebbf165cfccda55c11097a0"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\icon-native.png",
+        "sha256": "5bdc93f3279d5942537c03b605329582313ff1988d94b5cb8799b9ac2634ca43"
+      },
+      "nativeSize": [
+        16,
+        14
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "index": "badge",
+        "words": [
+          18995,
+          1090,
+          14860,
+          30719,
+          10533,
+          1333,
+          573,
+          991,
+          27972,
+          32267,
+          30511,
+          30680,
+          23316,
+          1508,
+          4872,
+          5040
+        ]
+      },
+      "paletteMatchError": 2577.582608695652,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 118,
+      "slug": "bangaa-viking",
+      "kind": "portrait",
+      "prompt": "Draw a new Bangaa Viking menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\portrait-template.png",
+          "sha256": "faed0b0dc2d31481d12b10aab16f610894c956365f286c3996e74a71a63cc6d7"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/bangaa-viking.png",
+          "sha256": "ef4f762284585f7cf9887225fcafa51f2ab9319ad93ec4998d5947ea971db3ef"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\generated-portrait.png",
+        "sha256": "94968dedb642e64e8ba63c2ac539eb23bdbbbdd2de5399159d797cdf07655238",
+        "size": [
+          1422,
+          1106
+        ]
+      },
+      "logicalSize": [
+        144,
+        112
+      ],
+      "crop": [
+        96,
+        56,
+        144,
+        112
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\portrait-sampled.png",
+        "sha256": "0e1092e19e8947ed92479e0c0fb48ac1d271529b3d504c3aec763cc7e52450eb"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\portrait-native.png",
+        "sha256": "34246084d4ad42e0dffeb68723cc2e6db89343b55a0872101f7537e72abe7c44"
+      },
+      "nativeSize": [
+        48,
+        56
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "job": 13,
+        "index": 22,
+        "words": [
+          1841,
+          0,
+          1059,
+          72,
+          204,
+          238,
+          1330,
+          1428,
+          1461,
+          4567,
+          4600,
+          5658,
+          6715,
+          6748,
+          6814,
+          6847,
+          6879,
+          6911,
+          13119,
+          18271,
+          24479,
+          992,
+          992,
+          992,
+          17632,
+          20768,
+          22913,
+          27076,
+          30213,
+          992,
+          7469,
+          9682,
+          14902,
+          19127,
+          6376,
+          12647,
+          16876,
+          20015,
+          22160,
+          24274,
+          25332,
+          26389,
+          27478,
+          29559,
+          32699,
+          31742,
+          32767,
+          992
+        ]
+      },
+      "paletteMatchError": 525.8220382824625,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 118,
+      "slug": "bangaa-viking",
+      "kind": "icon",
+      "prompt": "Draw a new Bangaa Viking tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\icon-template.png",
+          "sha256": "493dce278d43934d5cf9c7859862ee6c1e3af271d59a44ac803ec2c990f70a3a"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/bangaa-viking.png",
+          "sha256": "ef4f762284585f7cf9887225fcafa51f2ab9319ad93ec4998d5947ea971db3ef"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\native-icon-palette.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\generated-icon.png",
+        "sha256": "c6ba0de7c5da1ae094bedf1c231e4c793323e9b97baf0750942ef3073fc2a68d",
+        "size": [
+          1642,
+          958
+        ]
+      },
+      "logicalSize": [
+        48,
+        28
+      ],
+      "crop": [
+        32,
+        14,
+        48,
+        28
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\icon-sampled.png",
+        "sha256": "8755ae28dcdc9e60fd911bcc821b7a43061e8f49025720d12ec345ee774f00f4"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\icon-native.png",
+        "sha256": "7484251b641d64f1abb4e7bc132ce099b660da2f13eb86964e2a03045fcc5ea7"
+      },
+      "nativeSize": [
+        16,
+        14
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "index": "badge",
+        "words": [
+          18991,
+          1090,
+          14769,
+          30719,
+          10412,
+          1365,
+          573,
+          959,
+          1079,
+          7453,
+          20159,
+          32606,
+          25304,
+          27792,
+          32245,
+          32506
+        ]
+      },
+      "paletteMatchError": 1334.3333333333333,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 119,
+      "slug": "bangaa-dark-knight",
+      "kind": "portrait",
+      "prompt": "Draw a new Bangaa Dark Knight menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. Wear the closed helmet. The blue cloth comes out BEHIND the helmet, tucked behind the rear metal edge; it must not cross the face or front of the helmet. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\portrait-template.png",
+          "sha256": "3dbd961883fb687257c05075e48c455f755993698a7dfe0846eca0acd18721fd"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/bangaa-dark-knight.png",
+          "sha256": "6b0ed68c312ed39afb824bc442074d7f3a136e4a6d938a10b735c200b385968a"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\generated-portrait.png",
+        "sha256": "7a220f3b15b9dc5cb8fff69227192009e458db7d5316a131d220d28ce69a8630",
+        "size": [
+          1422,
+          1106
+        ]
+      },
+      "logicalSize": [
+        144,
+        112
+      ],
+      "crop": [
+        96,
+        56,
+        144,
+        112
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\portrait-sampled.png",
+        "sha256": "11612716f6d20093ff75e86fe91798d4e6dc7373fd648b87915242fde87254be"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\portrait-native.png",
+        "sha256": "7d4eac2a38e21d5b401ca9a65d926dfcb440858e822f6227ced39a1f74c5756f"
+      },
+      "nativeSize": [
+        48,
+        56
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "job": 13,
+        "index": 22,
+        "words": [
+          1841,
+          0,
+          1059,
+          72,
+          204,
+          238,
+          1330,
+          1428,
+          1461,
+          4567,
+          4600,
+          5658,
+          6715,
+          6748,
+          6814,
+          6847,
+          6879,
+          6911,
+          13119,
+          18271,
+          24479,
+          992,
+          992,
+          992,
+          17632,
+          20768,
+          22913,
+          27076,
+          30213,
+          992,
+          7469,
+          9682,
+          14902,
+          19127,
+          6376,
+          12647,
+          16876,
+          20015,
+          22160,
+          24274,
+          25332,
+          26389,
+          27478,
+          29559,
+          32699,
+          31742,
+          32767,
+          992
+        ]
+      },
+      "paletteMatchError": 660.7872457394172,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 119,
+      "slug": "bangaa-dark-knight",
+      "kind": "icon",
+      "prompt": "Draw a new Bangaa Dark Knight tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. Wear the closed helmet. The blue cloth comes out BEHIND the helmet, tucked behind the rear metal edge; it must not cross the face or front of the helmet. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\icon-template.png",
+          "sha256": "0ee448b5f2ac95dd53ade4934295a104b0c60e569b80a38513707d6bd2eff70a"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/bangaa-dark-knight.png",
+          "sha256": "6b0ed68c312ed39afb824bc442074d7f3a136e4a6d938a10b735c200b385968a"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\native-icon-palette.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\generated-icon.png",
+        "sha256": "a42614718c27a40627bdc8589cbbdf479092689fbab06fc7daee320f93f27c9e",
+        "size": [
+          1642,
+          958
+        ]
+      },
+      "logicalSize": [
+        48,
+        28
+      ],
+      "crop": [
+        32,
+        14,
+        48,
+        28
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\icon-sampled.png",
+        "sha256": "6e3bc774b101de79af75f74f931b052feede51a991eeeca6d0607388ecd25463"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\icon-native.png",
+        "sha256": "9d39b8c95f1cccba533d3ceed0d0db8f3c39722cf9e8970726d7b2808935d878"
+      },
+      "nativeSize": [
+        16,
+        14
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "index": "badge",
+        "words": [
+          18991,
+          1090,
+          14769,
+          30719,
+          10412,
+          1365,
+          573,
+          959,
+          1079,
+          7453,
+          20159,
+          32606,
+          25304,
+          27792,
+          32245,
+          32506
+        ]
+      },
+      "paletteMatchError": 1908.6810344827586,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 120,
+      "slug": "nu-mou-chemist",
+      "kind": "portrait",
+      "prompt": "Draw a new Nu Mou Chemist menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\portrait-template.png",
+          "sha256": "247a207bb68d21fc74f21104f2c87a927bde751e578a1799c3358fe531e6c36b"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/nu-mou-chemist.png",
+          "sha256": "f7233c9e7573e11e8ce03d057a04df6de41e9a66e6413a9ab4a100c5ce9c4f44"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\generated-portrait.png",
+        "sha256": "4674cfcc4e56350f232ca251587844bfbbc37943f9942e25d5acbe1183e9c1f6",
+        "size": [
+          1422,
+          1106
+        ]
+      },
+      "logicalSize": [
+        144,
+        112
+      ],
+      "crop": [
+        96,
+        56,
+        144,
+        112
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\portrait-sampled.png",
+        "sha256": "e37a22a9e91d020e203ddfebfccd776c7b3bc79fc230aa314f8a58adfae10ce3"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\portrait-native.png",
+        "sha256": "1d6d0d1a2c0e01e9e45cd3e5b1e6f0b45249d0f23883265a577577e4f8e59784"
+      },
+      "nativeSize": [
+        48,
+        56
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "job": 27,
+        "index": 50,
+        "words": [
+          1841,
+          487,
+          4781,
+          15049,
+          11089,
+          15351,
+          23253,
+          24343,
+          28504,
+          104,
+          8492,
+          10639,
+          15923,
+          22233,
+          26460,
+          26459,
+          30655,
+          109,
+          1298,
+          5525,
+          7606,
+          8663,
+          9722,
+          11834,
+          15005,
+          6448,
+          9749,
+          13878,
+          18072,
+          17114,
+          21242,
+          22299,
+          3235,
+          6374,
+          9512,
+          12681,
+          14796,
+          16910,
+          21104,
+          23218,
+          24276,
+          25333,
+          26423,
+          27480,
+          28537,
+          29595,
+          31709,
+          32767
+        ]
+      },
+      "paletteMatchError": 388.068758652515,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 120,
+      "slug": "nu-mou-chemist",
+      "kind": "icon",
+      "prompt": "Draw a new Nu Mou Chemist tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\icon-template.png",
+          "sha256": "0c443f9712ad762ba2d04344b41a95a78aa580d03dbea4e1ae22f36f3f13df6f"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/nu-mou-chemist.png",
+          "sha256": "f7233c9e7573e11e8ce03d057a04df6de41e9a66e6413a9ab4a100c5ce9c4f44"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\generated-icon.png",
+        "sha256": "650bb6b7d07ad78582479367159ccee2439ec420e56dbce77b28b059ea56c650",
+        "size": [
+          1642,
+          958
+        ]
+      },
+      "logicalSize": [
+        48,
+        28
+      ],
+      "crop": [
+        32,
+        14,
+        48,
+        28
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\icon-sampled.png",
+        "sha256": "dc1974f15853e280dae7e20a28eea0f73bda71f2609c189d85edef193192177e"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\icon-native.png",
+        "sha256": "fa81f534fea4665b5b162b77530167a50bc3f84342a832ede7cdcf74d7fadd9c"
+      },
+      "nativeSize": [
+        16,
+        14
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "index": "badge",
+        "words": [
+          18995,
+          1090,
+          14860,
+          30719,
+          10533,
+          1333,
+          573,
+          991,
+          27972,
+          32267,
+          30511,
+          30680,
+          23316,
+          1508,
+          4872,
+          5040
+        ]
+      },
+      "paletteMatchError": 2272.171232876712,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 121,
+      "slug": "nu-mou-geomancer",
+      "kind": "portrait",
+      "prompt": "Draw a new Nu Mou Geomancer menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\portrait-template.png",
+          "sha256": "06a0dc1a70c213070637a5d3f939e205e8f818555a8c756f8a74907b1d0d715f"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/nu-mou-geomancer.png",
+          "sha256": "31265b713e0b323579456016cd1c25a31c1104a9b5d5f4636a02b4f3b5ad445f"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\generated-portrait.png",
+        "sha256": "835c14d91af9dae0c10c21000cfe430fee6604da09a95d1266f9a0989a944ead",
+        "size": [
+          1422,
+          1106
+        ]
+      },
+      "logicalSize": [
+        144,
+        112
+      ],
+      "crop": [
+        96,
+        56,
+        144,
+        112
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\portrait-sampled.png",
+        "sha256": "2c1cb4abdf83d447f49408379571b03fa3200c331bef5dc830e3e8f8d2f3f428"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\portrait-native.png",
+        "sha256": "bdec25aa061d4d248a4a15fc27f8ea6f527dcc23fcd5efbadf162f7327c86773"
+      },
+      "nativeSize": [
+        48,
+        56
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "job": 27,
+        "index": 50,
+        "words": [
+          1841,
+          487,
+          4781,
+          15049,
+          11089,
+          15351,
+          23253,
+          24343,
+          28504,
+          104,
+          8492,
+          10639,
+          15923,
+          22233,
+          26460,
+          26459,
+          30655,
+          109,
+          1298,
+          5525,
+          7606,
+          8663,
+          9722,
+          11834,
+          15005,
+          6448,
+          9749,
+          13878,
+          18072,
+          17114,
+          21242,
+          22299,
+          3235,
+          6374,
+          9512,
+          12681,
+          14796,
+          16910,
+          21104,
+          23218,
+          24276,
+          25333,
+          26423,
+          27480,
+          28537,
+          29595,
+          31709,
+          32767
+        ]
+      },
+      "paletteMatchError": 497.875,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 121,
+      "slug": "nu-mou-geomancer",
+      "kind": "icon",
+      "prompt": "Draw a new Nu Mou Geomancer tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\icon-template.png",
+          "sha256": "5a41ce07e483f15993a5554759c5b0b2fb81aba46dd84259e962686440dce39c"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/nu-mou-geomancer.png",
+          "sha256": "31265b713e0b323579456016cd1c25a31c1104a9b5d5f4636a02b4f3b5ad445f"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\generated-icon.png",
+        "sha256": "c6dab970295243ca171895d1b7749fac587d923c6a2a0eb75b661c905ec9a009",
+        "size": [
+          1642,
+          958
+        ]
+      },
+      "logicalSize": [
+        48,
+        28
+      ],
+      "crop": [
+        32,
+        14,
+        48,
+        28
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\icon-sampled.png",
+        "sha256": "16dd104e4163385a9af010334de0e8d7749873b52ef5bf1642f54a7d33fef353"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\icon-native.png",
+        "sha256": "2d818dc99edd3255976c42751d9776a38b5c4dcb2b40435d95d7c5547401e68c"
+      },
+      "nativeSize": [
+        16,
+        14
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "index": "badge",
+        "words": [
+          18995,
+          1090,
+          14860,
+          30719,
+          10533,
+          1333,
+          573,
+          991,
+          27972,
+          32267,
+          30511,
+          30680,
+          23316,
+          1508,
+          4872,
+          5040
+        ]
+      },
+      "paletteMatchError": 2199.7226277372265,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 122,
+      "slug": "moogle-chemist",
+      "kind": "portrait",
+      "prompt": "Draw a new Moogle Chemist menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\portrait-template.png",
+          "sha256": "19f4a6c9735b4a1c332bdfb857b8a8b2248c1c2e327dea7083c4b877b14674ba"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/moogle-chemist.png",
+          "sha256": "fe8c11b29aca62d39e35588c9648669e31ddaaddaffa104764cd78c12981e0da"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\generated-portrait.png",
+        "sha256": "43e22cf5b89d7d21d56d10feb6b5d4080d1b8e150b24db5496c66e24ad318669",
+        "size": [
+          1422,
+          1106
+        ]
+      },
+      "logicalSize": [
+        144,
+        112
+      ],
+      "crop": [
+        96,
+        56,
+        144,
+        112
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\portrait-sampled.png",
+        "sha256": "fe613f81b7e248fe1f11881675d0aac5b5825d8b9230c5a8b7ccbd9e05b12916"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\portrait-native.png",
+        "sha256": "e1c2e0e3d93d5cfe8f587480f3d1cfe4e91333962b12d34b573d794b26d886ab"
+      },
+      "nativeSize": [
+        48,
+        56
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "job": 36,
+        "index": 68,
+        "words": [
+          1841,
+          103,
+          2152,
+          2248,
+          6284,
+          7374,
+          8430,
+          4396,
+          9615,
+          992,
+          12,
+          17,
+          21,
+          26,
+          60,
+          992,
+          13779,
+          14964,
+          14905,
+          18106,
+          19159,
+          20249,
+          23356,
+          26431,
+          28511,
+          28543,
+          29599,
+          30719,
+          29663,
+          27582,
+          26493,
+          360,
+          459,
+          1613,
+          3694,
+          4783,
+          5808,
+          8945,
+          12084,
+          17336,
+          992,
+          23188,
+          27448,
+          29529,
+          30586,
+          32699,
+          32733,
+          32767
+        ]
+      },
+      "paletteMatchError": 253.18096135721018,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 122,
+      "slug": "moogle-chemist",
+      "kind": "icon",
+      "prompt": "Draw a new Moogle Chemist tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\icon-template.png",
+          "sha256": "e06b619d717300251da0ee91f1ff0158405b554baa96e8b18fc96003e5e0d433"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/moogle-chemist.png",
+          "sha256": "fe8c11b29aca62d39e35588c9648669e31ddaaddaffa104764cd78c12981e0da"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\generated-icon.png",
+        "sha256": "077e4753654134c82a47715d788895b287124306875d4d8717b6a54c8162a16a",
+        "size": [
+          1642,
+          958
+        ]
+      },
+      "logicalSize": [
+        48,
+        28
+      ],
+      "crop": [
+        32,
+        14,
+        48,
+        28
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\icon-sampled.png",
+        "sha256": "7fb0ecace3460c4ad36b88e8c05ad63fedb95ae1515453aa328156878d046e61"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\icon-native.png",
+        "sha256": "cf2af06f7f7f6066c64d84550c50ae0fc3fe7a40b9094e514deba83bf9424c2d"
+      },
+      "nativeSize": [
+        16,
+        14
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "index": "badge",
+        "words": [
+          18995,
+          1090,
+          14860,
+          30719,
+          10533,
+          1333,
+          573,
+          991,
+          27972,
+          32267,
+          30511,
+          30680,
+          23316,
+          1508,
+          4872,
+          5040
+        ]
+      },
+      "paletteMatchError": 2006.1726618705036,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 123,
+      "slug": "moogle-bard",
+      "kind": "portrait",
+      "prompt": "Draw a new Moogle Bard menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\portrait-template.png",
+          "sha256": "3001eb90fc0caf827465a4c9309161828aac72dcf150d1bc67b92fb8484ab0e9"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/moogle-bard.png",
+          "sha256": "92c3771c2cbb2ad04209fed5cda02528ebdbabceff7d08baea8847a1fb8ee3cb"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\generated-portrait.png",
+        "sha256": "4e82e197a6a4e94300f806892ba7e5368e1c67281647159db2eb949bd7430de9",
+        "size": [
+          1422,
+          1106
+        ]
+      },
+      "logicalSize": [
+        144,
+        112
+      ],
+      "crop": [
+        48,
+        56,
+        96,
+        112
+      ],
+      "layoutNote": "Model placed the new portrait in the middle bottom cell. Extracted that whole 48x56 cell without fitting or repositioning.",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\portrait-sampled.png",
+        "sha256": "0522fd6aef4a59ec0cedad1a0a39926f99a9d77b30529f7df1cdc1c2fc86922a"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\portrait-native.png",
+        "sha256": "fdf7ba32cc84df82e8566a832969999c769936155c8f06645c39957d905cb0b0"
+      },
+      "nativeSize": [
+        48,
+        56
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "job": 37,
+        "index": 70,
+        "words": [
+          1841,
+          3174,
+          7368,
+          12588,
+          14701,
+          18896,
+          19953,
+          23157,
+          7313,
+          11569,
+          13715,
+          16852,
+          33,
+          2150,
+          4298,
+          15894,
+          15927,
+          17015,
+          18073,
+          23258,
+          23291,
+          25403,
+          27485,
+          29567,
+          22232,
+          24412,
+          26525,
+          28607,
+          29663,
+          29695,
+          32767,
+          11,
+          18,
+          92,
+          13677,
+          14734,
+          8557,
+          8530,
+          10708,
+          13846,
+          21213,
+          16989,
+          24351,
+          26431,
+          28511,
+          28575,
+          87,
+          6413
+        ]
+      },
+      "paletteMatchError": 580.162826420891,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 123,
+      "slug": "moogle-bard",
+      "kind": "icon",
+      "prompt": "Draw a new Moogle Bard tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\icon-template.png",
+          "sha256": "25be4b4fbaf314802b55b282343c1e259cafe23030023fdef398d2ce53339cd5"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/moogle-bard.png",
+          "sha256": "92c3771c2cbb2ad04209fed5cda02528ebdbabceff7d08baea8847a1fb8ee3cb"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\generated-icon.png",
+        "sha256": "b967a96fcea61ca22644d3bc7870ec8c5495b8d262e386bd5b21343cff567390",
+        "size": [
+          1641,
+          958
+        ]
+      },
+      "logicalSize": [
+        48,
+        28
+      ],
+      "crop": [
+        32,
+        14,
+        48,
+        28
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\icon-sampled.png",
+        "sha256": "48e90aff494bce24f7599271319d1e057c1d2fb26fa29103302a55751c8cd934"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\icon-native.png",
+        "sha256": "d1a0280b61e2d424c905701002aa05e054daf624aa99f302c7f0177d2ede2d91"
+      },
+      "nativeSize": [
+        16,
+        14
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "index": "badge",
+        "words": [
+          18995,
+          1090,
+          14860,
+          30719,
+          10533,
+          1333,
+          573,
+          991,
+          27972,
+          32267,
+          30511,
+          30680,
+          23316,
+          1508,
+          4872,
+          5040
+        ]
+      },
+      "paletteMatchError": 1925.2763157894738,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 124,
+      "slug": "viera-dancer",
+      "kind": "portrait",
+      "prompt": "Draw a new Viera Dancer menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\portrait-template.png",
+          "sha256": "eec592991986c9ce50fa512feb510e2695f90d350ad644c17ca457fcf94ff1f4"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-dancer.png",
+          "sha256": "38f1c29837fe0e540e4f751e34fa1654ce0fca57da763eca4d2ccf9723dc8b5e"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\generated-portrait.png",
+        "sha256": "930a77f6481a93cf2e58e415b504be1d9dcf19ffde5690fcc372b5acb2517a79",
+        "size": [
+          1422,
+          1106
+        ]
+      },
+      "logicalSize": [
+        144,
+        112
+      ],
+      "crop": [
+        96,
+        56,
+        144,
+        112
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\portrait-sampled.png",
+        "sha256": "ac1efd452c2571965146e9e11aeae607e07d7d5a2bab2393146cb971cc5ac677"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\portrait-native.png",
+        "sha256": "07032bc3a5e29b2c72bc07a1bd3878ea8cb9bdb2c809fc80ae7a701247f14d89"
+      },
+      "nativeSize": [
+        48,
+        56
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "job": 33,
+        "index": 62,
+        "words": [
+          1841,
+          11561,
+          14701,
+          18864,
+          22069,
+          25239,
+          27321,
+          28442,
+          29500,
+          30589,
+          30623,
+          31647,
+          31679,
+          27516,
+          29629,
+          32766,
+          104,
+          112,
+          2189,
+          3312,
+          6449,
+          4436,
+          7606,
+          5656,
+          5788,
+          2782,
+          2815,
+          5919,
+          6975,
+          10079,
+          13215,
+          16319,
+          18399,
+          20479,
+          6443,
+          9648,
+          12787,
+          14902,
+          16024,
+          17081,
+          18140,
+          20252,
+          23391,
+          24447,
+          25503,
+          27583,
+          28607,
+          30687
+        ]
+      },
+      "paletteMatchError": 408.82758620689657,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 124,
+      "slug": "viera-dancer",
+      "kind": "icon",
+      "prompt": "Draw a new Viera Dancer tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\icon-template.png",
+          "sha256": "f7422290b629d387e8b3b6842d2a0dc26478789ebe062330c9da8fd6e61d8a43"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-dancer.png",
+          "sha256": "38f1c29837fe0e540e4f751e34fa1654ce0fca57da763eca4d2ccf9723dc8b5e"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\generated-icon.png",
+        "sha256": "6b3f98317ad60ca746fe7b0e8f68c9f9adffc915391d52e3f45e641c5bd476fb",
+        "size": [
+          1642,
+          958
+        ]
+      },
+      "logicalSize": [
+        48,
+        28
+      ],
+      "crop": [
+        32,
+        14,
+        48,
+        28
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\icon-sampled.png",
+        "sha256": "e596a1ab789de87808f14b8cd1ac440f8623824f7c96725cfd7f5a4c6e622289"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\icon-native.png",
+        "sha256": "00878743b855dbf0bd0b658ad44fd512a052a704a1653a4dd58409304763f1aa"
+      },
+      "nativeSize": [
+        16,
+        14
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "index": "badge",
+        "words": [
+          18995,
+          1090,
+          14860,
+          30719,
+          10533,
+          1333,
+          573,
+          991,
+          27972,
+          32267,
+          30511,
+          30680,
+          23316,
+          1508,
+          4872,
+          5040
+        ]
+      },
+      "paletteMatchError": 2612.141025641026,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "kind": "portrait",
+      "prompt": "Draw a new Viera Mystic Knight menu portrait in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 48 by 56 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Bust portrait, same close framing as the references; full headgear inside the cell, shoulders meet its bottom edge. ",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\portrait-template.png",
+          "sha256": "af3d9e3cd8a65235bcf7cc0c70851f69b04b525c67034a14e99715ee91ec1813"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-mystic-knight.png",
+          "sha256": "791865c5d5065c1b8a5348b8f9bbcd69bd3f4a0ccc104a7fbc8466e21b919a5e"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\generated-portrait.png",
+        "sha256": "90d4b60320d66a6b7d65226ea7db6e212685240ef4d4ddbc7d165c8e4ce01a83",
+        "size": [
+          1422,
+          1106
+        ]
+      },
+      "logicalSize": [
+        144,
+        112
+      ],
+      "crop": [
+        96,
+        56,
+        144,
+        112
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\portrait-sampled.png",
+        "sha256": "8f8eea35b75eefab5e2f4d309fa86952fe720481bb4a4939de62dfe7bed13d89"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\portrait-native.png",
+        "sha256": "769996d0ddd6ed82c40a026f3456058dd7ebc13321f7308e0987809c4954c359"
+      },
+      "nativeSize": [
+        48,
+        56
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "job": 31,
+        "index": 58,
+        "words": [
+          1841,
+          7463,
+          4328,
+          7470,
+          9616,
+          10674,
+          13780,
+          14869,
+          17048,
+          17049,
+          18105,
+          19162,
+          22300,
+          20252,
+          24413,
+          26495,
+          27551,
+          30687,
+          14762,
+          16812,
+          19950,
+          21999,
+          22128,
+          23153,
+          27316,
+          27382,
+          32536,
+          29465,
+          32602,
+          32635,
+          32668,
+          32700,
+          32733,
+          32766,
+          5222,
+          8427,
+          9518,
+          9552,
+          8511,
+          22030,
+          32760,
+          22267,
+          29460,
+          25437,
+          28607,
+          30687,
+          31743,
+          32767
+        ]
+      },
+      "paletteMatchError": 391.8878812860676,
+      "status": "new generation awaiting user visual review"
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "kind": "icon",
+      "prompt": "Draw a new Viera Mystic Knight tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast.  Use real transparent pixels around the entire new head. Do not paint a checkerboard or copy the patterned background of the reference icons. Show both ears and white hair.",
+      "tool": "image_gen.imagegen",
+      "model": "Built-in, tool managed",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\icon-template.png",
+          "sha256": "cd4a6975a20ae925a7878df02b3b9b573c04dd0ba5c5d00d0ad05b4c3303a81e"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-mystic-knight.png",
+          "sha256": "791865c5d5065c1b8a5348b8f9bbcd69bd3f4a0ccc104a7fbc8466e21b919a5e"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\native-icon-palette.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "generatedSource": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\generated-icon.png",
+        "sha256": "25bec042abf5ec9e2e811cb87c467d503649753d7eb9b5ceb980930c4b3cf261",
+        "size": [
+          1642,
+          958
+        ]
+      },
+      "logicalSize": [
+        48,
+        28
+      ],
+      "crop": [
+        32,
+        14,
+        48,
+        28
+      ],
+      "layoutNote": "Requested bottom-right cell",
+      "sampled": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\icon-sampled.png",
+        "sha256": "0985e54fe35d8c02c83c8ed837ef6bf7bf174ea9bd38bf8310d12f9830c8c4a7"
+      },
+      "native": {
+        "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\icon-native.png",
+        "sha256": "c6ddfebf91f24d984febd7bea8578a73668bffc309b12a150662ee943bf33fa0"
+      },
+      "nativeSize": [
+        16,
+        14
+      ],
+      "conversion": "One nearest-neighbor sampling of fixed worksheet grid, fixed cell extraction, transparency threshold/connected flat background removal, existing native palette mapping. No bounding-box resizing, repositioning or painted repairs.",
+      "palette": {
+        "index": "badge",
+        "words": [
+          18991,
+          1090,
+          14769,
+          30719,
+          10412,
+          1365,
+          573,
+          959,
+          1079,
+          7453,
+          20159,
+          32606,
+          25304,
+          27792,
+          32245,
+          32506
+        ]
+      },
+      "paletteMatchError": 1086.173076923077,
+      "status": "new generation awaiting user visual review"
+    }
+  ]
+}

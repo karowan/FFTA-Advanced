@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "status": "Rejected facing consistency: top cells1/2 and bottom cell3 face opposite direction.",
+  "references": [
+    "build/art/imagegen/samurai/samurai-idle-v4.png"
+  ],
+  "selectedPrivatePath": "build/art/imagegen/samurai/walk-v1.png",
+  "prompt": "Use case: identity-preserve. Input image is the character design reference for the NEW original Samurai, not an old FFTA donor. Preserve its red lamellar armor, gold crescent kabuto, exposed cream face with dark clear eyes, navy underclothes, waist plates, gray boots and katana sheathed at the left hip. Generate WALKING ANIMATION frames of this same character for native Final Fantasy Tactics Advance GBA, not a new costume. Transparent square sheet, exactly4 equal columns and2 equal rows. TOP ROW: front-left isometric view, four-frame walking cycle: 1 left leg forward/right arm forward; 2 feet passing under hips; 3 right leg forward/left arm forward; 4 opposite passing pose. BOTTOM ROW: back-right isometric view of the same four-frame walking cycle. Every character should face consistently within its row. Head/body costume remains exactly the same across frames; only gait, arm swing and a one-pixel bob change. Katana stays fully sheathed and attached to hip. Native target figure18x28pixels: BIG clearly readable head and eyes, short body and legs, single logical-pixel dark outline. Follow the reference's simple chunky square-pixel style closely, no finer texture/detail, max15 shared flat colors. Think32x32 native canvases enlarged with nearest-neighbor, not modern detailed pixel art. Each full figure fits inside inner65percent of its cell with transparent margins on every side, common foot baseline within a row. All ears/helmet/feet/sheath stay inside their cell. No overlapping sprites, extra objects, text, labels, captions, frame numbers, gridlines, backdrop, floor shadow, antialiasing or watermark. Genuine transparent background."
+}

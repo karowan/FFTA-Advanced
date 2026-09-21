@@ -1,0 +1,172 @@
+{
+  "schema": 1,
+  "romSha1": "d9acd7234186a77561a2fb4ee91fdae2197c197d",
+  "source": "build/art/keyboard/20260918T173655.140043Z/failed.json",
+  "scope": "Retained complete cold keyboard runtime; failed comparison included two cursor pixels. Read-only reconcile the established native glyph crop, both buffers, native heaps and committed name.",
+  "files": [
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/failed.json",
+      "sha256": "ff603930d51024ffad510a13703bd21969938f8397de87f772959eb7457d8f6e"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-alphabet.png",
+      "sha256": "0c721235d9be1b5aa5813ded4071e16cb72736da08327e50aa61a59d44c8d27c"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-alphabet.ram",
+      "sha256": "1b9c0d2ea510a4e61a72870450ea1967016fda7feb016d029a649c2ba516a1bf"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-empty.png",
+      "sha256": "555e40c7072fb138b091a18f6e102b0aaadb05a620e37728df15152fc7a085ae"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-empty.ram",
+      "sha256": "3de71b9e793ea4ac52736891d86ccdc1ae522e6b413a8b1f7c1a66bf39e40e4d"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-letter.png",
+      "sha256": "13d7d1109dac1fe8170a256af5c483d1d484d0283272e05ff244e71269bbe096"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-letter.ram",
+      "sha256": "1eff569be5be6d566f6f48bc5e6c683c8c67f3ba3baa778944bbac96c78f85f5"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-numbers.png",
+      "sha256": "c79ff9bb3d976cf63370ddcdb0c45c68a2da0d1de5a180ad54e8e5ffc2309e31"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-numbers.ram",
+      "sha256": "833344262dfc3caad0ab5ddd8a4c1008fef3432e163e9ed6b61d94c0c9aa2a03"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-letter-digit.png",
+      "sha256": "5abd623f1ccdd512a3cd2be6cbf156e18706fb6cd50c01d7ec7ce5f0b7ed5ca6"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-letter-digit.ram",
+      "sha256": "7d8de6d00c2f1edbfc18488500fb6f9f45e4d54a40c6a4f278923c3136ace104"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-right-wrap.png",
+      "sha256": "b0b3ca1f0e31956296855b369773048cc25cdacc8aedf979f92af4c7b2a34202"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-right-wrap.ram",
+      "sha256": "9ef57464697dd26474b802372d579403b7121db819714552f6f0bdfc62f53fd7"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-left-wrap.png",
+      "sha256": "5abd623f1ccdd512a3cd2be6cbf156e18706fb6cd50c01d7ec7ce5f0b7ed5ca6"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-left-wrap.ram",
+      "sha256": "f68dbfd105e61987e2d9aebab59361fc3496e50a643493eb9b08390917a6954e"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-alphabet-again.png",
+      "sha256": "b0b3ca1f0e31956296855b369773048cc25cdacc8aedf979f92af4c7b2a34202"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-alphabet-again.ram",
+      "sha256": "beffdd7705ced33656792fad0b69dc8313a3240af118ccceb44bc92a9f40d950"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-confirm-dialog.png",
+      "sha256": "a69c3b454fd5a277c60186e71f782e0587cb876865d30404ad303c796c01fed7"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-confirm-dialog.ram",
+      "sha256": "960a3dd7620f3fb6eb993b84ba248c098dce227b2afd0b4973f72b95ce56f77a"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-confirmed.png",
+      "sha256": "38714111647ad765c6b4ff0930336e2f32b131182fe784e939925cd611d6b562"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/control-confirmed.ram",
+      "sha256": "8bbac608be1044938c6327e71709ca4d6fb3f24ca1081a048a016a27b61cd815"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-alphabet.png",
+      "sha256": "44b3ec1c8775cea81dae33bcf2ccc8f57c63556171d08961db5c8052cb04b68d"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-alphabet.ram",
+      "sha256": "db413e95f4f60c50dd4f6dc1bafe8771c181edaafc16f665205c0a054471d2ec"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-empty.png",
+      "sha256": "7c22d3b1f8d9a15b3582325be34fc5b843571e8f750fb85c226ca1b11a756d8b"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-empty.ram",
+      "sha256": "0c30bf1a6b515cc5e9aeb8dfc22606880dc4122c96ec015466f53afc5ffd05d7"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-letter.png",
+      "sha256": "6b5a46fab57452b7530d327a019e5a7c06037ca02bc01a1ca9cb6b956015043c"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-letter.ram",
+      "sha256": "98825449d80244d45e28688f3a5d92601739b108b523c40aa9788548cf4454c9"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-numbers.png",
+      "sha256": "c79ff9bb3d976cf63370ddcdb0c45c68a2da0d1de5a180ad54e8e5ffc2309e31"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-numbers.ram",
+      "sha256": "f4ecebc9193c5bbabddf893c3891861aae878c00cc5c78e54ef9fddd0269a238"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-letter-digit.png",
+      "sha256": "35ad69d8d5015318329cdf6d323cf89d2bcbfd0c33d2f8acb7e23a104c33c072"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-letter-digit.ram",
+      "sha256": "b8ca1b39ba86985f72d92e7e4dfbd3c42c3124334b63c74d9a9d07a7bd43d31a"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-right-wrap.png",
+      "sha256": "454e60f9dd664b8365afe4ce841270fd65c3440e41cf669faf5a419f38251eb1"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-right-wrap.ram",
+      "sha256": "9bff0b49a5760f572d6bdd87afdb2a925e0fabd789631fbe7de7cb91090e293f"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-left-wrap.png",
+      "sha256": "3249c9f0db7ce1aebcf020616995eaa0c82f4453db7c5cc77707fd678337d270"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-left-wrap.ram",
+      "sha256": "3d5f98af5fdb022fa331aa667040020a1d26fdb4658ab5aa24b4c5f2ecd4c946"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-alphabet-again.png",
+      "sha256": "b0b3ca1f0e31956296855b369773048cc25cdacc8aedf979f92af4c7b2a34202"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-alphabet-again.ram",
+      "sha256": "cd1560fd5e5526ab6f637e99a6eb6344524d8a278d78e2febef046b75b6d683e"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-confirm-dialog.png",
+      "sha256": "6d0d095d5aed70d3b4e0230acefd0b7ae7dd9a19f98ad99bfe2f6a57b384f4d1"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-confirm-dialog.ram",
+      "sha256": "dce003e80526a4de8eef7f4c300a783b99d584fe07e138a8f4cf03b6cb1f09f8"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-confirmed.png",
+      "sha256": "38714111647ad765c6b4ff0930336e2f32b131182fe784e939925cd611d6b562"
+    },
+    {
+      "path": "build/art/keyboard/20260918T173655.140043Z/candidate-confirmed.ram",
+      "sha256": "975985c5839a4f207002d100d5efe328802e7f468109461c88d86f7929df6af8"
+    }
+  ]
+}

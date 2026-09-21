@@ -1,0 +1,5794 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 1800,
+  "scope": "Primary-agent integration. Handoff builds verify source compilation and composition prerequisites only; separate job images are not an assembled expansion or gameplay acceptance.",
+  "steps": [
+    {
+      "id": "package-expansion",
+      "runtime": "node",
+      "args": ["scripts/package-expansion.mjs"],
+      "suites": ["release-package"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-expansion-launcher",
+      "runtime": "python",
+      "args": ["scripts/test-expansion-launcher.py"],
+      "suites": ["release-package"],
+      "kind": "test"
+    },
+    {
+      "id": "audit-release-evidence",
+      "runtime": "python",
+      "args": ["scripts/audit-release-evidence.py"],
+      "suites": ["release"],
+      "kind": "test"
+    },
+    {
+      "id": "test-resource-tooling",
+      "runtime": "python",
+      "args": ["scripts/test-resource-tooling.py"],
+      "suites": ["resource-tooling"],
+      "kind": "test",
+      "timeoutSeconds": 60
+    },
+
+    {
+      "id": "test-clean-source-rebuild",
+      "runtime": "python",
+      "args": ["scripts/rebuild-expansion.py", "--compare-current"],
+      "suites": ["clean-source-rebuild"],
+      "kind": "test"
+    },
+    {
+      "id": "build-geomancer-assets",
+      "runtime": "python",
+      "args": ["scripts/generate-geomancer-assets.py"],
+      "suites": ["geomancer-assets"],
+      "kind": "build"
+    },
+    {
+      "id": "test-geomancer-animation",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-animation.py"],
+      "suites": ["geomancer-animation"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-animation-capacity",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-ring-capacity.py", "--animation-union"],
+      "suites": ["geomancer-animation-capacity"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-ring-capacity",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-ring-capacity.py"],
+      "suites": ["geomancer-ring-capacity"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-compositor",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-compositor.py"],
+      "suites": ["geomancer-compositor"],
+      "kind": "test"
+    },
+    {
+      "id": "diagnose-lesson-widths",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-lesson-widths.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "diagnose-dancer-name",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-dancer-free.py",
+        "--compact-name"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "diagnose-dancer-free",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-dancer-free.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "diagnose-dancer-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-dancer-playback.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "diagnose-dancer-native",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-dancer-native.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "diagnose-bard-suspend",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-bard-suspend.py",
+        "--candidate",
+        "build/expansion/probes/integrated-jobs/6158684473d543b83be6c7233aaf804d2d93360b/bd63d09479799c307005ac3559478baef823cb10/integrated.gba"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "diagnose-bard-native",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-bard-native.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "diagnose-bard-pool",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-bard-pool.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "diagnose-bard-entry",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-bard-entry.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-runner-self",
+      "runtime": "python",
+      "args": [
+        "scripts/test-test-runner.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "build-samurai-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-samurai-probe.py"
+      ],
+      "suites": [
+        "handoff-builds",
+        "state-capacity"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "test-shared-action-context",
+      "runtime": "python",
+      "args": [
+        "scripts/test-action-context.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-review"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "test-shared-poise",
+      "runtime": "python",
+      "args": [
+        "scripts/test-poise-native.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "test-shared-blade-ward",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-ward-native.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "build-job-state-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-job-state-probe.py"
+      ],
+      "suites": [
+        "handoff-builds",
+        "state-capacity"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "build-chemist",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/build.py"
+      ],
+      "suites": [
+        "handoff-builds"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "build-dark-knight",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/build.py"
+      ],
+      "suites": [
+        "handoff-builds"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "build-viking",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/build.py"
+      ],
+      "suites": [
+        "handoff-builds"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "build-integrated-jobs",
+      "runtime": "python",
+      "args": [
+        "scripts/build-integrated-jobs.py"
+      ],
+      "suites": [
+        "combined-build"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-chemist",
+        "build-dark-knight",
+        "build-viking"
+      ]
+    },
+    {
+      "id": "audit-installed-design",
+      "runtime": "node",
+      "args": ["scripts/audit-installed-design.mjs"],
+      "requires": ["build-integrated-jobs"],
+      "suites": ["installed-design"],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-lesson-help",
+      "runtime": "python",
+      "args": ["scripts/test-installed-lesson-help.py"],
+      "requires": ["audit-installed-design"],
+      "suites": ["installed-design"],
+      "kind": "test"
+    },
+    {
+      "id": "prepare-integrated-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/viking/prepare-battle.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-integrated-jobs"
+      ]
+    },
+    {
+      "id": "prepare-integrated-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/viking/prepare-executor.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "prepare-integrated-battle"
+      ]
+    },
+    {
+      "id": "test-integrated-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-native.py"
+      ],
+      "suites": [
+        "combined",
+        "native-undead",
+        "battle-workspace"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-integrated-executor"
+      ]
+    },
+    {
+      "id": "test-integrated-viking-damage-passives",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/viking/test-damage-passives.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-viking-native-actions",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/viking/test-native-actions.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-arts"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-viking-theft-strikes",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/viking/test-theft-strikes.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-viking-sea-legs",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/viking/test-sea-legs.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-arts"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-viking-owned-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/viking/test-owned-lifecycle.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-chemist-supports",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/chemist/test-supports.py"
+      ],
+      "suites": [
+        "combined",
+        "native-undead"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-chemist-native",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/chemist/test-native.py"
+      ],
+      "suites": [
+        "combined",
+        "native-undead"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-chemist-state",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/chemist/test-state.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-chemist-prevention",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/chemist/test-prevention.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-chemist-reactions",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/chemist/test-reactions.py"
+      ],
+      "suites": [
+        "combined",
+        "native-undead"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-chemist-auto-potion-native",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/chemist/test-auto-potion-native.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-dark-knight-desperation",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/dark-knight/test-desperation.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-dark-knight-batch",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/dark-knight/test-batch.py"
+      ],
+      "suites": [
+        "combined",
+        "native-undead"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-dark-knight-blood-edge",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/dark-knight/test-blood-edge.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-dark-knight-dark-mind",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/dark-knight/test-dark-mind.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-dark-knight-sword-riders",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/dark-knight/test-sword-riders.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-commands",
+        "native-undead"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-synergies",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-synergies.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-commands",
+        "native-undead",
+        "battle-workspace",
+        "mystic-parry",
+        "mystic-fight"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-hp-provenance",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-hp-provenance.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-commands"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-viking-tsunami",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/viking/test-tsunami.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-viking-reactions",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/viking/test-reactions.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-dark-reactions",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-dark-reactions.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-abyssal",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/dark-knight/test-abyssal.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-queue",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reaction-queue.py",
+        "--integrated"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-review"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-counter-draw",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-counter-draw.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-commands"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "prepare-viking-reaction-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/prepare-battle.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-viking"
+      ]
+    },
+    {
+      "id": "prepare-viking-reaction-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/prepare-executor.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "prepare-viking-reaction-battle"
+      ]
+    },
+    {
+      "id": "test-viking-queued-reactions",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-reactions.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-viking-reaction-executor"
+      ]
+    },
+    {
+      "id": "test-integrated-soldier-supports",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-soldier-supports.py"
+      ],
+      "suites": [
+        "combined",
+        "native-undead"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-bard",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-bard.py"
+      ],
+      "suites": [
+        "combined",
+        "native-undead",
+        "battle-workspace"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-bard-passives",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-bard-passives.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-arts",
+        "native-undead"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-reaction-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-reaction-playback.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-integrated-battle"
+      ]
+    },
+    {
+      "id": "trace-turn-admission",
+      "runtime": "python",
+      "args": [
+        "scripts/trace-turn-admission.py"
+      ],
+      "suites": [
+        "analysis",
+        "combined",
+        "movement-budget"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-integrated-battle"
+      ]
+    },
+    {
+      "id": "test-integrated-turn-supports",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-turn-supports.py"
+      ],
+      "suites": [
+        "combined",
+        "movement-budget"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-job-state-record",
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-state-record.py"
+      ],
+      "suites": [
+        "state-capacity"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-job-state-copy-constructors",
+      "runtime": "python",
+      "args": [
+        "scripts/test-copy-constructors.py",
+        "--job-state"
+      ],
+      "suites": [
+        "state-capacity"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "test-job-state-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-state-in-game.py"
+      ],
+      "suites": [
+        "state-capacity"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "test-job-state-evaluated",
+      "runtime": "python",
+      "args": [
+        "scripts/test-evaluated-units.py",
+        "--job-state"
+      ],
+      "suites": [
+        "state-capacity"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-job-state-in-game",
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "test-job-state-roster-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-state-roster-in-game.py"
+      ],
+      "suites": [
+        "state-capacity"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "test-job-state-copies",
+      "runtime": "python",
+      "args": [
+        "scripts/test-job-state-copies.py"
+      ],
+      "suites": [
+        "state-capacity"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-job-state-in-game",
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "test-job-state-preview-context",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-preview-context.py",
+        "--job-state"
+      ],
+      "suites": [
+        "state-capacity"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-job-state-in-game",
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "test-integrated-dancer",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-dancer.py"
+      ],
+      "suites": [
+        "dancer",
+        "combined",
+        "native-undead"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-dancer-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-reaction-playback.py",
+        "--dancer-only"
+      ],
+      "suites": [
+        "dancer"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-dancer-choice",
+      "runtime": "python",
+      "args": [
+        "scripts/test-dancer-choice.py"
+      ],
+      "suites": [
+        "dancer",
+        "combined",
+        "geomancer-arts",
+        "geomancer-arts-fixes",
+        "choice-ai",
+        "mystic-commands",
+        "mystic-command-core"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "diagnose-dancer-choice",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-dancer-choice.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-dancer-choice-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-dancer-choice-playback.py"
+      ],
+      "suites": [
+        "dancer",
+        "combined",
+        "geomancer-movement-review",
+        "geomancer-arts",
+        "choice-ai",
+        "mystic-commands"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "diagnose-dancer-choice-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-dancer-choice-ui.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "diagnose-dancer-recipients",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-dancer-recipients.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "diagnose-passing-route",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-passing-route.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-turn-movement-budget",
+      "runtime": "python",
+      "args": [
+        "scripts/test-turn-movement-budget.py"
+      ],
+      "suites": [
+        "combined",
+        "movement-budget"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "diagnose-passing-modal",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-passing-modal.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-dancer-choice-playback"
+      ]
+    },
+    {
+      "id": "test-passing-step-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-passing-step-playback.py"
+      ],
+      "suites": [
+        "combined",
+        "passing-step",
+        "geomancer-movement-review",
+        "battle-workspace"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-passing-step-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-passing-step-ai.py"
+      ],
+      "suites": [
+        "combined",
+        "passing-step",
+        "geomancer-movement-review",
+        "geomancer-final-fixes",
+        "choice-ai",
+        "battle-workspace"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-result-frame-storage",
+      "runtime": "python",
+      "args": [
+        "scripts/test-result-frame-storage.py"
+      ],
+      "suites": [
+        "combined",
+        "passing-step",
+        "state-capacity",
+        "battle-workspace"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-passing-step-counter",
+      "runtime": "python",
+      "args": [
+        "scripts/test-passing-step-counter.py"
+      ],
+      "suites": [
+        "combined",
+        "passing-step",
+        "battle-workspace"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-passing-step-playback"
+      ]
+    },
+    {
+      "id": "test-passing-step-ownership",
+      "runtime": "python",
+      "args": [
+        "scripts/test-passing-step-ownership.py"
+      ],
+      "suites": [
+        "combined",
+        "passing-step",
+        "battle-workspace"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-passing-step-playback"
+      ]
+    },
+    {
+      "id": "test-integrated-geomancer",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-geomancer.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer",
+        "geomancer-review",
+        "geomancer-movement-review",
+        "geomancer-arts"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-geomancer-fields",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-geomancer-fields.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-fields",
+        "geomancer-movement-review",
+        "geomancer-final-fixes",
+        "geomancer-arts"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "diagnose-geomancer-movement",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-geomancer-movement.py",
+        "--initialization"
+      ],
+      "suites": [
+        "geomancer-diagnostic"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integrated-geomancer-arts",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-geomancer-arts.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-arts",
+        "geomancer-arts-fixes",
+        "mystic-commands"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-terrain-maps",
+      "runtime": "python",
+      "args": [
+        "scripts/test-terrain-maps.py"
+      ],
+      "suites": [
+        "terrain"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-terrain-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-terrain-native.py"
+      ],
+      "suites": [
+        "terrain-native",
+        "terrain",
+        "terrain-campaign",
+        "combined",
+        "battle-workspace-review",
+        "battle-workspace"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-terrain-loader",
+      "runtime": "python",
+      "args": [
+        "scripts/test-terrain-loader.py"
+      ],
+      "suites": [
+        "terrain-loader",
+        "terrain"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-terrain-campaign",
+      "runtime": "python",
+      "args": [
+        "scripts/test-terrain-campaign.py"
+      ],
+      "suites": [
+        "terrain-campaign",
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native",
+        "test-terrain-loader"
+      ]
+    },
+    {
+      "id": "test-geomancer-selection",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-selection.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-player",
+        "geomancer-placement"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-geomancer-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-playback.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-player"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native",
+        "test-integrated-geomancer",
+        "test-integrated-geomancer-fields",
+        "test-integrated-geomancer-arts",
+        "test-dancer-choice",
+        "test-terrain-campaign",
+        "test-geomancer-selection"
+      ]
+    },
+    {
+      "id": "test-geomancer-placement",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-playback.py",
+        "--fields-only"
+      ],
+      "suites": [
+        "geomancer-placement"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native",
+        "test-integrated-geomancer-arts",
+        "test-integrated-geomancer-fields"
+      ]
+    },
+    {
+      "id": "test-ai-choice",
+      "runtime": "python",
+      "args": [
+        "scripts/test-ai-choice.py"
+      ],
+      "suites": [
+        "combined",
+        "choice-ai"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-dancer-choice-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-dancer-choice-ai.py"
+      ],
+      "suites": [
+        "combined",
+        "choice-ai",
+        "mystic-commands"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-geomancer-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-ai.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-ai"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-geomancer-choice-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-choice-ai.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-ai"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-geomancer-field-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-field-lifecycle.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-lifecycle"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-geomancer-playback"
+      ]
+    },
+    {
+      "id": "diagnose-mystic-isolation",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-mystic-isolation.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-integrated-jobs"
+      ]
+    },
+    {
+      "id": "diagnose-mystic-menu-regression",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-mystic-menu-regression.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-integrated-jobs"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-state",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-state.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-state",
+        "mystic-commands",
+        "battle-workspace",
+        "mystic-parry",
+        "mystic-fight"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-commands",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-commands.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-commands",
+        "mystic-command-core",
+        "native-undead",
+        "battle-workspace",
+        "mystic-parry",
+        "mystic-fight"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-native-undead-policy",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-undead-policy.py"
+      ],
+      "suites": [
+        "combined",
+        "native-undead"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-formulas",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-formulas.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-commands",
+        "mystic-formulas",
+        "battle-workspace",
+        "mystic-parry",
+        "mystic-fight"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-integration-relocations",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integration-relocations.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-ai",
+        "mystic-commands",
+        "native-undead",
+        "battle-workspace",
+        "mystic-parry",
+        "mystic-fight"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-integrated-jobs"
+      ]
+    },
+    {
+      "id": "test-battle-workspace",
+      "runtime": "python",
+      "args": [
+        "scripts/test-battle-workspace.py"
+      ],
+      "suites": [
+        "combined",
+        "battle-workspace",
+        "battle-workspace-review"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-integrated-executor"
+      ]
+    },
+    {
+      "id": "test-new-game-opening",
+      "runtime": "python",
+      "args": [
+        "scripts/test-new-game-opening.py"
+      ],
+      "suites": [
+        "combined",
+        "battle-workspace",
+        "battle-workspace-review"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-integrated-jobs"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-shell",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-shell"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-doublecast",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-doublecast.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-doublecast"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-doublecast-reactions",
+      "runtime": "python",
+      "args": [
+        "scripts/test-doublecast-reactions.py"
+      ],
+      "suites": [
+        "combined",
+        "doublecast-reactions"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-doublecast-shell",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-doublecast-shell.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-doublecast-shell"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "verify-integrated-prerequisites",
+      "runtime": "python",
+      "args": [
+        "scripts/verify-integrated-prerequisites.py"
+      ],
+      "suites": [
+        "reuse-integrated-prerequisites"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "test-doublecast-reactions-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-doublecast-reactions.py"
+      ],
+      "suites": [
+        "doublecast-reactions-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-doublecast-shell-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-doublecast-shell.py"
+      ],
+      "suites": [
+        "mystic-doublecast-shell-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-shell-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell.py",
+        "--section",
+        "lifecycle"
+      ],
+      "suites": [
+        "mystic-shell-lifecycle"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-doublecast-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-doublecast.py",
+        "--section",
+        "lifecycle"
+      ],
+      "suites": [
+        "mystic-doublecast-lifecycle"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-parry",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-parry.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-parry",
+        "mystic-fight"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "diagnose-mystic-fight-carriers",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-mystic-fight-carriers.py"
+      ],
+      "suites": [
+        "mystic-fight-carriers"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-fight"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-fight-preview",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-preview.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-fight"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-fight-status",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-status.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-fight"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-doublecast-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-doublecast-playback.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "combined",
+        "doublecast-playback"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-doublecast-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-doublecast-playback.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "doublecast-playback"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-doublecast-interruption-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-doublecast-playback.py",
+        "--interrupt-only"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "doublecast-interruption"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-ui.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "combined",
+        "mystic-player"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ui-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-ui.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-player-cached"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-playback.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "combined",
+        "mystic-player"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-playback.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-player-cached"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-navigation-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-playback.py",
+        "--navigation"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-navigation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-remaining",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-playback.py",
+        "--remaining"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-remaining"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-remaining-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-playback.py",
+        "--remaining"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-remaining"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-visual",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-visual.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "combined",
+        "mystic-visual"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-visual-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-visual.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-visual"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-fight-laws",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-laws.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "combined",
+        "mystic-fight-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-fight-laws-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-laws.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-fight-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-fight-law-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-law-playback.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "combined",
+        "mystic-fight-law-playback"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-fight-law-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-law-playback.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-fight-law-playback"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-battle-workspace-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-battle-workspace.py"
+      ],
+      "suites": [
+        "battle-workspace-review"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-fight-prediction",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-prediction.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-fight-prediction",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-fight-prediction-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-prediction.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-fight-prediction"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-fight-prediction-follow-up",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-prediction.py",
+        "--follow-up"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-fight-prediction-follow-up"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-resources",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-resources.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-resources",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-resources-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-resources.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-resources"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-fight-prediction-weapons",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-prediction.py",
+        "--weapon-follow-up"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-fight-prediction-weapons"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-fight-prediction-weapons-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-fight-prediction.py",
+        "--weapon-follow-up"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-fight-prediction-weapons"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-ai.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-ai",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-choice-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-choice-ai.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-ai",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-choice-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-choice-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-command-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-ai.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-ai",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-command-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-command-playback-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-ai",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-command-playback-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-command-playback-ai-remaining",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py",
+        "--remaining"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-ai-remaining"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ai-allied-control",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py",
+        "--allied-control"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai-allied-control"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ai-tactics-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py",
+        "--tactical"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai-tactics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-tactical-values",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-tactical-values.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-ai-tactics",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-tactical-values-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-tactical-values.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai-tactics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ai-break",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py",
+        "--break-only"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-ai-tactics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ai-break-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py",
+        "--break-only"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai-tactics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ai-utility",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py",
+        "--utility"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-ai-tactics",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ai-utility-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py",
+        "--utility"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai-tactics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "trace-mystic-knight-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/trace-mystic-knight-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai-diagnostic"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ai-recovery-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py",
+        "--recovery-only"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "mystic-ai-tactics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-ai-tactics",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-command-playback-ai.py",
+        "--tactical"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "mystic-ai-tactics",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-shell-menu",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell-menu.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-shell-menu"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-shell-menu-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell-menu.py"
+      ],
+      "suites": [
+        "mystic-shell-menu"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-shell-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell-playback.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-shell-playback"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-shell-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell-playback.py"
+      ],
+      "suites": [
+        "mystic-shell-playback"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-shell-navigation-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell-navigation.py"
+      ],
+      "suites": [
+        "mystic-shell-diagnostic"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-shell-mixed",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell-mixed.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-shell-mixed"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-shell-mixed-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell-mixed.py"
+      ],
+      "suites": [
+        "mystic-shell-mixed"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-shell-cancel",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell-cancel.py"
+      ],
+      "suites": [
+        "combined",
+        "mystic-shell-cancel"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-mystic-knight-shell-playback"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-shell-cancel-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-shell-cancel.py"
+      ],
+      "suites": [
+        "mystic-shell-cancel"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "diagnose-auto-potion-menu",
+      "runtime": "python",
+      "args": [
+        "scripts/diagnose-auto-potion-menu.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-auto-potion-preference",
+      "runtime": "python",
+      "args": [
+        "scripts/test-auto-potion-preference.py"
+      ],
+      "suites": [
+        "combined",
+        "auto-potion-preference"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-auto-potion-preference-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-auto-potion-preference.py"
+      ],
+      "suites": [
+        "auto-potion-preference-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-auto-potion-preference-controls",
+      "runtime": "python",
+      "args": [
+        "scripts/test-auto-potion-preference-controls.py"
+      ],
+      "suites": [
+        "combined",
+        "auto-potion-preference"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-auto-potion-preference"
+      ]
+    },
+    {
+      "id": "test-auto-potion-preference-controls-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-auto-potion-preference-controls.py"
+      ],
+      "suites": [
+        "auto-potion-preference-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-auto-potion-selected-stock",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/chemist/test-auto-potion-selected-stock.py"
+      ],
+      "suites": [
+        "combined",
+        "auto-potion-preference"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-auto-potion-preference"
+      ]
+    },
+    {
+      "id": "test-auto-potion-selected-stock-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/chemist/test-auto-potion-selected-stock.py"
+      ],
+      "suites": [
+        "auto-potion-preference-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-map",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-map.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-map"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native",
+        "test-terrain-loader"
+      ]
+    },
+    {
+      "id": "test-geomancer-map-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-map.py"
+      ],
+      "suites": [
+        "geomancer-map-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-display-capacity",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-display-capacity.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-display-mixed-capacity",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-display-capacity.py",
+        "--mixed-bound"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-display-flip-capacity",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-display-capacity.py",
+        "--mixed-bound",
+        "--flip-cache"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-utility-ai-audit",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-utility-ai-audit.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-utility-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-utility-ai.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-geomancer-utility-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-utility-ai.py"
+      ],
+      "suites": [
+        "geomancer-utility-ai-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-utility-search",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-utility-search.py"
+      ],
+      "suites": [
+        "combined"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-geomancer-utility-search-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-utility-search.py"
+      ],
+      "suites": [
+        "geomancer-utility-search-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-ai.py"
+      ],
+      "suites": [
+        "geomancer-ai-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-utility-turns-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-utility-turns.py"
+      ],
+      "suites": [
+        "geomancer-utility-turns-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-utility-ai-trace",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-utility-ai-trace.py"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-utility-benefit-turns-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-utility-turns.py",
+        "--benefits-only"
+      ],
+      "suites": [
+        "geomancer-utility-turns-cached"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-geomancer-utility-turns",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-utility-turns.py"
+      ],
+      "suites": [
+        "combined",
+        "geomancer-utility-turns"
+      ],
+      "kind": "test",
+      "requires": [
+        "test-integrated-native"
+      ]
+    },
+    {
+      "id": "test-custom-status-laws",
+      "runtime": "python",
+      "args": [
+        "scripts/test-custom-status-laws.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "combined",
+        "custom-status-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-custom-status-laws-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-custom-status-laws.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "custom-status-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-custom-status-law-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-custom-status-law-playback.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "custom-status-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-custom-wound-law-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-custom-status-law-playback.py",
+        "--action=355"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "custom-status-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-custom-status-law-prediction",
+      "runtime": "python",
+      "args": [
+        "scripts/test-custom-status-law-prediction.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "custom-status-laws",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-custom-status-law-prediction-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-custom-status-law-prediction.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "custom-status-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-custom-status-law-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-custom-status-law-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "custom-status-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-element-laws",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-element-laws.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "carrier-laws",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-element-laws-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-element-laws.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-element-law-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-element-law-playback.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-category-laws",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-category-laws.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "carrier-laws",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-category-laws-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-category-laws.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-category-law-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-category-law-playback.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-category-law-empty-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-category-law-playback.py",
+        "--empty-only"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "audit-carrier-weapon-elements",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-weapon-elements.py",
+        "--audit"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-weapon-elements",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-weapon-elements.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "carrier-laws",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-weapon-elements-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-weapon-elements.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-theft-laws",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-theft-laws.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "carrier-laws",
+        "combined"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-theft-laws-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-theft-laws.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "verify-integrated-build-prerequisites",
+      "runtime": "python",
+      "args": [
+        "scripts/verify-integrated-prerequisites.py",
+        "--build-only"
+      ],
+      "requires": [],
+      "suites": [
+        "reuse-integrated-prerequisites"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-native-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-native.py"
+      ],
+      "requires": [
+        "verify-integrated-build-prerequisites"
+      ],
+      "suites": [
+        "reuse-integrated-prerequisites"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-dark-knight-batch-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/dark-knight/test-batch.py"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-integrated-dancer-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-dancer.py"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-mystic-knight-commands-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-commands.py"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test",
+      "requires": [
+        "verify-integrated-prerequisites"
+      ]
+    },
+    {
+      "id": "test-carrier-law-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-law-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-weapon-law-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-weapon-law-playback.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-weapon-law-skip-self-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-weapon-law-playback.py",
+        "--skip-self"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-weapon-law-self-only-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-weapon-law-playback.py",
+        "--self-only"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-last-resort-elements",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-weapon-elements.py",
+        "--last-resort-only"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "last-resort"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-last-resort-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-law-ai.py",
+        "--last-resort-only"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "last-resort"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-last-resort-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-weapon-law-playback.py",
+        "--last-resort-only"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "last-resort"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-spellbreak-element-laws",
+      "runtime": "python",
+      "args": [
+        "scripts/test-spellbreak-element-laws.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "spellbreak-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-spellbreak-element-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-weapon-law-playback.py",
+        "--spellbreak-only"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "spellbreak-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-buff-laws-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-buff-laws.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-carrier-buff-laws",
+      "runtime": "python",
+      "args": [
+        "scripts/test-carrier-buff-laws.py"
+      ],
+      "requires": [
+        "test-integrated-native"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-self-buff-law-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-self-buff-law-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-buff-law-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-buff-field-law-playback.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-field-law-playback-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-buff-field-law-playback.py",
+        "--fields-only"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites"
+      ],
+      "suites": [
+        "carrier-laws"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "audit-mission-item-dependencies",
+      "runtime": "node",
+      "args": [
+        "scripts/audit-mission-item-dependencies.mjs"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-pub-gates-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-pub-gates.py"
+      ],
+      "requires": [
+        "verify-integrated-prerequisites",
+        "audit-mission-item-dependencies"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "verify-integrated-assembly-prerequisites",
+      "runtime": "python",
+      "args": [
+        "scripts/verify-integrated-prerequisites.py",
+        "--assembly-only"
+      ],
+      "requires": [],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-recovery",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-recovery.py"
+      ],
+      "requires": [
+        "build-integrated-jobs"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-recovery-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-recovery.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "audit-secret-recruit-sources",
+      "runtime": "node",
+      "args": ["scripts/audit-secret-recruit-sources.mjs"],
+      "requires": ["audit-mission-item-dependencies"],
+      "suites": ["secret-recruit-access"],
+      "kind": "test"
+    },
+    {
+      "id": "test-secret-recruit-access-cached",
+      "runtime": "python",
+      "args": ["scripts/test-secret-recruit-access.py"],
+      "requires": ["verify-integrated-assembly-prerequisites", "audit-secret-recruit-sources"],
+      "suites": ["secret-recruit-access"],
+      "kind": "test"
+    },
+    {
+      "id": "test-secret-recruit-posting-cached",
+      "runtime": "python",
+      "args": ["scripts/test-secret-recruit-posting.py"],
+      "requires": ["verify-integrated-assembly-prerequisites", "audit-secret-recruit-sources"],
+      "suites": ["secret-recruit-access"],
+      "kind": "test"
+    },
+    {
+      "id": "test-secret-recruit-acceptance-cached",
+      "runtime": "python",
+      "args": ["scripts/test-secret-recruit-access.py", "--acceptance-only"],
+      "requires": ["verify-integrated-assembly-prerequisites", "audit-secret-recruit-sources"],
+      "suites": ["secret-recruit-access"],
+      "kind": "test"
+    },
+    {
+      "id": "test-original-mission-pub-gates-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-pub-gates.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites",
+        "audit-mission-item-dependencies"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-recovery-lifecycle-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-recovery-lifecycle.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-recovery-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-recovery-lifecycle.py"
+      ],
+      "requires": [
+        "build-integrated-jobs"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-recovery-save-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-recovery-save.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-recovery-pub-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-recovery-pub.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-recovery-pub",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-recovery-pub.py"
+      ],
+      "requires": [
+        "build-integrated-jobs"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-recovery-pub-stale-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-recovery-pub.py",
+        "--stale"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-recovery-return-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-recovery-return.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-recovery-repeat-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-recovery-repeat.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "audit-mission-renewable-chains",
+      "runtime": "node",
+      "args": [
+        "scripts/audit-mission-renewable-chains.mjs"
+      ],
+      "requires": [
+        "audit-mission-item-dependencies"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mission-rumor-gates-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mission-rumor-gates.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-caravan-guard-return-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-caravan-guard-return.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "audit-vanilla-teaching-sources",
+      "runtime": "node",
+      "args": ["scripts/audit-vanilla-teaching-sources.mjs"],
+      "requires": ["audit-mission-item-dependencies"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-vanilla-clan-gifts-cached",
+      "runtime": "python",
+      "args": ["scripts/test-vanilla-clan-gifts.py"],
+      "requires": ["verify-integrated-assembly-prerequisites", "audit-vanilla-teaching-sources"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-recovery",
+      "runtime": "python",
+      "args": ["scripts/test-gear-recovery.py"],
+      "requires": ["build-integrated-jobs"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-recovery-cached",
+      "runtime": "python",
+      "args": ["scripts/test-gear-recovery.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-clan-rewards-cached",
+      "runtime": "python",
+      "args": ["scripts/test-gear-recovery.py", "--clan-only"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-recovery-return-cached",
+      "runtime": "python",
+      "args": ["scripts/test-gear-recovery-return.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-471-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "471"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-472-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "472"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-473-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "473"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-stale-471-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "471", "--stale"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-stale-472-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "472", "--stale"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-stale-473-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "473", "--stale"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "audit-current-monster-sources",
+      "runtime": "node",
+      "args": ["scripts/audit-monster-ability-sources.mjs"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-roaming-source-access-cached",
+      "runtime": "python",
+      "args": ["scripts/test-roaming-source-access.py"],
+      "requires": ["audit-current-monster-sources"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-roaming-source-lifecycle-cached",
+      "runtime": "python",
+      "args": ["scripts/test-roaming-source-access.py", "--lifecycle-only"],
+      "requires": ["audit-current-monster-sources"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-clan-league-cycle-cached",
+      "runtime": "python",
+      "args": ["scripts/test-clan-league-cycle.py"],
+      "requires": ["verify-integrated-assembly-prerequisites", "audit-mission-item-dependencies"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-clan-league-missed-cycle-cached",
+      "runtime": "python",
+      "args": ["scripts/test-clan-league-cycle.py", "--missed-only"],
+      "requires": ["verify-integrated-assembly-prerequisites", "audit-mission-item-dependencies"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-vanilla-soul-sources-cached",
+      "runtime": "python",
+      "args": ["scripts/test-vanilla-soul-sources.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-vanilla-rare-theft-cached",
+      "runtime": "python",
+      "args": ["scripts/test-vanilla-rare-theft.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-474-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "474"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-475-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "475"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-476-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "476"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-stale-474-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "474", "--stale"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-stale-475-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "475", "--stale"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-pub-stale-476-cached",
+      "runtime": "python",
+      "args": ["scripts/test-mission-recovery-pub.py", "--gear", "476", "--stale"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-return-474-cached",
+      "runtime": "python",
+      "args": ["scripts/test-gear-recovery-return.py", "--mission", "474"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-return-475-cached",
+      "runtime": "python",
+      "args": ["scripts/test-gear-recovery-return.py", "--mission", "475"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-gear-return-476-full-stock-cached",
+      "runtime": "python",
+      "args": ["scripts/test-gear-recovery-return.py", "--mission", "476", "--full-stock"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["completion-content"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-renderer",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-renderer.py"],
+      "suites": ["geomancer-renderer"],
+      "kind": "test",
+      "requires": ["build-integrated-jobs"]
+    },
+    {
+      "id": "test-geomancer-renderer-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-renderer.py"],
+      "suites": ["geomancer-renderer-cached"],
+      "kind": "test",
+      "requires": ["verify-integrated-assembly-prerequisites"]
+    },
+    {
+      "id": "prepare-geomancer-display-battle",
+      "runtime": "python",
+      "args": ["scripts/run-integrated-check.py", "scripts/jobs/viking/prepare-battle.py"],
+      "requires": ["build-integrated-jobs"],
+      "suites": ["geomancer-display"],
+      "kind": "prepare"
+    },
+    {
+      "id": "test-geomancer-field-display",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-playback.py", "--fields-only", "--seed-zero", "--display-checks"],
+      "requires": ["prepare-geomancer-display-battle", "test-geomancer-renderer"],
+      "suites": ["geomancer-display"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-field-display-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-playback.py", "--fields-only", "--seed-zero", "--display-checks"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-display-cached"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-display-lifecycle",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-field-lifecycle.py", "--display-checks"],
+      "requires": ["test-geomancer-field-display"],
+      "suites": ["geomancer-display"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-display-lifecycle-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-field-lifecycle.py", "--display-checks"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-display-lifecycle-cached"],
+      "kind": "test"
+    },
+    {
+      "id": "prepare-geomancer-display-battle-cached",
+      "runtime": "python",
+      "args": ["scripts/run-integrated-check.py", "scripts/jobs/viking/prepare-battle.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-display-prepare-cached"],
+      "kind": "prepare"
+    },
+    {
+      "id": "test-geomancer-render-timing",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-render-timing.py"],
+      "requires": ["build-integrated-jobs"],
+      "suites": ["geomancer-render-timing"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-render-timing-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-render-timing.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-render-timing-cached"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-field-ui-casts-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-playback.py", "--fields-only", "--seed-zero", "--display-checks"],
+      "requires": ["prepare-geomancer-display-battle-cached"],
+      "suites": ["geomancer-field-ui"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-field-ui",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-field-ui.py"],
+      "requires": ["test-geomancer-field-ui-casts-cached"],
+      "suites": ["geomancer-field-ui"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-field-ui-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-field-ui.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-field-ui-cached"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-field-ui-remaining-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-field-ui.py", "--remaining-ui"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-field-ui-remaining-cached"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-cycle-budget",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-cycle-budget.py"],
+      "requires": ["test-geomancer-render-timing"],
+      "suites": ["geomancer-cycle-budget"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-cycle-budget-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-cycle-budget.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-cycle-budget-cached"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-backdrop-native-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-native-effects.py", "--native"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-native-effects"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-backdrop-raster-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-native-effects.py", "--raster"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-native-effects"],
+      "kind": "test"
+    },
+    {
+      "id": "prepare-geomancer-overlap-cached",
+      "runtime": "python",
+      "args": ["scripts/test-prepare-geomancer-overlap.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-overlap"],
+      "kind": "prepare"
+    },
+    {
+      "id": "test-geomancer-overlap",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-overlap-playback.py"],
+      "requires": ["prepare-geomancer-overlap-cached"],
+      "suites": ["geomancer-overlap"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-spell-visibility-cached",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-spell-visibility.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-spell-visibility"],
+      "kind": "test"
+    },
+    {
+      "id": "test-bard-ai-review-cached",
+      "runtime": "python",
+      "args": ["scripts/test-bard-ai-review.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["bard-ai-review"],
+      "kind": "test"
+    },
+    {
+      "id": "prepare-bard-ai-review",
+      "runtime": "python",
+      "args": ["scripts/test-prepare-geomancer-overlap.py"],
+      "requires": ["build-integrated-jobs"],
+      "suites": ["bard-ai-review"],
+      "kind": "prepare"
+    },
+    {
+      "id": "test-bard-ai-review",
+      "runtime": "python",
+      "args": ["scripts/test-bard-ai-review.py"],
+      "requires": ["prepare-bard-ai-review"],
+      "suites": ["bard-ai-review"],
+      "kind": "test"
+    },
+    {
+      "id": "test-bard-ai-search-cached",
+      "runtime": "python",
+      "args": ["scripts/test-bard-ai-search.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["bard-ai-review"],
+      "kind": "test"
+    },
+    {
+      "id": "test-bard-ai-search",
+      "runtime": "python",
+      "args": ["scripts/test-bard-ai-search.py"],
+      "requires": ["test-bard-ai-review"],
+      "suites": ["bard-ai-review"],
+      "kind": "test"
+    },
+    {
+      "id": "test-bard-ai-turns-cached",
+      "runtime": "python",
+      "args": ["scripts/test-bard-ai-turns.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["bard-ai-turns"],
+      "kind": "test"
+    },
+    {
+      "id": "test-song-traversal-playback-resume",
+      "runtime": "python",
+      "args": ["scripts/test-song-traversal-playback.py", "--resume-latest"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["song-traversal-playback-resume"],
+      "kind": "test"
+    },
+    {
+      "id": "test-song-traversal-playback-cached",
+      "runtime": "python",
+      "args": ["scripts/test-song-traversal-playback.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["song-traversal-playback"],
+      "kind": "test"
+    },
+    {
+      "id": "test-remaining-reaction-playback-cached",
+      "runtime": "python",
+      "args": ["scripts/test-remaining-reaction-playback.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["remaining-reaction-playback"],
+      "kind": "test"
+    },
+    {
+      "id": "test-bard-ai-trace",
+      "runtime": "python",
+      "args": ["scripts/test-bard-ai-trace.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["analysis"],
+      "kind": "test"
+    },
+    {
+      "id": "test-bard-ai-chant-turns-cached",
+      "runtime": "python",
+      "args": ["scripts/test-bard-ai-turns.py", "--chants-only"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["bard-ai-turns"],
+      "kind": "test"
+    },
+    {
+      "id": "prepare-ordinary-ai-review",
+      "runtime": "python",
+      "args": ["scripts/test-prepare-geomancer-overlap.py"],
+      "requires": ["build-integrated-jobs"],
+      "suites": ["dancer-ordinary-ai"],
+      "kind": "prepare"
+    },
+    {
+      "id": "test-dancer-ordinary-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-dancer-ordinary-ai.py"
+      ],
+      "requires": [
+        "prepare-ordinary-ai-review"
+      ],
+      "suites": [
+        "dancer-ordinary-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-dancer-ordinary-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-dancer-ordinary-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "dancer-ordinary-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-dancer-ordinary-search",
+      "runtime": "python",
+      "args": [
+        "scripts/test-dancer-ordinary-search.py"
+      ],
+      "requires": [
+        "test-dancer-ordinary-ai"
+      ],
+      "suites": [
+        "dancer-ordinary-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-dancer-ordinary-search-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-dancer-ordinary-search.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "dancer-ordinary-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-dancer-silenced-player-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-dancer-choice-playback.py",
+        "--silenced-smoke"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "dancer-silenced"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "martial-utility-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-ai.py"
+      ],
+      "requires": [
+        "prepare-ordinary-ai-review"
+      ],
+      "suites": [
+        "martial-utility-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-search",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-search.py"
+      ],
+      "requires": [
+        "test-martial-utility-ai"
+      ],
+      "suites": [
+        "martial-utility-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-search-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-search.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "martial-utility-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-native-search-control",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-search.py",
+        "--native-search-control"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-turns-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-turns.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "martial-utility-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-trace-351",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-trace.py",
+        "351"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-trace-360",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-trace.py",
+        "360"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-trace-368",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-trace.py",
+        "368"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-discover-351",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-trace.py",
+        "351",
+        "--discover"
+      ],
+      "requires": [],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-remaining-turns-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-turns.py",
+        "--remaining"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "martial-utility-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-filter",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-filter.py"
+      ],
+      "requires": [
+        "test-martial-utility-search"
+      ],
+      "suites": [
+        "martial-utility-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-custom-ward-turns-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-turns.py",
+        "--custom-wards"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "martial-utility-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-utility-filter-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-filter.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "martial-utility-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-kiyomori-seed-sweep",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-turns.py",
+        "--kiyomori-sweep"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-kiyomori-turn-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-utility-turns.py",
+        "--kiyomori"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "martial-utility-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-medicine-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "medicine-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-ai",
+      "runtime": "python",
+      "args": ["scripts/test-medicine-ai.py"],
+      "requires": ["prepare-ordinary-ai-review"],
+      "suites": ["medicine-ai"],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-search",
+      "runtime": "python",
+      "args": ["scripts/test-medicine-search.py"],
+      "requires": ["test-medicine-ai"],
+      "suites": ["medicine-ai"],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-search-cached",
+      "runtime": "python",
+      "args": ["scripts/test-medicine-search.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["medicine-ai"],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-turns",
+      "runtime": "python",
+      "args": ["scripts/test-medicine-turns.py"],
+      "requires": ["test-medicine-search"],
+      "suites": ["medicine-ai"],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-turns-cached",
+      "runtime": "python",
+      "args": ["scripts/test-medicine-turns.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["medicine-ai"],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-stack-trace",
+      "runtime": "python",
+      "args": [
+        "scripts/test-medicine-stack-trace.py"
+      ],
+      "requires": [],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-trace-384",
+      "runtime": "python",
+      "args": [
+        "scripts/test-medicine-ai-trace.py",
+        "384"
+      ],
+      "requires": [],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-trace-386",
+      "runtime": "python",
+      "args": [
+        "scripts/test-medicine-ai-trace.py",
+        "386"
+      ],
+      "requires": [],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-trace-392",
+      "runtime": "python",
+      "args": [
+        "scripts/test-medicine-ai-trace.py",
+        "392"
+      ],
+      "requires": [],
+      "suites": [
+        "analysis"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-choice-turns-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-medicine-turns.py",
+        "--choices"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "medicine-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-remaining-turns-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-medicine-turns.py",
+        "--remaining"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "medicine-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-guarding-sweep",
+      "runtime": "python",
+      "args": [
+        "scripts/test-medicine-turns.py",
+        "--guarding-sweep"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "medicine-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-medicine-evidence-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-medicine-evidence.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "medicine-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-attack-ai-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-attack-ai.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "martial-attack-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-attack-ai",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-attack-ai.py"
+      ],
+      "requires": [
+        "prepare-ordinary-ai-review"
+      ],
+      "suites": [
+        "martial-attack-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-martial-hostile-search-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-martial-hostile-search.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "martial-attack-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-provoke-ai-filter",
+      "runtime": "python",
+      "args": [
+        "scripts/test-provoke-ai-filter.py"
+      ],
+      "requires": [
+        "test-martial-attack-ai"
+      ],
+      "suites": [
+        "martial-attack-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-provoke-ai-filter-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-provoke-ai-filter.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "martial-attack-ai"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-ai-movement-supports-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-ai-movement-supports.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "ai-movement-supports"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-shara-arrival-cached",
+      "runtime": "python",
+      "args": ["scripts/test-shara-arrival.py"],
+      "requires": ["verify-integrated-assembly-prerequisites", "audit-mission-item-dependencies"],
+      "suites": ["secret-recruit-access"],
+      "kind": "test"
+    },
+    {
+      "id": "test-shara-arrival-continuation-cached",
+      "runtime": "python",
+      "args": ["scripts/test-shara-arrival.py", "--arrival-only"],
+      "requires": ["verify-integrated-assembly-prerequisites", "audit-mission-item-dependencies"],
+      "suites": ["secret-recruit-access"],
+      "kind": "test"
+    },
+    {
+      "id": "test-original-source-variants-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-original-source-gates.py",
+        "variants"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites",
+        "audit-mission-renewable-chains",
+        "audit-vanilla-teaching-sources"
+      ],
+      "suites": [
+        "original-source-gates"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-original-source-renewable-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-original-source-gates.py",
+        "renewable"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites",
+        "audit-mission-renewable-chains",
+        "audit-vanilla-teaching-sources"
+      ],
+      "suites": [
+        "original-source-gates"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-original-source-shops-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-original-source-gates.py",
+        "shops"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites",
+        "audit-mission-renewable-chains",
+        "audit-vanilla-teaching-sources"
+      ],
+      "suites": [
+        "original-source-gates"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-original-source-pools-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-original-source-gates.py",
+        "pools"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites",
+        "audit-mission-renewable-chains",
+        "audit-vanilla-teaching-sources"
+      ],
+      "suites": [
+        "original-source-gates"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-paid-recovery-cycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-paid-recovery-cycle.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "paid-recovery-cycle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-paid-recovery-cycle-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-paid-recovery-cycle.py",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "paid-recovery-cycle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-semantic-medicine",
+      "runtime": "python",
+      "args": [
+        "scripts/test-semantic-contracts.py",
+        "medicine"
+      ],
+      "requires": [
+        "prepare-integrated-executor"
+      ],
+      "suites": [
+        "semantic-contracts"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-semantic-medicine-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-semantic-contracts.py",
+        "medicine"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "semantic-contracts"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-semantic-spellblade",
+      "runtime": "python",
+      "args": [
+        "scripts/test-semantic-contracts.py",
+        "spellblade"
+      ],
+      "requires": [
+        "prepare-integrated-executor"
+      ],
+      "suites": [
+        "semantic-contracts"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-semantic-spellblade-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-semantic-contracts.py",
+        "spellblade"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "semantic-contracts"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-semantic-parry-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-semantic-contracts.py",
+        "parry"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "semantic-contracts"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-absorb-direct-loss",
+      "runtime": "python",
+      "args": [
+        "scripts/test-absorb-direct-loss.py"
+      ],
+      "requires": [
+        "prepare-integrated-executor"
+      ],
+      "suites": [
+        "semantic-contracts"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-absorb-direct-loss-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-absorb-direct-loss.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "semantic-contracts"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-lifecycle-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-playback.py",
+        "--lifecycle"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "mystic-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-saber-pose",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-saber-pose.py"
+      ],
+      "requires": ["build-integrated-jobs"],
+      "suites": [
+        "mystic-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-mystic-knight-saber-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-playback.py",
+        "--lifecycle",
+        "--sabers-only"
+      ],
+      "requires": [
+        "prepare-integrated-battle"
+      ],
+      "suites": [
+        "mystic-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-independent-save-slots-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-independent-save-slots.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "persistence-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-full-roster-replacement-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-full-roster-replacement.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "persistence-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-independent-save-slots-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-independent-save-slots.py",
+        "--resume-latest"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "persistence-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-independent-save-slots-cold-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-independent-save-slots.py",
+        "--resume-cold"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "persistence-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-sorted-dispatch-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-sorted-dispatch.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "persistence-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-full-clan-recruitment-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-full-clan-recruitment.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "persistence-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-full-clan-recruitment-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-full-clan-recruitment.py",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "persistence-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-sorted-dispatch-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-sorted-dispatch.py",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "persistence-lifecycles"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-learning-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-learning.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-learning"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-job-menus-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-all-new-jobs-in-game.py",
+        "--integrated"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-learning"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-acquisition-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-acquisition.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-learning"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "audit-installed-design-cached",
+      "runtime": "node",
+      "args": [
+        "scripts/audit-installed-design.mjs"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-learning"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-opening-teaching",
+      "runtime": "python",
+      "args": [
+        "scripts/test-new-equipment-in-game.py",
+        "--integrated"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-learning"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "prepare-final-mixing-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/run-integrated-check.py",
+        "scripts/jobs/viking/prepare-executor.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "test-final-mixing-synergies",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-synergies.py"
+      ],
+      "requires": [
+        "prepare-final-mixing-executor"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-final-mixing-geomancer-passives",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-geomancer.py"
+      ],
+      "requires": [
+        "prepare-final-mixing-executor"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-final-mixing-undead",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-undead-policy.py"
+      ],
+      "requires": [
+        "prepare-final-mixing-executor"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-final-mixing-doublecast",
+      "runtime": "python",
+      "args": [
+        "scripts/test-mystic-knight-doublecast.py"
+      ],
+      "requires": [
+        "prepare-final-mixing-executor"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-final-mixing-doublecast-reactions",
+      "runtime": "python",
+      "args": [
+        "scripts/test-doublecast-reactions.py"
+      ],
+      "requires": [
+        "prepare-final-mixing-executor"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-combos",
+      "runtime": "python",
+      "args": [
+        "scripts/test-combos-in-game.py",
+        "--integrated"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-combos-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-combos-in-game.py",
+        "--integrated",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-combo-weapons",
+      "runtime": "python",
+      "args": [
+        "scripts/test-combo-weapon-visuals-in-game.py",
+        "--integrated"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-combo-weapons-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-combo-weapon-visuals-in-game.py",
+        "--integrated",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-integrated-combo-weapons-positive",
+      "runtime": "python",
+      "args": [
+        "scripts/test-combo-weapon-visuals-in-game.py",
+        "--integrated",
+        "--resume",
+        "--positive-control"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-final-mixing-turn-supports",
+      "runtime": "python",
+      "args": [
+        "scripts/test-integrated-turn-supports.py",
+        "--combat-only"
+      ],
+      "requires": [
+        "prepare-final-mixing-executor"
+      ],
+      "suites": [
+        "final-mixing"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-quest-recovery-cycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-quest-recovery-cycle.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "quest-recovery-cycle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-quest-recovery-cycle-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-quest-recovery-cycle.py",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "quest-recovery-cycle"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-pub-options-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-pub-options-in-game.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "vanillaplus-preservation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-sorted-deployment-cached",
+      "runtime": "python",
+      "args": [
+        "scripts/test-sorted-deployment.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "vanillaplus-preservation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "prepare-morpher-fixture",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-morpher-fixture.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "vanillaplus-preservation"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "test-morpher-player",
+      "runtime": "python",
+      "args": [
+        "scripts/test-morpher-player.py"
+      ],
+      "requires": [
+        "prepare-morpher-fixture"
+      ],
+      "suites": [
+        "vanillaplus-preservation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-morpher-player-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-morpher-player.py",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "vanillaplus-preservation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-morpher-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-morpher-lifecycle.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "vanillaplus-preservation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-morpher-lifecycle-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-morpher-lifecycle.py",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "vanillaplus-preservation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-morpher-exit",
+      "runtime": "python",
+      "args": [
+        "scripts/test-morpher-exit.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "vanillaplus-preservation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-morpher-exit-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-morpher-exit.py",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "vanillaplus-preservation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-spell-parry-player",
+      "runtime": "python",
+      "args": [
+        "scripts/test-spell-parry-player.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-presentation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-spell-parry-player-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-spell-parry-player.py",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-presentation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "audit-presentation-help-reuse",
+      "runtime": "node",
+      "args": [
+        "scripts/audit-presentation-help.mjs"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "final-presentation"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-readability",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-readability.py"],
+      "suites": ["geomancer-readability"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-readability-terrain",
+      "runtime": "python",
+      "args": ["scripts/test-geomancer-readability.py", "--installed-cycle"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["geomancer-readability"],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-mixed-playback",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-mixed-playback.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "geomancer-mixed-playback"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-mixed-playback-resume",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-mixed-playback.py",
+        "--resume"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "geomancer-mixed-playback"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-campaign-progression",
+      "runtime": "python",
+      "args": [
+        "scripts/test-campaign-progression.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites",
+        "audit-mission-renewable-chains"
+      ],
+      "suites": [
+        "campaign-milestones"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-clear-save-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-clear-save-lifecycle.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "campaign-milestones"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-clear-save-continuation",
+      "runtime": "python",
+      "args": ["scripts/test-clear-save-continuation.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones"],
+      "kind": "test"
+    },
+    {
+      "id": "test-campaign-ending-scenes",
+      "runtime": "python",
+      "args": ["scripts/test-campaign-ending-scenes.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones"],
+      "timeoutSeconds": 180,
+      "kind": "test"
+    },
+    {
+      "id": "test-final-battle-scene-bridge",
+      "runtime": "python",
+      "args": ["scripts/test-final-battle-scene-bridge.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones"],
+      "timeoutSeconds": 240,
+      "kind": "test"
+    },
+    {
+      "id": "test-final-battle-scene-bridge-resume",
+      "runtime": "python",
+      "args": ["scripts/test-final-battle-scene-bridge.py", "--resume-battle-entry"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones-resume"],
+      "timeoutSeconds": 240,
+      "kind": "test"
+    },
+    {
+      "id": "test-shara-scene-lifecycle",
+      "runtime": "python",
+      "args": ["scripts/test-shara-scene-lifecycle.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones"],
+      "timeoutSeconds": 180,
+      "kind": "test"
+    },
+    {
+      "id": "test-shara-scene-lifecycle-resume",
+      "runtime": "python",
+      "args": ["scripts/test-shara-scene-lifecycle.py", "--resume-offer"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones-resume"],
+      "timeoutSeconds": 180,
+      "kind": "test"
+    },
+    {
+      "id": "test-shara-scene-lifecycle-cold-suffix",
+      "runtime": "python",
+      "args": ["scripts/test-shara-scene-lifecycle.py", "--resume-accepted"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones-resume"],
+      "timeoutSeconds": 180,
+      "kind": "test"
+    },
+    {
+      "id": "test-shara-full-capacity",
+      "runtime": "python",
+      "args": ["scripts/test-shara-full-capacity.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones-resume"],
+      "timeoutSeconds": 90,
+      "kind": "test"
+    },
+    {
+      "id": "test-campaign-territory-scenes",
+      "runtime": "python",
+      "args": ["scripts/test-campaign-territory-scenes.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones"],
+      "timeoutSeconds": 240,
+      "kind": "test"
+    },
+    {
+      "id": "test-campaign-final-condition",
+      "runtime": "python",
+      "args": ["scripts/test-campaign-final-condition.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones-resume"],
+      "timeoutSeconds": 90,
+      "kind": "test"
+    },
+    {
+      "id": "test-campaign-final-departure",
+      "runtime": "python",
+      "args": ["scripts/test-campaign-final-departure.py"],
+      "requires": ["verify-integrated-assembly-prerequisites"],
+      "suites": ["campaign-milestones-resume"],
+      "timeoutSeconds": 120,
+      "kind": "test"
+    }
+  ],
+  "continueIndependent": true
+}

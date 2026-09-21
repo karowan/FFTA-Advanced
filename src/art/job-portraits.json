@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "status": "Original portrait drafts; visual refinement and full actor artwork remain open",
+  "authorship": "Drawn pixel by pixel as explicit indexed rows on blank 18x16 grids. No donor character pixels are copied. Native FFTA palettes and proportions are references. These rows were authored in source, not painted through the desktop editor.",
+  "encoding": "One hexadecimal palette index per pixel; dots are transparent. Rows are right-padded to 18 pixels.",
+  "portraits": [
+    {"job":116,"name":"Human Samurai","paletteBank":14,"design":"Gold crescent crest, flared red kabuto, visible face, segmented red shoulder armor", "rows":[
+      ".....17....71", ".....177..771", "....188777881", "...18999799881",
+      "..1899999898881", ".189888888888881", ".1881a777777a1881", "..18177371761881",
+      "...1817777751881", "...1881677651881", "..198811661188981", ".1989811111899891",
+      ".1989888888898981", "..19898999899881", "...188888888881", "....1111111111"
+    ]},
+    {"job":117,"name":"Human Dark Knight","paletteBank":13,"design":"Asymmetric closed steel helm, narrow amber visor, high layered gorget and angular pauldrons", "rows":[
+      "........11", "......114b1", "....114cb341", "...14cb3b4411",
+      "..14bbcb4444c1", "..14cb4444c3c41", "..1447777644441", "...14411444c41",
+      "...14c114cc441", "....14444441", "...1cb414cb41", ".11bc4144cbc41",
+      "1b3c44114cb3bc41", "14cc41c4414cb441", "..1444144414441", "...11111111111"
+    ]},
+    {"job":118,"name":"Bangaa Viking","paletteBank":14,"design":"Exposed long Bangaa muzzle, swept crest, pale fur collar, red leather headband and gold brooch", "rows":[
+      ".......131", "......13b31", "....113b331", "...165777611",
+      "..1656777761", "..1888999881", "..16577177661", ".16657777777661",
+      "167777777777761", ".1556613333161", "....15666661", "..13b111611b31",
+      ".1333b133b133b31", "13b3b31773b3b3b1", ".1b33167613b331", "..111188881111"
+    ]},
+    {"job":119,"name":"Bangaa Dark Knight","paletteBank":14,"design":"Low plated crest, exposed Bangaa jaw, segmented neck guard and dark violet armor", "rows":[
+      "......141", ".....14dc1", "....14edcc11", "...14feedd441",
+      "..14edd444dc41", "..14477177dc41", "..165777776441", ".16777777776141",
+      "16776666667641", ".15561133161", "...1416611441", "..14dd414cd441",
+      ".14ed4414edcc41", "14ed441144eddd41", ".144d414414d4441", "..111411114111"
+    ]},
+    {"job":120,"name":"Nu Mou Chemist","paletteBank":13,"design":"Long rounded Nu Mou ears, paired blue safety goggles, pale muzzle and work-apron collar", "rows":[
+      "..11.....11", ".1cb1...1bc1", "1cbbc1.1cbb1", "1cbbbc1cbbb1",
+      ".1cbb333bbc1", "..1b33333b1", "..1444444441", ".148b848b841",
+      ".14b394b3941", "..1444b4441", "..1b333333b1", ".1b33333733b1",
+      "..1b33366331", "...1b333331", "..1b114811bc1", ".1b333488433bc1"
+    ]},
+    {"job":121,"name":"Nu Mou Geomancer","paletteBank":13,"design":"Broad hood fitted over long Nu Mou ears, pale snout, green mantle and stone pendant", "rows":[
+      "..1.....1", ".1de1..1ed1", "1defd11dfed1", "1defeddefed1",
+      ".1defffeddd1", "..1effffeddd1", "..1efdddddde1", "..1d1b333b1d1",
+      "..1d333133bd1", ".1db333333bd1", ".1db33333733b1", "..1db33366331",
+      "..1edb3333bd1", ".1effd1111ddd1", ".1deddfccfded1", "..1dddfbbfdd1"
+    ]},
+    {"job":122,"name":"Moogle Chemist","paletteBank":13,"design":"Visible pom-pom and long ears, blue work cap with brass goggles, cream muzzle and apron", "rows":[
+      "........171", ".......17771", "...11...171", "..13b1...1",
+      "..133b1.13b1", "..13b11.133b1", "...1888889b31", "..189bb8988881",
+      "..188778778881", "...1333333b1", "..133133133b1", "..133337333b1",
+      "...13377733b1", "....133333b1", "...18911198b1", "..189bb8bb98b1"
+    ]},
+    {"job":123,"name":"Moogle Bard","paletteBank":13,"design":"Cream ears and pom-pom, feathered green performance cap, gold clasp and blue scarf", "rows":[
+      ".....13...171", "....133..17771", "...1331...171", "..1331.....1",
+      "..13ed11..131", "...1effed1331", "..1efffed1331", ".1eddddddd3b1",
+      "..11333333b1", "..133133133b1", "..133337333b1", "...1337773b1",
+      "....1333331", "...18977798b1", "..18ab111b98b1", "...19811b8891"
+    ]},
+    {"job":124,"name":"Viera Dancer","paletteBank":13,"design":"Tall exposed Viera ears, jeweled headband, loose pale hair and blue wrap collar", "rows":[
+      "...11....11", "..1b31..1b31", "..1b31..1b31", "..1b31.1b31",
+      "...1b311b31", "...13333331", "..13bb3333b1", "..1779897771",
+      "..13371733b1", "..1b777773b1", "...1b7763b1", "...133761b31",
+      "..13b17613b31", "..1b189991bb1", "...189b39891", "..1b98989b981"
+    ]},
+    {"job":125,"name":"Viera Mystic Knight","paletteBank":14,"design":"Exposed Viera ears, silver runic brow guard, violet side plates and high armored collar", "rows":[
+      "...11....11", "..1b31..1b31", "..1cb1..1cb1", "..1cb1.1cb1",
+      "...1b311b31", "...1b3bb3b1", "..14cb3bc41", "..14c777c41",
+      "..14c717c41", "..1dc777dc1", "..1ed776ed1", "...1ed6de1",
+      "..1ced11dec1", ".1b3ed41deb31", ".14cde414edc41", "..144d441d441"
+    ]}
+  ]
+}

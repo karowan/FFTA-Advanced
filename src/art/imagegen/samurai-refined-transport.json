@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "coverage": "partial",
+  "jobs": [
+    116
+  ],
+  "assets": {
+    "walk": {
+      "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v4.png",
+      "sourceSha256": "17deae2a4046fafbd2420f0f93fbefae0b6e3f96f688673977f1e5dd5b1f44d1",
+      "conversion": {
+        "columns": 3,
+        "rows": 2,
+        "height": 27,
+        "resampling": "nearest"
+      }
+    }
+  },
+  "sequences": [
+    {
+      "job": 116,
+      "lifetime": "land",
+      "slot": 0,
+      "frames": [
+        {
+          "asset": "walk",
+          "frame": 0
+        },
+        {
+          "asset": "walk",
+          "frame": 1
+        },
+        {
+          "asset": "walk",
+          "frame": 2
+        },
+        {
+          "asset": "walk",
+          "frame": 1
+        }
+      ]
+    },
+    {
+      "job": 116,
+      "lifetime": "land",
+      "slot": 1,
+      "frames": [
+        {
+          "asset": "walk",
+          "frame": 3
+        },
+        {
+          "asset": "walk",
+          "frame": 4
+        },
+        {
+          "asset": "walk",
+          "frame": 5
+        },
+        {
+          "asset": "walk",
+          "frame": 4
+        }
+      ]
+    },
+    {
+      "job": 116,
+      "lifetime": "land",
+      "slot": 2,
+      "frames": [
+        {
+          "asset": "walk",
+          "frame": 0
+        },
+        {
+          "asset": "walk",
+          "frame": 1
+        },
+        {
+          "asset": "walk",
+          "frame": 2
+        },
+        {
+          "asset": "walk",
+          "frame": 1
+        }
+      ]
+    },
+    {
+      "job": 116,
+      "lifetime": "land",
+      "slot": 3,
+      "frames": [
+        {
+          "asset": "walk",
+          "frame": 3
+        },
+        {
+          "asset": "walk",
+          "frame": 4
+        },
+        {
+          "asset": "walk",
+          "frame": 5
+        },
+        {
+          "asset": "walk",
+          "frame": 4
+        }
+      ]
+    }
+  ],
+  "scope": "Private native-scale review only. Imagegen v4 six-pose draft with preserved native A/B/C/B timing; artwork unaccepted."
+}

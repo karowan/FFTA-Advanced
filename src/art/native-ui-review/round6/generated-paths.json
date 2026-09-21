@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "human-samurai",
+    "kind": "icon",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-b14ddc58-40ed-49fa-b013-14619db79c55.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Fifth cell edited; letterbox crop from rows with over 90% opaque pixels. Generated eye columns require the separately recorded one-pixel translation.",
+      "registration": {
+        "affine": [
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        "reason": "Generated eye columns 6 and 9 are translated one pixel right to the native columns 7 and 10 before applying shared face anchors. No scaling or painted pixels."
+      }
+    }
+  },
+  {
+    "slug": "human-dark-knight",
+    "kind": "icon",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-6698ab8b-28f6-4d9a-9a4f-1f1a49c19db1.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Fifth cell edited; letterbox crop from rows with over 90% opaque pixels. No head scaling or registration."
+    }
+  }
+]

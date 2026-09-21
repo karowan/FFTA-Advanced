@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "description": "Bounded job discovery fix: authenticated code-only patch, all ten jobs and five races, clan discovery versus unit eligibility, paging, and native save/cold Continue. No battle behavior changes.",
+  "timeoutSeconds": 300,
+  "steps": [
+    {"id":"build-job-visibility","runtime":"python","kind":"static","suites":["job-visibility"],"args":["scripts/build-job-visibility.py"]},
+    {"id":"test-job-visibility","runtime":"python","kind":"runtime","suites":["job-visibility"],"requires":["build-job-visibility"],"args":["scripts/test-job-visibility.py"]},
+    {"id":"test-job-visibility-save","runtime":"python","kind":"runtime","suites":["job-visibility"],"requires":["test-job-visibility"],"args":["scripts/test-job-visibility-save.py"]}
+  ]
+}

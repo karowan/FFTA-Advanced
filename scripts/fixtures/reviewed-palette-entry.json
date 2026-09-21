@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "scope": "Fixed same-race preallocation inputs for all three custom palette groups. Entry and idle only; not attack legality or full animation acceptance.",
+  "units": [
+    {"slot": 2, "job": 116, "hp": 160, "mp": 120, "lessons": []},
+    {"slot": 3, "job": 118, "hp": 160, "mp": 120, "lessons": []},
+    {"slot": 4, "job": 121, "hp": 160, "mp": 120, "lessons": []},
+    {"slot": 5, "job": 124, "hp": 160, "mp": 120, "lessons": []}
+  ]
+}

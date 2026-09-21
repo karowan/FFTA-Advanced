@@ -1,0 +1,406 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 300,
+  "description": "Final native artwork consumers: portraits, native menu indices, badges, assembled graphics-only contract, all-class menu/capacity and isolated save lifecycle.",
+  "steps": [
+    {
+      "id": "build-final-native-portraits",
+      "runtime": "python",
+      "kind": "build",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/import-reviewed-portraits.py",
+        "--parent",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--output",
+        "build/art/native-final-integration-2026-09-20/portraits.json"
+      ]
+    },
+    {
+      "id": "test-final-native-portrait-import",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-reviewed-portrait-import.py",
+        "--manifest",
+        "build/art/native-final-integration-2026-09-20/portraits.json"
+      ]
+    },
+    {
+      "id": "build-final-native-miniatures",
+      "runtime": "python",
+      "kind": "build",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/build-reviewed-native-miniatures.py",
+        "--parent",
+        "build/art/native-final-integration-2026-09-20/portraits.json",
+        "--output",
+        "build/art/native-final-integration-2026-09-20/miniatures.json",
+        "--native-conversion",
+        "build/art/native-nonhuman-integration-2026-09-20/conversions.json"
+      ]
+    },
+    {
+      "id": "build-final-native-badge-colors",
+      "runtime": "python",
+      "kind": "build",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/prepare-reviewed-menu-assets.py",
+        "--parent",
+        "build/art/native-final-integration-2026-09-20/miniatures.json",
+        "--output",
+        "build/art/native-final-integration-2026-09-20/menu-assets",
+        "--native-conversion",
+        "build/art/native-nonhuman-integration-2026-09-20/conversions.json"
+      ]
+    },
+    {
+      "id": "build-final-native-badges",
+      "runtime": "python",
+      "kind": "build",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/build-reviewed-menu-badges.py",
+        "--parent",
+        "build/art/native-final-integration-2026-09-20/miniatures.json",
+        "--output",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--conversion",
+        "build/art/native-final-integration-2026-09-20/menu-assets/manifest.json"
+      ]
+    },
+    {
+      "id": "test-final-native-contract",
+      "runtime": "python",
+      "kind": "static",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-reviewed-native-contract.py",
+        "--manifest",
+        "build/art/native-final-integration-2026-09-20/candidate.json"
+      ]
+    },
+    {
+      "id": "test-final-native-entry",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-reviewed-palette-entry.py",
+        "--native",
+        "--manifest",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json"
+      ]
+    },
+    {
+      "id": "test-final-native-menus",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-generated-portraits-ui.py",
+        "--manifest",
+        "build/art/native-final-integration-2026-09-20/candidate.json"
+      ]
+    },
+    {
+      "id": "test-final-native-equipment",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-equipment-preview-native.py",
+        "--manifest",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json"
+      ]
+    },
+    {
+      "id": "test-final-native-inventory-ui",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--manifest",
+        "build/art/native-final-integration-2026-09-20/candidate.json"
+      ]
+    },
+    {
+      "id": "test-final-native-shop-ui",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--manifest",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--shop"
+      ]
+    },
+    {
+      "id": "test-final-native-capacity",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-art-all-class-capacity.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json"
+      ]
+    },
+    {
+      "id": "test-final-native-save",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-consumers"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-reviewed-preview-save.py",
+        "--native",
+        "--manifest",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--output-index",
+        "build/art/native-final-integration-2026-09-20/save-latest.json"
+      ]
+    },
+    {
+      "id": "test-final-native-fight-116",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-screenshots"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "116"
+      ]
+    },
+    {
+      "id": "test-final-native-fight-117",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-screenshots"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "117"
+      ]
+    },
+    {
+      "id": "test-final-native-fight-118",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-screenshots"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "118"
+      ]
+    },
+    {
+      "id": "test-final-native-fight-119",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-screenshots"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "119"
+      ]
+    },
+    {
+      "id": "test-final-native-fight-120",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-screenshots"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "120"
+      ]
+    },
+    {
+      "id": "test-final-native-fight-121",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-screenshots"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "121"
+      ]
+    },
+    {
+      "id": "test-final-native-fight-122",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-screenshots"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "122"
+      ]
+    },
+    {
+      "id": "test-final-native-fight-123",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-screenshots"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "123"
+      ]
+    },
+    {
+      "id": "test-final-native-fight-124",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-screenshots"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "124"
+      ]
+    },
+    {
+      "id": "test-final-native-fight-125",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "native-final-screenshots"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-final-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-final-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "125"
+      ]
+    }
+  ]
+}

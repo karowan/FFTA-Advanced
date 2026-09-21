@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Use case: identity-preserve. Generate exactly ONE animation keyframe r1c1, independently from the fixed base.\nImage 1 is the GENERATED BASE CHARACTER: exact character identity authority. Image 2 is an original FFTA SOLDIER native keyframe: exact pose and camera authority, not costume authority.\nCreate the identical Human traveler from image 1 in this action: front three-quarter down-left, first stride extreme; reproduce image 2 foot and arm positions. Preserve the same chestnut short hair, cream headband, tiny visible eye, rust-red tunic, cream sleeves, brown belt with single square buckle, slate trousers and brown boots. No new accessories, weapons, bags or headwear. For rear views, show the same headband continuing around back and plain rear belt with NO buckle. Torso and head do not face camera in rear views. Match template leg bend, foot contacts, arm positions, ground baseline and small vertical bob. Do not merely return the unchanged base pose. Do not copy Soldier armor or cap. Do not mirror the base.\nKeep the exact same body scale and costume geometry as base. Flat sparse FFTA pixel clusters, approximately 16 wide by 27 tall logical pixels on a 32x32 transparent cell. Output one 1024x1024 square image, one sprite centered with safe empty margins, no cropping. At most 15 opaque colors; crisp one-logical-pixel outline; no fine texture, antialiasing, gradients, glow, shadow, ground oval, text, grid or other sprites. Genuine transparent background. Only pose and facing change, not design.",
+  "references": [
+    "build/art/race-study-2026-09-19/human-granular-base.png",
+    "<LOCAL_USER>/coding/ffta/build/art/race-study-2026-09-19/human-soldier-r1c1-reference.png"
+  ],
+  "status": "independent per-pose experiment; not accepted"
+}

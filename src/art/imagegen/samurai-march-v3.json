@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "built-in default; model name not exposed",
+  "prompt": "Use case: stylized-concept. Create a NEW HUMAN SAMURAI sprite sheet for Final Fantasy Tactics Advance, six sprites, three columns by two rows, on genuinely transparent background. Input image is ONLY original FFTA proportion, pixel-cluster and camera reference: do not copy its characters or recolor them. Draw a distinct Samurai from scratch. Match the reference's very small 16-pixel-wide, 27-pixel-tall human silhouette and quiet colors. Native game sprite craftsmanship, not a large detailed illustration. Render logical pixel art enlarged uniformly with nearest neighbor. Design each figure on a 32x32 logical cell, occupied width 16-18 pixels and total height 27 pixels. Face/helmet occupies about 9x10 pixels; body including shoulders about 12 pixels wide; tiny hands and slim lower legs. Every feature uses simple coherent pixel clusters. Samurai identity: compact muted vermilion kabuto with very small gold crescent (no huge horns), uncovered ochre-peach face with one readable white/dark eye, short red shoulder guards, dark violet undersuit, simple two-shade red lamellar chest and three skirt plates, brown boots, a short sheathed katana at anatomical left hip. No ninja hood or mask. Two warm red shades, dark colored outline, muted lavender shadows, warm yellow accents only. Avoid harsh black outlining, white armor highlights, huge feet and flaring broad skirt. The same individual and costume in ALL six frames. TOP ROW: three phases of the original FFTA subtle stepping-in-place cycle, facing lower left in three-quarter view: left foot forward, neutral, right foot forward. BOTTOM ROW: same three phases seen from upper right, true three-quarter back view, face not visible. Upper-body geometry and costume parts remain consistent between phase frames; only hands/legs and a one-pixel bob animate. Katana stays at the same anatomical hip and is always sheathed. Same scale, center and baseline in every equal cell. Leave wide transparent gutters around each cell so no sprite crosses the cell edge. No labels, text, numbers, panel borders, ground shadows, halos, checkerboard, antialiasing, smooth gradients or decorative background. Return only the six tiny game sprites, with actual transparency. Prioritize fidelity to the reference's small silhouette and simplified native pixel density.",
+  "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v3.png",
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-e25728f3-e3d9-4938-b580-ff5fe41ae175.png",
+  "references": [
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/original-human-reference.png",
+      "role": "Authenticated original proportion/pixel-cluster reference only",
+      "sha256": "2c95aad66a09c1c0e40a885cc4c8bfc7f16b879c40977b4490acab81e2440357"
+    }
+  ],
+  "conversion": {
+    "columns": 3,
+    "rows": 2,
+    "height": 27,
+    "resampling": "nearest",
+    "nativePaletteOffset": "0x419d80"
+  },
+  "status": "Unaccepted artwork study; actual native-palette conversion reviewed",
+  "productionAccepted": false,
+  "sourceSha256": "cdb60ddc2fcfed6f164540da227e14c42bf56f2f5d1321435fc23b7844042395",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "convertedSizes": [
+    [
+      16,
+      26
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      16,
+      27
+    ]
+  ],
+  "review": "Narrow native proportions. Eye and crest inconsistent after conversion."
+}

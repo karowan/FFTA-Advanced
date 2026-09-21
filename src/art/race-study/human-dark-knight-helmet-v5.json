@@ -1,0 +1,33 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Tool default; version not exposed",
+  "settings": "Prompt and one referenced image path only; other settings tool-managed.",
+  "prompt": "Edit only the rightmost Dark Knight's helmet. Remove all gold trim from the back of his head, on the viewer's right, replacing it with the helmet's dark steel. Reduce the rear horn on that same side to a tiny low nub, almost flush with the helmet crown. Keep the gold front visor, closed faceplate, body, colors, pose, pixel style and complete row layout unchanged.",
+  "references": [
+    {
+      "path": "build\\art\\approved-class-sprites-2026-09-19\\human-dark-knight-helmet-v4-generated.png",
+      "role": "Edit target",
+      "sha256": "cb018385b87455836891fcf3a7bfbb2c76aaf08808554797cfc349a355295197"
+    }
+  ],
+  "source": "build/art/approved-class-sprites-2026-09-19/human-dark-knight-helmet-v5-generated.png",
+  "conversion": {
+    "logicalGrid": [
+      160,
+      64
+    ],
+    "crop": [
+      128,
+      16,
+      160,
+      48
+    ],
+    "resampling": "nearest",
+    "palette": "Generated colors retained",
+    "sharedPixelOverride": "Closed helmet covers face and hair; do not restore exposed anatomy."
+  },
+  "status": "Removed rear gold trim and reduced rear horn to a small nub. Awaiting user review. Animation remains paused.",
+  "sourceSha256": "38ef530042a5c9290b682bc80fdd77ebcbe729716c00ae5c97bb59b695823922",
+  "output": "build/art/approved-class-sprites-2026-09-19/human-dark-knight-helmet-v5-grid.png",
+  "outputSha256": "5757bcedc77a2116c4e057956b959cf73f0fbce43551757c32b7a2da40bff382"
+}

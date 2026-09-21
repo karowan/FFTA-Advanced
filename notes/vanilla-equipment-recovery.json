@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "scope": "VP-04 late recovery after original mission opportunities or claimed clan gifts; original sources remain intact.",
+  "requiredFlag": 54,
+  "baseFee": 10000,
+  "dispatchDays": 20,
+  "cooldownDays": 30,
+  "routes": [
+    {"mission": 471, "item": 26, "name": "Materia Blade", "originalMission": 22, "originalOpportunity": "Present Day", "title": "Blade Recovery"},
+    {"mission": 472, "item": 158, "name": "Zeus Mace", "originalMission": 16, "originalOpportunity": "Golden Clock", "title": "Mace Recovery"},
+    {"mission": 473, "item": 298, "name": "Genji Armor", "originalMission": 101, "originalOpportunity": "The Dark Blade", "title": "Armor Recovery"},
+    {"mission": 474, "item": 84, "name": "Cinquedea", "originalGift": 23, "originalOpportunity": "Claimed Negotiate30 clan gift", "title": "Knife Recovery"},
+    {"mission": 475, "item": 99, "name": "Madu", "originalGift": 15, "originalOpportunity": "Claimed Negotiate40 clan gift", "title": "Rapier Recovery"},
+    {"mission": 476, "item": 336, "name": "Sage Robe", "originalGift": 8, "originalOpportunity": "Claimed Magic45 clan gift", "title": "Robe Recovery"}
+  ]
+}

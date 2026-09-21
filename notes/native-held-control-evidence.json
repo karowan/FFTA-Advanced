@@ -1,0 +1,31 @@
+{
+  "source": "build/art/generated-actions/battle/20260919T035252.698820Z",
+  "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+  "sha256": {
+    "failed.json": "69ebb920b5fc1327295186dd0248f64c4c5d5f7424c1742bf8906e501b26a6ec",
+    "baseline-attack-57.ram": "27f63de894c6c05d7ab21fb112264d862911fce02d52c7b128bfa9942058e522",
+    "baseline-attack-57.vram": "1f75b30f974579b44280786b5ae9df5065bc4fe276dff7164a5e6036daf071ce",
+    "baseline-attack-57.oam": "801c11da622b8f45c8d45e81b91168d049f1d5a246b17c8b28b13aa7d6868998",
+    "baseline-attack-57.palette": "416253ce0628d65a724da9229c27929426e35781c92a9c9c2c2ec2e3e7f3f25c",
+    "baseline-attack-58.ram": "d00918062c118563469c82b4496057a18ddca78415640dbeb36ea5c19634b366",
+    "baseline-attack-58.vram": "e48b1914e50b2fbc52c024ae334b71ad905c8c2554509a586437def83eab0a67",
+    "baseline-attack-58.oam": "801c11da622b8f45c8d45e81b91168d049f1d5a246b17c8b28b13aa7d6868998",
+    "baseline-attack-58.palette": "416253ce0628d65a724da9229c27929426e35781c92a9c9c2c2ec2e3e7f3f25c",
+    "baseline-attack-59.ram": "97de496ab154e7e9a5c33c5ba479e9289c153d5c450656902895a939587d7694",
+    "baseline-attack-59.vram": "2ff9900f3c5759f4d4c04ae16b74bf3812f94d9fef185e3efc2666c3bfe2a4c4",
+    "baseline-attack-59.oam": "bb04d9b66549fd5f7bb064f50555da268f8f2a8504acba27c8e7d49be759a26e",
+    "baseline-attack-59.palette": "416253ce0628d65a724da9229c27929426e35781c92a9c9c2c2ec2e3e7f3f25c",
+    "baseline-attack-60.ram": "5cfa1b83ebafeeb95ac8e62df305af86ffbcf52545e38a4c128495abd2c70817",
+    "baseline-attack-60.vram": "de86d87fab516f83a9d55ecb2cf3035126e0ad37cf09f6af5dc944b634258f8a",
+    "baseline-attack-60.oam": "bb04d9b66549fd5f7bb064f50555da268f8f2a8504acba27c8e7d49be759a26e",
+    "baseline-attack-60.palette": "416253ce0628d65a724da9229c27929426e35781c92a9c9c2c2ec2e3e7f3f25c",
+    "baseline-attack-61.ram": "59d25d1a42abffd5ed0519d0167d6de8ae6611bd7ba028c38894cb06500f439a",
+    "baseline-attack-61.vram": "ab16fcf59781c0c1d3ebc61449fda1a24858230809bf5e66916ec5d88024f29b",
+    "baseline-attack-61.oam": "bb04d9b66549fd5f7bb064f50555da268f8f2a8504acba27c8e7d49be759a26e",
+    "baseline-attack-61.palette": "416253ce0628d65a724da9229c27929426e35781c92a9c9c2c2ec2e3e7f3f25c",
+    "generated-attack-57.ram": "b25d5c73d2ec6509ed859a8542c6809f12937d6e80e53c32cfccd45afb69560d",
+    "generated-attack-57.vram": "f50068971b279ee929f564fc59971d88e667e02c4ed4a96429ce147a2957cb2a",
+    "generated-attack-57.oam": "801c11da622b8f45c8d45e81b91168d049f1d5a246b17c8b28b13aa7d6868998",
+    "generated-attack-57.palette": "416253ce0628d65a724da9229c27929426e35781c92a9c9c2c2ec2e3e7f3f25c"
+  }
+}

@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+if [ -n "${FFTA_PYTHON:-}" ]; then
+    exec "$FFTA_PYTHON" scripts/check-git-content.py
+fi
+if command -v powershell.exe >/dev/null 2>&1; then
+    exec powershell.exe -NoProfile -ExecutionPolicy Bypass -Command '. ./scripts/resolve-python.ps1; & (Resolve-FftaPython) scripts/check-git-content.py; exit $LASTEXITCODE'
+fi
+exec python3 scripts/check-git-content.py

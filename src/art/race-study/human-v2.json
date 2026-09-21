@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Use case: identity-preserve. Revise this FFTA calibration experiment.\nImage 1 is the native Human six-pose template and is the authority for exact pixel density, proportions, limb landmarks and action. Image 2 is the newly generated Human wayfarer and is ONLY the costume identity reference.\nProduce the SAME wayfarer design (short brown hair, cream tunic, rust shoulder yoke, brown belt/boots, slate trousers) in precisely Image 1's six poses. Reduce the face to native FFTA scale: one tiny dark visible eye with at most one highlight pixel, no huge anime eyes. Head including hair only 9-10 logical pixels wide; whole body 15-17 pixels wide and 27 pixels tall. Use few broad flat color clusters, maximum 15 colors, no subpixel texture. Preserve image 1's exact front down-left and rear up-right torso angles. Strong requirement: columns A/B/C must match donor feet/arms exactly; do not replace these with arbitrary running poses. A and C have opposite raised feet, B has both feet down. Same rigid hair shape every phase, only native vertical bob.\nExactly 3 columns x 2 rows in 1536x1024; each cell 512x512 representing 32x32 pixels at 16x nearest enlargement. No details smaller than one 16x16 block. One pixel dark outline. No glow, gradients, soft edges, shadows, ground oval, lighting, grid, text or extra elements.\nFor this controlled experiment use a completely flat solid exact magenta #FF00FF background, including all gutters; it is a technical color key, not part of character. Do not generate transparency in this version. Every color must be flat and opaque. This is a tiny GBA sprite sheet, not high resolution artwork.",
+  "references": [
+    "build/art/race-study-2026-09-19/human-reference-magenta.png",
+    "build/art/race-study-2026-09-19/human-v1.png"
+  ],
+  "status": "controlled stricter pose and pixel-density experiment; not accepted"
+}

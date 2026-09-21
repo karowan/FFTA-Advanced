@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Use case: identity-preserve. ONE independently generated animation pose r2c1.\nImage 1 is the locked ORIGINAL BALD COOK base sprite at exact native 32x32 density enlarged 32x. Image 2 is a native FFTA SOLDIER action reference only.\nRedraw the cook in the pose: rear three-quarter up-right, first stride extreme; show back of head and tunic, reproduce image 2 foot and arm positions.\nKeep all original identity from image 1: BALD rounded head, small dark jaw beard, tan skin, cream rolled sleeves, ochre split-hem apron, dark teal sash and tail at anatomical LEFT hip, brown trousers and ankle boots. No hair, headband, beret, armor, weapons or additional accessories. Never transfer Soldier costume or head silhouette. For back view show bald scalp, cream shirt back, two narrow ochre apron shoulder straps and teal waist sash; apron hangs principally at front, not a new coat. No beard on the back of the head.\nImage 2 supplies ONLY the joint relationships, which foot is lifted, which foot is planted, arm swing and facing. Match the subtle FFTA stride; do not make a wide running leap. Keep both feet. Front faces down-left. Back faces up-right, no face toward viewer.\nMaintain image 1's exact small pixel density and scale. Character 13-16 logical pixels wide and 27 tall, on a 32x32 transparent canvas enlarged to1024x1024. All painted blocks lie on the 32x32 logical grid. Same tiny eye and beard as base, same head shape; change only pose/facing. Keep the base palette, hard square flat clusters, no smooth shading or texture. No donor shadow oval, glow, outlines around the canvas, text, grid or other figures. Exactly one full sprite.",
+  "references": [
+    "build/art/race-study-2026-09-19/human-distinct-base-grid.png",
+    "<LOCAL_USER>/coding/ffta/build/art/race-study-2026-09-19/human-soldier-r2c1-reference.png"
+  ],
+  "status": "independent pose with distinct original identity; not production accepted"
+}

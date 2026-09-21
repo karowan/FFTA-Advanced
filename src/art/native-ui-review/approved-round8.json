@@ -1,0 +1,276 @@
+{
+  "schema": 1,
+  "approval": "User: ok honestly I think this is great for a first pass lets commit and put this into the game",
+  "review": {
+    "path": "build/art/job-art-approval-v8-2026-09-20/review-data.json",
+    "sha256": "9b30c26c00e08c37bbcbd9107398535a3014c57c1660b56334f82ae130410ce7"
+  },
+  "parent": {
+    "path": "build/art/native-final-integration-2026-09-20/candidate.json",
+    "sha256": "a8fb714d9798a25e70140770d593ad38e98a97da12462408ffea1dee72432793"
+  },
+  "parentRomSha1": "316a40524b960c49ad7213ac4b0bea539bfa9513",
+  "jobs": [
+    {
+      "job": 116,
+      "slug": "human-samurai",
+      "label": "Human Samurai",
+      "portrait": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/human-samurai-new-portrait-native.png",
+        "sha256": "0fbfdccde1754a2b50c4a9c7e33a46416b200ab9534fffd8f152b31f9d3ae094"
+      },
+      "portraitPalette": 10,
+      "icon": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/human-samurai-round7-icon-native.png",
+        "sha256": "c8e38a8f953f70de042d297b531c3abcc6b8802421187016881ee36ef95df14f"
+      },
+      "badge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/human-samurai-round7-icon-eligible.png",
+        "sha256": "5b630330b6a995899937a287583f1710851d2143749177534f43bfc47a42a44a"
+      },
+      "ineligibleBadge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/human-samurai-round7-icon-ineligible.png",
+        "sha256": "30ffbfd4e8281de5948a687b0308e810cde6255103f60fb01732d1e0891e3ad7"
+      },
+      "badgeBank": 14
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "label": "Human Dark Knight",
+      "portrait": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/human-dark-knight-round7-portrait-native.png",
+        "sha256": "c34454bfdd44240ee2f5621aa8e23a2bf816f8d582fef8f8e7a1195112277d59"
+      },
+      "portraitPalette": 16,
+      "icon": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/human-dark-knight-round7-icon-native.png",
+        "sha256": "4d627fcc3c73139445ae5cc651c0b1d8332de8ee5729d54221448d45edc6645e"
+      },
+      "badge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/human-dark-knight-round7-icon-eligible.png",
+        "sha256": "53ed5df2c6dce7c405002c4215e13bc82ec1b4d1f7247e21549ee10bafd90466"
+      },
+      "ineligibleBadge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/human-dark-knight-round7-icon-ineligible.png",
+        "sha256": "56b349ee4743ecf28c96a85160406b9f4cabc1d14cdd10c0668ea037010d504e"
+      },
+      "badgeBank": 13
+    },
+    {
+      "job": 118,
+      "slug": "bangaa-viking",
+      "label": "Bangaa Viking",
+      "portrait": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/bangaa-viking-new-portrait-native.png",
+        "sha256": "34246084d4ad42e0dffeb68723cc2e6db89343b55a0872101f7537e72abe7c44"
+      },
+      "portraitPalette": 22,
+      "icon": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/bangaa-viking-round7-icon-native.png",
+        "sha256": "2f223a8b8057e25235d1f9c69a9097dfed79f249993698949937b513a4e7b5ab"
+      },
+      "badge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/bangaa-viking-round7-icon-eligible.png",
+        "sha256": "5c32c90b5b68b04b1c9370cfe4f43f75d60ff9655697a5c94c631ffdba854269"
+      },
+      "ineligibleBadge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/bangaa-viking-round7-icon-ineligible.png",
+        "sha256": "666eaae86eae41ce8e30a9214f2570cd06ca93fb6da3ea430191fe9012c501d3"
+      },
+      "badgeBank": 14
+    },
+    {
+      "job": 119,
+      "slug": "bangaa-dark-knight",
+      "label": "Bangaa Dark Knight",
+      "portrait": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/bangaa-dark-knight-new-portrait-native.png",
+        "sha256": "7d4eac2a38e21d5b401ca9a65d926dfcb440858e822f6227ced39a1f74c5756f"
+      },
+      "portraitPalette": 22,
+      "icon": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/bangaa-dark-knight-round7-icon-native.png",
+        "sha256": "f419f322798225afa45833e271fce80ea7e841bba482cdc9b5ed04ece4b9c852"
+      },
+      "badge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/bangaa-dark-knight-round7-icon-eligible.png",
+        "sha256": "82f3c748b649aa24382f3a0073e1e20e2dd0d34552da899311f2f47e6d0e331f"
+      },
+      "ineligibleBadge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/bangaa-dark-knight-round7-icon-ineligible.png",
+        "sha256": "e7b14f0a9137a06e1a606eee8aead8461270b5a96e7d79f8c5054ff64ae66159"
+      },
+      "badgeBank": 14
+    },
+    {
+      "job": 120,
+      "slug": "nu-mou-chemist",
+      "label": "Nu Mou Chemist",
+      "portrait": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/nu-mou-chemist-new-portrait-native.png",
+        "sha256": "1d6d0d1a2c0e01e9e45cd3e5b1e6f0b45249d0f23883265a577577e4f8e59784"
+      },
+      "portraitPalette": 50,
+      "icon": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/nu-mou-chemist-round7-icon-native.png",
+        "sha256": "4748451bfc27051b4945eedd22cadaa13a9abb81d1837a5096923b6ace8b14af"
+      },
+      "badge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/nu-mou-chemist-round7-icon-eligible.png",
+        "sha256": "d11f0762279214ce4b8b9619352d52d82ab7637aac2843cc4e2e5beadbf922a6"
+      },
+      "ineligibleBadge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/nu-mou-chemist-round7-icon-ineligible.png",
+        "sha256": "f55530350a702bbf6f485c84f124d606b1699dc83bd057797aae9cc239ea3957"
+      },
+      "badgeBank": 13
+    },
+    {
+      "job": 121,
+      "slug": "nu-mou-geomancer",
+      "label": "Nu Mou Geomancer",
+      "portrait": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/nu-mou-geomancer-new-portrait-native.png",
+        "sha256": "bdec25aa061d4d248a4a15fc27f8ea6f527dcc23fcd5efbadf162f7327c86773"
+      },
+      "portraitPalette": 50,
+      "icon": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/nu-mou-geomancer-round7-icon-native.png",
+        "sha256": "008245957ec4689ec429d2842aed870c86a14ea882fbedfb855cf2b9892a5fae"
+      },
+      "badge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/nu-mou-geomancer-round7-icon-eligible.png",
+        "sha256": "95e9b9e9e93f422d7ed742a4e11da3f0629d212fa37ff522208a08063f650397"
+      },
+      "ineligibleBadge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/nu-mou-geomancer-round7-icon-ineligible.png",
+        "sha256": "aada9d8280018ed4a196599bb85f92114d6814f8fb41472ace19d983a77e91d1"
+      },
+      "badgeBank": 13
+    },
+    {
+      "job": 122,
+      "slug": "moogle-chemist",
+      "label": "Moogle Chemist",
+      "portrait": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/moogle-chemist-new-portrait-native.png",
+        "sha256": "e1c2e0e3d93d5cfe8f587480f3d1cfe4e91333962b12d34b573d794b26d886ab"
+      },
+      "portraitPalette": 68,
+      "icon": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/moogle-chemist-round7-icon-native.png",
+        "sha256": "8c9f5c141ded235ca904d0619bc20c34140acf801aa458c3aeee845bee170173"
+      },
+      "badge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/moogle-chemist-round7-icon-eligible.png",
+        "sha256": "60fae421fea54aeb68bfe390905ec13370409872e9dbaead2c60d7b814bedc0b"
+      },
+      "ineligibleBadge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/moogle-chemist-round7-icon-ineligible.png",
+        "sha256": "fdd6766d1013f1391eb62093b270aa4b1561a5c5857f96e4f093df60713111f8"
+      },
+      "badgeBank": 13
+    },
+    {
+      "job": 123,
+      "slug": "moogle-bard",
+      "label": "Moogle Bard",
+      "portrait": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/moogle-bard-new-portrait-native.png",
+        "sha256": "fdf7ba32cc84df82e8566a832969999c769936155c8f06645c39957d905cb0b0"
+      },
+      "portraitPalette": 70,
+      "icon": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/moogle-bard-round7-icon-native.png",
+        "sha256": "958354e370d5ec611ba336b15d5efad17957164e5a2a7aa3a41adc93530129b5"
+      },
+      "badge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/moogle-bard-round7-icon-eligible.png",
+        "sha256": "4336b848ebb416330f3bb254fac406fb4af75b91b6e24d81fa95c994553dc090"
+      },
+      "ineligibleBadge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/moogle-bard-round7-icon-ineligible.png",
+        "sha256": "22d82ad3f258d13b7a727a571cbf673807eece320306b0c10839447a5f48e6e5"
+      },
+      "badgeBank": 13
+    },
+    {
+      "job": 124,
+      "slug": "viera-dancer",
+      "label": "Viera Dancer",
+      "portrait": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/viera-dancer-new-portrait-native.png",
+        "sha256": "07032bc3a5e29b2c72bc07a1bd3878ea8cb9bdb2c809fc80ae7a701247f14d89"
+      },
+      "portraitPalette": 62,
+      "icon": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/viera-dancer-round7-icon-native.png",
+        "sha256": "8d600c8e7671b47659f3ba033053e076308fbfb0b630d8a63c13c5e73df8998f"
+      },
+      "badge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/viera-dancer-round7-icon-eligible.png",
+        "sha256": "91fba3c75e49a4227add51dfea2ba07945f9ca4adcd834a612c12bb31d26540c"
+      },
+      "ineligibleBadge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/viera-dancer-round7-icon-ineligible.png",
+        "sha256": "f3d0eb9672ddd498f4236cfc4d4c4d12839ec4739e9ece31421063158a60c799"
+      },
+      "badgeBank": 14
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "label": "Viera Mystic Knight",
+      "portrait": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/viera-mystic-knight-round7-portrait-native.png",
+        "sha256": "33cf4dd8d8906e79dac34e23d72c74f14c47477a12e7b19e45a86c9acf31b200"
+      },
+      "portraitPalette": 58,
+      "icon": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/viera-mystic-knight-round7-icon-native.png",
+        "sha256": "0ee413770d35c24aa94f1f9c528b9d0357c985e1b3fbbfcc22680d90e8c65b59"
+      },
+      "badge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/viera-mystic-knight-round7-icon-eligible.png",
+        "sha256": "00a926dd5da3f9503ccb987cb86ad63d51397bb740e9cc11c6505c43ded6cbdb"
+      },
+      "ineligibleBadge": {
+        "path": "build/art/job-art-approval-v8-2026-09-20/assets/viera-mystic-knight-round7-icon-ineligible.png",
+        "sha256": "1a918eaa579f0b655a08820f085afd4e445f52427d2f96a3a9cd00be5a7c06c6"
+      },
+      "badgeBank": 14
+    }
+  ],
+  "walk": [
+    {
+      "pose": "p000",
+      "image": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p000-native.png",
+        "sha256": "0bb3aa8f4bdaa6d5a30b97cb36300a429d273e263c8c4e3feb48137db8a4ef8b"
+      }
+    },
+    {
+      "pose": "p002",
+      "image": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p002-native.png",
+        "sha256": "eccc6fbee38cbcda3162fe20c05de096dc7bc4d9790af6df4fe243f8f29f469c"
+      }
+    },
+    {
+      "pose": "p003",
+      "image": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p003-native.png",
+        "sha256": "1f10aace895c5e87a945a71f52ff44c4ebcf416e8a27035941ffccfea92e677b"
+      }
+    },
+    {
+      "pose": "p005",
+      "image": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p005-native.png",
+        "sha256": "ca75343a80b487b0efd41b9bf1fb8f022f852e922bd0178f8511da66665e149f"
+      }
+    }
+  ],
+  "scope": "Approved first-pass round8. Existing 675 poses and 796 populated sequences retained. No new palette banks or runtime palette systems."
+}

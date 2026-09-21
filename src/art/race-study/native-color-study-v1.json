@@ -1,0 +1,391 @@
+{
+  "schema": 1,
+  "status": "Human Dark Knight and Samurai native bases approved; final animation integration in progress",
+  "nativePalettes": [
+    {
+      "selector": 0,
+      "offset": 4300128,
+      "words": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ]
+    },
+    {
+      "selector": 1,
+      "offset": 4300160,
+      "words": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ]
+    },
+    {
+      "selector": 2,
+      "offset": 4300192,
+      "words": [
+        17041,
+        1090,
+        8689,
+        30719,
+        1356,
+        1365,
+        573,
+        959,
+        439,
+        699,
+        9117,
+        24542,
+        19225,
+        10720,
+        16162,
+        20398
+      ]
+    }
+  ],
+  "generations": [
+    {
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "prompt": "Edit the Samurai sprite in image 1 using ONLY the 15 opaque colors shown in image 2. Image 3 is his costume reference. Preserve the tiny 32x32 sprite proportions, pose, slightly overhead FFTA camera and crescent helmet. Make deliberate clean pixel clusters: warm cream face with dark eyes, dark trousers, rust-red/brown armor, gold crescent and boots, muted teal waist scarf. Avoid green skin and teal armor. Keep the same identity and recognizable costume. Simplify shading to make these limited colors look intentional, like an original GBA FFTA sprite. Output one sprite on a transparent 512x512 canvas, a crisp 16x nearest-neighbor enlargement of a 32x32 pixel sprite; no text or swatches.",
+      "references": [
+        {
+          "path": "build/art/native-color-study-2026-09-20/human-samurai/source-reference.png",
+          "sha256": "816d352cb31dced15122de2bebe9e09bd94860e591c08e1e6e8264dc4b6fb978"
+        },
+        {
+          "path": "build/art/native-color-study-2026-09-20/palette-0.png",
+          "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+        },
+        {
+          "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+          "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+        }
+      ],
+      "nativePalette": 0,
+      "status": "rejected-proportions-and-palette",
+      "output": "build/art/native-color-study-2026-09-20/samurai-generated-v1.png",
+      "outputSha256": "60c37b7df53444b0e431d288caeb47a797dadeade6da25dc8d38f5dec1eafa0b"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "prompt": "Recolor the pixel sprite in image 1 using ONLY the swatches in image 2. Keep exactly the same chunky pixel grid, silhouette, proportions, face, pose and amount of detail. The armor should read as rust brown, the crescent as gold, the skin as cream, the trousers as near-black and the scarf as muted teal. Do not enlarge or redraw the character. One isolated sprite, transparent background, no text.",
+      "references": [
+        {
+          "path": "build\\art\\native-color-study-2026-09-20\\human-samurai\\source-reference.png",
+          "sha256": "816d352cb31dced15122de2bebe9e09bd94860e591c08e1e6e8264dc4b6fb978"
+        },
+        {
+          "path": "build\\art\\native-color-study-2026-09-20\\palette-0.png",
+          "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+        }
+      ],
+      "output": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v2.png",
+      "status": "review-only-not-approved",
+      "outputSha256": "8452ed780d52fa1e2d8929b3a56e98fb364de2b78356b3cb95bdfdb153d60a83",
+      "converted": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v2-native.png",
+      "convertedSha256": "1fe32578017f8795c713bf837c6388ff41c60e80d278e4568e0e1bb7a812d45f",
+      "tileSha256": "9daa5be27e25b400435a2e9db4063c99180a558786336a984ad6bc561dd9414f",
+      "nativePalette": 0,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "prompt": "Recolor the pixel sprite in image 1 using ONLY the swatches in image 2. Keep exactly the same chunky pixel grid, silhouette, proportions, closed helmet, pose and amount of detail. Keep armor predominantly near-black with sparse dark blue-grey shading, gold trim, and a blue cape. Do not make the armor green or turquoise. Keep the helmet face dark. One isolated sprite, transparent background, no text.",
+      "references": [
+        {
+          "path": "build\\art\\native-color-study-2026-09-20\\human-dark-knight\\source-reference.png",
+          "sha256": "edbb9c4c67bc65c87186eccf0216b32d59f5755e21a99448597b972f4d2f8810"
+        },
+        {
+          "path": "build\\art\\native-color-study-2026-09-20\\palette-0.png",
+          "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+        }
+      ],
+      "output": "build\\art\\native-color-study-2026-09-20\\human-dark-knight\\generated-v1.png",
+      "outputSha256": "2c1988d69050aa554faedd27eaf0b2b158cb23ab01cfc143312658c3544a1e77",
+      "converted": "build\\art\\native-color-study-2026-09-20\\human-dark-knight\\generated-v1-native.png",
+      "convertedSha256": "df111ab83c90de87948abb7aaf73e16a80de2b5dd6ebefba35ea518309cf3eed",
+      "tileSha256": "a53db58836030908d52b474afab3f751a673fcf7f85eb96713a2e42c80052aab",
+      "nativePalette": 0,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "native-base-user-approved; not propagated",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet.",
+      "userReview": "dark knight in native, no notes"
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "prompt": "Recolor the Samurai in image 1 using only the colors in image 2. Keep the same tiny pixel grid, silhouette, proportions, face and pose. Use the strong native reds for his armor, gold for the crescent, near-black for trousers and hair, cream and peach for skin. Adapt the scarf to a quiet neutral tone within this palette. Image 3 shows the original game's clear color contrast. Keep the same amount of pixel detail as image 1. Transparent background, one sprite, no text.",
+      "references": [
+        {
+          "path": "build\\art\\native-color-study-2026-09-20\\human-samurai\\source-reference.png",
+          "sha256": "816d352cb31dced15122de2bebe9e09bd94860e591c08e1e6e8264dc4b6fb978"
+        },
+        {
+          "path": "build\\art\\native-color-study-2026-09-20\\palette-1.png",
+          "sha256": "2bf068b72d7b35f133ee633037ce9deee087cd5c4ba55c12cecb8cca53cad3cb"
+        },
+        {
+          "path": "build/art/native-color-study-2026-09-20/original-native-red-reference.png",
+          "sha256": "9ef17506b91ab3291e22e66ae7606f3dae618f371a79d9a8edf5d7d134dd0e0c"
+        }
+      ],
+      "output": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v3.png",
+      "outputSha256": "064bea3612ddd43ce8a565d4ea82a64ae79aefc89ebc8010378dd4c1c662b251",
+      "converted": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v3-native.png",
+      "convertedSha256": "3e70b2bd11d0c24cf635e027e3d9a5b483a086544f6779dcba045449a62b3fab",
+      "tileSha256": "8e37fa572921b37bd4f403df7e6d14c93f5edc01466cc4c02889b3bbd27a262b",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "prompt": "Change only the gray-purple scarf fabric on this Samurai to warm ivory (#FFFFEE), with very sparse muted shadow pixels. Keep the entire rest of the sprite exactly the same: bright red armor, gold crescent and trim, dark trousers, face, eyes, silhouette, pose and chunky pixel grid. The scarf should read clearly as ivory cloth, not metal or purple. Transparent background. Do not add detail.",
+      "references": [
+        {
+          "path": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v3.png",
+          "sha256": "064bea3612ddd43ce8a565d4ea82a64ae79aefc89ebc8010378dd4c1c662b251"
+        }
+      ],
+      "output": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v4.png",
+      "outputSha256": "fbc9f8caaf4e4b4120b08adddd14b985d6816c022ef0ccd3b786511649481799",
+      "converted": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v4-native.png",
+      "convertedSha256": "a28fd45d6e85de7c47e1709e75cfa94954d7970a6e5e332327c75bfe03f8d98c",
+      "tileSha256": "6756a22c36bb0e27684564d0bbab4acaf0e84406d4be43069f6c5d55f667c0be",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "review-only-not-approved",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet.",
+      "userReview": "Samurai the face and hands turned too red"
+    },
+    {
+      "prompt": "Change only the Samurai's skin on his face and both hands to pale warm cream (#FFFFEE), with just one or two pale peach (#FFAC9C) shadow pixels at the edges. His skin currently looks too red after conversion. Keep the eyes and their shape, bright red armor, gold crescent, ivory scarf, dark trousers, pose, silhouette and exact chunky pixel grid unchanged. No added detail. Transparent background.",
+      "model": "built-in; tool-managed",
+      "references": [
+        {
+          "path": "build/art/native-color-study-2026-09-20/human-samurai/generated-v4.png",
+          "sha256": "fbc9f8caaf4e4b4120b08adddd14b985d6816c022ef0ccd3b786511649481799"
+        }
+      ],
+      "tool": "image_gen.imagegen",
+      "output": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v5.png",
+      "outputSha256": "9ec78066182947f98d6e0d0dd6a7affdaa721e8dbfb6e7611e3afff12788948f",
+      "converted": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v5-native.png",
+      "convertedSha256": "f492906dbfde230eb64010cfbfdbe8eebbd69a57fea84557571f113f0054f13a",
+      "tileSha256": "e23151f68b51e8c785a9f7f89c5c999a288e8cef9c64a3990aef567660a54689",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "superseded: red patch below chin corrected in v6",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet."
+    },
+    {
+      "prompt": "Remove the red rectangle directly beneath the face: it is exposed neck skin, not armor or a red mouth. Make those two blocks pale warm cream (#FFFFEE) like the face. Keep every other pixel, color, eye shape, pose and transparent background unchanged.",
+      "references": [
+        {
+          "sha256": "9ec78066182947f98d6e0d0dd6a7affdaa721e8dbfb6e7611e3afff12788948f",
+          "path": "build/art/native-color-study-2026-09-20/human-samurai/generated-v5.png"
+        }
+      ],
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "output": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v6.png",
+      "outputSha256": "f6e81cd36228648614f8bda9e9305e38bda1e1b2cad0fe15688ed1bfa39f68e2",
+      "converted": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v6-native.png",
+      "convertedSha256": "c4e7cd9bbec1ddb0f1bb3976e0fefd64e41b6ec2d85a8cd0896fe43506d090a0",
+      "tileSha256": "4e74a5ce22aa982655a51f32f8f08f6b14bb930fdad9780999965eafe3c802d9",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "user-rejected: cream face merges with ivory scarf",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet.",
+      "userReview": "The face and scarf blend with each other; use the same skin color as original human sprites."
+    },
+    {
+      "references": [
+        {
+          "path": "build/art/native-color-study-2026-09-20/human-samurai/generated-v4.png",
+          "sha256": "fbc9f8caaf4e4b4120b08adddd14b985d6816c022ef0ccd3b786511649481799"
+        },
+        {
+          "path": "build/art/native-color-study-2026-09-20/native-human-skin/skin-reference.png",
+          "sha256": "93bca2ffa093f657b2fa961e305c4120db0f161ed4fce7e80bc5c418d0435858"
+        }
+      ],
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "prompt": "Change only the Samurai's face, neck and bare hands in image 1 to the SAME warm ochre skin colors as the original FFTA humans in image 2: orange midtone, yellow highlight, brown edge shading. Keep the ivory scarf distinctly lighter than the skin. Preserve the eye shapes, red armor, gold crest, pose, silhouette and exact chunky pixel grid. Image 2 is a skin-color reference only. Transparent background.",
+      "output": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v7.png",
+      "outputSha256": "a85a15b18a92a35fa573297611facce1cf5fb7eb7cd73b6dfc8d89864aa3ee66",
+      "converted": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v7-native.png",
+      "convertedSha256": "360d43c6872a59ed74677958ebecc3934bb79532b31c216a82fed884f64dd734",
+      "tileSha256": "90f622b73e53ed8cba610ec2bb0fec3de220a33b76d73fcf951aa8f7520b2cee",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "superseded: user rejected ivory scarf",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet.",
+      "userReview": "I honestly really don't like the white scarf"
+    },
+    {
+      "references": [
+        {
+          "path": "build/art/native-color-study-2026-09-20/human-samurai/generated-v7.png",
+          "sha256": "a85a15b18a92a35fa573297611facce1cf5fb7eb7cd73b6dfc8d89864aa3ee66"
+        }
+      ],
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "prompt": "Change only the ivory scarf and its hanging fabric on this Samurai to vivid violet (#8320DE) with bright lavender (#AC7BFF) highlights. Keep the white sleeve cuffs and sandal straps white. Keep the warm ochre face and hands, eye shapes, red armor, gold crest, dark trousers, silhouette, pose and chunky pixel grid unchanged. Transparent background. No added detail.",
+      "output": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v8.png",
+      "outputSha256": "552dc5131b0150a96546aa03928e1f1a70a97de33ba66e969e9b6aa980758ee5",
+      "converted": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v8-native.png",
+      "convertedSha256": "33520b11af20cb6329d2a2fb035bf94d22fb0335feaf194f0a9168c44de559de",
+      "tileSha256": "909cae7d526d93d09c2b2d2ee8a33a1310fef279c2f17f01e6c10e4e1f3f8c59",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "user-rejected: violet scarf does not complement the costume",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet.",
+      "userReview": "those colors do NOT go well together"
+    },
+    {
+      "references": [
+        {
+          "path": "build/art/native-color-study-2026-09-20/human-samurai/generated-v7.png",
+          "sha256": "a85a15b18a92a35fa573297611facce1cf5fb7eb7cd73b6dfc8d89864aa3ee66"
+        }
+      ],
+      "prompt": "Change only the ivory scarf, waist sash and hanging cloth on this Samurai to bright yellow (#FFEE00), with small cream (#FFFFEE) highlights and warm orange (#EE8B00) fold shadows. Keep the brown shading beneath his chin so his face stays distinct from the scarf. Preserve everything else: skin colors, eyes, red armor, gold crest, white sleeve cuffs and sandal straps, dark trousers, pose, silhouette and exact chunky pixel grid. Transparent background. No added detail.",
+      "tool": "image_gen.imagegen",
+      "model": "built-in; tool-managed",
+      "output": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v9.png",
+      "outputSha256": "60545352a1b08a5c95cfa222bc48b17b2d0f6d3e7502b9585a9d74b79e273018",
+      "converted": "build\\art\\native-color-study-2026-09-20\\human-samurai\\generated-v9-native.png",
+      "convertedSha256": "4762bdc54b8825747392282e5d10760b39b806f78497e0fcb399fa6a6c02580a",
+      "tileSha256": "97b9fe51901e2e58a6c5ff3f1aa151205451595e6db2e7317a93dfdc005493ea",
+      "nativePalette": 1,
+      "nativePaletteWordsUnchanged": true,
+      "logicalCanvas": [
+        32,
+        32
+      ],
+      "conversion": "Full-canvas nearest-neighbor sampling; alpha128; perceptual native-index mapping",
+      "status": "user-rejected in favor of exact palette1 neutral backup",
+      "limitations": "Generation may shift pixels; not a replacement for the accepted animation base yet.",
+      "userRequest": "try the yellow with whatever highlights look best",
+      "userReview": "ok let's go back to the backup I honestly like the muted scarf"
+    }
+  ],
+  "technicalComparison": "build/art/native-color-study-2026-09-20/manifest.json",
+  "direction": "Use exact Samurai Palette1 neutral backup with muted scarf. Stop scarf color variants. Preserve native Dark Knight approval. Carry approved native conversions through all animations.",
+  "samuraiFallback": {
+    "source": "build\\art\\native-color-study-2026-09-20\\human-samurai\\palette-1-neutral.png",
+    "preserved": "build\\art\\native-color-study-2026-09-20\\human-samurai\\fallback-palette-1-neutral.png",
+    "sha256": "2fbe4a56e9b68e9a919cf8b6eb9cc76e4ae7b5aaafee5cf711b72ef63178b76b",
+    "status": "native-base-user-approved; selected for Samurai integration",
+    "userReview": "ok let's go back to the backup I honestly like the muted scarf",
+    "palette": 1,
+    "method": "neutral"
+  },
+  "nativeHumanSkinReference": {
+    "sourceRomSha1": "4ac05441f4de70a4ec3dd932116346c61b8783d9",
+    "generationReference": {
+      "path": "build\\art\\native-color-study-2026-09-20\\native-human-skin\\skin-reference.png",
+      "sha256": "93bca2ffa093f657b2fa961e305c4120db0f161ed4fce7e80bc5c418d0435858"
+    },
+    "reproduce": "scripts/prepare-native-human-skin-reference.py",
+    "observedSkinRampIndices": [
+      5,
+      6,
+      7
+    ],
+    "notes": "Original human ochre skin ramp. Palette1 index10 is a pink costume-ramp color; cream-only skin merged into the ivory scarf."
+  },
+  "nativeConversions": [
+    {
+      "job": 116,
+      "slug": "human-samurai",
+      "status": "native-base-user-approved; not yet propagated",
+      "source": {
+        "path": "build/art/approved-class-animation-2026-09-19/human-samurai/front-neutral.png",
+        "sha256": "3a8419fe925ac15734e096b4f43de311ba4dd2ac6182080c6b25dfd820e1d202"
+      },
+      "converted": "build\\art\\native-color-study-2026-09-20\\human-samurai\\fallback-palette-1-neutral.png",
+      "convertedSha256": "2fbe4a56e9b68e9a919cf8b6eb9cc76e4ae7b5aaafee5cf711b72ef63178b76b",
+      "nativePalette": 1,
+      "method": "neutral",
+      "conversion": "scripts/study-reviewed-native-color.py: convert(source, native palette1, neutral)",
+      "userReview": "ok let's go back to the backup I honestly like the muted scarf"
+    }
+  ]
+}

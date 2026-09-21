@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Create ONE base sprite for a Final Fantasy Tactics Advance animation study. Attached image is a native Human SOLDIER (resource 0), not Ninja, pose/anatomy/pixel-density reference. Invent an original Human traveler: short chestnut hair with simple cream headband, rust-red short tunic over cream sleeves, plain brown belt, slate trousers, brown boots. No cape, pouches, weapons or hat.\nONE sprite only, front three-quarter facing down-left, in exactly the attached centered passing/standing pose with both feet down. It must look native to FFTA: narrow 16-pixel-wide by 27-pixel-tall body, tiny one-pixel eye, restrained hair silhouette, short limbs, large boots. Copy pose landmarks and body proportions from the reference; draw a new costume, not the donor's blue cap and armor. Minimal chunky pixel clusters, 15 opaque colors maximum, one logical pixel dark outline. No high-resolution pixel texture or soft lighting.\n1024x1024 canvas representing exactly 32x32 logical pixels enlarged 32 times. Every logical pixel is one perfectly flat 32x32 square. Same centered position and foot baseline as reference. Genuine transparent background, no glow, shadow, ground oval, grid, words, labels or extra figures. This single sprite will be the fixed identity reference for all subsequent poses; prioritize a simple consistent design.",
+  "references": [
+    "build/art/race-study-2026-09-19/human-soldier-r1c2-reference.png"
+  ],
+  "status": "single base sprite experiment"
+}

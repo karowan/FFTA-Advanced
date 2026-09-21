@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "human-samurai",
+    "kind": "icon",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-8bc75a9a-da42-449a-8494-ec973814805e.png"
+  },
+  {
+    "slug": "human-dark-knight",
+    "kind": "portrait",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-1cd653f6-b07f-41c9-a12c-a59635de1095.png"
+  },
+  {
+    "slug": "bangaa-viking",
+    "kind": "icon",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-f3336eb2-207e-4984-b0e8-1336ce2f2219.png"
+  },
+  {
+    "slug": "viera-mystic-knight",
+    "kind": "portrait",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-b3c213b1-786c-47e1-88a2-ca0bca2ef174.png"
+  }
+]

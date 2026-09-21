@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Make the rightmost one adhere to the style of the others.",
+  "references": [
+    "build/art/race-study-2026-09-19/simple-reference-v1.png"
+  ],
+  "method": "One short style-matching instruction applied to our fresh reference-conditioned generation; no user generated example used.",
+  "status": "Experiment; pending visual review",
+  "source": "build\\art\\race-study-2026-09-19\\simple-reference-v2.png",
+  "sourceSha256": "b532fda68e67ccd0ee5081e178b40abaa63f6ce82807d220ba2cb0b1032216be",
+  "referenceSha256": [
+    "5139fe8e3bc546d7f129d6c60c6ede377e8fe1d65946010f9e05f4f93781c52d"
+  ],
+  "productionAccepted": false
+}

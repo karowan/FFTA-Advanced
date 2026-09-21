@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 1800,
+  "scope": "Prerequisite readiness only. No CHM implementation acceptance until actual job tests are added.",
+  "steps": [
+    {
+      "id": "worktree-prerequisites",
+      "runtime": "python",
+      "args": [
+        "scripts/check-worktree-prerequisites.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-runner-self",
+      "runtime": "python",
+      "args": [
+        "scripts/test-test-runner.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-original-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-native-executor.py",
+        "--fell",
+        "--current"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "build-samurai-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-samurai-probe.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "prepare-samurai-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-executor.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private",
+        "test-installed-fell-original-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-native.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-blade-ward-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-ward-executor.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "prepare-samurai-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-battle.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private"
+      ]
+    }
+  ]
+}

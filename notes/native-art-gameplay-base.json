@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "expectedRomSha1": "5065a9eaadd5de1094a38c8724d3d9d308e1194f",
+  "purpose": "Reconstruct the accepted gameplay base from source; current owned-menu/status additions compile in the later art stage. No generated ROM input.",
+  "overrides": [
+    {
+      "path": "src/engine/integrated-jobs.c",
+      "commit": "a8135ae24b96822f4b94568da568860f3ba4d5be",
+      "sha256": "652972b0cb37db8ca49175e13c76be76c8c84cf5788fcb49278be2cd05b61c4a"
+    },
+    {
+      "path": "src/engine/chemist-preference.c",
+      "commit": "0898581adeab00db39ac9d896db01067eb389496",
+      "sha256": "8ecdb3cdf9037a8cb2c192a20c882e4443e032a54f8af8e52e40fdb943ec40cb"
+    },
+    {
+      "path": "scripts/equipment_preview.py",
+      "commit": "2c7da3e46843aa52102d9276a4d19214d39bdaa6",
+      "sha256": "19cc690fe41ca40e81737b9caf8f89c27646afde4d85c908d266109f8ebbe9b9"
+    }
+  ]
+}

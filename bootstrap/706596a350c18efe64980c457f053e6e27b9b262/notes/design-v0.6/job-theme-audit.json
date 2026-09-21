@@ -1,0 +1,2461 @@
+{
+  "version": "0.6",
+  "date": "2026-09-14",
+  "scope": "Version 0.5 council foundation plus six user-approved Mystic Knight actions and explicit Spellweave categories: 122 entries. New costs, AP, formulas and teaching targets are provisional; no implemented or gameplay-tested patch.",
+  "sources": {
+    "sam": [
+      "FFT Samurai / Iaido",
+      "https://finalfantasy.fandom.com/wiki/Samurai_(Tactics)"
+    ],
+    "drk": [
+      "FFT: War of the Lions Dark Knight",
+      "https://finalfantasy.fandom.com/wiki/Dark_Knight_(Tactics)"
+    ],
+    "drk14": [
+      "Square Enix: FFXIV Dark Knight job guide",
+      "https://na.finalfantasyxiv.com/jobguide/darkknight/"
+    ],
+    "drk11": [
+      "FFXI Dark Knight abilities",
+      "https://finalfantasy.fandom.com/wiki/Dark_Knight_(Final_Fantasy_XI)/Abilities"
+    ],
+    "vik": [
+      "FFTA2 Viking (originally Seeq)",
+      "https://finalfantasy.fandom.com/wiki/Viking_(Tactics_A2)"
+    ],
+    "geo": [
+      "FFT Geomancer / Geomancy",
+      "https://finalfantasy.fandom.com/wiki/Geomancer_(Tactics)"
+    ],
+    "chm": [
+      "FFT Chemist / Items",
+      "https://finalfantasy.fandom.com/wiki/Chemist_(Tactics)"
+    ],
+    "chm5": [
+      "FFV Chemist / Pharmacology",
+      "https://finalfantasy.fandom.com/wiki/Chemist_(Final_Fantasy_V)"
+    ],
+    "brd": [
+      "Bard comparison: Hurdy in FFTA2 and FFT Bard",
+      "https://ffcompendium.com/h/jobs/bard.shtml"
+    ],
+    "dnc": [
+      "Dancer comparison: FFT, FFV, and FFTA2",
+      "https://ffcompendium.com/h/jobs/dancer.shtml"
+    ],
+    "myk": [
+      "FFV Mystic Knight",
+      "https://finalfantasy.fandom.com/wiki/Mystic_Knight_(Final_Fantasy_V)"
+    ],
+    "spell": [
+      "FFV Spellblade spell effects",
+      "https://strategywiki.org/wiki/Final_Fantasy_V/Magic_and_skills"
+    ],
+    "axe14": [
+      "Square Enix: FFXIV Warrior / Marauder job guide",
+      "https://na.finalfantasyxiv.com/jobguide/warrior/"
+    ],
+    "ffta": [
+      "NeoBlitz: original FFTA ability research",
+      "https://gamefaqs.gamespot.com/gba/560436-final-fantasy-tactics-advance/faqs/26226"
+    ],
+    "items": [
+      "FFTA item names and effects",
+      "https://finalfantasy.fandom.com/wiki/Final_Fantasy_Tactics_Advance_items"
+    ],
+    "mechanics": [
+      "Terence Fergusson: original FFTA mechanics research",
+      "https://gamefaqs.gamespot.com/gba/560436-final-fantasy-tactics-advance/faqs/26262"
+    ],
+    "manual": [
+      "Nintendo: FFTA manual",
+      "https://www.nintendo.com/eu/media/downloads/games_8/emanuals/game_boy_advance_8/Manual_GameBoyAdvance_FinalFantasyTacticsAdvance_EN_DE_FR_ES_IT.pdf"
+    ],
+    "spellV": [
+      "FFV Spellblade repertoire",
+      "https://finalfantasy.fandom.com/wiki/Spellblade_(Final_Fantasy_V)"
+    ],
+    "spellA2": [
+      "FFTA2 Spellblade repertoire",
+      "https://finalfantasy.fandom.com/wiki/Spellblade_(Tactics_A2)"
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Ashura",
+      "effect": "4 MP; r1 enemy; A; 1.10P non-elemental, positive damage grants Centered.",
+      "ref": "sam",
+      "anchor": "Decisive draw that builds composure; original attack-and-prepare mechanic",
+      "kind": "Thematic redesign",
+      "id": "SAM-A1",
+      "ap": 100,
+      "type": "Action",
+      "job": "Samurai",
+      "previous": "Measured Cut",
+      "priorRevision": "Ashura",
+      "preBalanceRevision": {
+        "name": "Ashura",
+        "ap": 100
+      },
+      "balanceRationale": "Pays its preparation through an actual attack. Repeating it should remain less effective than spending Centered on an appropriate technique. Concentrate improves both damage reliability and access to the buff.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Wind Draw",
+      "effect": "4 MP; cardinal line 3, enemies; A per target; 1.00P Wind. Centered eligible.",
+      "ref": "sam",
+      "anchor": "Original cutting wind released through katana technique",
+      "kind": "Thematic redesign",
+      "id": "SAM-A2",
+      "ap": 150,
+      "type": "Action",
+      "job": "Samurai",
+      "previous": "Hilt Bash",
+      "priorRevision": "Wind Draw",
+      "preBalanceRevision": {
+        "name": "Wind Draw",
+        "ap": 150
+      },
+      "balanceRationale": "The current 0.95P/6 MP is unnecessarily timid next to existing ranged area attacks. Narrow geometry and Wind interaction provide identity; do not also impose friendly fire.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Osafune",
+      "effect": "6 MP; r2 enemy; A; 0.85P non-elemental and remove up to 10 MP after positive damage; no MP recovery.",
+      "ref": "sam",
+      "anchor": "MP-cutting blade spirit redesigned to also contribute HP damage",
+      "kind": "Thematic redesign",
+      "id": "SAM-A3",
+      "ap": 200,
+      "type": "Action",
+      "job": "Samurai",
+      "previous": "Wind Draw",
+      "priorRevision": "Osafune",
+      "preBalanceRevision": {
+        "name": "Osafune",
+        "ap": 200
+      },
+      "balanceRationale": "Damage plus resource pressure gives it a distinct purpose. Test against low-MP casters and Damage > MP defenses. Centered only scales HP damage.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Murasame",
+      "effect": "8 MP; r2 center, ally cross including user; Sure; restore 35% each target's max HP, cap 140 before Centered; cap final recovery by missing HP.",
+      "ref": "sam",
+      "anchor": "Healing blade spirit, with reach and scaling chosen for frontline support",
+      "kind": "Thematic redesign",
+      "id": "SAM-A4",
+      "ap": 200,
+      "type": "Action",
+      "job": "Samurai",
+      "previous": "Meditate",
+      "priorRevision": "Murasame",
+      "preBalanceRevision": {
+        "name": "Murasame",
+        "ap": 200
+      },
+      "balanceRationale": "Current 25%/100 cap is too slight for a dedicated healing action late in the game. This lets a physical build rescue a formation without needing mage growth; still lacks revival and ailment removal. Centered maximum is 175 per target.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Kiyomori",
+      "effect": "10 MP; self cross, allies; Sure; Protect + Shell using ordinary status rules; no Centered consumption.",
+      "ref": "sam",
+      "anchor": "Protective blade spirits; group defense earns its action through multiple allies",
+      "kind": "Thematic redesign",
+      "id": "SAM-A5",
+      "ap": 250,
+      "type": "Action",
+      "job": "Samurai",
+      "previous": "Sunder Guard",
+      "priorRevision": "Kiyomori",
+      "preBalanceRevision": {
+        "name": "Kiyomori",
+        "ap": 250
+      },
+      "balanceRationale": "Already earns its turn when protecting several allies. Do not add Haste or an attack. Its cost includes the positioning and party clustering it requires.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Guarding Draw",
+      "effect": "6 MP; r1 enemy; A; 1.00P non-elemental; gain Protect after a valid attack attempt, including a miss. Centered eligible.",
+      "ref": "sam",
+      "anchor": "Original guarded sword strike that combines pressure with self-protection",
+      "kind": "Thematic redesign",
+      "id": "SAM-A6",
+      "ap": 250,
+      "type": "Action",
+      "job": "Samurai",
+      "previous": "Guard Stance",
+      "priorRevision": "Guarding Draw",
+      "preBalanceRevision": {
+        "name": "Guarding Draw",
+        "ap": 300
+      },
+      "balanceRationale": "Separating self-protection from hit luck gives it a dependable role. The attack still misses normally; the buff does not. It should be learned before the late ranged finisher.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Kiku-ichimonji",
+      "effect": "10 MP; r4 enemy; A; 1.45P non-elemental. Centered eligible.",
+      "ref": "sam",
+      "anchor": "Far-reaching blade spirit redesigned as a precise ranged finisher",
+      "kind": "Thematic redesign",
+      "id": "SAM-A7",
+      "ap": 300,
+      "type": "Action",
+      "job": "Samurai",
+      "previous": "Moon Draw",
+      "priorRevision": "Kiku-ichimonji",
+      "preBalanceRevision": {
+        "name": "Kiku-ichimonji",
+        "ap": 300
+      },
+      "balanceRationale": "A paid single-target finisher needs appreciable output or reach relative to free area damage. At most 1.8125P before other applicable modifiers when Centered; not a repeatable Ultima equivalent.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Moon Blossom",
+      "effect": "16 MP; self cross, enemies; A per target; 1.35P non-elemental; positive damage to any enemy grants Regen once. Centered eligible for the entire action.",
+      "ref": "sam",
+      "anchor": "Original culminating spirit release, with offensive and sustaining roles",
+      "kind": "Thematic redesign",
+      "id": "SAM-A8",
+      "ap": 400,
+      "type": "Action",
+      "job": "Samurai",
+      "previous": "Heaven Cut",
+      "priorRevision": "Moon Blossom",
+      "preBalanceRevision": {
+        "name": "Moon Blossom",
+        "ap": 400
+      },
+      "balanceRationale": "Already a good multi-target payoff that rewards being surrounded, with no friendly-fire trap. Its adjacency is a real limitation and the regen is not immediate rescue healing.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Composure",
+      "type": "Support",
+      "effect": "During own turn, direct physical/magical HP damage and direct restorative HP healing ×1.25 if no voluntary movement occurred before action. Moving afterward is allowed. Item and drain recovery excluded.",
+      "ref": "sam",
+      "anchor": "Calm, deliberate action; useful with attacks, techniques, and magic",
+      "kind": "Cross-job support design",
+      "id": "SAM-S1",
+      "ap": 250,
+      "job": "Samurai",
+      "previous": "Single Blade",
+      "priorRevision": "Single Blade",
+      "preSupportRevision": "Single Blade",
+      "buildExamples": "Human Archer delivering an already accurate rear/side shot; Human White Mage healing before relocating. Concentrate still wins when misses are the problem. Deliberately a damage/healing positional choice, not another accuracy support.",
+      "preBalanceRevision": {
+        "name": "Composure",
+        "ap": 200
+      },
+      "balanceRationale": "Human Archer delivering an already accurate rear/side shot; Human White Mage healing before relocating. Concentrate still wins when misses are the problem. Deliberately a damage/healing positional choice, not another accuracy support.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Poise",
+      "type": "Support",
+      "effect": "Incoming direct physical/magical HP damage ×0.75 while at least one tagged beneficial status is active at incoming-action start. Qualifying statuses: Protect, Shell, Haste, Regen, Float, Invisible, and tagged temporary positive effects such as Centered, Last Resort, or an enchantment; additional statuses add nothing. Costs/DoT excluded.",
+      "ref": "sam",
+      "anchor": "Maintaining composure under protection; benefits can come from allies or another command",
+      "kind": "Cross-job support design",
+      "id": "SAM-S2",
+      "ap": 350,
+      "job": "Samurai",
+      "previous": "Poise",
+      "priorRevision": "Poise",
+      "preSupportRevision": "Poise",
+      "buildExamples": "Human Paladin receiving allied Protect; Human Blue Mage receiving allied Haste. Stacks multiplicatively with ordinary status-derived damage and occupies S, leaving only one R. A real general defensive support, but killing/control can still be better.",
+      "preBalanceRevision": {
+        "name": "Poise",
+        "ap": 350
+      },
+      "balanceRationale": "Human Paladin receiving allied Protect; Human Blue Mage receiving allied Haste. Stacks multiplicatively with ordinary status-derived damage and occupies S, leaving only one R. A real general defensive support, but killing/control can still be better.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Blade Ward",
+      "type": "Reaction",
+      "effect": "Primary katana required. Incoming enemy physical direct HP damage ×0.65 for the whole action, including physical abilities. No counter; no cross-action lock.",
+      "ref": "sam",
+      "anchor": "Original blade defense with a broader trigger than a Fight-only evasion move",
+      "kind": "Thematic redesign",
+      "id": "SAM-R1",
+      "ap": 300,
+      "job": "Samurai",
+      "previous": "Sheath Guard",
+      "priorRevision": "Blade Ward",
+      "preBalanceRevision": {
+        "name": "Blade Ward",
+        "ap": 250
+      },
+      "balanceRationale": "Dependable ability defense versus Reflex's Fight immunity. Physical status riders remain possible. Weapon condition restricts transfer chiefly to legal katana builds.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Counter Draw",
+      "type": "Reaction",
+      "effect": "After surviving adjacent enemy physical HP damage, primary katana counters once for 1.00P non-elemental with A accuracy. Positive counter damage grants Centered; counter never consumes/uses it. No cross-action lock.",
+      "ref": "sam",
+      "anchor": "Original reactive draw that prepares the next deliberate technique",
+      "kind": "Thematic redesign",
+      "id": "SAM-R2",
+      "ap": 350,
+      "job": "Samurai",
+      "previous": "Riposte",
+      "priorRevision": "Counter Draw",
+      "preBalanceRevision": {
+        "name": "Counter Draw",
+        "ap": 350
+      },
+      "balanceRationale": "Sacrifices damage prevention for retaliation against physical abilities and Samurai rhythm. A Ninja with katana can use it; without Iaido, Centered is just a tagged buff unless another effect expressly reads it.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "id": "SAM-C1",
+      "name": "Crescent Combo",
+      "job": "Samurai",
+      "type": "Combo",
+      "ap": 100,
+      "kind": "FFTA integration",
+      "ref": "manual",
+      "anchor": "Original job-specific label for vanilla Judge Point combo participation",
+      "effect": "katana. Vanilla chain participation profile: Ninja Combo: power 5%, participation range 2, hit 100% Preserve vanilla initiation/JP behavior; no new riders.",
+      "previous": "Crescent Combo",
+      "preBalanceRevision": {
+        "name": "Crescent Combo",
+        "ap": 100
+      },
+      "balanceRationale": "Gives the katana spirit fighter reliable nearby participation without inventing stronger damage. Initiation still uses legal primary weapon range.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise specification"
+    },
+    {
+      "name": "Blood Edge",
+      "effect": "10% max HP; r1 enemy; A; 1.50P Dark.",
+      "ref": "drk",
+      "anchor": "Original introductory sword technique built around the job's health sacrifice",
+      "kind": "Original extension",
+      "id": "DRK-A1",
+      "ap": 100,
+      "type": "Action",
+      "job": "Dark Knight",
+      "previous": "Blood Edge",
+      "preBalanceRevision": {
+        "name": "Blood Edge",
+        "ap": 100
+      },
+      "balanceRationale": "Risk and elemental limitations deserve more than 1.30P. No MP helps low-MP builds, but the sacrifice is paid on a miss and never activates injury reactions.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Sanguine Sword",
+      "effect": "6 MP; r2 enemy; A; 0.95P non-elemental; recover 50% actual HP removed, cap 20% user's max HP.",
+      "ref": "drk",
+      "anchor": "HP-draining sword art",
+      "kind": "Adaptation",
+      "id": "DRK-A2",
+      "ap": 150,
+      "type": "Action",
+      "job": "Dark Knight",
+      "previous": "Siphon Blade",
+      "preBalanceRevision": {
+        "name": "Sanguine Sword",
+        "ap": 150
+      },
+      "balanceRationale": "Current drain cannot support the job's costs without consuming too many low-output turns. This offers substantial recovery while still attacking less strongly than the sacrifice tools. Undead and low-HP targets remain counters; no overkill drain.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Infernal Strike",
+      "effect": "4 MP; r2 enemy; A; 0.75P non-elemental HP damage. After positive HP damage remove MP equal to floor(20% of actual HP removed), capped at 16 and target current MP; restore exactly actual MP removed, capped by missing MP.",
+      "ref": "drk",
+      "anchor": "MP-draining sword art",
+      "kind": "Adaptation",
+      "id": "DRK-A3",
+      "ap": 200,
+      "type": "Action",
+      "job": "Dark Knight",
+      "previous": "Dread Wave",
+      "preBalanceRevision": {
+        "name": "Infernal Strike",
+        "ap": 200
+      },
+      "balanceRationale": "Replace an MP-only turn whose maximum net gain is tiny. Actual damage scaling prevents huge drain from near-dead targets. Empty MP targets still take the weaker HP strike. At most 12 MP net gain with ordinary payment; no free MP creation.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Dark Mind",
+      "effect": "8 MP; self; Sure; Shell plus restore 20% max HP, cap 100. Weapon-free.",
+      "ref": "drk14",
+      "anchor": "Personal protection against magic",
+      "kind": "Adaptation",
+      "id": "DRK-A4",
+      "ap": 200,
+      "type": "Action",
+      "job": "Dark Knight",
+      "previous": "Night Veil",
+      "preBalanceRevision": {
+        "name": "Dark Mind",
+        "ap": 200
+      },
+      "balanceRationale": "A self-only Shell competes badly with ordinary group protection. Reliable self-recovery earns a turn when no drain target is safe. This deliberately creates a positive-HP-return Bloodcasting option; measure the action cost instead of forbidding the synergy.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Last Resort",
+      "effect": "8 MP; self OR r1 enemy; self mode Sure, enemy mode A; enemy mode first deals 1.00P weapon-elemental using any primary weapon. Then either mode grants T2 outgoing physical HP damage x1.25 and incoming physical HP damage x1.20 as one indivisible buff. Apply the buff even if the attack misses, but only after the initial strike so it cannot boost itself. Outgoing bonus excludes fixed/percentage damage, items, reactions, combos, MP damage and a second multiplication of drain recovery. The linked incoming drawback applies to direct physical HP damage, not costs or damage-over-time. Enemy strike mode is unavailable with Healer; self mode remains legal.",
+      "ref": "drk11",
+      "anchor": "Attack at the expense of defense",
+      "kind": "Adaptation",
+      "id": "DRK-A5",
+      "ap": 250,
+      "type": "Action",
+      "job": "Dark Knight",
+      "previous": "Crippling Oath",
+      "preBalanceRevision": {
+        "name": "Last Resort",
+        "ap": 250
+      },
+      "balanceRationale": "Current one-action +20% for two later turns never repays the lost attack. The optional commitment strike solves this without free turns, Haste, or a major permanent multiplier. Out-of-reach preparation remains an option. The buff can benefit an axe build's physical secondary or ordinary Double Sword Fight; it is not Dark-Arts-only.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Crushing Blow",
+      "effect": "10 MP; r2 enemy; A then S x0.5 after positive damage; 1.15P weapon-elemental with Stop attempt.",
+      "ref": "drk",
+      "anchor": "Sword damage with Stop",
+      "kind": "Adaptation",
+      "id": "DRK-A6",
+      "ap": 300,
+      "type": "Action",
+      "job": "Dark Knight",
+      "previous": "Blood Price",
+      "preBalanceRevision": {
+        "name": "Crushing Blow",
+        "ap": 300
+      },
+      "balanceRationale": "Give the attack respectable damage when Stop is immune. Preserve the reduced rider chance: damage plus a fully reliable hard disable would crowd out dedicated status commands.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Abyssal Blade",
+      "effect": "10 MP + 15% max HP; line 3, any units; A per target; weapon-elemental 1.40P / 1.25P / 1.10P by tile distance.",
+      "ref": "drk",
+      "anchor": "Health sacrifice, distance-falloff wave",
+      "kind": "Adaptation",
+      "id": "DRK-A7",
+      "ap": 300,
+      "type": "Action",
+      "job": "Dark Knight",
+      "previous": "Gravebind",
+      "preBalanceRevision": {
+        "name": "Abyssal Blade",
+        "ap": 300
+      },
+      "balanceRationale": "Less excessive combined resource burden and no worthless distant hit. Still has alignment, friendly fire and a paid miss. It competes through physical area pressure on Bangaa and economical sacrifice, not superior universal coverage.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Unholy Sacrifice",
+      "effect": "14 MP + 20% max HP; self cross, any units except self; A then S x0.5 per damaged target; 1.75P Dark plus Slow attempt.",
+      "ref": "drk",
+      "anchor": "Health sacrifice, dark area damage and Slow",
+      "kind": "Adaptation",
+      "id": "DRK-A8",
+      "ap": 400,
+      "type": "Action",
+      "job": "Dark Knight",
+      "previous": "Abyss Blade",
+      "preBalanceRevision": {
+        "name": "Unholy Sacrifice",
+        "ap": 400
+      },
+      "balanceRationale": "A dangerous, close, friendly-fire area attack needs clear payoff. No drain or self-revival is attached. Dark immunity and spacing remain strong counterplay even if Slow is irrelevant.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Desperation",
+      "type": "Support",
+      "effect": "Direct physical/magical HP damage ×1.50 while HP ≤35% maximum, checked after paying action costs. No bonus to fixed/percentage damage, instant KO, costs, items, healing, drain recovery, MP damage, damage-over-time, reactions, or combos.",
+      "ref": "drk",
+      "anchor": "Dangerous offense at low health, usable by martial and magical builds",
+      "kind": "Cross-job support design",
+      "id": "DRK-S1",
+      "ap": 300,
+      "job": "Dark Knight",
+      "previous": "Desperation",
+      "preSupportRevision": "Desperation",
+      "buildExamples": "Human Black Mage deliberately staying wounded; Bangaa Gladiator using a risky finisher. Human Damage > MP is a legal risk reducer but does not grant Bloodcasting simultaneously. Bangaa can instead take Dragonheart. The35% threshold avoids Auto-Life at 50% immediately enabling it after one10% Blood Edge payment. Test thresholds at 1HP and after native HP payments.",
+      "preBalanceRevision": {
+        "name": "Desperation",
+        "ap": 200
+      },
+      "balanceRationale": "Human Black Mage deliberately staying wounded; Bangaa Gladiator using a risky finisher. Human Damage > MP is a legal risk reducer but does not grant Bloodcasting simultaneously. Bangaa can instead take Dragonheart. The35% threshold avoids Auto-Life at 50% immediately enabling it after one10% Blood Edge payment. Test thresholds at 1HP and after native HP payments.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Bloodcasting",
+      "type": "Support",
+      "effect": "Eligible voluntary actions pay 2 HP per computed MP and zero MP; native HP costs are additional; total payment leaves ≥1 HP. For multiple subcasts, pay the **sum of all subcast MP costs**, once before the committed action; if dynamic costs can change, reserve the full validated payment and reconcile without overdrawing. Costs never trigger R, damage protection, Encouragement, or HP-loss mechanics. No free or discounted second subcast.",
+      "ref": "drk",
+      "anchor": "Trade life for action resources across spell and technique sets",
+      "kind": "Cross-job support design",
+      "id": "DRK-S2",
+      "ap": 400,
+      "job": "Dark Knight",
+      "previous": "Sacrificial Will",
+      "preSupportRevision": "Sacrificial Will",
+      "buildExamples": "Human Illusionist/White Magic; Bangaa Bishop/Gladiator. Exchanges S damage/accuracy for sustained actions. Human Damage > MP synergy is allowed provisionally; healing has an action cost. Do not invent an unsupported ban on healing just to hide the economy.",
+      "preBalanceRevision": {
+        "name": "Bloodcasting",
+        "ap": 350
+      },
+      "balanceRationale": "Human Illusionist/White Magic; Bangaa Bishop/Gladiator. Exchanges S damage/accuracy for sustained actions. Human Damage > MP synergy is allowed provisionally; healing has an action cost. Do not invent an unsupported ban on healing just to hide the economy.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Keep effect, clarify payment"
+    },
+    {
+      "name": "Dark Ward",
+      "type": "Reaction",
+      "effect": "Incoming magical direct HP damage ×0.75 for triggering action; after survival grant ordinary Shell. Already-Shelled users still receive the .75 reduction, but Shell does not stack. No cross-action lock.",
+      "ref": "drk14",
+      "anchor": "Original reactive variant of the Dark Mind ward",
+      "kind": "Original extension",
+      "id": "DRK-R1",
+      "ap": 300,
+      "job": "Dark Knight",
+      "previous": "Dark Ward",
+      "preBalanceRevision": {
+        "name": "Dark Ward",
+        "ap": 250
+      },
+      "balanceRationale": "Real initial-hit defense and sustained protection. Human/Bangaa access only. Poise is legal alongside it, but not Damage > MP or Dragonheart, which use the same R slot.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Vengeful Pulse",
+      "type": "Reaction",
+      "effect": "After surviving enemy direct HP damage, retaliate against attacker within r3 for Dark damage equal to50% of HP actually lost, capped at 25% user max HP. No hit roll; apply elemental immunity/absorption. One return after the entire action; no cross-action lock.",
+      "ref": "drk",
+      "anchor": "Original dark retaliation fueled by injury",
+      "kind": "Original extension",
+      "id": "DRK-R2",
+      "ap": 350,
+      "job": "Dark Knight",
+      "previous": "Vengeful Pulse",
+      "preBalanceRevision": {
+        "name": "Vengeful Pulse",
+        "ap": 350
+      },
+      "balanceRationale": "Rewards being wounded without needing physical WAtk. Costs/overkill never fuel it. Does not heal; large lethal hits still win.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "id": "DRK-C1",
+      "name": "Abyss Combo",
+      "job": "Dark Knight",
+      "type": "Combo",
+      "ap": 100,
+      "kind": "FFTA integration",
+      "ref": "manual",
+      "anchor": "Original job-specific label for vanilla Judge Point combo participation",
+      "effect": "sword/greatsword/broadsword. Vanilla chain participation profile: Knight Combo: power 10%, participation range 1, hit 100% Preserve vanilla initiation/JP behavior; no new riders.",
+      "previous": "Abyss Combo",
+      "preBalanceRevision": {
+        "name": "Abyss Combo",
+        "ap": 100
+      },
+      "balanceRationale": "Same straightforward frontline profile for both races. No HP sacrifice or Dark override on combo.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise specification"
+    },
+    {
+      "name": "Thunder",
+      "effect": "6 MP; r4 one target; A; M24 Lightning.",
+      "ref": "vik",
+      "anchor": "Lightning spell",
+      "kind": "Adaptation",
+      "id": "VIK-A1",
+      "ap": 100,
+      "type": "Action",
+      "job": "Viking",
+      "previous": "Cleave",
+      "preBalanceRevision": {
+        "name": "Thunder",
+        "ap": 100
+      },
+      "balanceRationale": "Make this the inexpensive precise ranged tool rather than merely an obsolete first tier. No additional status.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Pickpocket",
+      "effect": "0 MP; r1 enemy; use the original Steal Gil action's hit handling, payout and per-target restrictions rather than assuming S.",
+      "ref": "vik",
+      "anchor": "Gil theft",
+      "kind": "Adaptation",
+      "id": "VIK-A2",
+      "ap": 100,
+      "type": "Action",
+      "job": "Viking",
+      "previous": "Shoulder Check",
+      "preBalanceRevision": {
+        "name": "Pickpocket",
+        "ap": 150
+      },
+      "balanceRationale": "An economic starter option need not compete with an endgame damage action. Earlier AP suits its value. It remains separate from combat stealing and cannot replenish already-depleted target loot.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Keep with correction"
+    },
+    {
+      "name": "Strong-Arm",
+      "effect": "6 MP; r1 enemy; 0.85P weapon-elemental with one A check for damage. Attempt original Steal Accessory independently using that original transaction's own accuracy and restrictions. Resolve eligible theft before HP damage; a damage miss or zero damage does not prevent the theft roll.",
+      "ref": "vik",
+      "anchor": "Damage plus item theft, adapted to accessories",
+      "kind": "Adaptation",
+      "id": "VIK-A3",
+      "ap": 200,
+      "type": "Action",
+      "job": "Viking",
+      "previous": "Thunderbrand",
+      "preBalanceRevision": {
+        "name": "Strong-Arm",
+        "ap": 200
+      },
+      "balanceRationale": "Current A-then-S-after-damage adds inappropriate compounded failure. Independent resolution preserves a real steal chance and allows stealing resistant targets, while damage never guarantees loot. Preview both outcomes and resolve stolen defenses before the subsequent damage calculation.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "War Cry",
+      "effect": "8 MP; self cross allies; Sure; remove Blind, Silence and Confuse, then T2 reduce incoming hostile S-check chances by 25 percentage points, floor zero.",
+      "ref": "vik",
+      "anchor": "Ailment resilience, not Attack",
+      "kind": "Adaptation",
+      "id": "VIK-A4",
+      "ap": 200,
+      "type": "Action",
+      "job": "Viking",
+      "previous": "War Cry",
+      "preBalanceRevision": {
+        "name": "War Cry",
+        "ap": 200
+      },
+      "balanceRationale": "Pure 15-point prevention is often too weak to justify the action. Rallying allies now has an immediate cure role plus prevention, without party Haste or blanket immunity. User cannot act if its own status forbids action; Silence alone does not block the cry.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Stormcall",
+      "effect": "12 MP; r4 one enemy; A for M28 Lightning, followed after positive damage by ordinary S chance to apply Slow.",
+      "ref": "vik",
+      "anchor": "Original focused storm that damages and slows, inspired by Viking storm magic",
+      "kind": "Original extension",
+      "id": "VIK-A5",
+      "ap": 250,
+      "type": "Action",
+      "job": "Viking",
+      "previous": "Anchor Stance",
+      "preBalanceRevision": {
+        "name": "Thundara",
+        "ap": 250
+      },
+      "balanceRationale": "Remove the redundant middle area tier. A focused storm impedes one dangerous opponent; low damage and a second check keep it below a dependable hard disable. Speed-control immunity leaves a usable ranged hit.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise/replace"
+    },
+    {
+      "name": "Pillage",
+      "effect": "10 MP; r1 enemy; 1.00P weapon-elemental with A damage check. Independently execute original Steal Armor against body armor using its original A-type check and restrictions, before HP damage.",
+      "ref": "vik",
+      "anchor": "Damage plus armor theft",
+      "kind": "Adaptation",
+      "id": "VIK-A6",
+      "ap": 300,
+      "type": "Action",
+      "job": "Viking",
+      "previous": "Stormbreaker",
+      "preBalanceRevision": {
+        "name": "Pillage",
+        "ap": 300
+      },
+      "balanceRationale": "Depletion and ownership rules remain intact. The immediate armor loss can improve this and later attacks; do not also add a permanent defense debuff. Bangaa accuracy limitations keep this from simply being a Thief with Concentrate and free superior damage.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Thundaga",
+      "effect": "20 MP; r3 center, cross, any units; A per target; M40 Lightning.",
+      "ref": "vik",
+      "anchor": "High-tier lightning magic",
+      "kind": "Adaptation",
+      "id": "VIK-A7",
+      "ap": 300,
+      "type": "Action",
+      "job": "Viking",
+      "previous": "Oath of Iron",
+      "preBalanceRevision": {
+        "name": "Thundaga",
+        "ap": 300
+      },
+      "balanceRationale": "Retain one substantial area storm instead of making every lightning spell a control spell. Half MP is a meaningful alternative support; lack of Turbo MP and caster gear must be considered when measuring damage.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Tsunami",
+      "effect": "18 MP; r4 center, cross, any units; A per target; M36 Water. Positive damage pushes surviving targets one tile directly away from center when legal. On center tile, use direction away from caster; if center equals caster or direction ties, no push. If mapped water is on the caster tile or an orthogonally adjacent tile within 2 height, positive damage also removes up to 8 MP per target, with no recovery. No collision damage, illegal landing or push from immune targets.",
+      "ref": "vik",
+      "anchor": "Sea power redesigned to function on land, with water proximity enhancing its effect",
+      "kind": "Thematic redesign",
+      "id": "VIK-A8",
+      "ap": 400,
+      "type": "Action",
+      "job": "Viking",
+      "previous": "Tempest",
+      "priorRevision": "Tsunami",
+      "preBalanceRevision": {
+        "name": "Tsunami",
+        "ap": 400
+      },
+      "balanceRationale": "Differentiate the water capstone through formation disruption rather than damage alone. Useful on dry ground; water bonus remains optional. Friendly fire applies, and displacement can move an enemy out of an ally's desired follow-up range.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Sea Legs",
+      "type": "Support",
+      "effect": "Immune to forced displacement and Immobilize. No Slow immunity, added movement, water traversal, or terrain-damage immunity.",
+      "ref": "vik",
+      "anchor": "A raider keeps their footing; transferable positional protection",
+      "kind": "Cross-job support design",
+      "id": "VIK-S1",
+      "ap": 150,
+      "job": "Viking",
+      "previous": "Sea Legs",
+      "preSupportRevision": "Sea Legs",
+      "buildExamples": "Bangaa Dragoon preserving approach lanes; Bangaa Templar maintaining position while supporting allies. Cheap specialist choice against movement control; not intended to replace Weapon Atk+ on ordinary maps.",
+      "preBalanceRevision": {
+        "name": "Sea Legs",
+        "ap": 200
+      },
+      "balanceRationale": "Bangaa Dragoon preserving approach lanes; Bangaa Templar maintaining position while supporting allies. Cheap specialist choice against movement control; not intended to replace Weapon Atk+ on ordinary maps.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Opportunist",
+      "type": "Support",
+      "effect": "Direct physical/magical HP damage ×1.30 against an enemy carrying a qualifying harmful status at action start. Harmful statuses include Poison, Blind, Silence, Slow, Immobilize, Disable, Confuse, Sleep, and tagged custom debuffs; no self-qualification by the same hit, no stacking for multiple statuses.",
+      "ref": "vik",
+      "anchor": "A raider exploits openings created by any ally or command",
+      "kind": "Cross-job support design",
+      "id": "VIK-S2",
+      "ap": 350,
+      "job": "Viking",
+      "previous": "Heavy Grip",
+      "preSupportRevision": "Heavy Grip",
+      "buildExamples": "Bangaa Warrior working with a debuffer; Bangaa Bishop attacking a slowed enemy. Physical use competes with stat-based Weapon Atk+; magical use supplies Bangaa an alternative they cannot get from Turbo MP. Sleep already makes attacks accurate: test the combination explicitly.",
+      "preBalanceRevision": {
+        "name": "Opportunist",
+        "ap": 350
+      },
+      "balanceRationale": "Bangaa Warrior working with a debuffer; Bangaa Bishop attacking a slowed enemy. Physical use competes with stat-based Weapon Atk+; magical use supplies Bangaa an alternative they cannot get from Turbo MP. Sleep already makes attacks accurate: test the combination explicitly.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Absorb Damage",
+      "type": "Reaction",
+      "effect": "After surviving enemy direct HP damage, heal 30% of HP actually lost, capped at 15% user max HP per incoming action. Round down; no cross-action lock.",
+      "ref": "vik",
+      "anchor": "Damage recovery; a chance and lockout are added here",
+      "kind": "Adaptation",
+      "id": "VIK-R1",
+      "ap": 300,
+      "job": "Viking",
+      "previous": "Hardy",
+      "preBalanceRevision": {
+        "name": "Absorb Damage",
+        "ap": 250
+      },
+      "balanceRationale": "Reliable sustained recovery, weaker than prevention against lethal bursts. Multiple hits aggregate loss once, rather than awarding repeated capped heals. Cannot share R with Dragonheart.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Gil Snapper",
+      "type": "Reaction",
+      "effect": "After surviving a critical physical enemy hit, gain floor(0.5 × HP actually lost) gil, capped at 50gil per battle per unit. Activation 100%; no cross-action lock, no inventory loss to enemy, no reaction from allies/costs.",
+      "ref": "vik",
+      "anchor": "Gil after a critical hit; payout and battle cap are ours",
+      "kind": "Adaptation",
+      "id": "VIK-R2",
+      "ap": 50,
+      "job": "Viking",
+      "previous": "Thunder Rebuke",
+      "preBalanceRevision": {
+        "name": "Gil Snapper",
+        "ap": 350
+      },
+      "balanceRationale": "Chair adjudication retains plunder identity and rejects generic paid mitigation. This is expressly an inexpensive economy lesson, **not an endgame combat contender**. Finite payout prevents unlimited rewards from stalling.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise to cheap economy niche"
+    },
+    {
+      "id": "VIK-C1",
+      "name": "Tempest Combo",
+      "job": "Viking",
+      "type": "Combo",
+      "ap": 100,
+      "kind": "FFTA integration",
+      "ref": "manual",
+      "anchor": "Original job-specific label for vanilla Judge Point combo participation",
+      "effect": "axe. Vanilla chain participation profile: Sword Combo: power 10%, participation range 1, hit 100% Preserve vanilla initiation/JP behavior; no new riders.",
+      "previous": "Tempest Combo",
+      "preBalanceRevision": {
+        "name": "Tempest Combo",
+        "ap": 100
+      },
+      "balanceRationale": "Straightforward axe-frontline integration; magical storm skills do not grant ranged combo participation.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise specification"
+    },
+    {
+      "name": "Stone Pulse",
+      "effect": "4 MP; r3 center/cross, any except caster; A. M26 Earth; rock affinity multiplies damage by 1.20.",
+      "ref": "geo",
+      "anchor": "Original reliable earth pressure; terrain rewards damage rather than unlocking the spell",
+      "kind": "Thematic redesign",
+      "id": "GEO-A1",
+      "ap": 100,
+      "type": "Action",
+      "job": "Geomancer",
+      "previous": "Stone Shard",
+      "priorRevision": "Stone Pulse",
+      "preBalanceRevision": {
+        "name": "Stone Pulse",
+        "ap": 100
+      },
+      "balanceRationale": "Efficient ordinary area action; Earth and friendly fire distinguish it from its other tools. Tune M26 only after actual formula mapping.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Tanglevine",
+      "effect": "6 MP; r3 one enemy; A, then S after positive damage. M24 non-elemental and Immobilize; vegetation adds 15 percentage points to final S, capped at 95% before defensive reductions.",
+      "ref": "geo",
+      "anchor": "Binding vegetation with a useful damage baseline and a stronger native control effect",
+      "kind": "Thematic redesign",
+      "id": "GEO-A2",
+      "ap": 150,
+      "type": "Action",
+      "job": "Geomancer",
+      "previous": "Vine Snare",
+      "priorRevision": "Tanglevine",
+      "preBalanceRevision": {
+        "name": "Tanglevine",
+        "ap": 150
+      },
+      "balanceRationale": "Damage gives the setup action value even when control fails. Non-elemental fallback prevents terrain/element immunity from erasing the job.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Torrent",
+      "effect": "8 MP; r3 center/cross, any except caster; A. M28 Water; water affinity pushes each positively damaged target one tile in one cardinal direction selected for the whole cast. Illegal pushes fail individually; damage remains.",
+      "ref": "geo",
+      "anchor": "Original wave control that breaks formations rather than copying a transformation rider",
+      "kind": "Thematic redesign",
+      "id": "GEO-A3",
+      "ap": 200,
+      "type": "Action",
+      "job": "Geomancer",
+      "previous": "Rill",
+      "priorRevision": "Torrent",
+      "preBalanceRevision": {
+        "name": "Torrent",
+        "ap": 200
+      },
+      "balanceRationale": "Formation breaking is its payoff. One shared direction avoids hidden per-target optimization and makes the preview legible. No drowning or collision damage.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep, clarify direction"
+    },
+    {
+      "name": "Updraft",
+      "effect": "8 MP; r3 center/cross, allies including self; Sure. Apply Float and Move +1 T2. Also Jump +1 T2 to each recipient at least two height below the caster. No immediate movement.",
+      "ref": "geo",
+      "anchor": "Original wind assistance; positioning and traversal utility",
+      "kind": "Thematic redesign",
+      "id": "GEO-A4",
+      "ap": 200,
+      "type": "Action",
+      "job": "Geomancer",
+      "previous": "Updraft",
+      "priorRevision": "Updraft",
+      "preBalanceRevision": {
+        "name": "Updraft",
+        "ap": 200
+      },
+      "balanceRationale": "Spending a controller's whole turn for one ally's temporary movement is weak. A group traversal action earns its turn without copying Haste or Quicken.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Earthen Ward",
+      "effect": "10 MP; r3 center/cross, allies including self; Sure. Protect; rock affinity also grants displacement immunity T2.",
+      "ref": "geo",
+      "anchor": "Original earth protection that steadies an allied formation",
+      "kind": "Thematic redesign",
+      "id": "GEO-A5",
+      "ap": 250,
+      "type": "Action",
+      "job": "Geomancer",
+      "previous": "Frost Bloom",
+      "priorRevision": "Earthen Ward",
+      "preBalanceRevision": {
+        "name": "Earthen Ward",
+        "ap": 250
+      },
+      "balanceRationale": "Broad protection is already useful; niche terrain rider should remain a bonus.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Wisp Flame",
+      "effect": "10 MP; r3 one enemy; A. M28 Fire, then magical damage received x1.15 T2 after positive damage; wood/heat instead x1.25. No second status roll; custom immunity applies. No same-name stacking; weaker applications cannot refresh a stronger exposure.",
+      "ref": "geo",
+      "anchor": "Original spirit flame that creates an opening for allied magic",
+      "kind": "Thematic redesign",
+      "id": "GEO-A6",
+      "ap": 300,
+      "type": "Action",
+      "job": "Geomancer",
+      "previous": "Magma Vent",
+      "priorRevision": "Wisp Flame",
+      "preBalanceRevision": {
+        "name": "Wisp Flame",
+        "ap": 300
+      },
+      "balanceRationale": "A worthwhile magic-party opener. Do not nerf merely because Doublecast can exploit it: that is the reason to bring a Geomancer. Check burst breakpoints before changing magnitude or duration.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep, clarify timing"
+    },
+    {
+      "name": "Rime Field",
+      "effect": "12 MP; r3 center/cross, any except caster; A. M28 Ice plus the existing cross-shaped field even on a miss. Ice affinity attempts Slow with S after damage. One field/caster, existing two-subsequent-caster-turn timer and nonstacking movement surcharge.",
+      "ref": "geo",
+      "anchor": "Original persistent ice terrain for area denial; native ice adds further control",
+      "kind": "Thematic redesign",
+      "id": "GEO-A7",
+      "ap": 300,
+      "type": "Action",
+      "job": "Geomancer",
+      "previous": "Earthen Ward",
+      "priorRevision": "Rime Field",
+      "preBalanceRevision": {
+        "name": "Rime Field",
+        "ap": 300
+      },
+      "balanceRationale": "Damage plus routing pressure earns the action. Ally movement costs and bypass tools matter.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Gaia Surge",
+      "effect": "18 MP; r4 center/cross, any except caster; A. M40; Wind always available, other eligible local elements chosen before commitment. No additional affinity multiplier.",
+      "ref": "geo",
+      "anchor": "Original major nature release whose elemental options respond to surroundings",
+      "kind": "Thematic redesign",
+      "id": "GEO-A8",
+      "ap": 400,
+      "type": "Action",
+      "job": "Geomancer",
+      "previous": "Gaia Pulse",
+      "priorRevision": "Gaia Surge",
+      "preBalanceRevision": {
+        "name": "Gaia Surge",
+        "ap": 400
+      },
+      "balanceRationale": "A stronger long-range finish rather than another status lottery. Element access is its reward.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Attunement",
+      "type": "Support",
+      "effect": "Weakness-hitting elemental direct HP damage ×1.25. After an MP-funded voluntary action deals positive weakness damage to at least one enemy, refund floor(25% of that action's MP actually paid), once for the action, not per target/hit; cap at missing MP. For independently costed subcasts, each can refund only its own paid MP. Costs must first be affordable in full.",
+      "ref": "geo",
+      "anchor": "Understand elemental vulnerability and apply that knowledge to any technique",
+      "kind": "Cross-job support design",
+      "id": "GEO-S1",
+      "ap": 300,
+      "job": "Geomancer",
+      "previous": "Terrain Lore",
+      "priorRevision": "Terrain Lore",
+      "preSupportRevision": "Terrain Lore",
+      "buildExamples": "Nu Mou Black Mage exploiting elemental weaknesses; Nu Mou Sage using an elemental attack. No refund from allies, absorbed damage, zero-MP actions, or an empty/dead target. Damage improvement also works with elemental physical attacks. Deliberately weak against neutral enemies compared with Turbo MP.",
+      "preBalanceRevision": {
+        "name": "Attunement",
+        "ap": 200
+      },
+      "balanceRationale": "Nu Mou Black Mage exploiting elemental weaknesses; Nu Mou Sage using an elemental attack. No refund from allies, absorbed damage, zero-MP actions, or an empty/dead target. Damage improvement also works with elemental physical attacks. Deliberately weak against neutral enemies compared with Turbo MP.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Surefoot",
+      "type": "Support",
+      "effect": "Jump +1; ignore extra movement surcharges on legally traversable tiles, including Rime Field. Retain height, occupancy, impassability and environmental harm.",
+      "ref": "geo",
+      "anchor": "Read and traverse difficult ground, regardless of current profession",
+      "kind": "Cross-job support design",
+      "id": "GEO-S2",
+      "ap": 200,
+      "job": "Geomancer",
+      "previous": "Surefoot",
+      "priorRevision": "Surefoot",
+      "preSupportRevision": "Surefoot",
+      "buildExamples": "Nu Mou Beastmaster approaching monsters; Nu Mou Alchemist crossing difficult ground. An economical map-specific option rather than a general replacement for magic supports.",
+      "preBalanceRevision": {
+        "name": "Surefoot",
+        "ap": 350
+      },
+      "balanceRationale": "Nu Mou Beastmaster approaching monsters; Nu Mou Alchemist crossing difficult ground. An economical map-specific option rather than a general replacement for magic supports.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Keep effect, reduce AP"
+    },
+    {
+      "name": "Stone Skin",
+      "type": "Reaction",
+      "effect": "Incoming physical direct HP damage ×0.75; after survival grant ordinary Protect. No terrain restriction, no cross-action lock.",
+      "ref": "geo",
+      "anchor": "Original earthen defense with a dependable opportunity to contribute across maps",
+      "kind": "Thematic redesign",
+      "id": "GEO-R1",
+      "ap": 300,
+      "job": "Geomancer",
+      "previous": "Stone Skin",
+      "priorRevision": "Stone Skin",
+      "preBalanceRevision": {
+        "name": "Stone Skin",
+        "ap": 250
+      },
+      "balanceRationale": "Nu Mou protection against physical abilities; not a replacement for Reflex against pure Fight. Protect is a defense-stat effect, not another assumed flat damage percentage.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Nature's Wrath",
+      "type": "Reaction",
+      "effect": "After surviving enemy direct HP damage, counter original attacker within r4 forM24 Wind with A accuracy. No learned-action lookup, no terrain requirement, no ailment/field/displacement, no outgoing S damage bonus. No cross-action lock.",
+      "ref": "geo",
+      "anchor": "Reactive nature power; neither terrain permission nor a tiny status chance is required for its contribution",
+      "kind": "Thematic redesign",
+      "id": "GEO-R2",
+      "ap": 350,
+      "job": "Geomancer",
+      "previous": "Grounding",
+      "priorRevision": "Nature's Wrath",
+      "preBalanceRevision": {
+        "name": "Nature's Wrath",
+        "ap": 350
+      },
+      "balanceRationale": "Reliable retaliation against ranged physical or magical damage withinrange. Wind resistance is clear counterplay; removes the surprising rule where learning a more advanced Geomancy action changes the reaction's element.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "id": "GEO-C1",
+      "name": "Gaia Combo",
+      "job": "Geomancer",
+      "type": "Combo",
+      "ap": 100,
+      "kind": "FFTA integration",
+      "ref": "manual",
+      "anchor": "Original job-specific label for vanilla Judge Point combo participation",
+      "effect": "rod or mace. Vanilla chain participation profile: Wise Combo: 10% / 2 / 60%. Preserve vanilla initiation/JP behavior; no new riders.",
+      "previous": "Gaia Combo",
+      "preBalanceRevision": {
+        "name": "Gaia Combo",
+        "ap": 100
+      },
+      "balanceRationale": "Wise Combo: 10% / 2 / 60%.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise specification"
+    },
+    {
+      "name": "Potion",
+      "effect": "one Potion; r4 single ally/self; Sure; vanilla Potion healing.",
+      "ref": "chm",
+      "anchor": "Basic restorative",
+      "kind": "Adaptation",
+      "id": "CHM-A1",
+      "ap": 50,
+      "type": "Action",
+      "job": "Chemist",
+      "previous": "Field Tonic",
+      "preBalanceRevision": {
+        "name": "Potion",
+        "ap": 100
+      },
+      "balanceRationale": "A starter's core action should be learned promptly. Cheap stock and small healing retain an early role.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep, earlier AP"
+    },
+    {
+      "name": "Field Remedy",
+      "effect": "choose exactly one stocked Antidote, Eye Drops, Echo Screen, or Soft; r4 single ally/self; Sure; apply only that chosen item's vanilla cure. A valid cure must be present before use.",
+      "ref": "chm",
+      "anchor": "Field medicine combines separately stocked, explicitly selected cures into one learned lesson",
+      "kind": "Thematic redesign",
+      "id": "CHM-A2",
+      "ap": 100,
+      "type": "Action",
+      "job": "Chemist",
+      "previous": "Purifying Mist",
+      "preBalanceRevision": {
+        "name": "Antidote",
+        "ap": 150
+      },
+      "balanceRationale": "Folds A5's narrow blindness lesson into a coherent field-medicine lesson; also provides practical Silence/Petrify recovery. No free cure list, automatic item choice, or consumed Cureall.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Merge/revise"
+    },
+    {
+      "name": "Phoenix Down",
+      "effect": "one Phoenix Down; r4 one KO ally; Sure; unchanged vanilla revival amount/fraction, minimum 1 HP.",
+      "ref": "chm",
+      "anchor": "Item-based revival",
+      "kind": "Adaptation",
+      "id": "CHM-A3",
+      "ap": 150,
+      "type": "Action",
+      "job": "Chemist",
+      "previous": "Smelling Salts",
+      "preBalanceRevision": {
+        "name": "Phoenix Down",
+        "ap": 200
+      },
+      "balanceRationale": "Reliable ranged revival is already an important reason to equip this set. Avoid adding auto-life or free turns.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep, earlier AP"
+    },
+    {
+      "name": "High Tonic",
+      "effect": "choose one stocked Hi-Potion or X-Potion; r4 single ally/self; Sure; apply exactly the chosen item's vanilla healing.",
+      "ref": "chm",
+      "anchor": "High-grade medicine lesson groups existing consumables without changing their contents",
+      "kind": "Thematic redesign",
+      "id": "CHM-A4",
+      "ap": 150,
+      "type": "Action",
+      "job": "Chemist",
+      "previous": "High Tonic",
+      "preBalanceRevision": {
+        "name": "Hi-Potion",
+        "ap": 200
+      },
+      "balanceRationale": "Places both higher tonic tiers in one lesson, freeing A8 for a genuine preparation. Availability and gil remain real constraints; does not introduce new stock.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Merge/revise"
+    },
+    {
+      "name": "Healing Mist",
+      "effect": "one Potion AND one Hi-Potion; r3 center/cross, non-undead allies including self; Sure. Each recipient heals max(50, min(100, floor(0.20 x recipient max HP))).",
+      "ref": "chm",
+      "anchor": "Original two-ingredient healing mist grounded in Final Fantasy Chemist preparation and mixing",
+      "kind": "Original extension",
+      "id": "CHM-A5",
+      "ap": 250,
+      "type": "Action",
+      "job": "Chemist",
+      "previous": "Flash Flask",
+      "preBalanceRevision": {
+        "name": "Eye Drops",
+        "ap": 250
+      },
+      "balanceRationale": "A two-ingredient restorative mist provides a group-support reason to select Chemist over Item+Long Throw. Percentage scaling keeps it relevant without requiring magical leveling. This is an original recipe, not a claim about vanilla potion contents.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Repurpose"
+    },
+    {
+      "name": "Ether",
+      "effect": "one Ether; r4 single ally/self; Sure; vanilla MP recovery.",
+      "ref": "chm",
+      "anchor": "MP restorative",
+      "kind": "Adaptation",
+      "id": "CHM-A6",
+      "ap": 200,
+      "type": "Action",
+      "job": "Chemist",
+      "previous": "Ether Draught",
+      "preBalanceRevision": {
+        "name": "Ether",
+        "ap": 300
+      },
+      "balanceRationale": "Excellent when stock exists. A rare resource should not also require excessive AP merely to use at range. No Ether shop expansion is included.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep, AP revision"
+    },
+    {
+      "name": "Cureall",
+      "effect": "one Cureall; r4 single ally/self; Sure. Vanilla cure list plus the expansion's broad-remedy custom ailments; do not separate Last Resort's drawback from its benefit.",
+      "ref": "chm",
+      "anchor": "FFT Remedy role using the actual FFTA consumable Cureall",
+      "kind": "Adaptation",
+      "id": "CHM-A7",
+      "ap": 250,
+      "type": "Action",
+      "job": "Chemist",
+      "previous": "Remedy Compound",
+      "preBalanceRevision": {
+        "name": "Cureall",
+        "ap": 300
+      },
+      "balanceRationale": "Broad cure remains distinct from the four narrow remedies. Supply is finite unless independently verified.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep, AP revision"
+    },
+    {
+      "name": "Resuscitating Draught",
+      "effect": "One X-Potion AND one Phoenix Down; r4 one KO non-undead ally; Sure. Revive at floor(0.50 × target max HP), minimum 1 HP, with no 200-HP cap. No additional buffs, turn change, Pharmacology, or incoming-healing bonus.",
+      "ref": "chm",
+      "anchor": "Original costly revival preparation grounded in Final Fantasy Chemist medicine",
+      "kind": "Original extension",
+      "id": "CHM-A8",
+      "ap": 400,
+      "type": "Action",
+      "job": "Chemist",
+      "previous": "Phoenix Mist",
+      "preBalanceRevision": {
+        "name": "X-Potion",
+        "ap": 400
+      },
+      "balanceRationale": "A visible two-item price buys a sturdier rescue, not mass resurrection. Basic ranged X-Potion survives in A4. Chair removed the original cap after peer review found it could make the advanced mixture worse than ordinary Phoenix Down at very high HP. This is an original preparation inspired by the Chemist role.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Repurpose"
+    },
+    {
+      "name": "Pharmacology",
+      "type": "Support",
+      "effect": "Consumed restorative items restore ×1.50 HP/MP; round down once and cap at missing resource. Ordinary Item, Chemist, and eligible item reactions. No improved revival fraction, full-restoration amount, cure list, drain or spells. Only item's user's support applies.",
+      "ref": "chm5",
+      "anchor": "Expert medicine preparation transfers to any use of supplies",
+      "kind": "Cross-job support design",
+      "id": "CHM-S1",
+      "ap": 200,
+      "job": "Chemist",
+      "previous": "Medicine Lore",
+      "preSupportRevision": "Pharmacology",
+      "buildExamples": "Moogle Gunner/Item for stronger emergency medicine; Nu Mou White Mage/Item for MP supplies and item support. Competes with Long Throw; cannot take both.",
+      "preBalanceRevision": {
+        "name": "Pharmacology",
+        "ap": 200
+      },
+      "balanceRationale": "Moogle Gunner/Item for stronger emergency medicine; Nu Mou White Mage/Item for MP supplies and item support. Competes with Long Throw; cannot take both.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Long Throw",
+      "type": "Support",
+      "effect": "For eligible consumable single-target actions able to target others: base range <4 becomes 4; otherwise +1 up to 5 without reducing an already larger base range. Existing target/height/line-of-sight restrictions remain. Self-only/area actions and weapon attacks excluded.",
+      "ref": "chm",
+      "anchor": "Throw supplies accurately across the battlefield from any job",
+      "kind": "Cross-job support design",
+      "id": "CHM-S2",
+      "ap": 350,
+      "job": "Chemist",
+      "previous": "Long Throw",
+      "preSupportRevision": "Long Throw",
+      "buildExamples": "Moogle Juggler/Item retains Smile and ranged medicine; Nu Mou White Mage/Item delivers distant supplies. Gunner/Juggler/Item would be illegal three-command accounting. On native range4 Chemist actions this is only +1.",
+      "preBalanceRevision": {
+        "name": "Long Throw",
+        "ap": 350
+      },
+      "balanceRationale": "Moogle Juggler/Item retains Smile and ranged medicine; Nu Mou White Mage/Item delivers distant supplies. Gunner/Juggler/Item would be illegal three-command accounting. On native range4 Chemist actions this is only +1.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Auto-Potion",
+      "type": "Reaction",
+      "effect": "After surviving enemy direct HP damage at ≤50% max HP, consume one player-selected Potion or Hi-Potion and apply its normal item recovery. Selection is explicit before battle, default Potion; no automatic substitution, no X-Potion. Pharmacology applies. Maximum one use until start of next own turn, lock only after an item is actually consumed.",
+      "ref": "chm",
+      "anchor": "Automatic inventory-funded treatment; selection and threshold adapted",
+      "kind": "Adaptation",
+      "id": "CHM-R1",
+      "ap": 300,
+      "job": "Chemist",
+      "previous": "Emergency Dose",
+      "preBalanceRevision": {
+        "name": "Auto-Potion",
+        "ap": 250
+      },
+      "balanceRationale": "Scales through accessible medicine while preserving inventory cost. Reaction configuration is a real UI requirement, not permission to silently spend rarer stock. If configuration cannot be implemented, do not silently replace it with a different healing formula.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Auto-Cureall",
+      "type": "Reaction",
+      "effect": "After an enemy action passes accuracy and is about to apply one or more Cureall-curable ailments, consume one Cureall and prevent those curable ailments for that whole action. Use the same cure eligibility as ordinary Cureall, including custom harmful tags added by the shared broad-remedy integration. Never prevent KO or an uncurable status. Damage remains. Existing reaction-blocking status prevents use, but the newly intercepted ailment cannot block it before it is applied. One Cureall per action; no cross-action lock; zero stock means no interception.",
+      "ref": "chm",
+      "anchor": "Original extension of emergency item use; no free magical regeneration",
+      "kind": "Original extension",
+      "id": "CHM-R2",
+      "ap": 350,
+      "job": "Chemist",
+      "previous": "Sterile Wrap",
+      "preBalanceRevision": {
+        "name": "Auto-Cureall",
+        "ap": 350
+      },
+      "balanceRationale": "Reliable consumable answer to status for Nu Mou/Moogle. Finite stock and R opportunity cost distinguish it from Immunity. Cannot fix a status already blocking reactions; a linked custom effect must be handled consistently as a whole.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "id": "CHM-C1",
+      "name": "Flask Combo",
+      "job": "Chemist",
+      "type": "Combo",
+      "ap": 100,
+      "kind": "FFTA integration",
+      "ref": "manual",
+      "anchor": "Original job-specific label for vanilla Judge Point combo participation",
+      "effect": "knife or mace. Vanilla chain participation profile: Thief Combo: 5% / 2 / 100%. Preserve vanilla initiation/JP behavior; no new riders.",
+      "previous": "Flask Combo",
+      "preBalanceRevision": {
+        "name": "Flask Combo",
+        "ap": 100
+      },
+      "balanceRationale": "Thief Combo: 5% / 2 / 100%.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise specification"
+    },
+    {
+      "name": "Soul Etude",
+      "effect": "8 MP; r4 one ally/self; Sure. Heal 40% target max HP, cap 160, and remove Poison, Blind, Silence, Confuse.",
+      "ref": "brd",
+      "anchor": "Healing plus cleansing",
+      "kind": "Adaptation",
+      "id": "BRD-A1",
+      "ap": 100,
+      "type": "Action",
+      "job": "Bard",
+      "previous": "Mending Song",
+      "preBalanceRevision": {
+        "name": "Soul Etude",
+        "ap": 100
+      },
+      "balanceRationale": "A single-target support action must do meaningful immediate work. Bard does not gain revival or a White Magic command.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Battle Chant",
+      "effect": "12 MP; r3 center/cross, allies including self; Sure. Protect plus Marching Strength T2: direct physical damage dealt x1.20. No fixed/percentage damage, items, reactions, combos, or drain-recovery bonus.",
+      "ref": "brd",
+      "anchor": "Defense song",
+      "kind": "Adaptation",
+      "id": "BRD-A2",
+      "ap": 150,
+      "type": "Action",
+      "job": "Bard",
+      "previous": "Battle Hymn",
+      "preBalanceRevision": {
+        "name": "Battle Chant",
+        "ap": 150
+      },
+      "balanceRationale": "Group offense plus protection can compete with donating one allied action. Ranged placement reduces unnecessary party clustering around the Bard.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Magickal Refrain",
+      "effect": "12 MP; r3 center/cross, allies including self; Sure. Shell plus Inspired Magic T2: direct magical damage dealt x1.20. Same exclusions as Battle Chant; no restorative-healing bonus.",
+      "ref": "brd",
+      "anchor": "Magical defense song",
+      "kind": "Adaptation",
+      "id": "BRD-A3",
+      "ap": 200,
+      "type": "Action",
+      "job": "Bard",
+      "previous": "Mind Song",
+      "preBalanceRevision": {
+        "name": "Magickal Refrain",
+        "ap": 200
+      },
+      "balanceRationale": "A true caster-party counterpart; it supports a role rather than requiring Bard's weak personal magic offense.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Requiem",
+      "effect": "8 MP; r3 center/cross, undead enemies only; A per target. M60 Holy. No resurrection suppression or instant KO.",
+      "ref": "brd",
+      "anchor": "Anti-undead song",
+      "kind": "Adaptation",
+      "id": "BRD-A4",
+      "ap": 200,
+      "type": "Action",
+      "job": "Bard",
+      "previous": "March",
+      "preBalanceRevision": {
+        "name": "Requiem",
+        "ap": 200
+      },
+      "balanceRationale": "Retain the recognizable anti-undead niche, but make it worth occupying a lesson. Against living enemies use a secondary or support action.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Angelsong",
+      "effect": "12 MP; r3 center/cross, allies including self; Sure. Apply Regen and immediately heal 20% target max HP, cap 80.",
+      "ref": "brd",
+      "anchor": "Regeneration song",
+      "kind": "Adaptation",
+      "id": "BRD-A5",
+      "ap": 250,
+      "type": "Action",
+      "job": "Bard",
+      "previous": "Warding Chorus",
+      "preBalanceRevision": {
+        "name": "Angelsong",
+        "ap": 250
+      },
+      "balanceRationale": "Immediate restoration prevents a pure delayed-healing action from being obsolete in short battles.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Hide",
+      "effect": "0 MP; self; Sure. Apply vanilla Invisible with ordinary break/removal rules. Requires neither voice nor weapon.",
+      "ref": "brd",
+      "anchor": "Self-concealment",
+      "kind": "Adaptation",
+      "id": "BRD-A6",
+      "ap": 150,
+      "type": "Action",
+      "job": "Bard",
+      "previous": "Quiet Refrain",
+      "preBalanceRevision": {
+        "name": "Hide",
+        "ap": 300
+      },
+      "balanceRationale": "Useful survival/positioning option, but 300 AP is excessive beside the party tools. No altered invisibility loophole.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep, AP revision"
+    },
+    {
+      "name": "Magick Ballad",
+      "effect": "0 MP; r4 one ally other than caster; Sure. Restore 20 MP, capped by missing MP. Not a spell-healing effect or item; no Pharmacology.",
+      "ref": "brd",
+      "anchor": "MP-restoring song",
+      "kind": "Adaptation",
+      "id": "BRD-A7",
+      "ap": 300,
+      "type": "Action",
+      "job": "Bard",
+      "previous": "Soothing Verse",
+      "preBalanceRevision": {
+        "name": "Magick Ballad",
+        "ap": 300
+      },
+      "balanceRationale": "A sustainable MP song spends the Bard's action to support another character. It cannot restore the Bard directly or pay one ordinary 24-MP Quicken in full by itself.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Nameless Song",
+      "effect": "24 MP; r3 center/cross, allies including self; Sure. Apply Protect, Shell, and Regen together. No Haste, random selection, or rerolls.",
+      "ref": "brd",
+      "anchor": "A dependable ensemble of protective statuses replaces the source-inspired random outcome",
+      "kind": "Thematic redesign",
+      "id": "BRD-A8",
+      "ap": 400,
+      "type": "Action",
+      "job": "Bard",
+      "previous": "Finale",
+      "preBalanceRevision": {
+        "name": "Nameless Song",
+        "ap": 400
+      },
+      "balanceRationale": "The costly final song should reliably establish a formation. Individual songs retain their extra damage/healing benefits and lower prices; Time Magic keeps reliable Haste.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Encouragement",
+      "type": "Support",
+      "effect": "Applying at least one previously absent **persistent tagged beneficial status** through a voluntary action to another ally restores 15% of target max HP, capped at 60 before incoming-healing modifiers. Once per recipient/action. Immediate turn/CT effects such as Smile/Quicken are excluded. This bonus receives no outgoing-healing modifiers such as Composure/Magick Boost, only the recipient's incoming modifiers. Refresh, extension, self-target, mere healing/cure, reaction application and field occupancy do not qualify. Only persistent tagged beneficial statuses qualify; immediate turn/CT effects such as Smile and Quicken do not. No outgoing-healing multiplier applies to this separate heal; only the recipient’s incoming-healing modifier may apply.",
+      "ref": "brd",
+      "anchor": "Inspiring aid makes protective and enhancing actions more useful",
+      "kind": "Cross-job support design",
+      "id": "BRD-S1",
+      "ap": 250,
+      "job": "Bard",
+      "previous": "Resonance",
+      "preSupportRevision": "Resonance",
+      "buildExamples": "Moogle Time Mage adding Haste; Moogle Animist adding a positive status. An area buff can produce several heals but each recipient gets only one. Do not trigger per status or per subcast within one action.",
+      "preBalanceRevision": {
+        "name": "Encouragement",
+        "ap": 200
+      },
+      "balanceRationale": "Moogle Time Mage adding Haste; Moogle Animist adding a positive status. An area buff can produce several heals but each recipient gets only one. Do not trigger per status or per subcast within one action.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Clear Voice",
+      "type": "Support",
+      "effect": "Silence immunity. MP costs of explicitly tagged incanted magic and songs ×0.75, rounded up with minimum1 for a nonzero original cost. Does not discount martial techniques merely because they use MP. No other immunity.",
+      "ref": "brd",
+      "anchor": "Vocal discipline protects both songs and spellcasting",
+      "kind": "Cross-job support design",
+      "id": "BRD-S2",
+      "ap": 300,
+      "job": "Bard",
+      "previous": "Steady Breath",
+      "preSupportRevision": "Clear Voice",
+      "buildExamples": "Moogle Black Mage conserving spell MP; Moogle Time Mage preserving support magic. Moogles lack Half MP and vanilla Immunity; Concentrate/Geomancy remain offensive competitors. Integration must include original magic, not just Bard IDs.",
+      "preBalanceRevision": {
+        "name": "Clear Voice",
+        "ap": 350
+      },
+      "balanceRationale": "Moogle Black Mage conserving spell MP; Moogle Time Mage preserving support magic. Moogles lack Half MP and vanilla Immunity; Concentrate/Geomancy remain offensive competitors. Integration must include original magic, not just Bard IDs.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Magick Boost",
+      "type": "Reaction",
+      "effect": "After surviving enemy direct HP damage, gain one charge through the end of next own turn: next voluntary incanted magic/song action has magical direct HP damage and direct restorative HP healing ×1.30. Explicitly includes percentage-based song HP restoration, not MP restoration, revival or items. A qualifying action consumes charge even if it misses/heals zero. No accumulated charges.",
+      "ref": "brd",
+      "anchor": "FFT Bard's reactive magical growth made temporary",
+      "kind": "Adaptation",
+      "id": "BRD-R1",
+      "ap": 300,
+      "job": "Bard",
+      "previous": "Refrain",
+      "preBalanceRevision": {
+        "name": "Magick Boost",
+        "ap": 250
+      },
+      "balanceRationale": "Supports Bard recovery and Moogle Black/Time Mage damage; giving a charged healer a turn can matter. No permanent stat growth or outgoing effect from a reaction-generated cast.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Encore",
+      "type": "Reaction",
+      "effect": "After surviving enemy physical HP damage while able to react and not Silenced, grant self Haste for T2. No instrument requirement. Refreshes duration, never stacks speed; no cross-action lock.",
+      "ref": "brd",
+      "anchor": "A reactive return to the musical tempo grants temporary Haste instead of a tiny healing reprise",
+      "kind": "Original extension",
+      "id": "BRD-R2",
+      "ap": 350,
+      "job": "Bard",
+      "previous": "Unbroken Tune",
+      "preBalanceRevision": {
+        "name": "Encore",
+        "ap": 350
+      },
+      "balanceRationale": "Tempo response useful on Moogle Juggler or Time Mage. Stronger trigger than Last Haste but temporary, damage/survival/voice dependent. Must test Smile/Haste parties; adds no immediate turn.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Replace effect"
+    },
+    {
+      "id": "BRD-C1",
+      "name": "Chorus Combo",
+      "job": "Bard",
+      "type": "Combo",
+      "ap": 100,
+      "kind": "FFTA integration",
+      "ref": "manual",
+      "anchor": "Original job-specific label for vanilla Judge Point combo participation",
+      "effect": "instrument. Vanilla chain participation profile: Juggle Combo: 10% / 3 / 70%. Preserve vanilla initiation/JP behavior; no new riders.",
+      "previous": "Chorus Combo",
+      "preBalanceRevision": {
+        "name": "Chorus Combo",
+        "ap": 100
+      },
+      "balanceRationale": "Juggle Combo: 10% / 3 / 70%.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise specification"
+    },
+    {
+      "name": "Mincing Minuet",
+      "effect": "6 MP; r3 center/cross, enemies only; A. 0.85 Pdance, non-elemental.",
+      "ref": "dnc",
+      "anchor": "Area HP-damaging dance",
+      "kind": "Adaptation",
+      "id": "DNC-A1",
+      "ap": 100,
+      "type": "Action",
+      "job": "Dancer",
+      "previous": "Feint",
+      "preBalanceRevision": {
+        "name": "Mincing Minuet",
+        "ap": 100
+      },
+      "balanceRationale": "A safe area fallback that scales through the campaign and works with bows/staves as a secondary. No weapon-proc delivery.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Witch Hunt",
+      "effect": "8 MP; r3 center/cross, enemies only; A. Remove min(24, max(8, floor(0.20 x target max MP))) MP, capped at target current MP; no recovery.",
+      "ref": "dnc",
+      "anchor": "MP-damaging dance",
+      "kind": "Adaptation",
+      "id": "DNC-A2",
+      "ap": 150,
+      "type": "Action",
+      "job": "Dancer",
+      "previous": "Veil Dance",
+      "preBalanceRevision": {
+        "name": "Witch Hunt",
+        "ap": 150
+      },
+      "balanceRationale": "Flat 6 MP rarely changes an enemy's next meaningful action. Scaling depletion can interrupt a plan without emptying every caster in one action.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Slow Dance",
+      "effect": "12 MP; r3 center/cross, enemies only; S per target. Apply vanilla Slow.",
+      "ref": "dnc",
+      "anchor": "Disrupt enemy tempo",
+      "kind": "Adaptation",
+      "id": "DNC-A3",
+      "ap": 200,
+      "type": "Action",
+      "job": "Dancer",
+      "previous": "Binding Step",
+      "preBalanceRevision": {
+        "name": "Slow Dance",
+        "ap": 200
+      },
+      "balanceRationale": "Matches the area scale of ordinary Slow while the performance's Silence independence and safe targeting supply its distinct role.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Polka",
+      "effect": "12 MP; r3 one enemy; A. 0.80 Pdance; after positive damage inflict T2 physical damage dealt x0.65. No second S roll; custom immunity blocks only the rider. No effect on HP costs, fixed damage, items, healing, or reactions.",
+      "ref": "dnc",
+      "anchor": "Weaken physical offense",
+      "kind": "Adaptation",
+      "id": "DNC-A4",
+      "ap": 200,
+      "type": "Action",
+      "job": "Dancer",
+      "previous": "Dizzy Waltz",
+      "preBalanceRevision": {
+        "name": "Polka",
+        "ap": 200
+      },
+      "balanceRationale": "Single-target weakening should both contribute damage now and meaningfully suppress a dangerous attacker.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Heathen Frolic",
+      "effect": "12 MP; r3 one enemy; A. 0.80 Pdance; after positive damage inflict T2 magical damage dealt x0.65. Same exclusions/rider-immunity handling as Polka.",
+      "ref": "dnc",
+      "anchor": "Weaken magical offense",
+      "kind": "Adaptation",
+      "id": "DNC-A5",
+      "ap": 250,
+      "type": "Action",
+      "job": "Dancer",
+      "previous": "Faltering Beat",
+      "preBalanceRevision": {
+        "name": "Heathen Frolic",
+        "ap": 250
+      },
+      "balanceRationale": "Useful pressure against a caster even when Silence is ineffective. Physical dance damage remains consistent with the job's development.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Forbidden Dance",
+      "effect": "14 MP; r3 center/cross, enemies only; S per target. Select Blind, Silence, Poison, or Confuse once for the cast; attempt that chosen ailment on every target. No immunity reroll.",
+      "ref": "dnc",
+      "anchor": "A deliberate choice of debilitating dance replaces a random ailment selection",
+      "kind": "Thematic redesign",
+      "id": "DNC-A6",
+      "ap": 300,
+      "type": "Action",
+      "job": "Dancer",
+      "previous": "Softshoe",
+      "preBalanceRevision": {
+        "name": "Forbidden Dance",
+        "ap": 300
+      },
+      "balanceRationale": "Let the player choose an appropriate performance rather than betting a turn on a random ailment before a second failure check. No Stop/Petrify/KO.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Jitterbug",
+      "effect": "10 MP; r2 one enemy; A. 1.00 Pdance; drain 50% of actual positive HP removed, capped at 25% user max HP. Existing no-allies/no-overkill/undead reversal rules apply.",
+      "ref": "dnc",
+      "anchor": "HP-draining dance",
+      "kind": "Adaptation",
+      "id": "DNC-A7",
+      "ap": 300,
+      "type": "Action",
+      "job": "Dancer",
+      "previous": "Mending Step",
+      "preBalanceRevision": {
+        "name": "Jitterbug",
+        "ap": 300
+      },
+      "balanceRationale": "A fragile performer should have a credible close-range sustain option, with opportunity and undead risk.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Sword Dance",
+      "effect": "16 MP; r1 one enemy; A. Requires primary knife/rapier; 1.60 P from that actual primary weapon, weapon-elemental, one hit, no critical/proc/second strike.",
+      "ref": "dnc",
+      "anchor": "FFV physical dance finisher",
+      "kind": "Adaptation",
+      "id": "DNC-A8",
+      "ap": 400,
+      "type": "Action",
+      "job": "Dancer",
+      "previous": "Curtain Fall",
+      "preBalanceRevision": {
+        "name": "Sword Dance",
+        "ap": 400
+      },
+      "balanceRationale": "A straightforward finisher, separate from the safer virtual-weapon dance family. Benchmark before raising to match an optimized Assassin's alternatives.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Grace",
+      "type": "Support",
+      "effect": "Facing never reduces the user's Evade for ordinary A-type evasion calculations: use the frontal Evade value even for side/rear attacks. No flat Evade addition. Attacker accuracy supports, caps, automatic-hit statuses and reaction prevention still apply. Does not change SRes or an ability's separate positional damage rider.",
+      "ref": "dnc",
+      "anchor": "Evasive footwork transferable to any combat style",
+      "kind": "Cross-job support design",
+      "id": "DNC-S1",
+      "ap": 300,
+      "job": "Dancer",
+      "previous": "Grace",
+      "preSupportRevision": "Grace",
+      "buildExamples": "Viera Fencer holding a contested flank; Viera Red Mage working among allies/enemies. Distinct from Reflex because eligible physical/magical abilities still use Evade; fails against automatic hit and does not grant status immunity.",
+      "preBalanceRevision": {
+        "name": "Grace",
+        "ap": 200
+      },
+      "balanceRationale": "Viera Fencer holding a contested flank; Viera Red Mage working among allies/enemies. Distinct from Reflex because eligible physical/magical abilities still use Evade; fails against automatic hit and does not grant status immunity.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Replace effect"
+    },
+    {
+      "name": "Light Foot",
+      "type": "Support",
+      "effect": "Move +1, with no extra movement action, flight, or terrain immunity.",
+      "ref": "dnc",
+      "anchor": "A performer's mobility becomes a general positioning tool",
+      "kind": "Cross-job support design",
+      "id": "DNC-S2",
+      "ap": 350,
+      "job": "Dancer",
+      "previous": "Light Foot",
+      "preSupportRevision": "Light Foot",
+      "buildExamples": "Viera Summoner approaching an area-cast position; Viera Sniper relocating. Concentrate remains better when she can already reach a target but needs a hit.",
+      "preBalanceRevision": {
+        "name": "Light Foot",
+        "ap": 350
+      },
+      "balanceRationale": "Viera Summoner approaching an area-cast position; Viera Sniper relocating. Concentrate remains better when she can already reach a target but needs a hit.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Fury",
+      "type": "Reaction",
+      "effect": "After surviving enemy direct HP damage, gain one charge through the end of next own turn: next voluntary physical-damage action deals×1.35 direct HP damage. Consume on execution even on miss; no stacking charges, no reaction/DoT/MP damage bonus. Eligibility uses actual physical damage category even if Spellblade's separate Spellweave sequencing tag is magic; consume once for the whole action. Physical damage classification, not Spellweave sequencing category, determines eligibility; an enchanted strike consumes at most one charge.",
+      "ref": "dnc",
+      "anchor": "FFT Dancer's reactive offense made temporary",
+      "kind": "Adaptation",
+      "id": "DNC-R1",
+      "ap": 300,
+      "job": "Dancer",
+      "previous": "Slip Away",
+      "preBalanceRevision": {
+        "name": "Fury",
+        "ap": 250
+      },
+      "balanceRationale": "Viera offensive alternative to pure defense. A Red Mage's ordinary magical-damage spell does not receive the bonus; a Sniper/Fencer attack or physically damaging enchanted strike can. Can be paired with Concentrate, but not another R.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Counter Rhythm",
+      "type": "Reaction",
+      "effect": "After surviving enemy physical HP damage, if attacker within r3, attempt Slow using S plus20percentage points, maximum95%, after normal accuracy/support/facing modifiers; immunity remains absolute. One check; no separate proc chance. No cross-action lock.",
+      "ref": "dnc",
+      "anchor": "Original reactive echo of Slow Dance",
+      "kind": "Original extension",
+      "id": "DNC-R2",
+      "ap": 350,
+      "job": "Dancer",
+      "previous": "Counter Rhythm",
+      "preBalanceRevision": {
+        "name": "Counter Rhythm",
+        "ap": 350
+      },
+      "balanceRationale": "Reactive control against ability users. Concentrate improves this because it is a legal equipped S, but cannot override immunity. A single enemy action does not create multiple Slow attempts.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "id": "DNC-C1",
+      "name": "Waltz Combo",
+      "job": "Dancer",
+      "type": "Combo",
+      "ap": 100,
+      "kind": "FFTA integration",
+      "ref": "manual",
+      "anchor": "Original job-specific label for vanilla Judge Point combo participation",
+      "effect": "knife or rapier. Vanilla chain participation profile: Lunge Combo: 10% / 1 / 100%. Preserve vanilla initiation/JP behavior; no new riders.",
+      "previous": "Waltz Combo",
+      "preBalanceRevision": {
+        "name": "Waltz Combo",
+        "ap": 100
+      },
+      "balanceRationale": "Lunge Combo: 10% / 1 / 100%.",
+      "balanceSource": "notes/balance-council-magic-utility.md",
+      "balanceVerdict": "Revise specification"
+    },
+    {
+      "name": "Fire Spellblade",
+      "effect": "6 MP; self/Sure OR r1 enemy/A. Strike 1.00P Fire; persistent primary Fight becomes Fire. No extra damage bonus.",
+      "ref": "spell",
+      "anchor": "FFV-style weapon enchantment adapted to immediate commitment and sustained primary-weapon combat",
+      "kind": "Thematic redesign",
+      "id": "MYK-A1",
+      "ap": 100,
+      "type": "Action",
+      "job": "Mystic Knight",
+      "previous": "Flame Sigil",
+      "preBalanceRevision": {
+        "name": "Fire Spellblade",
+        "ap": 100
+      },
+      "balanceRationale": "Strike 1.00P Fire; persistent primary Fight becomes Fire. No extra damage bonus.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Blizzard Spellblade",
+      "effect": "6 MP; self/Sure OR r1 enemy/A. Strike 1.00P Ice; persistent primary Fight becomes Ice. Equal AP avoids artificially delaying basic elemental coverage.",
+      "ref": "spell",
+      "anchor": "FFV-style weapon enchantment adapted to immediate commitment and sustained primary-weapon combat",
+      "kind": "Thematic redesign",
+      "id": "MYK-A2",
+      "ap": 100,
+      "type": "Action",
+      "job": "Mystic Knight",
+      "previous": "Frost Sigil",
+      "preBalanceRevision": {
+        "name": "Blizzard Spellblade",
+        "ap": 150
+      },
+      "balanceRationale": "Strike 1.00P Ice; persistent primary Fight becomes Ice. Equal AP avoids artificially delaying basic elemental coverage.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Thunder Spellblade",
+      "effect": "6 MP; self/Sure OR r1 enemy/A. Strike 1.00P Lightning; persistent primary Fight becomes Lightning. Keeping distinct elemental lessons is acceptable where three-tier damage inflation is not.",
+      "ref": "spell",
+      "anchor": "FFV-style weapon enchantment adapted to immediate commitment and sustained primary-weapon combat",
+      "kind": "Thematic redesign",
+      "id": "MYK-A3",
+      "ap": 100,
+      "type": "Action",
+      "job": "Mystic Knight",
+      "previous": "Storm Sigil",
+      "preBalanceRevision": {
+        "name": "Thunder Spellblade",
+        "ap": 200
+      },
+      "balanceRationale": "Strike 1.00P Lightning; persistent primary Fight becomes Lightning. Keeping distinct elemental lessons is acceptable where three-tier damage inflation is not.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Poison Spellblade",
+      "effect": "6 MP; self/Sure OR r1 enemy/A. Strike and future primary Fight are non-elemental; after positive damage attempt Poison using normal S, not S x0.5. Immediate strike 1.00P.",
+      "ref": "spell",
+      "anchor": "FFV-style weapon enchantment adapted to immediate commitment and sustained primary-weapon combat",
+      "kind": "Thematic redesign",
+      "id": "MYK-A4",
+      "ap": 150,
+      "type": "Action",
+      "job": "Mystic Knight",
+      "previous": "Siphon Sigil",
+      "preBalanceRevision": {
+        "name": "Poison Spellblade",
+        "ap": 200
+      },
+      "balanceRationale": "Strike and future primary Fight are non-elemental; after positive damage attempt Poison using normal S, not S x0.5. Immediate strike 1.00P.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Sleep Spellblade",
+      "effect": "10 MP; self/Sure OR r1 enemy/A. Immediate 0.80P non-elemental; future Fight stays ordinary power/non-elemental. After positive damage from either carrier attempt Sleep at S x0.5; apply after damage.",
+      "ref": "spell",
+      "anchor": "FFV-style weapon enchantment adapted to immediate commitment and sustained primary-weapon combat",
+      "kind": "Thematic redesign",
+      "id": "MYK-A5",
+      "ap": 250,
+      "type": "Action",
+      "job": "Mystic Knight",
+      "previous": "Spellstrike",
+      "preBalanceRevision": {
+        "name": "Sleep Spellblade",
+        "ap": 250
+      },
+      "balanceRationale": "Immediate 0.80P non-elemental; future Fight stays ordinary power/non-elemental. After positive damage from either carrier attempt Sleep at S x0.5; apply after damage.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Silence Spellblade",
+      "effect": "8 MP; self/Sure OR r1 enemy/A. Immediate 1.00P non-elemental; future Fight non-elemental. Each carrier attempts Silence at normal S after positive damage.",
+      "ref": "spell",
+      "anchor": "FFV-style weapon enchantment adapted to immediate commitment and sustained primary-weapon combat",
+      "kind": "Thematic redesign",
+      "id": "MYK-A6",
+      "ap": 200,
+      "type": "Action",
+      "job": "Mystic Knight",
+      "previous": "Runic Guard",
+      "preBalanceRevision": {
+        "name": "Silence Spellblade",
+        "ap": 300
+      },
+      "balanceRationale": "Immediate 1.00P non-elemental; future Fight non-elemental. Each carrier attempts Silence at normal S after positive damage.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Drain Spellblade",
+      "effect": "12 MP; self/Sure OR r1 enemy/A. Immediate 1.00P non-elemental; future Fight non-elemental. Each carrier heals 35% of actual HP removed, cap 15% user max HP per action. Existing undead reversal and no-overkill rules.",
+      "ref": "spell",
+      "anchor": "FFV-style weapon enchantment adapted to immediate commitment and sustained primary-weapon combat",
+      "kind": "Thematic redesign",
+      "id": "MYK-A7",
+      "ap": 300,
+      "type": "Action",
+      "job": "Mystic Knight",
+      "previous": "Break Seal",
+      "preBalanceRevision": {
+        "name": "Drain Spellblade",
+        "ap": 300
+      },
+      "balanceRationale": "Immediate 1.00P non-elemental; future Fight non-elemental. Each carrier heals 35% of actual HP removed, cap 15% user max HP per action. Existing undead reversal and no-overkill rules.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Flare Spellblade",
+      "effect": "20 MP; self/Sure OR r1 enemy/A. Immediate 1.00P non-elemental and future primary Fight each use 75% effective target WDef. No independent damage multiplier, no second attack.",
+      "ref": "spell",
+      "anchor": "FFV-style weapon enchantment adapted to immediate commitment and sustained primary-weapon combat",
+      "kind": "Thematic redesign",
+      "id": "MYK-A8",
+      "ap": 400,
+      "type": "Action",
+      "job": "Mystic Knight",
+      "previous": "Trinity Edge",
+      "preBalanceRevision": {
+        "name": "Flare Spellblade",
+        "ap": 400
+      },
+      "balanceRationale": "Immediate 1.00P non-elemental and future primary Fight each use 75% effective target WDef. No independent damage multiplier, no second attack.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "id": "MYK-A9",
+      "name": "Slow Spellblade",
+      "ap": 250,
+      "effect": "12 MP; self/Sure OR r1 enemy/A. Immediate 0.80P non-elemental; future primary Fight remains ordinary power/non-elemental. After positive HP damage from either carrier attempt vanilla Slow at normal S. Magic sequencing; physical HP damage.",
+      "ref": "spellA2",
+      "kind": "Thematic redesign",
+      "anchor": "FFTA2 Slow Blade adapted to a maintained enchantment; sustained single-target control.",
+      "type": "Action",
+      "job": "Mystic Knight",
+      "introducedVersion": "0.6",
+      "parameterStatus": "Provisional numerical/teaching targets; concept and Spellweave category approved by user.",
+      "balanceRationale": "FFTA2 Slow Blade adapted to a maintained enchantment; sustained single-target control.",
+      "balanceSource": "SPELLBLADE-EXPANSION.md",
+      "balanceVerdict": "Approved concept; new tuning requires playtesting"
+    },
+    {
+      "id": "MYK-A10",
+      "name": "Osmose Spellblade",
+      "ap": 300,
+      "effect": "8 MP; self/Sure OR r1 enemy/A. Immediate 0.80P non-elemental; future primary Fight remains ordinary power/non-elemental. After positive HP damage siphon floor(25% of actual HP removed) MP, capped at 10 MP per action and target current MP; restore only MP actually removed, capped by user missing MP. No ally, overkill, absorbed-hit, or second-weapon siphon. Apply shared undead reversal. Spellweave never directly multiplies MP loss/recovery; increased actual HP damage may indirectly raise siphon only up to the same cap. Magic sequencing; physical HP damage.",
+      "ref": "spellV",
+      "kind": "Thematic redesign",
+      "anchor": "FFV Osmose enchantment; limited enemy-funded endurance with a lower immediate strike.",
+      "type": "Action",
+      "job": "Mystic Knight",
+      "introducedVersion": "0.6",
+      "parameterStatus": "Provisional numerical/teaching targets; concept and Spellweave category approved by user.",
+      "balanceRationale": "FFV Osmose enchantment; limited enemy-funded endurance with a lower immediate strike.",
+      "balanceSource": "SPELLBLADE-EXPANSION.md",
+      "balanceVerdict": "Approved concept; new tuning requires playtesting"
+    },
+    {
+      "id": "MYK-A11",
+      "name": "Holy Spellblade",
+      "ap": 250,
+      "effect": "12 MP; self/Sure OR r1 enemy/A. Immediate 1.00P Holy; persistent primary Fight becomes Holy. Normal elemental resistance, immunity, and absorption; no automatic undead kill or independent damage bonus. Magic sequencing; physical HP damage.",
+      "ref": "spellV",
+      "kind": "Thematic redesign",
+      "anchor": "FFV Holy enchantment adapted as a distinct elemental matchup.",
+      "type": "Action",
+      "job": "Mystic Knight",
+      "introducedVersion": "0.6",
+      "parameterStatus": "Provisional numerical/teaching targets; concept and Spellweave category approved by user.",
+      "balanceRationale": "FFV Holy enchantment adapted as a distinct elemental matchup.",
+      "balanceSource": "SPELLBLADE-EXPANSION.md",
+      "balanceVerdict": "Approved concept; new tuning requires playtesting"
+    },
+    {
+      "id": "MYK-A12",
+      "name": "Spellbreak",
+      "ap": 250,
+      "effect": "10 MP; r1 one enemy/A. 0.85P using ordinary primary weapon element. Resolve A and applicable defensive interceptions first; on a successful hit remove one selected dispellable beneficial status if still present, then calculate HP damage using remaining defenses and resolved interception modifiers. Removal does not require positive HP damage. If an interception already consumed the selected status, do not select another or refund the action. Select from eligible statuses before commitment; no eligible status means the action cannot be selected. Never removes equipment, passive lessons, fields, or undispellable boss effects. Preserve the user enchantment without applying its element, proc, drain, or Flare penetration. Physical sequencing and physical HP damage.",
+      "ref": "myk",
+      "kind": "Original extension",
+      "anchor": "Original sword-delivered dispel: trade damage for removal of a selected magical protection.",
+      "type": "Action",
+      "job": "Mystic Knight",
+      "introducedVersion": "0.6",
+      "parameterStatus": "Provisional numerical/teaching targets; concept and Spellweave category approved by user.",
+      "balanceRationale": "Original sword-delivered dispel: trade damage for removal of a selected magical protection.",
+      "balanceSource": "SPELLBLADE-EXPANSION.md",
+      "balanceVerdict": "Approved concept; new tuning requires playtesting"
+    },
+    {
+      "id": "MYK-A13",
+      "name": "Arcane Release",
+      "ap": 350,
+      "effect": "14 MP plus consume an active Fire, Blizzard, Thunder, Holy, or Flare enchantment at commitment; r3 center/cross, Any, line of sight. M40 magical HP damage for elemental enchantments using their element; Flare instead gives M44 non-elemental magical damage with normal MRes and no WDef penetration. A per target under the shared accuracy rules; preview each target. Immunity and defensive effects remain applicable. A committed miss still establishes Magic; invalid actions spend neither MP nor enchantment and establish no category. No Sleep, Poison, Silence, Slow, Drain, or Osmose release. No weapon proc, status rider, recovery, Reflect, Return Magic, or Doublecast. Enchantment is spent even if every target avoids or nullifies the burst; no Spell Parry fuel remains. Magic sequencing and magical HP damage.",
+      "ref": "myk",
+      "kind": "Original extension",
+      "anchor": "Original discharge of maintained blade magic for range and area at the expense of sustain and parry fuel.",
+      "type": "Action",
+      "job": "Mystic Knight",
+      "introducedVersion": "0.6",
+      "parameterStatus": "Provisional numerical/teaching targets; concept and Spellweave category approved by user.",
+      "balanceRationale": "Original discharge of maintained blade magic for range and area at the expense of sustain and parry fuel.",
+      "balanceSource": "SPELLBLADE-EXPANSION.md",
+      "balanceVerdict": "Approved concept; new tuning requires playtesting"
+    },
+    {
+      "id": "MYK-A14",
+      "name": "Break Blade",
+      "ap": 400,
+      "effect": "24 MP; r1 one enemy/S. Attempt Petrify at normal S, respecting immunity and applicable defenses; no preliminary A roll and no HP damage. A sword-delivered magical technique, not an enchantment: does not create, consume, replace, or carry the existing enchantment. Magic sequencing; Spellweave cannot improve Petrify chance. Ordinary legal accuracy supports retain their native eligibility and occupy the same single support slot; this is not a ban on accuracy support. No Reflect, Return Magic, or Doublecast.",
+      "ref": "spellV",
+      "kind": "Thematic redesign",
+      "anchor": "FFV Break Spellblade inspiration adapted to a separately paid Petrify technique, not persistent Petrify on Fight.",
+      "type": "Action",
+      "job": "Mystic Knight",
+      "introducedVersion": "0.6",
+      "parameterStatus": "Provisional numerical/teaching targets; concept and Spellweave category approved by user.",
+      "balanceRationale": "FFV Break Spellblade inspiration adapted to a separately paid Petrify technique, not persistent Petrify on Fight.",
+      "balanceSource": "SPELLBLADE-EXPANSION.md",
+      "balanceVerdict": "Approved concept; new tuning requires playtesting"
+    },
+    {
+      "name": "Spellweave",
+      "type": "Support",
+      "effect": "Alternate one tagged magical voluntary action and one physical-damage voluntary action; opposite category direct HP damage ×1.35. First qualifying action has no bonus. A nonqualifying action/Wait **retains** the previous category but never grants a bonus; repeated category updates it without bonus. Magic healing establishes magic but receives no healing bonus. One category and evaluation per action; same-category Doublecast establishes magic once, mixed/ambiguous multi-cast clears the sequence. Spellblade enchant-and-strike is tagged **magic** for sequencing only: its damage stays physical, and it cannot establish both categories. Enchantment followed by Red Magic is Magic-to-Magic and gains no alternation bonus; Fight or a qualifying Lunge action can alternate with the enchantment. Enchanted Fight and Spellbreak establish Physical; Arcane Release and Break Blade establish Magic. Arcane Release deals magical HP damage; Break Blade has no HP damage. No bonus to status accuracy or directly to MP damage/recovery; increased actual HP damage can indirectly raise capped drain/siphon recovery once. An enchanted hit never establishes both categories or triggers its own bonus.",
+      "ref": "myk",
+      "anchor": "Combine martial and magical actions across different command sets",
+      "kind": "Cross-job support design",
+      "id": "MYK-S1",
+      "ap": 300,
+      "job": "Mystic Knight",
+      "previous": "Runeblade",
+      "preSupportRevision": "Spellblade Focus",
+      "buildExamples": "Viera Red Mage/Fencer alternates spell and Lunge Tech; Viera Sniper/Summoner alternates bow abilities and summons. No third command or universal Doublecast. Does not reward mindless repetition; test whether the weaker alternating turn earns its place.",
+      "preBalanceRevision": {
+        "name": "Spellweave",
+        "ap": 200
+      },
+      "balanceRationale": "Viera Red Mage/Fencer alternates spell and Lunge Tech; Viera Sniper/Summoner alternates bow abilities and summons. No third command or universal Doublecast. Does not reward mindless repetition; test whether the weaker alternating turn earns its place.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Arcane Ward",
+      "type": "Support",
+      "effect": "Incoming magical direct HP damage ×0.75 while current MP ≥50% max MP and ≥1, checked at incoming-action start. No MP expenditure or absorption.",
+      "ref": "myk",
+      "anchor": "Maintained magical reserves protect their bearer",
+      "kind": "Cross-job support design",
+      "id": "MYK-S2",
+      "ap": 350,
+      "job": "Mystic Knight",
+      "previous": "Warding Steel",
+      "preSupportRevision": "Warding Steel",
+      "buildExamples": "Viera White Mage retaining reserve MP; Viera Elementalist conserving resources. Can pair with Reflex for broad coverage but loses casting S. High-cost repeated Summoning can switch it off.",
+      "preBalanceRevision": {
+        "name": "Arcane Ward",
+        "ap": 350
+      },
+      "balanceRationale": "Viera White Mage retaining reserve MP; Viera Elementalist conserving resources. Can pair with Reflex for broad coverage but loses casting S. High-cost repeated Summoning can switch it off.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Magic Shell",
+      "type": "Reaction",
+      "effect": "Before a successful enemy magical HP-damage action, forecast damage without this reaction. If current HP minus forecast damage would be ≤50% max HP, apply ordinary Shell before that action's damage is calculated. Already-Shelled units gain no additional defense. Forecast once; no recursive reevaluation. No cross-action lock.",
+      "ref": "myk",
+      "anchor": "FFV low-health Shell placed in FFTA's reaction slot",
+      "kind": "Adaptation",
+      "id": "MYK-R1",
+      "ap": 300,
+      "job": "Mystic Knight",
+      "previous": "Runic Echo",
+      "preBalanceRevision": {
+        "name": "Magic Shell",
+        "ap": 250
+      },
+      "balanceRationale": "Proactive emergency protection, including a hit crossing the threshold. Uses ordinary Shell's stat effect; not a promise to halve damage or survive. Physical hits never trigger it.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Spell Parry",
+      "type": "Reaction",
+      "effect": "While wielding a qualifying rapier/saber with active Spellblade, after an enemy physical hit check succeeds, consume the enchantment to reduce physical HP damage ×0.50 from that one enemy action. The spent enchantment is unavailable for other effects immediately. Status riders and magical components are unaffected. Misses do not consume it.",
+      "ref": "myk",
+      "anchor": "Spend a maintained weapon enchantment to soften one incoming physical action",
+      "kind": "Original extension",
+      "id": "MYK-R2",
+      "ap": 350,
+      "job": "Mystic Knight",
+      "previous": "Spell Parry",
+      "preBalanceRevision": {
+        "name": "Spell Parry",
+        "ap": 350
+      },
+      "balanceRationale": "Chair adjudication limits the reduction to50%, because revised enchantments also deliver an immediate attack. An enchantment becomes one-action ability defense, then requires reapplication. No permanent immunity or simultaneous Reflex.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Replace effect"
+    },
+    {
+      "id": "MYK-C1",
+      "name": "Spellblade Combo",
+      "job": "Mystic Knight",
+      "type": "Combo",
+      "ap": 100,
+      "kind": "FFTA integration",
+      "ref": "manual",
+      "anchor": "Original job-specific label for vanilla Judge Point combo participation",
+      "effect": "rapier/saber. Vanilla chain participation profile: Red Combo: power 10%, participation range 2, hit 70% Preserve vanilla initiation/JP behavior; no new riders.",
+      "previous": "Rune Combo",
+      "preBalanceRevision": {
+        "name": "Spellblade Combo",
+        "ap": 100
+      },
+      "balanceRationale": "Existing Viera martial-magic profile with modest reach and explicit reliability tradeoff. No active enchantment inheritance.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise specification"
+    },
+    {
+      "name": "Chop",
+      "effect": "0 MP; axe; r1 enemy; A; 1.10P weapon-elemental.",
+      "ref": "ffta",
+      "anchor": "Original straightforward addition to Soldier's martial toolkit",
+      "kind": "Original extension",
+      "id": "SLD-AX-A1",
+      "ap": 100,
+      "type": "Action",
+      "job": "Soldier",
+      "previous": "Chop",
+      "preBalanceRevision": {
+        "name": "Chop",
+        "ap": 100
+      },
+      "balanceRationale": "Basic low-resource technique with modest non-Fight value. No added status or armor bypass; its early axe price and attack tier matter more than a 5-point damage difference.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Tomahawk",
+      "effect": "4 MP; axe; r4 enemy with projectile line of sight; A; 0.90P weapon-elemental; no consume/unequip.",
+      "ref": "axe14",
+      "anchor": "Marauder ranged axe attack; no MMO enmity",
+      "kind": "Adaptation",
+      "id": "SLD-AX-A2",
+      "ap": 150,
+      "type": "Action",
+      "job": "Soldier",
+      "previous": "Hooking Blow",
+      "preBalanceRevision": {
+        "name": "Tomahawk",
+        "ap": 150
+      },
+      "balanceRationale": "A starter ranged tool should reach a meaningful target and contribute. Less power than a melee attack buys reach; later free Hunter coverage can still surpass it.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Overpower",
+      "effect": "4 MP; axe; frontal three-tile arc, any units; A each; 0.90P weapon-elemental.",
+      "ref": "axe14",
+      "anchor": "Marauder area axe attack",
+      "kind": "Adaptation",
+      "id": "SLD-AX-A3",
+      "ap": 200,
+      "type": "Action",
+      "job": "Soldier",
+      "previous": "Wide Swing",
+      "preBalanceRevision": {
+        "name": "Overpower",
+        "ap": 200
+      },
+      "balanceRationale": "The current low damage, MP cost, friendly fire and narrow shape stack too many costs. Keep positioning and ally risk.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Shatter Guard",
+      "effect": "6 MP; axe; r1 enemy; A; on hit remove Protect before calculating 1.00P weapon-elemental damage.",
+      "ref": "ffta",
+      "anchor": "Original guard-breaking extension of Soldier's weakening techniques",
+      "kind": "Original extension",
+      "id": "SLD-AX-A4",
+      "ap": 300,
+      "type": "Action",
+      "job": "Soldier",
+      "previous": "Shatter Guard",
+      "preBalanceRevision": {
+        "name": "Shatter Guard",
+        "ap": 300
+      },
+      "balanceRationale": "Removing protection after a weakened hit wastes the guard-breaking identity. This is a direct anti-Protect option, not an equipment destroyer or permanent stat debuff. Miss leaves Protect untouched.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Recuperation",
+      "type": "Support",
+      "effect": "Direct restorative HP healing received ×1.50 from self/allied medicine and spells/techniques; round after combined modifiers. No revival, drain, Regen tick or MP improvement.",
+      "ref": "ffta",
+      "anchor": "Frontline recovery training, useful to any unit taking sustained damage",
+      "kind": "Cross-job support design",
+      "id": "SLD-AX-S1",
+      "ap": 150,
+      "job": "Soldier",
+      "previous": "Axe Grip",
+      "preSupportRevision": "Axe Grip",
+      "buildExamples": "Human Fighter receiving allied Cure; Human Paladin receiving medicine. Accessible sustain option, still weak when every heal already fills HP. Pharmacology on a **different unit** can stack to2.25; neither user has both supports.",
+      "preBalanceRevision": {
+        "name": "Recuperation",
+        "ap": 200
+      },
+      "balanceRationale": "Human Fighter receiving allied Cure; Human Paladin receiving medicine. Accessible sustain option, still weak when every heal already fills HP. Pharmacology on a **different unit** can stack to2.25; neither user has both supports.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Haft Guard",
+      "type": "Reaction",
+      "effect": "Primary axe required. Incoming physical direct HP damage ×0.75; no counter and no cross-action lock.",
+      "ref": "ffta",
+      "anchor": "Original mundane defense using the axe haft",
+      "kind": "Original extension",
+      "id": "SLD-AX-R1",
+      "ap": 150,
+      "job": "Soldier",
+      "previous": "Haft Guard",
+      "preBalanceRevision": {
+        "name": "Haft Guard",
+        "ap": 250
+      },
+      "balanceRationale": "Affordable early broad physical defense. Less reduction than advanced Blade Ward, but different weapon/availability. Even late, physical abilities can justify it over Fight-only protection.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Armor Splitter",
+      "effect": "8 MP; axe; r1 enemy; A; 1.00P weapon-elemental using 75% effective target WDef for this hit only.",
+      "ref": "ffta",
+      "anchor": "Original heavy-weapon penetration added to Gladiator's offensive kit",
+      "kind": "Original extension",
+      "id": "GLD-AX-A1",
+      "ap": 200,
+      "type": "Action",
+      "job": "Gladiator",
+      "previous": "Armor Splitter",
+      "preBalanceRevision": {
+        "name": "Armor Splitter",
+        "ap": 200
+      },
+      "balanceRationale": "A useful heavy-armor niche rather than a general attack multiplier. Distinct from Shatter Guard and theft.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Reaping Arc",
+      "effect": "8 MP; axe; frontal three-tile arc, any units; A each; 1.10P weapon-elemental.",
+      "ref": "ffta",
+      "anchor": "Original positional variant alongside Wild Swing",
+      "kind": "Original extension",
+      "id": "GLD-AX-A2",
+      "ap": 250,
+      "type": "Action",
+      "job": "Gladiator",
+      "previous": "Reaping Arc",
+      "preBalanceRevision": {
+        "name": "Reaping Arc",
+        "ap": 250
+      },
+      "balanceRationale": "Needs a reason to coexist with original Wild Swing and the cheaper Soldier area strike. Still a narrow friendly-fire attack; do not add a hard disable.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Executioner",
+      "effect": "10 MP; axe; r1 enemy; A; 1.10P weapon-elemental normally, 1.80P when target at or below 50% max HP; in that condition add 20 percentage points to final ordinary A hit chance, capped 95%, after immunity/reaction checks.",
+      "ref": "ffta",
+      "anchor": "Original arena finisher; no claim of a canonical FFTA move",
+      "kind": "Original extension",
+      "id": "GLD-AX-A3",
+      "ap": 300,
+      "type": "Action",
+      "job": "Gladiator",
+      "previous": "Executioner",
+      "preBalanceRevision": {
+        "name": "Executioner",
+        "ap": 300
+      },
+      "balanceRationale": "Its niche becomes confirming a wounded enemy kill on a race without Concentrate, rather than an inferior Fell Cleave. Accuracy bonus cannot bypass a reaction that prevents the action or an invalid target.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Fell Cleave",
+      "effect": "16 MP; axe; r1 enemy; A; 1.80P weapon-elemental. Before hit apply Exposed x1.20 incoming physical damage until start of next user turn, even on a miss.",
+      "ref": "axe14",
+      "anchor": "Warrior heavy axe strike; MP and Exposed replace MMO resources",
+      "kind": "Adaptation",
+      "id": "GLD-AX-A4",
+      "ap": 400,
+      "type": "Action",
+      "job": "Gladiator",
+      "previous": "Overhead Crash",
+      "preBalanceRevision": {
+        "name": "Fell Cleave",
+        "ap": 400
+      },
+      "balanceRationale": "Already meaningful single-target pressure with an explicit risk. Compare against lower-cost Executioner and Armor Splitter rather than automatically increasing every number. No added armor bypass.",
+      "balanceSource": "notes/balance-council-martial.md",
+      "balanceVerdict": "Keep"
+    },
+    {
+      "name": "Follow Through",
+      "type": "Support",
+      "effect": "During own turn, direct physical HP damage ×1.35 if voluntary movement placed the user at least two Manhattan tiles from turn-start position before action. Walking a loop to end near the origin does not qualify. Any weapon/physical command; no magical, item, reaction or DoT bonus.",
+      "ref": "ffta",
+      "anchor": "Carry movement into an attack; transferable offensive momentum",
+      "kind": "Cross-job support design",
+      "id": "GLD-AX-S1",
+      "ap": 350,
+      "job": "Gladiator",
+      "previous": "Follow Through",
+      "preSupportRevision": "Follow Through",
+      "buildExamples": "Bangaa Warrior charging a new opponent; Bangaa Dragoon moving into an attack lane. Meaningful positional commitment, not free one-tile shuffling. Weapon Atk+ can still be better against high defense or when stationary.",
+      "preBalanceRevision": {
+        "name": "Follow Through",
+        "ap": 350
+      },
+      "balanceRationale": "Bangaa Warrior charging a new opponent; Bangaa Dragoon moving into an attack lane. Meaningful positional commitment, not free one-tile shuffling. Weapon Atk+ can still be better against high defense or when stationary.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    },
+    {
+      "name": "Axe Reprisal",
+      "type": "Reaction",
+      "effect": "After surviving adjacent enemy physical HP damage, primary axe counters once for 1.20P with ordinary A accuracy and weapon element, no crit/proc. No cross-action lock.",
+      "ref": "ffta",
+      "anchor": "Original axe counter; compare with existing Strikeback rather than claiming a new role",
+      "kind": "Original extension",
+      "id": "GLD-AX-R1",
+      "ap": 350,
+      "job": "Gladiator",
+      "previous": "Axe Reprisal",
+      "preBalanceRevision": {
+        "name": "Axe Reprisal",
+        "ap": 350
+      },
+      "balanceRationale": "Strong offense against physical abilities; Strikeback still wins against Fight when prevention is needed. An axe-equipped Viking with the learned R is legal.",
+      "balanceSource": "notes/balance-council-supports-reactions.md",
+      "balanceVerdict": "Revise"
+    }
+  ],
+  "designPrinciples": "JOB-DESIGN-PRINCIPLES.md",
+  "supportPolicy": "The teaching job grants the lesson; mastered supports work on any legal current job without its action set or signature weapon. See SUPPORT-SKILL-DESIGN.md.",
+  "schemaVersion": 2,
+  "schemaNote": "AP has its own field. effect contains the complete action cost, targeting, accuracy, and effect together; commandRules/sharedRules in JOB-CLASS-SPECIFICATION.md also apply. Former separate cost/target fields were removed to avoid stale parallel values.",
+  "balanceCouncil": "BALANCE-COUNCIL.md",
+  "commandRules": {
+    "SAM": "**Iaido — Human.** Requires a primary katana for every action. All damage uses physical P; Murasame uses target maximum HP. Silence, Reflect, Return Magic, and Doublecast do not apply. Mastered techniques need no spare or matching named sword; no breakage.\n\n**Centered:** a visible non-stacking T2 buff from successful Ashura or Counter Draw. The next damaging Iaido other than Ashura, or Murasame, consumes it at execution for ×1.25 damage/healing for the whole action, including a miss. No bonus to MP damage, status, Fight, counters, combos, or secondary sets. Kiyomori neither consumes nor benefits. Clear on expiry, Dispel, KO, Petrify, battle end, job change, or primary weapon change/loss.\n\nUse a katana on Ninja/Iaido, or mix Samurai with Hunt or White Magic. Concentrate improves reliability; Double Sword takes the same support slot and only doubles ordinary Fight.",
+    "DRK": "**Dark Arts — Human and Bangaa.** Sword/greatsword/broadsword required for damaging/draining sword arts. Dark Mind and self-mode Last Resort are weapon-free; Last Resort's optional commitment strike accepts any damaging primary weapon at r1, not Healer. All strikes/drains are physical; Silence, Reflect, Return Magic, and Doublecast do not apply.\n\nLast Resort's initial strike precedes the new buff; an already active buff follows ordinary rules. Its outgoing multiplier applies only to eligible direct physical damage, not fixed/percentage effects, items, reactions, combos, MP damage, or a second drain-recovery multiplier. Its incoming physical drawback remains linked to the benefit. At low HP, Desperation can activate after paying a sacrifice; the threshold is 35%, not 40%.\n\nHuman Dark Knight/Blue Magic and Bangaa Dark Knight/Prayer are legal. Axe Gladiator/Dark Arts or Viking/Dark Arts can use Dark Mind and Last Resort but cannot use sword-gated drain/sacrifice moves while holding an axe. Bloodcasting and Desperation cannot be equipped together.",
+    "VIK": "**Reaving — Bangaa.** Uses the new two-handed Axe family. Strong-Arm/Pillage require an axe. Thunder, Stormcall, Thundaga, and Tsunami are incanted magic blocked by Silence; lightning actions follow ordinary applicable Reflect/Return Magic behavior. Tsunami is environmental and neither Reflected nor Returned. Theft and War Cry work while Silenced. No Doublecast.\n\nResolve each eligible original theft transaction independently before HP damage, using its original accuracy, protection, loot ownership, and depletion rules. A damage miss/zero damage does not remove the theft attempt. Stolen defenses change the following damage calculation and preview. Never steal the same depleted item again. No generic S roll replaces the original handler.\n\nViking/Gladiator offers two compatible axe sets; Viking/Bishop adds support magic. Bishop/Reaving can cast storms but cannot perform axe theft. Tsunami's dry-ground displacement is distinct from its optional water-adjacent MP removal; neither grants water traversal.",
+    "GEO": "**Geomancy — Nu Mou.** Weapon-free nature arts; damage uses Magic Power/Magic Resistance. No Silence, Reflect, Return Magic, or Doublecast. Every action works without terrain affinity.\n\n**Nearby affinity:** inspect caster tile and four orthogonal neighbors within 2 height; rock/stone, vegetation, water/wetland, wood/heat, and snow/ice groups supply at most one relevant bonus. Unknown tiles give no affinity but disable no action. Nearby inaccessible water can be sensed but not entered. Gaia Surge always offers Wind, plus mapped local elements; Nature's Wrath now always uses Wind independently of learned actions. Float does not prevent affinity.\n\n**Frost field:** one cross per caster, replacing the previous field. Expires after the caster's second subsequent turn, or on caster KO/Petrify/job change/battle end. Each entered field tile adds one movement cost for grounded allies/enemies; overlapping fields never add more. Float/flying/Surefoot ignore the surcharge, not other tile legality. No entry damage, impassability, reaction triggers, or changed affinity; a field does not qualify its own cast for an ice bonus.\n\nWisp Exposure starts after damage, refreshes without stacking, and a weaker application cannot refresh a stronger one. Immunity to its custom effect blocks the rider; elemental immunity/absorption prevents positive-damage riders. Updraft can combine with an ally's Light Foot for +2 Move but never stack with itself. Time Mage/Geomancy and Alchemist/Geomancy are legal weapon-free mixes.",
+    "CHM": "**Items — Nu Mou and Moogle.** This command is distinct from vanilla ordinary Item. All eight lessons need no weapon, cost 0 MP, work while Silenced, and consume the exact named ingredients. No Reflect, Return Magic, or Doublecast. Single-target medicine is r4 with ordinary projectile LOS/height unless specified; Healing Mist is an r3 center/cross area, not Long Throw eligible. New medicine targets non-undead allies; revivals require eligible KO allies.\n\nField Remedy selects exactly one stocked cure with only that item's cure list. High Tonic selects one stocked Hi-Potion or X-Potion. Healing Mist and Resuscitating Draught are original two-ingredient preparations, not claims about vanilla potion contents. Validate the entire recipe before spending any ingredient. Pharmacology improves explicit item HP/MP restoration once, never revival fractions. Resuscitating Draught restores half maximum HP without a 200-HP cap or any healing-support increase.\n\nItems remain actual inventory resources: no shop-buyable Ether assumption or new consumable stock. Moogle Juggler/Chemist retains Smile; Bard/Chemist lacks Stunt. Alchemist already has fixed ordinary Item: Alchemist/Sagacity with Long Throw is a serious alternative, so Chemist's mixtures must earn the secondary slot.",
+    "BRD": "**Song — Moogle.** Voice is sufficient: no active song requires an instrument or grants instrument equipment permission. Silence blocks songs; Hide requires neither voice nor weapon and works while Silenced. No Reflect, Return Magic, or Doublecast. Instruments remain Bard equipment and Chorus Combo's requirement.\n\nMarching Strength/Inspired Magic use T2 final physical/magical damage multipliers, not attack-stat boosts. Exclude fixed/percentage damage, items, reactions, combos, and a second drain-recovery bonus. No healing bonus from Inspired Magic. Nameless Song applies Protect, Shell, and Regen deterministically; no random pool or Haste. Magick Ballad may restore MP over ordinary turns, but never grants an extra action or restores the caster directly.\n\nA new persistent song buff may trigger Encouragement once per other ally. Magick Boost can improve the song's own HP restoration, not the separate Encouragement heal or Ballad's MP recovery. Juggler/Song can choose a song or Smile, not both in one action. Time Mage/Song is legal; Moogle White Magic and Bloodcasting are not.",
+    "DNC": "**Dance — Viera.** Performance works while Silenced; no Reflect, Return Magic, or Doublecast. Only Sword Dance needs a primary knife/rapier. Dances do not directly grant or reset turns.\n\n**Pdance:** use virtual weapon V = min(35, 12 + floor(0.60 × level)), replacing the primary weapon's Attack contribution and weapon-power term in the physical P formula. Keep the character's accumulated physical Attack, nonweapon gear bonuses, applicable supports, and target defense. Ignore held weapon Attack/element/procs and second weapons. V is 18/27/35 at levels 10/25/40. This is a defined custom formula, not a verified ROM field. Sword Dance instead uses the actual primary weapon's P.\n\nPolka/Heathen Frolic use physical damage followed by their custom weakening rider; custom immunity blocks the rider, not unrelated damage. Forbidden Dance selects one ailment for the entire cast, not separately per enemy and not at random. Assassin/Dance works for weapon-free dances but not Sword Dance with a bow/katana. Red Mage/Dance cannot Doublecast dances; Dancer/White Magic can trade offense for restoration.",
+    "MYK": "**Spellblade — Viera.** All 14 actions require a primary rapier/saber and are blocked by Silence. Only the eleven enchantments (MYK-A1–A11) offer self preparation (Sure) or one r1 enemy for an immediate enchanted A-type strike. Pay once; apply/replace the enchantment even if the strike misses; this is one action, not a free second action or movement. Their strike is physical and not Fight: no crit, weapon proc, second weapon, Doublecast, or automatic bypass of applicable defensive reactions. Spellbreak, Arcane Release, and Break Blade follow their own targeting and resolution below; they never automatically enchant the weapon.\n\nOne enchantment persists until replaced, Dispel, KO, Petrify, primary weapon change/loss, job change, battle end, Spell Parry consumption, or Arcane Release consumption. Silence after preparation prevents command actions but does not erase it or stop Fight. Future benefits apply only to primary Fight, replacing its ordinary element/proc; no secondary technique, counter, combo, or second weapon inherits a rider. Arcane Release explicitly consumes a permitted enchantment for its own magical formula, not an inherited Fight rider. Healer cannot become damaging/draining.\n\nEach action establishes at most one Spellweave category. Both modes of every enchantment establish Magic; the strike still deals physical HP damage. Enchanted Fight and Spellbreak establish Physical. Arcane Release and Break Blade establish Magic. The burst deals magical HP damage; Break Blade has no HP damage and cannot receive a Petrify-chance bonus. Follow an enchantment with Fight/Lunge/Spellbreak to alternate, not Red Magic or Arcane Release. Battle Chant/Fury can improve an enchantment strike; Wisp/Inspired Magic cannot. Those magical bonuses can instead improve Arcane Release. Spell Parry spends the enchantment for 50% physical reduction against one enemy action. Red Mage/Spellblade, Fencer/Spellblade, and Dancer/Spellblade work with rapiers; Assassin/Summoner lack qualifying normal weapons.\n\nThe six additions' concepts and sequence categories are approved. Their costs, AP, exact powers, and teaching placements below are provisional first implementation targets. The original eight entries, supports, reactions, growths, and unlocks retain their adopted tuning. See [the expansion record](SPELLBLADE-EXPANSION.md) for sequence examples and resource tests."
+  }
+}

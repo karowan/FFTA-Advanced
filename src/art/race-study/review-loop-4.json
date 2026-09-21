@@ -1,0 +1,26 @@
+{
+  "round": 4,
+  "maxRounds": 5,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Edit image1, the five-character FFTA comparison row. Change ONLY the fifth character (bald cook at far right). Image2 is the ORIGINAL native reference for style, not costume. Keep the first four characters and overall row layout intact. Keep the cook's new face angle and TWO separate eyes EXACTLY as in image1; both reviewers say this source eye orientation is now right.\nThree small corrections to fifth character only:\n- Remove the entire BLACK GROUND OVAL beneath the cook. Keep both brown boots fully formed and visibly separate, resting on the same baseline.\n- Shorten the cook's oversized rounded scalp by ONE logical pixel row at the top and slightly narrow the rightmost head contour. Keep eye positions/spacing and left-facing three-quarter facial plane unchanged. Do not revert to profile.\n- Simplify scalp and cheek to three broad skin-tone clusters with one modest highlight. Remove bright scalp sparkle pixels and tiny facial checkerboard shading. Keep the small warm brown beard, broad cream rolled sleeves, ochre apron, teal sash/tail, brown trousers and boots. No clothing redesign.\nMatch the pixel block size of adjacent native sprites. The far eye must stay inside the face with a visible skin pixel separating it from dark head outline. No big eye whites, new shading, antialiasing or texture. Cook must remain a distinct original character, no copied hats/armor.\nReturn the entire landscape row of FIVE characters in the same five equal cells. Background is uniform solid #e4e2dc. No labels, text or grid. Only fifth character changed.",
+  "references": [
+    "build/art/race-study-2026-09-19/review-loop-3-context.png",
+    "build/art/race-study-2026-09-19/user-face-reference.png"
+  ],
+  "priorReview": {
+    "a": "Source face arrangement correct; preserve. Shrink round head and remove shadow. Audit conversion.",
+    "b": "Source eye orientation now looks right; simplify subdivided shading/scalp sparkles. Keep compact body. Resolve native conversion."
+  },
+  "conversionNote": "27px nearest missed thin eye cores. 28px nearest preserves dark cores at canvas(13,10),(15,10); use28 with source grid reviewed. No drawn pixels.",
+  "source": "build\\art\\race-study-2026-09-19\\review-loop-4.png",
+  "sourceSha256": "1550d0c28ed2dfa4aa163a3daec846499a087d3fe79ddb9a0f2308904bffa92e",
+  "referenceSha256": [
+    "608935ecb77c88281f9c2c6ab4101ebd653184fe4ccd484e12e0d9a31a695e05",
+    "ce3f98d107f0328a6bb3728330f6de901f23a50364a82f99e0949773cd7101ee"
+  ],
+  "rawGeneratedSource": "build\\art\\race-study-2026-09-19\\review-loop-4-context.png",
+  "rawGeneratedSha256": "d26f3643311f0e434c42275e6e34b03bacdfb7e474a53f82fa6ef04390629574",
+  "productionAccepted": false,
+  "status": "reviewed; see review-loop-outcome.json; not user accepted"
+}

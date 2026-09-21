@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "candidateSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "producerSha1": "1b070824a8dad4995434eee3ab40fa08187a6120",
+  "files": {
+    "ordinaryReport": {
+      "path": "build/expansion/probes/integrated-jobs/b26778520203359c3b129bcc025b92dd0e4c01f1/1b070824a8dad4995434eee3ab40fa08187a6120/clear-save-20260917T091908.745148Z/report.json",
+      "sha256": "e23f0a53d0e3c5491978d17fc5ec8a862ae3ce660b587b08341ee0b2e85bbc81"
+    },
+    "ordinarySave": {
+      "path": "build/expansion/probes/integrated-jobs/b26778520203359c3b129bcc025b92dd0e4c01f1/1b070824a8dad4995434eee3ab40fa08187a6120/clear-save-20260917T091908.745148Z/before-clear.sav",
+      "sha256": "635ca798d8c27f75692b0c028e520229638e04db405e43c34176229add2f301d"
+    },
+    "endingReport": {
+      "path": "build/expansion/probes/integrated-jobs/b26778520203359c3b129bcc025b92dd0e4c01f1/1b070824a8dad4995434eee3ab40fa08187a6120/ending-scenes-20260917T110459.056443Z/report.json",
+      "sha256": "a7a6b4af253a6d98cd28097180a5cdb3a268f96a484392d969697ba42e4f9429"
+    },
+    "endingSave": {
+      "path": "build/expansion/probes/integrated-jobs/b26778520203359c3b129bcc025b92dd0e4c01f1/1b070824a8dad4995434eee3ab40fa08187a6120/ending-scenes-20260917T110459.056443Z/cleared.sav",
+      "sha256": "442c1a1d8b13f0ef6830940546dfee41082e9b4288cb966f0f72fd443d0e5e07"
+    }
+  }
+}

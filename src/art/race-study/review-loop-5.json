@@ -1,0 +1,26 @@
+{
+  "round": 5,
+  "maxRounds": 5,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "REFINEMENT ROUND5. Fix CAMERA ELEVATION, NOT face yaw.\nImage1 is the original FFTA reference: its camera is slightly ABOVE the characters looking DOWN. Image2 is the five-character comparison with our original cook at far right; the cook currently looks viewed from ground/eye level. That is wrong even though the left/right face angle and both eyes are now readable.\nRedraw ONLY the fifth cook under the same gently ELEVATED downward-looking three-quarter game camera as the four originals (roughly25 degrees down, never level with his eyes). Reproject the WHOLE BODY coherently:\n- See the TOP SURFACE of his rounded bald cranium, rather than a tall vertical forehead. Compress the visible facial plane beneath it. Keep two small readable eyes and the current leftward three-quarter yaw.\n- See the TOPS of both shoulders and rolled sleeves. The head overlaps the upper torso more. Chest and apron front recede beneath those shoulder tops and are vertically foreshortened.\n- See the TOPS of the brown boots and short foreshortened shins. The farther foot rests slightly HIGHER in image space than the nearer foot, consistent with looking down at the ground. Both feet planted, no stride.\nThis is a camera/projection correction of an upright standing character, NOT bowing his head, crouching, rotating just his face, making the forehead taller, or drawing a front-on portrait. The top planes throughout the figure must agree.\nKeep the DISTINCT original cook: bald tan head, compact brown beard, cream rolled sleeves, ochre split apron, dark teal sash/tail at anatomical left hip, brown trousers/boots. Same costume, small FFTA pixel density, dark outline and restrained flat15-color clusters. Preserve both visible eyes; no hats, hair, armor, weapons or extra detail. Cook remains about16 logical pixels wide by27 tall with safe padding.\nReturn the full FIVE-character comparison row with the first four figures unchanged, fifth cook at far right in the same cell. Match their actual elevated viewpoint and scale directly. Plain flat neutral #e4e2dc background; NO ground oval under cook, shadow, text, labels or grid.",
+  "references": [
+    "build/art/race-study-2026-09-19/user-face-reference.png",
+    "build/art/race-study-2026-09-19/review-loop-4-context.png"
+  ],
+  "priorReview": {
+    "a": "Initial this looks right withdrawn after user identified eye-level camera. Show crown/shoulder/boot top planes and foreshorten whole body.",
+    "b": "Initial this looks right withdrawn. Ground-level projection missed; need elevated downward whole-body view."
+  },
+  "userCorrection": "Yours is from ground level looking forward; originals slightly above character looking down.",
+  "status": "reviewed; see review-loop-outcome.json; not user accepted",
+  "source": "build\\art\\race-study-2026-09-19\\review-loop-5.png",
+  "sourceSha256": "8b5ba051b70db12a049ea29cb15b57b8b007a9a1f9337de90090fbaf3ec986c9",
+  "referenceSha256": [
+    "ce3f98d107f0328a6bb3728330f6de901f23a50364a82f99e0949773cd7101ee",
+    "d26f3643311f0e434c42275e6e34b03bacdfb7e474a53f82fa6ef04390629574"
+  ],
+  "rawGeneratedSource": "build\\art\\race-study-2026-09-19\\review-loop-5-context.png",
+  "rawGeneratedSha256": "f93ea821fabd1545eabb3bd0fd41e615cb208d7f4cbaaaf4d4fb9061daf8b40b",
+  "productionAccepted": false
+}

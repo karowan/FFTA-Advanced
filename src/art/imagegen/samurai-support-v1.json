@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "built-in default; model name not exposed",
+  "prompt": "Use case: identity-preserve. Create an action sprite sheet of the SAME original red-armored Human Samurai in image 1. Image 1 is the generated character identity reference; image 2 is ONLY a native game pose/scale reference, NOT a character base. Keep the Samurai's red kabuto with gold crescent, exposed tan face with clear white eye, layered red neckguard and lamellar armor, purple underclothes, brown boots and sheathed katana at anatomical left hip. Do not use the purple native character's costume, hat or anatomy as the character. Exactly FIVE equal-width columns and TWO equal-height rows on a genuinely transparent background with fully empty gutters. Top row faces down-left three-quarter; bottom row faces up-right three-quarter. Columns are: 1 neutral standing, both boots grounded and arms relaxed; 2 casting/cheering with both hands raised above shoulder height beside the helmet and elbows bent; 3 recoiling from a hit with knees bent, torso pulled back and arms defensively near the chest; 4 critically wounded kneeling/crouching with head bowed, torso hunched and one knee near ground, noticeably shorter than standing; 5 knocked out lying flat diagonally on the ground, head toward bottom-left for top row and top-right for bottom row, torso horizontal and both legs extended, a unmistakably fallen body, not standing or kneeling. Preserve costume and body proportions across all ten poses: this is a single animated character. All cells use IDENTICAL world scale; kneeling and lying poses are shorter, never enlarged to fill the cell. Keep the standing sprite's proportions and scale comparable to image 1; leave room above for raised hands. Clear flat hard-edged pixel clusters that will read at roughly 18 by 27 game pixels for the standing body, with a thin dark outline; a limited consistent palette. No shading haze, gradients, glow, floor, cast shadow, text, grid, labels, border, weapon swings, magic effects or extra characters. Do not draw an unsheathed blade because the game's separate weapon renderer handles held weapons. Distinct physical poses, not repeated idle frames.",
+  "source": "build/art/imagegen/samurai/action-study/samurai-support-v1.png",
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-9729c8da-4228-45b5-a6f2-d992ebdf26d2.png",
+  "references": [
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/samurai-march-v7.png",
+      "role": "Generated original character identity",
+      "sha256": "de749df2f468578406e8c9a542a2721cfca6e38e70220d528092f1364c4a05d0"
+    },
+    {
+      "path": "build/art/imagegen/samurai/action-study/native-support-poses.png",
+      "role": "Original game pose and scale reference only",
+      "sha256": "e77c7c930152992b00f672196f787f433a3dd5793cfb94b4ec2d0f9f77e3f153"
+    }
+  ],
+  "productionAccepted": false,
+  "status": "Private partial native preview; generated support poses imported and native setters verified. Live action display and final art acceptance remain open. Back-facing head continuity needs refinement.",
+  "sourceSha256": "b90e9ce8420ee23b07d8e278bcd0ef347e8bc59eff2a890474a4e190e1f4cac3",
+  "sourceSize": [
+    1983,
+    793
+  ],
+  "conversion": {
+    "columns": 5,
+    "rows": 2,
+    "height": 27,
+    "resampling": "nearest",
+    "palette": "Exact retained v7 generated class palette",
+    "paletteSha256": "f2a1d15c882bf57fa90d88f3927f251a66bb6001a49382a5fe2e2dbf433d3d7c"
+  },
+  "reviewArtifacts": [
+    "build/art/imagegen/samurai/action-study/support-v1-comparison.png",
+    "build/art/imagegen/samurai/action-study/support-v1-review.json"
+  ]
+}

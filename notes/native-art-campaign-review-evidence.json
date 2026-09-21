@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "candidateSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "files": [
+    {
+      "path": "notes/native-art-campaign-evidence.json",
+      "sha256": "cf08932d1cfb5711bc7fe5876b43701e891903cd1a1f5c9164f07a966360f02b"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T095436.195171Z/report.json",
+      "sha256": "3373482093aed62f00de8b959b7c4416468cd7348eddbfb5fe4e5f11f560965f"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T095436.195171Z/001-audit-art-campaign-compatibility.log",
+      "sha256": "68e99682d2b0911bb5eb959570c9e6593ff00e84dfa4948634be775c5c647ce2"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T095533.361272Z/report.json",
+      "sha256": "f426acde2416fdc5b09f5771b8339e36abde94297aae49aeeb13d8a3a5c58cee"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T095533.361272Z/001-audit-art-campaign-compatibility.log",
+      "sha256": "e0a35d6bdf27d281c9817f55721e76876f06280e3b42763684a2a9342cd07e53"
+    },
+    {
+      "path": "build/art/campaign-compatibility/20260919T095436.864136Z/failed.json",
+      "sha256": "cefe613f2df66a79ade420ee08393df807b7f18ac21956b03f37bc185c9e5ec8"
+    },
+    {
+      "path": "build/art/campaign-compatibility/20260919T095533.989211Z/report.json",
+      "sha256": "deaa15dcf082efb3a824526059385210a02e70bdf42415a78581683331bfcddf"
+    }
+  ]
+}

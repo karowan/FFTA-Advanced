@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "method": "built-in imagegen; conversion code does not author artwork",
+  "acceptance": "All entries are design drafts; no full production class is complete.",
+  "jobs": [
+    {
+      "job": 116,
+      "name": "Human Samurai",
+      "designStatus": "draft",
+      "privateSource": "build/art/imagegen/samurai/samurai-idle-v4.png",
+      "sourceSha256": "ef84fc13a05b9835fbd990c7d1cb9a1d1fe81161df582d2350893be371b82113",
+      "technicalConversion": "build/art/imagegen/samurai/native-v4-coverage/manifest.json",
+      "consumers": {
+        "battleActor": "partial land idle proof only",
+        "waterActor": "not accepted",
+        "jobMiniature": "not accepted",
+        "menuIcon": "not accepted",
+        "portrait": "not accepted",
+        "weapon": "not accepted",
+        "effects": "not accepted",
+        "status": "not accepted"
+      },
+      "animationDrafts": [
+        {
+          "kind": "walk",
+          "version": 1,
+          "privateSource": "build/art/imagegen/samurai/walk-v1.png",
+          "sourceSha256": "290c55d3a8fc79a1043528a6c024d75614d783cbfbd6f5844564af085b18f018",
+          "review": "Rejected facing consistency: top cells1/2 and bottom cell3 face opposite direction."
+        },
+        {
+          "kind": "walk",
+          "version": 2,
+          "privateSource": "build/art/imagegen/samurai/walk-v2.png",
+          "sourceSha256": "217025f421ecbab9897ee42c2cf36a18fb575a894bed08e394e72b222d897303",
+          "review": "Rejected visual draft; native explicit four-slot import and actual movement verified on private a860ad38. Not production accepted."
+        },
+        {
+          "kind": "native-scale march",
+          "version": 3,
+          "privateSource": "build/art/imagegen/samurai/native-scale-study/samurai-march-v3.png",
+          "sourceSha256": "cdb60ddc2fcfed6f164540da227e14c42bf56f2f5d1321435fc23b7844042395",
+          "promptRecord": "src/art/imagegen/samurai-march-v3.json",
+          "review": "Narrow native proportions. Eye and crest inconsistent after conversion."
+        },
+        {
+          "kind": "native-scale march",
+          "version": 4,
+          "privateSource": "build/art/imagegen/samurai/native-scale-study/samurai-march-v4.png",
+          "sourceSha256": "17deae2a4046fafbd2420f0f93fbefae0b6e3f96f688673977f1e5dd5b1f44d1",
+          "promptRecord": "src/art/imagegen/samurai-march-v4.json",
+          "review": "Narrow native proportions; front eye and crescent more consistent across phases. Leg motion remains weak and upper-body/back details drift. Selected for private in-game scale review only."
+        },
+        {
+          "kind": "native-scale march",
+          "version": 5,
+          "privateSource": "build/art/imagegen/samurai/native-scale-study/samurai-march-v5.png",
+          "sourceSha256": "562168d86ed633aa04bede1adc5d65c7f69c23c7a69f1337c3388914b3abcfd8",
+          "promptRecord": "src/art/imagegen/samurai-march-v5.json",
+          "review": "Rejected third-column motion: front supporting boot missing, back repeats same lead foot."
+        },
+        {
+          "kind": "native-scale march",
+          "version": 6,
+          "privateSource": "build/art/imagegen/samurai/native-scale-study/samurai-march-v6.png",
+          "sourceSha256": "f9e0b2071693f38cb856538377d75b412907b6c7c3d7d70c20ad35f8e32e0a47",
+          "promptRecord": "src/art/imagegen/samurai-march-v6.json",
+          "review": "Alternating raised feet visible in both native-converted directions. Face/helmet drift remains; unaccepted production artwork."
+        },
+        {
+          "kind": "native-scale march",
+          "version": 7,
+          "privateSource": "build/art/imagegen/samurai/native-scale-study/samurai-march-v7.png",
+          "sourceSha256": "de749df2f468578406e8c9a542a2721cfca6e38e70220d528092f1364c4a05d0",
+          "promptRecord": "src/art/imagegen/samurai-march-v7.json",
+          "review": "Selected for a private native preview; final production acceptance remains open. Source costume improved; source and native alternating steps visible. Exact pixel inspection corrects initial visual claim: all three front frames have white pixels at16,12 and16,13. v8 adds no eye-readability improvement."
+        },
+        {
+          "kind": "native-scale march",
+          "version": 8,
+          "privateSource": "build/art/imagegen/samurai/native-scale-study/samurai-march-v8.png",
+          "sourceSha256": "d687e45c361a7c2be5383112a51ef9ae54c2945cec07d8133e1d27b4a25894c9",
+          "promptRecord": "src/art/imagegen/samurai-march-v8.json",
+          "review": "Not selected over v7. Exact native review finds same two white eye pixels at16,12 and16,13 in all front cells. Earlier visual claim that v7 eyes disappear was incorrect. Top outline/crest still shifts slightly."
+        }
+      ],
+      "latestPrivateScaleReview": {
+        "manifest": "build/art/generated-actions/refined-samurai-current.json",
+        "romSha1": "0fa7d1707e2d85fb2a8602f061b5eb4479ff3211",
+        "productionAccepted": false,
+        "scope": "Land Samurai slots0-3 only; three generated poses in actual native Move/cancel. Packaged preview unchanged."
+      }
+    },
+    {
+      "job": 117,
+      "name": "Human Dark Knight",
+      "designStatus": "draft",
+      "privateSource": "build/art/imagegen/human-dark-knight/idle-v1.png",
+      "sourceSha256": "4aa2cbd53f48c27cc4a26e2d31d6c09605e4d61175338ffed71683950d4b3206",
+      "technicalConversion": "build/art/imagegen/human-dark-knight/native-v1/manifest.json",
+      "consumers": {
+        "battleActor": "not accepted",
+        "waterActor": "not accepted",
+        "jobMiniature": "not accepted",
+        "menuIcon": "not accepted",
+        "portrait": "not accepted",
+        "weapon": "not accepted",
+        "effects": "not accepted",
+        "status": "not accepted"
+      },
+      "animationDrafts": [
+        {
+          "kind": "native-scale march",
+          "version": 2,
+          "privateSource": "build/art/imagegen/human-dark-knight/march-v2.png",
+          "sourceSha256": "719a7167d89283d41e41c0570aa39eaf59e14f4edac156110ab670dba51eeff7",
+          "promptRecord": "src/art/imagegen/human-dark-knight-march-v2.json",
+          "review": "Native assigned palette changes violet steel to green and burgundy cape to brown. Own generated15-color palette retains design colors, but is not integrated. Neutral back swaps cape shoulder and front final phase repeats lead foot. Unaccepted."
+        }
+      ]
+    },
+    {
+      "job": 118,
+      "name": "Bangaa Viking",
+      "designStatus": "draft",
+      "privateSource": "build/art/imagegen/bangaa-viking/idle-v2.png",
+      "sourceSha256": "5b2ff1a1742e3527d8374c50e1181bd44e052d2569956c3b119ea6de2b2660c3",
+      "technicalConversion": "build/art/imagegen/bangaa-viking/native-v2/manifest.json",
+      "consumers": {
+        "battleActor": "not accepted",
+        "waterActor": "not accepted",
+        "jobMiniature": "not accepted",
+        "menuIcon": "not accepted",
+        "portrait": "not accepted",
+        "weapon": "not accepted",
+        "effects": "not accepted",
+        "status": "not accepted"
+      }
+    },
+    {
+      "job": 119,
+      "name": "Bangaa Dark Knight",
+      "designStatus": "draft",
+      "privateSource": "build/art/imagegen/bangaa-dark-knight/idle-v2.png",
+      "sourceSha256": "15a3d007028ae57c859fb099bede0ce6ecf167bb600c4be973707a9a594beb1b",
+      "technicalConversion": "build/art/imagegen/bangaa-dark-knight/native-v2-spaced/manifest.json",
+      "consumers": {
+        "battleActor": "not accepted",
+        "waterActor": "not accepted",
+        "jobMiniature": "not accepted",
+        "menuIcon": "not accepted",
+        "portrait": "not accepted",
+        "weapon": "not accepted",
+        "effects": "not accepted",
+        "status": "not accepted"
+      }
+    },
+    {
+      "job": 120,
+      "name": "Nu Mou Chemist",
+      "designStatus": "draft",
+      "privateSource": "build/art/imagegen/nu-mou-chemist/idle-v1.png",
+      "sourceSha256": "8f1d6617582884dfb1b0e5e1a8ee8c79891da8b5304daa5a6bd82d69fb05c5e3",
+      "technicalConversion": "build/art/imagegen/nu-mou-chemist/native-v1/manifest.json",
+      "consumers": {
+        "battleActor": "not accepted",
+        "waterActor": "not accepted",
+        "jobMiniature": "not accepted",
+        "menuIcon": "not accepted",
+        "portrait": "not accepted",
+        "weapon": "not accepted",
+        "effects": "not accepted",
+        "status": "not accepted"
+      }
+    },
+    {
+      "job": 121,
+      "name": "Nu Mou Geomancer",
+      "designStatus": "draft",
+      "privateSource": "build/art/imagegen/nu-mou-geomancer/idle-v1.png",
+      "sourceSha256": "d65e7fa4c3827632643c04a62a03d6418e30d76f64f0f1cf60cefebee85f8a3f",
+      "technicalConversion": "build/art/imagegen/nu-mou-geomancer/native-v1/manifest.json",
+      "consumers": {
+        "battleActor": "not accepted",
+        "waterActor": "not accepted",
+        "jobMiniature": "not accepted",
+        "menuIcon": "not accepted",
+        "portrait": "not accepted",
+        "weapon": "not accepted",
+        "effects": "not accepted",
+        "status": "not accepted"
+      },
+      "review": "Muzzle and staff readable; outline loss, animation scale/cadence and native integration pending."
+    },
+    {
+      "job": 122,
+      "name": "Moogle Chemist",
+      "designStatus": "draft",
+      "privateSource": "build/art/imagegen/moogle-chemist/idle-v1.png",
+      "sourceSha256": "1ab597bc85538c1b76fa82f132fc18ecac8863a5f02909acf0d79ffe456cedfe",
+      "technicalConversion": "build/art/imagegen/moogle-chemist/native-v1/manifest.json",
+      "consumers": {
+        "battleActor": "not accepted",
+        "waterActor": "not accepted",
+        "jobMiniature": "not accepted",
+        "menuIcon": "not accepted",
+        "portrait": "not accepted",
+        "weapon": "not accepted",
+        "effects": "not accepted",
+        "status": "not accepted"
+      },
+      "review": "Rejected conversion palette: light face shifts green; face/wing detail and body scale need refinement."
+    },
+    {
+      "job": 123,
+      "name": "Moogle Bard",
+      "designStatus": "draft",
+      "privateSource": "build/art/imagegen/moogle-bard/idle-v1.png",
+      "sourceSha256": "beb5ce4d4634c2ba42345f2a0f42a8e0b0a024a900d6021211ec923ec4060ca6",
+      "technicalConversion": "build/art/imagegen/moogle-bard/native-v1/manifest.json",
+      "consumers": {
+        "battleActor": "not accepted",
+        "waterActor": "not accepted",
+        "jobMiniature": "not accepted",
+        "menuIcon": "not accepted",
+        "portrait": "not accepted",
+        "weapon": "not accepted",
+        "effects": "not accepted",
+        "status": "not accepted"
+      },
+      "review": "Recognizable cap/lute design; native face outline and lute detail lose clarity; cadence pending."
+    },
+    {
+      "job": 124,
+      "name": "Viera Dancer",
+      "designStatus": "draft",
+      "privateSource": "build/art/imagegen/viera-dancer/idle-v1.png",
+      "sourceSha256": "a3a14608e03fabc8657f542d0748227c24de9bc0f16ccde0ae6d61c88f7983ab",
+      "technicalConversion": "build/art/imagegen/viera-dancer/native-v1/manifest.json",
+      "consumers": {
+        "battleActor": "not accepted",
+        "waterActor": "not accepted",
+        "jobMiniature": "not accepted",
+        "menuIcon": "not accepted",
+        "portrait": "not accepted",
+        "weapon": "not accepted",
+        "effects": "not accepted",
+        "status": "not accepted"
+      },
+      "review": "Ear/sash/sleeve silhouette present; native facial outline lost, stance and proportions need refinement."
+    },
+    {
+      "job": 125,
+      "name": "Viera Mystic Knight",
+      "designStatus": "draft",
+      "privateSource": "build/art/imagegen/viera-mystic-knight/idle-v1.png",
+      "sourceSha256": "3d8e1c803bc5f9eba870bf1899a79d84b04f2172e14a96c98849daea93e605aa",
+      "technicalConversion": "build/art/imagegen/viera-mystic-knight/native-v1-spaced/manifest.json",
+      "consumers": {
+        "battleActor": "not accepted",
+        "waterActor": "not accepted",
+        "jobMiniature": "not accepted",
+        "menuIcon": "not accepted",
+        "portrait": "not accepted",
+        "weapon": "not accepted",
+        "effects": "not accepted",
+        "status": "not accepted"
+      },
+      "review": "Equal-row conversion failed at cell1,row0 bounds143,32,367,627; transparent row cut638 succeeds. Native face/armor detail remains too sparse."
+    }
+  ]
+}

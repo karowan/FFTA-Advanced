@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "built-in tool default; specific model not exposed",
+  "status": "Native-scale design revision evidence; v5 animation consistency rejected; no installed art replacement",
+  "reference": "build/art/imagegen/samurai/native-scale-study/original-human-reference.png",
+  "referenceRole": "Original native human proportions/pixel-density only; no donor repainting",
+  "prompt": "Use case: stylized-concept. Asset type: a single production-candidate native-scale pixel-art HUMAN SAMURAI idle sprite for a Final Fantasy Tactics Advance GBA expansion. The attached original FFTA human sprites are STYLE AND SCALE REFERENCES ONLY. Create an entirely NEW costume and silhouette from a blank design; do not edit, repaint, trace or decorate any reference character. Match their unusually narrow 16-18 logical-pixel-wide, 27 logical-pixel-tall human proportions, small hands, exposed oval face, relaxed asymmetrical stance, three-quarter isometric view facing lower LEFT. This is an actual tiny game sprite, not a high-detail illustration that merely looks pixelated. Output one square transparent image consisting of an EXACT 32x32 logical pixel canvas enlarged uniformly 32 times to 1024x1024. Every logical pixel is a solid uniform 32x32 block aligned to that grid. No feature, highlight or edge smaller than one logical pixel. The figure must occupy about 18x27 logical pixels, centered with feet at logical row29. New Samurai identity: compact red lacquer kabuto with small single gold crescent at the front, exposed warm light-peach face with one clearly visible dark eye and nose profile, flared red shoulder plates, layered red lamellar cuirass and three broad skirt plates, dark violet underclothes, separated simple boots, small sheathed katana at hip. Keep katana small and sheathed; no held weapon, drawn blade, oversized crest, ninja hood or mask. Simplify costume deliberately into large coherent colored pixel clusters; strong face separation and clear hands, separated legs. Red armor silhouette must read without any microdetails. Restrict colors to these exact original-compatible colors: outline #101008, muted violet shadow #622952, muted highlight #8b6a73, warm white #ffffee, brown #ac5208, gold shadow #ee8b00, gold highlight #ffee00, red shadow #bd0808, red #ee4139, peach face #ffac9c, pale face highlight #f6d5ff, gray #c5b4c5. At most12 opaque colors plus real alpha transparency. Shading in two or three flat shades with light from upper left. No texture, antialiasing, smoothing, glows, gradients, checkerboard, drop shadow, ground, grid lines, panels, lettering, labels or watermark. Do not reproduce the reference sheet; return ONE Samurai sprite only. This narrow native silhouette and grid fidelity are the priority.",
+  "privateSource": "build/art/imagegen/samurai/native-scale-study/samurai-native-v1.png",
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-723be601-8fac-4590-948b-37ef6b825a4e.png",
+  "requestedLogicalGrid": [
+    32,
+    32
+  ],
+  "requestedOutput": [
+    1024,
+    1024
+  ],
+  "actualOutput": [
+    1254,
+    1254
+  ],
+  "conversions": [
+    "v1-nearest",
+    "v1-box"
+  ],
+  "review": "17x29/30 conversion retains visible eye and gold crescent more clearly. v5 front phases differ86 pixels and4 foot pixels; back phases190 and6. Back armor/feet vary beyond a breathing motion. Do not import as production animation.",
+  "referenceSha256": "2c95aad66a09c1c0e40a885cc4c8bfc7f16b879c40977b4490acab81e2440357",
+  "editPrompt": "Edit target: Image1 is an enlarged 32x32 indexed game sprite of our original red-armored HUMAN SAMURAI. Supporting style reference: Image2 shows original FFTA human characters for proportions and tiny pixel clusters only. This is a native-resolution correction, not a new large illustration. Make ONLY the Samurai face and helmet crest more legible at32x32. Preserve its exact32x32 logical grid, 27-pixel full-body height, narrow human silhouette, facing lower left, foot positions, red lamellar armor, violet underclothes, hands and sheathed katana; preserve genuinely transparent background. In the exposed face, simplify to a clean pale peach cluster and one clear FFTA-style white eye with a dark pupil looking lower left. Keep nose contour distinct from the dark outline. Replace the illegible orange crest fragment with a small coherent gold upward crescent using a few large logical pixel clusters, clearly detached in color from the red helmet. No new ornaments. All logical pixels must be equal-sized squares on the SAME grid as Image1; no subpixel lines, antialiasing, blur, texture, extra shading, added details or ground shadow. Keep the image a single sprite. Colors only from Image1 plus its existing warm yellow highlight. Leave body pixel clusters unchanged. Render a crisp nearest-neighbor enlargement; do not create a finer-resolution sprite. No text, no labels, no grid lines.",
+  "sheetPrompt": "Use case: stylized-concept. Asset type: four native-scale FFTA Samurai idle frames. Image1 is our NEW red-armored Samurai design; preserve this character identity. Image2 is ORIGINAL FFTA style/proportion reference only, never a donor to paint over. Make a2-column by2-row sheet on real transparent background. EXACT FOUR complete sprites, every cell equal size, consistent height/width, baseline, helmet, face, armor plates, katana sheath on anatomical left hip. TOP LEFT: Samurai idle facing lower left/front three-quarter, white eye clearly visible and gold crescent clearly readable. TOP RIGHT: SAME facing and SAME costume, second subtle breathing phase only: torso one logical pixel lower, shoulders relaxed, feet planted at identical locations. BOTTOM LEFT: SAME character seen from upper right/back three-quarter, clear back of red kabuto, back red lamellar armor, same violet underclothes and same sheathed katana on anatomical left hip; face not visible; do not draw a front-facing person here. BOTTOM RIGHT: SAME BACK facing, second subtle breathing phase, feet fixed as bottom left. All figures use the same native FFTA human proportions, approximately16-18 logical pixels wide and27 logical pixels tall on a32x32 logical canvas percell. Avoid the previous skinny14px compression: use a compact16px shoulder/helmet silhouette and a visible5x6px exposed face in front views. Design each sprite with only27 pixel rows, not a finely detailed drawing reduced later. Use uniform large square pixel clusters, clean dark colored outline, no microdetails. Front gold crescent should be a distinct small3x3 or4x3 pixel U/crescent with visible dark gap. Eye should be a clear white2x3 logical-pixel patch with dark pupil, similar readability to original FFTA; do not make the face blank. Red armor, purple-dark underclothes, pale peach face, small warm gold crest and belt fittings. Source-compatible colors only: #101008 #8b6a73 #ffffee #622952 #ac5208 #ee8b00 #ffee00 #bd0808 #ee4139 #ffac9c #f6d5ff #c5b4c5. No extra weapons; katana stays sheathed. No floor/shadows, checkerboard, text, labels, grid lines, scenery, gradients, antialiasing, sketch texture or noise. Leave generous empty space between cells, do not cross any cell boundary. Actual crisp game sprites enlarged with nearest-neighbor, not concept illustrations. Keep all FOUR exactly the same individual and outfit. Preserve actual alpha transparency.",
+  "versions": [
+    {
+      "name": "native-v1",
+      "source": "build/art/imagegen/samurai/native-scale-study/samurai-native-v1.png",
+      "sourceSha256": "71c87a54dbd79aa58a69405857f62d7eb74253f9ffd371a863e6a9dfd37fd010",
+      "columns": 1,
+      "rows": 1,
+      "conversions": [
+        {
+          "name": "v1-nearest",
+          "height": 27,
+          "resampling": "nearest"
+        },
+        {
+          "name": "v1-box",
+          "height": 27,
+          "resampling": "box"
+        }
+      ],
+      "review": "Proportions improve; eye and crescent lost at27px. Box averaging merges dark details."
+    },
+    {
+      "name": "native-v2",
+      "source": "build/art/imagegen/samurai/native-scale-study/samurai-native-v2.png",
+      "sourceSha256": "243acd94b9c8bee5595ec341564088f068f2cbfe67185229607c6ab7759f8aee",
+      "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-602dd05d-f2e4-4c3d-9fb2-ffb15d748a93.png",
+      "columns": 1,
+      "rows": 1,
+      "conversions": [
+        {
+          "name": "v2-nearest",
+          "height": 27,
+          "resampling": "nearest"
+        }
+      ],
+      "review": "Eye correction improves recognition;14px-wide conversion still loses crescent gap."
+    },
+    {
+      "name": "idle-v5",
+      "source": "build/art/imagegen/samurai/native-scale-study/samurai-idle-v5.png",
+      "sourceSha256": "835862b1994f2be07bda0137070178b539614f043b264e4d9c7438e1ea3d80fd",
+      "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-7052c348-a97c-41cd-b7bd-ba8c9643086c.png",
+      "columns": 2,
+      "rows": 2,
+      "frameMeaning": [
+        "front idle phase0",
+        "front idle phase1",
+        "back idle phase0",
+        "back idle phase1"
+      ],
+      "conversions": [
+        {
+          "name": "v5-nearest",
+          "height": 27,
+          "resampling": "nearest"
+        },
+        {
+          "name": "v5-h30",
+          "height": 30,
+          "resampling": "nearest"
+        }
+      ],
+      "review": "At30px the17px-wide sprite retains eye and crest; phase consistency fails. Not production accepted or imported."
+    }
+  ]
+}

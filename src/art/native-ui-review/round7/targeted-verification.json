@@ -1,0 +1,51 @@
+{
+  "eyePixels": [
+    [
+      7,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      10,
+      7
+    ],
+    [
+      10,
+      8
+    ]
+  ],
+  "removedTipCoordinates": [
+    [
+      5,
+      9
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      12,
+      9
+    ]
+  ],
+  "remainingPurpleAtTips": 0,
+  "changedPixels": [
+    [
+      5,
+      9
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      12,
+      9
+    ]
+  ],
+  "allOtherHeadPixelsUnchanged": true,
+  "unchangedOtherSurfaces": 19
+}

@@ -1,0 +1,27 @@
+{
+  "installedAt": "2026-09-13T22:30:19.7777613-07:00",
+  "emulator": {
+    "source": "https://github.com/mgba-emu/mgba/releases/download/0.10.5/mGBA-0.10.5-win64.7z",
+    "name": "mGBA",
+    "version": "0.10.5",
+    "archiveSHA256": "B497A57C7D9093834DADC64F33A90F7C411439C21FDB8A0143255A45EA37563A",
+    "verification": "CLI version verified; running FFTA window reports 59.9 fps; no save/resume test performed"
+  },
+  "patcher": {
+    "verification": "Browser initialized without errors; synthetic IPS/UPS/BPS round trips passed; UPS/BPS reject wrong input",
+    "archiveSHA256": "4EF8BD787820EB3D89B1709A2655C1191ED43F7089E5F4211CDA732C59AC3E65",
+    "commit": "3183884086825c3a57c72026234debcef1e2240c",
+    "name": "Rom Patcher JS",
+    "localAdaptation": "Loopback-only static server disables upstream HTTPS redirect in served webapp.js; vendor source unchanged",
+    "uiVersion": "3.3.1",
+    "source": "https://github.com/marcrobledo/RomPatcher.js"
+  },
+  "game": {
+    "sha256": "43FC8204C6DCEEE58828AEBC7AF0C72EB807E99F35AD641C8BB0A4FA8B6EDC19",
+    "playCopy": "roms/play/vanilla/FFTA_US_vanilla.gba",
+    "backup": "roms/clean/FFTA_US_clean.gba",
+    "modsApplied": [],
+    "sha1": "4AC05441F4DE70A4EC3DD932116346C61B8783D9",
+    "source": "User-provided file"
+  }
+}

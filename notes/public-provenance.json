@@ -1,0 +1,428 @@
+{
+  "schema": 1,
+  "scope": "Public redacted provenance. Original receipt bytes and old private test evidence stay in the development repository. Do not use a redacted JSON file as proof of its original receipt checksum.",
+  "files": [
+    {
+      "path": "scripts/source_hygiene.py",
+      "originalSha256": "7045b7e6b012a945f62ec3f56d8f15c2e6c7025b58c4e6d4596a1fbd5df1e97c",
+      "publicSha256": "51f08daf2e3f9c6de99589c2735969fd3f7f044f66ba03c3487f12e1623851a9"
+    },
+    {
+      "path": "src/art/imagegen/human-dark-knight-march-v2.json",
+      "originalSha256": "18891d0f7f3fec8e826b102d30af961884956c7bca93244f7e544c32038f6f71",
+      "publicSha256": "bae635cb6ffa1c0b3406ede806d7d0be63d2137943bc0d0d84f37ee2e62d276e"
+    },
+    {
+      "path": "src/art/imagegen/samurai-march-study.json",
+      "originalSha256": "f32437a88d0c8b7058e0834399a7da26239da03d872518e72cae1b45fb387c76",
+      "publicSha256": "94d47d08e0abd08d93ddabc5e2e4b127737a901cd62ece5f9e36fe837a6d9a25"
+    },
+    {
+      "path": "src/art/imagegen/samurai-march-v3.json",
+      "originalSha256": "6b147c85f22bd0013f6cabe94b9f19ad21c83979add0672d935fc17069d70907",
+      "publicSha256": "e69c9a48cd44a29caf8939091a538fcba9db65a03b7a7e24e22377e6eecc9171"
+    },
+    {
+      "path": "src/art/imagegen/samurai-march-v4.json",
+      "originalSha256": "ffc6ac276b0d37c6bac5f9c1617c6d4d95649b117fc1d5aa581e27c2397977a3",
+      "publicSha256": "7c19b7f6108f48b4ff983b6f64f4c34c47212e33eb95eb2ae294f0eeed88fc04"
+    },
+    {
+      "path": "src/art/imagegen/samurai-march-v5.json",
+      "originalSha256": "ef4eccb18a52b0ba314233adba6293583c3f70421440ea826f94d0a9e98dac07",
+      "publicSha256": "4f4105780da3e250eb3c39a98acfde70e586d4f2780546ef5d03b4e39286993b"
+    },
+    {
+      "path": "src/art/imagegen/samurai-march-v6.json",
+      "originalSha256": "919af30ef1e3f3f51e994e56e81548ecab4289af4bbb433b398bb02ff7fb4e05",
+      "publicSha256": "c68c181c52e2f219716e7b83dc5def63965d74d134217b9ca2a07d7dcb1f11b7"
+    },
+    {
+      "path": "src/art/imagegen/samurai-march-v7.json",
+      "originalSha256": "b6ff81176df4c90e00de4e4218a597cd4e4b7b77cfc67892ff39d9854f672cba",
+      "publicSha256": "87c0b789c14b906eeaab867d2ac352d941cd5ab85fa6895978ee16d5aa3e7cd8"
+    },
+    {
+      "path": "src/art/imagegen/samurai-march-v8.json",
+      "originalSha256": "a8aa62b3a1b3440cb87e3f274faa0583abd1ec713063b6b64f2b4de0ff2a9f62",
+      "publicSha256": "a678db6431ebe6acf4380ba63133660bfad25b07042a3f99e7992a06dd5a0f0e"
+    },
+    {
+      "path": "src/art/imagegen/samurai-native-study.json",
+      "originalSha256": "0ca9878d882aba69e4e14def80432609f3333524d0f78ac23511171e05923022",
+      "publicSha256": "06774e6b21bee52c1c72da20ba7bba9de0ba90a92de02d8e679529ef4765937c"
+    },
+    {
+      "path": "src/art/imagegen/samurai-support-v1.json",
+      "originalSha256": "0d76393a5d77ac43ffd8b5b00823edc0dec54c741ec766fd5102c2d0cedaa175",
+      "publicSha256": "e538fb76b155c5e9ac6adbd570ffe2de09f8603a94d9ab326411be2468ac049a"
+    },
+    {
+      "path": "src/art/native-ui-review/round4/generated-paths.json",
+      "originalSha256": "cfc62ffbb4849d6c88b4b37754fc11ad30391cd801b18723f6136ef398e53f89",
+      "publicSha256": "70ac06d5fe24fae45b410427204a4d527873f3272a5b324384a8bb56679d84e0"
+    },
+    {
+      "path": "src/art/native-ui-review/round4/pre-bangaa-eye-paths.json",
+      "originalSha256": "027f8e57308da475d65a833a76414cd4674e3362ceabbd85b53b22936b865e0d",
+      "publicSha256": "94780999b58d80c5152959da0cc83ae6af0032d2538c074969ec1bdfe8b77d51"
+    },
+    {
+      "path": "src/art/native-ui-review/round4/pre-helmet-paths.json",
+      "originalSha256": "b9f5313f0c2bf9a1fe6294a1dc107f4cd592b3f99816718bc81772e6f2a82a3c",
+      "publicSha256": "2d162553e5769f4c6814bf795bbc339a5478518817f7172991f09f45e75187fb"
+    },
+    {
+      "path": "src/art/native-ui-review/round4/single-head-paths-rejected.json",
+      "originalSha256": "161127a2b477dc1090a791bbe71ce8bcd8de8224d5d26673e3429e92cfc110f7",
+      "publicSha256": "2b45ba11fe915c1c0c07432ba61f8de993a8c55daeff3d8c25adeb744d9b569b"
+    },
+    {
+      "path": "src/art/native-ui-review/round5/generated-paths.json",
+      "originalSha256": "c2f122cc1de028219303679446fb7ca8ade99979b4e05162c13d3bff196db6b8",
+      "publicSha256": "8233f54a9f993548a0281079abc3565f04a60a4826b7ea0488f00ac783870628"
+    },
+    {
+      "path": "src/art/native-ui-review/round5/helmet-retry.json",
+      "originalSha256": "06ae2f6171709b76148ff2e995854fabf7addcc764ee749f76b48e9e78705584",
+      "publicSha256": "4ad27d45e6372b35fad5ed5a85b0bf1b2b5711613f9bf4d682f6fdf33d7b1f4a"
+    },
+    {
+      "path": "src/art/native-ui-review/round5/initial-paths.json",
+      "originalSha256": "efd99751acd868cce9b3bfb8d36f0f7338e03a15914c2160a7ebec7c8434676a",
+      "publicSha256": "72444f4f4f6dbf15d266c40421e686d4504e5af7ec3874e25853d0d93829f33e"
+    },
+    {
+      "path": "src/art/native-ui-review/round5/ornament-retry.json",
+      "originalSha256": "a2822573ffa0eeca6ee1c4d430a0f67a9aaa7adcacb7f1b2fdba028acfbc66fa",
+      "publicSha256": "0e7bc9cbb672e435b0bcda8dfe24d1731b4fd63d4dec095b73dbd334e3052e14"
+    },
+    {
+      "path": "src/art/native-ui-review/round5/pre-ornament-paths.json",
+      "originalSha256": "14076404f2f2f1fb217e232d98bc526a665c09c5d2976c452059b2ce8a8d82d9",
+      "publicSha256": "1d31c1d5fb878940da16e65ce40dcde5f9d27fe80b809260ea2428a09e8e8380"
+    },
+    {
+      "path": "src/art/native-ui-review/round6/generated-paths.json",
+      "originalSha256": "8ab93b7d8cca962aa8fb6e13badddb3303f75b71a46abcae615b19a07e9803b8",
+      "publicSha256": "f9b16d74eb405191a1206f5fa706c6406fd8eecec7b87cebfa082cc2380f3a0b"
+    },
+    {
+      "path": "src/art/native-ui-review/round7/generated-paths.json",
+      "originalSha256": "d902534ee320d8fe41bd948b5327e86403159a74417c80bad728f27e4757beab",
+      "publicSha256": "23b4989693b8036cb116522c1b9bfb2db361fdd2b2669456602a56ccc874fda9"
+    },
+    {
+      "path": "src/art/native-ui-review/round7/row-attempt-paths.json",
+      "originalSha256": "c48b22acd9ad1bd9e55ed505b574117d5038ddbe6fcc6e0718eaf40f1d61c3c9",
+      "publicSha256": "a9a2b06c8e107444ab998959456af9137dcaf1fdfb22fb9885770e34dcef55b6"
+    },
+    {
+      "path": "src/art/native-ui-review/round8/generated-path.json",
+      "originalSha256": "3355cc757e50b3dca1cc7d4515f8825c406c17d2ebc883de22adb869e52fab3c",
+      "publicSha256": "98e178e912282ad59e9e2e17ca091adaa9dc49866c4af1bcc55217af83e1d99c"
+    },
+    {
+      "path": "src/art/native-ui-review/round8/helmet-retry.json",
+      "originalSha256": "8b2dc390a2566c4548f51245ed14c9dfbcab38e5459e6c569935cfc81774ba55",
+      "publicSha256": "763c255c380b40b312667a8d526475a5647b7f2c643a7826fbbd852c3b64c8ae"
+    },
+    {
+      "path": "src/art/native-ui-review/round8/individual-initial-paths.json",
+      "originalSha256": "2a614e061f377fb2a8d04c408b0551be9159d642a23bfe3bc1c905fcd65ab3ed",
+      "publicSha256": "63aaff2e59bebe0c4e0fd85150ada890f59ffde2a53dccf7fec33f5d5a16376e"
+    },
+    {
+      "path": "src/art/native-ui-review/round8/individual-paths.json",
+      "originalSha256": "8ef502b3ae57e37f1b52c413c4397f97a20921af0a9577ed26c1ba5175a4a44c",
+      "publicSha256": "97999fd16caa20619ceebb8ebe19a28e7c957b10489f554fa7896f837b9e1e3c"
+    },
+    {
+      "path": "src/art/native-ui-review/round8/results.json",
+      "originalSha256": "78b3c0b634b7f067d64ffcb0b81fe782945c285ce9a723c881a7b9c41fa19cbc",
+      "publicSha256": "5740e43919a0f5b61e121bc4044e673b5db340794516ed29181464768c88ee16"
+    },
+    {
+      "path": "src/art/race-study/bangaa-v1.json",
+      "originalSha256": "c984d8ab828039294ddbd56dc078fe9d80219dcff1717cf3c377426326c41064",
+      "publicSha256": "27d6afc52637c4166ddde487c033f3e04288223b9554075975e644b47974c311"
+    },
+    {
+      "path": "src/art/race-study/human-distinct-r1c1.json",
+      "originalSha256": "f7141e5b4f14120a519ab90755e7777502678977eb37e5b7c266bdfa90b54838",
+      "publicSha256": "2d351c0a055d1ed4709cc710b1f1523b97e354700aff12b8c6e45eaa2934b5cb"
+    },
+    {
+      "path": "src/art/race-study/human-distinct-r1c3.json",
+      "originalSha256": "72ec111445257a63d924a63aab2c475e4b974a252a1e9b854e979620dbe51357",
+      "publicSha256": "9725a7b6f250ee2665ce61ce10a1ae9725d26300e4c5938cae81b364f26e6bb5"
+    },
+    {
+      "path": "src/art/race-study/human-distinct-r2c1.json",
+      "originalSha256": "58ea03dac14ec0211a062eef7fcedc3367a7b654e8aedfd1326d6c381a9e6f68",
+      "publicSha256": "0d91f251f0f6278d022972490898d417a4f22bd010bfac3c28606a402a792331"
+    },
+    {
+      "path": "src/art/race-study/human-distinct-r2c2.json",
+      "originalSha256": "bd226fc01e4f7ce7ee70e09ae952b4b58167704c99aaca0a858ec6aab8bcfaa6",
+      "publicSha256": "8708c86a0673a5baf028a72e34b60e5da89f9defe6f139eaeeec5e4657e37590"
+    },
+    {
+      "path": "src/art/race-study/human-distinct-r2c3.json",
+      "originalSha256": "f4dfd39bd9a2f22a4d84b593634201ca9740184017fee661d352750c1d5cc407",
+      "publicSha256": "c4b7d8314f649094d15cf8f46ff2268d902f7b73aedcf9f75f5514f7ecfd39c2"
+    },
+    {
+      "path": "src/art/race-study/human-granular-r1c1.json",
+      "originalSha256": "c9a3f008792e9c55b14f011a8de4691c7a179583b433bf4e7ba74db275781815",
+      "publicSha256": "385f97c61f2d82ed7d42724836211507afc8af13c8459019c1d4b94911bc5e36"
+    },
+    {
+      "path": "src/art/race-study/human-granular-r1c3.json",
+      "originalSha256": "083e0d9c5bc89a263682cca07bff8d871580efa21620a62cd49a6cae6b3618dc",
+      "publicSha256": "db014950e5088c2235db1bffb401af24a864b521f12927f9891c5f6c26e4894e"
+    },
+    {
+      "path": "src/art/race-study/human-granular-r2c1.json",
+      "originalSha256": "10fdb9d9fc966af1141f58a0c66aab219663d7b1e13403a6e404e5f9d69636ae",
+      "publicSha256": "020b8fbb52a9d4830e3b11381d98bd1346d251d689b71711b3a6ef3df2e694e6"
+    },
+    {
+      "path": "src/art/race-study/human-granular-r2c2.json",
+      "originalSha256": "78c207f0cdb72ab042a437b0fd7592a3224000e23ae2d86cf6cb36c13678693d",
+      "publicSha256": "3e093c64ff1031b78453afdc1fd63aa0bdd11a178bc81666f3b7e551b70444f1"
+    },
+    {
+      "path": "src/art/race-study/human-granular-r2c3.json",
+      "originalSha256": "7d4c058d68d40f6b05a040c077c0423b14db12c5af5bc3e3a9cbbe04271c3a01",
+      "publicSha256": "bae77f0c88bfed16baffb7a38b34e47e3b9375fc981ddb567a36e3d60d474bb0"
+    },
+    {
+      "path": "src/art/race-study/human-v1.json",
+      "originalSha256": "4a3b7dc9a88038c7a6b7d460561cc49b2311053860009e429f956b9482b6ce5a",
+      "publicSha256": "df788c13782f31f6b4f9f80ed6dd28c63d4a66350a8bcab9611f79a9f16503ee"
+    },
+    {
+      "path": "src/art/race-study/moogle-v1.json",
+      "originalSha256": "0d1169efb14c07b654c9cbf305a46cf4f4a4ad64e90c3c9e4ab672b7afe0cd25",
+      "publicSha256": "9124295ceae3b1c86744d083bd9ceac3a11e9ac31fae00f459b92df6246bedc9"
+    },
+    {
+      "path": "src/art/race-study/nonhuman-native-color-v1.json",
+      "originalSha256": "cbd95944a17794c3040220c26bf444d9cfc0f8f1702ea859d967515b731b8adb",
+      "publicSha256": "ccc5d69b9d31a16f36e60d92b5078d8508f22bc1e3d098f5e2b8eded271fe07e"
+    },
+    {
+      "path": "src/art/race-study/nu-mou-v1.json",
+      "originalSha256": "c8244b46fc74282265b760dbf901b2e0c0c2f950f2787e28d986ab3f6ee691fb",
+      "publicSha256": "c241b093b9ae4943d663f01335cd1f7b95fdbc5f9062766db43bc24aaf021881"
+    },
+    {
+      "path": "src/art/race-study/viera-v1.json",
+      "originalSha256": "59fc0411f99071ec3773874a3f97d0009bfad6bd95f1611cd9b073b2e74f5a8c",
+      "publicSha256": "8ba70e7aeea25c7a51ddee37674b6f4f76e24351bc08dd2603abc12db51be930"
+    }
+  ],
+  "formattingOnly": [
+    {
+      "path": "Build Engine.ps1",
+      "originalSha256": "cc2fc1aa273f24694686292c3a9c262f6f9e4f37645961a0e429636ae3b04dd1",
+      "publicSha256": "680994a5f67fd5f4b2b8de1e2112afee988971f96dd5dd6a81ed343db415610d"
+    },
+    {
+      "path": "notes/chop-integration-review.md",
+      "originalSha256": "7e0226309c64962e7d39e2cad1c3fafa9607ec159443852de5d5eb2ed6af90b7",
+      "publicSha256": "1edac7c903e4011226565b6c78569f409aa907a62d6f278e0ce311436770c379"
+    },
+    {
+      "path": "notes/combo-integration-review.md",
+      "originalSha256": "c790e30ef6d5fea4fa935bf1bd81b200db15106eb587c21c64b46ff8967e4a86",
+      "publicSha256": "670f6187b165e88fd223b1609015792da7bd495639b19aae7afe8cb78e58742c"
+    },
+    {
+      "path": "notes/command-iteration-review.md",
+      "originalSha256": "ecce495b8f32dea4c6e9744ef5129b6763d750c4b16244a10f8d5f722c64f313",
+      "publicSha256": "1b5f891f556631612307164e9e2e3be8aaa32f60663a6f96d910727b0b466b31"
+    },
+    {
+      "path": "notes/council-chop-native.md",
+      "originalSha256": "1228af74b8babff0a17bcad38c1bf9638c7cc0eb97994639fc53b479ad587a47",
+      "publicSha256": "5336d6a11a90fbd82d182fa4499b5a316bd2fcb6695893056164037d9d85feae"
+    },
+    {
+      "path": "notes/council-command-lists.md",
+      "originalSha256": "3443df97608a8f0a8dcc63629a22743d00f94d34612a0c6b32986931b4041155",
+      "publicSha256": "fe973d3c052d68abd60857e29c56daaa032da24949fd576a3034acc32279900b"
+    },
+    {
+      "path": "notes/engineering-checkpoint-history.md",
+      "originalSha256": "155ec400e8fa5410db38afc9ce59751a52929d7269deb9e74bde39e2a2d311ef",
+      "publicSha256": "81e20c88b8df2c7d8d42b2f62cc1f1331b8a1ac50c57047de9526e1e54236e16"
+    },
+    {
+      "path": "notes/grace-support-review.md",
+      "originalSha256": "5189d3c1abb011686844cdb2fc26a26c99abd61695ddc1594012bb3cff00e427",
+      "publicSha256": "0e8e59f943a91cb5cfe4b83b2bb41d1cbb46c9e3f6a5f58802cbff78969c61aa"
+    },
+    {
+      "path": "notes/reward-popup-review.md",
+      "originalSha256": "d5ce9afca512b5a50f2d21555a09a2fca995330776283cba91479d747c7561bf",
+      "publicSha256": "d66b7e9f0787519add4db5d5596a5677ec0359fe2ad9a538e932b3df7a199cfb"
+    },
+    {
+      "path": "notes/samurai-remaining-engineering.md",
+      "originalSha256": "6fc98ad6efe9c0f9d00f9fcee6fde552effeff36dd2257d410ba644649c839d5",
+      "publicSha256": "0bc45d53f6c2ac4912bda46519f9ab3a6b404a8b449fc5cdeee8dfbae3f4b755"
+    },
+    {
+      "path": "scripts/build-foundation.mjs",
+      "originalSha256": "85e9dd6f73afe3af2232251e4e950d27f4fe8eba98608509f2fab8d0208723e9",
+      "publicSha256": "e6a9591a5908ba70200475494dadfae5d3ba346f37355ed1a7282581e752eeef"
+    },
+    {
+      "path": "scripts/build-samurai-probe.py",
+      "originalSha256": "bce54ce2bcd96f3f29f9c25a84e1c0e785818273a53e5514794b389c84628e58",
+      "publicSha256": "6df2f71f83447d79874e18fbdaeb67adbbc8d025efc9e0adf661b27d680c3388"
+    },
+    {
+      "path": "scripts/jobs/chemist/build.py",
+      "originalSha256": "157e3ea3b7503134e00b8bcb03815a64f46372a1ce0e1dd1f2013f34cddb962c",
+      "publicSha256": "1959985177975dad8ca50d93a9a25e9151b58f658de2b4f74b46ad5afd2c68f7"
+    },
+    {
+      "path": "scripts/jobs/chemist/test-choices-game.py",
+      "originalSha256": "3fc66425072ecc91246606c7ed571a1eacce52f3a15e7d15d6cb954a3967cd4f",
+      "publicSha256": "0a618a80df9ca202b57198eb02331f32ac0e2c06fc802b6af3eee50d9764aba4"
+    },
+    {
+      "path": "scripts/jobs/chemist/test-menu.py",
+      "originalSha256": "f07dcfe14bebb25c0477b318fe6fe8fce38558e01f7d676f950a2b3cff3d0e51",
+      "publicSha256": "a8457bb6e6267d05778ebbd2c8d1f7319b602ffb4e33ad685454759c4c9028f5"
+    },
+    {
+      "path": "scripts/jobs/chemist/test-supports.py",
+      "originalSha256": "e08c75f6f0a47bae7e593061c4ed53437d3bdccd6512f8cc4cc6bb8c1b682a87",
+      "publicSha256": "efee706603d4a25bc7df6da5f8f456ba7f50a7ada6098b050846afd29e6872de"
+    },
+    {
+      "path": "scripts/jobs/dark-knight/test-help.py",
+      "originalSha256": "5ef60ffe3d4e6650b9f2a89fb4f8884287ad7e596399763dfebd8b1499fe0d43",
+      "publicSha256": "04782ad8964438e8f7a15ed0e54d7d405597e00adffab4404097156d82a59e49"
+    },
+    {
+      "path": "scripts/jobs/viking/test-damage-passives.py",
+      "originalSha256": "1703e60970ee303a80f2e1741abd3640157df19a0571b8e31754fe5d2c77d604",
+      "publicSha256": "dc69ab1b2c03f0c77fbd72306369780f74042cebc11716f2f7f40f4642548839"
+    },
+    {
+      "path": "scripts/jobs/viking/test-state-effects.py",
+      "originalSha256": "b20a6b187ae4a2554b3f361062bf4cc70c9d3013b861303a443e3f06cbe86662",
+      "publicSha256": "ed84c71c993a20b50b38614cac5dd4a30c430575773b354a5e34c8dd4f7631fa"
+    },
+    {
+      "path": "scripts/package-foundation.mjs",
+      "originalSha256": "043baa8b92842240d31beecfcac2bae9d74e86a559b0c624a3d6136bb9f3ed68",
+      "publicSha256": "380e47e0383fc424d52488bcf959d1d17bf0873938283e83b42fa08a4989164a"
+    },
+    {
+      "path": "scripts/patch-evaluated-units.mjs",
+      "originalSha256": "438820aa1bc8f4f03dd2c4578c16c8928fad3635ecb9f51178b954320f61d92d",
+      "publicSha256": "2e17cdb77f1dfe2a037bf04c1abd37d467d314431cbce91e3118724f199d7904"
+    },
+    {
+      "path": "scripts/test-all-new-jobs-in-game.py",
+      "originalSha256": "7c25e6b72037f895857f6ff4e897f93bada28fc024818128fbbd8b27bcd7f2fc",
+      "publicSha256": "5cb22e0081f2b097116744a95c88eab17a58e09b845d4c56004fb7eedee8c5ee"
+    },
+    {
+      "path": "scripts/test-ap-counts.py",
+      "originalSha256": "6b06f1afadd3d757011b3de54c9fbd532fa9bc1ab2434e46ff151740387b8471",
+      "publicSha256": "e6d18a8667cffab0ec47a6a32c5bbc0cf23f9c885bd71ae88a383d28b3a2ad90"
+    },
+    {
+      "path": "scripts/test-arcs-in-game.py",
+      "originalSha256": "0f7b48df6a8232f14dfe3aa07f7b32354054941a63cbe01b7a5a4d9fb1e2b4e9",
+      "publicSha256": "197d87eabccdb484430ac534d9759b796ca91dbbd2660eac7a2a2be5c06efb16"
+    },
+    {
+      "path": "scripts/test-axe-visuals.py",
+      "originalSha256": "2b056667a0978c09ee804a686e2724474a99f1c286784eeec5872052c9f6925e",
+      "publicSha256": "5a1c6df725e1e99d2f48c3dfb46260a5a4a1f7226fdd09655b7e829c1928c610"
+    },
+    {
+      "path": "scripts/test-battle-lifecycle-in-game.py",
+      "originalSha256": "cd284bd67ead774dc83902437f2695b9d3b9a664497401bf4bc0be72632675cd",
+      "publicSha256": "4be678000351fb0c7adfbc95af9ad49338634ff1d9d776f8e5e6d185e1d71d9b"
+    },
+    {
+      "path": "scripts/test-combos-native.py",
+      "originalSha256": "7a7ebb0c143b2930a353952aad1a7b2c05a0ef0a7a06f021a91a0c687abfc4c5",
+      "publicSha256": "ea3f8e8e3889e8f78cf6d99af1b3f95d0200163566f5512a198091c2260e6bf6"
+    },
+    {
+      "path": "scripts/test-command-predicates.py",
+      "originalSha256": "25396b4e76f2c65a2801bb301b7b9343233e1a00c5958a7f80009b91438bc9d2",
+      "publicSha256": "10430ec9490f899a90b08b92c1d754ecdb04c152d5a288d183bdacf633f771ad"
+    },
+    {
+      "path": "scripts/test-exposed-storage.py",
+      "originalSha256": "c4ffb2be1aa2a1617cedba7823a31d17f523ac5ada24605805c2ae26775f9315",
+      "publicSha256": "cf5b7569640d5cba4c341001c74e3e7068b1a3d7b913d8861fd41f3ae4b449d5"
+    },
+    {
+      "path": "scripts/test-grace-in-game.py",
+      "originalSha256": "88828d8282e73b781256128f86eda2bb5c99dbff8df94727f4d9255f0413ca7e",
+      "publicSha256": "1c9a752cc7ef40ed18f48e92d327621c529a1cc2603040d47485aa1dfdb552d8"
+    },
+    {
+      "path": "scripts/test-grace-native.py",
+      "originalSha256": "5c2e163ad907ea7e62b1f51076afcd702bacb658b4bdeca605f67593b159ac7e",
+      "publicSha256": "23d5165db0ab305f29d0c4fef723e6ce8c3f9189eb374b07958b0616f9eac95a"
+    },
+    {
+      "path": "scripts/test-menu-routines.py",
+      "originalSha256": "4dd7ba3dd15c9eb3b9c0935c8d34665b834ed3b0e6c7d202924e94c24a90d22f",
+      "publicSha256": "4fdcc02fa598c35481976e25fc7cf91c5cefc0df98392235d99031fa8ee4e90d"
+    },
+    {
+      "path": "scripts/test-party-command-lists.py",
+      "originalSha256": "2ef7826bc214ac41ce1fb161eb980e5941e5f53b12338026c3af7ec0d8a80918",
+      "publicSha256": "46fc87909f6346702f37695fc4f45a8c566b697c428baa86be14de2b3129f54f"
+    },
+    {
+      "path": "scripts/test-quin-lifecycle-in-game.py",
+      "originalSha256": "2e4afe84c237e54de6c518d62e8a78c38bb585b0df97a1f9b892be4f0ef18ead",
+      "publicSha256": "25501d4c498bc631db32e758b0bc5c0792345026ef9c93205794b87d0cf43647"
+    },
+    {
+      "path": "scripts/test-recruit-prerequisites.py",
+      "originalSha256": "89900965364d3847a578412e55820c6c0847432ead51700720a14f1380297f8e",
+      "publicSha256": "e463363d6da019695127b73edfddcbd824a653d2c7a53e945437391e29eb304f"
+    },
+    {
+      "path": "scripts/test-shop-native-compatibility.py",
+      "originalSha256": "2a45ac978b456c91c78fbfb6c9b5f19ed292f51840b5829c1f59046230a1f8e1",
+      "publicSha256": "13e7d197e59bb1317050efe67aefe1d6fc55477ac50bcc6b1fa2f10688e2c8d1"
+    },
+    {
+      "path": "src/engine/chemist-items.c",
+      "originalSha256": "133d3bb9e8e6d527f3e61379f5773fc1ba8e81c015f6a2af03752c82363ae5cb",
+      "publicSha256": "54d46908ef5e446b4160ea512d38d746b5276caa8b240de966ad879975619d81"
+    },
+    {
+      "path": "src/engine/chemist-menu.c",
+      "originalSha256": "66ac6f1eccd4326e6873c7b81ff1986929a8641530db2f58e3812be4dc8ab2c3",
+      "publicSha256": "86d7a58586b7d355c2068ad12d00ca9ae484fe1d025e31ef7820254e11c8aea9"
+    },
+    {
+      "path": "src/engine/chemist-state.c",
+      "originalSha256": "366b28bbd7a0b6662b573a377a909af6a6f49d0f9330650f7b354298a0b9ff8a",
+      "publicSha256": "1259a7cdd20c8dc2fc144ea70d9b4092935a41c15e979aac93a2d9bdffc40475"
+    },
+    {
+      "path": "src/engine/chemist-state.s",
+      "originalSha256": "462636482129765cff05aa90f409d70166d067c7a1b72f687b5c1f03bdfaa78b",
+      "publicSha256": "ecc5ff0e7558315e3a70fbdb2ba612792205bb4ac81952b70a36bde84845cc0b"
+    }
+  ]
+}

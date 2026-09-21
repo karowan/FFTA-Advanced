@@ -1,0 +1,2412 @@
+{
+  "assets": [
+    {
+      "job": 116,
+      "slug": "human-samurai",
+      "race": "human",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "In image 1, edit only the FIFTH icon, the red Samurai. Make the helmet more compact: narrow its side guards by one logical pixel on each side and reduce its crown height slightly. Preserve the gold crescent, red armor, front-facing face and exact eye positions. The helmet should fit the same head scale as the original human jobs, rather than filling the entire cell. Image 3 shows the only available colors. Keep the entire row and all other icons unchanged. Keep the coarse 16x14 pixel grid per head, with no finer details and no text. Do not move or rescale the face.",
+      "references": [
+        {
+          "path": "build/art/ui-detail-v5-2026-09-20/human-samurai/edit-row.png",
+          "sha256": "badfcd21a0c12d20c6d7e6ea8721dcc743624681dce76895c36a5fe8ea2318ba"
+        },
+        {
+          "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+          "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+        },
+        {
+          "path": "build/art/ui-detail-v5-2026-09-20/human-samurai/native-colors.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-002.png",
+            "sha256": "8f14b229588c916bacc9261c479ba18b12df08d2fc03ba369c8bc950ed5608ce"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-004.png",
+            "sha256": "6c72efdcbcef959203f6df36a0019ddb8016d1ffc5a2b712d9d6daff09b2a0b2"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-007.png",
+            "sha256": "1092602e0c32ae7a814c48239e112eb2220b61fc24acac13c122732a15038b6f"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-009.png",
+            "sha256": "df79c341432eaf68baa93ab408dc7e0737151ca6af1a9b019aa3cd8592a77dd8"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          6,
+          7,
+          12,
+          11
+        ],
+        "coordinates": [
+          [
+            6,
+            7,
+            11
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            11,
+            7,
+            11
+          ],
+          [
+            6,
+            8,
+            3
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            11,
+            8,
+            3
+          ],
+          [
+            6,
+            9,
+            7
+          ],
+          [
+            7,
+            9,
+            7
+          ],
+          [
+            8,
+            9,
+            7
+          ],
+          [
+            9,
+            9,
+            7
+          ],
+          [
+            10,
+            9,
+            7
+          ],
+          [
+            11,
+            9,
+            7
+          ],
+          [
+            7,
+            10,
+            7
+          ],
+          [
+            8,
+            10,
+            7
+          ],
+          [
+            9,
+            10,
+            7
+          ],
+          [
+            10,
+            10,
+            7
+          ],
+          [
+            11,
+            10,
+            6
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-references.png",
+          "sha256": "c53d0c962350cb196451ef45f3f884f5be43f99f0db8c6226095c745da1a71e2"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-anchor-layer.png",
+          "sha256": "fdf4fd8b2003394f821cbfe4d4c56a07bfc4f1ef177e879135cb1f3a7908b7db"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-frontal-template.png",
+          "sha256": "37b54582089594af892b6c1172a0a577b348ffc7e73537431c6f649b220d6b6f"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      },
+      "logicalSize": [
+        80,
+        14
+      ],
+      "crop": [
+        64,
+        0,
+        80,
+        14
+      ],
+      "worksheetBox": [
+        0,
+        165,
+        2170,
+        542
+      ],
+      "layoutDeviation": "Fifth cell edited. Transparent letterbox removed using >98% opaque row span.",
+      "raw": {
+        "path": "build/art/ui-detail-v5-2026-09-20/human-samurai/generated-icon.png",
+        "sha256": "81d8109a49b9ae9d9b2137658efa07466b1b519fe97c4a30f843d0759dc53da5"
+      },
+      "sampled": {
+        "path": "build/art/ui-detail-v5-2026-09-20/human-samurai/icon-sampled.png",
+        "sha256": "8388d3b624e9a230db35bce4e818e1d807c9966a597cc8412667cf7c34432a5a"
+      },
+      "native": {
+        "path": "build/art/ui-detail-v5-2026-09-20/human-samurai/icon-native.png",
+        "sha256": "ac88940037d6454cca2ab62eee66b8a92a4b1e5c569e64f8591e5fe0bcdad2cc"
+      },
+      "palette": {
+        "words": [
+          18991,
+          1090,
+          14769,
+          30719,
+          10412,
+          1365,
+          573,
+          959,
+          1079,
+          7453,
+          20159,
+          32606,
+          25304,
+          27792,
+          32245,
+          32506
+        ]
+      },
+      "paletteError": 727.6205357142857,
+      "anchorProof": {
+        "count": 19,
+        "matchingBefore": 8,
+        "matchingAfter": 19
+      },
+      "tool": "image_gen.imagegen",
+      "model": "Tool managed",
+      "conversion": "Fixed grid sampling, native palette conversion; exposed faces restore only exact shared indexed pixels from the four native references. Helmet landmarks require visual review."
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "race": "human",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "In this row, edit only the FIFTH head. Keep its front-facing symmetric helmet. Reduce the helmet to the same overall head width as the original icons and shift its center right to match them. It must be symmetric around the midpoint between logical pixel columns 8 and 9 in its 16x14 cell. Its golden eyes must be in columns 7 and 10, both occupying rows 7 and 8, counting from zero. The current eyes are in columns 5 and 9, which is wrong. Keep the blue cloth behind the right side, but the helmet itself must have mirrored edges, brow and cheek plates. Preserve the other four icons and the full row layout.",
+      "references": [
+        {
+          "path": "build/art/ui-detail-v5-2026-09-20/human-dark-knight/helmet-retry-input.png",
+          "sha256": "293a7e54b8dead483655292e269989134fb8761acd785cf142e653148bfeaffa"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "anchorMode": "helmet-landmarks-only",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-002.png",
+            "sha256": "8f14b229588c916bacc9261c479ba18b12df08d2fc03ba369c8bc950ed5608ce"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-004.png",
+            "sha256": "6c72efdcbcef959203f6df36a0019ddb8016d1ffc5a2b712d9d6daff09b2a0b2"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-007.png",
+            "sha256": "1092602e0c32ae7a814c48239e112eb2220b61fc24acac13c122732a15038b6f"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-009.png",
+            "sha256": "df79c341432eaf68baa93ab408dc7e0737151ca6af1a9b019aa3cd8592a77dd8"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          6,
+          7,
+          12,
+          11
+        ],
+        "coordinates": [
+          [
+            6,
+            7,
+            11
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            11,
+            7,
+            11
+          ],
+          [
+            6,
+            8,
+            3
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            11,
+            8,
+            3
+          ],
+          [
+            6,
+            9,
+            7
+          ],
+          [
+            7,
+            9,
+            7
+          ],
+          [
+            8,
+            9,
+            7
+          ],
+          [
+            9,
+            9,
+            7
+          ],
+          [
+            10,
+            9,
+            7
+          ],
+          [
+            11,
+            9,
+            7
+          ],
+          [
+            7,
+            10,
+            7
+          ],
+          [
+            8,
+            10,
+            7
+          ],
+          [
+            9,
+            10,
+            7
+          ],
+          [
+            10,
+            10,
+            7
+          ],
+          [
+            11,
+            10,
+            6
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-references.png",
+          "sha256": "c53d0c962350cb196451ef45f3f884f5be43f99f0db8c6226095c745da1a71e2"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-anchor-layer.png",
+          "sha256": "fdf4fd8b2003394f821cbfe4d4c56a07bfc4f1ef177e879135cb1f3a7908b7db"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-frontal-template.png",
+          "sha256": "37b54582089594af892b6c1172a0a577b348ffc7e73537431c6f649b220d6b6f"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      },
+      "logicalSize": [
+        80,
+        14
+      ],
+      "crop": [
+        64,
+        0,
+        80,
+        14
+      ],
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Fifth cell; transparent letterbox removed.",
+      "registration": {
+        "affine": [
+          1.3333333333333333,
+          0,
+          -4.5,
+          0,
+          1,
+          0
+        ],
+        "reason": "Fixed horizontal registration maps generated eye columns 5 and 9 to native columns 7 and 10. No inferred bounding box, mirroring or painted pixels."
+      },
+      "raw": {
+        "path": "build/art/ui-detail-v5-2026-09-20/human-dark-knight/generated-icon-v2.png",
+        "sha256": "980fe307943c8d7d49d02e1b1dbd8cb4d98b2bb5aa8b10780a413243496f9310"
+      },
+      "sampled": {
+        "path": "build/art/ui-detail-v5-2026-09-20/human-dark-knight/icon-sampled.png",
+        "sha256": "f053659584cb22b31f5c271a1a4baa3c14cd4a1b1fa52eccd7b188eaf23911aa"
+      },
+      "native": {
+        "path": "build/art/ui-detail-v5-2026-09-20/human-dark-knight/icon-native.png",
+        "sha256": "0712ae2df69be83eeea4b379dab4ab114601d4905f7b441d319c71982be01938"
+      },
+      "palette": {
+        "words": [
+          18995,
+          1090,
+          14860,
+          30719,
+          10533,
+          1333,
+          573,
+          991,
+          27972,
+          32267,
+          30511,
+          30680,
+          23316,
+          1508,
+          4872,
+          5040
+        ]
+      },
+      "paletteError": 1148.8988095238096,
+      "anchorProof": {
+        "count": 4,
+        "matchingAfter": 4,
+        "goldEyeCoordinates": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ]
+        ],
+        "method": "Generated eye pixels validated at native eye columns 7 and 10; no face pixels composited into helmets."
+      },
+      "tool": "image_gen.imagegen",
+      "model": "Tool managed",
+      "conversion": "Fixed grid sampling, native palette conversion; exposed faces restore only exact shared indexed pixels from the four native references. Helmet landmarks require visual review."
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "kind": "portrait",
+      "nativeSize": [
+        48,
+        56
+      ],
+      "prompt": "Correct only the two golden eyes in image 1 to match the original FFT Dark Knight in image 2: two matching, simple vertical rounded golden ovals inside black helmet darkness. Both eyes must have the SAME rounded shape, not a plus sign, rectangle or human eye. Make each oval large enough to stay rounded on the 48x56 logical pixel grid, approximately 3 pixels wide and 4 pixels tall. Keep their separation and everything else unchanged: helmet, trim, cloth, pose, silhouette, canvas. Return only the portrait, transparent background, hard pixel edges.",
+      "references": [
+        {
+          "path": "build/art/ui-detail-v5-2026-09-20/human-dark-knight/portrait-edit.png",
+          "sha256": "052f54b34b13994d62ac947719dcfdc3b837cc2969a29e2fa7d5823a49389a81"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/fft-dark-knight-user-reference.png",
+          "sha256": "8458c53526f638c7bd0f52f7ed5db2fdfdbfa3a6d0a99c6e6613b9bf9b3e6992"
+        }
+      ],
+      "paletteChoices": [
+        {
+          "job": 10,
+          "index": 16,
+          "words": [
+            1841,
+            1091,
+            5287,
+            7433,
+            9581,
+            13775,
+            15891,
+            19094,
+            21174,
+            23255,
+            24313,
+            27450,
+            27482,
+            28539,
+            31710,
+            32767,
+            8497,
+            12450,
+            13504,
+            18723,
+            21926,
+            28167,
+            28298,
+            27373,
+            7672,
+            6716,
+            11965,
+            6847,
+            13087,
+            8596,
+            10710,
+            13849,
+            14940,
+            17118,
+            20255,
+            22335,
+            23391,
+            25471,
+            26527,
+            27583,
+            28639,
+            29695,
+            30176,
+            32736,
+            18894,
+            23221,
+            27447,
+            32699
+          ]
+        }
+      ],
+      "paletteDecision": "Existing human job 10 palette keeps gold eyes, dark armor and blue cloth; full original palette retained.",
+      "sampling": "area",
+      "samplingReason": "Coverage sampling preserves both narrow eye curves instead of nearest-point phase aliasing.",
+      "raw": {
+        "path": "build/art/ui-detail-v5-2026-09-20/human-dark-knight/generated-portrait.png",
+        "sha256": "5ebed7386645bd0ecac7194bf2b0e230c973771af68b2e62435e0105bb5f9f26"
+      },
+      "sampled": {
+        "path": "build/art/ui-detail-v5-2026-09-20/human-dark-knight/portrait-sampled.png",
+        "sha256": "8e9237b6ed6acd7bf409c672c58f37087a8514db2c2bb5363d2e9abffe67baca"
+      },
+      "native": {
+        "path": "build/art/ui-detail-v5-2026-09-20/human-dark-knight/portrait-native.png",
+        "sha256": "c34454bfdd44240ee2f5621aa8e23a2bf816f8d582fef8f8e7a1195112277d59"
+      },
+      "palette": {
+        "job": 10,
+        "index": 16,
+        "words": [
+          1841,
+          1091,
+          5287,
+          7433,
+          9581,
+          13775,
+          15891,
+          19094,
+          21174,
+          23255,
+          24313,
+          27450,
+          27482,
+          28539,
+          31710,
+          32767,
+          8497,
+          12450,
+          13504,
+          18723,
+          21926,
+          28167,
+          28298,
+          27373,
+          7672,
+          6716,
+          11965,
+          6847,
+          13087,
+          8596,
+          10710,
+          13849,
+          14940,
+          17118,
+          20255,
+          22335,
+          23391,
+          25471,
+          26527,
+          27583,
+          28639,
+          29695,
+          30176,
+          32736,
+          18894,
+          23221,
+          27447,
+          32699
+        ]
+      },
+      "paletteError": 96.5600414078675,
+      "anchorProof": {},
+      "tool": "image_gen.imagegen",
+      "model": "Tool managed",
+      "conversion": "Fixed grid sampling, native palette conversion; exposed faces restore only exact shared indexed pixels from the four native references. Helmet landmarks require visual review."
+    },
+    {
+      "job": 124,
+      "slug": "viera-dancer",
+      "race": "viera",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "In image 1, edit only the FIFTH icon into a clearly recognizable Viera Dancer using image 2. Emphasize her SHORT chin-length white bob with exposed neck, large bright GOLD HOOP jewelry on her ear, and a bold wine-red high collar. Simplify the hair into a compact silhouette, not long white strands. Her head must look recognizably different from a long-haired armored knight. Keep the original frontal face and exact eye positions. Image 3 shows the only available colors. Keep the entire row and all other icons unchanged. Keep the coarse 16x14 pixel grid per head, with no finer details and no text. Do not move or rescale the face.",
+      "references": [
+        {
+          "path": "build/art/ui-detail-v5-2026-09-20/viera-dancer/edit-row.png",
+          "sha256": "d596eaeb77f1da3719c4fce37fbf04b6be447c91b5c284830a7ba80c06f8d583"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-dancer.png",
+          "sha256": "38f1c29837fe0e540e4f751e34fa1654ce0fca57da763eca4d2ccf9723dc8b5e"
+        },
+        {
+          "path": "build/art/ui-detail-v5-2026-09-20/viera-dancer/native-colors.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-028.png",
+            "sha256": "e4410e086f6b799d4255e687b0e03a06717d602c538c3813eb4ab353b545bfca"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-029.png",
+            "sha256": "ba3266f1a2c6133f7e795ab2828278ea159368809136a3502c1a1d1c5e3ade2c"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-031.png",
+            "sha256": "32c97861894ce2448139085e1d11e756aa04a347f902e8f68ef1c2c79cc1c599"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-033.png",
+            "sha256": "6927540bad8736bfe2c2608a17bced108ffcdbde408e575167ff2d00a1661b8f"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          7,
+          6,
+          11,
+          10
+        ],
+        "coordinates": [
+          [
+            7,
+            6,
+            4
+          ],
+          [
+            8,
+            6,
+            6
+          ],
+          [
+            9,
+            6,
+            6
+          ],
+          [
+            10,
+            6,
+            4
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            8,
+            7,
+            6
+          ],
+          [
+            9,
+            7,
+            6
+          ],
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            9,
+            9,
+            11
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-references.png",
+          "sha256": "d30a3b3741a527230e5500324b956ddac1c1f2d8063c4619acc201134ef5aa43"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-anchor-layer.png",
+          "sha256": "49bb1aed4d9403a8d112edbf107955bfaf15ab6afcd0718666b83c73c39826d8"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-frontal-template.png",
+          "sha256": "624510888c5b2993100b06cefed30b6c546e5e11b58ef8788bf561d20d88c72b"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      },
+      "logicalSize": [
+        80,
+        14
+      ],
+      "crop": [
+        64,
+        0,
+        80,
+        14
+      ],
+      "conversionAnchors": {
+        "coordinates": [
+          [
+            7,
+            5,
+            6
+          ],
+          [
+            6,
+            6,
+            4
+          ],
+          [
+            7,
+            6,
+            4
+          ],
+          [
+            8,
+            6,
+            6
+          ],
+          [
+            9,
+            6,
+            6
+          ],
+          [
+            10,
+            6,
+            4
+          ],
+          [
+            11,
+            6,
+            4
+          ],
+          [
+            6,
+            7,
+            3
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            8,
+            7,
+            6
+          ],
+          [
+            9,
+            7,
+            6
+          ],
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            11,
+            7,
+            3
+          ],
+          [
+            6,
+            8,
+            3
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            8,
+            8,
+            10
+          ],
+          [
+            9,
+            8,
+            10
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            11,
+            8,
+            3
+          ],
+          [
+            6,
+            9,
+            10
+          ],
+          [
+            7,
+            9,
+            10
+          ],
+          [
+            8,
+            9,
+            10
+          ],
+          [
+            9,
+            9,
+            11
+          ],
+          [
+            10,
+            9,
+            10
+          ],
+          [
+            11,
+            9,
+            10
+          ],
+          [
+            6,
+            10,
+            6
+          ],
+          [
+            7,
+            10,
+            10
+          ],
+          [
+            8,
+            10,
+            10
+          ],
+          [
+            9,
+            10,
+            10
+          ],
+          [
+            10,
+            10,
+            10
+          ],
+          [
+            11,
+            10,
+            6
+          ],
+          [
+            6,
+            11,
+            5
+          ],
+          [
+            7,
+            11,
+            6
+          ],
+          [
+            8,
+            11,
+            10
+          ],
+          [
+            9,
+            11,
+            10
+          ],
+          [
+            10,
+            11,
+            6
+          ],
+          [
+            11,
+            11,
+            4
+          ]
+        ],
+        "agreementJobs": [
+          28,
+          31,
+          33
+        ],
+        "faceRegion": [
+          6,
+          5,
+          12,
+          12
+        ],
+        "reason": "Use the three uncovered native Viera faces for skin and lower-face agreement; masked job 29 stays a silhouette reference."
+      },
+      "badgePaletteSourceSlug": "viera-mystic-knight",
+      "paletteDecision": "Use the existing native plum badge palette, including its peach skin ramp, as original uncovered Viera icons do.",
+      "worksheetBox": [
+        0,
+        170,
+        2170,
+        550
+      ],
+      "layoutDeviation": "Opaque black letterboxing; visible row bounds inspected at y170..550, fifth cell.",
+      "raw": {
+        "path": "build/art/ui-detail-v5-2026-09-20/viera-dancer/generated-icon.png",
+        "sha256": "64351373f320a0d15f9ec1138267e3c7666a3ae83e742fce3d74103ddd0df178"
+      },
+      "sampled": {
+        "path": "build/art/ui-detail-v5-2026-09-20/viera-dancer/icon-sampled.png",
+        "sha256": "3e1b9f589dd313605ae93e439b3e357f8269252fca7811690e769b4ea2f0e55c"
+      },
+      "native": {
+        "path": "build/art/ui-detail-v5-2026-09-20/viera-dancer/icon-native.png",
+        "sha256": "8d600c8e7671b47659f3ba033053e076308fbfb0b630d8a63c13c5e73df8998f"
+      },
+      "palette": {
+        "words": [
+          18991,
+          1090,
+          14769,
+          30719,
+          10412,
+          1365,
+          573,
+          959,
+          1079,
+          7453,
+          20159,
+          32606,
+          25304,
+          27792,
+          32245,
+          32506
+        ]
+      },
+      "paletteError": 467.8482142857143,
+      "anchorProof": {
+        "count": 37,
+        "matchingBefore": 11,
+        "matchingAfter": 37
+      },
+      "tool": "image_gen.imagegen",
+      "model": "Tool managed",
+      "conversion": "Fixed grid sampling, native palette conversion; exposed faces restore only exact shared indexed pixels from the four native references. Helmet landmarks require visual review."
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "race": "viera",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "In image 1, edit only the FIFTH icon into a clearly recognizable Viera Mystic Knight using image 2. Emphasize her LONG swept white hair and the distinctive angular dark-metal and GOLD temple ornament with a red jewel beside the ear. Give the bottom of the icon a dark armored collar with the blue cloth tucked behind it. Make the rigid angular ornament and armored silhouette readable in a few bold pixels, distinctly unlike a dancer with a short bob and hoop jewelry. Keep the original frontal face and exact eye positions. Image 3 shows the only available colors. Keep the entire row and all other icons unchanged. Keep the coarse 16x14 pixel grid per head, with no finer details and no text. Do not move or rescale the face.",
+      "references": [
+        {
+          "path": "build/art/ui-detail-v5-2026-09-20/viera-mystic-knight/edit-row.png",
+          "sha256": "7e99335c0a76975e958924aecaeeb0811b2dbbcaa20083036ae2623cc54edde4"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-mystic-knight.png",
+          "sha256": "791865c5d5065c1b8a5348b8f9bbcd69bd3f4a0ccc104a7fbc8466e21b919a5e"
+        },
+        {
+          "path": "build/art/ui-detail-v5-2026-09-20/viera-mystic-knight/native-colors.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-028.png",
+            "sha256": "e4410e086f6b799d4255e687b0e03a06717d602c538c3813eb4ab353b545bfca"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-029.png",
+            "sha256": "ba3266f1a2c6133f7e795ab2828278ea159368809136a3502c1a1d1c5e3ade2c"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-031.png",
+            "sha256": "32c97861894ce2448139085e1d11e756aa04a347f902e8f68ef1c2c79cc1c599"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-033.png",
+            "sha256": "6927540bad8736bfe2c2608a17bced108ffcdbde408e575167ff2d00a1661b8f"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          7,
+          6,
+          11,
+          10
+        ],
+        "coordinates": [
+          [
+            7,
+            6,
+            4
+          ],
+          [
+            8,
+            6,
+            6
+          ],
+          [
+            9,
+            6,
+            6
+          ],
+          [
+            10,
+            6,
+            4
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            8,
+            7,
+            6
+          ],
+          [
+            9,
+            7,
+            6
+          ],
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            9,
+            9,
+            11
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-references.png",
+          "sha256": "d30a3b3741a527230e5500324b956ddac1c1f2d8063c4619acc201134ef5aa43"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-anchor-layer.png",
+          "sha256": "49bb1aed4d9403a8d112edbf107955bfaf15ab6afcd0718666b83c73c39826d8"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-frontal-template.png",
+          "sha256": "624510888c5b2993100b06cefed30b6c546e5e11b58ef8788bf561d20d88c72b"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      },
+      "logicalSize": [
+        80,
+        14
+      ],
+      "crop": [
+        64,
+        0,
+        80,
+        14
+      ],
+      "conversionAnchors": {
+        "coordinates": [
+          [
+            7,
+            5,
+            6
+          ],
+          [
+            6,
+            6,
+            4
+          ],
+          [
+            7,
+            6,
+            4
+          ],
+          [
+            8,
+            6,
+            6
+          ],
+          [
+            9,
+            6,
+            6
+          ],
+          [
+            10,
+            6,
+            4
+          ],
+          [
+            11,
+            6,
+            4
+          ],
+          [
+            6,
+            7,
+            3
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            8,
+            7,
+            6
+          ],
+          [
+            9,
+            7,
+            6
+          ],
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            11,
+            7,
+            3
+          ],
+          [
+            6,
+            8,
+            3
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            8,
+            8,
+            10
+          ],
+          [
+            9,
+            8,
+            10
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            11,
+            8,
+            3
+          ],
+          [
+            6,
+            9,
+            10
+          ],
+          [
+            7,
+            9,
+            10
+          ],
+          [
+            8,
+            9,
+            10
+          ],
+          [
+            9,
+            9,
+            11
+          ],
+          [
+            10,
+            9,
+            10
+          ],
+          [
+            11,
+            9,
+            10
+          ],
+          [
+            6,
+            10,
+            6
+          ],
+          [
+            7,
+            10,
+            10
+          ],
+          [
+            8,
+            10,
+            10
+          ],
+          [
+            9,
+            10,
+            10
+          ],
+          [
+            10,
+            10,
+            10
+          ],
+          [
+            11,
+            10,
+            6
+          ],
+          [
+            6,
+            11,
+            5
+          ],
+          [
+            7,
+            11,
+            6
+          ],
+          [
+            8,
+            11,
+            10
+          ],
+          [
+            9,
+            11,
+            10
+          ],
+          [
+            10,
+            11,
+            6
+          ],
+          [
+            11,
+            11,
+            4
+          ]
+        ],
+        "agreementJobs": [
+          28,
+          31,
+          33
+        ],
+        "faceRegion": [
+          6,
+          5,
+          12,
+          12
+        ],
+        "reason": "Use the three uncovered native Viera faces for skin and lower-face agreement; masked job 29 stays a silhouette reference."
+      },
+      "worksheetBox": [
+        0,
+        170,
+        2170,
+        551
+      ],
+      "layoutDeviation": "Fifth cell edited. Transparent letterbox removed using >98% opaque row span.",
+      "raw": {
+        "path": "build/art/ui-detail-v5-2026-09-20/viera-mystic-knight/generated-icon.png",
+        "sha256": "01b9b197cb7a6cc210a19a4184ab80841a061bd86d6a2ff083ae83209390fa47"
+      },
+      "sampled": {
+        "path": "build/art/ui-detail-v5-2026-09-20/viera-mystic-knight/icon-sampled.png",
+        "sha256": "cf54aee8fe0e467c78ecaf8c2e5d57a3ac625dd9079f31bf738aff6ea428e6ae"
+      },
+      "native": {
+        "path": "build/art/ui-detail-v5-2026-09-20/viera-mystic-knight/icon-native.png",
+        "sha256": "a994928e7f4b8eb90b671b26a6122cc9fec1bffa1e8a4f337b050c256501d759"
+      },
+      "palette": {
+        "words": [
+          18991,
+          1090,
+          14769,
+          30719,
+          10412,
+          1365,
+          573,
+          959,
+          1079,
+          7453,
+          20159,
+          32606,
+          25304,
+          27792,
+          32245,
+          32506
+        ]
+      },
+      "paletteError": 579.9776785714286,
+      "anchorProof": {
+        "count": 37,
+        "matchingBefore": 10,
+        "matchingAfter": 37
+      },
+      "tool": "image_gen.imagegen",
+      "model": "Tool managed",
+      "conversion": "Fixed grid sampling, native palette conversion; exposed faces restore only exact shared indexed pixels from the four native references. Helmet landmarks require visual review."
+    }
+  ],
+  "contracts": {
+    "human": {
+      "references": [
+        {
+          "path": "build/art/native-reference/ui/job-002.png",
+          "sha256": "8f14b229588c916bacc9261c479ba18b12df08d2fc03ba369c8bc950ed5608ce"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-004.png",
+          "sha256": "6c72efdcbcef959203f6df36a0019ddb8016d1ffc5a2b712d9d6daff09b2a0b2"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-007.png",
+          "sha256": "1092602e0c32ae7a814c48239e112eb2220b61fc24acac13c122732a15038b6f"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-009.png",
+          "sha256": "df79c341432eaf68baa93ab408dc7e0737151ca6af1a9b019aa3cd8592a77dd8"
+        }
+      ],
+      "crop": [
+        1,
+        1,
+        17,
+        15
+      ],
+      "faceRegion": [
+        6,
+        7,
+        12,
+        11
+      ],
+      "coordinates": [
+        [
+          6,
+          7,
+          11
+        ],
+        [
+          7,
+          7,
+          1
+        ],
+        [
+          10,
+          7,
+          1
+        ],
+        [
+          11,
+          7,
+          11
+        ],
+        [
+          6,
+          8,
+          3
+        ],
+        [
+          7,
+          8,
+          1
+        ],
+        [
+          10,
+          8,
+          1
+        ],
+        [
+          11,
+          8,
+          3
+        ],
+        [
+          6,
+          9,
+          7
+        ],
+        [
+          7,
+          9,
+          7
+        ],
+        [
+          8,
+          9,
+          7
+        ],
+        [
+          9,
+          9,
+          7
+        ],
+        [
+          10,
+          9,
+          7
+        ],
+        [
+          11,
+          9,
+          7
+        ],
+        [
+          7,
+          10,
+          7
+        ],
+        [
+          8,
+          10,
+          7
+        ],
+        [
+          9,
+          10,
+          7
+        ],
+        [
+          10,
+          10,
+          7
+        ],
+        [
+          11,
+          10,
+          6
+        ]
+      ],
+      "referenceStrip": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/human-references.png",
+        "sha256": "c53d0c962350cb196451ef45f3f884f5be43f99f0db8c6226095c745da1a71e2"
+      },
+      "layer": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/human-anchor-layer.png",
+        "sha256": "fdf4fd8b2003394f821cbfe4d4c56a07bfc4f1ef177e879135cb1f3a7908b7db"
+      },
+      "frontalTemplate": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/human-frontal-template.png",
+        "sha256": "37b54582089594af892b6c1172a0a577b348ffc7e73537431c6f649b220d6b6f"
+      },
+      "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+    },
+    "bangaa": {
+      "references": [
+        {
+          "path": "build/art/native-reference/ui/job-013.png",
+          "sha256": "610c2c5d8a3fd99eff63ff4c3db6232dc209d25284bd20df134259b26b18d7cd"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-015.png",
+          "sha256": "75e6253e84a2ac59ab975f7ecfad03045404048733e2021749ccdb5d9784230b"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-016.png",
+          "sha256": "63b444629a35902c5be8c823dea7602075360d96bdf689762093ea0b2878ed73"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-018.png",
+          "sha256": "0fa959b2c775297f2488904d735ba7603d16ef616e60cace21d8cf59dba2e1aa"
+        }
+      ],
+      "crop": [
+        1,
+        1,
+        17,
+        15
+      ],
+      "faceRegion": [
+        6,
+        7,
+        12,
+        14
+      ],
+      "coordinates": [
+        [
+          10,
+          7,
+          1
+        ],
+        [
+          7,
+          8,
+          1
+        ],
+        [
+          10,
+          8,
+          1
+        ],
+        [
+          7,
+          9,
+          6
+        ],
+        [
+          9,
+          9,
+          7
+        ],
+        [
+          10,
+          9,
+          6
+        ],
+        [
+          8,
+          12,
+          7
+        ],
+        [
+          9,
+          12,
+          3
+        ],
+        [
+          10,
+          12,
+          7
+        ],
+        [
+          6,
+          13,
+          1
+        ],
+        [
+          8,
+          13,
+          7
+        ],
+        [
+          9,
+          13,
+          7
+        ],
+        [
+          10,
+          13,
+          6
+        ],
+        [
+          11,
+          13,
+          1
+        ]
+      ],
+      "referenceStrip": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-references.png",
+        "sha256": "c3a4bfee75a64e86a88e2321c5ab3178907b9fe5420987711eb33320f795a822"
+      },
+      "layer": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-anchor-layer.png",
+        "sha256": "b9f8dd5f59c5d865e1edf6561d95aa76f8c0ba39fd4ba68ea6d22753724939be"
+      },
+      "frontalTemplate": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-frontal-template.png",
+        "sha256": "f10b69d5d3432700e6eb277e3fc9302a154f33569d37fc0046b309be92620a42"
+      },
+      "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+    },
+    "nu-mou": {
+      "references": [
+        {
+          "path": "build/art/native-reference/ui/job-020.png",
+          "sha256": "59eb467d8da8b1e9639cfc1369ef85ef2e9ab65a8ba21034951e5c7f847d9152"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-022.png",
+          "sha256": "0fb63492a564a99b0aab8d7e83be21945cf50ea33be51e8b86d622dc3ebda847"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-023.png",
+          "sha256": "ddc4bba7005da0ff14df63555b23ae8e7832b6221ff08785f7e0a1ef9fdc0907"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-027.png",
+          "sha256": "be211d87ffc348b866c75bd877f446b41d722dc4099481d4105a42d7f8ebc46b"
+        }
+      ],
+      "crop": [
+        1,
+        1,
+        17,
+        15
+      ],
+      "faceRegion": [
+        4,
+        7,
+        13,
+        14
+      ],
+      "coordinates": [
+        [
+          4,
+          7,
+          2
+        ],
+        [
+          5,
+          7,
+          12
+        ],
+        [
+          6,
+          7,
+          12
+        ],
+        [
+          7,
+          7,
+          12
+        ],
+        [
+          8,
+          7,
+          11
+        ],
+        [
+          9,
+          7,
+          12
+        ],
+        [
+          10,
+          7,
+          11
+        ],
+        [
+          11,
+          7,
+          11
+        ],
+        [
+          12,
+          7,
+          12
+        ],
+        [
+          4,
+          8,
+          2
+        ],
+        [
+          5,
+          8,
+          2
+        ],
+        [
+          6,
+          8,
+          1
+        ],
+        [
+          7,
+          8,
+          12
+        ],
+        [
+          8,
+          8,
+          12
+        ],
+        [
+          9,
+          8,
+          12
+        ],
+        [
+          10,
+          8,
+          1
+        ],
+        [
+          11,
+          8,
+          12
+        ],
+        [
+          12,
+          8,
+          12
+        ],
+        [
+          4,
+          9,
+          1
+        ],
+        [
+          5,
+          9,
+          4
+        ],
+        [
+          6,
+          9,
+          12
+        ],
+        [
+          7,
+          9,
+          11
+        ],
+        [
+          8,
+          9,
+          11
+        ],
+        [
+          9,
+          9,
+          11
+        ],
+        [
+          10,
+          9,
+          12
+        ],
+        [
+          11,
+          9,
+          4
+        ],
+        [
+          12,
+          9,
+          1
+        ],
+        [
+          4,
+          10,
+          4
+        ],
+        [
+          5,
+          10,
+          11
+        ],
+        [
+          6,
+          10,
+          11
+        ],
+        [
+          7,
+          10,
+          3
+        ],
+        [
+          8,
+          10,
+          3
+        ],
+        [
+          9,
+          10,
+          3
+        ],
+        [
+          10,
+          10,
+          11
+        ],
+        [
+          11,
+          10,
+          11
+        ],
+        [
+          12,
+          10,
+          2
+        ],
+        [
+          4,
+          11,
+          12
+        ],
+        [
+          5,
+          11,
+          12
+        ],
+        [
+          6,
+          11,
+          11
+        ],
+        [
+          7,
+          11,
+          3
+        ],
+        [
+          8,
+          11,
+          3
+        ],
+        [
+          9,
+          11,
+          3
+        ],
+        [
+          10,
+          11,
+          11
+        ],
+        [
+          11,
+          11,
+          11
+        ],
+        [
+          12,
+          11,
+          12
+        ],
+        [
+          4,
+          12,
+          4
+        ],
+        [
+          5,
+          12,
+          12
+        ],
+        [
+          6,
+          12,
+          12
+        ],
+        [
+          7,
+          12,
+          2
+        ],
+        [
+          8,
+          12,
+          11
+        ],
+        [
+          9,
+          12,
+          2
+        ],
+        [
+          10,
+          12,
+          12
+        ],
+        [
+          11,
+          12,
+          11
+        ],
+        [
+          12,
+          12,
+          12
+        ],
+        [
+          4,
+          13,
+          4
+        ],
+        [
+          5,
+          13,
+          2
+        ],
+        [
+          6,
+          13,
+          2
+        ],
+        [
+          7,
+          13,
+          12
+        ],
+        [
+          8,
+          13,
+          4
+        ],
+        [
+          9,
+          13,
+          12
+        ],
+        [
+          10,
+          13,
+          2
+        ],
+        [
+          11,
+          13,
+          12
+        ],
+        [
+          12,
+          13,
+          2
+        ]
+      ],
+      "referenceStrip": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-references.png",
+        "sha256": "589e83b3ae6d5ce4067b527f32d8ed3a87be6d3ba60f081383b2719a28ad9d68"
+      },
+      "layer": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-anchor-layer.png",
+        "sha256": "0e968a6d12684926905864a82168fe02660df77a96629f55e3f4664d10b0c576"
+      },
+      "frontalTemplate": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-frontal-template.png",
+        "sha256": "2435759ab395ba8852be104f49160eee10d116abc9d106f30ff965755d3a4d52"
+      },
+      "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+    },
+    "moogle": {
+      "references": [
+        {
+          "path": "build/art/native-reference/ui/job-037.png",
+          "sha256": "f564c59b19119af5d18707afcd3731ac603f2628066f5f821b6cd172fdc73d65"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-036.png",
+          "sha256": "0c5b1ed8cd6b0493faeb5bf39935a3f2271b174774fbd9ccd0fd52d257240b7c"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-039.png",
+          "sha256": "cbaaf1f7c1be7c0d6087493778a5ef3ba5bfefba9b5dd653b029c416f69edc16"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-041.png",
+          "sha256": "b49a323d7086590760ec3b1ce60981e29ec6cf881370bd25c7eb10ac67f19e9b"
+        }
+      ],
+      "crop": [
+        1,
+        1,
+        17,
+        15
+      ],
+      "faceRegion": [
+        5,
+        8,
+        13,
+        13
+      ],
+      "coordinates": [
+        [
+          6,
+          8,
+          1
+        ],
+        [
+          8,
+          8,
+          11
+        ],
+        [
+          9,
+          8,
+          11
+        ],
+        [
+          11,
+          8,
+          1
+        ],
+        [
+          5,
+          9,
+          11
+        ],
+        [
+          6,
+          9,
+          1
+        ],
+        [
+          7,
+          9,
+          12
+        ],
+        [
+          8,
+          9,
+          5
+        ],
+        [
+          9,
+          9,
+          11
+        ],
+        [
+          10,
+          9,
+          11
+        ],
+        [
+          11,
+          9,
+          1
+        ],
+        [
+          5,
+          10,
+          11
+        ],
+        [
+          6,
+          10,
+          11
+        ],
+        [
+          7,
+          10,
+          11
+        ],
+        [
+          8,
+          10,
+          6
+        ],
+        [
+          9,
+          10,
+          5
+        ],
+        [
+          10,
+          10,
+          11
+        ],
+        [
+          12,
+          10,
+          3
+        ],
+        [
+          5,
+          11,
+          12
+        ],
+        [
+          6,
+          11,
+          11
+        ],
+        [
+          7,
+          11,
+          11
+        ],
+        [
+          8,
+          11,
+          5
+        ],
+        [
+          9,
+          11,
+          5
+        ],
+        [
+          10,
+          11,
+          11
+        ],
+        [
+          11,
+          11,
+          11
+        ],
+        [
+          12,
+          11,
+          11
+        ],
+        [
+          6,
+          12,
+          12
+        ],
+        [
+          7,
+          12,
+          12
+        ],
+        [
+          8,
+          12,
+          12
+        ],
+        [
+          9,
+          12,
+          11
+        ],
+        [
+          10,
+          12,
+          11
+        ],
+        [
+          11,
+          12,
+          12
+        ],
+        [
+          12,
+          12,
+          2
+        ]
+      ],
+      "referenceStrip": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/moogle-references.png",
+        "sha256": "a7967a75c601307823d61dea5e883032ef965e9878e41007a2a1948e63950982"
+      },
+      "layer": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/moogle-anchor-layer.png",
+        "sha256": "1a11325e3a0b12552b540b078ceec3e44a2deecc781739fb9545def114788f0b"
+      },
+      "frontalTemplate": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/moogle-frontal-template.png",
+        "sha256": "5e450864da6160452361520aec86f43bbbc8907488dff7e7dd303355b4b0ffab"
+      },
+      "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+    },
+    "viera": {
+      "references": [
+        {
+          "path": "build/art/native-reference/ui/job-028.png",
+          "sha256": "e4410e086f6b799d4255e687b0e03a06717d602c538c3813eb4ab353b545bfca"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-029.png",
+          "sha256": "ba3266f1a2c6133f7e795ab2828278ea159368809136a3502c1a1d1c5e3ade2c"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-031.png",
+          "sha256": "32c97861894ce2448139085e1d11e756aa04a347f902e8f68ef1c2c79cc1c599"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-033.png",
+          "sha256": "6927540bad8736bfe2c2608a17bced108ffcdbde408e575167ff2d00a1661b8f"
+        }
+      ],
+      "crop": [
+        1,
+        1,
+        17,
+        15
+      ],
+      "faceRegion": [
+        7,
+        6,
+        11,
+        10
+      ],
+      "coordinates": [
+        [
+          7,
+          6,
+          4
+        ],
+        [
+          8,
+          6,
+          6
+        ],
+        [
+          9,
+          6,
+          6
+        ],
+        [
+          10,
+          6,
+          4
+        ],
+        [
+          7,
+          7,
+          1
+        ],
+        [
+          8,
+          7,
+          6
+        ],
+        [
+          9,
+          7,
+          6
+        ],
+        [
+          10,
+          7,
+          1
+        ],
+        [
+          7,
+          8,
+          1
+        ],
+        [
+          10,
+          8,
+          1
+        ],
+        [
+          9,
+          9,
+          11
+        ]
+      ],
+      "referenceStrip": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/viera-references.png",
+        "sha256": "d30a3b3741a527230e5500324b956ddac1c1f2d8063c4619acc201134ef5aa43"
+      },
+      "layer": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/viera-anchor-layer.png",
+        "sha256": "49bb1aed4d9403a8d112edbf107955bfaf15ab6afcd0718666b83c73c39826d8"
+      },
+      "frontalTemplate": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/viera-frontal-template.png",
+        "sha256": "624510888c5b2993100b06cefed30b6c546e5e11b58ef8788bf561d20d88c72b"
+      },
+      "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+    }
+  }
+}

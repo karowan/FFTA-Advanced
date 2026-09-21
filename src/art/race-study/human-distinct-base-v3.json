@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "Not exposed by tool",
+  "prompt": "Use case: identity-preserve. Correct the face orientation of the original FFTA cook sprite in image 1, using image 2 as the precise visual authority for face angle and eye visibility.\nImage 1 is the edit target and original character identity. Image 2 is the user's native FFTA style reference showing four characters facing left with their right/far eye still clearly visible.\nThe user says the current sprite is still too turned. Do not guess an additional numeric rotation: match the actual native reference face construction. Keep the character facing LEFT in the same three-quarter orientation as the reference characters, with BOTH eyes clearly readable, including the right/far eye. The reference uses a broad enough visible face plane and careful eye placement; reproduce that relationship rather than a near-profile face with a tiny sliver for the second eye. Match the references' amount of visible forehead, two-eye placement, nose position, cheek width and head-to-shoulder orientation. Do not make a straight-on portrait. Make the right/far eye a clear separate native pixel cluster, not an indistinct dark edge of the head. Keep small FFTA eyes and avoid oversized modern anime eyes.\nPreserve our DISTINCT bald cook: uncovered bald rounded scalp, dark compact jaw beard, tan skin, rolled cream sleeves, ochre split apron, teal sash with tail at anatomical left hip, brown trousers and boots. Do not copy any reference hairstyle, beret, hat, helmet or costume. Keep the body standing pose, hands, feet, body scale, canvas position, sparse pixel density and palette as close to image 1 as possible. Change the head/face orientation and minimal neck alignment needed, not the character design.\nOne complete sprite only, genuine transparent background. Crisp low-resolution pixel clusters; no new textures, soft shading, shadow, glow, text, grid or additional figures.",
+  "references": [
+    "build/art/race-study-2026-09-19/human-distinct-base-v2.png",
+    "build/art/race-study-2026-09-19/user-face-reference.png"
+  ],
+  "status": "Base iteration only; match user native reference face angle and clearly visible right eye; not accepted",
+  "source": "build/art/race-study-2026-09-19/human-distinct-base-v3.png",
+  "sourceSha256": "7290ee1e7d52bd676dfa69d00941245ae6a545e5f9e122575f901c01f9e290b8",
+  "referenceSha256": [
+    "8cb0fd6effd90514e189e78f51a8e4cd8d3474196f72701849ddcc59c9f1d2cb",
+    "ce3f98d107f0328a6bb3728330f6de901f23a50364a82f99e0949773cd7101ee"
+  ]
+}

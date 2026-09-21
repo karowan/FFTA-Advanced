@@ -1,0 +1,78 @@
+{
+  "romSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "scope": "Fresh generic Dark Knight/native Combo initiator and new Viking Combo participant. Exact native-donor outcome and native hardware/body observations. Not all-class/action/E02 acceptance.",
+  "files": [
+    {
+      "path": "build/art/native-combo-participation/20260919T073016.151723Z/report.json",
+      "sha256": "4fe7fe4f87d5eda872ee19bbfbb8b550210d4b9058cf54aab2377e82ba429288"
+    },
+    {
+      "path": "build/art/native-hidden-constructor/20260919T072942.071942Z/report.json",
+      "sha256": "f0c50f98821e24c867ab99deb97fae48abb4daa5c801a0705c81908391b55d76"
+    },
+    {
+      "path": "build/art/native-only-oam/20260919T072942.224097Z/report.json",
+      "sha256": "f893d2dc14639ff88f7f5be657ef33e0ebbe0504781085862bd12e17459b2228"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T072442.211336Z/report.json",
+      "sha256": "3384e4f5526849659cade7b272255dd6b8067ab43431c2ce10ee3b4ecd20be78"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T072941.306526Z/report.json",
+      "sha256": "eb9f60359c6e2695607b93f55959dd33a8c3e90155240cb48cc6686044b340be"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T073015.399691Z/report.json",
+      "sha256": "f31c33533ab28db1ae71ae3a77a138478525625a0586451652cfe7a906d68399"
+    },
+    {
+      "path": "build/art/native-combo-participation/20260919T072442.986387Z/expanded-failed.ram",
+      "sha256": "fd107235d14c869017c6af75dfa04af0cbfa0b5941ed2e652cd45b059cd92394"
+    },
+    {
+      "path": "build/art/native-combo-participation/20260919T072442.986387Z/expanded-failed.iwram",
+      "sha256": "ac4e2a3035706963428f6cfb7cd414d9d730fa57e3e6ec4cdd49bb84aad6a739"
+    },
+    {
+      "path": "build/art/native-combo-participation/20260919T072442.986387Z/expanded-failed.vram",
+      "sha256": "bb6e521c10cdc1e18c9b220e72ff5b53a5571edfa17586b5262e071aa929a456"
+    },
+    {
+      "path": "build/art/native-combo-participation/20260919T072442.986387Z/expanded-failed.oam",
+      "sha256": "da590edb5d596d657466a548cd933b52d3df265cb23d4d53c7088cea589082b0"
+    },
+    {
+      "path": "build/art/native-combo-participation/20260919T072442.986387Z/expanded-failed.palette",
+      "sha256": "e04a05e0c81fb2cbc73c99f4c688562609d5f8ceac6aa7fbc4f311d8a70f1030"
+    },
+    {
+      "path": "build/art/native-combo-participation/20260919T072442.986387Z/expanded-failed.state",
+      "sha256": "798689621b34d2cb234204a3e092addaf60ca307b3406da72989d8ba09e5cde8"
+    },
+    {
+      "path": "build/art/native-combo-participation/20260919T072442.986387Z/failed.json",
+      "sha256": "f2aab3479b43c548ff7be134b5a696411b3086b2621a763a251883774d263bfa"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-ready.state",
+      "sha256": "729482f1eb53f6e1513dcb48f3291bb9826256c7b59cc76120f56eb827724d9b"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-ready.ram",
+      "sha256": "75c47c61a1d248f9eb3691514d3ef51f4ebd7ef5eef7e702d16631246b8fb062"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/candidate-ready.iwram",
+      "sha256": "9967342e48cbf3e91d61e7045e428d32536806626a3b6135e96d5f92fd2ce179"
+    },
+    {
+      "path": "build/art/native-palette-entry/20260919T070815.647048Z/report.json",
+      "sha256": "dce9e34ef41d7105b1f0d39547355e910af0c0ee2a943a90c086fbb297355fd7"
+    },
+    {
+      "path": "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json",
+      "sha256": "9ea2a9f08521e78d19ec4895a2fdeb50ca45c3da9ce736bd344647921dba4f85"
+    }
+  ]
+}

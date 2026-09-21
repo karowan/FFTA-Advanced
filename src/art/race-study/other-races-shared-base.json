@@ -1,0 +1,284 @@
+{
+  "tool": "built-in image_gen",
+  "model": "tool default; model version not exposed",
+  "settings": "Only prompt and referenced_image_paths supplied; other settings tool-managed.",
+  "scope": "One front-facing neutral pose per race. Shared pixels are exact across the four listed references only.",
+  "races": [
+    {
+      "race": "bangaa",
+      "references": [
+        {
+          "actor": 11,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0336a0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-011\\0336a0-000000-pose.png",
+          "sourceSha256": "31d9d0793d7d9cbaeecefcdf9db87c4c1f15ca9a6ac7eebcc892174880845e19",
+          "manifestSha256": "33bef4187f72eca9d021dab5c92987662e29dca56821dc924b4ff67421b99723"
+        },
+        {
+          "actor": 13,
+          "slot": 0,
+          "frame": 1,
+          "pose": "03c520-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-013\\03c520-000000-pose.png",
+          "sourceSha256": "6dccbeaeaf314572bbad67aa63ae921ea48aff587a2837e31b76f9daf2c48f1d",
+          "manifestSha256": "7d396e252d1907f50ca69f74a11bd896808e1b4aa5e261439d90e05817d3606e"
+        },
+        {
+          "actor": 14,
+          "slot": 0,
+          "frame": 1,
+          "pose": "040be0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-014\\040be0-000000-pose.png",
+          "sourceSha256": "3ea94489c12eca56ea71141fd5f4f71f7ea40394fd54e63111229bfe51b03831",
+          "manifestSha256": "fc4d19d320b828703f9cc2e3c2705ae416732c7c3a7aeb0bda2966687e2deaed"
+        },
+        {
+          "actor": 16,
+          "slot": 0,
+          "frame": 1,
+          "pose": "049820-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-016\\049820-000000-pose.png",
+          "sourceSha256": "46c1ca821d128ef113b1ab706ba1a1108e8717733c9fb42bb2bf1e01d5967d70",
+          "manifestSha256": "fdf75198c0cafe6f3212cc5566d18565cc5eb7c7d8714d2a264293e9c3622398"
+        }
+      ],
+      "commonForegroundPixels": 97,
+      "prompt": "Turn the fifth sprite into a Bangaa cook job using the SAME underlying Bangaa pixel base as the others. Keep the shared face, eyes, anatomy, pose and pixel positions unchanged. Change only the job-specific appearance: cream rolled sleeves, mustard apron and teal sash, no hat. Keep the entire row and its layout.",
+      "template": "build\\art\\race-study-2026-09-19\\other-races\\bangaa-template.png",
+      "templateSha256": "0ce6b433f808d5e3898391223561d4f3930f30420c4896ca84cc950b1a41604b"
+    },
+    {
+      "race": "nu-mou",
+      "references": [
+        {
+          "actor": 18,
+          "slot": 0,
+          "frame": 1,
+          "pose": "052700-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-018\\052700-000000-pose.png",
+          "sourceSha256": "06153a7d3385b9cfc4eb563723b5e9f9089378eda46a2d7669d92f5aeb85b513",
+          "manifestSha256": "d2841e46de217aac0f6fa6690d6c8bccd9d70715286ff862c6fc83e063da2590"
+        },
+        {
+          "actor": 20,
+          "slot": 0,
+          "frame": 1,
+          "pose": "05c020-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-020\\05c020-000000-pose.png",
+          "sourceSha256": "d5ccd2def582800f59c59c371cac1bb8d0174575abd7d5ec7f5f46caf5446ed2",
+          "manifestSha256": "05f87d0ac06147de8058a0283d51c8baede681185fe995c019442942017c1922"
+        },
+        {
+          "actor": 21,
+          "slot": 0,
+          "frame": 1,
+          "pose": "060c60-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-021\\060c60-000000-pose.png",
+          "sourceSha256": "52f695118ef71e266e1d15c315db3e9f8c5631555f0919e84353425c4b959a67",
+          "manifestSha256": "452acdc20b482920ffdf006a08135feb3eb63d9ad771cc51bc072f50d8b6522c"
+        },
+        {
+          "actor": 25,
+          "slot": 0,
+          "frame": 1,
+          "pose": "073c20-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-025\\073c20-000000-pose.png",
+          "sourceSha256": "091687de8267cc8b634f1729dff7ae7c5aee0e533a6d90e42b6fadde20cc40ba",
+          "manifestSha256": "4c0efaadd66c5e9e27d311b4824b2fcaf9751b1909e082e716aec1f2ad88a953"
+        }
+      ],
+      "commonForegroundPixels": 102,
+      "prompt": "Turn the fifth sprite into a Nu Mou cook job using the SAME underlying Nu Mou pixel base as the others. Keep the shared face, eyes, anatomy, pose and pixel positions unchanged. Change only the job-specific appearance: cream rolled sleeves, mustard apron and teal sash, no hat. Keep the entire row and its layout.",
+      "template": "build\\art\\race-study-2026-09-19\\other-races\\nu-mou-template.png",
+      "templateSha256": "cc691fd4f879a38282d3556bd16e55c562bf8bbc4fa457baea3bf0da0a5baf62"
+    },
+    {
+      "race": "moogle",
+      "references": [
+        {
+          "actor": 35,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0a19e0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-035\\0a19e0-000000-pose.png",
+          "sourceSha256": "afe2f0dbace7aa93594a11488c7ce648033352ecb5798ce2ee828fdea920c006",
+          "manifestSha256": "40d11ed561574de5aeae78b00c65c036037b63392a55f970140dff80621122be"
+        },
+        {
+          "actor": 34,
+          "slot": 0,
+          "frame": 1,
+          "pose": "09d760-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-034\\09d760-000000-pose.png",
+          "sourceSha256": "cb9614a65772e19913a207e8f05c650b049a2f93522fcb671e7588c1ba463db6",
+          "manifestSha256": "59c491fe0f1c26d96807c0af6942d3a2895a8cc7bf48992b0ad0b0aef4c8720a"
+        },
+        {
+          "actor": 37,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0aa0a0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-037\\0aa0a0-000000-pose.png",
+          "sourceSha256": "d595a5ff33996609d325a4b54a28a90b9601203d8bb136380571ef398b9cb8f9",
+          "manifestSha256": "ebdc0c523cea58da2f3da956ebd234df90b56df7c3dd9bb1e386be5f69114ecb"
+        },
+        {
+          "actor": 39,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0b28c0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-039\\0b28c0-000000-pose.png",
+          "sourceSha256": "7a430bfad7afafbfa50ca8c0994f288ac3108f75ad28492f9a1f59d6d7f125d9",
+          "manifestSha256": "d0c94d2b647d5f568325701403a998cdcc317ba6c0ffa70f9ad829897acfe350"
+        }
+      ],
+      "commonForegroundPixels": 119,
+      "prompt": "Turn the fifth sprite into a Moogle cook job using the SAME underlying Moogle pixel base as the others. Keep the shared face, eyes, anatomy, pose and pixel positions unchanged. Change only the job-specific appearance: cream rolled sleeves, mustard apron and teal sash, no hat. Keep the entire row and its layout.",
+      "template": "build\\art\\race-study-2026-09-19\\other-races\\moogle-template.png",
+      "templateSha256": "ff215f3f88bda8aaaf9c823f3face332e2f15338d4c3da0ea1ea76613dc0bda2"
+    },
+    {
+      "race": "viera",
+      "references": [
+        {
+          "actor": 26,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0786e0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-026\\0786e0-000000-pose.png",
+          "sourceSha256": "f8f8d9a01b50ef54786e1b0692a18655dc40c0bd3e64304ecdd6f7c74d6b4295",
+          "manifestSha256": "6d1f35932e10fab3e6ddb8a9215b963a8ed162d462d4299957b3f6f9a152d7e8"
+        },
+        {
+          "actor": 27,
+          "slot": 0,
+          "frame": 1,
+          "pose": "07d0c0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-027\\07d0c0-000000-pose.png",
+          "sourceSha256": "7948aa6e86c3dabe046f3dbc985d369ef4b138378440bd253b50a5ea4feec599",
+          "manifestSha256": "df90322c92e9aaf777d662bac084042b3fa37695e8f7dfe95f4540560a92f10d"
+        },
+        {
+          "actor": 29,
+          "slot": 0,
+          "frame": 1,
+          "pose": "086720-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-029\\086720-000000-pose.png",
+          "sourceSha256": "99407cd73b34baf9d5104626bc6474957372bcb677772922e7a65a35299b2e41",
+          "manifestSha256": "48b2ead97bc3da5b8435edfc2d0971ce7538493acdfa0881e697762bcc7939c9"
+        },
+        {
+          "actor": 31,
+          "slot": 0,
+          "frame": 1,
+          "pose": "08fae0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-031\\08fae0-000000-pose.png",
+          "sourceSha256": "14699dacb8e79fff2ae987c3a412d543028515475c15a365dc9065cdefdfff07",
+          "manifestSha256": "db578d9a94c8c3efc68f21febdf0aa01e5cf642de383d7896e049850e73511ec"
+        }
+      ],
+      "commonForegroundPixels": 120,
+      "prompt": "Turn the fifth sprite into a Viera cook job using the SAME underlying Viera pixel base as the others. Keep the shared face, eyes, anatomy, pose and pixel positions unchanged. Change only the job-specific appearance: cream rolled sleeves, mustard apron and teal sash, no hat. Keep the entire row and its layout.",
+      "template": "build\\art\\race-study-2026-09-19\\other-races\\viera-template.png",
+      "templateSha256": "0d049b311a22158895ffb75a9e39f954bcea9e6f7db01582ff0777ea008905ca"
+    }
+  ]
+}

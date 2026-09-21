@@ -1,0 +1,136 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 240,
+  "continueIndependent": true,
+  "scope": "Independent remaining class-specific natural-water graphics checks on one authenticated candidate. Reuse prior Samurai and Viking passing evidence. Failure remains failure and does not block unrelated class scenarios.",
+  "steps": [
+    {
+      "id": "test-live-art-water-class-117",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--natural-water",
+        "--live-palette-water",
+        "--water-job",
+        "117"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-119",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--natural-water",
+        "--live-palette-water",
+        "--water-job",
+        "119"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-120",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--natural-water",
+        "--live-palette-water",
+        "--water-job",
+        "120"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-121",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--natural-water",
+        "--live-palette-water",
+        "--water-job",
+        "121"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-122",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--natural-water",
+        "--live-palette-water",
+        "--water-job",
+        "122"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-123",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--natural-water",
+        "--live-palette-water",
+        "--water-job",
+        "123"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-124",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--natural-water",
+        "--live-palette-water",
+        "--water-job",
+        "124"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-125",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--natural-water",
+        "--live-palette-water",
+        "--water-job",
+        "125"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    }
+  ]
+}

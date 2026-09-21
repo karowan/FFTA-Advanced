@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "candidateSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "scope": "Final assembled audit: first attempt treats historical source-stage pins as current and fails; corrected audit verifies their explicit Git commits and current shipping files separately. No runtime repetition.",
+  "files": [
+    {
+      "path": "build/art/final-acceptance/20260919T101942.846099Z/failed.json",
+      "sha256": "9e81bfc7f20a66de269169686380d0ebb0a93cc693f43b2198d68662ab6f5d17"
+    },
+    {
+      "path": "build/art/final-acceptance/20260919T102110.774906Z/report.json",
+      "sha256": "99d91c5e9325ce3c624ce92c3434d156d6a925455565d1a70e7f3e0deea57ce0"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T101942.169103Z/001-audit-full-engineering.log",
+      "sha256": "112e3c1d7e891488b5132c773fd23d34c20f04965698dbbea5ba8c1de86b0b55"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T101942.169103Z/report.json",
+      "sha256": "a62c2e0c473760bfb5fc8a16e93629b97cdd040ef9c8315d9f939de24a7587e6"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T102110.131510Z/001-audit-full-engineering.log",
+      "sha256": "d414e58d13f4e5d430812e674872240326fc4359121e49a4a7e3e0cc4a3cc02b"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T102110.131510Z/report.json",
+      "sha256": "09e99a7da229860f9980c9f1523678f8e87e1ccb7c3fe4c604b519389138369c"
+    }
+  ]
+}

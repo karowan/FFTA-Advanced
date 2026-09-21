@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "status": "Native-density revision draft; equal-row conversion failed, transparent row cut710 succeeds. Facial highlight still loses clarity at32x32; not accepted.",
+  "references": [
+    "build/art/imagegen/bangaa-dark-knight/idle-v1.png",
+    "build/art/native-reference/actor-011/0348a0-000026-pose.png"
+  ],
+  "selectedPrivatePath": "build/art/imagegen/bangaa-dark-knight/idle-v2.png",
+  "prompt": "Use case: style-transfer. Image1 is the edit target: original Bangaa Dark Knight design. Image2 is reference ONLY for FFTA native sprite proportions/pixel density, never copy/recolor its character. Keep image1's ochre long muzzle, exposed jaw, floppy ears, low purple crest helmet, charcoal/violet armor, burgundy waist cloth, tail armor and sheathed broad sword. Redraw image1 as TRUE LOW-RES PIXEL ART at Final Fantasy Tactics Advance's actual native density. The last result contains too many tiny details that vanish on conversion; simplify the geometry while preserving its identity. Think of the WHOLE sheet as a64x64 pixel canvas shown enlarged16x with nearest-neighbor to1024x1024: exactly four32x32 logical cells, 2columns by2rows. Each body approximately23x27 logical pixels, large8x9px head, one bright yellow logical eye pixel, clear dark mouth pixels, broad three-tone armor clusters and dark colored one-pixel outline. Each logical pixel must be one uniform LARGE square: do not draw small details inside these square pixels. At most15 shared opaque colors. Column1 front-left, column2 back-right; row1 neutral idle, row2 body lowered1 logical pixel with elbows slightly shifted. Full figures centered per cell with at least3 logical pixels transparent space on all sides; every tail/ear/sword fully inside cell. Exactly transparent background, no grid, no labels, no text, no gradients, no antialiasing, no dither, no lighting effects, no floor shadow, no watermark. Preserve chibi Bangaa short sturdy body and giant muzzle, not tall realistic proportions. Artwork simplification only; do not provide software UI or a poster."
+}

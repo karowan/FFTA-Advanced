@@ -1,0 +1,194 @@
+[
+  {
+    "slug": "human-dark-knight",
+    "kind": "portrait",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-1cd653f6-b07f-41c9-a12c-a59635de1095.png"
+  },
+  {
+    "slug": "viera-mystic-knight",
+    "kind": "portrait",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-b3c213b1-786c-47e1-88a2-ca0bca2ef174.png"
+  },
+  {
+    "slug": "human-samurai",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-786a3ae6-c5a5-4375-a20a-77caacb63409.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        553
+      ],
+      "crop": [
+        48,
+        0,
+        64,
+        14
+      ],
+      "layoutDeviation": "Fourth cell edited instead of fifth. Extract observed fourth cell. Remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "human-dark-knight",
+    "kind": "icon",
+    "rawName": "generated-helmet-icon-v2.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-52821ffd-f59f-4aeb-8003-c9cc993bfa59.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "crop": [
+        48,
+        0,
+        64,
+        14
+      ],
+      "prompt": "Edit only the FOURTH head (the closed dark helmet) in this five-icon row. Its two golden eye lights are one logical pixel too far to the left. Move BOTH golden eye lights exactly one large pixel to the right, leaving their row and separation unchanged. All other helmet pixels, the rest of the row, canvas and coarse pixel grid stay unchanged. Two simple golden eye lights in a black void; no human face.",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-dark-knight/helmet-anchor-edit.png",
+          "sha256": "4a33921cda870bd99ca34bf200c3c5ea82f5c14a828fb8965e45e1123704b944"
+        }
+      ],
+      "layoutDeviation": "Fourth cell deliberately edited; transparent letterbox removed at >98% opaque row span."
+    }
+  },
+  {
+    "slug": "bangaa-viking",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-347308ef-4021-4049-83c6-67395a51a0c9.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "bangaa-dark-knight",
+    "kind": "icon",
+    "rawName": "generated-helmet-icon-v3.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-31c3777b-5d7a-4b04-b2ab-05422837b6fc.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "crop": [
+        48,
+        0,
+        64,
+        14
+      ],
+      "prompt": "In the FOURTH icon only: move the LEFT yellow eye exactly ONE pixel square to the RIGHT. Fill its old pixel square with the adjacent black visor color. The RIGHT yellow eye stays fixed. Every other pixel, icon and the whole layout stays unchanged.",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-dark-knight/generated-helmet-icon-v2.png",
+          "sha256": "4615950d3249529bd57485596e1be8286931a003569a189a1df0d8a497bec62e"
+        }
+      ],
+      "layoutDeviation": "Fourth cell deliberately edited; transparent letterbox removed at >98% opaque row span."
+    }
+  },
+  {
+    "slug": "nu-mou-chemist",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-6e44b269-4c01-433b-8dc0-1cae439d1122.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "nu-mou-geomancer",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-892d0bdf-79a6-47d0-87fe-b28b2b4e9e69.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        551
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "moogle-chemist",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-354293a8-8aa9-4855-984f-1330a36dea32.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        552
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "moogle-bard",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-5ede03ed-252b-4f9d-9c8d-927e5f119f85.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "viera-dancer",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-71a934e4-d731-4ed7-bacb-317dbea32a88.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        554
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "viera-mystic-knight",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-26a2413f-66ed-4c1e-9b93-d89c65247d07.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        554
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "human-samurai",
+    "kind": "icon",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-08f7ff05-4be6-42c4-b384-337d309d11f8.png",
+    "rawName": "generated-icon-v2.png",
+    "revision": {
+      "prompt": "Edit this exact pixel-art Samurai head. Remove ONLY the little inward-pointing PURPLE helmet tips against the LOWER yellow cheeks: the purple stair-step at the lower LEFT edge of the yellow face (one purple square at the cheek and one purple square diagonally inward beneath it), and the matching purple tip at the lower RIGHT cheek. Replace those purple intrusions with the adjacent bright YELLOW face color so the lower cheeks form one clean uninterrupted yellow shape. The outer red helmet side guards remain outside the face and must not curl inward under the jaw. Keep the two black vertical eyes, pale cream around them, all upper helmet and gold crest, outer silhouette, position, scale, height and every other pixel unchanged. This is a tiny lower-cheek correction, not a redesign. Preserve exactly the same 16x14 logical pixel grid and canvas, output enlarged with hard square pixels. No background additions, border or text.",
+      "references": [
+        {
+          "path": "build/art/ui-detail-v7-2026-09-20/human-samurai/focused-target.png",
+          "sha256": "ea5f9a60973b17f456e9c3e71b7974293d968ea403b987f9eff1cfc92ce2ebeb"
+        }
+      ],
+      "logicalSize": [
+        16,
+        14
+      ],
+      "crop": [
+        0,
+        0,
+        16,
+        14
+      ],
+      "layoutDeviation": "Focused single-head edit after the shared-row attempt left the tips. Full 16x14 head canvas sampled once; no bounding-box fit or registration."
+    }
+  }
+]

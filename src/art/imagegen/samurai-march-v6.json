@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "built-in default; model name not exposed",
+  "prompt": "Precise sprite-sheet correction. Edit target is the attached six red Samurai sprites, THREE columns by TWO rows. Leave columns ONE and TWO unchanged. Change ONLY the LEGS/BOOTS in column THREE. TOP RIGHT: show TWO distinct brown boots: the boot on the LEFT SIDE OF THE IMAGE is PLANTED on the baseline, the boot on the RIGHT SIDE OF THE IMAGE is RAISED with bent knee, its sole two logical pixels above the baseline. This is opposite to top-left. The current top-right has only one visible boot: repair that. BOTTOM RIGHT: show TWO distinct boots: LEFT-SIDE boot RAISED two logical pixels, RIGHT-SIDE boot PLANTED. This is opposite to bottom-left. Both third-column sprites must have a visible one-logical-pixel gap between the legs. Move the hands slightly to counterbalance the corrected legs. All helmets, faces, crests, armor, sheath placement, camera directions, colors, scale and sheet cell boundaries stay as they are. Do not mirror the whole character. Do not copy a first-column leg pose into the third column: the raised foot must swap to the opposite screen side as specified. Keep genuine transparent background; remove white spots between legs as those gaps are transparent. No new highlights, halos, shadows, text or grid. Return the same full six-sprite sheet with these two lower-body corrections.",
+  "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v6.png",
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-7353e0fd-dfd1-41fe-bfab-46fbd547c95f.png",
+  "references": [
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/samurai-march-v5.png",
+      "role": "Generated character edit target; correct third-column legs",
+      "sha256": "562168d86ed633aa04bede1adc5d65c7f69c23c7a69f1337c3388914b3abcfd8"
+    }
+  ],
+  "conversion": {
+    "columns": 3,
+    "rows": 2,
+    "height": 27,
+    "resampling": "nearest",
+    "nativePaletteOffset": "0x419d80"
+  },
+  "status": "Alternating raised feet visible in both native-converted directions. Face/helmet drift remains; unaccepted production artwork.",
+  "productionAccepted": false,
+  "sourceSha256": "f9e0b2071693f38cb856538377d75b412907b6c7c3d7d70c20ad35f8e32e0a47",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "convertedSizes": [
+    [
+      17,
+      27
+    ],
+    [
+      17,
+      27
+    ],
+    [
+      18,
+      26
+    ],
+    [
+      17,
+      27
+    ],
+    [
+      17,
+      26
+    ],
+    [
+      17,
+      26
+    ]
+  ],
+  "reviewArtifacts": [
+    "build/art/imagegen/samurai/native-scale-study/march-v6-motion.gif",
+    "build/art/imagegen/samurai/native-scale-study/march-v6-motion-phases.png",
+    "build/art/imagegen/samurai/native-scale-study/march-v6-motion-review.json"
+  ]
+}

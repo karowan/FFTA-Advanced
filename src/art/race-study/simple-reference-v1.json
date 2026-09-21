@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Create a new bald human cook character that looks like it belongs alongside these Final Fantasy Tactics Advance sprites. Match their art style, proportions, viewing angle and pixel size. Give him a cream shirt, mustard apron and teal sash. Show him as a fifth sprite beside the four references.",
+  "references": [
+    "build/art/race-study-2026-09-19/user-face-reference.png"
+  ],
+  "method": "Fresh original design from native reference row and a short prompt. User example and previous generated cook are not image inputs.",
+  "status": "Experiment; pending visual review",
+  "source": "build\\art\\race-study-2026-09-19\\simple-reference-v1.png",
+  "sourceSha256": "5139fe8e3bc546d7f129d6c60c6ede377e8fe1d65946010f9e05f4f93781c52d",
+  "referenceSha256": [
+    "ce3f98d107f0328a6bb3728330f6de901f23a50364a82f99e0949773cd7101ee"
+  ],
+  "productionAccepted": false
+}

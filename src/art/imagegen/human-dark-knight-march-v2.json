@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "built-in default; model name not exposed",
+  "prompt": "Use case: style-transfer. Image1 is our previously generated HUMAN DARK KNIGHT character design; simplify this identity drastically to actual Final Fantasy Tactics Advance native sprite density. Image2 is ORIGINAL FFTA human proportion/pixel-cluster reference ONLY, never copy or recolor those characters. Create SIX poses in a THREE-column TWO-row transparent sheet. Same individual in all six cells. Each is only about17x27 LOGICAL PIXELS inside a32x32 logical canvas, enlarged evenly with nearest-neighbor. No fine illustration detail. Short FFTA human proportions: large compact head, narrow chest, tiny gauntlets, visible separated short legs. Design identity: enclosed charcoal-violet ridged helmet with a single narrow warm gold eye slit; no face/skin visible; dark steel plate chest, one small pointed shoulder, muted burgundy HALF cape on anatomical left shoulder, plain purple waist cloth, simple dark boots; short broad sword SHEATH diagonally on back, hilt at right shoulder. Keep sword sheathed and small, so no blade or hand-held weapon occupies the idle pose. Simplify gold edging to only one small chest clasp and helmet slit. Armor is large coherent two/three-tone clusters, one-pixel colored outlines, no black blob. Restrict to12 flat muted colors: dark outline, violet shadow/midtone, slate highlight, warm gold eye/clasp, burgundy cape. No white outlines or yellow armor trim. TOP ROW faces lower LEFT three-quarter: left-screen boot raised two pixels/right-screen planted; both visible boots neutral; right-screen boot raised/left-screen planted. BOTTOM ROW true upper RIGHT/back three-quarter with opposite alternating stepping poses and same angle throughout. Keep helmet/chest/cape/sheath geometry stable between phases; only legs and hands move, with a one-pixel neutral bob. Keep two visible boots with a tiny dark gap. Output same scale/baseline and generous transparent margins in all six equal cells. No logos, text, labels, grid, ground, shadows, glows, haze, gradients, dither, antialiasing or microdetail. Actual alpha transparency. These are tiny native game sprites, not large concept illustrations. Preserve new Dark Knight identity, distinct from Samurai, original Paladin and Ninja.",
+  "source": "build/art/imagegen/human-dark-knight/march-v2.png",
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-32c75665-17b3-468a-a27c-21258a7867b8.png",
+  "references": [
+    {
+      "path": "build/art/imagegen/human-dark-knight/idle-v1.png",
+      "role": "Generated new Dark Knight identity reference",
+      "sha256": "4aa2cbd53f48c27cc4a26e2d31d6c09605e4d61175338ffed71683950d4b3206"
+    },
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/original-human-reference.png",
+      "role": "Original native human scale/style reference only",
+      "sha256": "2c95aad66a09c1c0e40a885cc4c8bfc7f16b879c40977b4490acab81e2440357"
+    }
+  ],
+  "conversion": {
+    "columns": 3,
+    "rows": 2,
+    "height": 27,
+    "resampling": "nearest",
+    "nativePaletteOffset": "0x419d60"
+  },
+  "status": "Unaccepted draft: middle back pose swaps cape shoulder; front third phase repeats first lifted-foot side.",
+  "productionAccepted": false,
+  "sourceSha256": "719a7167d89283d41e41c0570aa39eaf59e14f4edac156110ab670dba51eeff7",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "nativeConversion": {
+    "manifest": "build/art/imagegen/human-dark-knight/march-v2-native/manifest.json",
+    "paletteSha256": "800d6a0396bb08a0bb7d5c7decfe2d40df80191574e25996ed367e006d59bcef",
+    "meanSquaredRGBError": 758.4932159882655,
+    "sizes": [
+      [
+        17,
+        27
+      ],
+      [
+        16,
+        27
+      ],
+      [
+        17,
+        27
+      ],
+      [
+        17,
+        26
+      ],
+      [
+        17,
+        26
+      ],
+      [
+        17,
+        27
+      ]
+    ]
+  },
+  "own-paletteConversion": {
+    "manifest": "build/art/imagegen/human-dark-knight/march-v2-own-palette/manifest.json",
+    "paletteSha256": "4803df6e40ba73159e547a5a387eccf7db897170a4934d87e43ef25f21401a53",
+    "meanSquaredRGBError": 139.77209387605427,
+    "sizes": [
+      [
+        17,
+        27
+      ],
+      [
+        16,
+        27
+      ],
+      [
+        17,
+        27
+      ],
+      [
+        17,
+        26
+      ],
+      [
+        17,
+        26
+      ],
+      [
+        17,
+        27
+      ]
+    ]
+  },
+  "review": "Native assigned palette changes violet steel to green and burgundy cape to brown. Own generated15-color palette retains design colors, but is not integrated. Neutral back swaps cape shoulder and front final phase repeats lead foot. Unaccepted."
+}

@@ -1,0 +1,251 @@
+{
+  "scope": "Final E05 delivery145 including complete local reference links; prior successful22 package and later missing-document link failure retained, plus sandbox EPERM. No game launch or save import.",
+  "romSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "sourceCommit": "f07411c4c1c236fedeedaea38283cf8a8e519666",
+  "files": [
+    {
+      "path": "build/art/engineering-delivery/20260919T103327.282681Z/document-link-audit-failed.json",
+      "sha256": "ac87391f12b7cf5f47645fef55df1f74905fe7ae692d52046577942168ff2e38"
+    },
+    {
+      "path": "build/art/engineering-delivery/20260919T103327.282681Z/negative.log",
+      "sha256": "a998647e8365454af6eb161a82411aa0588d44d8a478cd2e7c0633ac8e8d166b"
+    },
+    {
+      "path": "build/art/engineering-delivery/20260919T103327.282681Z/report.json",
+      "sha256": "5f0565824f05fd4ebae15add1782172e0b73b73489edee901a66b414123cff5e"
+    },
+    {
+      "path": "build/art/engineering-delivery/20260919T103327.282681Z/validation.log",
+      "sha256": "2e2dde08336febe56fca78431e954055d88a4ef3aad27f034fb6b6baf649bb8a"
+    },
+    {
+      "path": "build/art/engineering-delivery/20260919T103644.967476Z/negative.log",
+      "sha256": "a908a1b70b75827425be26da04b5e69a5d35d1f33722100ff0ac0195d4ce9b5a"
+    },
+    {
+      "path": "build/art/engineering-delivery/20260919T103644.967476Z/report.json",
+      "sha256": "15aa02c057431eda46ab1b6b4bded1bae25dcb7ba2830268b770ddfdccab488a"
+    },
+    {
+      "path": "build/art/engineering-delivery/20260919T103644.967476Z/validation.log",
+      "sha256": "2e2dde08336febe56fca78431e954055d88a4ef3aad27f034fb6b6baf649bb8a"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T103249.838227Z/001-package-full-engineering.log",
+      "sha256": "fafae1a5422944ed75678393a0ed797bea82fb29f25c6794ba8cb3da434c8ae0"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T103249.838227Z/report.json",
+      "sha256": "1c1a6e59f975c6c5c0b8cead978ff07eeeb6e7c2509c2d1f8cc8fffd4cfa96c8"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T103324.196882Z/001-package-full-engineering.log",
+      "sha256": "9144e57869d185ac174c5948f0ca17438f5e69b115cfdfc54e75d96ab2186ec8"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T103324.196882Z/002-test-full-engineering-launcher.log",
+      "sha256": "f6f3f8c7c2a93640e5581cc5b9243bee8bb27c52f625700a91b5ff7f1f274714"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T103324.196882Z/report.json",
+      "sha256": "7450ed7d0b53c8acfe8754b027e5dc74ac47b65bba0c284822b4dabed58a4009"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T103642.038969Z/001-package-full-engineering.log",
+      "sha256": "8572a453f5342b0737021d3bf605e600b7d3343c8ec45fe236f9768de4debc1b"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T103642.038969Z/002-test-full-engineering-launcher.log",
+      "sha256": "926a44287e1edc9f519b3e0dbee9340fba8f8b8d451c4bdea3735451ab3c529d"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T103642.038969Z/report.json",
+      "sha256": "8759c0cd90407c060fafdf5757d45539f9725f3414f4d48cc5a46f94dbdb25bf"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/ABILITY-EXPANSION-COUNCIL.md",
+      "sha256": "b9390c30a16c2991c221b8483929b5b3874841a3d183eca0d493e9d4c5ff9354"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/ART-PLACEHOLDERS.md",
+      "sha256": "3a5d0d4f30f07c23acc0b404f3360810a351d1b89c990093841508df03dbb0db"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/AXE-SKILL-EXPANSION.md",
+      "sha256": "e2d159b992418e28f1b74252e3d95f8ada91edf7511b7b38f9203952341bc723"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/BALANCE-COUNCIL.md",
+      "sha256": "ee9a330db1474c310c2bb2430333dcb4c25fc8a7528624d86833767f040f1411"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/EXPANSION-PLAYER-GUIDE.md",
+      "sha256": "716ac04430e154267de340239fa67eff34218e9a03b6ff1b0df3ca76b5fc25db"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/FFTA-MODDING-GUIDE.md",
+      "sha256": "c2fb6fddbcc96c58cc181d6bbe854bebdb6cd6cda44bcad998566a410c939b1c"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/FFTA_Expansion_v0.7.bps",
+      "sha256": "8b18d8f831bcb29f8f0c0eb2731d684b55b8db6bc7c93d9633ffa55d2a695a49"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/IMPLEMENTATION-CHECKLIST.md",
+      "sha256": "7c90a4b2cd58508681a0727fd487058fc58790e645fccc94c5898ee8fd6af605"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/IMPLEMENTATION-STATE.md",
+      "sha256": "558b5575273318c42306f8cc5ecd3e3adc52a527c79a0b71496a17ede03b3584"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/IMPLEMENTATION-STATUS.md",
+      "sha256": "914f28dfe330939a6801be313e1af60c147bb3d89d8a55fc8ddfaf8ad6904676"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/JOB-CLASS-SPECIFICATION.md",
+      "sha256": "7f6045a1b1d10293b66692cfbd970b78c9a88366e9b9430530d05c7a8312fae0"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/JOB-DESIGN-PRINCIPLES.md",
+      "sha256": "485500d9ea3388715e4f6bb68c649f78fd980ecbc94d61e0f01009a5573d9266"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/JOB-EXPANSION-DESIGN.md",
+      "sha256": "46362a00d279143e4322ea9b958083cb358ebb2043e186d055807226bc61d683"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/JOB-THEME-AUDIT.md",
+      "sha256": "7e41192cd87b09412e8d9c521b24b78b7f65ada2940a219e415a70e33994bfa6"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/REPRODUCIBLE-BUILD.md",
+      "sha256": "1c3fbd489ec802d2f321e69650cba6a480c729f2dd51d7c253232929086fc4eb"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/SPELLBLADE-EXPANSION.md",
+      "sha256": "f715ee0d0f4b81130cdd3d9b17a53962502eab0e082d0671ff0147aed1c70454"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/STARTER-JOB-INSPIRATION.md",
+      "sha256": "57d727e23be9d339422874085738ea89b46a0ae5a37c5d4d5e0518ddaab71618"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/SUPPORT-SKILL-DESIGN.md",
+      "sha256": "7eaa9e0b3823d7aad806b7d5a335ab5bc5105ab345e2df0cc55f8451a7b3cdaf"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/TESTING.md",
+      "sha256": "12f7020bcb0a42493f11901a320c0399baf1b88b09700a3deee54a7e789d5c8c"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/VANILLA-PLUS-PACKAGE.md",
+      "sha256": "a468557492a65c42711be2ecce038c97ee20e1390d5889f6d4e0e1a43a0e3476"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/WEAPON-ACQUISITION.md",
+      "sha256": "5072f5e80dae4e3338c3777978721b592547cc1b1c65c99262b07bdd483f50ee"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/acceptance.json",
+      "sha256": "99d91c5e9325ce3c624ce92c3434d156d6a925455565d1a70e7f3e0deea57ce0"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/manifest.json",
+      "sha256": "818c74faafd5b168bc455a87f488e0a442b822c40667c1d6766b36c362e0964c"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/balance-council-coverage.json",
+      "sha256": "69d8c7b946fda6cb5ed3e86096a54127f47834c96a674673f03cf25db2051baa"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/balance-council-global.md",
+      "sha256": "12d5f0df7079b8c816047dcc05fb389421ba04905a1155b93fe91f464b4b73e1"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/balance-council-magic-utility.md",
+      "sha256": "f2b3064b05159ec9ebfe6898c1e7aa97aa3d5f7e07416b6db74c6ff5a80b0b6c"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/balance-council-martial.md",
+      "sha256": "83616a9d9dada2d628ba5a751017875f0ab0c09a9ee5626631f8d9acae351a59"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/balance-council-supports-reactions.md",
+      "sha256": "ff39a9c07f3bdeddcb3d4b87c7140b41a3c8f2836eb29896c151598fc919d388"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/equipment-acquisition.json",
+      "sha256": "986136c87cbf8f397d756b8be2235a24556a202e89d7babdbe240caa156265f5"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/expansion-council-martial.md",
+      "sha256": "33917fc84acd8d033d86bb63969640e397d1eb48f79923aad571d9057abe50a0"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/expansion-council-skeptic.md",
+      "sha256": "286ad0ca13b6f0ffc86fe9013e631335a899daaf86009e2564143357da105ebf"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/expansion-council-utility.md",
+      "sha256": "0201086ac0a7ec715d2fcca43f9c61b601eff59f20c437308659eb3c67785bdf"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/expansion-engineering.md",
+      "sha256": "20bead059db62c16ccee50a086003b33e4673489fd9ff9671e60c68f79c6ab8a"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-461ec79a7f20f413/notes/foundation-engineering.md",
+      "sha256": "090cc7b1c199ce048d5ff1dc6b35dd5c2c15fa73e041bdc055d05fca429a6e7c"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-b57a77d3f5996896/ART-PLACEHOLDERS.md",
+      "sha256": "3a5d0d4f30f07c23acc0b404f3360810a351d1b89c990093841508df03dbb0db"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-b57a77d3f5996896/AXE-SKILL-EXPANSION.md",
+      "sha256": "e2d159b992418e28f1b74252e3d95f8ada91edf7511b7b38f9203952341bc723"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-b57a77d3f5996896/EXPANSION-PLAYER-GUIDE.md",
+      "sha256": "716ac04430e154267de340239fa67eff34218e9a03b6ff1b0df3ca76b5fc25db"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-b57a77d3f5996896/FFTA_Expansion_v0.7.bps",
+      "sha256": "8b18d8f831bcb29f8f0c0eb2731d684b55b8db6bc7c93d9633ffa55d2a695a49"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-b57a77d3f5996896/JOB-CLASS-SPECIFICATION.md",
+      "sha256": "7f6045a1b1d10293b66692cfbd970b78c9a88366e9b9430530d05c7a8312fae0"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-b57a77d3f5996896/REPRODUCIBLE-BUILD.md",
+      "sha256": "1c3fbd489ec802d2f321e69650cba6a480c729f2dd51d7c253232929086fc4eb"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-b57a77d3f5996896/WEAPON-ACQUISITION.md",
+      "sha256": "5072f5e80dae4e3338c3777978721b592547cc1b1c65c99262b07bdd483f50ee"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-b57a77d3f5996896/acceptance.json",
+      "sha256": "99d91c5e9325ce3c624ce92c3434d156d6a925455565d1a70e7f3e0deea57ce0"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/bundle-b57a77d3f5996896/manifest.json",
+      "sha256": "f10978e094cc81f01227e9b0f79599c8ca265866d642b745e96b18026e2704c7"
+    },
+    {
+      "path": "build/releases/v0.7-engineering/current.json",
+      "sha256": "818c74faafd5b168bc455a87f488e0a442b822c40667c1d6766b36c362e0964c"
+    },
+    {
+      "path": "notes/native-art-final-review-evidence.json",
+      "sha256": "f2a5bea6cf378c7dd57f8cee676150f6e83a884fa3f2fa53765a45441de5f7b5"
+    },
+    {
+      "path": "roms/play/expansion-v0.7-engineering/FFTA_Expansion_v0.7.gba",
+      "sha256": "029547bb57325915a7d4a97f9e0e19b096645bf3d25d131c35c216ef6da41e78"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "built-in default; model name not exposed",
+  "prompt": "Edit target: Image1 is our six-frame original Samurai sprite sheet. Supporting reference Image2 is its actual 32x32-per-cell game conversion, demonstrating the defect: eye and helmet crescent become illegible in some phases. Revise ONLY the front-row face/eye and gold helmet crescent for readability at the final tiny native size. Preserve narrow body, all armor, arms, stepping poses, katana sheath and the entire back row. Same six equal cells, three columns by two rows, same front and back directions, genuine transparent background. On each of the three front sprites make the exposed face a clean coherent warm peach patch about 5 logical pixels wide and 6 tall, with a clearly visible two-pixel-wide white eye plus one-pixel dark pupil. Keep the eye identical in all three phases; do not hide it beneath the helmet shadow. Make the crescent a SMALL upward U of warm gold, three logical pixels wide and two high, its center gap dark and open. Keep the eye and crescent separated vertically by helmet brim; no extra yellow spots on the cheek. Remove fine dither/noise from face and crest. Every logical pixel is one large uniform square on the existing coarse sprite grid; no subpixel features, no tiny highlights. This is a readability repair, not a more detailed rendering. Do not broaden the head or body. Preserve frame identity, existing red and violet costume, boots, sheet composition and alpha. No labels, no grid, no ground shadows or glow.",
+  "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v4.png",
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-b0977813-a6b6-4c47-8bdc-edee00a920d4.png",
+  "references": [
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/samurai-march-v3.png",
+      "role": "Generated design edit target",
+      "sha256": "cdb60ddc2fcfed6f164540da227e14c42bf56f2f5d1321435fc23b7844042395"
+    },
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/march-v3-native/native-review.png",
+      "role": "Conversion defect reference",
+      "sha256": "e14739530800ee6eccda8121b73a107c276824723e798ed1a4ee4b9b36633275"
+    }
+  ],
+  "conversion": {
+    "columns": 3,
+    "rows": 2,
+    "height": 27,
+    "resampling": "nearest",
+    "nativePaletteOffset": "0x419d80"
+  },
+  "status": "Unaccepted artwork study; actual native-palette conversion reviewed",
+  "productionAccepted": false,
+  "sourceSha256": "17deae2a4046fafbd2420f0f93fbefae0b6e3f96f688673977f1e5dd5b1f44d1",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "convertedSizes": [
+    [
+      16,
+      27
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      16,
+      27
+    ],
+    [
+      16,
+      27
+    ]
+  ],
+  "review": "Narrow native proportions; front eye and crescent more consistent across phases. Leg motion remains weak and upper-body/back details drift. Selected for private in-game scale review only."
+}

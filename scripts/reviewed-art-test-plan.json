@@ -1,0 +1,854 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 120,
+  "description": "Private reviewed-art source, native import, own-ROM entry/action/water and palette diagnostics. Use declared -Only steps; source and runtime acceptance remain separate.",
+  "steps": [
+    {"id": "test-reviewed-native-contract","runtime": "python","args": ["scripts/test-reviewed-native-contract.py"],"suites": ["reviewed-art-native"],"kind": "static","timeoutSeconds": 300},
+    {"id": "test-reviewed-native-cold-entry","runtime": "python","args": ["scripts/test-reviewed-palette-entry.py","--native"],"suites": ["reviewed-art-native"],"kind": "runtime","timeoutSeconds": 300},
+    {"id": "test-reviewed-native-menus","runtime": "python","args": ["scripts/test-generated-portraits-ui.py","--manifest","build/art/reviewed-integration/native-complete-candidate.json"],"suites": ["reviewed-art-native"],"kind": "runtime","timeoutSeconds": 300},
+    {"id": "test-reviewed-native-modes","runtime": "python","args": ["scripts/test-reviewed-animation-modes.py","--manifest","build/art/reviewed-integration/native-complete-candidate.json","--entry-index","build/art/reviewed-integration/native-entry-latest.json"],"suites": ["reviewed-art-native"],"kind": "runtime","timeoutSeconds": 300},
+    {"id": "build-reviewed-native-actions","runtime": "python","args": ["scripts/import-reviewed-actions.py","--native","--parent","build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json"],"suites": ["reviewed-art-native"],"kind": "build","timeoutSeconds": 180},
+    {"id": "build-reviewed-native-portraits","runtime": "python","args": ["scripts/import-reviewed-portraits.py","--parent","build/art/reviewed-integration/native-action-candidate.json","--output","build/art/reviewed-integration/native-portrait-candidate.json"],"suites": ["reviewed-art-native"],"kind": "build","timeoutSeconds": 180},
+    {"id": "build-reviewed-native-miniatures","runtime": "python","args": ["scripts/build-reviewed-native-miniatures.py"],"suites": ["reviewed-art-native"],"kind": "build","timeoutSeconds": 180},
+    {"id": "build-reviewed-native-badges","runtime": "python","args": ["scripts/build-reviewed-menu-badges.py","--parent","build/art/reviewed-integration/native-menu-candidate.json","--output","build/art/reviewed-integration/native-complete-candidate.json"],"suites": ["reviewed-art-native"],"kind": "build","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-action-import","runtime": "python","args": ["scripts/test-reviewed-action-import.py","--manifest","build/art/reviewed-integration/native-action-candidate.json"],"suites": ["reviewed-art-native"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-capacity","runtime": "python","args": ["scripts/test-art-all-class-capacity.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 240},
+    {"id": "test-reviewed-native-save","runtime": "python","args": ["scripts/test-reviewed-preview-save.py","--native"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-fight-116","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","116"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-fight-117","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","117"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-fight-118","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","118"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-fight-119","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","119"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-fight-120","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","120"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-fight-121","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","121"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-fight-122","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","122"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-fight-123","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","123"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-fight-124","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","124"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-fight-125","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","125"],"suites": ["reviewed-art-native-playback"],"kind": "runtime","timeoutSeconds": 180},
+    {"id": "test-reviewed-native-spell-status","runtime": "python","args": ["scripts/test-art-capacity-action.py","--reviewed-capacity","build/art/all-class-capacity/20260920T164432.545977Z/report.json"],"suites": ["reviewed-art-native-actions"],"kind": "runtime","timeoutSeconds": 240},
+    {"id": "test-reviewed-native-combo-117","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","117","--combo"],"suites": ["reviewed-art-native-actions"],"kind": "runtime","timeoutSeconds": 240},
+    {"id": "test-reviewed-native-combo-123","runtime": "python","args": ["scripts/test-samurai-fight.py","--current","build/art/reviewed-integration/native-complete-candidate.json","--reviewed-entry","--entry-index","build/art/reviewed-integration/native-entry-latest.json","--job","123","--combo"],"suites": ["reviewed-art-native-actions"],"kind": "runtime","timeoutSeconds": 240},
+    {"id": "test-reviewed-native-water-116","runtime": "python","args": ["scripts/test-reviewed-water.py","--native","--job","116"],"suites": ["reviewed-art-native-actions"],"kind": "runtime","timeoutSeconds": 240},
+    {"id": "test-reviewed-native-water-118","runtime": "python","args": ["scripts/test-reviewed-water.py","--native","--job","118"],"suites": ["reviewed-art-native-actions"],"kind": "runtime","timeoutSeconds": 240},
+    {"id": "test-reviewed-native-water-120","runtime": "python","args": ["scripts/test-reviewed-water.py","--native","--job","120"],"suites": ["reviewed-art-native-actions"],"kind": "runtime","timeoutSeconds": 240},
+    {"id": "test-reviewed-native-water-123","runtime": "python","args": ["scripts/test-reviewed-water.py","--native","--job","123"],"suites": ["reviewed-art-native-actions"],"kind": "runtime","timeoutSeconds": 240},
+    {"id": "test-reviewed-native-water-124","runtime": "python","args": ["scripts/test-reviewed-water.py","--native","--job","124"],"suites": ["reviewed-art-native-actions"],"kind": "runtime","timeoutSeconds": 240},
+    {
+      "id": "test-reviewed-capacity-spell-status", "runtime": "python",
+      "args": ["scripts/test-art-capacity-action.py", "--reviewed-capacity", "build/art/all-class-capacity/20260920T154903.556989Z/report.json"],
+      "suites": ["reviewed-art-combined-capacity"], "kind": "runtime", "timeoutSeconds": 240
+    },
+    {
+      "id": "diagnose-reviewed-capacity-entry", "runtime": "python",
+      "args": ["scripts/test-art-capacity-entry-diagnostic.py", "--source", "build/art/all-class-capacity/20260920T154655.786015Z"],
+      "suites": ["reviewed-art-capacity-diagnostic"], "kind": "runtime", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-reviewed-complete-capacity", "runtime": "python",
+      "args": ["scripts/test-art-all-class-capacity.py", "--current", "build/art/reviewed-integration/complete-candidate.json", "--reviewed-entry"],
+      "suites": ["reviewed-art-combined-capacity"], "kind": "runtime", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-preview-save", "runtime": "python",
+      "args": ["scripts/test-reviewed-preview-save.py"],
+      "suites": ["reviewed-art-playable-preview"], "kind": "runtime", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-reviewed-complete-response", "runtime": "python",
+      "args": ["scripts/test-reviewed-palette-response.py", "--complete"],
+      "suites": ["reviewed-art-combined-performance"], "kind": "runtime", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-complete-cold-entry", "runtime": "python",
+      "args": ["scripts/test-reviewed-palette-entry.py", "--complete"],
+      "suites": ["reviewed-art-combined"], "kind": "runtime", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-complete-menus", "runtime": "python",
+      "args": ["scripts/test-generated-portraits-ui.py", "--manifest", "build/art/reviewed-integration/complete-candidate.json"],
+      "suites": ["reviewed-art-combined"], "kind": "runtime", "timeoutSeconds": 300
+    },
+    {
+      "id": "test-reviewed-complete-samurai-fight", "runtime": "python",
+      "args": ["scripts/test-samurai-fight.py", "--current", "build/art/reviewed-integration/complete-candidate.json", "--reviewed-entry", "--entry-index", "build/art/reviewed-integration/complete-entry-latest.json"],
+      "suites": ["reviewed-art-combined"], "kind": "runtime", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-complete-bard-combo", "runtime": "python",
+      "args": ["scripts/test-samurai-fight.py", "--current", "build/art/reviewed-integration/complete-candidate.json", "--reviewed-entry", "--entry-index", "build/art/reviewed-integration/complete-entry-latest.json", "--job", "123", "--combo"],
+      "suites": ["reviewed-art-combined"], "kind": "runtime", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-animation-modes", "runtime": "python",
+      "args": ["scripts/test-reviewed-animation-modes.py"],
+      "suites": ["reviewed-art-all-modes"], "kind": "runtime", "timeoutSeconds": 180
+    },
+    {
+      "id": "build-reviewed-menu-badges", "runtime": "python",
+      "args": ["scripts/build-reviewed-menu-badges.py"],
+      "suites": ["reviewed-art-badges"], "kind": "build", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-reviewed-badges-native", "runtime": "python",
+      "args": ["scripts/test-equipment-preview-native.py", "--manifest", "build/art/reviewed-integration/complete-candidate.json", "--reviewed-entry"],
+      "suites": ["reviewed-art-badges"], "kind": "runtime", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-reviewed-badges-party", "runtime": "python",
+      "args": ["scripts/test-equipment-preview-ui.py", "--manifest", "build/art/reviewed-integration/complete-candidate.json"],
+      "suites": ["reviewed-art-badges"], "kind": "runtime", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-reviewed-badges-buy", "runtime": "python",
+      "args": ["scripts/test-equipment-preview-ui.py", "--manifest", "build/art/reviewed-integration/complete-candidate.json", "--shop"],
+      "suites": ["reviewed-art-badges"], "kind": "runtime", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-reviewed-badges-sell", "runtime": "python",
+      "args": ["scripts/test-equipment-preview-ui.py", "--manifest", "build/art/reviewed-integration/complete-candidate.json", "--sell"],
+      "suites": ["reviewed-art-badges"], "kind": "runtime", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-reviewed-viking-thunder", "runtime": "python",
+      "args": ["scripts/test-connected-art-casting.py", "--reviewed-entry", "--action", "365"],
+      "suites": ["reviewed-art-spells"], "kind": "runtime", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-reviewed-viking-thundaga", "runtime": "python",
+      "args": ["scripts/test-connected-art-casting.py", "--reviewed-entry", "--action", "371"],
+      "suites": ["reviewed-art-spells"], "kind": "runtime", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-reviewed-action-inventory",
+      "runtime": "python",
+      "args": [
+        "scripts/validate-reviewed-actions.py"
+      ],
+      "suites": [
+        "reviewed-art"
+      ],
+      "kind": "static",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-reviewed-shared-scanner",
+      "runtime": "python",
+      "args": [
+        "scripts/test-art-palette-plan.py",
+        "--shared-scanner"
+      ],
+      "suites": [
+        "reviewed-art-palette-runtime"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "build-reviewed-grouped-palette-pilot",
+      "runtime": "python",
+      "args": [
+        "scripts/build-reviewed-grouped-palette-pilot.py"
+      ],
+      "suites": [
+        "reviewed-art-palette-pilot"
+      ],
+      "kind": "build",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-reviewed-palette-cold-entry",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-palette-entry.py"
+      ],
+      "suites": [
+        "reviewed-art-palette-runtime"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-palette-response",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-palette-response.py"
+      ],
+      "suites": [
+        "reviewed-art-palette-runtime"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-palette-costs",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-palette-costs.py",
+        "--response",
+        "build/art/reviewed-integration/response/20260920T100240.301436Z/report.json"
+      ],
+      "suites": [
+        "reviewed-art-palette-runtime"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-reviewed-displayed-response",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-displayed-response.py",
+        "--response",
+        "build/art/reviewed-integration/response/20260920T100240.301436Z/report.json"
+      ],
+      "suites": [
+        "reviewed-art-palette-runtime"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "build-reviewed-action-draft",
+      "runtime": "python",
+      "args": [
+        "scripts/import-reviewed-actions.py",
+        "--draft"
+      ],
+      "suites": [
+        "reviewed-art-import"
+      ],
+      "kind": "build",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "build-reviewed-actions-complete",
+      "runtime": "python",
+      "args": ["scripts/import-reviewed-actions.py"],
+      "suites": ["reviewed-art-final"],
+      "kind": "build",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-reviewed-action-import",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-action-import.py"
+      ],
+      "suites": [
+        "reviewed-art-import"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-reviewed-action-cold-entry",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-palette-entry.py",
+        "--actions"
+      ],
+      "suites": [
+        "reviewed-art-import"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-samurai-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry"
+      ],
+      "suites": [
+        "reviewed-art-import"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-samurai-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water.py"
+      ],
+      "suites": [
+        "reviewed-art-import"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-water-palette-phase",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water-phase.py",
+        "--report",
+        "build/art/reviewed-integration/water/20260920T104917.628882Z/report.json"
+      ],
+      "suites": [
+        "reviewed-art-palette-runtime"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-reviewed-human-samurai-combo",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "116",
+        "--combo"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-human-dark-knight-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "117"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-human-dark-knight-combo",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "117",
+        "--combo"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-human-dark-knight-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--job",
+        "117"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-bangaa-viking-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "118"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-bangaa-viking-combo",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "118",
+        "--combo"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-bangaa-viking-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--job",
+        "118"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-bangaa-dark-knight-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "119"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-bangaa-dark-knight-combo",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "119",
+        "--combo"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-bangaa-dark-knight-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--job",
+        "119"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-nu-mou-chemist-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "120"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-nu-mou-chemist-combo",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "120",
+        "--combo"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-nu-mou-chemist-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--job",
+        "120"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-nu-mou-geomancer-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "121"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-nu-mou-geomancer-combo",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "121",
+        "--combo"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-nu-mou-geomancer-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--job",
+        "121"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-moogle-chemist-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "122"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-moogle-chemist-combo",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "122",
+        "--combo"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-moogle-chemist-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--job",
+        "122"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-moogle-bard-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "123"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-moogle-bard-combo",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "123",
+        "--combo"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-moogle-bard-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--job",
+        "123"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-viera-dancer-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "124"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-viera-dancer-combo",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "124",
+        "--combo"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-viera-dancer-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--job",
+        "124"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-viera-mystic-knight-fight",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "125"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-viera-mystic-knight-combo",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/reviewed-integration/action-candidate.json",
+        "--reviewed-entry",
+        "--job",
+        "125",
+        "--combo"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-reviewed-viera-mystic-knight-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--job",
+        "125"
+      ],
+      "suites": [
+        "reviewed-art-class-actions"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "gate-reviewed-actions-complete",
+      "runtime": "python",
+      "args": [
+        "scripts/validate-reviewed-actions.py",
+        "--require-complete"
+      ],
+      "suites": [
+        "reviewed-art-final"
+      ],
+      "kind": "static",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "build-reviewed-portraits",
+      "runtime": "python",
+      "args": [
+        "scripts/import-reviewed-portraits.py"
+      ],
+      "suites": [
+        "reviewed-art-portraits"
+      ],
+      "kind": "build",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-reviewed-portrait-import",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-portrait-import.py"
+      ],
+      "suites": [
+        "reviewed-art-portraits"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-reviewed-portrait-menus",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-portraits-ui.py",
+        "--manifest",
+        "build/art/reviewed-integration/portrait-candidate.json"
+      ],
+      "suites": [
+        "reviewed-art-portraits"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "build-reviewed-menu-miniatures",
+      "runtime": "python",
+      "args": ["scripts/build-reviewed-menu-miniatures.py"],
+      "suites": ["reviewed-art-menus"],
+      "kind": "build",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-reviewed-menu-miniatures-native",
+      "runtime": "python",
+      "args": ["scripts/test-reviewed-menu-miniatures.py"],
+      "suites": ["reviewed-art-menus"],
+      "kind": "runtime",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-reviewed-menu-miniatures-ui",
+      "runtime": "python",
+      "args": ["scripts/test-generated-portraits-ui.py", "--manifest", "build/art/reviewed-integration/menu-candidate.json"],
+      "suites": ["reviewed-art-menus"],
+      "kind": "runtime",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-reviewed-miniature-producer",
+      "runtime": "python",
+      "args": ["scripts/test-generated-portraits-ui.py", "--manifest", "build/art/reviewed-integration/portrait-candidate.json", "--trace-miniature"],
+      "suites": ["reviewed-art-menu-runtime"],
+      "kind": "runtime",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-reviewed-native-scheduler",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reviewed-displayed-response.py",
+        "--response",
+        "build/art/reviewed-integration/response/20260920T100240.301436Z/report.json",
+        "--scheduler"
+      ],
+      "suites": [
+        "reviewed-art-palette-runtime"
+      ],
+      "kind": "runtime",
+      "timeoutSeconds": 300
+    }
+  ]
+}

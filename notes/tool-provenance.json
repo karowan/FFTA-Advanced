@@ -1,0 +1,48 @@
+{
+  "recorded": "2026-09-14",
+  "hashes": [
+    {
+      "path": "downloads/Event-Assembler-V11.1.3.zip",
+      "bytes": 17173136,
+      "sha256": "1fbe87304aabf27912319a1654972549bde6029c23ecf1ea9a6ba4787c936807"
+    },
+    {
+      "path": "downloads/ColorzCore-47c0938.exe",
+      "bytes": 117760,
+      "sha256": "3ba398266cb976bf8a12c74e970edb14b32c77cd6f004e068834baa928c85451"
+    },
+    {
+      "path": "downloads/mgba_libretro.dll.zip",
+      "bytes": 529880,
+      "sha256": "39fdaa670f2b8e4eb7b905ff9770875fdb29b52a93acc7d5f83f5474e22ef9f4"
+    },
+    {
+      "path": "downloads/unicorn-2.1.4-cp37-abi3-win_amd64.whl",
+      "bytes": 15943079,
+      "sha256": "d7107500c64ce5c168fbff6bef9485b5db1350050036f4cea568650cf8bdbdf5"
+    },
+    {
+      "path": "downloads/capstone-5.0.9-py3-none-win_amd64.whl",
+      "bytes": 1273459,
+      "sha256": "732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0"
+    },
+    {
+      "path": "tools/event-assembler/ColorzCore.exe",
+      "bytes": 117760,
+      "sha256": "3ba398266cb976bf8a12c74e970edb14b32c77cd6f004e068834baa928c85451"
+    },
+    {
+      "path": "tools/mgba-test-core/mgba_libretro.dll",
+      "bytes": 2955998,
+      "sha256": "b7008c1a834fef42c9c2b66594855f63924d419fb33af2863e86b1a032d03560"
+    },
+    {
+      "path": "downloads/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi.zip",
+      "bytes": 290006806,
+      "sha256": "864c0c8815857d68a1bbba2e5e2782255bb922845c71c97636004a3d74f60986",
+      "source": "https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi.zip",
+      "installedTo": "tools/arm-gnu",
+      "version": "14.3.Rel1 / GCC14.3.1 20250623"
+    }
+  ]
+}

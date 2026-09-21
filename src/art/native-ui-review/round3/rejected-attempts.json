@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "moogle-chemist",
+    "path": "build\\art\\native-ui-revision-v3-2026-09-20\\moogle-chemist\\rejected-icon-1.png",
+    "prompt": "Edit image 1, the sprite-based Moogle Chemist equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border.",
+    "reason": "Reference-job headgear replaced distinctive approved costume",
+    "sha256": "851b6fe5abf5a07ab7f1d3b35ed665da79e8771262a5ed6d51e9b797fbd6a553"
+  },
+  {
+    "slug": "moogle-bard",
+    "path": "build\\art\\native-ui-revision-v3-2026-09-20\\moogle-bard\\rejected-icon-2.png",
+    "prompt": "Edit image 1, the sprite-based Moogle Bard equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border.",
+    "reason": "Reference-job headgear replaced distinctive approved costume",
+    "sha256": "870cefbc2eca7f560a7a8e9668ce6a210d1ea5f10760779e80dbc244b4308bf4"
+  },
+  {
+    "slug": "moogle-chemist",
+    "path": "build\\art\\native-ui-revision-v3-2026-09-20\\moogle-chemist\\rejected-icon-3.png",
+    "prompt": "Edit image 1, the sprite-based Moogle Chemist equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border. Image 4 is the approved costume: keep the olive green chemist hood and cream face. No blue cap and no star emblem; those belong to reference jobs.",
+    "reason": "Pale face merged with badge background after native sampling",
+    "sha256": "6d7dd0b4aeb37e1d9cc172203c6cc09c8b6146f96fa50b2c11a6e49bc6ec1eba"
+  }
+]

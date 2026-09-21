@@ -1,0 +1,16 @@
+{
+  "designVersion": "0.7",
+  "equipmentRevision": 1,
+  "weapons": 85,
+  "lessons": 129,
+  "stageCounts": [
+    18,
+    23,
+    23,
+    21
+  ],
+  "allAbilityDefinitionsAndCommandRulesPreserved": true,
+  "scope": "Document/ledger validation only; stock gates and ROM offsets not implemented.",
+  "errors": [],
+  "passed": true
+}

@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "assets": [
+    {
+      "slug": "human-samurai",
+      "kind": "icon",
+      "passed": true,
+      "anchorProof": {
+        "count": 19,
+        "matchingBefore": 19,
+        "matchingAfter": 19
+      }
+    },
+    {
+      "slug": "human-dark-knight",
+      "kind": "icon",
+      "passed": true,
+      "anchorProof": {
+        "count": 4,
+        "matchingAfter": 4,
+        "goldEyeCoordinates": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ]
+        ],
+        "method": "Generated eye pixels validated at native eye columns 7 and 10; no face pixels composited into helmets."
+      }
+    },
+    {
+      "slug": "human-dark-knight",
+      "kind": "portrait",
+      "passed": true,
+      "anchorProof": {}
+    },
+    {
+      "slug": "bangaa-viking",
+      "kind": "icon",
+      "passed": true,
+      "anchorProof": {
+        "count": 14,
+        "matchingBefore": 6,
+        "matchingAfter": 14
+      }
+    },
+    {
+      "slug": "bangaa-dark-knight",
+      "kind": "icon",
+      "passed": true,
+      "anchorProof": {
+        "count": 2,
+        "matchingAfter": 2,
+        "goldEyeCoordinates": [
+          [
+            7,
+            7
+          ],
+          [
+            10,
+            7
+          ]
+        ],
+        "method": "Generated eye pixels validated at native eye columns 7 and 10; no face pixels composited into helmets."
+      }
+    },
+    {
+      "slug": "nu-mou-chemist",
+      "kind": "icon",
+      "passed": true,
+      "anchorProof": {
+        "count": 63,
+        "matchingBefore": 16,
+        "matchingAfter": 63
+      }
+    },
+    {
+      "slug": "nu-mou-geomancer",
+      "kind": "icon",
+      "passed": true,
+      "anchorProof": {
+        "count": 63,
+        "matchingBefore": 18,
+        "matchingAfter": 63
+      }
+    },
+    {
+      "slug": "moogle-chemist",
+      "kind": "icon",
+      "passed": true,
+      "anchorProof": {
+        "count": 33,
+        "matchingBefore": 14,
+        "matchingAfter": 33
+      }
+    },
+    {
+      "slug": "moogle-bard",
+      "kind": "icon",
+      "passed": true,
+      "anchorProof": {
+        "count": 33,
+        "matchingBefore": 11,
+        "matchingAfter": 33
+      }
+    },
+    {
+      "slug": "viera-dancer",
+      "kind": "icon",
+      "passed": true,
+      "anchorProof": {
+        "count": 37,
+        "matchingBefore": 11,
+        "matchingAfter": 37
+      }
+    },
+    {
+      "slug": "viera-mystic-knight",
+      "kind": "icon",
+      "passed": true,
+      "anchorProof": {
+        "count": 37,
+        "matchingBefore": 34,
+        "matchingAfter": 37
+      }
+    },
+    {
+      "slug": "viera-mystic-knight",
+      "kind": "portrait",
+      "passed": true,
+      "anchorProof": {}
+    }
+  ],
+  "linkedReviewAssets": 1711,
+  "counts": {
+    "jobs": 10,
+    "poses": 675,
+    "sequences": 796,
+    "draws": 3025,
+    "controls": 1116,
+    "emptySlots": 884
+  },
+  "nativeSourceRomSha256": "43fc8204c6dceee58828aebc7af0c72eb807e99f35ad641c8bb0a4fa8b6edc19",
+  "runtimeTestRun": false,
+  "scope": "Offline review only: original native palettes, extracted anchors, helmet eye coordinates, badge frame/letter indices, hashes and complete animation inventory. Visual approval and new in-game import remain pending."
+}

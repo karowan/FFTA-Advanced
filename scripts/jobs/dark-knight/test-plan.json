@@ -1,0 +1,347 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 1800,
+  "scope": "Dark Knight implementation in progress; declared focused behavior tests do not establish full job acceptance.",
+  "steps": [
+    {
+      "id": "worktree-prerequisites",
+      "runtime": "python",
+      "args": [
+        "scripts/check-worktree-prerequisites.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-runner-self",
+      "runtime": "python",
+      "args": [
+        "scripts/test-test-runner.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-original-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-native-executor.py",
+        "--fell",
+        "--current"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "build-samurai-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-samurai-probe.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "prepare-samurai-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-executor.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private",
+        "test-installed-fell-original-executor"
+      ]
+    },
+    {
+      "id": "test-action-context",
+      "runtime": "python",
+      "args": [
+        "scripts/test-action-context.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-native.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-blade-ward-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-ward-executor.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "prepare-samurai-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-battle.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "build-job-state-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-job-state-probe.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "build-dark-knight",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/build.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "prepare-dark-knight-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/prepare-battle.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-dark-knight"
+      ]
+    },
+    {
+      "id": "prepare-dark-knight-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/prepare-executor.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "prepare-dark-knight-battle"
+      ]
+    },
+    {
+      "id": "test-dark-mind-native",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-dark-mind.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-dark-knight-executor"
+      ]
+    },
+    {
+      "id": "test-dark-mind-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-dark-mind-in-game.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-dark-knight-battle"
+      ]
+    },
+    {
+      "id": "test-blood-edge-native",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-blood-edge.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-dark-knight-executor"
+      ]
+    },
+    {
+      "id": "test-blood-edge-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-dark-mind-in-game.py",
+        "--blood"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-dark-knight-battle"
+      ]
+    },
+    {
+      "id": "test-dark-knight-help",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-help.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-dark-knight"
+      ]
+    },
+    {
+      "id": "test-sword-riders-native",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-sword-riders.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-dark-knight-executor"
+      ]
+    },
+    {
+      "id": "test-crushing-blow-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-sword-riders-in-game.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-dark-knight-battle"
+      ]
+    },
+    {
+      "id": "test-unholy-sacrifice-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-sword-riders-in-game.py",
+        "--unholy"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-dark-knight-battle"
+      ]
+    },
+    {
+      "id": "test-desperation-native",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-desperation.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-dark-knight-executor"
+      ]
+    },
+    {
+      "id": "compile-dark-knight-batch",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/compile-batch.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-dark-knight-batch-native",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-batch.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-dark-knight-executor"
+      ]
+    },
+    {
+      "id": "test-abyssal-native",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/dark-knight/test-abyssal.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-dark-knight-executor"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "coverage": "partial",
+  "jobs": [116],
+  "review": "Existing built-in-imagegen walk-v2 is a rejected visual draft. Native Human Samurai movement manually drives idle/march slots0/1; slots2/3 are included as separate walk-mode contracts. Use only to prove explicit import, not production art or full animation coverage.",
+  "assets": {
+    "walk": {
+      "source": "build/art/imagegen/samurai/walk-v2.png",
+      "sourceSha256": "217025f421ecbab9897ee42c2cf36a18fb575a894bed08e394e72b222d897303",
+      "promptRecord": "src/art/imagegen/samurai-walk-v2-prompt.json",
+      "conversion": {"columns": 4, "rows": 2, "height": 29, "resampling": "nearest"}
+    }
+  },
+  "sequences": [
+    {"job": 116, "lifetime": "land", "slot": 0, "frames": [
+      {"asset": "walk", "frame": 0}, {"asset": "walk", "frame": 1},
+      {"asset": "walk", "frame": 2}, {"asset": "walk", "frame": 3}
+    ]},
+    {"job": 116, "lifetime": "land", "slot": 1, "frames": [
+      {"asset": "walk", "frame": 4}, {"asset": "walk", "frame": 5},
+      {"asset": "walk", "frame": 6}, {"asset": "walk", "frame": 7}
+    ]},
+    {"job": 116, "lifetime": "land", "slot": 2, "frames": [
+      {"asset": "walk", "frame": 0}, {"asset": "walk", "frame": 1},
+      {"asset": "walk", "frame": 2}, {"asset": "walk", "frame": 3}
+    ]},
+    {"job": 116, "lifetime": "land", "slot": 3, "frames": [
+      {"asset": "walk", "frame": 4}, {"asset": "walk", "frame": 5},
+      {"asset": "walk", "frame": 6}, {"asset": "walk", "frame": 7}
+    ]}
+  ]
+}

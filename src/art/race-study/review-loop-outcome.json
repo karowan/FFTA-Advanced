@@ -1,0 +1,33 @@
+{
+  "baseline": {
+    "a": "needs refinement: oversized eyes, elongated body, excessive detail.",
+    "b": "needs refinement: broad frontal face, large eyes, fine pixel grammar."
+  },
+  "round1": {
+    "a": "needs refinement: far eye merges into outline, narrow upright silhouette, strong beard/neck band.",
+    "b": "needs refinement: eye merge at native size, thin body, sleeve/apron loss."
+  },
+  "round2": {
+    "a": "needs refinement: eye correction did not happen, white eye block, tall forehead/legs.",
+    "b": "needs refinement: far eye touches contour, oversized forehead, torso improved."
+  },
+  "round3": {
+    "a": "needs refinement: source face arrangement right; native loses eyes; head too round and ground oval added.",
+    "b": "needs refinement overall; source eye orientation now looks right; simplify shading and resolve conversion."
+  },
+  "round4": {
+    "a": "Initial this looks right withdrawn after user camera-elevation correction.",
+    "b": "Initial this looks right withdrawn after user camera-elevation correction.",
+    "user": "Angle wrong: ground-level looking forward, references slightly above character looking down."
+  },
+  "round5": {
+    "a": "needs refinement: source elevation improved; native eye/outline loss and broad prominent cranium remain.",
+    "b": "needs refinement: higher viewpoint present; native near-eye pupil lost; frontal apron and boot fronts still weaken elevation."
+  },
+  "stopReason": "Five generation rounds exhausted; no user acceptance; no additional pose generation.",
+  "reviewers": [
+    "/root/art_judge_a",
+    "/root/art_judge_b"
+  ],
+  "productionAccepted": false
+}

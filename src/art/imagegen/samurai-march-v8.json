@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "built-in default; model name not exposed",
+  "prompt": "Precise small-feature correction to this generated original Samurai marching sheet. Keep the SAME SIX sprites, same three columns/two rows, identical red helmet and crest, armor, hands, sheath, legs, poses, outlines, dimensions and gutters. Change ONLY the visible EYE in each of the THREE TOP-ROW faces. This sheet is reduced to 27 pixels tall per character: the current narrow white sliver vanishes. Make each visible eye a clearly readable WHITE RECTANGULAR PATCH TWO logical pixels wide and THREE logical pixels tall, with ONE logical-pixel-wide dark pupil on the LEFT edge. Thus the white is a substantial visible area, not a hairline highlight. Define the logical pixel as approximately ONE TWENTY-SEVENTH of the character height. Put the eye in exactly the same face position, size and shape in all three top poses. Do not enlarge the head, helmet or face or add eyebrows. No closed eye or different expression. The back row is UNCHANGED and has no visible eyes. Preserve exactly which boot is raised in every frame. Keep a genuine transparent background, no shadows or glow. Preserve only opaque sprite pixels and empty alpha around them. No labels or extras. Return the same complete six-frame sheet with this eye correction.",
+  "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v8.png",
+  "sourceSha256": "d687e45c361a7c2be5383112a51ef9ae54c2945cec07d8133e1d27b4a25894c9",
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-8d0bfb39-1ce5-46fe-993c-e32c84f62d37.png",
+  "references": [
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/samurai-march-v7.png",
+      "role": "Generated original character eye edit target",
+      "sha256": "de749df2f468578406e8c9a542a2721cfca6e38e70220d528092f1364c4a05d0"
+    }
+  ],
+  "conversion": {
+    "columns": 3,
+    "rows": 2,
+    "height": 27,
+    "resampling": "nearest",
+    "palette": "shared generated 15-color RGB555"
+  },
+  "productionAccepted": false,
+  "status": "Not selected over v7. Exact native review finds same two white eye pixels at16,12 and16,13 in all front cells. Earlier visual claim that v7 eyes disappear was incorrect. Top outline/crest still shifts slightly."
+}

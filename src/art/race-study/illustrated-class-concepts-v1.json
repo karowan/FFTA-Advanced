@@ -1,0 +1,272 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Tool default; model version not exposed",
+  "settings": "prompt and referenced_image_paths only; other settings tool-managed",
+  "scope": "Full character concept illustrations for all ten class/race combinations. Costume approval precedes sprite adaptation.",
+  "concepts": [
+    {
+      "job": 116,
+      "slug": "human-samurai",
+      "race": "human",
+      "label": "Human Samurai",
+      "prompt": "Create an original Human Samurai full-body character illustration to sit beside this original Final Fantasy Tactics Advance concept art. Match the references' ink linework, simple shaded colors, expressive design, racial anatomy and proportions. A young samurai in vermilion lamellar armor, a compact crescent kabuto, indigo divided trousers and straw-edged boots, resting one hand on a sheathed katana. Plain white background, one complete character, no text. Illustrated concept art, not pixel art.",
+      "references": [
+        {
+          "race": "human",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-h-paladin.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-h-paladin.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\human-official.jpg",
+          "sha256": "4e104fe698fb4fd0867a029e0202a5c92f2c7c3c09763a6ab84a7e71a87137b9"
+        },
+        {
+          "race": "human",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-h-fighter.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-h-fighter.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\human-fighter-official.jpg",
+          "sha256": "16eb51a34285b05c92b72898e3c204bb26437d74046af17ae316ecfc94d87175"
+        }
+      ],
+      "output": {
+        "path": "build\\art\\illustrated-class-concepts-2026-09-19\\human-samurai.png",
+        "sha256": "17b10ef3e05e27a1a1d08a8b027e8affa19b15909af9ae0c761d7ddc794208ff",
+        "dimensions": [
+          972,
+          1617
+        ],
+        "status": "First illustrated concept draft, awaiting user review"
+      }
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "race": "human",
+      "label": "Human Dark Knight",
+      "prompt": "Create an original Human Dark Knight full-body character illustration to sit beside this original Final Fantasy Tactics Advance concept art. Match the references' ink linework, simple shaded colors, expressive design, racial anatomy and proportions. A stern youthful knight in charcoal plate armor with angular shoulders, an open-faced brow guard and a wine-red split tabard, resting a broad dark sword point-down. Plain white background, one complete character, no text. Illustrated concept art, not pixel art.",
+      "references": [
+        {
+          "race": "human",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-h-paladin.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-h-paladin.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\human-official.jpg",
+          "sha256": "4e104fe698fb4fd0867a029e0202a5c92f2c7c3c09763a6ab84a7e71a87137b9"
+        },
+        {
+          "race": "human",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-h-fighter.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-h-fighter.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\human-fighter-official.jpg",
+          "sha256": "16eb51a34285b05c92b72898e3c204bb26437d74046af17ae316ecfc94d87175"
+        }
+      ],
+      "output": {
+        "path": "build\\art\\illustrated-class-concepts-2026-09-19\\human-dark-knight.png",
+        "sha256": "f388601e929e988e35c65c3cd985aa2926ed7daf0cabe7dbd3fa5d35a6445cf0",
+        "dimensions": [
+          972,
+          1617
+        ],
+        "status": "First illustrated concept draft, awaiting user review"
+      }
+    },
+    {
+      "job": 118,
+      "slug": "bangaa-viking",
+      "race": "bangaa",
+      "label": "Bangaa Viking",
+      "prompt": "Create an original Bangaa Viking full-body character illustration to sit beside this original Final Fantasy Tactics Advance concept art. Match the references' ink linework, simple shaded colors, expressive design, racial anatomy and proportions. A sturdy Bangaa raider with a cream fur mantle, teal short cloak, bronze brooches, practical leather harness and a broad bearded axe; exposed long muzzle, hanging ears and tail. Plain white background, one complete character, no text. Illustrated concept art, not pixel art.",
+      "references": [
+        {
+          "race": "bangaa",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-bangaa.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-bangaa.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\bangaa-official.jpg",
+          "sha256": "ca498fa7073c5436049d65a41cc171d2308b9de22fbaaa3d4f5c7da5e7744a11"
+        }
+      ],
+      "output": {
+        "path": "build\\art\\illustrated-class-concepts-2026-09-19\\bangaa-viking.png",
+        "sha256": "b39d78853188024644162cf8ebd92fdccfd2d538287cfb18a77dc925f7a33459",
+        "dimensions": [
+          1017,
+          1546
+        ],
+        "status": "First illustrated concept draft, awaiting user review"
+      }
+    },
+    {
+      "job": 119,
+      "slug": "bangaa-dark-knight",
+      "race": "bangaa",
+      "label": "Bangaa Dark Knight",
+      "prompt": "Create an original Bangaa Dark Knight full-body character illustration to sit beside this original Final Fantasy Tactics Advance concept art. Match the references' ink linework, simple shaded colors, expressive design, racial anatomy and proportions. A Bangaa knight in heavy dark-violet segmented armor, low plated head crest and burgundy waist cloth, with a broad sword; exposed long muzzle, hanging ears and armored tail. Plain white background, one complete character, no text. Illustrated concept art, not pixel art.",
+      "references": [
+        {
+          "race": "bangaa",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-bangaa.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-bangaa.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\bangaa-official.jpg",
+          "sha256": "ca498fa7073c5436049d65a41cc171d2308b9de22fbaaa3d4f5c7da5e7744a11"
+        }
+      ],
+      "output": {
+        "path": "build\\art\\illustrated-class-concepts-2026-09-19\\bangaa-dark-knight.png",
+        "sha256": "d94383f22b8199719dc52c57d385e56465c1f782adc91997ea3ca2c90b8b2142",
+        "dimensions": [
+          1017,
+          1546
+        ],
+        "status": "First illustrated concept draft, awaiting user review"
+      }
+    },
+    {
+      "job": 120,
+      "slug": "nu-mou-chemist",
+      "race": "nu-mou",
+      "label": "Nu Mou Chemist",
+      "prompt": "Create an original Nu Mou Chemist full-body character illustration to sit beside this original Final Fantasy Tactics Advance concept art. Match the references' ink linework, simple shaded colors, expressive design, racial anatomy and proportions. A thoughtful Nu Mou apothecary in a cream long work coat and teal apron, brass goggles pushed above the eyes, a leather medicine case and one small glass flask; preserve the long hanging ears and furry tail. Plain white background, one complete character, no text. Illustrated concept art, not pixel art.",
+      "references": [
+        {
+          "race": "nu-mou",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-nu-mou.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-nu-mou.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\nu-mou-official.jpg",
+          "sha256": "b88ef166788748084cb805927c13bc351e0ef05ae796ba39f1b7f88daeb2783f"
+        }
+      ],
+      "output": {
+        "path": "build\\art\\illustrated-class-concepts-2026-09-19\\nu-mou-chemist.png",
+        "sha256": "23d417bdadc6d68cec9a4f68ef70e561d79db79f62d613c751320b4e12723bdf",
+        "dimensions": [
+          1618,
+          972
+        ],
+        "status": "First illustrated concept draft, awaiting user review"
+      }
+    },
+    {
+      "job": 121,
+      "slug": "nu-mou-geomancer",
+      "race": "nu-mou",
+      "label": "Nu Mou Geomancer",
+      "prompt": "Create an original Nu Mou Geomancer full-body character illustration to sit beside this original Final Fantasy Tactics Advance concept art. Match the references' ink linework, simple shaded colors, expressive design, racial anatomy and proportions. A Nu Mou earth mystic in an ochre robe and moss-green mantle, a stone pendant and a weathered staff with a small ring of stones; preserve the long hanging ears and furry tail. Plain white background, one complete character, no text. Illustrated concept art, not pixel art.",
+      "references": [
+        {
+          "race": "nu-mou",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-nu-mou.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-nu-mou.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\nu-mou-official.jpg",
+          "sha256": "b88ef166788748084cb805927c13bc351e0ef05ae796ba39f1b7f88daeb2783f"
+        }
+      ],
+      "output": {
+        "path": "build\\art\\illustrated-class-concepts-2026-09-19\\nu-mou-geomancer.png",
+        "sha256": "3eafd61cfe81ac54b505969fe70f05d13c15beefef1b2e88cb4e233af66de054",
+        "dimensions": [
+          1618,
+          972
+        ],
+        "status": "First illustrated concept draft, awaiting user review"
+      }
+    },
+    {
+      "job": 122,
+      "slug": "moogle-chemist",
+      "race": "moogle",
+      "label": "Moogle Chemist",
+      "prompt": "Create an original Moogle Chemist full-body character illustration to sit beside this original Final Fantasy Tactics Advance concept art. Match the references' ink linework, simple shaded colors, expressive design, racial anatomy and proportions. An inquisitive Moogle field chemist wearing a short cream coat, amber leather utility apron and little brass goggles, with a teal bottle satchel and a glass mixing flask; long ears, orange pom-pom and small wings visible. Plain white background, one complete character, no text. Illustrated concept art, not pixel art.",
+      "references": [
+        {
+          "race": "moogle",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-moogle.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-moogle.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\moogle-official.jpg",
+          "sha256": "aa1ce515d5fd411f4208f562c2cd562bb62449dcc6f7d9fa6c9ba16d4e6cc709"
+        }
+      ],
+      "output": {
+        "path": "build\\art\\illustrated-class-concepts-2026-09-19\\moogle-chemist.png",
+        "sha256": "dcaa071f278e29f4a7bca715c913df25c2d8cdeadb213014fd65c501e020bb1d",
+        "dimensions": [
+          1151,
+          1366
+        ],
+        "status": "First illustrated concept draft, awaiting user review"
+      }
+    },
+    {
+      "job": 123,
+      "slug": "moogle-bard",
+      "race": "moogle",
+      "label": "Moogle Bard",
+      "prompt": "Create an original Moogle Bard full-body character illustration to sit beside this original Final Fantasy Tactics Advance concept art. Match the references' ink linework, simple shaded colors, expressive design, racial anatomy and proportions. A cheerful Moogle minstrel wearing a green feathered cap, short blue cape and red cravat, playing a small wooden lute; long ears, orange pom-pom and small wings visible. Plain white background, one complete character, no text. Illustrated concept art, not pixel art.",
+      "references": [
+        {
+          "race": "moogle",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-moogle.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-moogle.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\moogle-official.jpg",
+          "sha256": "aa1ce515d5fd411f4208f562c2cd562bb62449dcc6f7d9fa6c9ba16d4e6cc709"
+        }
+      ],
+      "output": {
+        "path": "build\\art\\illustrated-class-concepts-2026-09-19\\moogle-bard.png",
+        "sha256": "24a99e5b4f55075847cb33b844afd7962155d7ae33a1835eee02cb91ecf10faf",
+        "dimensions": [
+          1151,
+          1366
+        ],
+        "status": "First illustrated concept draft, awaiting user review"
+      }
+    },
+    {
+      "job": 124,
+      "slug": "viera-dancer",
+      "race": "viera",
+      "label": "Viera Dancer",
+      "prompt": "Create an original Viera Dancer full-body character illustration to sit beside this original Final Fantasy Tactics Advance concept art. Match the references' ink linework, simple shaded colors, expressive design, racial anatomy and proportions. A graceful Viera dancer in blue and ivory layered cloth, a jeweled headband, gold waist chain and a flowing sash, holding two small dancing fans; silver hair and tall ears visible. Plain white background, one complete character, no text. Illustrated concept art, not pixel art.",
+      "references": [
+        {
+          "race": "viera",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-viera.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-viera.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\viera-official.jpg",
+          "sha256": "7e2fc879044a93dc0ffc95fc4bb1b0f745b6d68fde1ce44b7db6eac8b7cf46b2"
+        }
+      ],
+      "output": {
+        "path": "build\\art\\illustrated-class-concepts-2026-09-19\\viera-dancer.png",
+        "sha256": "d74f1579b16498ff5da633acc731f26aee0aa2bac806016dc35af069557bc1e3",
+        "dimensions": [
+          727,
+          2164
+        ],
+        "status": "First illustrated concept draft, awaiting user review"
+      }
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "race": "viera",
+      "label": "Viera Mystic Knight",
+      "prompt": "Create an original Viera Mystic Knight full-body character illustration to sit beside this original Final Fantasy Tactics Advance concept art. Match the references' ink linework, simple shaded colors, expressive design, racial anatomy and proportions. A poised Viera spellblade in fitted silver armor over a violet split tunic, a slim runic brow guard and teal shoulder mantle, holding an elegant lightly engraved sword; silver hair and tall ears visible. Plain white background, one complete character, no text. Illustrated concept art, not pixel art.",
+      "references": [
+        {
+          "race": "viera",
+          "page": "https://www.creativeuncut.com/gallery-01/ffta-viera.html",
+          "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-viera.jpg",
+          "path": "build\\art\\illustrated-class-concepts-2026-09-19\\references\\viera-official.jpg",
+          "sha256": "7e2fc879044a93dc0ffc95fc4bb1b0f745b6d68fde1ce44b7db6eac8b7cf46b2"
+        }
+      ],
+      "output": {
+        "path": "build\\art\\illustrated-class-concepts-2026-09-19\\viera-mystic-knight.png",
+        "sha256": "82274f24da2471a2f4b0ef0fed4353d32d6224afcb5fc26fbdd959ec0c648163",
+        "dimensions": [
+          727,
+          2164
+        ],
+        "status": "First illustrated concept draft, awaiting user review"
+      }
+    }
+  ]
+}

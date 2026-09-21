@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "status": "Facing consistency improved. Gait repeats same forward leg; bottom cell2 changes sheath side. Not accepted or imported.",
+  "references": [
+    "build/art/imagegen/samurai/walk-v1.png"
+  ],
+  "selectedPrivatePath": "build/art/imagegen/samurai/walk-v2.png",
+  "prompt": "Use case: precise-object-edit. This is a walking sprite sheet, not a lineup of directions. Keep the SAME Samurai costume, chunky pixel style, palette, canvas layout, scale, transparency and eight cell positions. Correct ONLY facing consistency and walking gait. In TOP ROW all FOUR sprites MUST face SCREEN LEFT like the top-left sprite: the face/eyes point left, the katana sheath trails to screen right. In BOTTOM ROW all FOUR sprites MUST show the BACK with the face pointing SCREEN RIGHT like the bottom-left sprite: the sheath trails screen left. In particular reverse the wrong-facing second and third sprites of the TOP row and the fourth sprite of the BOTTOM row. Do not alternate left/right facings. Within each row make a four-frame marching cycle with left foot forward, feet passing, right foot forward, feet passing, and opposing arm swing; body stays oriented the same direction across all four frames. Preserve armor/head identity; only legs/arms change pose. All figures remain fully inside their own equal cell with transparent margins. No words, labels, grid, shadows, other objects or background."
+}

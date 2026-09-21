@@ -1,0 +1,2174 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 180,
+  "scope": "Declared native graphics engineering checks. Each report states its bounded scope; selected passing checks do not close full engineering gates E01-E05. No player save mutations.",
+  "steps": [
+    {"id": "build-full-engineering", "runtime": "python", "args": ["scripts/build-engineering-release.py"], "suites": ["art"], "kind": "build", "timeoutSeconds": 1200},
+    {"id": "audit-full-engineering", "runtime": "python", "args": ["scripts/audit-full-engineering.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "package-full-engineering", "runtime": "node", "args": ["scripts/package-engineering-expansion.mjs"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-full-engineering-launcher", "runtime": "python", "args": ["scripts/test-engineering-delivery.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "build-full-engineering-art-resume", "runtime": "python", "args": ["scripts/build-engineering-release.py", "--resume-base", "build/reproducibility/20260919T100752.819552Z/report.json", "--resume-base-sha256", "f002d414fd615b933fdb34bec4ca65491bfa488faf54e4c4a969aaf6cdb8ee55"], "suites": ["art"], "kind": "build", "timeoutSeconds": 700},
+    {"id": "audit-art-campaign-compatibility", "runtime": "python", "args": ["scripts/audit-art-campaign-compatibility.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-campaign-ending", "runtime": "python", "args": ["scripts/test-art-campaign-ending.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-battle-exit", "runtime": "python", "args": ["scripts/test-art-battle-exit.py", "--resume-result"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-campaign-saves", "runtime": "python", "args": ["scripts/test-art-campaign-saves.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "audit-art-capacity-followup", "runtime": "python", "args": ["scripts/audit-art-capacity-followup.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 90},
+    {"id": "test-art-capacity-action-return", "runtime": "python", "args": ["scripts/test-art-capacity-action.py", "--resume-executed"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-capacity-action-resume", "runtime": "python", "args": ["scripts/test-art-capacity-action.py", "--resume-targeting"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-capacity-action", "runtime": "python", "args": ["scripts/test-art-capacity-action.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-native-event-roots", "runtime": "python", "args": ["scripts/test-native-event-roots.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 90},
+    {"id": "test-art-native-event-confirm", "runtime": "python", "args": ["scripts/test-art-native-event-entry.py", "--resume-deployment"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "audit-art-native-consumers", "runtime": "python", "args": ["scripts/audit-art-native-consumers.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 90},
+    {"id": "test-art-native-portraits-ui", "runtime": "python", "args": ["scripts/test-generated-portraits-ui.py", "--manifest", "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-native-equipment-ui", "runtime": "python", "args": ["scripts/test-generated-equipment.py", "--ui", "--manifest", "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-preview-inventory", "runtime": "python", "args": ["scripts/test-equipment-preview-ui.py", "--manifest", "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-native-preview-buy", "runtime": "python", "args": ["scripts/test-equipment-preview-ui.py", "--shop", "--manifest", "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-native-preview-sell", "runtime": "python", "args": ["scripts/test-equipment-preview-ui.py", "--sell", "--manifest", "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-native-status-icons", "runtime": "python", "args": ["scripts/test-generated-status.py", "--manifest", "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json", "--retained-ready", "build/art/native-palette-entry/20260919T070815.647048Z/report.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-event-entry", "runtime": "python", "args": ["scripts/test-art-native-event-entry.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-sort-capacity", "runtime": "python", "args": ["scripts/test-art-native-sort-capacity.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 90},
+    {"id": "test-art-largest-heap-diagnostic", "runtime": "python", "args": ["scripts/test-art-largest-heap-diagnostic.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-native-largest-entry", "runtime": "python", "args": ["scripts/test-art-larger-encounter.py", "--manifest", "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json", "--formation", "23"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-queued-trail-upload", "runtime": "python", "args": ["scripts/test-art-queued-trail-upload.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 90},
+    {"id": "test-art-native-held-weapon", "runtime": "python", "args": ["scripts/test-generated-actions-battle.py", "--weapon", "--manifest", "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-native-projectile-impact", "runtime": "python", "args": ["scripts/test-generated-projectile.py", "--manifest", "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-native-viking-thunder", "runtime": "python", "args": ["scripts/test-connected-art-casting.py", "--native-entry", "build/art/native-palette-entry/latest.json", "--action", "365"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-native-viking-thundaga", "runtime": "python", "args": ["scripts/test-connected-art-casting.py", "--native-entry", "build/art/native-palette-entry/latest.json", "--action", "371"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-native-secondary-entry", "runtime": "python", "args": ["scripts/test-art-native-palette-entry.py", "--bangaa-job", "119"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-secondary-thunder", "runtime": "python", "args": ["scripts/test-connected-art-casting.py", "--native-entry", "build/art/native-palette-entry/bangaa-119.json", "--secondary", "--action", "365"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-native-hidden-constructor", "runtime": "python", "args": ["scripts/test-art-native-hidden-constructor.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-native-combo-participation", "runtime": "python", "args": ["scripts/test-art-native-combo-participation.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-native-palettes", "runtime": "python", "args": ["scripts/test-art-native-palettes.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-palette-entry", "runtime": "python", "args": ["scripts/test-art-native-palette-entry.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-palette-response", "runtime": "python", "args": ["scripts/test-art-native-palette-response.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-native-palette-deployment", "runtime": "python", "args": ["scripts/test-art-native-palette-deployment.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-capacity-entry-diagnostic", "runtime": "python", "args": ["scripts/test-art-capacity-entry-diagnostic.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 90},
+    {"id": "test-art-native-palette-capacity", "runtime": "python", "args": ["scripts/test-art-all-class-capacity.py", "--current", "build/art/native-palettes/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "audit-art-opposing-pressure", "runtime": "python", "args": ["scripts/audit-art-opposing-pressure.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-opposing-contract", "runtime": "python", "args": ["scripts/test-art-opposing-palettes.py", "--existing", "build/art/connected/79e8869552d580469e830c5d07504044ae59553e/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-opposing-palettes", "runtime": "python", "args": ["scripts/test-art-opposing-palettes.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-opposing-capacity", "runtime": "python", "args": ["scripts/test-art-all-class-capacity.py", "--current", "build/art/opposing-palettes/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "audit-current-battle-roster", "runtime": "python", "args": ["scripts/audit-native-encounter-capacity.py", "--manifest", "build/art/connected/5a14e6c7b69f9f9984a6965faf5740d3b318e41a/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-all-class-capacity", "runtime": "python", "args": ["scripts/test-art-all-class-capacity.py", "--current", "build/art/connected/5a14e6c7b69f9f9984a6965faf5740d3b318e41a/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "audit-current-event-capacity", "runtime": "python", "args": ["scripts/audit-native-encounter-capacity.py", "--manifest", "build/art/connected/200ca35b0c48671d7d96874e14ec6cef082287fa/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "audit-current-scripted-capacity", "runtime": "python", "args": ["scripts/audit-native-encounter-capacity.py", "--manifest", "build/art/connected/200ca35b0c48671d7d96874e14ec6cef082287fa/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-rect-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T060124.827800Z/report.json", "--trace-sha256", "7b233f5bfdd45598974dd297f1d0a1fe6338447c1ac420068a5a3545b3f77515", "--manifest", "build/art/connected/200ca35b0c48671d7d96874e14ec6cef082287fa/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-rect-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T060124.827800Z/report.json", "--trace-sha256", "7b233f5bfdd45598974dd297f1d0a1fe6338447c1ac420068a5a3545b3f77515", "--manifest", "build/art/connected/200ca35b0c48671d7d96874e14ec6cef082287fa/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-rect-deployment-costs", "runtime": "python", "args": ["scripts/test-art-entry-palette-trace.py", "--composition-costs", "--input-index", "notes/native-art-rectangle-evidence.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-rect-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/200ca35b0c48671d7d96874e14ec6cef082287fa/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T060011.122589Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-rect-scanner", "runtime": "python", "args": ["scripts/test-art-palette-plan.py", "--rect-conflict"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-rect-plan", "runtime": "python", "args": ["scripts/test-art-frame-high-slots.py", "--rect-conflict"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-rect-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--rect-conflict"], "suites": ["art"], "kind": "build", "timeoutSeconds": 240},
+    {"id": "test-art-rect-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py", "--candidate-manifest", "build/art/performance/rect-conflict/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-rect-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/rect-conflict/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first", "--entry-checkpoint", "6"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-preferred-deployment-costs", "runtime": "python", "args": ["scripts/test-art-entry-palette-trace.py", "--composition-costs", "--input-index", "notes/native-art-preferred-evidence.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-preferred-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/eae534ca40d16f3034e5ed84d0836a04624f1cfc/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T055352.720540Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-preferred-plan", "runtime": "python", "args": ["scripts/test-art-frame-high-slots.py", "--prepared-preference"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-preferred-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--prepared-preference"], "suites": ["art"], "kind": "build", "timeoutSeconds": 240},
+    {"id": "test-art-preferred-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py", "--candidate-manifest", "build/art/performance/prepared-preference/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-preferred-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/prepared-preference/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first", "--entry-checkpoint", "6"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-joined-deployment-costs", "runtime": "python", "args": ["scripts/test-art-entry-palette-trace.py", "--composition-costs", "--input-index", "notes/native-art-joined-row-evidence.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-joined-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/20fa53f741593901049b984125a6a97637d8cd54/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T054832.319893Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-joined-scanner", "runtime": "python", "args": ["scripts/test-art-palette-plan.py", "--joined-rows"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-joined-plan", "runtime": "python", "args": ["scripts/test-art-frame-high-slots.py", "--joined-rows"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-joined-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--joined-rows"], "suites": ["art"], "kind": "build", "timeoutSeconds": 240},
+    {"id": "test-art-joined-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py", "--candidate-manifest", "build/art/performance/joined-rows/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-joined-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/joined-rows/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first", "--entry-checkpoint", "6"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-confirm-deployment-costs", "runtime": "python", "args": ["scripts/test-art-entry-palette-trace.py", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-confirm-entry-trace", "runtime": "python", "args": ["scripts/test-art-entry-palette-trace.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-confirm-entry-source", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/fast-confirm/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first", "--entry-checkpoint", "6"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-confirm-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T052554.814666Z/report.json", "--trace-sha256", "4604a27713243e9649b62b6e2f3d25ac5b07c48d60f8c1fadb47dd538ea01b5f", "--manifest", "build/art/connected/390e4b0420c546f7afb2c78d5771924e0b3c308e/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-confirm-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T052554.814666Z/report.json", "--trace-sha256", "4604a27713243e9649b62b6e2f3d25ac5b07c48d60f8c1fadb47dd538ea01b5f", "--manifest", "build/art/connected/390e4b0420c546f7afb2c78d5771924e0b3c308e/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-confirm-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/390e4b0420c546f7afb2c78d5771924e0b3c308e/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T052453.374146Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-confirm-contract", "runtime": "python", "args": ["scripts/test-art-fast-confirm.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-confirm-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--fast-confirm"], "suites": ["art"], "kind": "build", "timeoutSeconds": 240},
+    {"id": "test-art-confirm-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py", "--candidate-manifest", "build/art/performance/fast-confirm/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-confirm-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/fast-confirm/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-burst-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T051606.061880Z/report.json", "--trace-sha256", "0f507592220e1badf05c9399c9eda9176b3866d1d7ba901a54c2b55194a3b7d8", "--manifest", "build/art/connected/93a9cf2cfa306938a83456a25e4b0a0b862dc282/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-burst-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T051606.061880Z/report.json", "--trace-sha256", "0f507592220e1badf05c9399c9eda9176b3866d1d7ba901a54c2b55194a3b7d8", "--manifest", "build/art/connected/93a9cf2cfa306938a83456a25e4b0a0b862dc282/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-burst-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/93a9cf2cfa306938a83456a25e4b0a0b862dc282/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T051435.530656Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-burst-scanner", "runtime": "python", "args": ["scripts/test-art-palette-plan.py", "--burst-scan"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-burst-plan", "runtime": "python", "args": ["scripts/test-art-frame-high-slots.py", "--burst-scan"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-burst-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--burst-scan"], "suites": ["art"], "kind": "build", "timeoutSeconds": 240},
+    {"id": "test-art-burst-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py", "--candidate-manifest", "build/art/performance/burst-scan/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-burst-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/burst-scan/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-block-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T051049.748327Z/report.json", "--trace-sha256", "459b9e45284701d98708b664f7a8dca506019f66c4208d7babf71f063d449a96", "--manifest", "build/art/connected/4f3f4c78f66127e87e031520ac8d7ae04896559b/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-block-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T051049.748327Z/report.json", "--trace-sha256", "459b9e45284701d98708b664f7a8dca506019f66c4208d7babf71f063d449a96", "--manifest", "build/art/connected/4f3f4c78f66127e87e031520ac8d7ae04896559b/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-block-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/4f3f4c78f66127e87e031520ac8d7ae04896559b/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T050950.795619Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-block-scanner", "runtime": "python", "args": ["scripts/test-art-palette-plan.py", "--block-scan"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-block-plan", "runtime": "python", "args": ["scripts/test-art-frame-high-slots.py", "--block-scan"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-block-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--block-scan"], "suites": ["art"], "kind": "build", "timeoutSeconds": 240},
+    {"id": "test-art-block-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py", "--candidate-manifest", "build/art/performance/block-scan/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-block-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/block-scan/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-packed-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T050031.263170Z/report.json", "--trace-sha256", "9ef312213a76f874288b74396b6940a753253f27b22283dc5d6669894aa22fe1", "--manifest", "build/art/connected/94770ae82551ba0bee8a535b80bb2446e0f1b087/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-packed-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T050031.263170Z/report.json", "--trace-sha256", "9ef312213a76f874288b74396b6940a753253f27b22283dc5d6669894aa22fe1", "--manifest", "build/art/connected/94770ae82551ba0bee8a535b80bb2446e0f1b087/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-packed-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/94770ae82551ba0bee8a535b80bb2446e0f1b087/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T045933.050297Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-packed-plan", "runtime": "python", "args": ["scripts/test-art-frame-high-slots.py", "--packed-plan"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-packed-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--packed-plan"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-packed-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py", "--candidate-manifest", "build/art/performance/packed-plan/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-packed-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/packed-plan/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-facing-reset", "runtime": "python", "args": ["scripts/test-art-facing-reset.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-current-combo-117-type5", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "117", "--combo", "--weapon-type", "5"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-117-type6", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "117", "--combo", "--weapon-type", "6"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-119-type5", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "119", "--combo", "--weapon-type", "5"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-119-type6", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "119", "--combo", "--weapon-type", "6"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-120-type12", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "120", "--combo", "--weapon-type", "12"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-121-type12", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "121", "--combo", "--weapon-type", "12"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-122-type12", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "122", "--combo", "--weapon-type", "12"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-124-type8", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "124", "--combo", "--weapon-type", "8"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-125-type8", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "125", "--combo", "--weapon-type", "8"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-only-oam", "runtime": "python", "args": ["scripts/test-art-native-only-oam.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-116", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "116", "--combo"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-117", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "117", "--combo"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-118", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "118", "--combo"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-119", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "119", "--combo"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-120", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "120", "--combo"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-121", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "121", "--combo"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-122", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "122", "--combo"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-123", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "123", "--combo"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-124", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "124", "--combo"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-combo-125", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "125", "--combo"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-viking-thunder", "runtime": "python", "args": ["scripts/test-connected-art-casting.py", "--manifest", "build/art/connected/5a14e6c7b69f9f9984a6965faf5740d3b318e41a/manifest.json", "--ready-evidence", "notes/native-art-current-casting-inputs.json", "--action", "365"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-current-viking-thundaga", "runtime": "python", "args": ["scripts/test-connected-art-casting.py", "--manifest", "build/art/connected/5a14e6c7b69f9f9984a6965faf5740d3b318e41a/manifest.json", "--ready-evidence", "notes/native-art-current-casting-inputs.json", "--action", "371"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-art-unrolled-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T041630.187456Z/report.json", "--trace-sha256", "178925a3bbcb8bf0a81343de76ec435ca9a257082a2235f36c603a355672b125", "--manifest", "build/art/connected/0cca349466176f5abeac12b5ab28292cc45e9b95/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-unrolled-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T041630.187456Z/report.json", "--trace-sha256", "178925a3bbcb8bf0a81343de76ec435ca9a257082a2235f36c603a355672b125", "--manifest", "build/art/connected/0cca349466176f5abeac12b5ab28292cc45e9b95/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-unrolled-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/0cca349466176f5abeac12b5ab28292cc45e9b95/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T041536.241917Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-unrolled-owners", "runtime": "python", "args": ["scripts/test-art-palette-owners.py", "--unrolled-copy"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-unrolled-plan", "runtime": "python", "args": ["scripts/test-art-frame-high-slots.py", "--unrolled-copy"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-unrolled-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--unrolled-copy"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-unrolled-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py", "--candidate-manifest", "build/art/performance/unrolled-copy/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-unrolled-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/unrolled-copy/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+
+    {"id": "audit-current-formation-loader", "runtime": "python", "args": ["scripts/audit-native-encounter-capacity.py", "--manifest", "build/art/connected/5a14e6c7b69f9f9984a6965faf5740d3b318e41a/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+
+    {"id": "test-current-held-weapon", "runtime": "python", "args": ["scripts/test-generated-actions-battle.py", "--weapon", "--manifest", "build/art/connected/5a14e6c7b69f9f9984a6965faf5740d3b318e41a/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+    {"id": "test-current-projectile-impact", "runtime": "python", "args": ["scripts/test-generated-projectile.py", "--manifest", "build/art/connected/5a14e6c7b69f9f9984a6965faf5740d3b318e41a/manifest.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 240},
+
+    {"id": "test-current-samurai-fight", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "116"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-current-viking-fight", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "118"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+
+    {"id": "test-art-field-dispatch-phase", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T034014.966763Z/report.json", "--trace-sha256", "641ed4767b9ec5545b90219799930ccef2406c47992211158f22a20e2c3c8bfc", "--manifest", "build/art/connected/b35fa9e4178bbb281cde447db58702cdd15c9895/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-field-dispatch-response", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T034014.966763Z/report.json", "--trace-sha256", "641ed4767b9ec5545b90219799930ccef2406c47992211158f22a20e2c3c8bfc", "--manifest", "build/art/connected/b35fa9e4178bbb281cde447db58702cdd15c9895/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+
+    {"id": "test-art-field-dispatch-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/b35fa9e4178bbb281cde447db58702cdd15c9895/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T033834.466440Z/failed.json", "--palette-events", "--controller-costs", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-field-query-phase", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T032734.672429Z/report.json", "--trace-sha256", "b6e084f8c504435d5d38798b7c26a6f7d0e16e4d59784a0af261c4fd4ed27633", "--manifest", "build/art/connected/a393791609849abec6b55ba59c05c6963087b3e9/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-field-query-rebuild", "runtime": "python", "args": ["scripts/test-fast-field-rebuild.py"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-field-query-response", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T032734.672429Z/report.json", "--trace-sha256", "b6e084f8c504435d5d38798b7c26a6f7d0e16e4d59784a0af261c4fd4ed27633", "--manifest", "build/art/connected/a393791609849abec6b55ba59c05c6963087b3e9/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "build-art-field-query", "runtime": "python", "args": ["scripts/build-fast-field-query.py"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-field-query-contract", "runtime": "python", "args": ["scripts/test-fast-field-query.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-field-query-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/field-query/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-field-query-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/a393791609849abec6b55ba59c05c6963087b3e9/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T032627.561296Z/failed.json", "--palette-events", "--controller-costs", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-movement-costs", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T013433.783581Z/failed.json", "--foreground-events", "--movement-costs", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-controller-costs", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T013433.783581Z/failed.json", "--foreground-events", "--controller-costs", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-compact-phase", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T024939.899355Z/report.json", "--trace-sha256", "1c9b7f5aa371fe7379051f0690cc06cea5173df62d30c27860e7218c7d332af8", "--manifest", "build/art/connected/5a65d27a70da61e790e4d0fcc4d99c662161ce0a/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-compact-response", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T024939.899355Z/report.json", "--trace-sha256", "1c9b7f5aa371fe7379051f0690cc06cea5173df62d30c27860e7218c7d332af8", "--manifest", "build/art/connected/5a65d27a70da61e790e4d0fcc4d99c662161ce0a/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-compact-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/5a65d27a70da61e790e4d0fcc4d99c662161ce0a/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T024834.841068Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-compact-owners", "runtime": "python", "args": ["scripts/test-art-palette-owners.py", "--compact-leaves"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-compact-plan", "runtime": "python", "args": ["scripts/test-art-frame-high-slots.py", "--compact-leaves"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-compact-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--compact-leaves"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-compact-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py", "--candidate-manifest", "build/art/performance/compact-leaves/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-compact-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/compact-leaves/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-human-dk-knightsword", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "117", "--weapon-type", "5"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-human-dk-greatsword", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "117", "--weapon-type", "6"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-bangaa-dk-knightsword", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "119", "--weapon-type", "5"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-bangaa-dk-greatsword", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "119", "--weapon-type", "6"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-numou-chemist-staff", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "120", "--weapon-type", "12"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-geomancer-staff", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "121", "--weapon-type", "12"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-dancer-rapier", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "124", "--weapon-type", "8"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-mystic-knight-saber", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "125", "--weapon-type", "3"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "build-moogle-action-completion", "runtime": "python", "args": ["scripts/complete-generated-actions.py", "--source", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/manifest.json"], "suites": ["art"], "kind": "build", "timeoutSeconds": 120},
+    {"id": "test-completed-action-contract", "runtime": "python", "args": ["scripts/test-completed-action-contract.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-moogle-completed-knife", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "122", "--weapon-type", "7"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-moogle-completed-staff", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "122", "--weapon-type", "12"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-bard-completed-knife", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/action-completion/current.json", "--job", "123", "--weapon-type", "7"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-moogle-missing-action-cause", "runtime": "python", "args": ["scripts/test-native-missing-action.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 90},
+    {"id": "test-bangaa-dk-action-transport", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--job", "119"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-numou-chemist-action-transport", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--job", "120"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-geomancer-action-transport", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--job", "121"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-moogle-chemist-action-transport", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--job", "122"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-bard-action-transport", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--job", "123", "--weapon-type", "16"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-dancer-action-transport", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--job", "124"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-mystic-knight-action-transport", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--job", "125", "--weapon-type", "8"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-human-dk-action-transport", "runtime": "python", "args": ["scripts/test-samurai-fight.py", "--current", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--job", "117"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-engineering-water-reuse", "runtime": "python", "args": ["scripts/test-live-art-all-class-water-evidence.py", "--candidate-manifest", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-word-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/e94c658af61b996b5808ee595df9cf58d22804e3/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T015209.389689Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-word-owners", "runtime": "python", "args": ["scripts/test-art-palette-owners.py", "--fused-word-reads"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-word-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--fused-word-reads"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-word-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py", "--candidate-manifest", "build/art/performance/fused-words/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-word-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/fused-words/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-word-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T015306.771232Z/report.json", "--trace-sha256", "0f777a8ce17b28896b3c667313f37bd35ca45e65666dda0a196ccd404c187cee", "--manifest", "build/art/connected/e94c658af61b996b5808ee595df9cf58d22804e3/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-word-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T015306.771232Z/report.json", "--trace-sha256", "0f777a8ce17b28896b3c667313f37bd35ca45e65666dda0a196ccd404c187cee", "--manifest", "build/art/connected/e94c658af61b996b5808ee595df9cf58d22804e3/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-fused-consumers", "runtime": "python", "args": ["scripts/test-art-fused-consumers.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-fused-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T014003.037219Z/report.json", "--trace-sha256", "778dac874761ddb3fa7377f44cbc56f69791ce202c9b472037a3503bc575462d", "--manifest", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-fused-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T014003.037219Z/report.json", "--trace-sha256", "778dac874761ddb3fa7377f44cbc56f69791ce202c9b472037a3503bc575462d", "--manifest", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-scoped-copy-costs", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T013433.783581Z/failed.json", "--palette-events", "--scoped-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-fused-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/e1a87ecde67f265f666d3ab9d7e50ba401370633/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T013433.783581Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-fused-owners", "runtime": "python", "args": ["scripts/test-art-palette-owners.py", "--fused-compose"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-fused-plan", "runtime": "python", "args": ["scripts/test-art-frame-high-slots.py", "--fused-compose"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-fused-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--fused-compose"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-fused-profile", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--profile", "--candidate-manifest", "build/art/performance/fused-compose/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-fused-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/fused-compose/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-owners-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T012020.476681Z/report.json", "--trace-sha256", "021a28e408e437dbd563cf6e1826e63e5e57d8ba9cc9d870f3dd5a19cdd2acd1", "--manifest", "build/art/connected/a42c04e18e3584a8447564aef4d06ac8f10ed93e/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-native-owners-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T012020.476681Z/report.json", "--trace-sha256", "021a28e408e437dbd563cf6e1826e63e5e57d8ba9cc9d870f3dd5a19cdd2acd1", "--manifest", "build/art/connected/a42c04e18e3584a8447564aef4d06ac8f10ed93e/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-native-owners-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/a42c04e18e3584a8447564aef4d06ac8f10ed93e/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T011822.564846Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-native-owners-contract", "runtime": "python", "args": ["scripts/test-art-palette-owners.py", "--native-owner-producer"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-owners-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--native-owner-producer"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-native-owners-profile", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--profile", "--candidate-manifest", "build/art/performance/native-owners/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-owners-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/native-owners/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-prefix-high-slots", "runtime": "python", "args": ["scripts/test-art-frame-high-slots.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-prefix-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T010407.155396Z/report.json", "--trace-sha256", "b2ed9e1cd73e37f512ea60669f8feda99f1ce661a7e63165badff779b157a94f", "--manifest", "build/art/connected/12562f6fcdcb21b98bd0e82c622490653e699f95/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-prefix-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T010407.155396Z/report.json", "--trace-sha256", "b2ed9e1cd73e37f512ea60669f8feda99f1ce661a7e63165badff779b157a94f", "--manifest", "build/art/connected/12562f6fcdcb21b98bd0e82c622490653e699f95/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-prefix-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/12562f6fcdcb21b98bd0e82c622490653e699f95/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T010235.990470Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-prefix-owners", "runtime": "python", "args": ["scripts/test-art-palette-owners.py", "--native-prefix"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-prefix-plan", "runtime": "python", "args": ["scripts/test-art-palette-plan.py", "--native-prefix"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-prefix-variants", "runtime": "python", "args": ["scripts/test-art-palette-variants.py", "--native-prefix"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-prefix-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--native-oam-prefix"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-prefix-profile", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--profile", "--candidate-manifest", "build/art/performance/native-prefix/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-prefix-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/native-prefix/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-scoped-composition-costs", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/059d256a47daecefb5a160499e5cfd4faeb9bbd7/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T005004.251197Z/failed.json", "--palette-events", "--composition-costs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-scoped-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T005101.065293Z/report.json", "--trace-sha256", "73d947c7bcb14d07451ab81d3903e9e9233e0913d737c82b508bb946979ccaf6", "--manifest", "build/art/connected/059d256a47daecefb5a160499e5cfd4faeb9bbd7/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-scoped-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T005101.065293Z/report.json", "--trace-sha256", "73d947c7bcb14d07451ab81d3903e9e9233e0913d737c82b508bb946979ccaf6", "--manifest", "build/art/connected/059d256a47daecefb5a160499e5cfd4faeb9bbd7/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-scoped-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/059d256a47daecefb5a160499e5cfd4faeb9bbd7/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T005004.251197Z/failed.json", "--palette-events"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-scoped-owners", "runtime": "python", "args": ["scripts/test-art-palette-owners.py", "--scoped-frame"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-scoped-publish", "runtime": "python", "args": ["scripts/test-art-palette-plan.py", "--scoped-frame"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-scoped-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--scoped-frame"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-scoped-profile", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--profile", "--candidate-manifest", "build/art/performance/scoped-frame/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-scoped-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/scoped-frame/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-repeat-v3-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260919T003449.711213Z/report.json", "--trace-sha256", "6ebe2fe3b64c1a7314e073d97da2030d32b4f503542e8e1df5794860abf8f456", "--manifest", "build/art/connected/183c641a3d5d13db97b66ccf891843f4bd04f289/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-repeat-v3-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260919T003449.711213Z/report.json", "--trace-sha256", "6ebe2fe3b64c1a7314e073d97da2030d32b4f503542e8e1df5794860abf8f456", "--manifest", "build/art/connected/183c641a3d5d13db97b66ccf891843f4bd04f289/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-repeat-v3-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/183c641a3d5d13db97b66ccf891843f4bd04f289/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T003053.098031Z/failed.json", "--palette-events"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-repeat-contract", "runtime": "python", "args": ["scripts/test-art-repeat-frame.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-repeat-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--repeat-frame"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-repeat-isolation", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--repeat-frame", "--candidate-manifest", "build/art/performance/repeat-frame/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-repeat-profile", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--repeat-frame", "--profile", "--candidate-manifest", "build/art/performance/repeat-frame/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-repeat-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/repeat-frame/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-repeat-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/f90475f290d1f0d90313e6efac0b083d2a913076/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T001718.908423Z/observed.json", "--palette-events"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-repeat-v2-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/69856f6a63532baaf90ce508ce7af5cc8ca75a3a/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260919T002502.302440Z/observed.json", "--palette-events"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "audit-native-encounter-capacity", "runtime": "python", "args": ["scripts/audit-native-encounter-capacity.py", "--manifest", "build/art/connected/7507ca5cb03c1db7a717fd6d21d97a9f5a4ae08b/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-arm-full-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260918T235635.728346Z/report.json", "--trace-sha256", "ada9d5289ee109e4a2ddb63b234eb7b6dea4562daa79e49a7160443883ebf89a", "--manifest", "build/art/connected/473a69382a4c14d4cd2da6b1b372563e60d156f6/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-arm-full-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260918T235635.728346Z/report.json", "--trace-sha256", "ada9d5289ee109e4a2ddb63b234eb7b6dea4562daa79e49a7160443883ebf89a", "--manifest", "build/art/connected/473a69382a4c14d4cd2da6b1b372563e60d156f6/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-arm-full-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/473a69382a4c14d4cd2da6b1b372563e60d156f6/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260918T235540.125748Z/failed.json", "--palette-events"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-arm-full-contract", "runtime": "python", "args": ["scripts/test-art-palette-plan.py", "--arm-oam-scan", "--fast-bank-scan"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-arm-full-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--arm-full-scan"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-arm-full-profile", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--profile", "--candidate-manifest", "build/art/performance/arm-full-scan/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-arm-full-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/arm-full-scan/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-arm-oam-contract", "runtime": "python", "args": ["scripts/test-art-palette-plan.py", "--arm-oam-scan"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-arm-oam-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--arm-oam-scan"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-arm-oam-profile", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--profile", "--candidate-manifest", "build/art/performance/arm-oam-scan/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-arm-oam-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/arm-oam-scan/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-native-animation-controls", "runtime": "python", "args": ["scripts/test-native-animation-controls.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-oam-plan-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260918T233622.626937Z/report.json", "--trace-sha256", "b43fddc7fe2c2a415bd4ab7343c1f955ce507ae5a9f3d080d2e8c91d76c7cbd9", "--manifest", "build/art/connected/efd70a3d92d93d23291cee5d4d1d8f783c44fc16/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-oam-plan-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260918T233622.626937Z/report.json", "--trace-sha256", "b43fddc7fe2c2a415bd4ab7343c1f955ce507ae5a9f3d080d2e8c91d76c7cbd9", "--manifest", "build/art/connected/efd70a3d92d93d23291cee5d4d1d8f783c44fc16/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-oam-plan-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/efd70a3d92d93d23291cee5d4d1d8f783c44fc16/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260918T233457.836769Z/failed.json", "--palette-events"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-oam-plan-contract", "runtime": "python", "args": ["scripts/test-art-palette-plan.py", "--fast-oam-plan"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-oam-plan-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--fast-oam-plan"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-oam-plan-profile", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--profile", "--candidate-manifest", "build/art/performance/fast-oam-plan/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-oam-plan-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/fast-oam-plan/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-dma-cache-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260918T233200.559927Z/report.json", "--trace-sha256", "59285dad8e4a3b3ce9c5f8cffc91203cc16c770b6319dc150f99cf5533ca7d94", "--manifest", "build/art/connected/2244dce2ffb73bafad190a9bcad7334b00d7a1b2/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-dma-cache-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260918T233200.559927Z/report.json", "--trace-sha256", "59285dad8e4a3b3ce9c5f8cffc91203cc16c770b6319dc150f99cf5533ca7d94", "--manifest", "build/art/connected/2244dce2ffb73bafad190a9bcad7334b00d7a1b2/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-art-dma-cache-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/2244dce2ffb73bafad190a9bcad7334b00d7a1b2/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260918T232810.271883Z/failed.json", "--graphics-inputs", "--palette-events"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-dma-cache-contract", "runtime": "python", "args": ["scripts/test-art-dirty-cache.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-dma-cache-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py", "--dma-tile-cache"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-dma-cache-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/dma-tile-cache/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-graphics-input-lifetimes", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/7507ca5cb03c1db7a717fd6d21d97a9f5a4ae08b/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260918T210407.312558Z/observed.json", "--graphics-inputs"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-bank-scan-plan", "runtime": "python", "args": ["scripts/test-art-palette-plan.py", "--fast-bank-scan"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-bank-scan-build", "runtime": "python", "args": ["scripts/test-art-bank-scan-build.py"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-art-bank-scan-control-profile", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--profile"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-bank-scan-profile", "runtime": "python", "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--installed-mixed", "--profile", "--candidate-manifest", "build/art/performance/bank-scan/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-bank-scan-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/performance/bank-scan/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-bank-scan-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/8800cbf7ac36345c1ed647087e5eab38f77e4b5f/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260918T225341.250216Z/observed.json", "--foreground-events", "--battle-stages", "--palette-events"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-bank-cache-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/0e1fb8164f785772903a9555fa9ced3c6fa75357/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260918T225913.831039Z/failed.json", "--foreground-events", "--battle-stages", "--palette-events"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-bank-cache-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260918T230025.438182Z/report.json", "--trace-sha256", "5b96a2490cf43a6a89782de6d60d0542485f0530b484f55bb0224deb8fffb1e2", "--manifest", "build/art/connected/0e1fb8164f785772903a9555fa9ced3c6fa75357/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-bank-cache-response-budget", "runtime": "python", "args": ["scripts/test-art-response-budget.py", "--trace", "build/art/native-frame-events/20260918T230025.438182Z/report.json", "--trace-sha256", "5b96a2490cf43a6a89782de6d60d0542485f0530b484f55bb0224deb8fffb1e2", "--manifest", "build/art/connected/0e1fb8164f785772903a9555fa9ced3c6fa75357/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 60},
+    {"id": "test-placeholder-override-roundtrip", "runtime": "python", "args": ["scripts/test-placeholder-override-roundtrip.py"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-samurai-attack-reference", "runtime": "python", "args": ["scripts/test-samurai-fight.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-samurai-support-build", "runtime": "python", "args": ["scripts/test-samurai-v7-build.py", "--support-actions"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-samurai-support-native", "runtime": "python", "args": ["scripts/test-samurai-support-native.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+
+    {"id": "test-samurai-v7-walk", "runtime": "python", "args": ["scripts/test-explicit-animation-walk.py", "--current", "build/art/refinement/samurai-v7/current.json", "--live-refinement", "--comparison-manifest", "build/art/connected/current.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-samurai-v7-build", "runtime": "python", "args": ["scripts/test-samurai-v7-build.py"], "suites": ["art"], "kind": "build", "timeoutSeconds": 180},
+    {"id": "test-samurai-v7-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/refinement/samurai-v7/current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "moogle-chemist", "--idle-art"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-larger-encounter", "runtime": "python", "args": ["scripts/test-art-larger-encounter.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-delivery-frame-events", "runtime": "python", "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/7507ca5cb03c1db7a717fd6d21d97a9f5a4ae08b/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260918T210407.312558Z/observed.json", "--foreground-events", "--battle-stages", "--palette-events"], "suites": ["art"], "kind": "test", "timeoutSeconds": 420},
+    {"id": "test-art-delivery-phase-evidence", "runtime": "python", "args": ["scripts/test-art-native-phase-evidence.py", "--trace", "build/art/native-frame-events/20260918T212843.369460Z/report.json", "--trace-sha256", "f8336633bbaa8e9605fcfdb1a02a03867e8c2e908d6f99c643c211ab893de1ea", "--manifest", "build/art/connected/7507ca5cb03c1db7a717fd6d21d97a9f5a4ae08b/live-palette-view.json"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-damage-boundaries", "runtime": "python", "args": ["scripts/test-art-damage-palettes.py", "--boundaries-only"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-damage-additional-operations", "runtime": "python", "args": ["scripts/test-art-damage-palettes.py", "--additional-operations"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-damage-palettes", "runtime": "python", "args": ["scripts/test-art-damage-palettes.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-damage-mixed-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/connected/7507ca5cb03c1db7a717fd6d21d97a9f5a4ae08b/live-palette-view.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-damage-write-trace", "runtime": "python", "args": ["scripts/test-art-highlight-write-trace.py", "--damage"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-highlight-thundaga", "runtime": "python", "args": ["scripts/test-connected-art-casting.py", "--current-ready", "--action", "371"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-native-highlight", "runtime": "python", "args": ["scripts/test-art-native-highlight.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 120},
+    {"id": "test-art-highlight-mixed-entry", "runtime": "python", "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/connected/3f049cace93d90524c2db155d61d092c6dda5d22/live-palette-view.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-highlight-write-trace", "runtime": "python", "args": ["scripts/test-art-highlight-write-trace.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-art-highlight-copy-trace", "runtime": "python", "args": ["scripts/test-art-highlight-copy-trace.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-connected-art-casting", "runtime": "python", "args": ["scripts/test-connected-art-casting.py"], "suites": ["art"], "kind": "test", "timeoutSeconds": 180},
+    {"id": "test-connected-art-rebuild","runtime": "python","args": ["scripts/rebuild-connected-art.py"],"suites": ["art-delivery"],"kind": "test","timeoutSeconds": 300},
+    {"id": "package-connected-art","runtime": "node","args": ["scripts/package-art-pipeline.mjs","build/art/connected/current.json"],"suites": ["art-delivery"],"kind": "build","timeoutSeconds": 180},
+    {"id": "test-connected-art-portraits-reconciled","runtime": "python","args": ["scripts/test-generated-portraits-ui.py","--manifest","build/art/connected/current.json","--retained-generics","build/art/generated-portraits/ui/20260918T201943.434265Z/failed.json","--retained-sha256","44137dcc091ddc17fa48ed4da318f8d8eebac629cf017c20bfb3e70c98d71ae8"],"suites": ["art"],"kind": "test","timeoutSeconds": 180},
+    {"id": "test-connected-art-portraits-ui","runtime": "python","args": ["scripts/test-generated-portraits-ui.py","--manifest","build/art/connected/current.json"],"suites": ["art"],"kind": "test","timeoutSeconds": 300},
+    {"id": "test-connected-art-preview-party","runtime": "python","args": ["scripts/test-equipment-preview-ui.py","--manifest","build/art/connected/current.json"],"suites": ["art"],"kind": "test","timeoutSeconds": 300},
+    {"id": "test-connected-art-preview-buy","runtime": "python","args": ["scripts/test-equipment-preview-ui.py","--manifest","build/art/connected/current.json","--shop"],"suites": ["art"],"kind": "test","timeoutSeconds": 300},
+    {"id": "test-connected-art-preview-sell","runtime": "python","args": ["scripts/test-equipment-preview-ui.py","--manifest","build/art/connected/current.json","--sell"],"suites": ["art"],"kind": "test","timeoutSeconds": 300},
+    {"id": "test-connected-art-status-current","runtime": "python","args": ["scripts/test-generated-status.py","--manifest","build/art/connected/current.json","--retained-ready","build/art/live-palette/battle/20260918T210407.312558Z/observed.json"],"suites": ["art"],"kind": "test","timeoutSeconds": 300},
+    {
+      "id": "test-art-native-phase-evidence",
+      "runtime": "python",
+      "args": ["scripts/test-art-native-phase-evidence.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-battle-stage-events",
+      "runtime": "python",
+      "args": ["scripts/test-art-native-frame-events.py", "--foreground-events", "--battle-stages", "--palette-events"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 420
+    },
+    {
+      "id": "test-art-foreground-events",
+      "runtime": "python",
+      "args": ["scripts/test-art-native-frame-events.py", "--foreground-events"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 420
+    },
+    {
+      "id": "test-art-plan-key-frame-events",
+      "runtime": "python",
+      "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/f48949dc677d4e2cd95eb3e278bc845b8e300c4a/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260918T195222.114342Z/failed.json", "--legacy-plan-control"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 420
+    },
+    {
+      "id": "test-art-plan-key-mixed-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/connected/f48949dc677d4e2cd95eb3e278bc845b8e300c4a/live-palette-view.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-plan-reuse-frame-events",
+      "runtime": "python",
+      "args": ["scripts/test-art-native-frame-events.py", "--candidate-manifest", "build/art/connected/e8de1d976c6f8faca5fb9c63910e24b0f68cf167/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260918T194631.056358Z/failed.json"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 420
+    },
+    {
+      "id": "test-art-plan-reuse-mixed-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/connected/e8de1d976c6f8faca5fb9c63910e24b0f68cf167/live-palette-view.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-plan-reuse",
+      "runtime": "python",
+      "args": ["scripts/test-art-plan-reuse.py", "--candidate-manifest", "build/art/live-palette/8c988cf27b7bc11bbdb139cd2b501e5a230bc8cd/manifest.json"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-native-frame-events",
+      "runtime": "python",
+      "args": ["scripts/test-art-native-frame-events.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 420
+    },
+    {
+      "id": "test-art-step-trace-equivalence",
+      "runtime": "python",
+      "args": ["scripts/test-art-step-trace.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-multi-preferred-timing",
+      "runtime": "python",
+      "args": ["scripts/test-art-scheduler-phase.py", "--candidate-manifest", "build/art/connected/d420c346c57af58ead2edbe074d2e7c4b306c220/live-palette-view.json", "--retained-report", "build/art/live-palette/battle/20260918T190426.040661Z/failed.json", "--preferred-bypass"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-multi-preferred-mixed-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/connected/d420c346c57af58ead2edbe074d2e7c4b306c220/live-palette-view.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-multi-preferred",
+      "runtime": "python",
+      "args": ["scripts/test-art-multi-preferred.py", "--candidate-manifest", "build/art/live-palette/001f17b8ef4b1a092585b38d3d8078969da2e970/manifest.json"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-multi-preferred-profile",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--profile", "--candidate-manifest", "build/art/live-palette/001f17b8ef4b1a092585b38d3d8078969da2e970/manifest.json"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-mixed-compose-profile",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-compose-isolation.py", "--mixed-status", "--profile"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-compact-status-battle-ui",
+      "runtime": "python",
+      "args": ["scripts/test-art-owned-menu-battle.py", "--manifest", "build/art/connected/current.json", "--retained-ready", "build/art/live-palette/battle/20260918T210407.312558Z/observed.json"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-compact-status-mixed-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/connected/4a7d55ce09cd4a40965a0bb97de2701d276789c5/live-palette-view.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-compact-status-lifecycle",
+      "runtime": "python",
+      "args": ["scripts/test-art-party-heap.py", "--compact-status"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-compact-status-native",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-native.py", "--candidate-manifest", "build/art/live-palette/status-current.json"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-status-details",
+      "runtime": "python",
+      "args": ["scripts/test-art-status-pages.py", "--details"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-status-pages",
+      "runtime": "python",
+      "args": ["scripts/test-art-status-pages.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-scheduler-phase",
+      "runtime": "python",
+      "args": ["scripts/test-art-scheduler-phase.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-art-scoped-vs-rom-cost",
+      "runtime": "python",
+      "args": [
+        "scripts/test-live-art-palette-compose-cost.py",
+        "--current",
+        "--planner-bypass",
+        "--candidate-manifest",
+        "build/art/live-palette/dfdc2e9ce57cbbabf95e5d9c7c656c60804b4f10/manifest.json",
+        "--retained-report",
+        "build/art/live-palette/battle/20260918T180123.840471Z/failed.json"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-scoped-fast-copy-cost",
+      "runtime": "python",
+      "args": [
+        "scripts/test-live-art-palette-compose-cost.py",
+        "--current",
+        "--candidate-manifest",
+        "build/art/live-palette/dfdc2e9ce57cbbabf95e5d9c7c656c60804b4f10/manifest.json",
+        "--retained-report",
+        "build/art/live-palette/battle/20260918T180123.840471Z/failed.json"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-scoped-compose-cost",
+      "runtime": "python",
+      "args": [
+        "scripts/test-live-art-palette-compose-cost.py",
+        "--current",
+        "--candidate-manifest",
+        "build/art/live-palette/b04a0389534cc04d299e7e9c52c3250835dacafd/manifest.json",
+        "--retained-report",
+        "build/art/live-palette/battle/20260918T175508.427174Z/failed.json"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-keyboard-evidence",
+      "runtime": "python", "args": ["scripts/test-art-keyboard.py", "--reconcile", "notes/native-art-keyboard-evidence.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 60
+    },
+    {
+      "id": "test-art-keyboard-cold-ui",
+      "runtime": "python", "args": ["scripts/test-art-keyboard.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-keyboard-native",
+      "runtime": "python", "args": ["scripts/test-live-art-palette-native.py", "--candidate-manifest", "build/art/live-palette/keyboard-current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-shared-menu-battle-ui",
+      "runtime": "python", "args": ["scripts/test-art-owned-menu-battle.py", "--manifest", "build/art/connected/7b966543796975a6dea474d0a360495b57d8e6a3/manifest.json", "--retained-ready", "build/art/live-palette/battle/20260918T171708.832178Z/observed.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-shared-menu-mixed-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/connected/7b966543796975a6dea474d0a360495b57d8e6a3/live-palette-view.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-shared-menu-lifecycle",
+      "runtime": "python", "args": ["scripts/test-art-party-heap.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-shared-menu-native",
+      "runtime": "python", "args": ["scripts/test-live-art-palette-native.py", "--candidate-manifest", "build/art/live-palette/shared-menu-current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-owned-menu-battle-ui",
+      "runtime": "python", "args": ["scripts/test-art-owned-menu-battle.py", "--manifest", "build/art/connected/661853ea8e9850cf4352705ed506c4e49dee8505/manifest.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-owned-menu-bounds",
+      "runtime": "python", "args": ["scripts/test-art-owned-menu.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-owned-menu-preference-ui",
+      "runtime": "python", "args": ["scripts/test-auto-potion-preference.py", "--manifest", "build/art/connected/current.json", "--menu-only"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-owned-menu-native",
+      "runtime": "python", "args": ["scripts/test-live-art-palette-native.py", "--candidate-manifest", "build/art/live-palette/owned-menu-current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-owned-menu-mixed-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/connected/661853ea8e9850cf4352705ed506c4e49dee8505/live-palette-view.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-menu-ram-native",
+      "runtime": "python", "args": ["scripts/test-live-art-palette-native.py", "--candidate-manifest", "build/art/live-palette/menu-safe-current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-menu-ram-mixed-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/connected/0c5aac6638ea04bcb8a15514e720bca177745e78/live-palette-view.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-connected-art-status",
+      "runtime": "python", "args": ["scripts/test-generated-status.py", "--manifest", "build/art/connected/b4993232e05eeb20ce536cca6f4b9738aa4a2b12/manifest.json", "--retained-ready", "build/art/live-palette/battle/20260918T131701.701324Z/observed.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-connected-art-equipment-ui",
+      "runtime": "python", "args": ["scripts/test-generated-equipment.py", "--ui", "--manifest", "build/art/connected/current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-native-art-command-marker",
+      "runtime": "python", "args": ["scripts/test-native-art-command-marker.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-connected-art-held-weapon",
+      "runtime": "python", "args": ["scripts/test-generated-actions-battle.py", "--weapon", "--manifest", "build/art/connected/current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-connected-art-projectile-impact",
+      "runtime": "python", "args": ["scripts/test-generated-projectile.py", "--manifest", "build/art/connected/current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-connected-art-native",
+      "runtime": "python", "args": ["scripts/test-connected-art-native.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-connected-art-mixed-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/connected/b4993232e05eeb20ce536cca6f4b9738aa4a2b12/live-palette-view.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-all-class-water-evidence",
+      "runtime": "python", "args": ["scripts/test-live-art-all-class-water-evidence.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-native-pending-facing",
+      "runtime": "python", "args": ["scripts/test-native-pending-facing.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-live-art-water-class-116",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water", "--live-palette-water", "--water-job", "116"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-117",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water", "--live-palette-water", "--water-job", "117"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-119",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water", "--live-palette-water", "--water-job", "119"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-120",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water", "--live-palette-water", "--water-job", "120"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-121",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water", "--live-palette-water", "--water-job", "121"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-122",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water", "--live-palette-water", "--water-job", "122"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-123",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water", "--live-palette-water", "--water-job", "123"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-124",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water", "--live-palette-water", "--water-job", "124"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-water-class-125",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water", "--live-palette-water", "--water-job", "125"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-workspace-natural-water",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water", "--live-palette-water"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-mixed-workspace-moogle-chemist",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/live-palette/all-classes-workspace-current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "moogle-chemist"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-mixed-workspace-moogle-bard",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/live-palette/all-classes-workspace-current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "moogle-bard"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-rotation-only-compose-cost",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-compose-cost.py", "--current", "--candidate-manifest", "build/art/live-palette/6443725d256252afae127393945934961eb9abd6/manifest.json", "--retained-report", "build/art/live-palette/battle/20260918T122830.712620Z/failed.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-fast-prepare-compose-cost",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-compose-cost.py", "--current", "--candidate-manifest", "build/art/live-palette/ea499f7f734fdd5f4d5575d9e3d551f765c7b436/manifest.json", "--retained-report", "build/art/live-palette/battle/20260918T123215.060479Z/failed.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-live-art-workspace-movement",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/live-palette/all-classes-workspace-current.json", "--press-frames", "8", "--status-control"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-rotation-permutation",
+      "runtime": "python", "args": ["scripts/test-art-rotation-permutation.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-live-art-workspace-rotation-mask-control",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--late-rotation", "--dark-knight-mask-control", "--candidate-manifest", "build/art/live-palette/all-classes-workspace-current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-workspace-rotation-prior",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--late-rotation", "--candidate-manifest", "build/art/live-palette/e1c22b0153d2510786e42f7b9645f752122a5f3a/manifest.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-provisional-history",
+      "runtime": "python", "args": ["scripts/test-art-provisional-history.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-live-art-workspace-native",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-native.py", "--candidate-manifest", "build/art/live-palette/all-classes-workspace-current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-workspace-late-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--late-entry", "--candidate-manifest", "build/art/live-palette/all-classes-workspace-current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-workspace-late-rotation",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--late-rotation", "--candidate-manifest", "build/art/live-palette/all-classes-workspace-current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-palette-target-trace",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/live-palette/target-trace-current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first", "--trace-palette-target"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-workspace-placement",
+      "runtime": "python", "args": ["scripts/test-art-workspace-placement.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-workspace-request-trace",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/live-palette/all-classes-current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first", "--trace-unit-writes", "--trace-workspace-request"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-mixed-workspace-first",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/live-palette/all-classes-workspace-current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-mixed-workspace-second",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/live-palette/all-classes-workspace-current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "second"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-heap-exact-fit",
+      "runtime": "python", "args": ["scripts/test-art-heap-exact-fit.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-art-unit-erasure-cpu",
+      "runtime": "python", "args": ["scripts/test-art-unit-erasure-cpu.py"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 120
+    },
+    {
+      "id": "test-live-art-mixed-write-trace",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/live-palette/all-classes-current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first", "--trace-unit-writes"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-mixed-classes-first",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/live-palette/all-classes-current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "first"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-mixed-classes-second",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--current", "build/art/live-palette/all-classes-current.json", "--ready-only", "--press-frames", "8", "--status-control", "--mixed-class-group", "second"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-all-classes-native",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-native.py", "--candidate-manifest", "build/art/live-palette/all-classes-current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-all-classes-menu",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-menu.py", "--all-classes", "--candidate-manifest", "build/art/live-palette/all-classes-current.json"],
+      "suites": ["art"], "kind": "test", "timeoutSeconds": 240
+    },
+    {
+      "id": "test-live-art-history-native",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-native.py", "--candidate-manifest", "build/art/live-palette/history-current.json"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-history-appearance",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--late-rotation", "--candidate-manifest", "build/art/live-palette/history-current.json"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-palette-history-capacity",
+      "runtime": "python",
+      "args": ["scripts/test-art-palette-history-capacity.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-compose-profile",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-compose-isolation.py", "--current", "--profile"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-late-rotation",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--late-rotation"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-compose-isolation-current",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-compose-isolation.py", "--current"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-background-cycle",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-background-cycle.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-palette-cost-fixture",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--ready-only", "--press-frames", "8", "--status-control"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-palette-current-cost",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-compose-cost.py", "--current", "--cpu-profile"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-rotation",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--rotation"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-rotation",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-rotation.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-task-controls",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--task-controls"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-task-controls",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-task-controls.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-table-colors",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-table-colors.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-table-colors",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--table-color-operations"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-extended-colors",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-color-operations.py", "--extended"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-extended-colors",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--extended-color-operations"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-palette-late-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--late-entry"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-late-entry",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-late-entry.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-class-menus",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-class-menus.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-art-pipeline-icons",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-art-poc.py",
+        "--portraits",
+        "--manifest",
+        "build/art/pipeline/current.json"
+      ],
+      "suites": [
+        "art-pipeline"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-art-pipeline-preview-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-native.py",
+        "--manifest",
+        "build/art/pipeline/current.json"
+      ],
+      "suites": [
+        "art-pipeline"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-art-pipeline-preview-party",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--manifest",
+        "build/art/pipeline/current.json"
+      ],
+      "suites": [
+        "art-pipeline"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-art-pipeline-preview-buy",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--shop",
+        "--manifest",
+        "build/art/pipeline/current.json"
+      ],
+      "suites": [
+        "art-pipeline"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-art-pipeline-preview-sell",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--sell",
+        "--manifest",
+        "build/art/pipeline/current.json"
+      ],
+      "suites": [
+        "art-pipeline"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-art-pipeline-miniature",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-miniature-ui.py",
+        "--manifest",
+        "build/art/pipeline/current.json"
+      ],
+      "suites": [
+        "art-pipeline"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-art-pipeline-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-actor-battle.py",
+        "--generated",
+        "--manifest",
+        "build/art/pipeline/current.json"
+      ],
+      "suites": [
+        "art-pipeline"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-miniature-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-miniature-ui.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-miniature-decoder",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-miniature-decoder.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-render-isolation-oracle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-render-isolation-oracle.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-actor-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-actor-battle.py",
+        "--generated"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-actor-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-actor-battle.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-actor-import",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-actor-import.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-actor-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-actor-ui.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-equipment-preview-sell",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--sell"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-original-portrait-consumers",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-art-poc.py",
+        "--portraits"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-equipment-preview-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-native.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-equipment-preview-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-ui.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-equipment-preview-shop",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--shop"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-art-format",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-art-format.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "export-native-ui-reference",
+      "runtime": "python",
+      "args": [
+        "scripts/export-native-ui-reference.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-art-poc",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-art-poc.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-art-pipeline-rebuild",
+      "runtime": "python",
+      "args": [
+        "scripts/test-art-pipeline-rebuild.py"
+      ],
+      "suites": [
+        "art-delivery"
+      ],
+      "kind": "build"
+    },
+    {
+      "id": "package-art-pipeline",
+      "runtime": "node",
+      "args": [
+        "scripts/package-art-pipeline.mjs"
+      ],
+      "suites": [
+        "art-delivery"
+      ],
+      "kind": "build"
+    },
+    {
+      "id": "test-art-pipeline-launcher",
+      "runtime": "python",
+      "args": [
+        "scripts/test-art-pipeline-launcher.py"
+      ],
+      "suites": [
+        "art-delivery"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-class-resources",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-actor-import.py",
+        "--all-classes"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-menu-width",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-menu-width.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-widget-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-widget-ui.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-classes-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-classes-native.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-classes-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-classes-ui.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-classes-retained",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-classes-retained.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-portraits",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-portraits.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-portraits-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-portraits-native.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-portraits-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-portraits-ui.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-actions-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-native.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-actions-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-action-entry-isolation",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--entry-isolation"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-action-profile-isolation",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--profile-isolation"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-actions-water",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--water"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-water-retained",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-water-retained.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-status",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-status.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-equipment-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-equipment.py",
+        "--native"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-equipment-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-equipment.py",
+        "--ui"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-equipment-sell",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-equipment.py",
+        "--ui",
+        "--resume-sell"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "export-native-equipment-reference",
+      "runtime": "python",
+      "args": [
+        "scripts/export-native-equipment-reference.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-table-collisions",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-table-collisions.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-repair-copies",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-repair-copies.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "rebuild-native-literal-policy",
+      "runtime": "python",
+      "args": [
+        "scripts/rebuild-expansion.py",
+        "--keep-workspace"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "build",
+      "timeoutSeconds": 1200
+    },
+    {
+      "id": "test-native-repaired-data",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-repaired-data.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "build-clean-art-chain",
+      "runtime": "python",
+      "args": [
+        "scripts/build-clean-art-chain.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "build",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-generated-weapon-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-weapon-native.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-weapon-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--weapon"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-clean-equipment-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-equipment.py",
+        "--native",
+        "--manifest",
+        "build/art/clean-chain/current.json"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-clean-equipment-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-equipment.py",
+        "--ui",
+        "--manifest",
+        "build/art/clean-chain/current.json"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-weapon-battle-fresh",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-actions-battle.py",
+        "--weapon"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-projectile",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-projectile.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-effect-format",
+      "runtime": "python",
+      "args": [
+        "scripts/test-native-effect-format.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-effect-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-effect-native.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-effect-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-effect-battle.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-repaired-map-consumers",
+      "runtime": "python",
+      "args": [
+        "scripts/test-repaired-map-consumers.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-assembled-art-rebuild",
+      "runtime": "python",
+      "args": [
+        "scripts/build-assembled-art.py"
+      ],
+      "suites": [
+        "assembled-art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-assembled-portraits-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-portraits-ui.py",
+        "--manifest",
+        "build/art/assembled/current.json"
+      ],
+      "suites": [
+        "assembled-art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-assembled-equipment-ui",
+      "runtime": "python",
+      "args": [
+        "scripts/test-generated-equipment.py",
+        "--ui",
+        "--manifest",
+        "build/art/assembled/current.json"
+      ],
+      "suites": [
+        "assembled-art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-assembled-preview-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-native.py",
+        "--manifest",
+        "build/art/assembled/current.json"
+      ],
+      "suites": [
+        "assembled-art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-assembled-preview-party",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--manifest",
+        "build/art/assembled/current.json"
+      ],
+      "suites": [
+        "assembled-art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-assembled-preview-buy",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--shop",
+        "--manifest",
+        "build/art/assembled/current.json"
+      ],
+      "suites": [
+        "assembled-art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-assembled-preview-sell",
+      "runtime": "python",
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--sell",
+        "--manifest",
+        "build/art/assembled/current.json"
+      ],
+      "suites": [
+        "assembled-art"
+      ],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "package-assembled-art",
+      "runtime": "node",
+      "args": [
+        "scripts/package-art-pipeline.mjs",
+        "build/art/assembled/current.json"
+      ],
+      "suites": [
+        "assembled-art"
+      ],
+      "kind": "build"
+    },
+    {
+      "id": "test-manual-animation-frame",
+      "runtime": "python",
+      "args": ["scripts/test-manual-animation-frame.py"],
+      "suites": ["art"],
+      "kind": "test"
+    },
+    {
+      "id": "test-walk-layout-retained",
+      "runtime": "python",
+      "args": ["scripts/test-walk-layout-retained.py"],
+      "suites": ["art"],
+      "kind": "test"
+    },
+    {
+      "id": "test-walk-layout-transition",
+      "runtime": "python",
+      "args": ["scripts/test-walk-layout-transition.py"],
+      "suites": ["art"],
+      "kind": "test"
+    },
+    {
+      "id": "test-samurai-refined-plan",
+      "runtime": "python",
+      "args": ["scripts/test-explicit-animation-plan.py", "--plan", "src/art/imagegen/samurai-refined-transport.json", "--current", "build/art/generated-actions/refined-samurai-current.json"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-samurai-refined-walk",
+      "runtime": "python",
+      "args": ["scripts/test-explicit-animation-walk.py", "--current", "build/art/generated-actions/refined-samurai-current.json"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-live-art-palette-native",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-native.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-native-art-palette-binding",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-palette-binding.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-live-art-palette-fades",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-live-art-palette-menu",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-menu.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-live-art-palette-transitions",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-transitions.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-native-art-fade-contract",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-fade-contract.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-art-palette-owners",
+      "runtime": "python",
+      "args": ["scripts/test-art-palette-owners.py"],
+      "suites": ["art"],
+      "kind": "test"
+    },
+    {
+      "id": "test-art-palette-plan",
+      "runtime": "python",
+      "args": ["scripts/test-art-palette-plan.py"],
+      "suites": ["art"],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-actor-palette",
+      "runtime": "python",
+      "args": ["scripts/test-native-actor-palette.py"],
+      "suites": ["art"],
+      "kind": "test"
+    },
+    {
+      "id": "test-retained-palette-ownership",
+      "runtime": "python",
+      "args": ["scripts/test-retained-palette-ownership.py"],
+      "suites": ["art"],
+      "kind": "test"
+    },
+    {
+      "id": "test-explicit-animation-plan",
+      "runtime": "python",
+      "args": ["scripts/test-explicit-animation-plan.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-explicit-animation-walk",
+      "runtime": "python",
+      "args": ["scripts/test-explicit-animation-walk.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-native-pending-display",
+      "runtime": "python",
+      "args": ["scripts/test-native-pending-display.py"],
+      "suites": ["art"],
+      "kind": "test"
+    },
+    {
+      "id": "test-generated-natural-water",
+      "runtime": "python",
+      "args": ["scripts/test-generated-actions-battle.py", "--natural-water"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-samurai-idle-transport",
+      "runtime": "python",
+      "args": ["scripts/test-samurai-idle-transport.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 240
+    },
+    {
+      "id": "test-direct-native-conversion",
+      "runtime": "python",
+      "args": [
+        "scripts/test-direct-native-conversion.py"
+      ],
+      "suites": [
+        "art"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-native-layout-rewind-queued",
+      "runtime": "python",
+      "args": ["scripts/test-native-layout-rewind-queued.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-layout-queued-commit",
+      "runtime": "python",
+      "args": ["scripts/test-native-layout-queued-commit.py"],
+      "suites": ["art"],
+      "kind": "test"
+    },
+    {
+      "id": "test-live-art-palette-battle",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-live-art-palette-battle-short-input",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--press-frames", "8"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 300
+    },
+    {
+      "id": "test-live-art-palette-deployment-variants",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--ready-only", "--require-variants", "--press-frames", "8"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-art-palette-variants",
+      "runtime": "python",
+      "args": ["scripts/test-art-palette-variants.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-battle-draw-trace",
+      "runtime": "python",
+      "args": ["scripts/test-native-battle-draw-trace.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-copy-stall",
+      "runtime": "python",
+      "args": ["scripts/test-native-copy-stall.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-palette-reload",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--reload"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-palette-reload",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-palette-reload.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-color-operations",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-fades.py", "--color-operations"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-color-operations",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-color-operations.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-art-compose-isolation",
+      "runtime": "python",
+      "args": ["scripts/test-native-art-compose-isolation.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-palette-fast-status-cost",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-compose-cost.py", "--status-fast", "--cpu-profile"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-palette-status-control",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--press-frames", "8", "--status-control"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-status-iterator-fast",
+      "runtime": "python",
+      "args": ["scripts/test-status-iterator-fast.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-palette-cpu-profile",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-compose-cost.py", "--cpu-profile"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-palette-compose-cost",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-compose-cost.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-native-obj-palette-cycle",
+      "runtime": "python",
+      "args": ["scripts/test-native-obj-palette-cycle.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 120,
+      "description": "Original OBJ418..424 source/cadence and exact retained phase audit; no timing waiver."
+    },
+    {
+      "id": "test-native-battle-palette-cycle",
+      "runtime": "python",
+      "args": ["scripts/test-native-battle-palette-cycle.py"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-palette-battle-entry",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--entry-only"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    },
+    {
+      "id": "test-live-art-palette-battle-ready",
+      "runtime": "python",
+      "args": ["scripts/test-live-art-palette-battle.py", "--ready-only"],
+      "suites": ["art"],
+      "kind": "test",
+      "timeoutSeconds": 180
+    }
+  ]
+}

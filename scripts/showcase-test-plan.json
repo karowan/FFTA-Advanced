@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 180,
+  "scope": "User-requested separate showcase save, seeded mastery/gear/resources and native save/cold verification. No natural campaign progression claim.",
+  "steps": [
+    {
+      "id": "prepare-expansion-showcase",
+      "runtime": "python",
+      "args": ["scripts/prepare-expansion-showcase.py"],
+      "suites": ["showcase"],
+      "kind": "test"
+    }
+  ]
+}

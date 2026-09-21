@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 180,
+  "scope": "Optional Geomancer fault isolation from retained private captures. Diagnostic success is not gameplay acceptance. Select one case explicitly.",
+  "steps": [
+    {
+      "id": "verify-integrated-assembly-prerequisites",
+      "runtime": "python",
+      "args": [
+        "scripts/verify-integrated-prerequisites.py",
+        "--assembly-only"
+      ],
+      "requires": [],
+      "suites": [
+        "completion-content"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-boot-control",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-boot-control.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "geomancer-diagnostics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-menu-control",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-menu-control.py"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "geomancer-diagnostics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-ai-control",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-menu-control.py",
+        "--ai-control"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "geomancer-diagnostics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-exception-trace",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-menu-control.py",
+        "--trace-exception"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "geomancer-diagnostics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-allocation-control",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-menu-control.py",
+        "--allocation-control"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "geomancer-diagnostics"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-geomancer-free-control",
+      "runtime": "python",
+      "args": [
+        "scripts/test-geomancer-menu-control.py",
+        "--free-control"
+      ],
+      "requires": [
+        "verify-integrated-assembly-prerequisites"
+      ],
+      "suites": [
+        "geomancer-diagnostics"
+      ],
+      "kind": "test"
+    }
+  ],
+  "continueIndependent": false
+}

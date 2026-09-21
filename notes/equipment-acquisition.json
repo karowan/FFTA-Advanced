@@ -1,0 +1,3579 @@
+{
+  "schemaVersion": 1,
+  "designVersion": "0.7",
+  "revision": 1,
+  "date": "2026-09-14",
+  "status": "Concrete acquisition design; not implemented or verified in a patched ROM.",
+  "scope": "All 85 new teaching weapons and all 129 adopted lessons, including support, reaction and combo lessons. Existing ability rules, AP, weapon names, powers and base prices are preserved.",
+  "stages": [
+    {
+      "id": "S0",
+      "name": "Opening stock",
+      "condition": "From the first normal opportunity to use the Cyril equipment shop after the opening clan introduction.",
+      "missionRecord": null,
+      "missionName": null,
+      "predicate": "normal_shop_access",
+      "legacyLabel": "Initial shop-tier stock"
+    },
+    {
+      "id": "S1",
+      "name": "First shipment",
+      "condition": "After successful completion of mission #005: Twisted Flow, on the next shop visit.",
+      "missionRecord": 5,
+      "missionName": "Twisted Flow",
+      "predicate": "mission_completed(005)",
+      "legacyLabel": "First expansion"
+    },
+    {
+      "id": "S2",
+      "name": "Second shipment",
+      "condition": "After successful completion of mission #011: Pale Company, on the next shop visit.",
+      "missionRecord": 11,
+      "missionName": "Pale Company",
+      "predicate": "mission_completed(011)",
+      "legacyLabel": "Second expansion"
+    },
+    {
+      "id": "S3",
+      "name": "Advanced shipment",
+      "condition": "After successful completion of mission #017: Desert Patrol, on the next shop visit.",
+      "missionRecord": 17,
+      "missionName": "Desert Patrol",
+      "predicate": "mission_completed(017)",
+      "legacyLabel": "Last pre-final-story expansion"
+    }
+  ],
+  "shopPolicy": {
+    "primary": "Cyril",
+    "additionalByGroup": {
+      "SAM": [],
+      "DRK": [
+        "Sprohm"
+      ],
+      "VIK": [
+        "Sprohm"
+      ],
+      "GEO": [
+        "Cadoan"
+      ],
+      "CHM": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "BRD": [
+        "Baguba Port"
+      ],
+      "DNC": [
+        "Muscadet"
+      ],
+      "MYK": [
+        "Muscadet"
+      ],
+      "SLD-AX": [
+        "Sprohm"
+      ],
+      "GLD-AX": [
+        "Sprohm"
+      ]
+    },
+    "unlocks": "Custom additive mission-completion checks; not native shop-upgrade numbers, battle counts, turf counts, calendar dates or merely accepted missions.",
+    "persistence": "Once unlocked, new equipment stock stays available even if turf count drops. Normal shop access restrictions still apply.",
+    "randomSources": "No placement in generic mission rewards, random drops, treasure hunts, steals, link rewards, or missable unique caches in this revision. Shops are the guaranteed source.",
+    "newGame": "Opening stock begins only when normal equipment shopping is available, not during the snowball tutorial.",
+    "existingSave": "On shop visit compute availability from completed story records; catch-up access requires validated compatibility, not a fresh-only unlock event.",
+    "pricing": "Listed prices are base targets; retain applicable original town/category/clan adjustments after validating new item categories. Actual checkout price is previewed."
+  },
+  "implementationUnknowns": [
+    "ROM item IDs and free item capacity",
+    "Mission-completion flag addresses/bit masks",
+    "Shop record allocation and additive stock filtering",
+    "Town/category price mapping, UI capacity and save serialization",
+    "Patch and ordinary-save compatibility"
+  ],
+  "sources": {
+    "shop": [
+      "The Lost Gamer shop guide",
+      "https://gamefaqs.gamespot.com/gba/560436-final-fantasy-tactics-advance/faqs/26352"
+    ],
+    "gameplay": [
+      "Crono09 gameplay guide",
+      "https://gamefaqs.gamespot.com/gba/560436-final-fantasy-tactics-advance/faqs/62342"
+    ],
+    "missions": [
+      "GameSpot walkthrough and numbered mission list",
+      "https://www.gamespot.com/articles/final-fantasy-tactics-advance-walkthrough/1100-6072833/"
+    ],
+    "progression": [
+      "Thonky campaign walkthrough",
+      "https://www.thonky.com/tactics-advance/walkthrough"
+    ]
+  },
+  "items": [
+    {
+      "id": "EQ-SAM-W1",
+      "name": "Ashura Echo",
+      "group": "SAM",
+      "category": "Katana",
+      "teachingJob": "Samurai",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 18,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 300,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SAM-A1",
+          "name": "Ashura",
+          "type": "Action",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SAM-W2",
+      "name": "Wind Reed",
+      "group": "SAM",
+      "category": "Katana",
+      "teachingJob": "Samurai",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 22,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 600,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SAM-A2",
+          "name": "Wind Draw",
+          "type": "Action",
+          "ap": 150
+        },
+        {
+          "id": "SAM-S1",
+          "name": "Composure",
+          "type": "Support",
+          "ap": 250
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SAM-W3",
+      "name": "Osafune Echo",
+      "group": "SAM",
+      "category": "Katana",
+      "teachingJob": "Samurai",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 26,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SAM-A3",
+          "name": "Osafune",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "SAM-C1",
+          "name": "Crescent Combo",
+          "type": "Combo",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SAM-W4",
+      "name": "Murasame Echo",
+      "group": "SAM",
+      "category": "Katana",
+      "teachingJob": "Samurai",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 30,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SAM-A4",
+          "name": "Murasame",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "SAM-R1",
+          "name": "Blade Ward",
+          "type": "Reaction",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SAM-W5",
+      "name": "Kiyomori Echo",
+      "group": "SAM",
+      "category": "Katana",
+      "teachingJob": "Samurai",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 34,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SAM-A5",
+          "name": "Kiyomori",
+          "type": "Action",
+          "ap": 250
+        },
+        {
+          "id": "SAM-S2",
+          "name": "Poise",
+          "type": "Support",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SAM-W6",
+      "name": "Guarding Blade",
+      "group": "SAM",
+      "category": "Katana",
+      "teachingJob": "Samurai",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 38,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SAM-A6",
+          "name": "Guarding Draw",
+          "type": "Action",
+          "ap": 250
+        },
+        {
+          "id": "SAM-R2",
+          "name": "Counter Draw",
+          "type": "Reaction",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SAM-W7",
+      "name": "Kiku Echo",
+      "group": "SAM",
+      "category": "Katana",
+      "teachingJob": "Samurai",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 42,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SAM-A7",
+          "name": "Kiku-ichimonji",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SAM-W8",
+      "name": "Moonblossom",
+      "group": "SAM",
+      "category": "Katana",
+      "teachingJob": "Samurai",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 46,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 6500,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SAM-A8",
+          "name": "Moon Blossom",
+          "type": "Action",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DRK-W1",
+      "name": "Gloom Sword",
+      "group": "DRK",
+      "category": "Sword",
+      "teachingJob": "Dark Knight",
+      "teachingRaces": [
+        "Human",
+        "Bangaa"
+      ],
+      "weaponAttack": 18,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 300,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DRK-A1",
+          "name": "Blood Edge",
+          "type": "Action",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DRK-W2",
+      "name": "Sanguine Edge",
+      "group": "DRK",
+      "category": "Sword",
+      "teachingJob": "Dark Knight",
+      "teachingRaces": [
+        "Human",
+        "Bangaa"
+      ],
+      "weaponAttack": 22,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 600,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DRK-A2",
+          "name": "Sanguine Sword",
+          "type": "Action",
+          "ap": 150
+        },
+        {
+          "id": "DRK-S1",
+          "name": "Desperation",
+          "type": "Support",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DRK-W3",
+      "name": "Infernal Edge",
+      "group": "DRK",
+      "category": "Sword",
+      "teachingJob": "Dark Knight",
+      "teachingRaces": [
+        "Human",
+        "Bangaa"
+      ],
+      "weaponAttack": 26,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DRK-A3",
+          "name": "Infernal Strike",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "DRK-C1",
+          "name": "Abyss Combo",
+          "type": "Combo",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DRK-W4",
+      "name": "Veil Sword",
+      "group": "DRK",
+      "category": "Sword",
+      "teachingJob": "Dark Knight",
+      "teachingRaces": [
+        "Human",
+        "Bangaa"
+      ],
+      "weaponAttack": 30,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DRK-A4",
+          "name": "Dark Mind",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "DRK-R1",
+          "name": "Dark Ward",
+          "type": "Reaction",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DRK-W5",
+      "name": "Oathbreaker",
+      "group": "DRK",
+      "category": "Sword",
+      "teachingJob": "Dark Knight",
+      "teachingRaces": [
+        "Human",
+        "Bangaa"
+      ],
+      "weaponAttack": 34,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DRK-A5",
+          "name": "Last Resort",
+          "type": "Action",
+          "ap": 250
+        },
+        {
+          "id": "DRK-S2",
+          "name": "Bloodcasting",
+          "type": "Support",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DRK-W6",
+      "name": "Crushing Edge",
+      "group": "DRK",
+      "category": "Sword",
+      "teachingJob": "Dark Knight",
+      "teachingRaces": [
+        "Human",
+        "Bangaa"
+      ],
+      "weaponAttack": 38,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DRK-A6",
+          "name": "Crushing Blow",
+          "type": "Action",
+          "ap": 300
+        },
+        {
+          "id": "DRK-R2",
+          "name": "Vengeful Pulse",
+          "type": "Reaction",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DRK-W7",
+      "name": "Abyssal Edge",
+      "group": "DRK",
+      "category": "Sword",
+      "teachingJob": "Dark Knight",
+      "teachingRaces": [
+        "Human",
+        "Bangaa"
+      ],
+      "weaponAttack": 42,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DRK-A7",
+          "name": "Abyssal Blade",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DRK-W8",
+      "name": "Sacrifice Edge",
+      "group": "DRK",
+      "category": "Sword",
+      "teachingJob": "Dark Knight",
+      "teachingRaces": [
+        "Human",
+        "Bangaa"
+      ],
+      "weaponAttack": 46,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 6500,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DRK-A8",
+          "name": "Unholy Sacrifice",
+          "type": "Action",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-VIK-W1",
+      "name": "Storm Axe",
+      "group": "VIK",
+      "category": "Axe",
+      "teachingJob": "Viking",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 18,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 300,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "VIK-A1",
+          "name": "Thunder",
+          "type": "Action",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-VIK-W2",
+      "name": "Raider Axe",
+      "group": "VIK",
+      "category": "Axe",
+      "teachingJob": "Viking",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 22,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 600,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "VIK-A2",
+          "name": "Pickpocket",
+          "type": "Action",
+          "ap": 100
+        },
+        {
+          "id": "VIK-S1",
+          "name": "Sea Legs",
+          "type": "Support",
+          "ap": 150
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-VIK-W3",
+      "name": "Plunder Axe",
+      "group": "VIK",
+      "category": "Axe",
+      "teachingJob": "Viking",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 26,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "VIK-A3",
+          "name": "Strong-Arm",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "VIK-C1",
+          "name": "Tempest Combo",
+          "type": "Combo",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-VIK-W4",
+      "name": "Warcaller Axe",
+      "group": "VIK",
+      "category": "Axe",
+      "teachingJob": "Viking",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 30,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "VIK-A4",
+          "name": "War Cry",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "VIK-R1",
+          "name": "Absorb Damage",
+          "type": "Reaction",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-VIK-W5",
+      "name": "Stormcall Axe",
+      "group": "VIK",
+      "category": "Axe",
+      "teachingJob": "Viking",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 34,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "VIK-A5",
+          "name": "Stormcall",
+          "type": "Action",
+          "ap": 250
+        },
+        {
+          "id": "VIK-S2",
+          "name": "Opportunist",
+          "type": "Support",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-VIK-W6",
+      "name": "Pillage Axe",
+      "group": "VIK",
+      "category": "Axe",
+      "teachingJob": "Viking",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 38,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "VIK-A6",
+          "name": "Pillage",
+          "type": "Action",
+          "ap": 300
+        },
+        {
+          "id": "VIK-R2",
+          "name": "Gil Snapper",
+          "type": "Reaction",
+          "ap": 50
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-VIK-W7",
+      "name": "Thunderhead Axe",
+      "group": "VIK",
+      "category": "Axe",
+      "teachingJob": "Viking",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 42,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "VIK-A7",
+          "name": "Thundaga",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-VIK-W8",
+      "name": "Tidal Axe",
+      "group": "VIK",
+      "category": "Axe",
+      "teachingJob": "Viking",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 46,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 6500,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "VIK-A8",
+          "name": "Tsunami",
+          "type": "Action",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W1",
+      "name": "Ember Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 18,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 300,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A1",
+          "name": "Fire Spellblade",
+          "type": "Action",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W2",
+      "name": "Rime Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 22,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 600,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A2",
+          "name": "Blizzard Spellblade",
+          "type": "Action",
+          "ap": 100
+        },
+        {
+          "id": "MYK-S1",
+          "name": "Spellweave",
+          "type": "Support",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W3",
+      "name": "Spark Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 26,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A3",
+          "name": "Thunder Spellblade",
+          "type": "Action",
+          "ap": 100
+        },
+        {
+          "id": "MYK-C1",
+          "name": "Spellblade Combo",
+          "type": "Combo",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W4",
+      "name": "Venom Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 30,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A4",
+          "name": "Poison Spellblade",
+          "type": "Action",
+          "ap": 150
+        },
+        {
+          "id": "MYK-R1",
+          "name": "Magic Shell",
+          "type": "Reaction",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W5",
+      "name": "Dream Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 34,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A5",
+          "name": "Sleep Spellblade",
+          "type": "Action",
+          "ap": 250
+        },
+        {
+          "id": "MYK-S2",
+          "name": "Arcane Ward",
+          "type": "Support",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W6",
+      "name": "Hush Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 38,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A6",
+          "name": "Silence Spellblade",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "MYK-R2",
+          "name": "Spell Parry",
+          "type": "Reaction",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W7",
+      "name": "Siphon Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 42,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A7",
+          "name": "Drain Spellblade",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W8",
+      "name": "Flare Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 46,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 6500,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A8",
+          "name": "Flare Spellblade",
+          "type": "Action",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-CHM-W1",
+      "name": "Tonic Knife",
+      "group": "CHM",
+      "category": "Knife",
+      "teachingJob": "Chemist",
+      "teachingRaces": [
+        "Nu Mou",
+        "Moogle"
+      ],
+      "weaponAttack": 14,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 300,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "CHM-A1",
+          "name": "Potion",
+          "type": "Action",
+          "ap": 50
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-CHM-W2",
+      "name": "Field Remedy Knife",
+      "group": "CHM",
+      "category": "Knife",
+      "teachingJob": "Chemist",
+      "teachingRaces": [
+        "Nu Mou",
+        "Moogle"
+      ],
+      "weaponAttack": 17,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 600,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "CHM-A2",
+          "name": "Field Remedy",
+          "type": "Action",
+          "ap": 100
+        },
+        {
+          "id": "CHM-S1",
+          "name": "Pharmacology",
+          "type": "Support",
+          "ap": 200
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-CHM-W3",
+      "name": "Phoenix Knife",
+      "group": "CHM",
+      "category": "Knife",
+      "teachingJob": "Chemist",
+      "teachingRaces": [
+        "Nu Mou",
+        "Moogle"
+      ],
+      "weaponAttack": 20,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "CHM-A3",
+          "name": "Phoenix Down",
+          "type": "Action",
+          "ap": 150
+        },
+        {
+          "id": "CHM-C1",
+          "name": "Flask Combo",
+          "type": "Combo",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-CHM-W4",
+      "name": "High Tonic Knife",
+      "group": "CHM",
+      "category": "Knife",
+      "teachingJob": "Chemist",
+      "teachingRaces": [
+        "Nu Mou",
+        "Moogle"
+      ],
+      "weaponAttack": 23,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "CHM-A4",
+          "name": "High Tonic",
+          "type": "Action",
+          "ap": 150
+        },
+        {
+          "id": "CHM-R1",
+          "name": "Auto-Potion",
+          "type": "Reaction",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-CHM-W5",
+      "name": "Mist Knife",
+      "group": "CHM",
+      "category": "Knife",
+      "teachingJob": "Chemist",
+      "teachingRaces": [
+        "Nu Mou",
+        "Moogle"
+      ],
+      "weaponAttack": 26,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "CHM-A5",
+          "name": "Healing Mist",
+          "type": "Action",
+          "ap": 250
+        },
+        {
+          "id": "CHM-S2",
+          "name": "Long Throw",
+          "type": "Support",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-CHM-W6",
+      "name": "Ether Knife",
+      "group": "CHM",
+      "category": "Knife",
+      "teachingJob": "Chemist",
+      "teachingRaces": [
+        "Nu Mou",
+        "Moogle"
+      ],
+      "weaponAttack": 29,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "CHM-A6",
+          "name": "Ether",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "CHM-R2",
+          "name": "Auto-Cureall",
+          "type": "Reaction",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-CHM-W7",
+      "name": "Cureall Knife",
+      "group": "CHM",
+      "category": "Knife",
+      "teachingJob": "Chemist",
+      "teachingRaces": [
+        "Nu Mou",
+        "Moogle"
+      ],
+      "weaponAttack": 32,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "CHM-A7",
+          "name": "Cureall",
+          "type": "Action",
+          "ap": 250
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-CHM-W8",
+      "name": "Resuscitation Knife",
+      "group": "CHM",
+      "category": "Knife",
+      "teachingJob": "Chemist",
+      "teachingRaces": [
+        "Nu Mou",
+        "Moogle"
+      ],
+      "weaponAttack": 35,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 6500,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "CHM-A8",
+          "name": "Resuscitating Draught",
+          "type": "Action",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DNC-W1",
+      "name": "Minuet Foil",
+      "group": "DNC",
+      "category": "Rapier",
+      "teachingJob": "Dancer",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 14,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 300,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DNC-A1",
+          "name": "Mincing Minuet",
+          "type": "Action",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DNC-W2",
+      "name": "Witch Foil",
+      "group": "DNC",
+      "category": "Rapier",
+      "teachingJob": "Dancer",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 17,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 600,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DNC-A2",
+          "name": "Witch Hunt",
+          "type": "Action",
+          "ap": 150
+        },
+        {
+          "id": "DNC-S1",
+          "name": "Grace",
+          "type": "Support",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DNC-W3",
+      "name": "Tempo Foil",
+      "group": "DNC",
+      "category": "Rapier",
+      "teachingJob": "Dancer",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 20,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DNC-A3",
+          "name": "Slow Dance",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "DNC-C1",
+          "name": "Waltz Combo",
+          "type": "Combo",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DNC-W4",
+      "name": "Polka Foil",
+      "group": "DNC",
+      "category": "Rapier",
+      "teachingJob": "Dancer",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 23,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DNC-A4",
+          "name": "Polka",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "DNC-R1",
+          "name": "Fury",
+          "type": "Reaction",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DNC-W5",
+      "name": "Frolic Foil",
+      "group": "DNC",
+      "category": "Rapier",
+      "teachingJob": "Dancer",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 26,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DNC-A5",
+          "name": "Heathen Frolic",
+          "type": "Action",
+          "ap": 250
+        },
+        {
+          "id": "DNC-S2",
+          "name": "Light Foot",
+          "type": "Support",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DNC-W6",
+      "name": "Forbidden Foil",
+      "group": "DNC",
+      "category": "Rapier",
+      "teachingJob": "Dancer",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 29,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DNC-A6",
+          "name": "Forbidden Dance",
+          "type": "Action",
+          "ap": 300
+        },
+        {
+          "id": "DNC-R2",
+          "name": "Counter Rhythm",
+          "type": "Reaction",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DNC-W7",
+      "name": "Jitterbug Foil",
+      "group": "DNC",
+      "category": "Rapier",
+      "teachingJob": "Dancer",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 32,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DNC-A7",
+          "name": "Jitterbug",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DNC-W8",
+      "name": "Danceblade",
+      "group": "DNC",
+      "category": "Rapier",
+      "teachingJob": "Dancer",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 35,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 6500,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DNC-A8",
+          "name": "Sword Dance",
+          "type": "Action",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-BRD-W1",
+      "name": "Etude Pipe",
+      "group": "BRD",
+      "category": "Instrument",
+      "teachingJob": "Bard",
+      "teachingRaces": [
+        "Moogle"
+      ],
+      "weaponAttack": 12,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 300,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "BRD-A1",
+          "name": "Soul Etude",
+          "type": "Action",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-BRD-W2",
+      "name": "Battle Pipe",
+      "group": "BRD",
+      "category": "Instrument",
+      "teachingJob": "Bard",
+      "teachingRaces": [
+        "Moogle"
+      ],
+      "weaponAttack": 15,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 600,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "BRD-A2",
+          "name": "Battle Chant",
+          "type": "Action",
+          "ap": 150
+        },
+        {
+          "id": "BRD-S1",
+          "name": "Encouragement",
+          "type": "Support",
+          "ap": 250
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-BRD-W3",
+      "name": "Refrain Pipe",
+      "group": "BRD",
+      "category": "Instrument",
+      "teachingJob": "Bard",
+      "teachingRaces": [
+        "Moogle"
+      ],
+      "weaponAttack": 18,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "BRD-A3",
+          "name": "Magickal Refrain",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "BRD-C1",
+          "name": "Chorus Combo",
+          "type": "Combo",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-BRD-W4",
+      "name": "Requiem Pipe",
+      "group": "BRD",
+      "category": "Instrument",
+      "teachingJob": "Bard",
+      "teachingRaces": [
+        "Moogle"
+      ],
+      "weaponAttack": 21,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "BRD-A4",
+          "name": "Requiem",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "BRD-R1",
+          "name": "Magick Boost",
+          "type": "Reaction",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-BRD-W5",
+      "name": "Angel Pipe",
+      "group": "BRD",
+      "category": "Instrument",
+      "teachingJob": "Bard",
+      "teachingRaces": [
+        "Moogle"
+      ],
+      "weaponAttack": 24,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "BRD-A5",
+          "name": "Angelsong",
+          "type": "Action",
+          "ap": 250
+        },
+        {
+          "id": "BRD-S2",
+          "name": "Clear Voice",
+          "type": "Support",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-BRD-W6",
+      "name": "Traveler Pipe",
+      "group": "BRD",
+      "category": "Instrument",
+      "teachingJob": "Bard",
+      "teachingRaces": [
+        "Moogle"
+      ],
+      "weaponAttack": 27,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "BRD-A6",
+          "name": "Hide",
+          "type": "Action",
+          "ap": 150
+        },
+        {
+          "id": "BRD-R2",
+          "name": "Encore",
+          "type": "Reaction",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-BRD-W7",
+      "name": "Ballad Pipe",
+      "group": "BRD",
+      "category": "Instrument",
+      "teachingJob": "Bard",
+      "teachingRaces": [
+        "Moogle"
+      ],
+      "weaponAttack": 30,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "BRD-A7",
+          "name": "Magick Ballad",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-BRD-W8",
+      "name": "Nameless Pipe",
+      "group": "BRD",
+      "category": "Instrument",
+      "teachingJob": "Bard",
+      "teachingRaces": [
+        "Moogle"
+      ],
+      "weaponAttack": 33,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 6500,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "BRD-A8",
+          "name": "Nameless Song",
+          "type": "Action",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GEO-W1",
+      "name": "Stone Rod",
+      "group": "GEO",
+      "category": "Rod",
+      "teachingJob": "Geomancer",
+      "teachingRaces": [
+        "Nu Mou"
+      ],
+      "weaponAttack": 10,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 300,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GEO-A1",
+          "name": "Stone Pulse",
+          "type": "Action",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GEO-W2",
+      "name": "Root Rod",
+      "group": "GEO",
+      "category": "Rod",
+      "teachingJob": "Geomancer",
+      "teachingRaces": [
+        "Nu Mou"
+      ],
+      "weaponAttack": 12,
+      "magicPowerBonus": 2,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 600,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GEO-A2",
+          "name": "Tanglevine",
+          "type": "Action",
+          "ap": 150
+        },
+        {
+          "id": "GEO-S1",
+          "name": "Attunement",
+          "type": "Support",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GEO-W3",
+      "name": "River Rod",
+      "group": "GEO",
+      "category": "Rod",
+      "teachingJob": "Geomancer",
+      "teachingRaces": [
+        "Nu Mou"
+      ],
+      "weaponAttack": 14,
+      "magicPowerBonus": 4,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GEO-A3",
+          "name": "Torrent",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "GEO-C1",
+          "name": "Gaia Combo",
+          "type": "Combo",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GEO-W4",
+      "name": "Zephyr Rod",
+      "group": "GEO",
+      "category": "Rod",
+      "teachingJob": "Geomancer",
+      "teachingRaces": [
+        "Nu Mou"
+      ],
+      "weaponAttack": 16,
+      "magicPowerBonus": 6,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GEO-A4",
+          "name": "Updraft",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "GEO-R1",
+          "name": "Stone Skin",
+          "type": "Reaction",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GEO-W5",
+      "name": "Wardstone Rod",
+      "group": "GEO",
+      "category": "Rod",
+      "teachingJob": "Geomancer",
+      "teachingRaces": [
+        "Nu Mou"
+      ],
+      "weaponAttack": 18,
+      "magicPowerBonus": 8,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GEO-A5",
+          "name": "Earthen Ward",
+          "type": "Action",
+          "ap": 250
+        },
+        {
+          "id": "GEO-S2",
+          "name": "Surefoot",
+          "type": "Support",
+          "ap": 200
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GEO-W6",
+      "name": "Wisp Rod",
+      "group": "GEO",
+      "category": "Rod",
+      "teachingJob": "Geomancer",
+      "teachingRaces": [
+        "Nu Mou"
+      ],
+      "weaponAttack": 20,
+      "magicPowerBonus": 10,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GEO-A6",
+          "name": "Wisp Flame",
+          "type": "Action",
+          "ap": 300
+        },
+        {
+          "id": "GEO-R2",
+          "name": "Nature's Wrath",
+          "type": "Reaction",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GEO-W7",
+      "name": "Rime Rod",
+      "group": "GEO",
+      "category": "Rod",
+      "teachingJob": "Geomancer",
+      "teachingRaces": [
+        "Nu Mou"
+      ],
+      "weaponAttack": 22,
+      "magicPowerBonus": 12,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GEO-A7",
+          "name": "Rime Field",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GEO-W8",
+      "name": "Gaia Rod",
+      "group": "GEO",
+      "category": "Rod",
+      "teachingJob": "Geomancer",
+      "teachingRaces": [
+        "Nu Mou"
+      ],
+      "weaponAttack": 24,
+      "magicPowerBonus": 14,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 6500,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GEO-A8",
+          "name": "Gaia Surge",
+          "type": "Action",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W9",
+      "name": "Hourglass Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 30,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A9",
+          "name": "Slow Spellblade",
+          "type": "Action",
+          "ap": 250
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W10",
+      "name": "Aether Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 34,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A10",
+          "name": "Osmose Spellblade",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W11",
+      "name": "Dawn Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 38,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A11",
+          "name": "Holy Spellblade",
+          "type": "Action",
+          "ap": 250
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W12",
+      "name": "Severance Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 26,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A12",
+          "name": "Spellbreak",
+          "type": "Action",
+          "ap": 250
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W13",
+      "name": "Prism Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 34,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A13",
+          "name": "Arcane Release",
+          "type": "Action",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-MYK-W14",
+      "name": "Stone Saber",
+      "group": "MYK",
+      "category": "Saber",
+      "teachingJob": "Mystic Knight",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 46,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 6500,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "MYK-A14",
+          "name": "Break Blade",
+          "type": "Action",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SAM-W9",
+      "name": "Red Spider Katana",
+      "group": "SAM",
+      "category": "Katana",
+      "teachingJob": "Samurai",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 42,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SAM-A9",
+          "name": "Higanbana",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DRK-W9",
+      "name": "Nightward Sword",
+      "group": "DRK",
+      "category": "Sword",
+      "teachingJob": "Dark Knight",
+      "teachingRaces": [
+        "Human",
+        "Bangaa"
+      ],
+      "weaponAttack": 34,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DRK-A9",
+          "name": "The Blackest Night",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-VIK-W9",
+      "name": "Challenger Axe",
+      "group": "VIK",
+      "category": "Axe",
+      "teachingJob": "Viking",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 26,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "VIK-A9",
+          "name": "Provoke",
+          "type": "Action",
+          "ap": 250
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GEO-W9",
+      "name": "Refuge Rod",
+      "group": "GEO",
+      "category": "Rod",
+      "teachingJob": "Geomancer",
+      "teachingRaces": [
+        "Nu Mou"
+      ],
+      "weaponAttack": 22,
+      "magicPowerBonus": 10,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GEO-A9",
+          "name": "Nature's Refuge",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-CHM-W9",
+      "name": "Preventive Knife",
+      "group": "CHM",
+      "category": "Knife",
+      "teachingJob": "Chemist",
+      "teachingRaces": [
+        "Nu Mou",
+        "Moogle"
+      ],
+      "weaponAttack": 32,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "CHM-A9",
+          "name": "Inoculation",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-CHM-W10",
+      "name": "Fortifying Knife",
+      "group": "CHM",
+      "category": "Knife",
+      "teachingJob": "Chemist",
+      "teachingRaces": [
+        "Nu Mou",
+        "Moogle"
+      ],
+      "weaponAttack": 23,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Cadoan",
+        "Baguba Port"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "CHM-A10",
+          "name": "Guarding Draught",
+          "type": "Action",
+          "ap": 200
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-DNC-W9",
+      "name": "Passing Foil",
+      "group": "DNC",
+      "category": "Rapier",
+      "teachingJob": "Dancer",
+      "teachingRaces": [
+        "Viera"
+      ],
+      "weaponAttack": 23,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Muscadet"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "DNC-A9",
+          "name": "Passing Step",
+          "type": "Action",
+          "ap": 250
+        }
+      ],
+      "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SLD-AX-W1",
+      "name": "Recruit Axe",
+      "group": "SLD-AX",
+      "category": "Axe",
+      "teachingJob": "Soldier",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 20,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 300,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SLD-AX-A1",
+          "name": "Chop",
+          "type": "Action",
+          "ap": 100
+        }
+      ],
+      "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SLD-AX-W2",
+      "name": "Throwing Axe",
+      "group": "SLD-AX",
+      "category": "Axe",
+      "teachingJob": "Soldier",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 24,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 600,
+      "stageId": "S0",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SLD-AX-A2",
+          "name": "Tomahawk",
+          "type": "Action",
+          "ap": 150
+        },
+        {
+          "id": "SLD-AX-S1",
+          "name": "Recuperation",
+          "type": "Support",
+          "ap": 150
+        }
+      ],
+      "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SLD-AX-W3",
+      "name": "Field Axe",
+      "group": "SLD-AX",
+      "category": "Axe",
+      "teachingJob": "Soldier",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 28,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1000,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SLD-AX-A3",
+          "name": "Overpower",
+          "type": "Action",
+          "ap": 200
+        },
+        {
+          "id": "SLD-AX-R1",
+          "name": "Haft Guard",
+          "type": "Reaction",
+          "ap": 150
+        }
+      ],
+      "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-SLD-AX-W4",
+      "name": "Breaching Axe",
+      "group": "SLD-AX",
+      "category": "Axe",
+      "teachingJob": "Soldier",
+      "teachingRaces": [
+        "Human"
+      ],
+      "weaponAttack": 32,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 1600,
+      "stageId": "S1",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "SLD-AX-A4",
+          "name": "Shatter Guard",
+          "type": "Action",
+          "ap": 300
+        }
+      ],
+      "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GLD-AX-W1",
+      "name": "Bearded Axe",
+      "group": "GLD-AX",
+      "category": "Axe",
+      "teachingJob": "Gladiator",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 34,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 2400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GLD-AX-A1",
+          "name": "Armor Splitter",
+          "type": "Action",
+          "ap": 200
+        }
+      ],
+      "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GLD-AX-W2",
+      "name": "Arena Axe",
+      "group": "GLD-AX",
+      "category": "Axe",
+      "teachingJob": "Gladiator",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 38,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 3400,
+      "stageId": "S2",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GLD-AX-A2",
+          "name": "Reaping Arc",
+          "type": "Action",
+          "ap": 250
+        },
+        {
+          "id": "GLD-AX-S1",
+          "name": "Follow Through",
+          "type": "Support",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GLD-AX-W3",
+      "name": "Headsman's Axe",
+      "group": "GLD-AX",
+      "category": "Axe",
+      "teachingJob": "Gladiator",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 42,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 4800,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GLD-AX-A3",
+          "name": "Executioner",
+          "type": "Action",
+          "ap": 300
+        },
+        {
+          "id": "GLD-AX-R1",
+          "name": "Axe Reprisal",
+          "type": "Reaction",
+          "ap": 350
+        }
+      ],
+      "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    },
+    {
+      "id": "EQ-GLD-AX-W4",
+      "name": "Titan Axe",
+      "group": "GLD-AX",
+      "category": "Axe",
+      "teachingJob": "Gladiator",
+      "teachingRaces": [
+        "Bangaa"
+      ],
+      "weaponAttack": 46,
+      "magicPowerBonus": 0,
+      "otherStatBonuses": 0,
+      "innateElement": null,
+      "innateStatus": null,
+      "weaponProc": null,
+      "basePriceGil": 6500,
+      "stageId": "S3",
+      "primaryShop": "Cyril",
+      "additionalShops": [
+        "Sprohm"
+      ],
+      "additionalShopCondition": "Same stage must be unlocked AND this town's ordinary shop must be usable.",
+      "stock": "Unlimited repeat purchases; never removed after stage unlock.",
+      "lessons": [
+        {
+          "id": "GLD-AX-A4",
+          "name": "Fell Cleave",
+          "type": "Action",
+          "ap": 400
+        }
+      ],
+      "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
+      "romItemId": null,
+      "romShopRecord": null,
+      "missionFlagAddress": null
+    }
+  ],
+  "abilityIndex": {
+    "SAM-A1": "EQ-SAM-W1",
+    "SAM-A2": "EQ-SAM-W2",
+    "SAM-S1": "EQ-SAM-W2",
+    "SAM-A3": "EQ-SAM-W3",
+    "SAM-C1": "EQ-SAM-W3",
+    "SAM-A4": "EQ-SAM-W4",
+    "SAM-R1": "EQ-SAM-W4",
+    "SAM-A5": "EQ-SAM-W5",
+    "SAM-S2": "EQ-SAM-W5",
+    "SAM-A6": "EQ-SAM-W6",
+    "SAM-R2": "EQ-SAM-W6",
+    "SAM-A7": "EQ-SAM-W7",
+    "SAM-A8": "EQ-SAM-W8",
+    "DRK-A1": "EQ-DRK-W1",
+    "DRK-A2": "EQ-DRK-W2",
+    "DRK-S1": "EQ-DRK-W2",
+    "DRK-A3": "EQ-DRK-W3",
+    "DRK-C1": "EQ-DRK-W3",
+    "DRK-A4": "EQ-DRK-W4",
+    "DRK-R1": "EQ-DRK-W4",
+    "DRK-A5": "EQ-DRK-W5",
+    "DRK-S2": "EQ-DRK-W5",
+    "DRK-A6": "EQ-DRK-W6",
+    "DRK-R2": "EQ-DRK-W6",
+    "DRK-A7": "EQ-DRK-W7",
+    "DRK-A8": "EQ-DRK-W8",
+    "VIK-A1": "EQ-VIK-W1",
+    "VIK-A2": "EQ-VIK-W2",
+    "VIK-S1": "EQ-VIK-W2",
+    "VIK-A3": "EQ-VIK-W3",
+    "VIK-C1": "EQ-VIK-W3",
+    "VIK-A4": "EQ-VIK-W4",
+    "VIK-R1": "EQ-VIK-W4",
+    "VIK-A5": "EQ-VIK-W5",
+    "VIK-S2": "EQ-VIK-W5",
+    "VIK-A6": "EQ-VIK-W6",
+    "VIK-R2": "EQ-VIK-W6",
+    "VIK-A7": "EQ-VIK-W7",
+    "VIK-A8": "EQ-VIK-W8",
+    "MYK-A1": "EQ-MYK-W1",
+    "MYK-A2": "EQ-MYK-W2",
+    "MYK-S1": "EQ-MYK-W2",
+    "MYK-A3": "EQ-MYK-W3",
+    "MYK-C1": "EQ-MYK-W3",
+    "MYK-A4": "EQ-MYK-W4",
+    "MYK-R1": "EQ-MYK-W4",
+    "MYK-A5": "EQ-MYK-W5",
+    "MYK-S2": "EQ-MYK-W5",
+    "MYK-A6": "EQ-MYK-W6",
+    "MYK-R2": "EQ-MYK-W6",
+    "MYK-A7": "EQ-MYK-W7",
+    "MYK-A8": "EQ-MYK-W8",
+    "CHM-A1": "EQ-CHM-W1",
+    "CHM-A2": "EQ-CHM-W2",
+    "CHM-S1": "EQ-CHM-W2",
+    "CHM-A3": "EQ-CHM-W3",
+    "CHM-C1": "EQ-CHM-W3",
+    "CHM-A4": "EQ-CHM-W4",
+    "CHM-R1": "EQ-CHM-W4",
+    "CHM-A5": "EQ-CHM-W5",
+    "CHM-S2": "EQ-CHM-W5",
+    "CHM-A6": "EQ-CHM-W6",
+    "CHM-R2": "EQ-CHM-W6",
+    "CHM-A7": "EQ-CHM-W7",
+    "CHM-A8": "EQ-CHM-W8",
+    "DNC-A1": "EQ-DNC-W1",
+    "DNC-A2": "EQ-DNC-W2",
+    "DNC-S1": "EQ-DNC-W2",
+    "DNC-A3": "EQ-DNC-W3",
+    "DNC-C1": "EQ-DNC-W3",
+    "DNC-A4": "EQ-DNC-W4",
+    "DNC-R1": "EQ-DNC-W4",
+    "DNC-A5": "EQ-DNC-W5",
+    "DNC-S2": "EQ-DNC-W5",
+    "DNC-A6": "EQ-DNC-W6",
+    "DNC-R2": "EQ-DNC-W6",
+    "DNC-A7": "EQ-DNC-W7",
+    "DNC-A8": "EQ-DNC-W8",
+    "BRD-A1": "EQ-BRD-W1",
+    "BRD-A2": "EQ-BRD-W2",
+    "BRD-S1": "EQ-BRD-W2",
+    "BRD-A3": "EQ-BRD-W3",
+    "BRD-C1": "EQ-BRD-W3",
+    "BRD-A4": "EQ-BRD-W4",
+    "BRD-R1": "EQ-BRD-W4",
+    "BRD-A5": "EQ-BRD-W5",
+    "BRD-S2": "EQ-BRD-W5",
+    "BRD-A6": "EQ-BRD-W6",
+    "BRD-R2": "EQ-BRD-W6",
+    "BRD-A7": "EQ-BRD-W7",
+    "BRD-A8": "EQ-BRD-W8",
+    "GEO-A1": "EQ-GEO-W1",
+    "GEO-A2": "EQ-GEO-W2",
+    "GEO-S1": "EQ-GEO-W2",
+    "GEO-A3": "EQ-GEO-W3",
+    "GEO-C1": "EQ-GEO-W3",
+    "GEO-A4": "EQ-GEO-W4",
+    "GEO-R1": "EQ-GEO-W4",
+    "GEO-A5": "EQ-GEO-W5",
+    "GEO-S2": "EQ-GEO-W5",
+    "GEO-A6": "EQ-GEO-W6",
+    "GEO-R2": "EQ-GEO-W6",
+    "GEO-A7": "EQ-GEO-W7",
+    "GEO-A8": "EQ-GEO-W8",
+    "MYK-A9": "EQ-MYK-W9",
+    "MYK-A10": "EQ-MYK-W10",
+    "MYK-A11": "EQ-MYK-W11",
+    "MYK-A12": "EQ-MYK-W12",
+    "MYK-A13": "EQ-MYK-W13",
+    "MYK-A14": "EQ-MYK-W14",
+    "SAM-A9": "EQ-SAM-W9",
+    "DRK-A9": "EQ-DRK-W9",
+    "VIK-A9": "EQ-VIK-W9",
+    "GEO-A9": "EQ-GEO-W9",
+    "CHM-A9": "EQ-CHM-W9",
+    "CHM-A10": "EQ-CHM-W10",
+    "DNC-A9": "EQ-DNC-W9",
+    "SLD-AX-A1": "EQ-SLD-AX-W1",
+    "SLD-AX-A2": "EQ-SLD-AX-W2",
+    "SLD-AX-S1": "EQ-SLD-AX-W2",
+    "SLD-AX-A3": "EQ-SLD-AX-W3",
+    "SLD-AX-R1": "EQ-SLD-AX-W3",
+    "SLD-AX-A4": "EQ-SLD-AX-W4",
+    "GLD-AX-A1": "EQ-GLD-AX-W1",
+    "GLD-AX-A2": "EQ-GLD-AX-W2",
+    "GLD-AX-S1": "EQ-GLD-AX-W2",
+    "GLD-AX-A3": "EQ-GLD-AX-W3",
+    "GLD-AX-R1": "EQ-GLD-AX-W3",
+    "GLD-AX-A4": "EQ-GLD-AX-W4"
+  }
+}

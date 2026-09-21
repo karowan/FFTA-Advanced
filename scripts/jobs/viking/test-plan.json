@@ -1,0 +1,397 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 1800,
+  "scope": "Viking implementation-in-progress: readiness and native behavior, not full job acceptance.",
+  "steps": [
+    {
+      "id": "worktree-prerequisites",
+      "runtime": "python",
+      "args": [
+        "scripts/check-worktree-prerequisites.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-runner-self",
+      "runtime": "python",
+      "args": [
+        "scripts/test-test-runner.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-original-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-native-executor.py",
+        "--fell",
+        "--current"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "build-samurai-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-samurai-probe.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "prepare-samurai-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-executor.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private",
+        "test-installed-fell-original-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-native.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-blade-ward-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-ward-executor.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "prepare-samurai-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-battle.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "build-job-state-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-job-state-probe.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "build-viking-private",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/build.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-job-state-private"
+      ]
+    },
+    {
+      "id": "prepare-viking-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/prepare-battle.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-viking-private"
+      ]
+    },
+    {
+      "id": "prepare-viking-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/prepare-executor.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "prepare-viking-battle"
+      ]
+    },
+    {
+      "id": "test-viking-native-actions",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-native-actions.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-viking-private",
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-sea-legs",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-sea-legs.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-viking-private",
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-theft-strikes",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-theft-strikes.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-viking-private",
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-help",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-help.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-viking-private"
+      ]
+    },
+    {
+      "id": "test-viking-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-in-game.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-viking-battle"
+      ]
+    },
+    {
+      "id": "test-viking-inherited-samurai",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-inherited-samurai.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-viking-private",
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-stormcall",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-stormcall.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-viking-private",
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-geometry-weapons",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-geometry-weapons.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-viking-private",
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-state-effects",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-state-effects.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-content",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-content.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "build-viking-private",
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-damage-passives",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-damage-passives.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-tsunami",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-tsunami.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-reactions",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-reactions.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-combo-in-game",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-combo-in-game.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-viking-battle"
+      ]
+    },
+    {
+      "id": "test-viking-legal-actions",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-legal-actions.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-viking-executor"
+      ]
+    },
+    {
+      "id": "test-viking-owned-lifecycle",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/viking/test-owned-lifecycle.py"
+      ],
+      "suites": [
+        "viking"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-viking-executor"
+      ]
+    }
+  ]
+}

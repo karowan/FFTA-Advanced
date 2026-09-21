@@ -1,0 +1,534 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 240,
+  "description": "All reviewed native-color poses: eight changed races, existing native class-side selector choices, full graph and mode construction; targeted Fight/Combo/water per changed class.",
+  "steps": [
+    {
+      "id": "build-all-native-colors",
+      "runtime": "python",
+      "kind": "build",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/prepare-nonhuman-native-colors.py",
+        "--all-poses"
+      ]
+    },
+    {
+      "id": "build-all-native-actions",
+      "runtime": "python",
+      "kind": "build",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/import-reviewed-actions.py",
+        "--native",
+        "--parent",
+        "build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json",
+        "--native-conversion",
+        "build/art/native-nonhuman-integration-2026-09-20/conversions.json",
+        "--output",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json"
+      ]
+    },
+    {
+      "id": "test-all-native-contract",
+      "runtime": "python",
+      "kind": "static",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-native-color-transfer.py",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json"
+      ]
+    },
+    {
+      "id": "test-all-native-import",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-action-import.py",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json"
+      ]
+    },
+    {
+      "id": "test-all-native-entry",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-palette-entry.py",
+        "--native",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json"
+      ]
+    },
+    {
+      "id": "test-all-native-modes",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-animation-modes.py",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json"
+      ]
+    },
+    {
+      "id": "test-all-native-fight-118",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "118"
+      ]
+    },
+    {
+      "id": "test-all-native-combo-118",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "118",
+        "--combo"
+      ]
+    },
+    {
+      "id": "test-all-native-water-118",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--native",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "118"
+      ]
+    },
+    {
+      "id": "test-all-native-fight-119",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "119"
+      ]
+    },
+    {
+      "id": "test-all-native-combo-119",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "119",
+        "--combo"
+      ]
+    },
+    {
+      "id": "test-all-native-water-119",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--native",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "119"
+      ]
+    },
+    {
+      "id": "test-all-native-fight-120",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "120"
+      ]
+    },
+    {
+      "id": "test-all-native-combo-120",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "120",
+        "--combo"
+      ]
+    },
+    {
+      "id": "test-all-native-water-120",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--native",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "120"
+      ]
+    },
+    {
+      "id": "test-all-native-fight-121",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "121"
+      ]
+    },
+    {
+      "id": "test-all-native-combo-121",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "121",
+        "--combo"
+      ]
+    },
+    {
+      "id": "test-all-native-water-121",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--native",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "121"
+      ]
+    },
+    {
+      "id": "test-all-native-fight-122",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "122"
+      ]
+    },
+    {
+      "id": "test-all-native-combo-122",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "122",
+        "--combo"
+      ]
+    },
+    {
+      "id": "test-all-native-water-122",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--native",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "122"
+      ]
+    },
+    {
+      "id": "test-all-native-fight-123",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "123"
+      ]
+    },
+    {
+      "id": "test-all-native-combo-123",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "123",
+        "--combo"
+      ]
+    },
+    {
+      "id": "test-all-native-water-123",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--native",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "123"
+      ]
+    },
+    {
+      "id": "test-all-native-fight-124",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "124"
+      ]
+    },
+    {
+      "id": "test-all-native-combo-124",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "124",
+        "--combo"
+      ]
+    },
+    {
+      "id": "test-all-native-water-124",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--native",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "124"
+      ]
+    },
+    {
+      "id": "test-all-native-fight-125",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "125"
+      ]
+    },
+    {
+      "id": "test-all-native-combo-125",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "125",
+        "--combo"
+      ]
+    },
+    {
+      "id": "test-all-native-water-125",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "all-native-colors"
+      ],
+      "args": [
+        "scripts/test-reviewed-water.py",
+        "--native",
+        "--manifest",
+        "build/art/native-nonhuman-integration-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/native-nonhuman-integration-2026-09-20/entry-latest.json",
+        "--job",
+        "125"
+      ]
+    }
+  ]
+}

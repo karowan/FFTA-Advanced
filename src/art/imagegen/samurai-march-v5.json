@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "built-in default; model name not exposed",
+  "prompt": "Edit target Image1: our NEW red-armored Samurai sheet, six sprites in THREE columns and TWO rows. Motion reference Image2: original FFTA four-column A/B/C/B animation. Image2 is reference for limb motion and camera only; DO NOT copy, trace, recolor or reproduce its Ninja artwork. Correct the Samurai's currently repeated single-foot stance into a true alternating stepping-in-place cycle. Keep our red kabuto, tiny gold crescent, exposed face/white eye, red chest and skirt armor, purple trousers, brown boots and sheathed katana. No hood/mask. Preserve the compact 16x27 logical-pixel human proportions and identical identity. Only change lower legs/boots and counter-swinging hands; upper helmet/face/chest stay rigid and consistent, with at most one logical pixel vertical bob in neutral. THREE TOP CELLS face lower left: (1) far boot at screen-left is lifted two logical pixels, knee bent; near boot at screen-right supports weight on baseline. (2) both boots visible side-by-side under the two hips, neutral phase. (3) near boot at screen-right is lifted two logical pixels, knee bent; far boot at screen-left supports weight on baseline. A dark/transparent one-pixel gap separates both lower legs; show TWO boots in every pose, never a fused single stump. Arms counter-swing minimally with the legs. THREE BOTTOM CELLS are the same phases seen from upper right/back three-quarter, with the same camera angle in all three. Far/near legs alternate there too; do not turn neutral to straight back. Helmet, crescent, skirt plate count, sword sheath length, location on anatomical left hip, and palette remain unchanged between phases. Feet move deliberately; body does not slide sideways. Maintain all six equal cells, generous transparent gutters, same scale and baseline. This sheet will play columns 1,2,3,2 at native16/8/16/8 ticks. Coherent coarse square logical pixel clusters, not finer-detail illustration. Real alpha transparency. No glow/haze, shadows, ground, labels, borders, grids, extra characters or drawn weapons. Prioritize unmistakably opposite lifted feet and stable costume. Return ONLY our six corrected red Samurai sprites, never the reference sheet.",
+  "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v5.png",
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-9b4f410d-f1d0-49fd-a291-a82452306669.png",
+  "references": [
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/samurai-march-v4.png",
+      "role": "Generated character edit target",
+      "sha256": "17deae2a4046fafbd2420f0f93fbefae0b6e3f96f688673977f1e5dd5b1f44d1"
+    },
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/original-idle-motion.png",
+      "role": "Original native motion only; no copied Ninja artwork",
+      "sha256": "0b1f4c4b5a34cc9dc7f13cd3ed567b1068c8980e2db02daaa6d882302de977d9"
+    }
+  ],
+  "conversion": {
+    "columns": 3,
+    "rows": 2,
+    "height": 27,
+    "resampling": "nearest",
+    "nativePaletteOffset": "0x419d80"
+  },
+  "status": "Rejected third-column motion: front supporting boot missing, back repeats same lead foot.",
+  "productionAccepted": false,
+  "sourceSha256": "562168d86ed633aa04bede1adc5d65c7f69c23c7a69f1337c3388914b3abcfd8",
+  "sourceSize": [
+    1536,
+    1024
+  ]
+}

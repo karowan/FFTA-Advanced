@@ -1,0 +1,3819 @@
+{
+  "assets": [
+    {
+      "job": 116,
+      "slug": "human-samurai",
+      "race": "human",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Create the Human Samurai equipment HEAD icon, facing DIRECTLY toward the camera, symmetrically frontal like image 1. Use the exact 16 by 14 pixel layout of image 1, especially its eye row, eye spacing, head center and chin baseline. Image 2 is the character identity from its approved sprite; image 3 shows four original same-race icons; image 4 is its costume concept. Use the native colors of image 2. Image 5 shows the shared face pixels that stay fixed. Make the distinctive headgear recognizable around the common facial layout. Simple bold pixel clusters, no fine detail. Return ONE 16 by 14 logical-pixel head enlarged with hard square pixels, filling the SAME canvas as image 1. No body, lettering or border. Pale cream background. ",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-frontal-template.png",
+          "sha256": "37b54582089594af892b6c1172a0a577b348ffc7e73537431c6f649b220d6b6f"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-samurai/first-sprite-head.png",
+          "sha256": "2f401302580c83058b29abe6839573732c3eb08aeae0707fd8886e1b0d54b2a3"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-references.png",
+          "sha256": "c53d0c962350cb196451ef45f3f884f5be43f99f0db8c6226095c745da1a71e2"
+        },
+        {
+          "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+          "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-anchor-layer.png",
+          "sha256": "fdf4fd8b2003394f821cbfe4d4c56a07bfc4f1ef177e879135cb1f3a7908b7db"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-002.png",
+            "sha256": "8f14b229588c916bacc9261c479ba18b12df08d2fc03ba369c8bc950ed5608ce"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-004.png",
+            "sha256": "6c72efdcbcef959203f6df36a0019ddb8016d1ffc5a2b712d9d6daff09b2a0b2"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-007.png",
+            "sha256": "1092602e0c32ae7a814c48239e112eb2220b61fc24acac13c122732a15038b6f"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-009.png",
+            "sha256": "df79c341432eaf68baa93ab408dc7e0737151ca6af1a9b019aa3cd8592a77dd8"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          6,
+          7,
+          12,
+          11
+        ],
+        "coordinates": [
+          [
+            6,
+            7,
+            11
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            11,
+            7,
+            11
+          ],
+          [
+            6,
+            8,
+            3
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            11,
+            8,
+            3
+          ],
+          [
+            6,
+            9,
+            7
+          ],
+          [
+            7,
+            9,
+            7
+          ],
+          [
+            8,
+            9,
+            7
+          ],
+          [
+            9,
+            9,
+            7
+          ],
+          [
+            10,
+            9,
+            7
+          ],
+          [
+            11,
+            9,
+            7
+          ],
+          [
+            7,
+            10,
+            7
+          ],
+          [
+            8,
+            10,
+            7
+          ],
+          [
+            9,
+            10,
+            7
+          ],
+          [
+            10,
+            10,
+            7
+          ],
+          [
+            11,
+            10,
+            6
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-references.png",
+          "sha256": "c53d0c962350cb196451ef45f3f884f5be43f99f0db8c6226095c745da1a71e2"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-anchor-layer.png",
+          "sha256": "fdf4fd8b2003394f821cbfe4d4c56a07bfc4f1ef177e879135cb1f3a7908b7db"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-frontal-template.png",
+          "sha256": "37b54582089594af892b6c1172a0a577b348ffc7e73537431c6f649b220d6b6f"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      }
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "race": "human",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Create the Human Dark Knight equipment HEAD icon, facing DIRECTLY toward the camera, symmetrically frontal like image 1. Use the exact 16 by 14 pixel layout of image 1, especially its eye row, eye spacing, head center and chin baseline. Image 2 is the character identity from its approved sprite; image 3 shows four original same-race icons; image 4 is its costume concept. Use the native colors of image 2. Image 5 shows the shared face pixels that stay fixed. Make the distinctive headgear recognizable around the common facial layout. Simple bold pixel clusters, no fine detail. Return ONE 16 by 14 logical-pixel head enlarged with hard square pixels, filling the SAME canvas as image 1. No body, lettering or border. Pale cream background. Closed helmet variant: use the same eye positions and frontal head center but hide all skin and nose. Two simple golden round eyes in black helmet darkness. Blue cloth emerges behind the helmet. Do not copy the exposed face pixels from image 5.",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-frontal-template.png",
+          "sha256": "37b54582089594af892b6c1172a0a577b348ffc7e73537431c6f649b220d6b6f"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-dark-knight/first-sprite-head.png",
+          "sha256": "99f4d58840b40dde8e8d97fd83476e097ac58664a674bec25572c8d89a9f14f2"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-references.png",
+          "sha256": "c53d0c962350cb196451ef45f3f884f5be43f99f0db8c6226095c745da1a71e2"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/human-dark-knight-fft-redesign.png",
+          "sha256": "388ef4e98c901adcdb55015653984931762533e0dc96ff6d76419ebd6e2ccc56"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-anchor-layer.png",
+          "sha256": "fdf4fd8b2003394f821cbfe4d4c56a07bfc4f1ef177e879135cb1f3a7908b7db"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "anchorMode": "helmet-landmarks-only",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-002.png",
+            "sha256": "8f14b229588c916bacc9261c479ba18b12df08d2fc03ba369c8bc950ed5608ce"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-004.png",
+            "sha256": "6c72efdcbcef959203f6df36a0019ddb8016d1ffc5a2b712d9d6daff09b2a0b2"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-007.png",
+            "sha256": "1092602e0c32ae7a814c48239e112eb2220b61fc24acac13c122732a15038b6f"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-009.png",
+            "sha256": "df79c341432eaf68baa93ab408dc7e0737151ca6af1a9b019aa3cd8592a77dd8"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          6,
+          7,
+          12,
+          11
+        ],
+        "coordinates": [
+          [
+            6,
+            7,
+            11
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            11,
+            7,
+            11
+          ],
+          [
+            6,
+            8,
+            3
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            11,
+            8,
+            3
+          ],
+          [
+            6,
+            9,
+            7
+          ],
+          [
+            7,
+            9,
+            7
+          ],
+          [
+            8,
+            9,
+            7
+          ],
+          [
+            9,
+            9,
+            7
+          ],
+          [
+            10,
+            9,
+            7
+          ],
+          [
+            11,
+            9,
+            7
+          ],
+          [
+            7,
+            10,
+            7
+          ],
+          [
+            8,
+            10,
+            7
+          ],
+          [
+            9,
+            10,
+            7
+          ],
+          [
+            10,
+            10,
+            7
+          ],
+          [
+            11,
+            10,
+            6
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-references.png",
+          "sha256": "c53d0c962350cb196451ef45f3f884f5be43f99f0db8c6226095c745da1a71e2"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-anchor-layer.png",
+          "sha256": "fdf4fd8b2003394f821cbfe4d4c56a07bfc4f1ef177e879135cb1f3a7908b7db"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-frontal-template.png",
+          "sha256": "37b54582089594af892b6c1172a0a577b348ffc7e73537431c6f649b220d6b6f"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      }
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "kind": "portrait",
+      "nativeSize": [
+        48,
+        56
+      ],
+      "prompt": "Edit image 1. Inside the helmet use exactly TWO simple solid golden circular eyes in a completely black void, like the FFT Dark Knight in image 2. No human face, nose, eyelids, eyebrows, pupils, whites or realistic eyes. Keep the helmet, gold trim, blue cloth behind it and framing unchanged. Coarse 48 by 56 pixel portrait, with eyes that remain clear at that resolution. Return only the same single pixel portrait with transparent background.",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/human-dark-knight/portrait-edit-target.png",
+          "sha256": "45dfbe01e815fdd8bc64c4515b948c58f22f3aa80554b228395060746d1bde4d"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/fft-dark-knight-user-reference.png",
+          "sha256": "8458c53526f638c7bd0f52f7ed5db2fdfdbfa3a6d0a99c6e6613b9bf9b3e6992"
+        }
+      ],
+      "paletteChoices": [
+        {
+          "job": 2,
+          "index": 0,
+          "words": [
+            1841,
+            992,
+            992,
+            209,
+            1299,
+            3381,
+            5526,
+            8631,
+            9754,
+            992,
+            992,
+            7266,
+            12448,
+            18656,
+            21792,
+            28032,
+            29088,
+            30148,
+            31208,
+            32298,
+            32462,
+            31504,
+            3174,
+            140,
+            3274,
+            6411,
+            7532,
+            9645,
+            9678,
+            12783,
+            14896,
+            20147,
+            23285,
+            24342,
+            25398,
+            26486,
+            29596,
+            15004,
+            16063,
+            16095,
+            23263,
+            20287,
+            24351,
+            25439,
+            26495,
+            27519,
+            28607,
+            32767
+          ]
+        },
+        {
+          "job": 4,
+          "index": 4,
+          "words": [
+            1841,
+            33,
+            5319,
+            7433,
+            9580,
+            2151,
+            3242,
+            6381,
+            7438,
+            8465,
+            9521,
+            9554,
+            12691,
+            13781,
+            14838,
+            12827,
+            15928,
+            17050,
+            21210,
+            19167,
+            23325,
+            24383,
+            26463,
+            25439,
+            29503,
+            27519,
+            28575,
+            28607,
+            29663,
+            30719,
+            32767,
+            32767,
+            7330,
+            11558,
+            14760,
+            14761,
+            13773,
+            15887,
+            20015,
+            21137,
+            24273,
+            24306,
+            25332,
+            26389,
+            27478,
+            30617,
+            32698,
+            32765
+          ]
+        },
+        {
+          "job": 7,
+          "index": 10,
+          "words": [
+            1841,
+            964,
+            9515,
+            13776,
+            15889,
+            24347,
+            25437,
+            2151,
+            3307,
+            4366,
+            7570,
+            7637,
+            9751,
+            13914,
+            16029,
+            19167,
+            27487,
+            27487,
+            27551,
+            27551,
+            27583,
+            28607,
+            29663,
+            31743,
+            32767,
+            5195,
+            5196,
+            4205,
+            4208,
+            4180,
+            4214,
+            3160,
+            1271,
+            1241,
+            215,
+            155,
+            156,
+            220,
+            222,
+            4445,
+            9694,
+            11774,
+            13886,
+            14942,
+            26459,
+            27551,
+            22299,
+            17048
+          ]
+        },
+        {
+          "job": 9,
+          "index": 14,
+          "words": [
+            1841,
+            108,
+            274,
+            308,
+            3514,
+            2523,
+            4603,
+            5660,
+            6749,
+            9950,
+            11007,
+            12063,
+            13151,
+            14175,
+            14175,
+            20415,
+            22495,
+            25599,
+            195,
+            2439,
+            4585,
+            5741,
+            4781,
+            8976,
+            12116,
+            11745,
+            15975,
+            21226,
+            28659,
+            10706,
+            13844,
+            20250,
+            24413,
+            24479,
+            25599,
+            14941,
+            19167,
+            23327,
+            25439,
+            27551,
+            29663,
+            3275,
+            2318,
+            3475,
+            8695,
+            14903,
+            18106,
+            23325
+          ]
+        }
+      ]
+    },
+    {
+      "job": 118,
+      "slug": "bangaa-viking",
+      "race": "bangaa",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Create the Bangaa Viking equipment HEAD icon, facing DIRECTLY toward the camera, symmetrically frontal like image 1. Use the exact 16 by 14 pixel layout of image 1, especially its eye row, eye spacing, head center and chin baseline. Image 2 is the character identity from its approved sprite; image 3 shows four original same-race icons; image 4 is its costume concept. Use the native colors of image 2. Image 5 shows the shared face pixels that stay fixed. Make the distinctive headgear recognizable around the common facial layout. Simple bold pixel clusters, no fine detail. Return ONE 16 by 14 logical-pixel head enlarged with hard square pixels, filling the SAME canvas as image 1. No body, lettering or border. Pale cream background. ",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-frontal-template.png",
+          "sha256": "f10b69d5d3432700e6eb277e3fc9302a154f33569d37fc0046b309be92620a42"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-viking/first-sprite-head.png",
+          "sha256": "ab233eb2312fef33d1a7a3561521c4c0049d7123d6cd44a622c94e273e735f0e"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-references.png",
+          "sha256": "c3a4bfee75a64e86a88e2321c5ab3178907b9fe5420987711eb33320f795a822"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/bangaa-viking.png",
+          "sha256": "ef4f762284585f7cf9887225fcafa51f2ab9319ad93ec4998d5947ea971db3ef"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-anchor-layer.png",
+          "sha256": "b9f8dd5f59c5d865e1edf6561d95aa76f8c0ba39fd4ba68ea6d22753724939be"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-013.png",
+            "sha256": "610c2c5d8a3fd99eff63ff4c3db6232dc209d25284bd20df134259b26b18d7cd"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-015.png",
+            "sha256": "75e6253e84a2ac59ab975f7ecfad03045404048733e2021749ccdb5d9784230b"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-016.png",
+            "sha256": "63b444629a35902c5be8c823dea7602075360d96bdf689762093ea0b2878ed73"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-018.png",
+            "sha256": "0fa959b2c775297f2488904d735ba7603d16ef616e60cace21d8cf59dba2e1aa"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          6,
+          7,
+          12,
+          14
+        ],
+        "coordinates": [
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            7,
+            9,
+            6
+          ],
+          [
+            9,
+            9,
+            7
+          ],
+          [
+            10,
+            9,
+            6
+          ],
+          [
+            8,
+            12,
+            7
+          ],
+          [
+            9,
+            12,
+            3
+          ],
+          [
+            10,
+            12,
+            7
+          ],
+          [
+            6,
+            13,
+            1
+          ],
+          [
+            8,
+            13,
+            7
+          ],
+          [
+            9,
+            13,
+            7
+          ],
+          [
+            10,
+            13,
+            6
+          ],
+          [
+            11,
+            13,
+            1
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-references.png",
+          "sha256": "c3a4bfee75a64e86a88e2321c5ab3178907b9fe5420987711eb33320f795a822"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-anchor-layer.png",
+          "sha256": "b9f8dd5f59c5d865e1edf6561d95aa76f8c0ba39fd4ba68ea6d22753724939be"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-frontal-template.png",
+          "sha256": "f10b69d5d3432700e6eb277e3fc9302a154f33569d37fc0046b309be92620a42"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      }
+    },
+    {
+      "job": 119,
+      "slug": "bangaa-dark-knight",
+      "race": "bangaa",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Create the Bangaa Dark Knight equipment HEAD icon, facing DIRECTLY toward the camera, symmetrically frontal like image 1. Use the exact 16 by 14 pixel layout of image 1, especially its eye row, eye spacing, head center and chin baseline. Image 2 is the character identity from its approved sprite; image 3 shows four original same-race icons; image 4 is its costume concept. Use the native colors of image 2. Image 5 shows the shared face pixels that stay fixed. Make the distinctive headgear recognizable around the common facial layout. Simple bold pixel clusters, no fine detail. Return ONE 16 by 14 logical-pixel head enlarged with hard square pixels, filling the SAME canvas as image 1. No body, lettering or border. Pale cream background. Closed helmet variant: use the same eye positions and frontal head center but hide all skin and nose. Two simple golden round eyes in black helmet darkness. Blue cloth emerges behind the helmet. Do not copy the exposed face pixels from image 5.",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-frontal-template.png",
+          "sha256": "f10b69d5d3432700e6eb277e3fc9302a154f33569d37fc0046b309be92620a42"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-dark-knight/first-sprite-head.png",
+          "sha256": "03602af2e736ac2841b45b6c95d6ad542350f85f86b115bb564ca8702abea67b"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-references.png",
+          "sha256": "c3a4bfee75a64e86a88e2321c5ab3178907b9fe5420987711eb33320f795a822"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/bangaa-dark-knight.png",
+          "sha256": "6b0ed68c312ed39afb824bc442074d7f3a136e4a6d938a10b735c200b385968a"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-anchor-layer.png",
+          "sha256": "b9f8dd5f59c5d865e1edf6561d95aa76f8c0ba39fd4ba68ea6d22753724939be"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "anchorMode": "helmet-landmarks-only",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-013.png",
+            "sha256": "610c2c5d8a3fd99eff63ff4c3db6232dc209d25284bd20df134259b26b18d7cd"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-015.png",
+            "sha256": "75e6253e84a2ac59ab975f7ecfad03045404048733e2021749ccdb5d9784230b"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-016.png",
+            "sha256": "63b444629a35902c5be8c823dea7602075360d96bdf689762093ea0b2878ed73"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-018.png",
+            "sha256": "0fa959b2c775297f2488904d735ba7603d16ef616e60cace21d8cf59dba2e1aa"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          6,
+          7,
+          12,
+          14
+        ],
+        "coordinates": [
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            7,
+            9,
+            6
+          ],
+          [
+            9,
+            9,
+            7
+          ],
+          [
+            10,
+            9,
+            6
+          ],
+          [
+            8,
+            12,
+            7
+          ],
+          [
+            9,
+            12,
+            3
+          ],
+          [
+            10,
+            12,
+            7
+          ],
+          [
+            6,
+            13,
+            1
+          ],
+          [
+            8,
+            13,
+            7
+          ],
+          [
+            9,
+            13,
+            7
+          ],
+          [
+            10,
+            13,
+            6
+          ],
+          [
+            11,
+            13,
+            1
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-references.png",
+          "sha256": "c3a4bfee75a64e86a88e2321c5ab3178907b9fe5420987711eb33320f795a822"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-anchor-layer.png",
+          "sha256": "b9f8dd5f59c5d865e1edf6561d95aa76f8c0ba39fd4ba68ea6d22753724939be"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-frontal-template.png",
+          "sha256": "f10b69d5d3432700e6eb277e3fc9302a154f33569d37fc0046b309be92620a42"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      }
+    },
+    {
+      "job": 120,
+      "slug": "nu-mou-chemist",
+      "race": "nu-mou",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Create the Nu Mou Chemist equipment HEAD icon, facing DIRECTLY toward the camera, symmetrically frontal like image 1. Use the exact 16 by 14 pixel layout of image 1, especially its eye row, eye spacing, head center and chin baseline. Image 2 is the character identity from its approved sprite; image 3 shows four original same-race icons; image 4 is its costume concept. Use the native colors of image 2. Image 5 shows the shared face pixels that stay fixed. Make the distinctive headgear recognizable around the common facial layout. Simple bold pixel clusters, no fine detail. Return ONE 16 by 14 logical-pixel head enlarged with hard square pixels, filling the SAME canvas as image 1. No body, lettering or border. Pale cream background. ",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-frontal-template.png",
+          "sha256": "2435759ab395ba8852be104f49160eee10d116abc9d106f30ff965755d3a4d52"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-chemist/first-sprite-head.png",
+          "sha256": "ecf3543ae48f267c20f088e3b116572b1f72b81cd1a365867184be01edcbc8a7"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-references.png",
+          "sha256": "589e83b3ae6d5ce4067b527f32d8ed3a87be6d3ba60f081383b2719a28ad9d68"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/nu-mou-chemist.png",
+          "sha256": "f7233c9e7573e11e8ce03d057a04df6de41e9a66e6413a9ab4a100c5ce9c4f44"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-anchor-layer.png",
+          "sha256": "0e968a6d12684926905864a82168fe02660df77a96629f55e3f4664d10b0c576"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-020.png",
+            "sha256": "59eb467d8da8b1e9639cfc1369ef85ef2e9ab65a8ba21034951e5c7f847d9152"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-022.png",
+            "sha256": "0fb63492a564a99b0aab8d7e83be21945cf50ea33be51e8b86d622dc3ebda847"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-023.png",
+            "sha256": "ddc4bba7005da0ff14df63555b23ae8e7832b6221ff08785f7e0a1ef9fdc0907"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-027.png",
+            "sha256": "be211d87ffc348b866c75bd877f446b41d722dc4099481d4105a42d7f8ebc46b"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          4,
+          7,
+          13,
+          14
+        ],
+        "coordinates": [
+          [
+            4,
+            7,
+            2
+          ],
+          [
+            5,
+            7,
+            12
+          ],
+          [
+            6,
+            7,
+            12
+          ],
+          [
+            7,
+            7,
+            12
+          ],
+          [
+            8,
+            7,
+            11
+          ],
+          [
+            9,
+            7,
+            12
+          ],
+          [
+            10,
+            7,
+            11
+          ],
+          [
+            11,
+            7,
+            11
+          ],
+          [
+            12,
+            7,
+            12
+          ],
+          [
+            4,
+            8,
+            2
+          ],
+          [
+            5,
+            8,
+            2
+          ],
+          [
+            6,
+            8,
+            1
+          ],
+          [
+            7,
+            8,
+            12
+          ],
+          [
+            8,
+            8,
+            12
+          ],
+          [
+            9,
+            8,
+            12
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            11,
+            8,
+            12
+          ],
+          [
+            12,
+            8,
+            12
+          ],
+          [
+            4,
+            9,
+            1
+          ],
+          [
+            5,
+            9,
+            4
+          ],
+          [
+            6,
+            9,
+            12
+          ],
+          [
+            7,
+            9,
+            11
+          ],
+          [
+            8,
+            9,
+            11
+          ],
+          [
+            9,
+            9,
+            11
+          ],
+          [
+            10,
+            9,
+            12
+          ],
+          [
+            11,
+            9,
+            4
+          ],
+          [
+            12,
+            9,
+            1
+          ],
+          [
+            4,
+            10,
+            4
+          ],
+          [
+            5,
+            10,
+            11
+          ],
+          [
+            6,
+            10,
+            11
+          ],
+          [
+            7,
+            10,
+            3
+          ],
+          [
+            8,
+            10,
+            3
+          ],
+          [
+            9,
+            10,
+            3
+          ],
+          [
+            10,
+            10,
+            11
+          ],
+          [
+            11,
+            10,
+            11
+          ],
+          [
+            12,
+            10,
+            2
+          ],
+          [
+            4,
+            11,
+            12
+          ],
+          [
+            5,
+            11,
+            12
+          ],
+          [
+            6,
+            11,
+            11
+          ],
+          [
+            7,
+            11,
+            3
+          ],
+          [
+            8,
+            11,
+            3
+          ],
+          [
+            9,
+            11,
+            3
+          ],
+          [
+            10,
+            11,
+            11
+          ],
+          [
+            11,
+            11,
+            11
+          ],
+          [
+            12,
+            11,
+            12
+          ],
+          [
+            4,
+            12,
+            4
+          ],
+          [
+            5,
+            12,
+            12
+          ],
+          [
+            6,
+            12,
+            12
+          ],
+          [
+            7,
+            12,
+            2
+          ],
+          [
+            8,
+            12,
+            11
+          ],
+          [
+            9,
+            12,
+            2
+          ],
+          [
+            10,
+            12,
+            12
+          ],
+          [
+            11,
+            12,
+            11
+          ],
+          [
+            12,
+            12,
+            12
+          ],
+          [
+            4,
+            13,
+            4
+          ],
+          [
+            5,
+            13,
+            2
+          ],
+          [
+            6,
+            13,
+            2
+          ],
+          [
+            7,
+            13,
+            12
+          ],
+          [
+            8,
+            13,
+            4
+          ],
+          [
+            9,
+            13,
+            12
+          ],
+          [
+            10,
+            13,
+            2
+          ],
+          [
+            11,
+            13,
+            12
+          ],
+          [
+            12,
+            13,
+            2
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-references.png",
+          "sha256": "589e83b3ae6d5ce4067b527f32d8ed3a87be6d3ba60f081383b2719a28ad9d68"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-anchor-layer.png",
+          "sha256": "0e968a6d12684926905864a82168fe02660df77a96629f55e3f4664d10b0c576"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-frontal-template.png",
+          "sha256": "2435759ab395ba8852be104f49160eee10d116abc9d106f30ff965755d3a4d52"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      }
+    },
+    {
+      "job": 121,
+      "slug": "nu-mou-geomancer",
+      "race": "nu-mou",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Create the Nu Mou Geomancer equipment HEAD icon, facing DIRECTLY toward the camera, symmetrically frontal like image 1. Use the exact 16 by 14 pixel layout of image 1, especially its eye row, eye spacing, head center and chin baseline. Image 2 is the character identity from its approved sprite; image 3 shows four original same-race icons; image 4 is its costume concept. Use the native colors of image 2. Image 5 shows the shared face pixels that stay fixed. Make the distinctive headgear recognizable around the common facial layout. Simple bold pixel clusters, no fine detail. Return ONE 16 by 14 logical-pixel head enlarged with hard square pixels, filling the SAME canvas as image 1. No body, lettering or border. Pale cream background. ",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-frontal-template.png",
+          "sha256": "2435759ab395ba8852be104f49160eee10d116abc9d106f30ff965755d3a4d52"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-geomancer/first-sprite-head.png",
+          "sha256": "6e136c203706d961ad39585f6387f0d42b12fc77d20361a474e708a2787d9ad8"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-references.png",
+          "sha256": "589e83b3ae6d5ce4067b527f32d8ed3a87be6d3ba60f081383b2719a28ad9d68"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/nu-mou-geomancer.png",
+          "sha256": "31265b713e0b323579456016cd1c25a31c1104a9b5d5f4636a02b4f3b5ad445f"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-anchor-layer.png",
+          "sha256": "0e968a6d12684926905864a82168fe02660df77a96629f55e3f4664d10b0c576"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-020.png",
+            "sha256": "59eb467d8da8b1e9639cfc1369ef85ef2e9ab65a8ba21034951e5c7f847d9152"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-022.png",
+            "sha256": "0fb63492a564a99b0aab8d7e83be21945cf50ea33be51e8b86d622dc3ebda847"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-023.png",
+            "sha256": "ddc4bba7005da0ff14df63555b23ae8e7832b6221ff08785f7e0a1ef9fdc0907"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-027.png",
+            "sha256": "be211d87ffc348b866c75bd877f446b41d722dc4099481d4105a42d7f8ebc46b"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          4,
+          7,
+          13,
+          14
+        ],
+        "coordinates": [
+          [
+            4,
+            7,
+            2
+          ],
+          [
+            5,
+            7,
+            12
+          ],
+          [
+            6,
+            7,
+            12
+          ],
+          [
+            7,
+            7,
+            12
+          ],
+          [
+            8,
+            7,
+            11
+          ],
+          [
+            9,
+            7,
+            12
+          ],
+          [
+            10,
+            7,
+            11
+          ],
+          [
+            11,
+            7,
+            11
+          ],
+          [
+            12,
+            7,
+            12
+          ],
+          [
+            4,
+            8,
+            2
+          ],
+          [
+            5,
+            8,
+            2
+          ],
+          [
+            6,
+            8,
+            1
+          ],
+          [
+            7,
+            8,
+            12
+          ],
+          [
+            8,
+            8,
+            12
+          ],
+          [
+            9,
+            8,
+            12
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            11,
+            8,
+            12
+          ],
+          [
+            12,
+            8,
+            12
+          ],
+          [
+            4,
+            9,
+            1
+          ],
+          [
+            5,
+            9,
+            4
+          ],
+          [
+            6,
+            9,
+            12
+          ],
+          [
+            7,
+            9,
+            11
+          ],
+          [
+            8,
+            9,
+            11
+          ],
+          [
+            9,
+            9,
+            11
+          ],
+          [
+            10,
+            9,
+            12
+          ],
+          [
+            11,
+            9,
+            4
+          ],
+          [
+            12,
+            9,
+            1
+          ],
+          [
+            4,
+            10,
+            4
+          ],
+          [
+            5,
+            10,
+            11
+          ],
+          [
+            6,
+            10,
+            11
+          ],
+          [
+            7,
+            10,
+            3
+          ],
+          [
+            8,
+            10,
+            3
+          ],
+          [
+            9,
+            10,
+            3
+          ],
+          [
+            10,
+            10,
+            11
+          ],
+          [
+            11,
+            10,
+            11
+          ],
+          [
+            12,
+            10,
+            2
+          ],
+          [
+            4,
+            11,
+            12
+          ],
+          [
+            5,
+            11,
+            12
+          ],
+          [
+            6,
+            11,
+            11
+          ],
+          [
+            7,
+            11,
+            3
+          ],
+          [
+            8,
+            11,
+            3
+          ],
+          [
+            9,
+            11,
+            3
+          ],
+          [
+            10,
+            11,
+            11
+          ],
+          [
+            11,
+            11,
+            11
+          ],
+          [
+            12,
+            11,
+            12
+          ],
+          [
+            4,
+            12,
+            4
+          ],
+          [
+            5,
+            12,
+            12
+          ],
+          [
+            6,
+            12,
+            12
+          ],
+          [
+            7,
+            12,
+            2
+          ],
+          [
+            8,
+            12,
+            11
+          ],
+          [
+            9,
+            12,
+            2
+          ],
+          [
+            10,
+            12,
+            12
+          ],
+          [
+            11,
+            12,
+            11
+          ],
+          [
+            12,
+            12,
+            12
+          ],
+          [
+            4,
+            13,
+            4
+          ],
+          [
+            5,
+            13,
+            2
+          ],
+          [
+            6,
+            13,
+            2
+          ],
+          [
+            7,
+            13,
+            12
+          ],
+          [
+            8,
+            13,
+            4
+          ],
+          [
+            9,
+            13,
+            12
+          ],
+          [
+            10,
+            13,
+            2
+          ],
+          [
+            11,
+            13,
+            12
+          ],
+          [
+            12,
+            13,
+            2
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-references.png",
+          "sha256": "589e83b3ae6d5ce4067b527f32d8ed3a87be6d3ba60f081383b2719a28ad9d68"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-anchor-layer.png",
+          "sha256": "0e968a6d12684926905864a82168fe02660df77a96629f55e3f4664d10b0c576"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-frontal-template.png",
+          "sha256": "2435759ab395ba8852be104f49160eee10d116abc9d106f30ff965755d3a4d52"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      }
+    },
+    {
+      "job": 122,
+      "slug": "moogle-chemist",
+      "race": "moogle",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Create the Moogle Chemist equipment HEAD icon, facing DIRECTLY toward the camera, symmetrically frontal like image 1. Use the exact 16 by 14 pixel layout of image 1, especially its eye row, eye spacing, head center and chin baseline. Image 2 is the character identity from its approved sprite; image 3 shows four original same-race icons; image 4 is its costume concept. Use the native colors of image 2. Image 5 shows the shared face pixels that stay fixed. Make the distinctive headgear recognizable around the common facial layout. Simple bold pixel clusters, no fine detail. Return ONE 16 by 14 logical-pixel head enlarged with hard square pixels, filling the SAME canvas as image 1. No body, lettering or border. Pale cream background. ",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-frontal-template.png",
+          "sha256": "5e450864da6160452361520aec86f43bbbc8907488dff7e7dd303355b4b0ffab"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-chemist/first-sprite-head.png",
+          "sha256": "f87c1ea2f903b2dd29046ca02808127c6b0cb6676c8fd76b937063cc7d16230f"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-references.png",
+          "sha256": "a7967a75c601307823d61dea5e883032ef965e9878e41007a2a1948e63950982"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/moogle-chemist.png",
+          "sha256": "fe8c11b29aca62d39e35588c9648669e31ddaaddaffa104764cd78c12981e0da"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-anchor-layer.png",
+          "sha256": "1a11325e3a0b12552b540b078ceec3e44a2deecc781739fb9545def114788f0b"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-037.png",
+            "sha256": "f564c59b19119af5d18707afcd3731ac603f2628066f5f821b6cd172fdc73d65"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-036.png",
+            "sha256": "0c5b1ed8cd6b0493faeb5bf39935a3f2271b174774fbd9ccd0fd52d257240b7c"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-039.png",
+            "sha256": "cbaaf1f7c1be7c0d6087493778a5ef3ba5bfefba9b5dd653b029c416f69edc16"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-041.png",
+            "sha256": "b49a323d7086590760ec3b1ce60981e29ec6cf881370bd25c7eb10ac67f19e9b"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          5,
+          8,
+          13,
+          13
+        ],
+        "coordinates": [
+          [
+            6,
+            8,
+            1
+          ],
+          [
+            8,
+            8,
+            11
+          ],
+          [
+            9,
+            8,
+            11
+          ],
+          [
+            11,
+            8,
+            1
+          ],
+          [
+            5,
+            9,
+            11
+          ],
+          [
+            6,
+            9,
+            1
+          ],
+          [
+            7,
+            9,
+            12
+          ],
+          [
+            8,
+            9,
+            5
+          ],
+          [
+            9,
+            9,
+            11
+          ],
+          [
+            10,
+            9,
+            11
+          ],
+          [
+            11,
+            9,
+            1
+          ],
+          [
+            5,
+            10,
+            11
+          ],
+          [
+            6,
+            10,
+            11
+          ],
+          [
+            7,
+            10,
+            11
+          ],
+          [
+            8,
+            10,
+            6
+          ],
+          [
+            9,
+            10,
+            5
+          ],
+          [
+            10,
+            10,
+            11
+          ],
+          [
+            12,
+            10,
+            3
+          ],
+          [
+            5,
+            11,
+            12
+          ],
+          [
+            6,
+            11,
+            11
+          ],
+          [
+            7,
+            11,
+            11
+          ],
+          [
+            8,
+            11,
+            5
+          ],
+          [
+            9,
+            11,
+            5
+          ],
+          [
+            10,
+            11,
+            11
+          ],
+          [
+            11,
+            11,
+            11
+          ],
+          [
+            12,
+            11,
+            11
+          ],
+          [
+            6,
+            12,
+            12
+          ],
+          [
+            7,
+            12,
+            12
+          ],
+          [
+            8,
+            12,
+            12
+          ],
+          [
+            9,
+            12,
+            11
+          ],
+          [
+            10,
+            12,
+            11
+          ],
+          [
+            11,
+            12,
+            12
+          ],
+          [
+            12,
+            12,
+            2
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-references.png",
+          "sha256": "a7967a75c601307823d61dea5e883032ef965e9878e41007a2a1948e63950982"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-anchor-layer.png",
+          "sha256": "1a11325e3a0b12552b540b078ceec3e44a2deecc781739fb9545def114788f0b"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-frontal-template.png",
+          "sha256": "5e450864da6160452361520aec86f43bbbc8907488dff7e7dd303355b4b0ffab"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      }
+    },
+    {
+      "job": 123,
+      "slug": "moogle-bard",
+      "race": "moogle",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Create the Moogle Bard equipment HEAD icon, facing DIRECTLY toward the camera, symmetrically frontal like image 1. Use the exact 16 by 14 pixel layout of image 1, especially its eye row, eye spacing, head center and chin baseline. Image 2 is the character identity from its approved sprite; image 3 shows four original same-race icons; image 4 is its costume concept. Use the native colors of image 2. Image 5 shows the shared face pixels that stay fixed. Make the distinctive headgear recognizable around the common facial layout. Simple bold pixel clusters, no fine detail. Return ONE 16 by 14 logical-pixel head enlarged with hard square pixels, filling the SAME canvas as image 1. No body, lettering or border. Pale cream background. ",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-frontal-template.png",
+          "sha256": "5e450864da6160452361520aec86f43bbbc8907488dff7e7dd303355b4b0ffab"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-bard/first-sprite-head.png",
+          "sha256": "37e12180ab63c5e1e61e19d09695300a67c034587f36681e22a6510545f35c5d"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-references.png",
+          "sha256": "a7967a75c601307823d61dea5e883032ef965e9878e41007a2a1948e63950982"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/moogle-bard.png",
+          "sha256": "92c3771c2cbb2ad04209fed5cda02528ebdbabceff7d08baea8847a1fb8ee3cb"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-anchor-layer.png",
+          "sha256": "1a11325e3a0b12552b540b078ceec3e44a2deecc781739fb9545def114788f0b"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-037.png",
+            "sha256": "f564c59b19119af5d18707afcd3731ac603f2628066f5f821b6cd172fdc73d65"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-036.png",
+            "sha256": "0c5b1ed8cd6b0493faeb5bf39935a3f2271b174774fbd9ccd0fd52d257240b7c"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-039.png",
+            "sha256": "cbaaf1f7c1be7c0d6087493778a5ef3ba5bfefba9b5dd653b029c416f69edc16"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-041.png",
+            "sha256": "b49a323d7086590760ec3b1ce60981e29ec6cf881370bd25c7eb10ac67f19e9b"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          5,
+          8,
+          13,
+          13
+        ],
+        "coordinates": [
+          [
+            6,
+            8,
+            1
+          ],
+          [
+            8,
+            8,
+            11
+          ],
+          [
+            9,
+            8,
+            11
+          ],
+          [
+            11,
+            8,
+            1
+          ],
+          [
+            5,
+            9,
+            11
+          ],
+          [
+            6,
+            9,
+            1
+          ],
+          [
+            7,
+            9,
+            12
+          ],
+          [
+            8,
+            9,
+            5
+          ],
+          [
+            9,
+            9,
+            11
+          ],
+          [
+            10,
+            9,
+            11
+          ],
+          [
+            11,
+            9,
+            1
+          ],
+          [
+            5,
+            10,
+            11
+          ],
+          [
+            6,
+            10,
+            11
+          ],
+          [
+            7,
+            10,
+            11
+          ],
+          [
+            8,
+            10,
+            6
+          ],
+          [
+            9,
+            10,
+            5
+          ],
+          [
+            10,
+            10,
+            11
+          ],
+          [
+            12,
+            10,
+            3
+          ],
+          [
+            5,
+            11,
+            12
+          ],
+          [
+            6,
+            11,
+            11
+          ],
+          [
+            7,
+            11,
+            11
+          ],
+          [
+            8,
+            11,
+            5
+          ],
+          [
+            9,
+            11,
+            5
+          ],
+          [
+            10,
+            11,
+            11
+          ],
+          [
+            11,
+            11,
+            11
+          ],
+          [
+            12,
+            11,
+            11
+          ],
+          [
+            6,
+            12,
+            12
+          ],
+          [
+            7,
+            12,
+            12
+          ],
+          [
+            8,
+            12,
+            12
+          ],
+          [
+            9,
+            12,
+            11
+          ],
+          [
+            10,
+            12,
+            11
+          ],
+          [
+            11,
+            12,
+            12
+          ],
+          [
+            12,
+            12,
+            2
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-references.png",
+          "sha256": "a7967a75c601307823d61dea5e883032ef965e9878e41007a2a1948e63950982"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-anchor-layer.png",
+          "sha256": "1a11325e3a0b12552b540b078ceec3e44a2deecc781739fb9545def114788f0b"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/moogle-frontal-template.png",
+          "sha256": "5e450864da6160452361520aec86f43bbbc8907488dff7e7dd303355b4b0ffab"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      }
+    },
+    {
+      "job": 124,
+      "slug": "viera-dancer",
+      "race": "viera",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Create the Viera Dancer equipment HEAD icon, facing DIRECTLY toward the camera, symmetrically frontal like image 1. Use the exact 16 by 14 pixel layout of image 1, especially its eye row, eye spacing, head center and chin baseline. Image 2 is the character identity from its approved sprite; image 3 shows four original same-race icons; image 4 is its costume concept. Use the native colors of image 2. Image 5 shows the shared face pixels that stay fixed. Make the distinctive headgear recognizable around the common facial layout. Simple bold pixel clusters, no fine detail. Return ONE 16 by 14 logical-pixel head enlarged with hard square pixels, filling the SAME canvas as image 1. No body, lettering or border. Pale cream background. ",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-frontal-template.png",
+          "sha256": "624510888c5b2993100b06cefed30b6c546e5e11b58ef8788bf561d20d88c72b"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-dancer/first-sprite-head.png",
+          "sha256": "f9aaf076d991bcdec83d6f1a206c787da96ced1918d7a11e8aa28f351f7f86b1"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-references.png",
+          "sha256": "d30a3b3741a527230e5500324b956ddac1c1f2d8063c4619acc201134ef5aa43"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-dancer.png",
+          "sha256": "38f1c29837fe0e540e4f751e34fa1654ce0fca57da763eca4d2ccf9723dc8b5e"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-anchor-layer.png",
+          "sha256": "49bb1aed4d9403a8d112edbf107955bfaf15ab6afcd0718666b83c73c39826d8"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-028.png",
+            "sha256": "e4410e086f6b799d4255e687b0e03a06717d602c538c3813eb4ab353b545bfca"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-029.png",
+            "sha256": "ba3266f1a2c6133f7e795ab2828278ea159368809136a3502c1a1d1c5e3ade2c"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-031.png",
+            "sha256": "32c97861894ce2448139085e1d11e756aa04a347f902e8f68ef1c2c79cc1c599"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-033.png",
+            "sha256": "6927540bad8736bfe2c2608a17bced108ffcdbde408e575167ff2d00a1661b8f"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          7,
+          6,
+          11,
+          10
+        ],
+        "coordinates": [
+          [
+            7,
+            6,
+            4
+          ],
+          [
+            8,
+            6,
+            6
+          ],
+          [
+            9,
+            6,
+            6
+          ],
+          [
+            10,
+            6,
+            4
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            8,
+            7,
+            6
+          ],
+          [
+            9,
+            7,
+            6
+          ],
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            9,
+            9,
+            11
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-references.png",
+          "sha256": "d30a3b3741a527230e5500324b956ddac1c1f2d8063c4619acc201134ef5aa43"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-anchor-layer.png",
+          "sha256": "49bb1aed4d9403a8d112edbf107955bfaf15ab6afcd0718666b83c73c39826d8"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-frontal-template.png",
+          "sha256": "624510888c5b2993100b06cefed30b6c546e5e11b58ef8788bf561d20d88c72b"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      }
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "race": "viera",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Create the Viera Mystic Knight equipment HEAD icon, facing DIRECTLY toward the camera, symmetrically frontal like image 1. Use the exact 16 by 14 pixel layout of image 1, especially its eye row, eye spacing, head center and chin baseline. Image 2 is the character identity from its approved sprite; image 3 shows four original same-race icons; image 4 is its costume concept. Use the native colors of image 2. Image 5 shows the shared face pixels that stay fixed. Make the distinctive headgear recognizable around the common facial layout. Simple bold pixel clusters, no fine detail. Return ONE 16 by 14 logical-pixel head enlarged with hard square pixels, filling the SAME canvas as image 1. No body, lettering or border. Pale cream background. ",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-frontal-template.png",
+          "sha256": "624510888c5b2993100b06cefed30b6c546e5e11b58ef8788bf561d20d88c72b"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-mystic-knight/first-sprite-head.png",
+          "sha256": "c3d88d11b7d8a27c9b30f067d87d60119c5ccce129ce78d3f56fb6eab2bfb957"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-references.png",
+          "sha256": "d30a3b3741a527230e5500324b956ddac1c1f2d8063c4619acc201134ef5aa43"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-mystic-knight.png",
+          "sha256": "791865c5d5065c1b8a5348b8f9bbcd69bd3f4a0ccc104a7fbc8466e21b919a5e"
+        },
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-anchor-layer.png",
+          "sha256": "49bb1aed4d9403a8d112edbf107955bfaf15ab6afcd0718666b83c73c39826d8"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "anchorMode": "exact-shared-native-pixels",
+      "anchors": {
+        "references": [
+          {
+            "path": "build/art/native-reference/ui/job-028.png",
+            "sha256": "e4410e086f6b799d4255e687b0e03a06717d602c538c3813eb4ab353b545bfca"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-029.png",
+            "sha256": "ba3266f1a2c6133f7e795ab2828278ea159368809136a3502c1a1d1c5e3ade2c"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-031.png",
+            "sha256": "32c97861894ce2448139085e1d11e756aa04a347f902e8f68ef1c2c79cc1c599"
+          },
+          {
+            "path": "build/art/native-reference/ui/job-033.png",
+            "sha256": "6927540bad8736bfe2c2608a17bced108ffcdbde408e575167ff2d00a1661b8f"
+          }
+        ],
+        "crop": [
+          1,
+          1,
+          17,
+          15
+        ],
+        "faceRegion": [
+          7,
+          6,
+          11,
+          10
+        ],
+        "coordinates": [
+          [
+            7,
+            6,
+            4
+          ],
+          [
+            8,
+            6,
+            6
+          ],
+          [
+            9,
+            6,
+            6
+          ],
+          [
+            10,
+            6,
+            4
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            8,
+            7,
+            6
+          ],
+          [
+            9,
+            7,
+            6
+          ],
+          [
+            10,
+            7,
+            1
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            10,
+            8,
+            1
+          ],
+          [
+            9,
+            9,
+            11
+          ]
+        ],
+        "referenceStrip": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-references.png",
+          "sha256": "d30a3b3741a527230e5500324b956ddac1c1f2d8063c4619acc201134ef5aa43"
+        },
+        "layer": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-anchor-layer.png",
+          "sha256": "49bb1aed4d9403a8d112edbf107955bfaf15ab6afcd0718666b83c73c39826d8"
+        },
+        "frontalTemplate": {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-frontal-template.png",
+          "sha256": "624510888c5b2993100b06cefed30b6c546e5e11b58ef8788bf561d20d88c72b"
+        },
+        "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+      }
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "kind": "portrait",
+      "nativeSize": [
+        48,
+        56
+      ],
+      "prompt": "Repair the face in image 1, the Viera Mystic Knight portrait. Use the original Viera portraits in images 2 through 4 as the facial anatomy and pixel-cluster reference. Image 5 is the character concept. A clean coherent face with two readable eyes, a small nose and a CLEAR small dark mouth separated from the chin. Keep the long ears, white hair, armor, blue cloth, identity and framing unchanged. Design directly at 48 by 56 pixels so the mouth and eyes survive at native size. No tiny subpixel details. Return only the single portrait with transparent background.",
+      "references": [
+        {
+          "path": "build/art/anchor-ui-v4-2026-09-20/viera-mystic-knight/portrait-edit-target.png",
+          "sha256": "17237b5f96a9b3968cd552de84eb96b14edcdc750f3f3625225aa625de2da383"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-28-portrait.png",
+          "sha256": "f307cb39192f5a873dbebcf7ad2eea5cb93831ddd4f0ba3e0bfc49b4e71426b5"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-29-portrait.png",
+          "sha256": "08d40b2850aa3594001fc2251d403eace4f8e351faab8c15b1c86902021fb7b2"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\original-31-portrait.png",
+          "sha256": "71e440a50a9c8803f8353ba8a6a0fd30eae5526f091462c6a76a5998b390fe9c"
+        },
+        {
+          "path": "build/art/illustrated-class-concepts-v2-2026-09-19/viera-mystic-knight.png",
+          "sha256": "791865c5d5065c1b8a5348b8f9bbcd69bd3f4a0ccc104a7fbc8466e21b919a5e"
+        }
+      ],
+      "paletteChoices": [
+        {
+          "job": 28,
+          "index": 52,
+          "words": [
+            1841,
+            11533,
+            16950,
+            20250,
+            26527,
+            27583,
+            29663,
+            32767,
+            9,
+            6284,
+            12557,
+            12654,
+            14767,
+            17905,
+            16848,
+            15859,
+            10640,
+            8592,
+            10708,
+            13880,
+            13880,
+            7607,
+            10806,
+            12856,
+            15001,
+            17116,
+            18204,
+            20252,
+            24447,
+            20222,
+            20191,
+            26335,
+            14735,
+            17905,
+            16621,
+            24017,
+            25142,
+            30359,
+            29336,
+            31448,
+            31482,
+            32571,
+            32636,
+            32703,
+            32702,
+            32766,
+            32767,
+            0
+          ]
+        },
+        {
+          "job": 29,
+          "index": 54,
+          "words": [
+            1841,
+            2215,
+            6411,
+            7534,
+            10672,
+            12755,
+            13812,
+            15925,
+            18071,
+            19161,
+            21242,
+            22299,
+            23356,
+            25471,
+            26591,
+            32767,
+            0,
+            3270,
+            7463,
+            9641,
+            10702,
+            12809,
+            14924,
+            14957,
+            16013,
+            17071,
+            18128,
+            21266,
+            22324,
+            23381,
+            24438,
+            27577,
+            98,
+            3299,
+            6440,
+            8619,
+            10732,
+            14831,
+            15920,
+            18035,
+            6467,
+            7556,
+            13767,
+            15943,
+            10829,
+            13967,
+            15025,
+            19157
+          ]
+        },
+        {
+          "job": 31,
+          "index": 58,
+          "words": [
+            1841,
+            7463,
+            4328,
+            7470,
+            9616,
+            10674,
+            13780,
+            14869,
+            17048,
+            17049,
+            18105,
+            19162,
+            22300,
+            20252,
+            24413,
+            26495,
+            27551,
+            30687,
+            14762,
+            16812,
+            19950,
+            21999,
+            22128,
+            23153,
+            27316,
+            27382,
+            32536,
+            29465,
+            32602,
+            32635,
+            32668,
+            32700,
+            32733,
+            32766,
+            5222,
+            8427,
+            9518,
+            9552,
+            8511,
+            22030,
+            32760,
+            22267,
+            29460,
+            25437,
+            28607,
+            30687,
+            31743,
+            32767
+          ]
+        },
+        {
+          "job": 33,
+          "index": 62,
+          "words": [
+            1841,
+            11561,
+            14701,
+            18864,
+            22069,
+            25239,
+            27321,
+            28442,
+            29500,
+            30589,
+            30623,
+            31647,
+            31679,
+            27516,
+            29629,
+            32766,
+            104,
+            112,
+            2189,
+            3312,
+            6449,
+            4436,
+            7606,
+            5656,
+            5788,
+            2782,
+            2815,
+            5919,
+            6975,
+            10079,
+            13215,
+            16319,
+            18399,
+            20479,
+            6443,
+            9648,
+            12787,
+            14902,
+            16024,
+            17081,
+            18140,
+            20252,
+            23391,
+            24447,
+            25503,
+            27583,
+            28607,
+            30687
+          ]
+        }
+      ]
+    }
+  ],
+  "contracts": {
+    "human": {
+      "references": [
+        {
+          "path": "build/art/native-reference/ui/job-002.png",
+          "sha256": "8f14b229588c916bacc9261c479ba18b12df08d2fc03ba369c8bc950ed5608ce"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-004.png",
+          "sha256": "6c72efdcbcef959203f6df36a0019ddb8016d1ffc5a2b712d9d6daff09b2a0b2"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-007.png",
+          "sha256": "1092602e0c32ae7a814c48239e112eb2220b61fc24acac13c122732a15038b6f"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-009.png",
+          "sha256": "df79c341432eaf68baa93ab408dc7e0737151ca6af1a9b019aa3cd8592a77dd8"
+        }
+      ],
+      "crop": [
+        1,
+        1,
+        17,
+        15
+      ],
+      "faceRegion": [
+        6,
+        7,
+        12,
+        11
+      ],
+      "coordinates": [
+        [
+          6,
+          7,
+          11
+        ],
+        [
+          7,
+          7,
+          1
+        ],
+        [
+          10,
+          7,
+          1
+        ],
+        [
+          11,
+          7,
+          11
+        ],
+        [
+          6,
+          8,
+          3
+        ],
+        [
+          7,
+          8,
+          1
+        ],
+        [
+          10,
+          8,
+          1
+        ],
+        [
+          11,
+          8,
+          3
+        ],
+        [
+          6,
+          9,
+          7
+        ],
+        [
+          7,
+          9,
+          7
+        ],
+        [
+          8,
+          9,
+          7
+        ],
+        [
+          9,
+          9,
+          7
+        ],
+        [
+          10,
+          9,
+          7
+        ],
+        [
+          11,
+          9,
+          7
+        ],
+        [
+          7,
+          10,
+          7
+        ],
+        [
+          8,
+          10,
+          7
+        ],
+        [
+          9,
+          10,
+          7
+        ],
+        [
+          10,
+          10,
+          7
+        ],
+        [
+          11,
+          10,
+          6
+        ]
+      ],
+      "referenceStrip": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/human-references.png",
+        "sha256": "c53d0c962350cb196451ef45f3f884f5be43f99f0db8c6226095c745da1a71e2"
+      },
+      "layer": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/human-anchor-layer.png",
+        "sha256": "fdf4fd8b2003394f821cbfe4d4c56a07bfc4f1ef177e879135cb1f3a7908b7db"
+      },
+      "frontalTemplate": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/human-frontal-template.png",
+        "sha256": "37b54582089594af892b6c1172a0a577b348ffc7e73537431c6f649b220d6b6f"
+      },
+      "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+    },
+    "bangaa": {
+      "references": [
+        {
+          "path": "build/art/native-reference/ui/job-013.png",
+          "sha256": "610c2c5d8a3fd99eff63ff4c3db6232dc209d25284bd20df134259b26b18d7cd"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-015.png",
+          "sha256": "75e6253e84a2ac59ab975f7ecfad03045404048733e2021749ccdb5d9784230b"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-016.png",
+          "sha256": "63b444629a35902c5be8c823dea7602075360d96bdf689762093ea0b2878ed73"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-018.png",
+          "sha256": "0fa959b2c775297f2488904d735ba7603d16ef616e60cace21d8cf59dba2e1aa"
+        }
+      ],
+      "crop": [
+        1,
+        1,
+        17,
+        15
+      ],
+      "faceRegion": [
+        6,
+        7,
+        12,
+        14
+      ],
+      "coordinates": [
+        [
+          10,
+          7,
+          1
+        ],
+        [
+          7,
+          8,
+          1
+        ],
+        [
+          10,
+          8,
+          1
+        ],
+        [
+          7,
+          9,
+          6
+        ],
+        [
+          9,
+          9,
+          7
+        ],
+        [
+          10,
+          9,
+          6
+        ],
+        [
+          8,
+          12,
+          7
+        ],
+        [
+          9,
+          12,
+          3
+        ],
+        [
+          10,
+          12,
+          7
+        ],
+        [
+          6,
+          13,
+          1
+        ],
+        [
+          8,
+          13,
+          7
+        ],
+        [
+          9,
+          13,
+          7
+        ],
+        [
+          10,
+          13,
+          6
+        ],
+        [
+          11,
+          13,
+          1
+        ]
+      ],
+      "referenceStrip": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-references.png",
+        "sha256": "c3a4bfee75a64e86a88e2321c5ab3178907b9fe5420987711eb33320f795a822"
+      },
+      "layer": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-anchor-layer.png",
+        "sha256": "b9f8dd5f59c5d865e1edf6561d95aa76f8c0ba39fd4ba68ea6d22753724939be"
+      },
+      "frontalTemplate": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/bangaa-frontal-template.png",
+        "sha256": "f10b69d5d3432700e6eb277e3fc9302a154f33569d37fc0046b309be92620a42"
+      },
+      "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+    },
+    "nu-mou": {
+      "references": [
+        {
+          "path": "build/art/native-reference/ui/job-020.png",
+          "sha256": "59eb467d8da8b1e9639cfc1369ef85ef2e9ab65a8ba21034951e5c7f847d9152"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-022.png",
+          "sha256": "0fb63492a564a99b0aab8d7e83be21945cf50ea33be51e8b86d622dc3ebda847"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-023.png",
+          "sha256": "ddc4bba7005da0ff14df63555b23ae8e7832b6221ff08785f7e0a1ef9fdc0907"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-027.png",
+          "sha256": "be211d87ffc348b866c75bd877f446b41d722dc4099481d4105a42d7f8ebc46b"
+        }
+      ],
+      "crop": [
+        1,
+        1,
+        17,
+        15
+      ],
+      "faceRegion": [
+        4,
+        7,
+        13,
+        14
+      ],
+      "coordinates": [
+        [
+          4,
+          7,
+          2
+        ],
+        [
+          5,
+          7,
+          12
+        ],
+        [
+          6,
+          7,
+          12
+        ],
+        [
+          7,
+          7,
+          12
+        ],
+        [
+          8,
+          7,
+          11
+        ],
+        [
+          9,
+          7,
+          12
+        ],
+        [
+          10,
+          7,
+          11
+        ],
+        [
+          11,
+          7,
+          11
+        ],
+        [
+          12,
+          7,
+          12
+        ],
+        [
+          4,
+          8,
+          2
+        ],
+        [
+          5,
+          8,
+          2
+        ],
+        [
+          6,
+          8,
+          1
+        ],
+        [
+          7,
+          8,
+          12
+        ],
+        [
+          8,
+          8,
+          12
+        ],
+        [
+          9,
+          8,
+          12
+        ],
+        [
+          10,
+          8,
+          1
+        ],
+        [
+          11,
+          8,
+          12
+        ],
+        [
+          12,
+          8,
+          12
+        ],
+        [
+          4,
+          9,
+          1
+        ],
+        [
+          5,
+          9,
+          4
+        ],
+        [
+          6,
+          9,
+          12
+        ],
+        [
+          7,
+          9,
+          11
+        ],
+        [
+          8,
+          9,
+          11
+        ],
+        [
+          9,
+          9,
+          11
+        ],
+        [
+          10,
+          9,
+          12
+        ],
+        [
+          11,
+          9,
+          4
+        ],
+        [
+          12,
+          9,
+          1
+        ],
+        [
+          4,
+          10,
+          4
+        ],
+        [
+          5,
+          10,
+          11
+        ],
+        [
+          6,
+          10,
+          11
+        ],
+        [
+          7,
+          10,
+          3
+        ],
+        [
+          8,
+          10,
+          3
+        ],
+        [
+          9,
+          10,
+          3
+        ],
+        [
+          10,
+          10,
+          11
+        ],
+        [
+          11,
+          10,
+          11
+        ],
+        [
+          12,
+          10,
+          2
+        ],
+        [
+          4,
+          11,
+          12
+        ],
+        [
+          5,
+          11,
+          12
+        ],
+        [
+          6,
+          11,
+          11
+        ],
+        [
+          7,
+          11,
+          3
+        ],
+        [
+          8,
+          11,
+          3
+        ],
+        [
+          9,
+          11,
+          3
+        ],
+        [
+          10,
+          11,
+          11
+        ],
+        [
+          11,
+          11,
+          11
+        ],
+        [
+          12,
+          11,
+          12
+        ],
+        [
+          4,
+          12,
+          4
+        ],
+        [
+          5,
+          12,
+          12
+        ],
+        [
+          6,
+          12,
+          12
+        ],
+        [
+          7,
+          12,
+          2
+        ],
+        [
+          8,
+          12,
+          11
+        ],
+        [
+          9,
+          12,
+          2
+        ],
+        [
+          10,
+          12,
+          12
+        ],
+        [
+          11,
+          12,
+          11
+        ],
+        [
+          12,
+          12,
+          12
+        ],
+        [
+          4,
+          13,
+          4
+        ],
+        [
+          5,
+          13,
+          2
+        ],
+        [
+          6,
+          13,
+          2
+        ],
+        [
+          7,
+          13,
+          12
+        ],
+        [
+          8,
+          13,
+          4
+        ],
+        [
+          9,
+          13,
+          12
+        ],
+        [
+          10,
+          13,
+          2
+        ],
+        [
+          11,
+          13,
+          12
+        ],
+        [
+          12,
+          13,
+          2
+        ]
+      ],
+      "referenceStrip": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-references.png",
+        "sha256": "589e83b3ae6d5ce4067b527f32d8ed3a87be6d3ba60f081383b2719a28ad9d68"
+      },
+      "layer": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-anchor-layer.png",
+        "sha256": "0e968a6d12684926905864a82168fe02660df77a96629f55e3f4664d10b0c576"
+      },
+      "frontalTemplate": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/nu-mou-frontal-template.png",
+        "sha256": "2435759ab395ba8852be104f49160eee10d116abc9d106f30ff965755d3a4d52"
+      },
+      "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+    },
+    "moogle": {
+      "references": [
+        {
+          "path": "build/art/native-reference/ui/job-037.png",
+          "sha256": "f564c59b19119af5d18707afcd3731ac603f2628066f5f821b6cd172fdc73d65"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-036.png",
+          "sha256": "0c5b1ed8cd6b0493faeb5bf39935a3f2271b174774fbd9ccd0fd52d257240b7c"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-039.png",
+          "sha256": "cbaaf1f7c1be7c0d6087493778a5ef3ba5bfefba9b5dd653b029c416f69edc16"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-041.png",
+          "sha256": "b49a323d7086590760ec3b1ce60981e29ec6cf881370bd25c7eb10ac67f19e9b"
+        }
+      ],
+      "crop": [
+        1,
+        1,
+        17,
+        15
+      ],
+      "faceRegion": [
+        5,
+        8,
+        13,
+        13
+      ],
+      "coordinates": [
+        [
+          6,
+          8,
+          1
+        ],
+        [
+          8,
+          8,
+          11
+        ],
+        [
+          9,
+          8,
+          11
+        ],
+        [
+          11,
+          8,
+          1
+        ],
+        [
+          5,
+          9,
+          11
+        ],
+        [
+          6,
+          9,
+          1
+        ],
+        [
+          7,
+          9,
+          12
+        ],
+        [
+          8,
+          9,
+          5
+        ],
+        [
+          9,
+          9,
+          11
+        ],
+        [
+          10,
+          9,
+          11
+        ],
+        [
+          11,
+          9,
+          1
+        ],
+        [
+          5,
+          10,
+          11
+        ],
+        [
+          6,
+          10,
+          11
+        ],
+        [
+          7,
+          10,
+          11
+        ],
+        [
+          8,
+          10,
+          6
+        ],
+        [
+          9,
+          10,
+          5
+        ],
+        [
+          10,
+          10,
+          11
+        ],
+        [
+          12,
+          10,
+          3
+        ],
+        [
+          5,
+          11,
+          12
+        ],
+        [
+          6,
+          11,
+          11
+        ],
+        [
+          7,
+          11,
+          11
+        ],
+        [
+          8,
+          11,
+          5
+        ],
+        [
+          9,
+          11,
+          5
+        ],
+        [
+          10,
+          11,
+          11
+        ],
+        [
+          11,
+          11,
+          11
+        ],
+        [
+          12,
+          11,
+          11
+        ],
+        [
+          6,
+          12,
+          12
+        ],
+        [
+          7,
+          12,
+          12
+        ],
+        [
+          8,
+          12,
+          12
+        ],
+        [
+          9,
+          12,
+          11
+        ],
+        [
+          10,
+          12,
+          11
+        ],
+        [
+          11,
+          12,
+          12
+        ],
+        [
+          12,
+          12,
+          2
+        ]
+      ],
+      "referenceStrip": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/moogle-references.png",
+        "sha256": "a7967a75c601307823d61dea5e883032ef965e9878e41007a2a1948e63950982"
+      },
+      "layer": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/moogle-anchor-layer.png",
+        "sha256": "1a11325e3a0b12552b540b078ceec3e44a2deecc781739fb9545def114788f0b"
+      },
+      "frontalTemplate": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/moogle-frontal-template.png",
+        "sha256": "5e450864da6160452361520aec86f43bbbc8907488dff7e7dd303355b4b0ffab"
+      },
+      "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+    },
+    "viera": {
+      "references": [
+        {
+          "path": "build/art/native-reference/ui/job-028.png",
+          "sha256": "e4410e086f6b799d4255e687b0e03a06717d602c538c3813eb4ab353b545bfca"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-029.png",
+          "sha256": "ba3266f1a2c6133f7e795ab2828278ea159368809136a3502c1a1d1c5e3ade2c"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-031.png",
+          "sha256": "32c97861894ce2448139085e1d11e756aa04a347f902e8f68ef1c2c79cc1c599"
+        },
+        {
+          "path": "build/art/native-reference/ui/job-033.png",
+          "sha256": "6927540bad8736bfe2c2608a17bced108ffcdbde408e575167ff2d00a1661b8f"
+        }
+      ],
+      "crop": [
+        1,
+        1,
+        17,
+        15
+      ],
+      "faceRegion": [
+        7,
+        6,
+        11,
+        10
+      ],
+      "coordinates": [
+        [
+          7,
+          6,
+          4
+        ],
+        [
+          8,
+          6,
+          6
+        ],
+        [
+          9,
+          6,
+          6
+        ],
+        [
+          10,
+          6,
+          4
+        ],
+        [
+          7,
+          7,
+          1
+        ],
+        [
+          8,
+          7,
+          6
+        ],
+        [
+          9,
+          7,
+          6
+        ],
+        [
+          10,
+          7,
+          1
+        ],
+        [
+          7,
+          8,
+          1
+        ],
+        [
+          10,
+          8,
+          1
+        ],
+        [
+          9,
+          9,
+          11
+        ]
+      ],
+      "referenceStrip": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/viera-references.png",
+        "sha256": "d30a3b3741a527230e5500324b956ddac1c1f2d8063c4619acc201134ef5aa43"
+      },
+      "layer": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/viera-anchor-layer.png",
+        "sha256": "49bb1aed4d9403a8d112edbf107955bfaf15ab6afcd0718666b83c73c39826d8"
+      },
+      "frontalTemplate": {
+        "path": "build/art/anchor-ui-v4-2026-09-20/viera-frontal-template.png",
+        "sha256": "624510888c5b2993100b06cefed30b6c546e5e11b58ef8788bf561d20d88c72b"
+      },
+      "scope": "Exact indexed-pixel agreement within the stated facial region of these four jobs only; not a universal race mask."
+    }
+  }
+}

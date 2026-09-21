@@ -1,0 +1,11 @@
+{
+  "pose": "p005",
+  "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-3f78307d-5581-46ec-923f-68839bdadfbb.png",
+  "prompt": "Edit ONLY the colors of the red HELMET in image 1. This is a rear view of a Samurai. The pale peach/cream/pink patches on the helmet dome and lower neck guard are WRONG: they are lacquered armor, not exposed skin. Replace those pale helmet patches with the same RED and DARK RED armor colors as the neutral rear sprite in image 2. Keep gold trim gold. Do not change any pixel shape, position, silhouette, horn, clothing, waist scarf, sleeve, hand, leg or other part of image 1. Keep the repaired dark sleeve and small pale hand exactly unchanged. No new highlights, no beige or skin-colored pixels on the helmet armor. Return the identical single sprite canvas and exact pixel grid, with only the helmet colors corrected.",
+  "references": [
+    "build/art/samurai-walk-consistency-2026-09-20/p005-helmet-target.png",
+    "build/art/samurai-walk-consistency-2026-09-20/p004-edit.png"
+  ],
+  "tool": "image_gen.imagegen",
+  "model": "Tool managed"
+}

@@ -1,0 +1,8 @@
+{
+  "provider": "built-in imagegen",
+  "model": "gpt-image-2 (embedded image provenance)",
+  "prompt": "Use case: stylized-concept. Asset type: a temporary two-symbol status atlas for a Game Boy Advance tactical RPG, for native graphics import testing. Create one transparent 1024x1024 PNG containing exactly two tiny pixel-art symbols centered in the left and right halves. Left: a tall narrow cracked silver shield with a conspicuous dark diagonal fracture and amber rim (Exposed status). Right: a tall narrow gold focus ring with cyan center and a tiny white central diamond (Centered status). Match the clean clustered pixel technique of Final Fantasy Tactics Advance UI, no borrowed character or existing sprite. Each symbol must have a simple readable silhouette designed to ultimately occupy 8 pixels wide by 16 pixels tall. Render as crisp enlarged pixel art, with each logical pixel a square block, no antialiasing, no gradients, no tiny decorative marks. Use transparent background, opaque limited-color pixel clusters, warm dark brown outline, white highlight, cyan and amber accents. Leave at least 15 percent transparent margins around each symbol and a broad clear gutter between halves. No lettering, no labels, no text, no checkerboard drawn into background. Technical draft only; do not mock up a game screen.",
+  "source": "build/art/imagegen/status/status-transport-v1.png",
+  "status": "Temporary generated status atlas; not production art acceptance. Conversion/import are separate.",
+  "sourceSha256": "cfe80417eb84362c10a833f51d771653eb6bce63f0f07901fc0aa8de391cdcc6"
+}

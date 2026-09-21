@@ -1,0 +1,300 @@
+{
+  "records": [
+    {
+      "pose": "p000",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p000.png",
+        "sha256": "5752a6413395ad20851766e9e8aa59f65ad6dd56ec3817ca061f89753fb689fd"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p000-native.png",
+        "sha256": "0bb3aa8f4bdaa6d5a30b97cb36300a429d273e263c8c4e3feb48137db8a4ef8b"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p000-sampled.png",
+        "sha256": "7d2759150650cecf8852ba097580ca4e5933c7bd9ad16a04028d098a8e443679"
+      },
+      "raw": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p000-generated.png",
+        "sha256": "bac149cfdce26ba781f70698a8c8cc9ea81b6b2e0a05b6dc3ac3c8a5c2761ab8"
+      },
+      "registration": null,
+      "changedPixels": 22,
+      "originalAlphaPreserved": true
+    },
+    {
+      "pose": "p001",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p001.png",
+        "sha256": "2fbe4a56e9b68e9a919cf8b6eb9cc76e4ae7b5aaafee5cf711b72ef63178b76b"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p001-native.png",
+        "sha256": "2fbe4a56e9b68e9a919cf8b6eb9cc76e4ae7b5aaafee5cf711b72ef63178b76b"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p001-sampled.png",
+        "sha256": "fcf2f1f01b6d9b3e7de080a44a998f4240266c6ceb29a050a16bb7df9916d5de"
+      },
+      "raw": null,
+      "registration": null,
+      "changedPixels": 0,
+      "originalAlphaPreserved": true
+    },
+    {
+      "pose": "p002",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p002.png",
+        "sha256": "6e0ed8c207d05f733c119b6ddfa70b51b4e957a60b93b75f7042770767c93905"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p002-native.png",
+        "sha256": "eccc6fbee38cbcda3162fe20c05de096dc7bc4d9790af6df4fe243f8f29f469c"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p002-sampled.png",
+        "sha256": "544a4b75a751d71ab921f7075e1c0519cda804ee780781c83e42c462abdddf01"
+      },
+      "raw": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p002-generated.png",
+        "sha256": "267766c049fe2064a20a0957a04dbd390435848f75a7f089257e9d7a7238a334"
+      },
+      "registration": {
+        "offset": [
+          0,
+          1
+        ],
+        "reason": "Model shifted the unchanged pixel clusters one row upward; fixed one-pixel vertical registration restores source placement. Best unchanged-index agreement among +/-2-pixel translations."
+      },
+      "changedPixels": 48,
+      "originalAlphaPreserved": true
+    },
+    {
+      "pose": "p003",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p003.png",
+        "sha256": "d4d9dabdcea4b85ad4752d66cb3e690e82c0c485cf46a443c43e432f6733e007"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p003-native.png",
+        "sha256": "1f10aace895c5e87a945a71f52ff44c4ebcf416e8a27035941ffccfea92e677b"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p003-sampled.png",
+        "sha256": "923818f3da38f0622a9365a339cdaf9d90fe6cad5d2a264dbf92416214c8db17"
+      },
+      "raw": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p003-generated.png",
+        "sha256": "664bb4ecd3e7ff80fd2a808165eaa12cf94216d368ff959cc8163635cef33851"
+      },
+      "registration": {
+        "offset": [
+          0,
+          1
+        ],
+        "reason": "Model shifted the unchanged pixel clusters one row upward; fixed one-pixel vertical registration restores source placement. Best unchanged-index agreement among +/-2-pixel translations."
+      },
+      "changedPixels": 53,
+      "originalAlphaPreserved": true
+    },
+    {
+      "pose": "p004",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p004.png",
+        "sha256": "a234812767b4499859c03dc4a981abb6128cee26c9c3c147ea42d70b74b43e21"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p004-native.png",
+        "sha256": "a234812767b4499859c03dc4a981abb6128cee26c9c3c147ea42d70b74b43e21"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p004-sampled.png",
+        "sha256": "e5187893cd846cba6ce3e28fad5212987d8b77bbb7e69b18ad7bcc578f6f3556"
+      },
+      "raw": null,
+      "registration": null,
+      "changedPixels": 0,
+      "originalAlphaPreserved": true
+    },
+    {
+      "pose": "p005",
+      "source": {
+        "path": "build/art/native-human-integration-2026-09-20/human-samurai/p005.png",
+        "sha256": "c15bd7194ed675e988264355c769608add4d386f8c0e1708b8dba28ee972e9e4"
+      },
+      "native": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p005-native.png",
+        "sha256": "ca75343a80b487b0efd41b9bf1fb8f022f852e922bd0178f8511da66665e149f"
+      },
+      "sampled": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p005-sampled.png",
+        "sha256": "6780cd15371bd0b4e57abd50fa4d1eca6ac29c6e7e1204004e46974067880f19"
+      },
+      "raw": {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p005-generated.png",
+        "sha256": "120dc239186e9ad7cfbd4115b589591f190be577fdaea866888dfd89e81c6cfe"
+      },
+      "registration": null,
+      "changedPixels": 78,
+      "originalAlphaPreserved": true
+    }
+  ],
+  "rejectedSheet": {
+    "path": "build/art/samurai-walk-consistency-2026-09-20/generated-sheet.png",
+    "sha256": "90628f769d9c0b6e1aadc696046f69cbd697f6d539b5cc1cce403796059b9e94"
+  },
+  "generationReceipts": [
+    {
+      "pose": "p000",
+      "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-c103e674-474f-43b3-88cd-77ff508f2fa7.png",
+      "prompt": "Precise pixel COLOR EDIT only. Image 1 is the 32x32 logical pixel sprite to edit; image 2 is the accepted color reference for this SAME character facing the same direction. Match image 1 costume colors to image 2, while keeping EVERY pixel boundary, cluster shape, silhouette, face, limb position and pose from image 1 unchanged. Do not redraw, rescale, shift, sharpen or add detail. Use the same RED armor ramp, GOLD trim and shins, DARK cloth sleeves/trousers, MUTED gray-mauve waist scarf, and small pale skin areas as image 2. Remove stray white/skin highlights from armor and cloth; restrict pale skin to face and small hands, cream cuffs only at wrists. Image 3 is original concept to distinguish sleeve/armor/scarf/skin, NOT a new style to reproduce. Image 4 is the existing native palette; use only these colors. Preserve the exact 32x32 source grid and all shapes. Return the same single sprite on the same 640x640 canvas with transparent background. Change colors only.",
+      "references": [
+        "build\\art\\samurai-walk-consistency-2026-09-20\\p000-edit.png",
+        "build\\art\\samurai-walk-consistency-2026-09-20\\p001-edit.png",
+        "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+        "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png"
+      ],
+      "referenceHashes": [
+        {
+          "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p000-edit.png",
+          "sha256": "a472bccf9c81cf5ae2cc6e965a7ebfb0dc423a2eedf17aea0bd0a338692f046c"
+        },
+        {
+          "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p001-edit.png",
+          "sha256": "e81f0d0e01145429f53a2a73d6ffe8bd1a7024405c1eb92f3b60aa569f822e7c"
+        },
+        {
+          "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+          "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+        },
+        {
+          "path": "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "tool": "image_gen.imagegen",
+      "model": "Tool managed"
+    },
+    {
+      "pose": "p002",
+      "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-5fd03358-b9e5-4132-bfb7-26d420c00e1b.png",
+      "prompt": "Precise pixel COLOR EDIT only. Image 1 is the 32x32 logical pixel sprite to edit; image 2 is the accepted color reference for this SAME character facing the same direction. Match image 1 costume colors to image 2, while keeping EVERY pixel boundary, cluster shape, silhouette, face, limb position and pose from image 1 unchanged. Do not redraw, rescale, shift, sharpen or add detail. Use the same RED armor ramp, GOLD trim and shins, DARK cloth sleeves/trousers, MUTED gray-mauve waist scarf, and small pale skin areas as image 2. Remove stray white/skin highlights from armor and cloth; restrict pale skin to face and small hands, cream cuffs only at wrists. Image 3 is original concept to distinguish sleeve/armor/scarf/skin, NOT a new style to reproduce. Image 4 is the existing native palette; use only these colors. Preserve the exact 32x32 source grid and all shapes. Return the same single sprite on the same 640x640 canvas with transparent background. Change colors only.",
+      "references": [
+        "build\\art\\samurai-walk-consistency-2026-09-20\\p002-edit.png",
+        "build\\art\\samurai-walk-consistency-2026-09-20\\p001-edit.png",
+        "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+        "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png"
+      ],
+      "registration": {
+        "offset": [
+          0,
+          1
+        ],
+        "reason": "Model shifted the unchanged pixel clusters one row upward; fixed one-pixel vertical registration restores source placement. Best unchanged-index agreement among +/-2-pixel translations."
+      },
+      "referenceHashes": [
+        {
+          "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p002-edit.png",
+          "sha256": "da7c2e2695dae76747888bf3853ec77f7b53c90620429ea5cb678fac2e6f50de"
+        },
+        {
+          "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p001-edit.png",
+          "sha256": "e81f0d0e01145429f53a2a73d6ffe8bd1a7024405c1eb92f3b60aa569f822e7c"
+        },
+        {
+          "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+          "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+        },
+        {
+          "path": "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "tool": "image_gen.imagegen",
+      "model": "Tool managed"
+    },
+    {
+      "pose": "p003",
+      "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-92a5a40d-0abd-4657-9e82-c6bacfff1b55.png",
+      "prompt": "Precise pixel COLOR EDIT only. Image 1 is the 32x32 logical pixel sprite to edit; image 2 is the accepted color reference for this SAME character facing the same direction. Match image 1 costume colors to image 2, while keeping EVERY pixel boundary, cluster shape, silhouette, face, limb position and pose from image 1 unchanged. Do not redraw, rescale, shift, sharpen or add detail. Use the same RED armor ramp, GOLD trim and shins, DARK cloth sleeves/trousers, MUTED gray-mauve waist scarf, and small pale skin areas as image 2. Remove stray white/skin highlights from armor and cloth; restrict pale skin to face and small hands, cream cuffs only at wrists. Image 3 is original concept to distinguish sleeve/armor/scarf/skin, NOT a new style to reproduce. Image 4 is the existing native palette; use only these colors. Preserve the exact 32x32 source grid and all shapes. Return the same single sprite on the same 640x640 canvas with transparent background. Change colors only.",
+      "references": [
+        "build\\art\\samurai-walk-consistency-2026-09-20\\p003-edit.png",
+        "build\\art\\samurai-walk-consistency-2026-09-20\\p004-edit.png",
+        "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+        "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png"
+      ],
+      "registration": {
+        "offset": [
+          0,
+          1
+        ],
+        "reason": "Model shifted the unchanged pixel clusters one row upward; fixed one-pixel vertical registration restores source placement. Best unchanged-index agreement among +/-2-pixel translations."
+      },
+      "referenceHashes": [
+        {
+          "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p003-edit.png",
+          "sha256": "391ee6fe9a218ed01e108f68ea4cbf95fee5705c0260a4b42a319e54a58ff7df"
+        },
+        {
+          "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p004-edit.png",
+          "sha256": "24f0eb1a12c9b1910acbedf7281680aeaafd2b73ce1acb3c2bf45107634f3819"
+        },
+        {
+          "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+          "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+        },
+        {
+          "path": "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "tool": "image_gen.imagegen",
+      "model": "Tool managed"
+    },
+    {
+      "pose": "p005",
+      "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-3f78307d-5581-46ec-923f-68839bdadfbb.png",
+      "prompt": "Edit ONLY the colors of the red HELMET in image 1. This is a rear view of a Samurai. The pale peach/cream/pink patches on the helmet dome and lower neck guard are WRONG: they are lacquered armor, not exposed skin. Replace those pale helmet patches with the same RED and DARK RED armor colors as the neutral rear sprite in image 2. Keep gold trim gold. Do not change any pixel shape, position, silhouette, horn, clothing, waist scarf, sleeve, hand, leg or other part of image 1. Keep the repaired dark sleeve and small pale hand exactly unchanged. No new highlights, no beige or skin-colored pixels on the helmet armor. Return the identical single sprite canvas and exact pixel grid, with only the helmet colors corrected.",
+      "references": [
+        "build/art/samurai-walk-consistency-2026-09-20/p005-helmet-target.png",
+        "build/art/samurai-walk-consistency-2026-09-20/p004-edit.png"
+      ],
+      "tool": "image_gen.imagegen",
+      "model": "Tool managed",
+      "referenceHashes": [
+        {
+          "path": "build/art/samurai-walk-consistency-2026-09-20/p005-helmet-target.png",
+          "sha256": "fc1d53bb717de7b239a0e823917d846b426922c2414e2c99e40f406203369f6b"
+        },
+        {
+          "path": "build/art/samurai-walk-consistency-2026-09-20/p004-edit.png",
+          "sha256": "24f0eb1a12c9b1910acbedf7281680aeaafd2b73ce1acb3c2bf45107634f3819"
+        }
+      ]
+    }
+  ],
+  "plan": {
+    "path": "build/art/samurai-walk-consistency-2026-09-20/plan.json",
+    "sha256": "06de9bc4048ad3ea9f0f804bcaed404b3ec4c66ae0a6c2b6eb5448bb9d993029"
+  },
+  "nativePaletteSelector": 1,
+  "nativePaletteWords": [
+    18991,
+    1090,
+    14769,
+    30719,
+    10412,
+    1365,
+    573,
+    959,
+    1079,
+    7453,
+    20159,
+    32606,
+    25304,
+    27792,
+    32245,
+    32506
+  ],
+  "method": "Generated color reference, fixed grid nearest sampling and recorded integer registration, native palette quantization. Original alpha/contact footprint retained; neutral indices unchanged. Offline proposal only."
+}

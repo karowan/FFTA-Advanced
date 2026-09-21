@@ -1,0 +1,37 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Tool default; version not exposed",
+  "settings": "Prompt and two referenced image paths only; other settings tool-managed.",
+  "prompt": "Put the closed helmet from image 2 on the rightmost Dark Knight sprite in image 1. Cover his face and hair completely with the dark horned helmet and narrow gold visor. Keep his body, pose, size and simple pixel art unchanged. Keep the complete row and its layout.",
+  "references": [
+    {
+      "path": "build\\art\\approved-class-sprites-2026-09-19\\human-dark-knight-generated.png",
+      "sha256": "2f39b98dac46a0abe6709d0c5bb9fb76aff44836ea68731643e5ff5fc1a03aed"
+    },
+    {
+      "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\human-dark-knight.png",
+      "sha256": "b98d90f3ec8239ce16dfcddf4c2930ff0cb226e0d5b1022957043d4b6452d720"
+    }
+  ],
+  "source": "build\\art\\approved-class-sprites-2026-09-19\\human-dark-knight-helmet-v2-generated.png",
+  "sourceSha256": "8f922d87744ea5b76cefcb3a4158adad4997f26622a9d460910fe87e9fc315b7",
+  "conversion": {
+    "logicalGrid": [
+      160,
+      64
+    ],
+    "resampling": "nearest",
+    "background": "existing clear_background helper",
+    "crop": [
+      128,
+      16,
+      160,
+      48
+    ],
+    "palette": "Generated colors retained for design review",
+    "sharedPixelOverride": "Do not restore exposed native face or hair over the closed helmet; user explicitly requested helmet coverage."
+  },
+  "output": "build\\art\\approved-class-sprites-2026-09-19\\human-dark-knight-helmet-v2-grid.png",
+  "outputSha256": "afa6ccb21da6b19ebe308dbe6f87d271499164d37af0cdc3d50bfbeb2a586b9e",
+  "status": "Helmet revision awaiting user review. Animation generation paused by user."
+}

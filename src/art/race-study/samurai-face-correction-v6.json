@@ -1,0 +1,91 @@
+{
+  "status": "Applied and verified: user-authorized exact face reuse",
+  "tool": "built-in image_gen",
+  "model": "Tool default; version not exposed",
+  "settings": "Tool-managed",
+  "rejectedAttempt": {
+    "prompt": "Give the walking sprite in image 1 the EXACT pixel-art head from image 2: identical eye shapes, eye colors, skin colors, face and helmet. Fit that unchanged head at image 1's existing head position. Keep everything below the chin unchanged, including the charcoal trousers, teal scarf, stride and shadow. Image 3 is the original costume concept, not a new face to redraw. Return only edited image 1, same square canvas and pixel grid.",
+    "inputs": [
+      {
+        "path": "build\\art\\approved-class-animation-2026-09-19\\human-samurai\\front-step-a-face-v6-template.png",
+        "sha256": "2d983af737748e0ac136e953ddf61e194ee2a6765686c728366980c899f1f7f7"
+      },
+      {
+        "path": "build\\art\\approved-class-animation-2026-09-19\\human-samurai\\neutral-head-v6-reference.png",
+        "sha256": "f2b90ea6b12336cf777022128007905c15e6158b2b691e974f3c8abd88eabeda"
+      },
+      {
+        "path": "build\\art\\approved-class-animation-2026-09-19\\human-samurai\\original-concept-user-reference.png",
+        "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+      }
+    ],
+    "source": "build\\art\\approved-class-animation-2026-09-19\\human-samurai\\front-step-a-face-v6-generated.png",
+    "sha256": "8a4722fbe74bf69b3d6791962c189921bbbe94c5ffe03ddb8e77daefe0096322",
+    "reason": "Redrew eyes, skin and body details instead of retaining the approved face"
+  },
+  "proposedReuse": {
+    "source": "build\\art\\approved-class-animation-2026-09-19\\human-samurai\\front-neutral.png",
+    "sha256": "3a8419fe925ac15734e096b4f43de311ba4dd2ac6182080c6b25dfd820e1d202",
+    "sourceBox": [
+      10,
+      8,
+      18,
+      14
+    ],
+    "targets": {
+      "front-step-a": [
+        10,
+        8
+      ],
+      "front-step-b": [
+        10,
+        9
+      ]
+    },
+    "operation": "Exact existing RGBA pixel copy; no recoloring, scaling or newly drawn pixels",
+    "outsideRegion": "Must remain byte-for-byte equal to previous frame pixel data"
+  },
+  "preview": "build\\art\\approved-class-animation-2026-09-19\\human-samurai\\face-reuse-region-review.png",
+  "authorization": "User explicitly approved copying the existing face pixels with code.",
+  "verification": {
+    "front-step-a": {
+      "faceExact": true,
+      "outsideRegionChangedPixels": 0,
+      "changedPixels": 46,
+      "sourceBox": [
+        10,
+        8,
+        18,
+        14
+      ],
+      "targetBox": [
+        10,
+        8,
+        18,
+        14
+      ]
+    },
+    "front-step-b": {
+      "faceExact": true,
+      "outsideRegionChangedPixels": 0,
+      "changedPixels": 46,
+      "sourceBox": [
+        10,
+        8,
+        18,
+        14
+      ],
+      "targetBox": [
+        10,
+        9,
+        18,
+        15
+      ]
+    }
+  },
+  "previewVerification": {
+    "decodedGifFrames": 4,
+    "alignedFaceRgbExact": true,
+    "method": "Shared GIF palette with exact protected-color indices; scripts/validate-class-animation.py decodes and compares each face region."
+  }
+}

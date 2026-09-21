@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 1800,
+  "scope": "Prerequisite readiness only. No DRK implementation acceptance until actual job tests are added.",
+  "steps": [
+    {
+      "id": "worktree-prerequisites",
+      "runtime": "python",
+      "args": [
+        "scripts/check-worktree-prerequisites.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-runner-self",
+      "runtime": "python",
+      "args": [
+        "scripts/test-test-runner.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-original-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-native-executor.py",
+        "--fell",
+        "--current"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "build-samurai-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-samurai-probe.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "prepare-samurai-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-executor.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private",
+        "test-installed-fell-original-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-native.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-blade-ward-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-ward-executor.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "prepare-samurai-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-battle.py"
+      ],
+      "suites": [
+        "dark-knight"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private"
+      ]
+    }
+  ]
+}

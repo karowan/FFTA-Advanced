@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "status": "Layout-corrected design draft; native palette, animation and consumer acceptance outstanding",
+  "columns": 2,
+  "rows": 2,
+  "source": "build/art/imagegen/bangaa-viking/idle-v1.png",
+  "selectedPrivatePath": "build/art/imagegen/bangaa-viking/idle-v2.png",
+  "prompt": "Use case: precise-object-edit. Edit only layout of this original Bangaa Viking four-sprite sheet. Preserve every character's design, pose, facing, proportions, pixel-art colors, face, ears, tail, fur mantle, cloak, axe and anatomy. Keep two equal columns by two equal rows. Make all four sprites smaller within their cells so there is at least20 percent completely empty transparent margin on every side of every cell. Center each full sprite inside its own quadrant; every foot and tail must fit entirely inside its quadrant. In the current sheet the TOP LEFT feet touch/cross the halfway horizontal boundary; that is the specific fault to fix. Keep identical sprite scale across all four and maintain true transparent background. No new artwork elements, no shadows, no backdrop, no labels or text. Do not crop any character part."
+}

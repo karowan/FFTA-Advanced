@@ -1,0 +1,14 @@
+{
+  "romSha1": "20fa53f741593901049b984125a6a97637d8cd54",
+  "manifest": "build/art/connected/20fa53f741593901049b984125a6a97637d8cd54/live-palette-view.json",
+  "source": "build/art/live-palette/battle/20260919T054832.319893Z",
+  "inputHashes": {
+    "failed.json": "857e8d7184d4519642a56cad6c5ec0a8c8993a6ef1c3213a7574a08623e7d62c",
+    "parent-entry-6.state": "c55f6a3713e266ba04ae4966842ec92cceb7b8363aa486fdbdf74c7b48a4465a",
+    "parent-entry-6.ram": "ca853c10314ded0866cde3a2e19b88aad29f6e3d978147cd1a2a1c608bd9b000",
+    "parent-entry-6.iwram": "d543851a60f295dce7d9c69765af6d46b984e4440083350c86094edb5a6c4639",
+    "candidate-entry-6.state": "77ca4cc7ae20e55f69bd6199dd77efedee0a2967533804f6049f32c97a83bd5b",
+    "candidate-entry-6.ram": "51270aaf8cf3ef6fdd51dc21480513d9698f8aa261ad5f226dc83ab3abb2cbf1",
+    "candidate-entry-6.iwram": "e83dbb695e6be08fa0b60483687291b489c8837add36acb65c78b8576fd17fda"
+  }
+}

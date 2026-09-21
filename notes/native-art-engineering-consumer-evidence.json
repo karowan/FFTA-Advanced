@@ -1,0 +1,430 @@
+{
+  "schema": 1,
+  "romSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "scope": "Root E02 consumer review, current UI/static dependency evidence and explicitly historical action inputs. E03-E05 remain separate.",
+  "verifiedNestedPins": 267,
+  "fightCoverage": [
+    {
+      "path": "build/art/class-fight/20260919T021830.835448Z/report.json",
+      "sha256": "9f87de398571f201a32914ad712d1c32d1887e7bb184cb3a2a67172566f5b708",
+      "job": 117,
+      "weaponType": 1,
+      "romSha1": "e1a87ecde67f265f666d3ab9d7e50ba401370633",
+      "checks": 4915
+    },
+    {
+      "path": "build/art/class-fight/20260919T022029.368917Z/report.json",
+      "sha256": "3ed882d26550449114b395c09a8d7565642d440f69edd087cd9b93f9d0e21127",
+      "job": 119,
+      "weaponType": 1,
+      "romSha1": "e1a87ecde67f265f666d3ab9d7e50ba401370633",
+      "checks": 4915
+    },
+    {
+      "path": "build/art/class-fight/20260919T022045.758767Z/report.json",
+      "sha256": "ffc0ed046f31683ffeb5eb9e9e243425af1e02de9febcc40036316d02a05b391",
+      "job": 120,
+      "weaponType": 7,
+      "romSha1": "e1a87ecde67f265f666d3ab9d7e50ba401370633",
+      "checks": 4915
+    },
+    {
+      "path": "build/art/class-fight/20260919T022103.836272Z/report.json",
+      "sha256": "5c1377cb73632495399cccb6c3bfdf2e6b2d0519e5418bc3e6873665b4c4caa2",
+      "job": 121,
+      "weaponType": 11,
+      "romSha1": "e1a87ecde67f265f666d3ab9d7e50ba401370633",
+      "checks": 4915
+    },
+    {
+      "path": "build/art/class-fight/20260919T023133.522400Z/report.json",
+      "sha256": "2d3db32baf1031925e02688b0e8d08b253489f1fb324c46512172dbd296b2b63",
+      "job": 123,
+      "weaponType": 16,
+      "romSha1": "e1a87ecde67f265f666d3ab9d7e50ba401370633",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T023149.181150Z/report.json",
+      "sha256": "b4d42fa9e6510cb3a7efe113c7ebbd225dc6a8a49ead8bbab40a740527e06082",
+      "job": 124,
+      "weaponType": 7,
+      "romSha1": "e1a87ecde67f265f666d3ab9d7e50ba401370633",
+      "checks": 4915
+    },
+    {
+      "path": "build/art/class-fight/20260919T023205.366892Z/report.json",
+      "sha256": "8e4c054deb30326eaf83c07c8fbfb273ae00a0a6d5838337a3b67f42ea99126e",
+      "job": 125,
+      "weaponType": 8,
+      "romSha1": "e1a87ecde67f265f666d3ab9d7e50ba401370633",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T023440.726333Z/report.json",
+      "sha256": "21b063e43d11bfa82e2963074e4a4b556f21fcc4764d5cdb6269e527f6823ef7",
+      "job": 122,
+      "weaponType": 7,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T023459.071301Z/report.json",
+      "sha256": "b92c61b23919ebd07132de2c1c2c5d441cb1fcdfd0d69a7e93ee62fb63fa10db",
+      "job": 122,
+      "weaponType": 12,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T023517.172690Z/report.json",
+      "sha256": "894200ca191af1c09df366a0643820496af09252276213db9c0a07be8e49ea4f",
+      "job": 123,
+      "weaponType": 7,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T024233.889086Z/report.json",
+      "sha256": "2de69d9d2c8b8b168ba467ae87ae15e7d56871ca98ed9ad2196c6600effd88b6",
+      "job": 117,
+      "weaponType": 5,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T024252.404479Z/report.json",
+      "sha256": "59cb7b553cf329c39006af6bae250a68f4a405bc5cacff5a996ab37f4a0db5bd",
+      "job": 117,
+      "weaponType": 6,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T024311.022454Z/report.json",
+      "sha256": "bd7acac40de632962a3249876ac829c2da420965cf5bcf8b445b52be7816f7a6",
+      "job": 119,
+      "weaponType": 5,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T024326.974398Z/report.json",
+      "sha256": "fc17fc27f823af660a8f525853bcfed748057000b36ae0f29af95afa22f1dfa8",
+      "job": 119,
+      "weaponType": 6,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T024343.017541Z/report.json",
+      "sha256": "a167e1241dd94bd1ba04ef6000ffe7b81d4ac647bc0cb50a2fe77ff3e2dd0948",
+      "job": 120,
+      "weaponType": 12,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T024400.503052Z/report.json",
+      "sha256": "d9f7aeb0e2192b8d9e75c721289d99b37869a3eb6bfdc823bfcceefc793f8d11",
+      "job": 121,
+      "weaponType": 12,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T024418.217342Z/report.json",
+      "sha256": "249570d37fd1ec693d7f19a824adb9901b6562428a047f3bafe1abd5abe480d7",
+      "job": 124,
+      "weaponType": 8,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T024433.898380Z/report.json",
+      "sha256": "e3d7281b69b70511ca209efe01de085405c573040ba73b6079c97d70c9162a4d",
+      "job": 125,
+      "weaponType": 3,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4916
+    },
+    {
+      "path": "build/art/class-fight/20260919T034853.152620Z/report.json",
+      "sha256": "693164c682f43c3a63bb76cf062312445c3031bb18759323fd05fffc746d605a",
+      "job": 118,
+      "weaponType": 31,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4915
+    },
+    {
+      "path": "build/art/samurai-fight/20260919T034834.276542Z/report.json",
+      "sha256": "14335b8e720da505c40c5e5255b2bae10aa26c201cb94bc2a1b07c555009f45a",
+      "job": 116,
+      "weaponType": 9,
+      "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+      "checks": 4915
+    }
+  ],
+  "files": [
+    {
+      "path": "build/art/action-completion/contracts/20260919T023749.032200Z/report.json",
+      "sha256": "2f46194a4dab2fee0216dc63c7def2de78d5ffb8a3e380b5b387d99ef5a3399b"
+    },
+    {
+      "path": "build/art/all-class-water-evidence/20260919T021255.737230Z/report.json",
+      "sha256": "29451e28620d30d484b01bcddf1576f80712eb30c82592151cff5345a31e571c"
+    },
+    {
+      "path": "build/art/class-fight/20260919T021830.835448Z/report.json",
+      "sha256": "9f87de398571f201a32914ad712d1c32d1887e7bb184cb3a2a67172566f5b708"
+    },
+    {
+      "path": "build/art/class-fight/20260919T022029.368917Z/report.json",
+      "sha256": "3ed882d26550449114b395c09a8d7565642d440f69edd087cd9b93f9d0e21127"
+    },
+    {
+      "path": "build/art/class-fight/20260919T022045.758767Z/report.json",
+      "sha256": "ffc0ed046f31683ffeb5eb9e9e243425af1e02de9febcc40036316d02a05b391"
+    },
+    {
+      "path": "build/art/class-fight/20260919T022103.836272Z/report.json",
+      "sha256": "5c1377cb73632495399cccb6c3bfdf2e6b2d0519e5418bc3e6873665b4c4caa2"
+    },
+    {
+      "path": "build/art/class-fight/20260919T023133.522400Z/report.json",
+      "sha256": "2d3db32baf1031925e02688b0e8d08b253489f1fb324c46512172dbd296b2b63"
+    },
+    {
+      "path": "build/art/class-fight/20260919T023149.181150Z/report.json",
+      "sha256": "b4d42fa9e6510cb3a7efe113c7ebbd225dc6a8a49ead8bbab40a740527e06082"
+    },
+    {
+      "path": "build/art/class-fight/20260919T023205.366892Z/report.json",
+      "sha256": "8e4c054deb30326eaf83c07c8fbfb273ae00a0a6d5838337a3b67f42ea99126e"
+    },
+    {
+      "path": "build/art/class-fight/20260919T023440.726333Z/report.json",
+      "sha256": "21b063e43d11bfa82e2963074e4a4b556f21fcc4764d5cdb6269e527f6823ef7"
+    },
+    {
+      "path": "build/art/class-fight/20260919T023459.071301Z/report.json",
+      "sha256": "b92c61b23919ebd07132de2c1c2c5d441cb1fcdfd0d69a7e93ee62fb63fa10db"
+    },
+    {
+      "path": "build/art/class-fight/20260919T023517.172690Z/report.json",
+      "sha256": "894200ca191af1c09df366a0643820496af09252276213db9c0a07be8e49ea4f"
+    },
+    {
+      "path": "build/art/class-fight/20260919T024233.889086Z/report.json",
+      "sha256": "2de69d9d2c8b8b168ba467ae87ae15e7d56871ca98ed9ad2196c6600effd88b6"
+    },
+    {
+      "path": "build/art/class-fight/20260919T024252.404479Z/report.json",
+      "sha256": "59cb7b553cf329c39006af6bae250a68f4a405bc5cacff5a996ab37f4a0db5bd"
+    },
+    {
+      "path": "build/art/class-fight/20260919T024311.022454Z/report.json",
+      "sha256": "bd7acac40de632962a3249876ac829c2da420965cf5bcf8b445b52be7816f7a6"
+    },
+    {
+      "path": "build/art/class-fight/20260919T024326.974398Z/report.json",
+      "sha256": "fc17fc27f823af660a8f525853bcfed748057000b36ae0f29af95afa22f1dfa8"
+    },
+    {
+      "path": "build/art/class-fight/20260919T024343.017541Z/report.json",
+      "sha256": "a167e1241dd94bd1ba04ef6000ffe7b81d4ac647bc0cb50a2fe77ff3e2dd0948"
+    },
+    {
+      "path": "build/art/class-fight/20260919T024400.503052Z/report.json",
+      "sha256": "d9f7aeb0e2192b8d9e75c721289d99b37869a3eb6bfdc823bfcceefc793f8d11"
+    },
+    {
+      "path": "build/art/class-fight/20260919T024418.217342Z/report.json",
+      "sha256": "249570d37fd1ec693d7f19a824adb9901b6562428a047f3bafe1abd5abe480d7"
+    },
+    {
+      "path": "build/art/class-fight/20260919T024433.898380Z/report.json",
+      "sha256": "e3d7281b69b70511ca209efe01de085405c573040ba73b6079c97d70c9162a4d"
+    },
+    {
+      "path": "build/art/class-fight/20260919T034853.152620Z/report.json",
+      "sha256": "693164c682f43c3a63bb76cf062312445c3031bb18759323fd05fffc746d605a"
+    },
+    {
+      "path": "build/art/equipment-preview/ui/20260919T084611.154560Z/party-new-jobs.png",
+      "sha256": "f790455348ada0a1b79339d604c30e2b8b66e5d250ebdb54dc8b8eecdcc11c75"
+    },
+    {
+      "path": "build/art/equipment-preview/ui/20260919T084611.154560Z/report.json",
+      "sha256": "e880b3d1d9c00f9afc4417d15ddfb2c4cd30ee77852f90df109fe2f7ca2f82b5"
+    },
+    {
+      "path": "build/art/equipment-preview/ui/20260919T084613.847931Z/report.json",
+      "sha256": "ac4e740b546cf06d5a7e80ef4e3bab3347dc12e60463cb883c13aee96b32a30d"
+    },
+    {
+      "path": "build/art/equipment-preview/ui/20260919T084620.325250Z/report.json",
+      "sha256": "083ecede368dbefa2c6704ed3ef60322a890d533348c429c41373c5dba804071"
+    },
+    {
+      "path": "build/art/generated-equipment/tests/20260919T084554.026234Z/report.json",
+      "sha256": "42ca637c1ae9326b6992906bfdbb3ff5eb9a3ada35ea206ded9aa6608c1e3191"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/generated-116-wheel0.png",
+      "sha256": "6e9b0da75c5f205f031e4fef1903a4c47201cb26b5779d44c3e64886272394a0"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/generated-117-wheel0.png",
+      "sha256": "c8c60f6acead73c5ea85841a34cc1581edb55eafddf4e3d9a0cad15888f2c652"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/generated-118-wheel0.png",
+      "sha256": "6ee944e98384be3733284234551504519dbe73dc14b792f275336a5ae39650c6"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/generated-119-wheel0.png",
+      "sha256": "c9dbb5a6dd10440e2d9b24c19cac26599208ed895c867f26d63cbeae0f810459"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/generated-120-wheel0.png",
+      "sha256": "e3df53fe19ac3ef72399ee4db6cc09846b520e91286bb965fbaf6afd58660e10"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/generated-121-wheel0.png",
+      "sha256": "5d2425e3fe642a651e6f85704559d156066513c853da2dbee54741ce337af75e"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/generated-122-wheel0.png",
+      "sha256": "71b8d3bcf7607fcee609cf11879ed3622547fe0f05c755c166aa6134d7a35f41"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/generated-123-wheel0.png",
+      "sha256": "05039672c480f1f96ced62fdb4934c33a8ebe73802334fbb1956d798ae5e7ff2"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/generated-124-wheel0.png",
+      "sha256": "d08bf5c7a773fc21610348feeb87b0ca18bb987baf87a777e471233bccc20dd4"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/generated-125-wheel0.png",
+      "sha256": "640e5ac741a6ccece047889bf08678ddcdfb7abb5ef98b342069c3fbb7d5f080"
+    },
+    {
+      "path": "build/art/generated-portraits/ui/20260919T084511.599379Z/report.json",
+      "sha256": "26b40ffbcac6bcc3652942792e8c9bcb543696255a464f56733a1894dda95436"
+    },
+    {
+      "path": "build/art/generated-status/tests/20260919T084626.794540Z/report.json",
+      "sha256": "62d9825360af75e372b1c4862d177dca3835413069a1b0fd97f23aaabab15874"
+    },
+    {
+      "path": "build/art/native-consumer-audit/20260919T085239.324326Z/report.json",
+      "sha256": "8778121159d8380c69db08c9dd6ec2a2afe4d058871d5c3f8d18969618d3ac06"
+    },
+    {
+      "path": "build/art/native-event-entry/20260919T085418.256330Z/event203.gba",
+      "sha256": "c36ea27b0ae6bd1de17362d480a5ddaaf2a64a1e0ba36b2c885c11f9b302033c"
+    },
+    {
+      "path": "build/art/native-event-entry/20260919T085418.256330Z/ready.iwram",
+      "sha256": "e91faee50aa1cb9bd17b9be16b3869ad42f12f5c5a33a5aa1f5287bf66a39c14"
+    },
+    {
+      "path": "build/art/native-event-entry/20260919T085418.256330Z/ready.oam",
+      "sha256": "15996b7e66e37aacc676c6a222cf78676e1086d6d3ccaad8369d237c26f084f8"
+    },
+    {
+      "path": "build/art/native-event-entry/20260919T085418.256330Z/ready.palette",
+      "sha256": "d9eecacbd7f3b0a82fdf21ac52be064859eaba86549b682f6fa44345dc493da5"
+    },
+    {
+      "path": "build/art/native-event-entry/20260919T085418.256330Z/ready.png",
+      "sha256": "41d7b8356b4db5d52061c4c0fd19bef38b7121d06d1e3ba0acbda7aaaa08a19a"
+    },
+    {
+      "path": "build/art/native-event-entry/20260919T085418.256330Z/ready.ram",
+      "sha256": "4ebe96677f60f9ba89864f65c672fddf09200f63fa11a8c0e6b81fbc6621739a"
+    },
+    {
+      "path": "build/art/native-event-entry/20260919T085418.256330Z/ready.state",
+      "sha256": "c54b86a733335fff7eba5812bdd6c6c21f500dfb04e48ec9989983abe04f29ef"
+    },
+    {
+      "path": "build/art/native-event-entry/20260919T085418.256330Z/ready.vram",
+      "sha256": "53383e262d152cca5019bdafd6cd940dc074bdc1e4793c1e9589b87a7ac8e108"
+    },
+    {
+      "path": "build/art/native-event-entry/20260919T085418.256330Z/report.json",
+      "sha256": "a71d43adff8f58a0d759d919e2e0c0fab22c418a290289488b147020420f99ce"
+    },
+    {
+      "path": "build/art/samurai-fight/20260919T034834.276542Z/report.json",
+      "sha256": "14335b8e720da505c40c5e5255b2bae10aa26c201cb94bc2a1b07c555009f45a"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T084510.795191Z/001-test-art-native-portraits-ui.log",
+      "sha256": "81cae96be34293ecea31bb06e148731d95aff90a47116adeedcb4fe7b6caa77a"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T084510.795191Z/002-test-art-native-equipment-ui.log",
+      "sha256": "339217b5184cd3b8bc159036c3e9a7e8821e4751433e1b216a54da8924b5b6ee"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T084510.795191Z/003-test-art-native-preview-inventory.log",
+      "sha256": "1baabfa9de5f528b512e9f05bb64ffe3956f41b6e8cedc6ae784a6ff9c6d508d"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T084510.795191Z/004-test-art-native-preview-buy.log",
+      "sha256": "7c5ce34c3573aef53f6844ea2e43a1a0aae29de11d2f1ce8a0e3e8a7a67a6e9b"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T084510.795191Z/005-test-art-native-preview-sell.log",
+      "sha256": "ab41b9442fdec91c7df1542000c78d854de6afa2611733beb8d6b99f3807f177"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T084510.795191Z/006-test-art-native-status-icons.log",
+      "sha256": "f089d952409cfb3d08fc3c8946f4dddfaceaf28efd1fc135b66d71e58ed2b03a"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T084510.795191Z/report.json",
+      "sha256": "2f46db4c391ae8a56ef80be32817791b9ac904582f66562fd94ed7a53288f3c9"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T085238.622031Z/001-audit-art-native-consumers.log",
+      "sha256": "937037ce8df018f6212ac848c4081853a73ff56abbbc77e7cb49561806bb6889"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T085238.622031Z/report.json",
+      "sha256": "789f68bc88738ca1571cb8893279d17cd18c50d7f46d6586d2202dd34098f2df"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T085417.539868Z/001-test-art-native-event-confirm.log",
+      "sha256": "0cde959f37f37f553a7f4cdf49c9d60373e959ef41ebaff9013024cc6258c37c"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T085417.539868Z/report.json",
+      "sha256": "9da83be4e5d5fbc326abf3e3c3b861faac34de76ffc4876acf6f05d35fe644fd"
+    },
+    {
+      "path": "notes/native-art-all-class-water-evidence.json",
+      "sha256": "0912aecccc3da2e4f0bc0da586faa466a2e268ad36a22f4f18193098748254bf"
+    },
+    {
+      "path": "notes/native-art-current-combo-evidence.json",
+      "sha256": "bc241a1a88a4933155468f869f26585883a935586d2d3e6e81c3df3f5bf3192f"
+    },
+    {
+      "path": "notes/native-art-native-casting-effects-evidence.json",
+      "sha256": "e7426a72814d95ff776a516e8bcfdc89a261fd0418a1bb6a37a1ccc18e2155f8"
+    },
+    {
+      "path": "notes/native-art-native-combo-evidence.json",
+      "sha256": "c87f16c1a8438ce14be9100e16df793f71b6f8e0816de9e26d7608aa73917b01"
+    },
+    {
+      "path": "notes/native-art-native-performance-evidence.json",
+      "sha256": "579d89c256eec9b62cf1c1cca7402044c9a3affb92faf43d08618e808dea7f29"
+    }
+  ]
+}

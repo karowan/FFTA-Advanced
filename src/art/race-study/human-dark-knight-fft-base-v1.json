@@ -1,0 +1,38 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Tool default; version not exposed",
+  "settings": "Prompt and two reference images; other settings tool-managed.",
+  "prompt": "Turn the fifth sprite in image 1 into the Human Dark Knight from image 2. Image 2 supplies the design: rounded enclosed helmet, black face opening with pale eyes, dark armor with bronze trim, loose blue trousers and cream cloth tabard. No horns. Image 1 supplies the same Human pixel base, size, neutral pose, slightly elevated camera and simple pixel art. Replace the cook completely, including his exposed face and hair. No held sword. Keep the entire row and its layout.",
+  "references": [
+    {
+      "path": "build/art/class-concepts-2026-09-19/human-dark-knight-template.png",
+      "role": "Native Human style and pixel base",
+      "sha256": "190b53604e24af69ed53d09a35e9c8f2ee7880aead23195d10bd684348dda408"
+    },
+    {
+      "path": "build/art/illustrated-class-concepts-v2-2026-09-19/human-dark-knight-fft-redesign-white.jpg",
+      "role": "User-approved replacement concept",
+      "sha256": "487313aa8b618e8927a06c90fc6fc6aad576bcde1b0c38d8ae2f0ab7e64e6ffa"
+    }
+  ],
+  "source": "build/art/approved-class-sprites-2026-09-19/human-dark-knight-fft-base-v1-generated.png",
+  "conversion": {
+    "logicalGrid": [
+      160,
+      64
+    ],
+    "crop": [
+      128,
+      16,
+      160,
+      48
+    ],
+    "resampling": "nearest",
+    "palette": "Generated colors retained for base design review",
+    "sharedPixelOverride": "Do not composite exposed native face or hair over the approved enclosed helmet."
+  },
+  "status": "New base from approved redesigned concept; awaiting sprite review. Animation remains paused.",
+  "sourceSha256": "044b177ba276dfbf09ef68fcc64f9cae35fffe7ae75089f759f2457fb2ce9596",
+  "output": "build\\art\\approved-class-sprites-2026-09-19\\human-dark-knight-fft-base-v1-grid.png",
+  "outputSha256": "2bad0cd9b4503ccb3584ad14ae45a5b91f98f2f932fff8a8d7691d960d866d57"
+}

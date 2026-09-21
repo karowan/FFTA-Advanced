@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Use case: stylized-concept. Make ONE original Human character base sprite for Final Fantasy Tactics Advance, to establish a DISTINCT CHARACTER DESIGN before animation.\nAttached image shows four original FFTA characters. It is ONLY a shared visual-language reference: tiny scale, head-to-body ratio, three-quarter down-left view, simple pixel clusters, outline weight and restrained shading. None is a character/costume/hairstyle template. Do NOT trace, recolor, combine their clothing, retain a cap silhouette, or copy their hair.\nNew original character: an older traveling cook with a completely BALD uncovered rounded head, warm tan skin, a small dark jaw beard, a cream shirt with rolled-up sleeves, ochre apron with a split lower hem, broad dark teal waist sash tied at his anatomical left side, dark brown trousers and stout ankle boots. Bare hands. No hat, hair, headband, shoulder armor, vest armor, belt buckle, weapon, utensils, cape, or bags. The bald dome, compact beard, rolled sleeves and apron/sash are the four identifying features. This must not look like the Soldier wearing another color.\nSingle quiet centered standing pose, down-left three-quarter, both feet visible. Tiny native FFTA proportions, roughly 16-18 logical pixels wide and 26-28 tall within a 32x32 logical cell. One-pixel eye; no huge anime eye. Max 15 flat colors, dark one-pixel outline, two or three tone clusters per material, no gradients, soft light, subpixel texture or individual beard hairs. Generate a genuinely small sprite enlarged as uniform hard square pixels, not modern detailed pixel art.\nOne 1024x1024 transparent image containing ONLY the full character, with generous empty border on every side. No ground shadow or oval, glow, grid, labels, text or reference sprites. Design silhouette and readability are the priority.",
+  "references": [
+    "build/art/race-study-2026-09-19/human-multi-style-reference.png"
+  ],
+  "status": "distinct original design gate before per-pose generation"
+}

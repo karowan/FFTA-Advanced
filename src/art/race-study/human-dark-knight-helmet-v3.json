@@ -1,0 +1,38 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Tool default; version not exposed",
+  "settings": "Prompt and two referenced image paths only; other settings tool-managed.",
+  "prompt": "Correct only the rightmost sprite's helmet in image 1 using image 2. In image 2 the pointed gold-edged faceplate is on the viewer's right; the tall swept spike on the viewer's left is the BACK of the helmet, not a frontal horn. The sprite faces left, so rotate the helmet accordingly: closed faceplate and narrow visor toward the viewer's left, swept rear crest toward the viewer's right. Match the slight overhead three-quarter view of the other sprites. Keep the body, colors, pixel scale and entire row layout unchanged.",
+  "references": [
+    {
+      "path": "build/art/approved-class-sprites-2026-09-19/human-dark-knight-helmet-v2-generated.png",
+      "role": "Edit target",
+      "sha256": "8f922d87744ea5b76cefcb3a4158adad4997f26622a9d460910fe87e9fc315b7"
+    },
+    {
+      "path": "build/art/illustrated-class-concepts-v2-2026-09-19/human-dark-knight.png",
+      "role": "Helmet structure and orientation reference",
+      "sha256": "b98d90f3ec8239ce16dfcddf4c2930ff0cb226e0d5b1022957043d4b6452d720"
+    }
+  ],
+  "source": "build/art/approved-class-sprites-2026-09-19/human-dark-knight-helmet-v3-generated.png",
+  "conversion": {
+    "logicalGrid": [
+      160,
+      64
+    ],
+    "crop": [
+      128,
+      16,
+      160,
+      48
+    ],
+    "resampling": "nearest",
+    "palette": "Generated colors retained",
+    "sharedPixelOverride": "Closed helmet covers face and hair; do not restore exposed anatomy."
+  },
+  "status": "Helmet orientation revised: taller rear crest to viewer right, visor to viewer left. Awaiting user review. Animation remains paused.",
+  "sourceSha256": "1f3e9462d86bc87283f8d8fdbcf61b4eb7728a2129e39d7d33a5f9ded414f5e3",
+  "output": "build/art/approved-class-sprites-2026-09-19/human-dark-knight-helmet-v3-grid.png",
+  "outputSha256": "1bd45adf6863abb25b3fa1ce4b54dcf738f64da135d502ccf4c97aaab3f5f88f"
+}

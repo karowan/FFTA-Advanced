@@ -1,0 +1,8 @@
+{
+  "provider": "built-in imagegen",
+  "model": "gpt-image-2",
+  "prompt": "Use case: stylized-concept. Asset type: one original pixel-art inventory icon for the new Viking axe weapon family in a Final Fantasy Tactics Advance expansion. Technical import draft, not final acceptance. Draw one compact single-headed bearded battle axe diagonally from lower left handle to upper right steel blade, with a short dark walnut haft, tiny warm brass binding, broad silver crescent cutting edge, dark steel inner blade. One weapon only, no character or hand, no duplicated angles. Native GBA tactical-RPG icon style with strong readable silhouette and chunky clustered pixels. Design as a 16x16 logical pixel icon enlarged crisply, limited palette around 8 opaque colors, warm dark-brown outline, ivory highlight and grey-blue steel. Transparent background with ample margins. No lettering, no text, no labels, no cast shadow, no background scene, no checkerboard drawn into image, no fine engraving or glowing aura. Keep the axe distinct from swords and hammers and visually legible after reduction to 16x16.",
+  "source": "build/art/imagegen/equipment/axe-transport-v1.png",
+  "status": "Temporary generated inventory axe; held/projectile weapon integration and production art separate.",
+  "sourceSha256": "e65ed727ef55d7a61ca8446de0deaeb65007256e304490da82b28d8279aae008"
+}

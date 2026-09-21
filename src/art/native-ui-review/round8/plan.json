@@ -1,0 +1,111 @@
+{
+  "prompt": "Edit this exact SIX-FRAME Samurai movement sheet for COLOR CONSISTENCY. Image 1 is the edit target: three 32x32 front poses on the top row, three 32x32 rear poses on the bottom row. The MIDDLE pose of each row is the accepted neutral color reference and must stay unchanged. Recolor the four OUTER step poses to match those middle frames. Keep every pose, limb placement, facial/eye shape, helmet silhouette, pixel grid, stride, cell spacing and transparency unchanged. Bright red lacquer armor with the same gold trim in all six; charcoal-black cloth sleeves and trousers; same small pale/yellow skin-colored face and exposed hands; the waist scarf stays the same MUTED mauve-gray from the middle frames, not red, white or blue. Do not change large sleeve/arm areas into skin: especially the screen-left arm in BOTTOM-RIGHT must retain the same dark sleeve and red shoulder armor as the bottom-middle, with only the small hand using skin colors. Keep gold shin guards consistent in every step. Lighting, highlights and material color ramps stay fixed across the cycle; no bright white flashes on armor or trousers. Image 2 is original costume/anatomy reference only: it shows charcoal trousers, dark sleeves and separate waist scarf; retain the already accepted muted scarf color of image 1. Image 3 contains the ONLY available native colors. Coarse actual 32x32 pixel-art per frame, no new fine detail. Return exactly the same 3-column 2-row sheet and canvas. Transparent background, no text, no extra frames.",
+  "references": [
+    {
+      "path": "build/art/samurai-walk-consistency-2026-09-20/movement-edit.png",
+      "sha256": "ff1109f6977cb8867dd290c1f59a42d20f43f35407b1cb4d8c4de30ab1f248ca"
+    },
+    {
+      "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+      "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+    },
+    {
+      "path": "build/art/samurai-walk-consistency-2026-09-20/native-colors.png",
+      "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+    }
+  ],
+  "sources": [
+    {
+      "path": "build/art/native-human-integration-2026-09-20/human-samurai/p000.png",
+      "sha256": "5752a6413395ad20851766e9e8aa59f65ad6dd56ec3817ca061f89753fb689fd"
+    },
+    {
+      "path": "build/art/native-human-integration-2026-09-20/human-samurai/p001.png",
+      "sha256": "2fbe4a56e9b68e9a919cf8b6eb9cc76e4ae7b5aaafee5cf711b72ef63178b76b"
+    },
+    {
+      "path": "build/art/native-human-integration-2026-09-20/human-samurai/p002.png",
+      "sha256": "6e0ed8c207d05f733c119b6ddfa70b51b4e957a60b93b75f7042770767c93905"
+    },
+    {
+      "path": "build/art/native-human-integration-2026-09-20/human-samurai/p003.png",
+      "sha256": "d4d9dabdcea4b85ad4752d66cb3e690e82c0c485cf46a443c43e432f6733e007"
+    },
+    {
+      "path": "build/art/native-human-integration-2026-09-20/human-samurai/p004.png",
+      "sha256": "a234812767b4499859c03dc4a981abb6128cee26c9c3c147ea42d70b74b43e21"
+    },
+    {
+      "path": "build/art/native-human-integration-2026-09-20/human-samurai/p005.png",
+      "sha256": "c15bd7194ed675e988264355c769608add4d386f8c0e1708b8dba28ee972e9e4"
+    }
+  ],
+  "palette": [
+    123,
+    139,
+    148,
+    16,
+    16,
+    8,
+    139,
+    106,
+    115,
+    255,
+    255,
+    238,
+    98,
+    41,
+    82,
+    172,
+    82,
+    8,
+    238,
+    139,
+    0,
+    255,
+    238,
+    0,
+    189,
+    8,
+    8,
+    238,
+    65,
+    57,
+    255,
+    172,
+    156,
+    246,
+    213,
+    255,
+    197,
+    180,
+    197,
+    131,
+    32,
+    222,
+    172,
+    123,
+    255,
+    213,
+    189,
+    255
+  ],
+  "grid": [
+    3,
+    2
+  ],
+  "cell": [
+    32,
+    32
+  ],
+  "fixedPoses": [
+    "p001",
+    "p004"
+  ],
+  "revisedPoses": [
+    "p000",
+    "p002",
+    "p003",
+    "p005"
+  ]
+}

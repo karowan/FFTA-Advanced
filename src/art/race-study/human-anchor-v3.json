@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Create a two-frame low-resolution sprite art calibration for Final Fantasy Tactics Advance using the attached native frame pair as the exact POSE AND PIXEL-SCALE TEMPLATE. The source has a 64x32 logical pixel canvas enlarged 24 times. Output 1536x768, preserving the same logical 64x32 grid. Left 32x32 cell is front down-left; right is back up-right.\nInvent a plain Human traveler wearing a rust-red short sleeved tunic, cream undershirt, slate trousers, brown boots and a cream cloth headband over SHORT flat brown hair. No weapons, equipment, belt pouch, hat or cape. A distinct original costume from the supplied green soldier.\nCRITICAL: keep the template's small head/body relationship and tiny face; whole figure 16 pixels wide and 28 tall. NOT giant-eyed modern chibi. Exactly one logical dark pixel for the visible eye. Hair has just a dark shape and one brown highlight cluster. Torso uses just three broad tone areas. Hands are tiny two-pixel groups. Clothes have no decorative detail. Every painted pixel is a sharp square 24x24 block. At most 15 flat colors. No antialiasing or texture or gradients. Match the donor torso and foot landmarks, including top and ground height. Do not paste or recolor donor costume.\nThis is one standing/passing design anchor pair, not a movement sheet. Same character in both views, no variations. Completely flat solid #FF00FF background with no shadows, labels, grid or glow. Native GBA sparseness is more important than beauty or detail.",
+  "references": [
+    "build/art/race-study-2026-09-19/human-anchor-reference.png"
+  ],
+  "status": "Two-pose design anchor experiment; not accepted"
+}

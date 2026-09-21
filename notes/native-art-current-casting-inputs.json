@@ -1,0 +1,13 @@
+{
+  "romSha1": "5a14e6c7b69f9f9984a6965faf5740d3b318e41a",
+  "directory": "build/art/generated-projectile/20260919T035837.343332Z",
+  "stem": "generated-ready",
+  "report": "report.json",
+  "hashes": {
+    "reportSha256": "9a69e7db51bf406d5810d03b826bbdf2ee132f799412a45df635521bb5f7445f",
+    "stateSha256": "cdb56e678dda8071138ad8fbe07831af181048818f0fcf04bbaaa2057c2313a0",
+    "ramSha256": "520aba6d848bf685be27d306c081d9f129d557860cdbdd433b2db8982dc5c5a6",
+    "iwramSha256": "973308378fe780c5e32fee54c9229335dda16728e998bff2cb7e8e38248e5988"
+  },
+  "scope": "Existing passed current-ROM projectile scenario before its action, with four generic new classes allocated natively. Reuse without reconstructing or rewriting saved actors."
+}

@@ -1,0 +1,135 @@
+{
+  "schema": 1,
+  "description": "User-approved round8 exact imports, original palette routing, all ten portrait menus, both equipment consumers, and Samurai movement/Fight. No gameplay/save changes; prior campaign/save evidence retained.",
+  "timeoutSeconds": 300,
+  "steps": [
+    {
+      "id": "test-approved-import",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "approved-art"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-approved-round8.py"
+      ]
+    },
+    {
+      "id": "test-approved-contract",
+      "runtime": "python",
+      "kind": "static",
+      "suites": [
+        "approved-art"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-reviewed-native-contract.py",
+        "--manifest",
+        "build/art/approved-first-pass-2026-09-20/candidate.json"
+      ]
+    },
+    {
+      "id": "test-approved-entry",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "approved-art"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-reviewed-palette-entry.py",
+        "--native",
+        "--manifest",
+        "build/art/approved-first-pass-2026-09-20/candidate.json",
+        "--entry-index",
+        "build/art/approved-first-pass-2026-09-20/entry-latest.json"
+      ]
+    },
+    {
+      "id": "test-approved-menus",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "approved-art"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-generated-portraits-ui.py",
+        "--manifest",
+        "build/art/approved-first-pass-2026-09-20/candidate.json"
+      ]
+    },
+    {
+      "id": "test-approved-equipment",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "approved-art"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-equipment-preview-native.py",
+        "--manifest",
+        "build/art/approved-first-pass-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/approved-first-pass-2026-09-20/entry-latest.json"
+      ],
+      "requires": [
+        "test-approved-entry"
+      ]
+    },
+    {
+      "id": "test-approved-inventory-ui",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "approved-art"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--manifest",
+        "build/art/approved-first-pass-2026-09-20/candidate.json"
+      ]
+    },
+    {
+      "id": "test-approved-shop-ui",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "approved-art"
+      ],
+      "timeoutSeconds": 300,
+      "args": [
+        "scripts/test-equipment-preview-ui.py",
+        "--manifest",
+        "build/art/approved-first-pass-2026-09-20/candidate.json",
+        "--shop"
+      ]
+    },
+    {
+      "id": "test-approved-fight-116",
+      "runtime": "python",
+      "kind": "runtime",
+      "suites": [
+        "approved-art"
+      ],
+      "timeoutSeconds": 240,
+      "args": [
+        "scripts/test-samurai-fight.py",
+        "--current",
+        "build/art/approved-first-pass-2026-09-20/candidate.json",
+        "--reviewed-entry",
+        "--entry-index",
+        "build/art/approved-first-pass-2026-09-20/entry-latest.json",
+        "--job",
+        "116"
+      ],
+      "requires": [
+        "test-approved-entry"
+      ]
+    }
+  ]
+}

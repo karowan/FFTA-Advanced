@@ -1,0 +1,340 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 1800,
+  "scope": "Chemist end-to-end development. Current STATUS distinguishes installed, tested and pending batch work.",
+  "steps": [
+    {
+      "id": "worktree-prerequisites",
+      "runtime": "python",
+      "args": [
+        "scripts/check-worktree-prerequisites.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-runner-self",
+      "runtime": "python",
+      "args": [
+        "scripts/test-test-runner.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-installed-fell-original-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-exposed-native-executor.py",
+        "--fell",
+        "--current"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "build-samurai-private",
+      "runtime": "python",
+      "args": [
+        "scripts/build-samurai-probe.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "prepare-samurai-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-executor.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private",
+        "test-installed-fell-original-executor"
+      ]
+    },
+    {
+      "id": "test-samurai-native",
+      "runtime": "python",
+      "args": [
+        "scripts/test-samurai-native.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "test-blade-ward-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/test-blade-ward-executor.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-samurai-executor"
+      ]
+    },
+    {
+      "id": "prepare-samurai-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/prepare-samurai-battle.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-samurai-private"
+      ]
+    },
+    {
+      "id": "audit-chemist-native",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/audit-native.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "build-chemist",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/build.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "prepare"
+    },
+    {
+      "id": "prepare-chemist-battle",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/prepare-battle.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "build-chemist"
+      ]
+    },
+    {
+      "id": "test-chemist-game",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/test-game.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-chemist-battle"
+      ]
+    },
+    {
+      "args": [
+        "scripts/jobs/chemist/test-choices-game.py"
+      ],
+      "requires": [
+        "prepare-chemist-battle"
+      ],
+      "id": "test-chemist-choices-game",
+      "kind": "test",
+      "suites": [
+        "chemist"
+      ],
+      "runtime": "python"
+    },
+    {
+      "id": "prepare-chemist-executor",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/prepare-executor.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "prepare",
+      "requires": [
+        "prepare-chemist-battle"
+      ]
+    },
+    {
+      "id": "test-chemist-native",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/test-native.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-chemist-executor"
+      ]
+    },
+    {
+      "args": [
+        "scripts/jobs/chemist/test-supports.py"
+      ],
+      "runtime": "python",
+      "kind": "test",
+      "suites": [
+        "chemist"
+      ],
+      "requires": [
+        "prepare-chemist-executor"
+      ],
+      "id": "test-chemist-supports"
+    },
+    {
+      "requires": [
+        "prepare-chemist-executor"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "args": [
+        "scripts/jobs/chemist/test-menu.py"
+      ],
+      "id": "test-chemist-menu",
+      "kind": "test",
+      "runtime": "python"
+    },
+    {
+      "id": "test-chemist-state",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/test-state.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-chemist-executor"
+      ]
+    },
+    {
+      "id": "test-chemist-prevention",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/test-prevention.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-chemist-executor"
+      ]
+    },
+    {
+      "id": "test-chemist-inoculation-game",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/test-inoculation-game.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-chemist-battle"
+      ]
+    },
+    {
+      "id": "test-chemist-display",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/test-display.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-chemist-executor"
+      ]
+    },
+    {
+      "id": "test-chemist-reactions",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/test-reactions.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-chemist-executor"
+      ]
+    },
+    {
+      "id": "audit-reaction-queue",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/audit-reaction-queue.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test"
+    },
+    {
+      "id": "test-chemist-auto-potion-native",
+      "runtime": "python",
+      "args": [
+        "scripts/jobs/chemist/test-auto-potion-native.py"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-chemist-executor"
+      ]
+    },
+    {
+      "id": "test-reaction-queue",
+      "runtime": "python",
+      "args": [
+        "scripts/test-reaction-queue.py",
+        "--chemist"
+      ],
+      "suites": [
+        "chemist"
+      ],
+      "kind": "test",
+      "requires": [
+        "prepare-chemist-executor"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": 2,
+  "kind": "job-icon",
+  "job": 116,
+  "paletteReferenceJob": 6,
+  "width": 32,
+  "height": 16,
+  "status": "Technical POC; aesthetic review pending",
+  "authorship": "Character region cleared to a blank background and drawn manually in LibreSprite. New kabuto, flared neck guards, uncovered face and lamellar shoulder armor. Original UI frame and native palette retained; SAM lettering manually drawn.",
+  "pixelSha256": "0cd880bf2a46394a9729c8bdd7d9654479d3e1f3e4194621119cd0eb91df1ba9",
+  "rows": [
+    "01111111111111111111111111111110",
+    "13337333333373333333333333333bc1",
+    "1333371111173333333bbbbbbbbbbbb1",
+    "133331744471333333bbcccccccccb31",
+    "13311147774111333442244444442241",
+    "13312222222441333433343334344431",
+    "13314444444441333434443434334331",
+    "13311617771611333433343434343431",
+    "13122617771622133444343334344431",
+    "13144677777644133444343434344431",
+    "13111666666611133433343434344431",
+    "13331222122213333444444444444441",
+    "13331444444413333bbcccccccccbb31",
+    "133314222224133333bbbbbbbbbbb3b1",
+    "13331111111113333ccccccccccccc21",
+    "01111111111111111111111111111110"
+  ]
+}

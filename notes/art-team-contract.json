@@ -1,0 +1,633 @@
+{
+  "schema": 1,
+  "scope": "Art-team reference snapshot for the accepted full-engineering build. Palette values and limits are technical metadata, not artwork or an import archive. Recompute before changing formats/allocations.",
+  "romSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "romSha256": "029547bb57325915a7d4a97f9e0e19b096645bf3d25d131c35c216ef6da41e78",
+  "manifestSha256": "9ea2a9f08521e78d19ec4895a2fdeb50ca45c3da9ce736bd344647921dba4f85",
+  "transparentIndex": 0,
+  "bodyCanvas": [
+    32,
+    32
+  ],
+  "body4bppBytes": 512,
+  "bodyTiles": 16,
+  "palettes": [
+    {
+      "selector": 0,
+      "fileOffset": "0x419d60",
+      "wordsRGB555": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ],
+      "displayRGB8": [
+        [
+          156,
+          139,
+          148
+        ],
+        [
+          16,
+          16,
+          8
+        ],
+        [
+          98,
+          131,
+          115
+        ],
+        [
+          255,
+          255,
+          238
+        ],
+        [
+          41,
+          74,
+          82
+        ],
+        [
+          172,
+          74,
+          8
+        ],
+        [
+          238,
+          139,
+          0
+        ],
+        [
+          255,
+          246,
+          0
+        ],
+        [
+          32,
+          82,
+          222
+        ],
+        [
+          90,
+          131,
+          255
+        ],
+        [
+          123,
+          205,
+          238
+        ],
+        [
+          197,
+          246,
+          238
+        ],
+        [
+          164,
+          197,
+          180
+        ],
+        [
+          32,
+          123,
+          8
+        ],
+        [
+          65,
+          197,
+          32
+        ],
+        [
+          131,
+          238,
+          32
+        ]
+      ],
+      "sha256": "800d6a0396bb08a0bb7d5c7decfe2d40df80191574e25996ed367e006d59bcef",
+      "note": "Index 0 is transparent. Display RGB is a simple channel expansion, not a calibrated emulator screenshot."
+    },
+    {
+      "selector": 1,
+      "fileOffset": "0x419d80",
+      "wordsRGB555": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ],
+      "displayRGB8": [
+        [
+          123,
+          139,
+          148
+        ],
+        [
+          16,
+          16,
+          8
+        ],
+        [
+          139,
+          106,
+          115
+        ],
+        [
+          255,
+          255,
+          238
+        ],
+        [
+          98,
+          41,
+          82
+        ],
+        [
+          172,
+          82,
+          8
+        ],
+        [
+          238,
+          139,
+          0
+        ],
+        [
+          255,
+          238,
+          0
+        ],
+        [
+          189,
+          8,
+          8
+        ],
+        [
+          238,
+          65,
+          57
+        ],
+        [
+          255,
+          172,
+          156
+        ],
+        [
+          246,
+          213,
+          255
+        ],
+        [
+          197,
+          180,
+          197
+        ],
+        [
+          131,
+          32,
+          222
+        ],
+        [
+          172,
+          123,
+          255
+        ],
+        [
+          213,
+          189,
+          255
+        ]
+      ],
+      "sha256": "a84d771ecee39e8bc3017653bdc1c61308b78cb96ad9566f3812f991c8ea52b8",
+      "note": "Index 0 is transparent. Display RGB is a simple channel expansion, not a calibrated emulator screenshot."
+    }
+  ],
+  "jobs": [
+    {
+      "job": 116,
+      "name": "Human Samurai",
+      "partyPaletteSelector": 1,
+      "opposingPaletteSelector": 0,
+      "resources": [
+        {
+          "id": 256,
+          "lifetime": "land",
+          "descriptorSlots": 84
+        },
+        {
+          "id": 257,
+          "lifetime": "water",
+          "descriptorSlots": 84
+        }
+      ],
+      "catalogSource": "build/art/imagegen/samurai/samurai-idle-v4.png",
+      "catalogConversion": "build/art/imagegen/samurai/native-v4-coverage/manifest.json",
+      "battleSourceException": null
+    },
+    {
+      "job": 117,
+      "name": "Human Dark Knight",
+      "partyPaletteSelector": 0,
+      "opposingPaletteSelector": 1,
+      "resources": [
+        {
+          "id": 258,
+          "lifetime": "land",
+          "descriptorSlots": 84
+        },
+        {
+          "id": 259,
+          "lifetime": "water",
+          "descriptorSlots": 84
+        }
+      ],
+      "catalogSource": "build/art/imagegen/human-dark-knight/idle-v1.png",
+      "catalogConversion": "build/art/imagegen/human-dark-knight/native-v1/manifest.json",
+      "battleSourceException": "Human Dark Knight uses separate march-v2-own-palette unless overridden"
+    },
+    {
+      "job": 118,
+      "name": "Bangaa Viking",
+      "partyPaletteSelector": 0,
+      "opposingPaletteSelector": 1,
+      "resources": [
+        {
+          "id": 260,
+          "lifetime": "land",
+          "descriptorSlots": 84
+        },
+        {
+          "id": 261,
+          "lifetime": "water",
+          "descriptorSlots": 84
+        }
+      ],
+      "catalogSource": "build/art/imagegen/bangaa-viking/idle-v2.png",
+      "catalogConversion": "build/art/imagegen/bangaa-viking/native-v2/manifest.json",
+      "battleSourceException": null
+    },
+    {
+      "job": 119,
+      "name": "Bangaa Dark Knight",
+      "partyPaletteSelector": 1,
+      "opposingPaletteSelector": 0,
+      "resources": [
+        {
+          "id": 262,
+          "lifetime": "land",
+          "descriptorSlots": 84
+        },
+        {
+          "id": 263,
+          "lifetime": "water",
+          "descriptorSlots": 84
+        }
+      ],
+      "catalogSource": "build/art/imagegen/bangaa-dark-knight/idle-v2.png",
+      "catalogConversion": "build/art/imagegen/bangaa-dark-knight/native-v2-spaced/manifest.json",
+      "battleSourceException": null
+    },
+    {
+      "job": 120,
+      "name": "Nu Mou Chemist",
+      "partyPaletteSelector": 0,
+      "opposingPaletteSelector": 1,
+      "resources": [
+        {
+          "id": 264,
+          "lifetime": "land",
+          "descriptorSlots": 84
+        },
+        {
+          "id": 265,
+          "lifetime": "water",
+          "descriptorSlots": 84
+        }
+      ],
+      "catalogSource": "build/art/imagegen/nu-mou-chemist/idle-v1.png",
+      "catalogConversion": "build/art/imagegen/nu-mou-chemist/native-v1/manifest.json",
+      "battleSourceException": null
+    },
+    {
+      "job": 121,
+      "name": "Nu Mou Geomancer",
+      "partyPaletteSelector": 0,
+      "opposingPaletteSelector": 1,
+      "resources": [
+        {
+          "id": 266,
+          "lifetime": "land",
+          "descriptorSlots": 84
+        },
+        {
+          "id": 267,
+          "lifetime": "water",
+          "descriptorSlots": 84
+        }
+      ],
+      "catalogSource": "build/art/imagegen/nu-mou-geomancer/idle-v1.png",
+      "catalogConversion": "build/art/imagegen/nu-mou-geomancer/native-v1/manifest.json",
+      "battleSourceException": null
+    },
+    {
+      "job": 122,
+      "name": "Moogle Chemist",
+      "partyPaletteSelector": 0,
+      "opposingPaletteSelector": 1,
+      "resources": [
+        {
+          "id": 268,
+          "lifetime": "land",
+          "descriptorSlots": 84
+        },
+        {
+          "id": 269,
+          "lifetime": "water",
+          "descriptorSlots": 84
+        }
+      ],
+      "catalogSource": "build/art/imagegen/moogle-chemist/idle-v1.png",
+      "catalogConversion": "build/art/imagegen/moogle-chemist/native-v1/manifest.json",
+      "battleSourceException": null
+    },
+    {
+      "job": 123,
+      "name": "Moogle Bard",
+      "partyPaletteSelector": 0,
+      "opposingPaletteSelector": 1,
+      "resources": [
+        {
+          "id": 270,
+          "lifetime": "land",
+          "descriptorSlots": 84
+        },
+        {
+          "id": 271,
+          "lifetime": "water",
+          "descriptorSlots": 84
+        }
+      ],
+      "catalogSource": "build/art/imagegen/moogle-bard/idle-v1.png",
+      "catalogConversion": "build/art/imagegen/moogle-bard/native-v1/manifest.json",
+      "battleSourceException": null
+    },
+    {
+      "job": 124,
+      "name": "Viera Dancer",
+      "partyPaletteSelector": 0,
+      "opposingPaletteSelector": 1,
+      "resources": [
+        {
+          "id": 272,
+          "lifetime": "land",
+          "descriptorSlots": 84
+        },
+        {
+          "id": 273,
+          "lifetime": "water",
+          "descriptorSlots": 84
+        }
+      ],
+      "catalogSource": "build/art/imagegen/viera-dancer/idle-v1.png",
+      "catalogConversion": "build/art/imagegen/viera-dancer/native-v1/manifest.json",
+      "battleSourceException": null
+    },
+    {
+      "job": 125,
+      "name": "Viera Mystic Knight",
+      "partyPaletteSelector": 1,
+      "opposingPaletteSelector": 0,
+      "resources": [
+        {
+          "id": 274,
+          "lifetime": "land",
+          "descriptorSlots": 84
+        },
+        {
+          "id": 275,
+          "lifetime": "water",
+          "descriptorSlots": 84
+        }
+      ],
+      "catalogSource": "build/art/imagegen/viera-mystic-knight/idle-v1.png",
+      "catalogConversion": "build/art/imagegen/viera-mystic-knight/native-v1-spaced/manifest.json",
+      "battleSourceException": null
+    }
+  ],
+  "reservations": [
+    {
+      "stage": "classResources",
+      "reservation": [
+        "0x1d10000",
+        "0x1d80000"
+      ],
+      "note": "Stage-local reservation; parent and later child regions overlap. Do not sum free tails.",
+      "used": [
+        "0x1d10000",
+        "0x1d550a8"
+      ],
+      "remainingBytes": 175960
+    },
+    {
+      "stage": "portraits",
+      "reservation": [
+        "0x1d80000",
+        "0x1e80000"
+      ],
+      "note": "Stage-local reservation; parent and later child regions overlap. Do not sum free tails.",
+      "used": [
+        "0x1d80000",
+        "0x1dcfd0d"
+      ],
+      "remainingBytes": 721651
+    },
+    {
+      "stage": "actions",
+      "reservation": [
+        "0x1e80000",
+        "0x1f80000"
+      ],
+      "note": "Stage-local reservation; parent and later child regions overlap. Do not sum free tails.",
+      "used": [
+        "0x1e80000",
+        "0x1e9d2bc"
+      ],
+      "remainingBytes": 929092
+    },
+    {
+      "stage": "preview",
+      "reservation": [
+        "0x1d00000",
+        "0x1d04000"
+      ],
+      "note": "Stage-local reservation; parent and later child regions overlap. Do not sum free tails."
+    },
+    {
+      "stage": "livePalette",
+      "reservation": [
+        "0x1f90000",
+        "0x1fd0000"
+      ],
+      "note": "Stage-local reservation; parent and later child regions overlap. Do not sum free tails.",
+      "used": [
+        "0x1f90000",
+        "0x1fcd4c0"
+      ],
+      "remainingBytes": 11072
+    },
+    {
+      "stage": "equipment",
+      "reservation": [
+        "0x1f80000",
+        "0x1f84000"
+      ],
+      "note": "Stage-local reservation; parent and later child regions overlap. Do not sum free tails.",
+      "used": [
+        "0x1f80000",
+        "0x1f80165"
+      ],
+      "remainingBytes": 16027
+    },
+    {
+      "stage": "weapon",
+      "reservation": [
+        "0x1f84000",
+        "0x1f88000"
+      ],
+      "note": "Stage-local reservation; parent and later child regions overlap. Do not sum free tails.",
+      "used": [
+        "0x1f84000",
+        "0x1f84d4e"
+      ],
+      "remainingBytes": 12978
+    },
+    {
+      "stage": "effect",
+      "reservation": [
+        "0x1f88000",
+        "0x1f8c000"
+      ],
+      "note": "Stage-local reservation; parent and later child regions overlap. Do not sum free tails.",
+      "used": [
+        "0x1f88000",
+        "0x1f88434"
+      ],
+      "remainingBytes": 15308
+    },
+    {
+      "stage": "actionCompletion",
+      "reservation": [
+        "0x1f00000",
+        "0x1f80000"
+      ],
+      "note": "Stage-local reservation; parent and later child regions overlap. Do not sum free tails.",
+      "used": [
+        "0x1f00000",
+        "0x1f00e14"
+      ],
+      "remainingBytes": 520684
+    },
+    {
+      "stage": "nativePaletteTransport",
+      "reservation": [
+        "0x1f10000",
+        "0x1f80000"
+      ],
+      "note": "Stage-local reservation; parent and later child regions overlap. Do not sum free tails.",
+      "used": [
+        "0x1f10000",
+        "0x1f2cfe0"
+      ],
+      "remainingBytes": 340000
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "scripts/native_palette_transport.py",
+      "sha256": "82125c7410b89722c63749e57772f7a2984e70db492b96b23134f1cc771f3a55"
+    },
+    {
+      "path": "scripts/convert-generated-sprites.py",
+      "sha256": "5cd82cf0e38ef5af86c25f8e4cc727f9dde500b6992a9cc1d6df0a7e4891f10f"
+    },
+    {
+      "path": "scripts/generated_class_transport.py",
+      "sha256": "d95dcbf58529309468966049ca8329a2c9b1bee44eb424bb78a9766950ac4fd0"
+    },
+    {
+      "path": "scripts/generated_menu_icons.py",
+      "sha256": "f16786c1f20a6af9320a7b14b3aa060a671ef5499a0897dd25ad137b7abf1393"
+    },
+    {
+      "path": "scripts/generated_portrait_transport.py",
+      "sha256": "5cc8adb54ce332e17f4c9f946449f2ebabf1359ab08946f3905e999e15cfba27"
+    },
+    {
+      "path": "scripts/generated_action_transport.py",
+      "sha256": "4b12ae333809a7a5992c6ed0c1e77470edf7ca8ed3f0fd9a1292b63db844548e"
+    },
+    {
+      "path": "scripts/generated_animation_plan.py",
+      "sha256": "70efa925e8502ca73a3fad7a95041e1855b9493de17609e9ad52e66d9167371c"
+    },
+    {
+      "path": "scripts/live_action_plan.py",
+      "sha256": "a4469cc893e84f1fb1d18ea58a133858a0d3e0ac8f7baa9ff5065f15f24e4da1"
+    },
+    {
+      "path": "scripts/build-live-art-palette.py",
+      "sha256": "6bb91b888b333de2bbc729ad05d160a951ea011448d6dbf687cfca8bed6d66f4"
+    },
+    {
+      "path": "scripts/complete-generated-actions.py",
+      "sha256": "c7d18dd11df23e6f6aa2204baf5ba118b569a7fb52917add7a26852b7ba0c99f"
+    },
+    {
+      "path": "scripts/generated_equipment_transport.py",
+      "sha256": "d116ad350d90fcde310b8ba6dab838dd2407813c39a1b2a10079e85db42f048b"
+    },
+    {
+      "path": "scripts/generated_weapon_transport.py",
+      "sha256": "f87cc949e21f94cc256f2bce58691f2b12c62e39bc1bd6926db5d65386379b4f"
+    },
+    {
+      "path": "scripts/generated_effect_transport.py",
+      "sha256": "f69c869e718910258318c7d6881d5d0564ae21d92e5cb780043e9ac7e80f5635"
+    },
+    {
+      "path": "scripts/generated_status_transport.py",
+      "sha256": "4683d2e79fc1acbf04b3b9a16f21e90308f23ab2aaf0a131f8295e32fb117b6a"
+    },
+    {
+      "path": "src/engine/equipment-preview.c",
+      "sha256": "2bfbb98d62297e9fd73a8df5e5a9231f507b1ecbc64dea20fb2989929828bf94"
+    },
+    {
+      "path": "notes/native-art-build-inputs.json",
+      "sha256": "de1ad9a069e30dce0f8256da17202975a4a5672591df743b9f06b43e3e355da2"
+    }
+  ]
+}

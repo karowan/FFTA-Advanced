@@ -1,0 +1,40 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Tool default; version not exposed",
+  "settings": "Prompt and two referenced image paths; other settings tool-managed.",
+  "prompt": "Refine the rightmost Dark Knight in image 1 using the actual FFT sprite in image 2 as the helmet reference. Give him its sculpted rounded helmet, stronger metal brow and shadowed narrow face opening instead of the two large glowing eyes. Keep our dark armor, bronze trim, blue trousers and cream tabard. Match the FFTA proportions, slightly elevated camera, simple pixel scale and pose of the four sprites beside him. Keep the complete row layout.",
+  "references": [
+    {
+      "path": "build/art/approved-class-sprites-2026-09-19/human-dark-knight-fft-base-v1-generated.png",
+      "role": "Edit target",
+      "sha256": "044b177ba276dfbf09ef68fcc64f9cae35fffe7ae75089f759f2457fb2ce9596"
+    },
+    {
+      "path": "build/art/approved-class-sprites-2026-09-19/user-fft-dark-knight-sprite-16x.png",
+      "role": "User-supplied FFT sprite, enlarged 16x with nearest-neighbor sampling",
+      "sha256": "c58288de9fc40b61eff8c0de9769aadabc97c938d054bb8822d19ead785d4116"
+    }
+  ],
+  "originalReference": "build/art/approved-class-sprites-2026-09-19/user-fft-dark-knight-sprite.png",
+  "source": "build/art/approved-class-sprites-2026-09-19/human-dark-knight-fft-base-v2-generated.png",
+  "conversion": {
+    "logicalGrid": [
+      160,
+      64
+    ],
+    "crop": [
+      128,
+      16,
+      160,
+      48
+    ],
+    "resampling": "nearest",
+    "palette": "Generated colors retained for design review",
+    "sharedPixelOverride": "Do not restore exposed anatomy over the enclosed helmet."
+  },
+  "status": "FFT sprite-informed helmet revision awaiting user review. Animation remains paused.",
+  "originalReferenceSha256": "247a66a29bcadad01e59ce340408ce72b061b587b5e9045cebfa27b734629190",
+  "sourceSha256": "fe0943086989f9263f8f492815a5ca8d2f23e9567770b00930bc90722def6756",
+  "output": "build\\art\\approved-class-sprites-2026-09-19\\human-dark-knight-fft-base-v2-grid.png",
+  "outputSha256": "85f7624aa604450459087aa3bdb2c3d8f8084c9953462f6113e395c1408aecc4"
+}

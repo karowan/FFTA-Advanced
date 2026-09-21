@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "scope": "Retained failing synthetic formation23 shell; no campaign reachability claim.",
+  "inputs": {
+    "rom": {
+      "path": "build/art/connected/larger-encounter/20260919T081942.583224Z/native-formation23.gba",
+      "sha256": "95a96c5f80fbb37f43210ecccc67617d570bfbc48299143d210e9895cff7dca0"
+    },
+    "ram": {
+      "path": "build/art/largest-heap-diagnostic/20260919T082313.747085Z/first-invalid.ram",
+      "sha256": "5f057142f5a39797ef89b4671d60edea21916db5ff916931f90dbd6a42fdf62e"
+    },
+    "iwram": {
+      "path": "build/art/largest-heap-diagnostic/20260919T082313.747085Z/first-invalid.iwram",
+      "sha256": "de9d3e3f3c1fb2f798154cdb33ccbe21cdbbb20bd7af03b9c1d65b210015901c"
+    },
+    "diagnostic": {
+      "path": "build/art/largest-heap-diagnostic/20260919T082313.747085Z/report.json",
+      "sha256": "aeb1bb73996c74589120120f0b2c4da401e8a0514d01fc24b5310e18668c8cfa"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "round": 1,
+  "maxRounds": 5,
+  "tool": "built-in image_gen",
+  "model": "Not exposed",
+  "prompt": "Use case: style-transfer and identity-preserve. Refine ONE original bald cook base sprite to match original FFTA; image 1 (four native sprites) is the style/proportion/face authority, image 2 (cook) is ONLY original costume identity.\nTwo independent reviewers rejected the cook's broad frontal face, huge white cartoon eyes, too-tall proportions and excessive fine pixel texture. REDRAW its pixel construction to the sparse native visual language; keeping the old head geometry will fail.\nKeep original identity: bald human, tan skin, compact dark jaw beard, cream rolled sleeves, muted ochre split apron, teal waist sash with tail on anatomical left, brown trousers and ankle boots. No donor hats/hair/armor or new equipment.\nFACE: closely match the left-facing three-quarter facial wedge in image1. Leftward nose projection, tiny near eye as a narrow dark vertical mark, far/right eye as a smaller BUT CLEARLY SEPARATE dark mark toward the left facial edge. Both eyes readable. NO enormous white sclera or equally large eyes. Forehead compact and asymmetrical; retain uncovered bald scalp, one broad soft-colored highlight CLUSTER, not shine. Beard only a small muted jaw cluster.\nPROPORTIONS: 27 logical pixels total height, 15-17 wide; compact native head with very short legs, planted boots. Shorten the current lower body. Each material uses only 2-3 flat pixel clusters; remove sleeve creases, tiny apron folds, beard flecks and subpixel texture. Slightly mute orange/yellow. Maximum15 opaque flat colors plus transparency. Single-pixel dark contour.\nOutput one 1024x1024 transparent square representing a genuine32x32 pixel sprite enlarged32x nearest-neighbor: all edges and color changes on one uniform coarse square grid. One full character centered, transparent padding. No shadow, glow, ground oval, antialiasing, text, labels or grid. Aim for a sprite that could sit alongside the four originals at actual game size, not a modern pixel-art illustration.",
+  "references": [
+    "build/art/race-study-2026-09-19/user-face-reference.png",
+    "build/art/race-study-2026-09-19/human-distinct-base-v3.png"
+  ],
+  "status": "reviewed; see review-loop-outcome.json; not user accepted",
+  "source": "build\\art\\race-study-2026-09-19\\review-loop-1.png",
+  "sourceSha256": "4f2aff490b033aca2133f8832019af93d65531a0d68342b8757e63a447363dca",
+  "referenceSha256": [
+    "ce3f98d107f0328a6bb3728330f6de901f23a50364a82f99e0949773cd7101ee",
+    "7290ee1e7d52bd676dfa69d00941245ae6a545e5f9e122575f901c01f9e290b8"
+  ],
+  "productionAccepted": false
+}

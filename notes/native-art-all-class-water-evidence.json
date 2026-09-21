@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "romSha1": "6443725d256252afae127393945934961eb9abd6",
+  "scope": "Declared native water graphics inputs and retained acceptance evidence; provisional art, isolated profiles, no native campaign or timing acceptance.",
+  "records": [
+    {
+      "job": 116,
+      "directory": "build/art/generated-actions/battle/20260918T125351.577876Z",
+      "sha256": {
+        "report.json": "68614ff3f4cb6a0b3b94d04bff8583c4b484945601c68e1722aedff5c615f76d",
+        "generated/fixture.json": "565fbf553e113ed6e34cff6b5a19f73c8c936a63faf1dbe396e009e118c24733",
+        "generated-water.ram": "00ec705bd7c8532620f2756ce02aa43cb97f6f0df351c52e1f0292502a21c13b",
+        "generated-water.vram": "8ad92c7e97cc0b96ac68d48a208341a12c7fa61598c07ec96b7fc8a147fde32c",
+        "generated-water.palette": "3925d49e90b9d3f00b1b803413d5c2cc7201891b599700b5dfcb339dacb91e99",
+        "generated-water.oam": "006d886f779014d0dfd0b73831fb9110205b8d62ef6bcfa1c06cde388d26e374",
+        "generated-land-return.ram": "5ce778f16dd2694e5235c3ba9a1d3dcd79a49d354a8585e2f8ec892c13a1f554",
+        "generated-land-return.vram": "e7f3de64fc3e2a1b29e112872841b6a727acfb3a3da6d4b00895d0c742cefb67",
+        "generated-land-return.palette": "78afb85e977b6f2500e04058439b64c0bbd94ede9ee1889b8955c957d3353513",
+        "generated-land-return.oam": "22b051731ec1f744468a43bfdfd249e42ccec91bee84e3bddb2a68e9ff66e066"
+      },
+      "movementSampleFrames": 8
+    },
+    {
+      "job": 117,
+      "directory": "build/art/generated-actions/battle/20260918T125641.531303Z",
+      "sha256": {
+        "report.json": "5d8838259f42b66ae75d9600fb86e6ec7cb664b012feddb48d502254d2c4f4a6",
+        "generated/fixture.json": "565fbf553e113ed6e34cff6b5a19f73c8c936a63faf1dbe396e009e118c24733",
+        "generated-water.ram": "a6acc061c6aebd79ae6563b2272b1aeb6e675ee8bfff240194fd85762516e860",
+        "generated-water.vram": "f662e4fd1829d4871ab12b510a2d4f7d9a64862933859a1997f11a5b0473622e",
+        "generated-water.palette": "82cf3df741ae2b34cf2a154a52b036ddbcd56a6e500f01427a48d05a742d1a29",
+        "generated-water.oam": "a0985b0e037436aee26b3d96711e67f253e8813baf17c98ecccf9fb400dd0b93",
+        "generated-land-return.ram": "5d3470db68bfe63f237b4fb90a4317b0a9dac67b7dd49c904567fadceb4e8126",
+        "generated-land-return.vram": "1195f65da006904c22183271cbca9d7c4a29ea4bad70ee70133f5eebab17bdd4",
+        "generated-land-return.palette": "3a2efd47e309fbb0ade87a9a3b623eee04e6c06d882ad856e9f991c8c23093aa",
+        "generated-land-return.oam": "ce1df66970a8e5419a868c5c5a0fa1dd338436a5ebcffdcea5fb91041eba3614"
+      },
+      "movementSampleFrames": 1
+    },
+    {
+      "job": 118,
+      "directory": "build/art/generated-actions/battle/20260918T124621.849763Z",
+      "sha256": {
+        "report.json": "3fc371709826a54a83f99c4c5b544706aad81ca8bcfd8cfc7fb193dbef17d3f5",
+        "generated/fixture.json": "565fbf553e113ed6e34cff6b5a19f73c8c936a63faf1dbe396e009e118c24733",
+        "generated-water.ram": "ecfa6e443bf83eb8aac8054160f28efa3408d3d9cf4dfa61880a93d5105bbf6e",
+        "generated-water.vram": "13def6c3f345853cc1f1381b3545aaa4a916915214c9b8665fc972438dac1080",
+        "generated-water.palette": "b7cbcd4d0306f41e16f30eeb7a47672dd280613c94b738709f550b7b8434b20e",
+        "generated-water.oam": "a03dd7b854b3c8def4eca6cb6c865170c1a0a9996e695985ed79f0be0f375dc2",
+        "generated-land-return.ram": "c06b43fbcb9ac44c607ab1dad530497886345f15a8660eebd9a2030426cc70c7",
+        "generated-land-return.vram": "c5e0e232f1704bc433dc40bcbb98ef741b3386a6d288a3b601e1892459bbca82",
+        "generated-land-return.palette": "2557af9badb8ef79a7e3bedee67448d4e0ca3297885b1f3a56f8460b7829eabe",
+        "generated-land-return.oam": "7f37b96eecdaac385bfccf249e4f0a33cee4796a032519f12829b43116de4c06"
+      },
+      "movementSampleFrames": 8
+    },
+    {
+      "job": 119,
+      "directory": "build/art/generated-actions/battle/20260918T125704.085446Z",
+      "sha256": {
+        "report.json": "0da88b9e64ea4fe78713279dd88f44c1398525fb627ae962f5612fc460e80f16",
+        "generated/fixture.json": "565fbf553e113ed6e34cff6b5a19f73c8c936a63faf1dbe396e009e118c24733",
+        "generated-water.ram": "1eff6c3e524c5e029e7fd264651da1f3fcfacd0b77b3aa91d163e63a5506e3a9",
+        "generated-water.vram": "9a5feb86e79b3500918f375f49ae1ed0fbf323aa165609f29beb6364fda5f7bc",
+        "generated-water.palette": "b028046aad0c60b28ffa6a82dfa38d4b4b5ab0dfb7fa6301c4fa4b38e187b439",
+        "generated-water.oam": "a03dd7b854b3c8def4eca6cb6c865170c1a0a9996e695985ed79f0be0f375dc2",
+        "generated-land-return.ram": "31f4a8c2629d65e8636f1285a41a97c0055dc35225bdec7a65c4006974bf0c07",
+        "generated-land-return.vram": "fbea17c6bbf31b52cf576ec5cc357f7d91aab1ae88de19b9b6fd17e1c4969e0e",
+        "generated-land-return.palette": "71f87fd7a58b18d34f09efc612a2961c48dc1a8b0c0278c28ac805f1a2b2817c",
+        "generated-land-return.oam": "7f37b96eecdaac385bfccf249e4f0a33cee4796a032519f12829b43116de4c06"
+      },
+      "movementSampleFrames": 1
+    },
+    {
+      "job": 120,
+      "directory": "build/art/generated-actions/battle/20260918T125721.341693Z",
+      "sha256": {
+        "report.json": "ae3d9a94ae8c17f8bef0c7f66f73c945dc17abd4b43efe64f2d34b1112d34ade",
+        "generated/fixture.json": "565fbf553e113ed6e34cff6b5a19f73c8c936a63faf1dbe396e009e118c24733",
+        "generated-water.ram": "4fce5fd2659ff448b2dbc0e05c7bf3bdeb60b5c515b471ee076d30cc3bd4bd9d",
+        "generated-water.vram": "8af9cb53b62d9bc30e04ddfc3664a2cc96b96328500a874d606f723a4ba42eab",
+        "generated-water.palette": "ce6bdf10ac28f6e078ab4375231c93c97aea691269dd8ad69730fd090d3b63b2",
+        "generated-water.oam": "617c6bc5fff27edd21ddcbb92df107d364b2e38b2707f85b21a7d7c23e346e0d",
+        "generated-land-return.ram": "f4e5516b542624af0fa9dc88f3bef1ee5c50b1998e0ae9d7cbb1f876c6550ffc",
+        "generated-land-return.vram": "75c5385119cdcf0dfd360e2209ed85b7b1d05d84f947a77de51c6263a95f32e4",
+        "generated-land-return.palette": "1cfe90fdf17d89fe9a88820a1e989d9fc614cf1cb61dc527980ebde95a0abd89",
+        "generated-land-return.oam": "8d270f31dc46a3e5215ecd35ba4310c3cc79897bf0b58f2a3015d6056fdc2b9e"
+      },
+      "movementSampleFrames": 1
+    },
+    {
+      "job": 121,
+      "directory": "build/art/generated-actions/battle/20260918T125740.513038Z",
+      "sha256": {
+        "report.json": "527f436f281b81c24018adc2cd56db50f2f4b2f8e78090b6ee5ba6f229d871f5",
+        "generated/fixture.json": "565fbf553e113ed6e34cff6b5a19f73c8c936a63faf1dbe396e009e118c24733",
+        "generated-water.ram": "186233eda7f74a7c0a399093ea18ec8f4a76314fd21fbafee0be9a5b7c64118b",
+        "generated-water.vram": "83535fd742fe96850cb2d50626fbfbc0db5a208d6d5a2a847d4cd8992eb74350",
+        "generated-water.palette": "32bb64222568bdf5f05d9b221443a0a1b05b1f632bf6a167915232cc624a0483",
+        "generated-water.oam": "617c6bc5fff27edd21ddcbb92df107d364b2e38b2707f85b21a7d7c23e346e0d",
+        "generated-land-return.ram": "86e8d601774ffabcd1e614d607ce06404183686aa95f3051132e8237247264f6",
+        "generated-land-return.vram": "ad0bf8bb5c1bcd130de7aa5d29c26a8fd5cc02204f5ad565d9161cf227046f3e",
+        "generated-land-return.palette": "1cf60c3e7840f128fd1e0c8347c8c860a20481b4f707d3428954f0497c2dadc5",
+        "generated-land-return.oam": "8d270f31dc46a3e5215ecd35ba4310c3cc79897bf0b58f2a3015d6056fdc2b9e"
+      },
+      "movementSampleFrames": 1
+    },
+    {
+      "job": 122,
+      "directory": "build/art/generated-actions/battle/20260918T125759.627512Z",
+      "sha256": {
+        "report.json": "bbc7464922fb4ac994866be41b66325ce2a628cec524eddd3a5dcf4d6cb7a7a8",
+        "generated/fixture.json": "565fbf553e113ed6e34cff6b5a19f73c8c936a63faf1dbe396e009e118c24733",
+        "generated-water.ram": "81c8229412532335a9e31009460a8bc1fcd5165fe80cf386c930f16a06889a55",
+        "generated-water.vram": "4becca1e4733eb156ab8943e14162dd62f6ef3a493fb11a55b69f343ea85de5d",
+        "generated-water.palette": "43fc3c45d754ab7165860ec6d38a9df1bafcad6266ea9e912380b6f47718f1f0",
+        "generated-water.oam": "fb4e52f562504a4c51073eee54cedfc351d7aea3c6caa3b99dc1d5eb052af45e",
+        "generated-land-return.ram": "9851170c7697688a23b3ef344554617ddd2ebad81b0dee10e847dbfa8d0a9575",
+        "generated-land-return.vram": "f62eec5deba22d853e2cda5c144283752df12f45817b981647a0b01bee998beb",
+        "generated-land-return.palette": "af7d1a720d7179ac2bf8e429e1592ea628cce9d80ade14c1265a71286720adfc",
+        "generated-land-return.oam": "784962c747b8806f9c668527e5594cba681725e1459553cf3d5dd4d2d1f3d62c"
+      },
+      "movementSampleFrames": 1
+    },
+    {
+      "job": 123,
+      "directory": "build/art/generated-actions/battle/20260918T125818.832244Z",
+      "sha256": {
+        "report.json": "1dd9b37cb5fd9904b4b7b3788f599d1f4f78de2e0ab7af4720a8d1e7cad6783f",
+        "generated/fixture.json": "565fbf553e113ed6e34cff6b5a19f73c8c936a63faf1dbe396e009e118c24733",
+        "generated-water.ram": "08c071570e3b22ea1ff6b96c9e52d9fa8b100c85f70a27dd347b252f5c277108",
+        "generated-water.vram": "1407a2491b6b9b631a9411005caba111b047272cf03c44544afdfea1177e773f",
+        "generated-water.palette": "181a4ca023714cbac4849aefbdcb77346c5d9442e0bb1d6c1fbad26ac002e3dc",
+        "generated-water.oam": "fb4e52f562504a4c51073eee54cedfc351d7aea3c6caa3b99dc1d5eb052af45e",
+        "generated-land-return.ram": "d14ffb407fb458a6c7ec8af714a6a6e114cdaeb5f4a59c1ed30c2dd037ea1643",
+        "generated-land-return.vram": "37e506255d12db278495f5eb4e71eee6f1e7b57cc64153944bc02fa50384c5e0",
+        "generated-land-return.palette": "b56dd47084858daefffac2d4677bedfbfa6594ad5dbc036ea90b0724297126a1",
+        "generated-land-return.oam": "784962c747b8806f9c668527e5594cba681725e1459553cf3d5dd4d2d1f3d62c"
+      },
+      "movementSampleFrames": 1
+    },
+    {
+      "job": 124,
+      "directory": "build/art/generated-actions/battle/20260918T125837.472940Z",
+      "sha256": {
+        "report.json": "32671626bf2572bae34224439e1a052ba47d12ec0ff2e0033bcbe02c122b9368",
+        "generated/fixture.json": "565fbf553e113ed6e34cff6b5a19f73c8c936a63faf1dbe396e009e118c24733",
+        "generated-water.ram": "4f7ee8158872e797e327092226619816aa75dbbd1f068a00b1640d45af306af6",
+        "generated-water.vram": "9e157525cd5fae770ca856a076f25947df44a1e9c46bc16bea4279e564846eef",
+        "generated-water.palette": "54ad539ef3236d3bb97b3435f014b20f2325a400704ca7ee058e9ce16d32187f",
+        "generated-water.oam": "fb4e52f562504a4c51073eee54cedfc351d7aea3c6caa3b99dc1d5eb052af45e",
+        "generated-land-return.ram": "c348ea58a256300b92e3f9e52ac35e182ed0852f6be6fdec724d65fd784216c6",
+        "generated-land-return.vram": "1303d4b6392a3b2eab8713a40abfd0f82575726b3ac1e4be81ce6fc88bde5168",
+        "generated-land-return.palette": "f6ca139a4a9247b2d801d23e28d466b86249e7e0f70018b54ff2a06d5e258618",
+        "generated-land-return.oam": "784962c747b8806f9c668527e5594cba681725e1459553cf3d5dd4d2d1f3d62c"
+      },
+      "movementSampleFrames": 1
+    },
+    {
+      "job": 125,
+      "directory": "build/art/generated-actions/battle/20260918T125856.073625Z",
+      "sha256": {
+        "report.json": "9c000c6a06c1bcc107563ea7143147935637e3b99d9da1fbe5cacacb40eeeb71",
+        "generated/fixture.json": "565fbf553e113ed6e34cff6b5a19f73c8c936a63faf1dbe396e009e118c24733",
+        "generated-water.ram": "44da95d62b0bcaeffaba03ebdb796cd1ff88cf7ff942c50d934971c98749eac2",
+        "generated-water.vram": "97f619fa0cae5d22dd60273cc66aac6469cdcb2b8d9b499bbaeb45bf9ec27b52",
+        "generated-water.palette": "6567cd0b36bbd587890c3552cdb0f5e808bcc095e64eb5a6f376112c218afa59",
+        "generated-water.oam": "fb4e52f562504a4c51073eee54cedfc351d7aea3c6caa3b99dc1d5eb052af45e",
+        "generated-land-return.ram": "e4afbc2c2343bb05a3a20976682196f0a3ac446ef99274989455c7cc23ef8277",
+        "generated-land-return.vram": "53440522695d9fb58e2ea3a3ea93bf083a54745ef02790135b7d96e94a7aa5b7",
+        "generated-land-return.palette": "a118f84888ef62b1574037b7694fd181f84a147b18af83754008020d64dca80c",
+        "generated-land-return.oam": "784962c747b8806f9c668527e5594cba681725e1459553cf3d5dd4d2d1f3d62c"
+      },
+      "movementSampleFrames": 1
+    }
+  ]
+}

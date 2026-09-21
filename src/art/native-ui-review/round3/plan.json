@@ -1,0 +1,892 @@
+{
+  "assets": [
+    {
+      "job": 116,
+      "slug": "human-samurai",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Edit image 1, the sprite-based Human Samurai equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\human-samurai\\icon-edit-target.png",
+          "sha256": "2f401302580c83058b29abe6839573732c3eb08aeae0707fd8886e1b0d54b2a3"
+        },
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\human-samurai\\clean-race-icons.png",
+          "sha256": "0b7c6455dbfd2e0c2bb9db524d8be29fe87ea5344d8e8c9d713b9b3e7d1e7e8d"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-samurai\\native-icon-palette.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ]
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Edit image 1, the sprite-based Human Dark Knight equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border. Closed helmet; read as helmet, not multiple eyes. Blue cloth trails behind the helmet.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\human-dark-knight\\icon-edit-target.png",
+          "sha256": "99f4d58840b40dde8e8d97fd83476e097ac58664a674bec25572c8d89a9f14f2"
+        },
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\human-dark-knight\\clean-race-icons.png",
+          "sha256": "0b7c6455dbfd2e0c2bb9db524d8be29fe87ea5344d8e8c9d713b9b3e7d1e7e8d"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\human-dark-knight\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ]
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "kind": "portrait",
+      "nativeSize": [
+        48,
+        56
+      ],
+      "prompt": "Edit only the eye opening in this Human Dark Knight pixel portrait. The three pale vertical marks look like three eyes. Replace them with an anatomically correct pair of small eyes in a dark, narrow visor opening, separated by the nose bridge; the farther eye is narrower. No other eye-like bars or highlights. Keep the closed helmet, gold trim, blue cloth behind it, pose, silhouette and everything else unchanged. Preserve the 48 by 56 logical pixel grid, hard square pixels and transparent background. Return only the same single portrait.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\human-dark-knight\\portrait-edit-target.png",
+          "sha256": "d2f91694f0c36c149f2e2571155660cb6347f402867a571ab2410c7499c95b94"
+        }
+      ],
+      "paletteChoices": [
+        {
+          "job": 2,
+          "index": 0,
+          "words": [
+            1841,
+            992,
+            992,
+            209,
+            1299,
+            3381,
+            5526,
+            8631,
+            9754,
+            992,
+            992,
+            7266,
+            12448,
+            18656,
+            21792,
+            28032,
+            29088,
+            30148,
+            31208,
+            32298,
+            32462,
+            31504,
+            3174,
+            140,
+            3274,
+            6411,
+            7532,
+            9645,
+            9678,
+            12783,
+            14896,
+            20147,
+            23285,
+            24342,
+            25398,
+            26486,
+            29596,
+            15004,
+            16063,
+            16095,
+            23263,
+            20287,
+            24351,
+            25439,
+            26495,
+            27519,
+            28607,
+            32767
+          ]
+        },
+        {
+          "job": 4,
+          "index": 4,
+          "words": [
+            1841,
+            33,
+            5319,
+            7433,
+            9580,
+            2151,
+            3242,
+            6381,
+            7438,
+            8465,
+            9521,
+            9554,
+            12691,
+            13781,
+            14838,
+            12827,
+            15928,
+            17050,
+            21210,
+            19167,
+            23325,
+            24383,
+            26463,
+            25439,
+            29503,
+            27519,
+            28575,
+            28607,
+            29663,
+            30719,
+            32767,
+            32767,
+            7330,
+            11558,
+            14760,
+            14761,
+            13773,
+            15887,
+            20015,
+            21137,
+            24273,
+            24306,
+            25332,
+            26389,
+            27478,
+            30617,
+            32698,
+            32765
+          ]
+        },
+        {
+          "job": 7,
+          "index": 10,
+          "words": [
+            1841,
+            964,
+            9515,
+            13776,
+            15889,
+            24347,
+            25437,
+            2151,
+            3307,
+            4366,
+            7570,
+            7637,
+            9751,
+            13914,
+            16029,
+            19167,
+            27487,
+            27487,
+            27551,
+            27551,
+            27583,
+            28607,
+            29663,
+            31743,
+            32767,
+            5195,
+            5196,
+            4205,
+            4208,
+            4180,
+            4214,
+            3160,
+            1271,
+            1241,
+            215,
+            155,
+            156,
+            220,
+            222,
+            4445,
+            9694,
+            11774,
+            13886,
+            14942,
+            26459,
+            27551,
+            22299,
+            17048
+          ]
+        },
+        {
+          "job": 9,
+          "index": 14,
+          "words": [
+            1841,
+            108,
+            274,
+            308,
+            3514,
+            2523,
+            4603,
+            5660,
+            6749,
+            9950,
+            11007,
+            12063,
+            13151,
+            14175,
+            14175,
+            20415,
+            22495,
+            25599,
+            195,
+            2439,
+            4585,
+            5741,
+            4781,
+            8976,
+            12116,
+            11745,
+            15975,
+            21226,
+            28659,
+            10706,
+            13844,
+            20250,
+            24413,
+            24479,
+            25599,
+            14941,
+            19167,
+            23327,
+            25439,
+            27551,
+            29663,
+            3275,
+            2318,
+            3475,
+            8695,
+            14903,
+            18106,
+            23325
+          ]
+        }
+      ]
+    },
+    {
+      "job": 118,
+      "slug": "bangaa-viking",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Edit image 1, the sprite-based Bangaa Viking equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\bangaa-viking\\icon-edit-target.png",
+          "sha256": "ab233eb2312fef33d1a7a3561521c4c0049d7123d6cd44a622c94e273e735f0e"
+        },
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\bangaa-viking\\clean-race-icons.png",
+          "sha256": "b36e78423176844439239f35a5d38014c7e7eb2fc96ab670567fe35f42d02272"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-viking\\native-icon-palette.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ]
+    },
+    {
+      "job": 119,
+      "slug": "bangaa-dark-knight",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Edit image 1, the sprite-based Bangaa Dark Knight equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border. Closed helmet; read as helmet, not multiple eyes. Blue cloth trails behind the helmet.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\bangaa-dark-knight\\icon-edit-target.png",
+          "sha256": "03602af2e736ac2841b45b6c95d6ad542350f85f86b115bb564ca8702abea67b"
+        },
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\bangaa-dark-knight\\clean-race-icons.png",
+          "sha256": "b36e78423176844439239f35a5d38014c7e7eb2fc96ab670567fe35f42d02272"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\bangaa-dark-knight\\native-icon-palette.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ]
+    },
+    {
+      "job": 120,
+      "slug": "nu-mou-chemist",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Edit image 1, the sprite-based Nu Mou Chemist equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\nu-mou-chemist\\icon-edit-target.png",
+          "sha256": "ecf3543ae48f267c20f088e3b116572b1f72b81cd1a365867184be01edcbc8a7"
+        },
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\nu-mou-chemist\\clean-race-icons.png",
+          "sha256": "04ade5ef9bd86c3e63c7fba7f01f376e011006c9e9d6f04c94ea5e471dc7b99b"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-chemist\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ]
+    },
+    {
+      "job": 121,
+      "slug": "nu-mou-geomancer",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Edit image 1, the sprite-based Nu Mou Geomancer equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\nu-mou-geomancer\\icon-edit-target.png",
+          "sha256": "6e136c203706d961ad39585f6387f0d42b12fc77d20361a474e708a2787d9ad8"
+        },
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\nu-mou-geomancer\\clean-race-icons.png",
+          "sha256": "04ade5ef9bd86c3e63c7fba7f01f376e011006c9e9d6f04c94ea5e471dc7b99b"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\nu-mou-geomancer\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ]
+    },
+    {
+      "job": 122,
+      "slug": "moogle-chemist",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Edit image 1, the sprite-based Moogle Chemist equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\moogle-chemist\\icon-edit-target.png",
+          "sha256": "f87c1ea2f903b2dd29046ca02808127c6b0cb6676c8fd76b937063cc7d16230f"
+        },
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\moogle-chemist\\clean-race-icons.png",
+          "sha256": "9c74dbfdb930cbae1590fa2ed1cc30fa2e0c6de7fcd7a0353ec22b0b93cc58a7"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-chemist\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ]
+    },
+    {
+      "job": 123,
+      "slug": "moogle-bard",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Edit image 1, the sprite-based Moogle Bard equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\moogle-bard\\icon-edit-target.png",
+          "sha256": "37e12180ab63c5e1e61e19d09695300a67c034587f36681e22a6510545f35c5d"
+        },
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\moogle-bard\\clean-race-icons.png",
+          "sha256": "9c74dbfdb930cbae1590fa2ed1cc30fa2e0c6de7fcd7a0353ec22b0b93cc58a7"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\moogle-bard\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ]
+    },
+    {
+      "job": 124,
+      "slug": "viera-dancer",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Edit image 1, the sprite-based Viera Dancer equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\viera-dancer\\icon-edit-target.png",
+          "sha256": "f9aaf076d991bcdec83d6f1a206c787da96ced1918d7a11e8aa28f351f7f86b1"
+        },
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\viera-dancer\\clean-race-icons.png",
+          "sha256": "cacaf931d46f5d7483f114554c3908ed9965951c5cd68f1e962e082cec3dad68"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-dancer\\native-icon-palette.png",
+          "sha256": "3213813230bd508367fa93e7439317908f54fe345d5ae3e40360ff52d80d668b"
+        }
+      ],
+      "paletteWords": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ]
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "kind": "icon",
+      "nativeSize": [
+        16,
+        14
+      ],
+      "prompt": "Edit image 1, the sprite-based Viera Mystic Knight equipment head icon. Preserve its recognizable costume and distinct silhouette. Match the clean original same-race job icons in image 2: head proportions, face direction, eye shape, clear solid pixel clusters. Keep the original sprite detail; do not turn it into a big generic cartoon face. The output is just ONE head on the same 16 by 14 logical pixel grid as image 1, enlarged with hard square pixels. Use only the native colors in image 3. Keep the silhouette completely inside the canvas. Transparent background, no checkerboard, letters or border.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\viera-mystic-knight\\icon-edit-target.png",
+          "sha256": "c3d88d11b7d8a27c9b30f067d87d60119c5ccce129ce78d3f56fb6eab2bfb957"
+        },
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\viera-mystic-knight\\clean-race-icons.png",
+          "sha256": "cacaf931d46f5d7483f114554c3908ed9965951c5cd68f1e962e082cec3dad68"
+        },
+        {
+          "path": "build\\art\\native-ui-regeneration-v2-2026-09-20\\viera-mystic-knight\\native-icon-palette.png",
+          "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+        }
+      ],
+      "paletteWords": [
+        18991,
+        1090,
+        14769,
+        30719,
+        10412,
+        1365,
+        573,
+        959,
+        1079,
+        7453,
+        20159,
+        32606,
+        25304,
+        27792,
+        32245,
+        32506
+      ]
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "kind": "portrait",
+      "nativeSize": [
+        48,
+        56
+      ],
+      "prompt": "Correct the eyes in this Viera Mystic Knight pixel portrait. Make a natural coherent pair of eyes looking in the same direction: one clear near eye and a smaller far eye with proper perspective. Remove the stray dark eye-shaped mark near the nose/hair on the left side of the face. Keep the face identity, ears, hair, costume, pose and all other details unchanged. Preserve the 48 by 56 logical pixel grid, hard square pixels and transparent background. Return only the same single portrait.",
+      "references": [
+        {
+          "path": "build\\art\\native-ui-revision-v3-2026-09-20\\viera-mystic-knight\\portrait-edit-target.png",
+          "sha256": "72967b3a15ea170d5539091eaeb3a387b49c6bf13545c5dd5bed3f4ca71faf00"
+        }
+      ],
+      "paletteChoices": [
+        {
+          "job": 28,
+          "index": 52,
+          "words": [
+            1841,
+            11533,
+            16950,
+            20250,
+            26527,
+            27583,
+            29663,
+            32767,
+            9,
+            6284,
+            12557,
+            12654,
+            14767,
+            17905,
+            16848,
+            15859,
+            10640,
+            8592,
+            10708,
+            13880,
+            13880,
+            7607,
+            10806,
+            12856,
+            15001,
+            17116,
+            18204,
+            20252,
+            24447,
+            20222,
+            20191,
+            26335,
+            14735,
+            17905,
+            16621,
+            24017,
+            25142,
+            30359,
+            29336,
+            31448,
+            31482,
+            32571,
+            32636,
+            32703,
+            32702,
+            32766,
+            32767,
+            0
+          ]
+        },
+        {
+          "job": 29,
+          "index": 54,
+          "words": [
+            1841,
+            2215,
+            6411,
+            7534,
+            10672,
+            12755,
+            13812,
+            15925,
+            18071,
+            19161,
+            21242,
+            22299,
+            23356,
+            25471,
+            26591,
+            32767,
+            0,
+            3270,
+            7463,
+            9641,
+            10702,
+            12809,
+            14924,
+            14957,
+            16013,
+            17071,
+            18128,
+            21266,
+            22324,
+            23381,
+            24438,
+            27577,
+            98,
+            3299,
+            6440,
+            8619,
+            10732,
+            14831,
+            15920,
+            18035,
+            6467,
+            7556,
+            13767,
+            15943,
+            10829,
+            13967,
+            15025,
+            19157
+          ]
+        },
+        {
+          "job": 31,
+          "index": 58,
+          "words": [
+            1841,
+            7463,
+            4328,
+            7470,
+            9616,
+            10674,
+            13780,
+            14869,
+            17048,
+            17049,
+            18105,
+            19162,
+            22300,
+            20252,
+            24413,
+            26495,
+            27551,
+            30687,
+            14762,
+            16812,
+            19950,
+            21999,
+            22128,
+            23153,
+            27316,
+            27382,
+            32536,
+            29465,
+            32602,
+            32635,
+            32668,
+            32700,
+            32733,
+            32766,
+            5222,
+            8427,
+            9518,
+            9552,
+            8511,
+            22030,
+            32760,
+            22267,
+            29460,
+            25437,
+            28607,
+            30687,
+            31743,
+            32767
+          ]
+        },
+        {
+          "job": 33,
+          "index": 62,
+          "words": [
+            1841,
+            11561,
+            14701,
+            18864,
+            22069,
+            25239,
+            27321,
+            28442,
+            29500,
+            30589,
+            30623,
+            31647,
+            31679,
+            27516,
+            29629,
+            32766,
+            104,
+            112,
+            2189,
+            3312,
+            6449,
+            4436,
+            7606,
+            5656,
+            5788,
+            2782,
+            2815,
+            5919,
+            6975,
+            10079,
+            13215,
+            16319,
+            18399,
+            20479,
+            6443,
+            9648,
+            12787,
+            14902,
+            16024,
+            17081,
+            18140,
+            20252,
+            23391,
+            24447,
+            25503,
+            27583,
+            28607,
+            30687
+          ]
+        }
+      ]
+    }
+  ]
+}

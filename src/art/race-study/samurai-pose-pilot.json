@@ -1,0 +1,235 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Tool default; version not exposed",
+  "settings": "One template input per generated pose; other settings tool-managed.",
+  "base": "build/art/approved-class-sprites-2026-09-19/human-samurai-grid.png",
+  "baseSha256": "3a8419fe925ac15734e096b4f43de311ba4dd2ac6182080c6b25dfd820e1d202",
+  "scope": "Two separately authored walking poses; offline preview only, no native command or ROM replacement.",
+  "poses": [
+    {
+      "slug": "human-samurai-step-0",
+      "slot": 0,
+      "frame": 0,
+      "meaning": "Opposing walk-cycle step, native slot 0 frame 0; visual reference supplies exact limb placement.",
+      "prompt": "Change only the bottom-right Samurai sprite to the exact stepping pose shown by the four sprites to its left. The top row shows their neutral poses; preserve the top-right Samurai's crescent helmet, red armor and teal sash. Match the bottom row's feet, hands, body height and native pixel scale. Keep the complete two-row layout unchanged.",
+      "template": "build\\art\\approved-class-sprites-2026-09-19\\human-samurai-step-0-template.png",
+      "templateSha256": "8a1ab9113540b51ff0fed6b14ddd3b54614ec74ce590db0e2bad303de49e8292",
+      "references": [
+        {
+          "actor": 0,
+          "slot": 0,
+          "frame": 0,
+          "record": {
+            "offset": 8732928,
+            "pose": "000140-000000",
+            "duration": 16,
+            "command": 1,
+            "params": [
+              0,
+              0,
+              8,
+              0,
+              0
+            ]
+          },
+          "path": "build\\art\\native-reference\\actor-000\\000140-000000-pose.png",
+          "sha256": "9022fd9d78ac1da13d1dc3e6aeca7d37e747fe730a95f8db4f88c3aab47f7555"
+        },
+        {
+          "actor": 2,
+          "slot": 0,
+          "frame": 0,
+          "record": {
+            "offset": 8746880,
+            "pose": "009780-000000",
+            "duration": 16,
+            "command": 1,
+            "params": [
+              0,
+              0,
+              8,
+              0,
+              0
+            ]
+          },
+          "path": "build\\art\\native-reference\\actor-002\\009780-000000-pose.png",
+          "sha256": "7ce49765846a375db95bb42bee22241ff6619dc9b425a86307947f2f6f593459"
+        },
+        {
+          "actor": 5,
+          "slot": 0,
+          "frame": 0,
+          "record": {
+            "offset": 8767840,
+            "pose": "017640-000000",
+            "duration": 16,
+            "command": 1,
+            "params": [
+              0,
+              0,
+              8,
+              0,
+              0
+            ]
+          },
+          "path": "build\\art\\native-reference\\actor-005\\017640-000000-pose.png",
+          "sha256": "88923ab7adf2679ea991cd0b5301de9c542a8d8c02a6d1a088960b9c6bafe36e"
+        },
+        {
+          "actor": 7,
+          "slot": 0,
+          "frame": 0,
+          "record": {
+            "offset": 8782848,
+            "pose": "020ba0-000000",
+            "duration": 16,
+            "command": 1,
+            "params": [
+              0,
+              0,
+              8,
+              0,
+              0
+            ]
+          },
+          "path": "build\\art\\native-reference\\actor-007\\020ba0-000000-pose.png",
+          "sha256": "8f2eed5416ffcde7bd69eec6be0db782a55311111e6b909b064066fbc650eab5"
+        }
+      ],
+      "output": {
+        "source": "build\\art\\approved-class-sprites-2026-09-19\\human-samurai-step-0-generated.png",
+        "sha256": "91c89036e9906d348349c440105a3e7591a2b3d14b353c1e6cd1e40f1278d54d",
+        "crop": [
+          128,
+          56,
+          160,
+          88
+        ],
+        "logicalGrid": [
+          160,
+          96
+        ]
+      }
+    },
+    {
+      "slug": "human-samurai-step-2",
+      "slot": 0,
+      "frame": 2,
+      "meaning": "Opposing walk-cycle step, native slot 0 frame 2; visual reference supplies exact limb placement.",
+      "prompt": "Change only the bottom-right Samurai sprite to the exact stepping pose shown by the four sprites to its left. The top row shows their neutral poses; preserve the top-right Samurai's crescent helmet, red armor and teal sash. Match the bottom row's feet, hands, body height and native pixel scale. Keep the complete two-row layout unchanged.",
+      "template": "build\\art\\approved-class-sprites-2026-09-19\\human-samurai-step-2-template.png",
+      "templateSha256": "77d34e00c76a7f50f07789901649b971e23874a47ab4ac4647704f1c14057f3d",
+      "references": [
+        {
+          "actor": 0,
+          "slot": 0,
+          "frame": 2,
+          "record": {
+            "offset": 8732968,
+            "pose": "000280-000000",
+            "duration": 16,
+            "command": 1,
+            "params": [
+              0,
+              0,
+              8,
+              0,
+              0
+            ]
+          },
+          "path": "build\\art\\native-reference\\actor-000\\000280-000000-pose.png",
+          "sha256": "1fa90cca03611b71b91995d82cb56a525407259e2db2f9fb33fddd6473d08f7f"
+        },
+        {
+          "actor": 2,
+          "slot": 0,
+          "frame": 2,
+          "record": {
+            "offset": 8746920,
+            "pose": "0098c0-000000",
+            "duration": 16,
+            "command": 1,
+            "params": [
+              0,
+              0,
+              8,
+              0,
+              0
+            ]
+          },
+          "path": "build\\art\\native-reference\\actor-002\\0098c0-000000-pose.png",
+          "sha256": "4b3277f538cfcb0be2f6c660733b767aa85c76bd636e0d02882a8aed9f526638"
+        },
+        {
+          "actor": 5,
+          "slot": 0,
+          "frame": 2,
+          "record": {
+            "offset": 8767880,
+            "pose": "017780-000000",
+            "duration": 16,
+            "command": 1,
+            "params": [
+              0,
+              0,
+              8,
+              0,
+              0
+            ]
+          },
+          "path": "build\\art\\native-reference\\actor-005\\017780-000000-pose.png",
+          "sha256": "7140cca842265c3bd8072a1bbbecf09533a3fef7a3d2aafbd285a45d2a0867d7"
+        },
+        {
+          "actor": 7,
+          "slot": 0,
+          "frame": 2,
+          "record": {
+            "offset": 8782888,
+            "pose": "020ce0-000000",
+            "duration": 16,
+            "command": 1,
+            "params": [
+              0,
+              0,
+              8,
+              0,
+              0
+            ]
+          },
+          "path": "build\\art\\native-reference\\actor-007\\020ce0-000000-pose.png",
+          "sha256": "e3aa333b3fe66e9100f5f29aecd3c0d853b16ce3ef5ec6ac9ad782497d6db4aa"
+        }
+      ],
+      "output": {
+        "source": "build\\art\\approved-class-sprites-2026-09-19\\human-samurai-step-2-generated.png",
+        "sha256": "10bd9f1f551eb579e3ee6ca0bfa6702e1943f937bc606184535c00440a957ae6",
+        "crop": [
+          128,
+          56,
+          160,
+          88
+        ],
+        "logicalGrid": [
+          160,
+          96
+        ]
+      }
+    }
+  ],
+  "preview": {
+    "order": [
+      "human-samurai-step-0-grid",
+      "human-samurai-grid",
+      "human-samurai-step-2-grid",
+      "human-samurai-grid"
+    ],
+    "durationMilliseconds": [
+      267,
+      133,
+      267,
+      133
+    ],
+    "note": "Offline preview assumes 60 ticks/second for native durations 16,8,16,8; not runtime verification."
+  }
+}

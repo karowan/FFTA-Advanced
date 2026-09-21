@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "human-samurai",
+    "kind": "icon",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-55940536-94c4-4189-b3a8-82121a8981fc.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        165,
+        2170,
+        542
+      ],
+      "layoutDeviation": "Fifth cell edited. Transparent letterbox removed using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "human-dark-knight",
+    "kind": "portrait",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-3815b8cf-6a10-4fe5-bd91-ea3897684956.png",
+    "revision": {
+      "sampling": "area",
+      "samplingReason": "Coverage sampling preserves both narrow eye curves instead of nearest-point phase aliasing."
+    }
+  },
+  {
+    "slug": "viera-dancer",
+    "kind": "icon",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-a1d2f754-2b53-4a05-9720-fa7732eeb717.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        170,
+        2170,
+        550
+      ],
+      "layoutDeviation": "Opaque black letterboxing; visible row bounds inspected at y170..550, fifth cell."
+    }
+  },
+  {
+    "slug": "viera-mystic-knight",
+    "kind": "icon",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-625daa3c-736f-4c84-a77e-3882c923bc9c.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        170,
+        2170,
+        551
+      ],
+      "layoutDeviation": "Fifth cell edited. Transparent letterbox removed using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "human-dark-knight",
+    "kind": "icon",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-f95fbc7b-5c58-4c98-9ee2-2cd2a20f4196.png",
+    "rawName": "generated-icon-v2.png",
+    "revision": {
+      "prompt": "In this row, edit only the FIFTH head. Keep its front-facing symmetric helmet. Reduce the helmet to the same overall head width as the original icons and shift its center right to match them. It must be symmetric around the midpoint between logical pixel columns 8 and 9 in its 16x14 cell. Its golden eyes must be in columns 7 and 10, both occupying rows 7 and 8, counting from zero. The current eyes are in columns 5 and 9, which is wrong. Keep the blue cloth behind the right side, but the helmet itself must have mirrored edges, brow and cheek plates. Preserve the other four icons and the full row layout.",
+      "references": [
+        {
+          "path": "build/art/ui-detail-v5-2026-09-20/human-dark-knight/helmet-retry-input.png",
+          "sha256": "293a7e54b8dead483655292e269989134fb8761acd785cf142e653148bfeaffa"
+        }
+      ],
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Fifth cell; transparent letterbox removed.",
+      "registration": {
+        "affine": [
+          1.3333333333333333,
+          0,
+          -4.5,
+          0,
+          1,
+          0
+        ],
+        "reason": "Fixed horizontal registration maps generated eye columns 5 and 9 to native columns 7 and 10. No inferred bounding box, mirroring or painted pixels."
+      }
+    }
+  }
+]

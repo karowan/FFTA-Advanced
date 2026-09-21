@@ -1,0 +1,508 @@
+{
+  "schema": 1,
+  "candidateSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "fixtureRomSha1": "83dabe12f029e83e459bf95c47ff7f4e2b58a901",
+  "scope": "All run outcomes retained; passing suffix195 plus actual earlier cast observations, not a relabeled full passing run. Native event selection4273 is separate from later scene spawn/capacity acceptance.",
+  "files": [
+    {
+      "path": "build/expansion/test-runs/20260919T091247.440032Z/report.json",
+      "sha256": "e16322b3b9f630d985ae3dfd8c566d413f28483d7dab54270a9ccc63c77f0ce1"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T091247.440032Z/001-test-native-event-roots.log",
+      "sha256": "98ec00bffdc547575420c89100a19556e9844ec087bc30ac547b8aef3ce41452"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T091649.033772Z/report.json",
+      "sha256": "a1240bd122964006317056d08e3ad388a7add046919f9002be6ac5df07c4baff"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T091649.033772Z/001-test-art-capacity-action.log",
+      "sha256": "c3c90841ea44de8fb88a22f5755c915d87b01204ac44f741c945dfcd0ed2b0de"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T091732.960103Z/report.json",
+      "sha256": "23695b18051d8e542a2613da9ac0490b3a68ace5c61e8f4adfe04fa8ad767814"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T091732.960103Z/001-test-art-capacity-action.log",
+      "sha256": "c35812c466e758e56d277163533796ac981e8f56721c3bb79208f76b2d93e66a"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T091813.084586Z/report.json",
+      "sha256": "0a951921f67f4558fc15c1ad25bdf10c26da00ec3adb90a24a8e799dec17809a"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T091813.084586Z/001-test-art-capacity-action.log",
+      "sha256": "7fc0e8190385ed494051da45c9a1ac5595ccbff671293cd46b83cf48e597c614"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T092036.268664Z/report.json",
+      "sha256": "08598cc172a28d0c29f484ec621ece2f01beeffa7a08aa15e92c17c4a206b5d6"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T092036.268664Z/001-test-art-capacity-action-resume.log",
+      "sha256": "8bec360eb50958b497303f81581ed33ea1f32d9100713bfe0e5bb5d979c5f818"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T092300.859032Z/report.json",
+      "sha256": "5c8a82ff21655cebcc0e81ad355b679cb3564806d22f6d6e6966bff900e2b3a9"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T092300.859032Z/001-test-art-capacity-action-return.log",
+      "sha256": "25620b27bd9dbc2c307f4dc2e22e7a1fd2cd09e3eaa846787e443775db7da612"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T092501.260904Z/report.json",
+      "sha256": "d1f053092188ff24c1c4b976e39ff603403641fe7605fb88cc7de901024c09ad"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T092501.260904Z/001-test-art-capacity-action-return.log",
+      "sha256": "9c3f40423810623d8158bc5db18bc9eb68b088ba9bbe0a01f732faec15a570e7"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T092626.379420Z/report.json",
+      "sha256": "ba2e605262e2b59731ec476f4275ffc4f4f565a9e95d2935082eb788d24a4723"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T092626.379420Z/001-test-art-capacity-action-return.log",
+      "sha256": "b90bc328e154c3ce90618d3db0e449775c0d9247b26eabd904c44e9e56c1f750"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T092805.491239Z/report.json",
+      "sha256": "2228eef5d372e72172184beeae486b52702f17957c1199abf15c4d5322ef6162"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T092805.491239Z/001-test-art-capacity-action-return.log",
+      "sha256": "43a5679fc98003728bf8bbecabd6d036b8dd656d6da01838419eaa7451a9bb97"
+    },
+    {
+      "path": "build/art/native-event-roots/20260919T091248.211528Z/report.json",
+      "sha256": "d4eabc5b2433ceccc1748e5b3bdbe9837cfffea9227ac20ee51ddf6f3448d1ee"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091733.663160Z/failed.json",
+      "sha256": "3a9052dd54978e13fd1a3f4ebde6298500b9099322854b0f60bf914623d73994"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/confirmation.iwram",
+      "sha256": "8a73fc3801931c4c6e87dd75817bd82519639c431cc71b92d5b3489cf07241e1"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/confirmation.oam",
+      "sha256": "7b09a301e93bb065fa3df641f2817760966de666fcd25e981b727adf8ed86c3f"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/confirmation.palette",
+      "sha256": "196e4fc472bf7f48d69094543e8bc1c53194392f160f53e4d73cdc3245afeea4"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/confirmation.png",
+      "sha256": "dbdffcc01094638891f02c29b4d2f81eae145f53f2fe22eb41c40bc414f51f57"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/confirmation.ram",
+      "sha256": "9e2c270cb4611fc38249b6f51f1c9ce9ff6787171bc1da6222c3876351e5ab3f"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/confirmation.state",
+      "sha256": "657ecf8efddae783bb03b7d57ef1754fdde7dde9162b27c025ae1ea58fd67e48"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/confirmation.vram",
+      "sha256": "eed8d93c1d0256a12d068bc74f42e790cba3d61704eed8f35d913a872843697c"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.iwram",
+      "sha256": "8a73fc3801931c4c6e87dd75817bd82519639c431cc71b92d5b3489cf07241e1"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.json",
+      "sha256": "c9b4cbc61918d7d18d96a431142a620f46b05a2fd5eb5a29da9fc6dd5ae49ee7"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.oam",
+      "sha256": "7b09a301e93bb065fa3df641f2817760966de666fcd25e981b727adf8ed86c3f"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.palette",
+      "sha256": "196e4fc472bf7f48d69094543e8bc1c53194392f160f53e4d73cdc3245afeea4"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.png",
+      "sha256": "dbdffcc01094638891f02c29b4d2f81eae145f53f2fe22eb41c40bc414f51f57"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.ram",
+      "sha256": "9e2c270cb4611fc38249b6f51f1c9ce9ff6787171bc1da6222c3876351e5ab3f"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.state",
+      "sha256": "657ecf8efddae783bb03b7d57ef1754fdde7dde9162b27c025ae1ea58fd67e48"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/failed.vram",
+      "sha256": "eed8d93c1d0256a12d068bc74f42e790cba3d61704eed8f35d913a872843697c"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/ready.iwram",
+      "sha256": "298e51e3643cbebfb763464f8e954f50b6ee42a0089953b1fb9d07660b6624ba"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/ready.oam",
+      "sha256": "30a0557e457b7faf4689edc8530f7d69e398f0fe4f02b35449554006e38694c7"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/ready.palette",
+      "sha256": "ef1371f0984510bca0eb079cf0c9d108ef9d43076d42b5305e8557b651caf02f"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/ready.png",
+      "sha256": "d556b7015c7defd7f631a2aaf2e22c6b35d309643930eede32eb4b01db134cb5"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/ready.ram",
+      "sha256": "9cad9d6541a69808cbf74cc40fd2dd7ab4725ec33d602ec767f096d2bd230587"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/ready.state",
+      "sha256": "6bf18952454f62550a0ba3d5405940ad495a5c259152de3534ac264fc714596f"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T091813.793854Z/ready.vram",
+      "sha256": "3a85f321c406e57626b58b7b0127cf679095d65446e7fd54f2ef7e1d2cd5a55a"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/confirmation.iwram",
+      "sha256": "daf5190e882eb3c9777f91cfe7d2bae5202ecc014a02ad0727cbf797e82b2235"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/confirmation.oam",
+      "sha256": "279b1846e082660fe98fca99a2ffec22095e7e454b5652c392b4e2849d1af1f4"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/confirmation.palette",
+      "sha256": "b7152d768f8b8e53a04b78d7d9988a49ed1fabe95abb6ff1f3a4662f1b0b302d"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/confirmation.png",
+      "sha256": "e1ed9c7587f39e77e39a2a0fd0e652df9a23919d3cd7b737418ddd451255c3aa"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/confirmation.ram",
+      "sha256": "5c0b754bdc07d1e8f7b281e08110f92319bb55525eb1a9041ba8593d3f78a49c"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/confirmation.state",
+      "sha256": "dacf3b8454d50cfd3490fdf5d530d54a6967223082852c4633f076fe0f912f6d"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/confirmation.vram",
+      "sha256": "6ef4acafd00bb4012b089dea55917fedcd4f10e3092071ab9d0dad1ebc4d9ef1"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/executed.iwram",
+      "sha256": "c24232e9031f984b9d5572768a841abd78d7685866dfa697acefefc8c938ab89"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/executed.oam",
+      "sha256": "b432182cec0edfa2f47feabc42527aacb046ee617ee6ee10236206daa35d920e"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/executed.palette",
+      "sha256": "8be8ab9549b8422f0daebc8d2b2315239d3dab45e5afd5f6cbd423cfd8c488f1"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/executed.png",
+      "sha256": "3383abdc5c823b7684e44447ec82ef34ba530571ed868abaf1284db4216d8252"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/executed.ram",
+      "sha256": "492517d21e749b3a6ae4ecabacdee0f66d8970d891ce9940d734823772cc19b3"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/executed.state",
+      "sha256": "1445248eaa12261400731bf7ed2ee2e0b594aa17854ebb873990527c86c967ba"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/executed.vram",
+      "sha256": "0abcd8060651ac5084b799e8661775302f62043cdebb19862c20ea41941f2676"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/failed.iwram",
+      "sha256": "c24232e9031f984b9d5572768a841abd78d7685866dfa697acefefc8c938ab89"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/failed.json",
+      "sha256": "2d42ed9a44ee9ff872f6665e02ea1f3643e8e4c9fe14bbc6a6ffa1ad4147bf89"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/failed.oam",
+      "sha256": "b432182cec0edfa2f47feabc42527aacb046ee617ee6ee10236206daa35d920e"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/failed.palette",
+      "sha256": "8be8ab9549b8422f0daebc8d2b2315239d3dab45e5afd5f6cbd423cfd8c488f1"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/failed.png",
+      "sha256": "3383abdc5c823b7684e44447ec82ef34ba530571ed868abaf1284db4216d8252"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/failed.ram",
+      "sha256": "492517d21e749b3a6ae4ecabacdee0f66d8970d891ce9940d734823772cc19b3"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/failed.state",
+      "sha256": "1445248eaa12261400731bf7ed2ee2e0b594aa17854ebb873990527c86c967ba"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092036.958105Z/failed.vram",
+      "sha256": "0abcd8060651ac5084b799e8661775302f62043cdebb19862c20ea41941f2676"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092301.559653Z/failed.iwram",
+      "sha256": "e63cb06510e77ab3486c925a1533c56622b5e473afdea8a36ea6b8ebe6dae9ee"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092301.559653Z/failed.json",
+      "sha256": "5848757e66a5e12042f205ece62eec49be128c33349b1174d719dc30e27d18bf"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092301.559653Z/failed.oam",
+      "sha256": "3282583ff181e5932c0a8281332fab126455e4cb8639228b25f15e123a085081"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092301.559653Z/failed.palette",
+      "sha256": "0fde4e3535512f9d02967525ed8faae8b9d203cd1991f4b9bb9c72d2a2ddb270"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092301.559653Z/failed.png",
+      "sha256": "1d53554db7444b95c8bfb35d60a98b5a183e0ac5061d76c29a350c8eb852700d"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092301.559653Z/failed.ram",
+      "sha256": "2895d6e0425c8d4a3c48c49898dfd282bc0ceb5929d7df576ae2e7276dfb7999"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092301.559653Z/failed.state",
+      "sha256": "3ab28e3d9c39f9746fefe42a5ee2c4ff9c2595828b6b7994d37c3a2a7e03695b"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092301.559653Z/failed.vram",
+      "sha256": "56a15ff51cd1c4e3f455ac61aa44076c2de28602c2b52676d97b9701e12cd8dc"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092502.000493Z/failed.iwram",
+      "sha256": "97b990d5b34a3a1c82eac60e68b9ce12db53575d64feda6288d618a58e593c1f"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092502.000493Z/failed.json",
+      "sha256": "a6d34b18281d2ae4a133502a14204ee007dbae11fd46e878dc7725a837fe4a02"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092502.000493Z/failed.oam",
+      "sha256": "d2e7651910c992390b2c7b56514609eb2072b854d3d862013a374e8b00a5bbb4"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092502.000493Z/failed.palette",
+      "sha256": "8be8ab9549b8422f0daebc8d2b2315239d3dab45e5afd5f6cbd423cfd8c488f1"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092502.000493Z/failed.png",
+      "sha256": "459fdd456eafbe14508e41d40d2974e6e0d873850e43854fa90ab47b68d48d15"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092502.000493Z/failed.ram",
+      "sha256": "49dd0479bfa34e04e69a6505bd015c307dbaf3e266744f28dbeb14a31e09c8b8"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092502.000493Z/failed.state",
+      "sha256": "71d12e8ccfd345f9b132aabf8f164c6e579688c76e6a411f5e6dbed15c43a2f0"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092502.000493Z/failed.vram",
+      "sha256": "8a612c54a16f1557ea891fb48233d4ad39e73cbc2dbdfeaf28a1667691d3b836"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092627.086305Z/failed.iwram",
+      "sha256": "b19397ec90fd2e0e1bd964a34e60fec0a6fa80efc5373e54a8a288deb2d01be1"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092627.086305Z/failed.json",
+      "sha256": "cb45d97d9f7c0d649eb861d549bd8ae2a246d8a205992b509f5aec98d7f56dc9"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092627.086305Z/failed.oam",
+      "sha256": "f467fee3f6c1c5397c0fc6a16928c0b64591430a264afecd978b37115beb9316"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092627.086305Z/failed.palette",
+      "sha256": "8be8ab9549b8422f0daebc8d2b2315239d3dab45e5afd5f6cbd423cfd8c488f1"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092627.086305Z/failed.png",
+      "sha256": "28a5892e8c33e329cf1a7527fa1da3c2046b8cb85db68829f5a2205376602979"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092627.086305Z/failed.ram",
+      "sha256": "f32e7d6ffbf665f90cfd7e177a80cefeea3da7c24fcb91a17eb6daf2189d5bb0"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092627.086305Z/failed.state",
+      "sha256": "c78e17da900e82a8fd9415319bc6325affa0828f74d9474d1cf613bc15f5e2df"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092627.086305Z/failed.vram",
+      "sha256": "d77e6436d3ffb758c14b639205d7845fe84877c3b4f696a3e4e06bf579406c2e"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/next-turn.iwram",
+      "sha256": "4794b3f4abcd49ba1a7a2ead936d3565c2451db6a2d92e1bc0e5b1282f07d567"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/next-turn.oam",
+      "sha256": "5b8d051aaa98293754e1d77b59b275fb94846ed26721877d5e1f45c3bfe169c0"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/next-turn.palette",
+      "sha256": "3474f3e9b8e62f145e09265701e7bc69efd0252f827103b0cda14c1e52feedba"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/next-turn.png",
+      "sha256": "522538be1c991e3f7132bed6aca4912c14a6d05e6a58c1c264d68111dbc3a3db"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/next-turn.ram",
+      "sha256": "581b6edacd9941b0833a59262387ca044c038c887966e88895c4e20ed8b415d9"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/next-turn.state",
+      "sha256": "8a9cae0a0522d168e67048096e3d1d904b737891d7bbce61fbbdb2691daa754d"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/next-turn.vram",
+      "sha256": "a39d89fba799b6a90c2209a20b5c1a3ebf4ef788a179008f2fbf1d178615251c"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/report.json",
+      "sha256": "2bab52d23c3d6607ca9ed9f9fe38ee4675796132d5ac9c9c02207d8426b4b5e8"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-0.iwram",
+      "sha256": "d41a7638deef0882860aba59cab2f235533fe56079336f1fa0c72a2be3d359b8"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-0.oam",
+      "sha256": "09c44fc42dc22d032bfab3d15bec801561efd0b86abefdee8dc848f8f8263490"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-0.palette",
+      "sha256": "3474f3e9b8e62f145e09265701e7bc69efd0252f827103b0cda14c1e52feedba"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-0.png",
+      "sha256": "4946f24bf565dfb37ebb06ac80580b58fca2941916bdf4e075e248242540af21"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-0.ram",
+      "sha256": "cb6a6864817ff70e1315072ef1850526411ae5fe661457845e0cc1967741be52"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-0.state",
+      "sha256": "10310031ad73d95afc3b1d37a40cf0d77deaa9d6b71d5606660eb2e89b80435e"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-0.vram",
+      "sha256": "0d061694206b4086e9f57c81f9eb82c968fc70b5779cfcd6e4f5251ad2e295d6"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-1.iwram",
+      "sha256": "75adcef27dac8c54bc883d4cc8f5c32e5dd55f37814b957059a7c11af43a662f"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-1.oam",
+      "sha256": "def79e69c4168ecb9ab0fd8e0807649154464c3dcc1f4774a36cde5fd5fb8c44"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-1.palette",
+      "sha256": "3474f3e9b8e62f145e09265701e7bc69efd0252f827103b0cda14c1e52feedba"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-1.png",
+      "sha256": "1cba10189e86fd50a5597087b7444abb878cc3954427e827017817818771a5d7"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-1.ram",
+      "sha256": "2bcf43b56cea07bf1280f1e55f3a1ae39c237257a57e17baf829885c05a3c178"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-1.state",
+      "sha256": "14e20fb383f61bbec4b99567c92d0bb44bf58a64cd79be861d2e5d5aa508196b"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/returned-1.vram",
+      "sha256": "fc2a254bcd0008fc027d06e6a271cdfc02ff50d7b73f3a0b1497d5cc870e9d84"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-0.iwram",
+      "sha256": "2a808c5605760bfd4ce063aa93943bdc95bd69d738a13f28fd76264f460b884c"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-0.oam",
+      "sha256": "0ddb1e62cda95921e2ba27d361c5ed7602cc92680aa8738c8dd3eea8d187952d"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-0.palette",
+      "sha256": "6e17227a3512fd11c839621bb1724a4f172e4f138cfd343ca11e6530cbff4510"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-0.png",
+      "sha256": "70ae14539e86f44164ce0f3a334daafb436332e24e8b06ecd7b08295a35df951"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-0.ram",
+      "sha256": "4b959de34448046e8a72a8afa3b9abdede1c376fef5f3b224acb09aa62b10e0e"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-0.state",
+      "sha256": "a3759338ea90a84c7cd2be6ddf059552db3bba6b610676b16009434df78f4446"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-0.vram",
+      "sha256": "f0675665684348b9c3f5538bd7123e3feb302fa259cc461f2d81ca3a8e04fb48"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-1.iwram",
+      "sha256": "8c74214559ab8746f5cd7e38cf48d438b6543b06c38cdf4c86eb1b46702c20e3"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-1.oam",
+      "sha256": "f3090bcdca410c63930cab248d5b39ffd1429b2ba375f56c91dd0986d4b52747"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-1.palette",
+      "sha256": "6e17227a3512fd11c839621bb1724a4f172e4f138cfd343ca11e6530cbff4510"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-1.png",
+      "sha256": "b28217ae229182c5c50544dd9b79b7ceec67305d02b8db4af5faf8e4080294c8"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-1.ram",
+      "sha256": "6f3061aece10cd68257ddd75d8258004bca4ae1c40e290057d8ee6f7854c922e"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-1.state",
+      "sha256": "30b520cf8975d28c3378683d0dea8eeb5695c38ae4600bf2254ec2f3414858a1"
+    },
+    {
+      "path": "build/art/capacity-action/20260919T092806.315981Z/status-1.vram",
+      "sha256": "e8548e6aedd49f69536f3a341e6b95caf7ec52c35421845b5832a1a4295a0e94"
+    },
+    {
+      "path": "notes/native-art-capacity-action-inputs.json",
+      "sha256": "163625acdc57e815a4953a031e29649a6631e93e8c94df080719d516b09d5b4e"
+    }
+  ]
+}

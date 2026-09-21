@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "candidateSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "scope": "Fresh eight-stage gameplay source build followed by corrected full art reconstruction. Both failed art attempts remain failed; final byte-identical reconstruction uses their authenticated passing gameplay prefix.",
+  "files": [
+    {
+      "path": "build/art/engineering-rebuild/20260919T100752.719061Z/art-builder.py",
+      "sha256": "70ea28c608e8f08017c1f5c061f9cb8a02437ffc66b5ad24fe0ff1aae724ebed"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T100752.719061Z/art-failed.json",
+      "sha256": "afcaca20795b16064f9be25aa9af5775a1b997e1539088975409bc9355ffa6ff"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T100752.719061Z/complete-art.log",
+      "sha256": "45af7138317ee1b1bcfc2b68d32fc429aca050276a48133333e4c70e9aede183"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T100752.719061Z/gameplay-base.log",
+      "sha256": "7eee0e470539a9b98a4232a60acd97d4f79cf754e1ccb65de6c240a6ef2d295a"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T100752.719061Z/palette-builder.py",
+      "sha256": "6bbd3bae422abdcdb8b19032870a397f1b3d647af71f3f5756c38481986452a1"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T100752.719061Z/report.json",
+      "sha256": "12018cd4184b023d52df2e96fd4459eaadf1986cc7270484d110a218f8a27fea"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T101233.023327Z/art-failed.json",
+      "sha256": "afcaca20795b16064f9be25aa9af5775a1b997e1539088975409bc9355ffa6ff"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T101233.023327Z/complete-art.log",
+      "sha256": "66b9435c8acc21d9584adb5cb8bb96668e97d16bdb3fb37dfeca0bf500c759c0"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T101233.023327Z/report.json",
+      "sha256": "54053e35321db0fb084c9aa50c9c746c29d6055c05c45eee29a33f539f9622b7"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T101346.342232Z/art-report.json",
+      "sha256": "41d26ab287e1e5cddce3f68e9d093892f294d02320f8f2e34470fdc3af16c438"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T101346.342232Z/candidate.json",
+      "sha256": "f4fcd8036442c1261f5526486ff75244e46ac9c2a8d992470e1f52474aa75eea"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T101346.342232Z/complete-art.log",
+      "sha256": "ba1d9603c1c1ad022e723b4f5fa87bbb2a789e321942e194bd0bf07a53b81d73"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T101346.342232Z/FFTA_Engineering.gba",
+      "sha256": "029547bb57325915a7d4a97f9e0e19b096645bf3d25d131c35c216ef6da41e78"
+    },
+    {
+      "path": "build/art/engineering-rebuild/20260919T101346.342232Z/report.json",
+      "sha256": "d1082cb2be559441b85fbffaef97d753ba58fc2c3e2d813d3ce0943cf6f35175"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T100752.047721Z/001-build-full-engineering.log",
+      "sha256": "d4215e40acbb61d46cc606b4161935c8fe4bbbc5d25cca425cce424b6489b8b0"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T100752.047721Z/report.json",
+      "sha256": "3ed24b5527046aff080ced438c7913da1bbe12f37a41de98a8eca84d14be8751"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T101232.400884Z/001-build-full-engineering-art-resume.log",
+      "sha256": "5dc81fe4484cced885d1eb1777d4109076ccc1558c9a537a98c7155951383ac9"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T101232.400884Z/report.json",
+      "sha256": "8482d5979f01d64ad20cbf9d0acf5aaaae8a8f6786aa842ce1f526324b4061d2"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T101345.670886Z/001-build-full-engineering-art-resume.log",
+      "sha256": "045093a84651b46613b70716fc3c4581ad68e8de870ffb1f6a58c69afde7bff8"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T101345.670886Z/report.json",
+      "sha256": "2f5f5e2c525be4a02a1b180fec4fd717e2329b767228af0517dd2edb61c022b9"
+    },
+    {
+      "path": "build/reproducibility/20260919T100752.819552Z/01-foundation.log",
+      "sha256": "39bdfc8c900658904da9dc3e8a1f6b54d151ee7c48af81223a8386bd87cd303c"
+    },
+    {
+      "path": "build/reproducibility/20260919T100752.819552Z/02-engine.log",
+      "sha256": "eb71105507e2d4afe5d4f2d6b6ab710aefba6dbb8f24d385e665a9894902ff7d"
+    },
+    {
+      "path": "build/reproducibility/20260919T100752.819552Z/03-samurai.log",
+      "sha256": "849f4f86dc244421b512bad9d177a29ee43877f16d6171c89ea9f449377efe2f"
+    },
+    {
+      "path": "build/reproducibility/20260919T100752.819552Z/04-job-state.log",
+      "sha256": "cf2ba67c185f2ce9daed698a372a70434b19033b9ff28a037fc8c48dd385c5f8"
+    },
+    {
+      "path": "build/reproducibility/20260919T100752.819552Z/05-chemist.log",
+      "sha256": "a6a400a4f2fcde006714dd745d57783cbbdfc04320be72d4d1ac8de5d8a4ba51"
+    },
+    {
+      "path": "build/reproducibility/20260919T100752.819552Z/06-dark-knight.log",
+      "sha256": "4424848d39010341a40ad68fc1494bcb5d0f1f915abad4dcd7c65c14f2d1086d"
+    },
+    {
+      "path": "build/reproducibility/20260919T100752.819552Z/07-viking.log",
+      "sha256": "2dc7564d9b19deedfa2400e199b3985fd2375bb5d4e0677f1b1daf2068a9e037"
+    },
+    {
+      "path": "build/reproducibility/20260919T100752.819552Z/08-integrated.log",
+      "sha256": "0bf71cb33fc0d34475766bb5a3715e57a819cab56d63e2a65fd2d52d6dec348a"
+    },
+    {
+      "path": "build/reproducibility/20260919T100752.819552Z/report.json",
+      "sha256": "f002d414fd615b933fdb34bec4ca65491bfa488faf54e4c4a969aaf6cdb8ee55"
+    },
+    {
+      "path": "notes/native-art-build-inputs.json",
+      "sha256": "de1ad9a069e30dce0f8256da17202975a4a5672591df743b9f06b43e3e355da2"
+    },
+    {
+      "path": "notes/native-art-gameplay-base.json",
+      "sha256": "df1fd153dc3faccb2590bb102011265b4a28f094d18759cc8ae7afb5e85abe58"
+    }
+  ]
+}

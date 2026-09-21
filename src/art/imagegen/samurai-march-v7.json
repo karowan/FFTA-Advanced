@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "built-in default; model name not exposed",
+  "prompt": "Use case: identity-preserve. Asset: original FFTA-compatible Human Samurai marching sprite sheet. EDIT the attached generated Samurai artwork, not a native FFTA character. Keep exactly THREE columns and TWO rows and the existing six poses and directions. Make a precise costume-continuity correction: use the TOP MIDDLE sprite's face, eye, gold crescent, helmet brim and helmet contour as the identical rigid head design in ALL THREE TOP sprites. Top row all faces down-left three-quarter. Use the BOTTOM MIDDLE sprite's helmet contour, red horizontal neckguard plates and small visible gold crest as the identical rigid head design in ALL THREE BOTTOM sprites, all facing up-right three-quarter. Same head angle and scale within each row; no rotating heads. The only head motion is the existing small vertical marching bob. Preserve the existing deliberate opposite raised boots in columns one and three and the two grounded boots in column two; every pose has TWO boots. Keep the same red lamellar breastplate, red skirt plates, purple sleeves and trousers, brown boots, gold fittings, katana sheath on anatomical LEFT hip, body proportions and silhouette. Keep sheath location anatomically consistent front/back. Tight, clean clustered pixel art designed to remain readable as a roughly 17 by 27 pixel game sprite. Flat solid pixel clusters with hard square edges and a single dark outline. No extra subpixel texture, glow, haze, cast shadows, gradients or translucent fringe. Genuine transparent background with fully empty gutters. No labels, text, grid, border or reference characters. This is one character animated, not six costume variations. Return the full six-frame sheet. Correct head/costume continuity without making the poses identical.",
+  "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v7.png",
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-9faf447c-a0d4-4ab3-b688-998875440ed1.png",
+  "references": [
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/samurai-march-v6.png",
+      "role": "Generated original character edit target",
+      "sha256": "f9e0b2071693f38cb856538377d75b412907b6c7c3d7d70c20ad35f8e32e0a47"
+    }
+  ],
+  "productionAccepted": false,
+  "status": "Selected for a private native preview; final production acceptance remains open. Source costume improved; source and native alternating steps visible. Exact pixel inspection corrects initial visual claim: all three front frames have white pixels at16,12 and16,13. v8 adds no eye-readability improvement.",
+  "sourceSha256": "de749df2f468578406e8c9a542a2721cfca6e38e70220d528092f1364c4a05d0",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "conversion": {
+    "columns": 3,
+    "rows": 2,
+    "height": 27,
+    "resampling": "nearest",
+    "palette": "shared generated 15-color RGB555"
+  },
+  "reviewArtifacts": [
+    "build/art/imagegen/samurai/native-scale-study/march-v7-v8-comparison.png",
+    "build/art/imagegen/samurai/native-scale-study/march-v7-v8-comparison-native.png"
+  ]
+}

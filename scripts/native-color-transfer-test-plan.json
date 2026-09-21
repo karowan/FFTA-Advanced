@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 240,
+  "description": "Isolated approved Dark Knight color transfer into unchanged native palettes; no player saves or installation.",
+  "steps": [
+    {"id":"build-native-color-transfer","runtime":"python","kind":"build","suites":["native-color-transfer"],"args":["scripts/study-approved-native-transfer.py","--job","117","--select","5"]},
+    {"id":"build-native-color-actions","runtime":"python","kind":"build","suites":["native-color-transfer"],"args":["scripts/import-reviewed-actions.py","--native","--parent","build/art/connected/a28b624bb13c8f2f2597a4d4bd3999b17c234b99/manifest.json","--native-conversion","build/art/native-color-transfer-2026-09-20/human-dark-knight/manifest.json","--output","build/art/native-color-transfer-2026-09-20/dark-knight-candidate.json"]},
+    {"id":"test-native-color-contract","runtime":"python","kind":"static","suites":["native-color-transfer"],"args":["scripts/test-native-color-transfer.py"]},
+    {"id":"test-native-color-import","runtime":"python","kind":"runtime","suites":["native-color-transfer"],"args":["scripts/test-reviewed-action-import.py","--manifest","build/art/native-color-transfer-2026-09-20/dark-knight-candidate.json"]},
+    {"id":"test-native-color-entry","runtime":"python","kind":"runtime","suites":["native-color-transfer"],"args":["scripts/test-reviewed-palette-entry.py","--native","--manifest","build/art/native-color-transfer-2026-09-20/dark-knight-candidate.json","--entry-index","build/art/native-color-transfer-2026-09-20/entry-latest.json"]},
+    {"id":"test-native-color-fight-117","runtime":"python","kind":"runtime","suites":["native-color-transfer"],"args":["scripts/test-samurai-fight.py","--current","build/art/native-color-transfer-2026-09-20/dark-knight-candidate.json","--reviewed-entry","--entry-index","build/art/native-color-transfer-2026-09-20/entry-latest.json","--job","117"]},
+    {"id":"test-native-color-combo-117","runtime":"python","kind":"runtime","suites":["native-color-transfer"],"args":["scripts/test-samurai-fight.py","--current","build/art/native-color-transfer-2026-09-20/dark-knight-candidate.json","--reviewed-entry","--entry-index","build/art/native-color-transfer-2026-09-20/entry-latest.json","--job","117","--combo"]},
+    {"id":"test-native-color-water-117","runtime":"python","kind":"runtime","suites":["native-color-transfer"],"args":["scripts/test-reviewed-water.py","--native","--manifest","build/art/native-color-transfer-2026-09-20/dark-knight-candidate.json","--entry-index","build/art/native-color-transfer-2026-09-20/entry-latest.json","--job","117"]}
+  ]
+}

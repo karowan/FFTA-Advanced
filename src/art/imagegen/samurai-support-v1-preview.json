@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "status": "Private partial Samurai support-action preview; no full animation or final art acceptance",
+  "jobs": [
+    {
+      "job": 116,
+      "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v7.png",
+      "sourceSha256": "de749df2f468578406e8c9a542a2721cfca6e38e70220d528092f1364c4a05d0",
+      "conversionManifest": "build/art/imagegen/samurai/native-scale-study/march-v7-own/manifest.json",
+      "conversionManifestSha256": "814291ab91b1f201f9c4fd0194ff871d42fa9ae76eccb658a5ac60ede81b4f8b",
+      "actionPlan": "src/art/imagegen/samurai-support-v1-plan.json",
+      "actionPlanSha256": "aba0e61ae945ff5053b83149b5e52e219af3edc4e4401df5e50a22babc1fe06e"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "romSha1": "79e8869552d580469e830c5d07504044ae59553e",
+  "fixtureRomSha1": "03a32e76403531ee60c74f4b5342e7fdb07caf0c",
+  "files": {
+    "failed.json": {
+      "path": "build/art/all-class-capacity/20260919T063642.661267Z/failed.json",
+      "sha256": "d72789461d1db003df84d3b0d690c35dae7ff353b8b4a3323deacf77b50a4fb6"
+    },
+    "failed.ram": {
+      "path": "build/art/all-class-capacity/20260919T063642.661267Z/failed.ram",
+      "sha256": "ee0da45cbda62a088df277a0827187330f0cc34188cee58ef4fe496df7ab62f4"
+    },
+    "failed.iwram": {
+      "path": "build/art/all-class-capacity/20260919T063642.661267Z/failed.iwram",
+      "sha256": "e75dbf89ebe2f055b63a1e3655ef2b10c3643932f31c5ffdeb436753c550011e"
+    },
+    "failed.oam": {
+      "path": "build/art/all-class-capacity/20260919T063642.661267Z/failed.oam",
+      "sha256": "57af910355f253721b2a4f5676ca01ff72eefc3a8eb053a8697371694e819f8f"
+    },
+    "failed.vram": {
+      "path": "build/art/all-class-capacity/20260919T063642.661267Z/failed.vram",
+      "sha256": "9d273a991d8d0f85dc5b4be9ef58573cb7b3b3499ec5af4b0a2fa0289c7176b9"
+    }
+  }
+}

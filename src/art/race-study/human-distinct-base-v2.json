@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "Not exposed by tool",
+  "prompt": "Use case: identity-preserve. Edit this exact original bald cook FFTA sprite with ONE subtle facing correction.\nTurn the character VERY SLIGHTLY toward the viewer/camera, only a few degrees from its current down-left three-quarter facing, so the second, farther eye is a little more visible. Keep the near eye as the dominant eye; the far eye should be a tiny native-scale dark mark, not an equally large eye. The result must remain a down-left three-quarter sprite, not front-facing. Make only the minimum small head and upper-body angle adjustment required to feel natural.\nPreserve the identical bald rounded scalp, small dark jaw beard, tan skin, cream rolled sleeves, ochre split apron, teal waist sash with tail on anatomical left side, dark brown trousers and ankle boots. Same proportions, silhouette size, standing pose, feet, hands, color palette, pixel density, outline weight and canvas placement. Do not change character design or add hair, headwear, accessories or new details. Keep the simple small FFTA pixel-art clusters. No extra shading, larger eyes, enlarged head, modern pixel-art texture, glow, ground shadow, text, grid or additional figures.\nReturn ONE full sprite on genuine transparent background. Tiny rotation toward camera and slightly more visible far eye are the only intended changes.",
+  "references": [
+    "build/art/race-study-2026-09-19/human-distinct-base.png"
+  ],
+  "status": "Base iteration only. User paused further pose experiments pending refinement. Not production accepted.",
+  "source": "build/art/race-study-2026-09-19/human-distinct-base-v2.png",
+  "sourceSha256": "8cb0fd6effd90514e189e78f51a8e4cd8d3474196f72701849ddcc59c9f1d2cb",
+  "referenceSha256": "cec844eba6f58de4ab443c57780eeac38ade16bd2100a65ea0e89c1670ca3dcf"
+}

@@ -1,0 +1,351 @@
+[
+  {
+    "role": "ffta-race",
+    "name": "human",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-race-human.jpg",
+    "sha256": "6eaa404493237820c01ba79c3289f5e6dc995648827f3d51df7f78e8e26b35a1",
+    "sources": [
+      {
+        "id": "ffta-h-soldier",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-h-soldier.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-h-soldier.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-h-soldier.jpg",
+        "sha256": "b89e83666c4b0bd1eb3417aa1f2f61e37869286b444e299738c142a3c78794e7"
+      },
+      {
+        "id": "ffta-h-fighter",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-h-fighter.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-h-fighter.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-h-fighter.jpg",
+        "sha256": "16eb51a34285b05c92b72898e3c204bb26437d74046af17ae316ecfc94d87175"
+      },
+      {
+        "id": "ffta-h-paladin",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-h-paladin.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-h-paladin.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-h-paladin.jpg",
+        "sha256": "4e104fe698fb4fd0867a029e0202a5c92f2c7c3c09763a6ab84a7e71a87137b9"
+      },
+      {
+        "id": "ffta-h-hunter",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-h-hunter.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-h-hunter.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-h-hunter.jpg",
+        "sha256": "4a456a8d0326e7dd2d2d0b8dd07858b023b3819b2ffce57c1a8ba2396d73daa0"
+      }
+    ]
+  },
+  {
+    "role": "ffta-race",
+    "name": "bangaa",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-race-bangaa.jpg",
+    "sha256": "a525874ecb3e6a92168a5fe28945211a85250d1a0c208a9119dfd34e3b414cb1",
+    "sources": [
+      {
+        "id": "ffta-bangaa-defender",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-bangaa-defender.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-bangaa-defender.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-bangaa-defender.jpg",
+        "sha256": "da0022c508074469ad81209f838e747b48a5d0761bd548fe26d75a357ad5b07a"
+      },
+      {
+        "id": "ffta-bangaa-dragoon",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-bangaa-dragoon.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-bangaa-dragoon.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-bangaa-dragoon.jpg",
+        "sha256": "35b5bc36644e619b89b71065ce5366b401b0e27b99cb7eb0d06de74c0f815c3e"
+      },
+      {
+        "id": "ffta-bangaa-gladiator",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-bangaa-gladiator.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-bangaa-gladiator.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-bangaa-gladiator.jpg",
+        "sha256": "e2a58bc5c7df2ea3bde7ee881ce9d47f176e6c33766a9ba618be2f3321ae7b77"
+      },
+      {
+        "id": "ffta-bangaa-whitemonk",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-bangaa-whitemonk.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-bangaa-whitemonk.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-bangaa-whitemonk.jpg",
+        "sha256": "e37c58ad9c1cc280d3fc3d5862f3e89522e8f8443e2afc7ff3b74fb039ab214e"
+      }
+    ]
+  },
+  {
+    "role": "ffta-race",
+    "name": "nu-mou",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-race-nu-mou.jpg",
+    "sha256": "2607eeecd2bcb2c17e04968931074b5cad4c3bdbf154b528270755fe59309d4c",
+    "sources": [
+      {
+        "id": "ffta-nu-mou-alchemist",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-nu-mou-alchemist.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-nu-mou-alchemist.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-nu-mou-alchemist.jpg",
+        "sha256": "aa99edf95e0d402bb71089c653b1dddd5e414e3396105f78e71a83eee8723fc8"
+      },
+      {
+        "id": "ffta-nu-mou-sage",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-nu-mou-sage.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-nu-mou-sage.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-nu-mou-sage.jpg",
+        "sha256": "2a2c1db9d4431f39d6f456f42d907eb7fa6300e4b7f85e34fde3384219f37523"
+      },
+      {
+        "id": "ffta-nu-mou-whitemage",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-nu-mou-whitemage.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-nu-mou-whitemage.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-nu-mou-whitemage.jpg",
+        "sha256": "4c3025c84c366653e71e6e1fc8d1c3759aa25a437865db2c8085bad046971fb5"
+      },
+      {
+        "id": "ffta-nu-mou-beastmaster",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-nu-mou-beastmaster.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-nu-mou-beastmaster.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-nu-mou-beastmaster.jpg",
+        "sha256": "0eaf09dbeac5701d89fe2944b5b04018fa43b29608032f2ec6bffbd39ed592ef"
+      }
+    ]
+  },
+  {
+    "role": "ffta-race",
+    "name": "moogle",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-race-moogle.jpg",
+    "sha256": "320eeadffe27b7ee78d451d14050b6436842a9e4d848ac08785a86e39295bf4f",
+    "sources": [
+      {
+        "id": "ffta-moogle-gadgeteer",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-moogle-gadgeteer.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-moogle-gadgeteer.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-moogle-gadgeteer.jpg",
+        "sha256": "f925696618ff7d30e646aed1dfae65f05481b2afb4297540890452481e909753"
+      },
+      {
+        "id": "ffta-moogle-gunner",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-moogle-gunner.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-moogle-gunner.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-moogle-gunner.jpg",
+        "sha256": "d1c9f4ceb2becaddf6d86ceb226250a13d94e98c657e0e2d4de87f793fd09816"
+      },
+      {
+        "id": "ffta-moogle-animist",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-moogle-animist.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-moogle-animist.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-moogle-animist.jpg",
+        "sha256": "be299bcc8b57d8f1925d8ce06ecda471bf2270de32aca9c87fcb6c28b8d87717"
+      },
+      {
+        "id": "ffta-moogle-juggler",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-moogle-juggler.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-moogle-juggler.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-moogle-juggler.jpg",
+        "sha256": "ffbdd7e77f9a51f98f51a0ce5d72795a65558404a7a7bcbcd2a06d12f3142fb0"
+      }
+    ]
+  },
+  {
+    "role": "ffta-race",
+    "name": "viera",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-race-viera.jpg",
+    "sha256": "5f1f5e7caf44fb69453fd33b116da3d334c0c1ec3f1105cfb4bac451874df0b8",
+    "sources": [
+      {
+        "id": "ffta-viera-fencer",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-viera-fencer.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-viera-fencer.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-viera-fencer.jpg",
+        "sha256": "f1fddbdc9480c164d11116c7bb9e9878c24bc281aec81147a8faf4a1cd3b662c"
+      },
+      {
+        "id": "ffta-viera-redmage",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-viera-redmage.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-viera-redmage.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-viera-redmage.jpg",
+        "sha256": "e4f8660c537e35d9d7049784f0b74285aa50f6b4b1bf9b3bc05b8ae1d377d630"
+      },
+      {
+        "id": "ffta-viera-elementalist",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-viera-elementalist.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-viera-elementalist.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-viera-elementalist.jpg",
+        "sha256": "26f302f30022244eeebc89a2bfa40cf1dbbb8dc0df3d7b3ab374e6fea02a2b8f"
+      },
+      {
+        "id": "ffta-viera-summoner",
+        "page": "https://www.creativeuncut.com/gallery-01/ffta-viera-summoner.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-01/art/ffta-viera-summoner.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ffta-viera-summoner.jpg",
+        "sha256": "0c2fedf2483fffacabf6087a64b5f4a6bdda5fa000e378185002b74b3719bdf2"
+      }
+    ]
+  },
+  {
+    "role": "ff-job",
+    "name": "samurai",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff-job-samurai.jpg",
+    "sha256": "95f766ac05a06a818677f71f36a3d6acc91e5974d39697bd4812cada88a4b6be",
+    "sources": [
+      {
+        "id": "fft-samurai-male",
+        "page": "https://www.creativeuncut.com/gallery-04/fft-samurai-male.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/fft-samurai-male.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\fft-samurai-male.jpg",
+        "sha256": "a7f822b119c9be4e987c31c96ec8e58bb7c6c5d3418f655cd3f32f43af2c3bf0"
+      },
+      {
+        "id": "fft-samurai-female",
+        "page": "https://www.creativeuncut.com/gallery-04/fft-samurai-female.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/fft-samurai-female.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\fft-samurai-female.jpg",
+        "sha256": "b3b3870f38103ad16341918d622c85cd0a1c51ffeae382747d57d9105f3e8623"
+      }
+    ]
+  },
+  {
+    "role": "ff-job",
+    "name": "dark-knight",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff-job-dark-knight.jpg",
+    "sha256": "64b808de5790f90255c6cb3a4ee483c62aa53a2b5943222b6f570cc38dd36205",
+    "sources": [
+      {
+        "id": "ff4-cecil-harvey2",
+        "page": "https://www.creativeuncut.com/gallery-07/ff4-cecil-harvey2.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-07/art/ff4-cecil-harvey2.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff4-cecil-harvey2.jpg",
+        "sha256": "843641999d62ef905c604562666b736407e3eaa60bd42e37ac22bbb992856ae2"
+      },
+      {
+        "id": "fft-wotl-dark-knight-male",
+        "page": "https://www.creativeuncut.com/gallery-04/fft-wotl-dark-knight-male.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/fft-wotl-dark-knight-male.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\fft-wotl-dark-knight-male.jpg",
+        "sha256": "a53e367f8deb299e34cd95e3d0276b9d8a3c89b08d7e58b56cafc3a46fc4e71d"
+      }
+    ]
+  },
+  {
+    "role": "ff-job",
+    "name": "viking",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff-job-viking.jpg",
+    "sha256": "fcaefdb51eac7d0835b0385c2908b7b99cf75a693a2d3da6162213e70f724ab0",
+    "sources": [
+      {
+        "id": "ff3-luneth-viking",
+        "page": "https://www.creativeuncut.com/gallery-04/ff3-luneth-viking.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/ff3-luneth-viking.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff3-luneth-viking.jpg",
+        "sha256": "a175bf9cce86584d3a294e1261b170231ac9211f08a72d9ae3622c1f926097a7"
+      },
+      {
+        "id": "ff3-ingus-viking",
+        "page": "https://www.creativeuncut.com/gallery-04/ff3-ingus-viking.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/ff3-ingus-viking.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff3-ingus-viking.jpg",
+        "sha256": "33437a3fb13de49e8ba7979e845dd2ed5838be6268685c62d1457957bfbe7aa7"
+      }
+    ]
+  },
+  {
+    "role": "ff-job",
+    "name": "chemist",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff-job-chemist.jpg",
+    "sha256": "19679ce5433f6d6b0b91a75c6715e9cca11c1e7ac0069ff7bdf0049959e743d4",
+    "sources": [
+      {
+        "id": "fft-chemist-male",
+        "page": "https://www.creativeuncut.com/gallery-04/fft-chemist-male.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/fft-chemist-male.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\fft-chemist-male.jpg",
+        "sha256": "c098f67fa9cd3af73f94b2362f9740c9dc485904c3679366fa0323d08323f4da"
+      },
+      {
+        "id": "fft-chemist-female",
+        "page": "https://www.creativeuncut.com/gallery-04/fft-chemist-female.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/fft-chemist-female.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\fft-chemist-female.jpg",
+        "sha256": "a60ada1171df8a69ea28db11559f2e80e0b7f02101f6a25f7d10652336d934c8"
+      }
+    ]
+  },
+  {
+    "role": "ff-job",
+    "name": "geomancer",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff-job-geomancer.jpg",
+    "sha256": "207b118a5ab425f70a91fb839fdaba16d165661f610a50e55a58d984fc9b6d38",
+    "sources": [
+      {
+        "id": "ff3-luneth-geomancer",
+        "page": "https://www.creativeuncut.com/gallery-04/ff3-luneth-geomancer.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/ff3-luneth-geomancer.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff3-luneth-geomancer.jpg",
+        "sha256": "0f8375f65d007e0e4d3f993312c3db0eb7b36a226a657febe94fde24e60d9315"
+      },
+      {
+        "id": "fft-geomancer-male",
+        "page": "https://www.creativeuncut.com/gallery-04/fft-geomancer-male.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/fft-geomancer-male.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\fft-geomancer-male.jpg",
+        "sha256": "bea79d4e16e4bd1ef2e49501cebe20243beb177fb3bad1c4ace141bd2d656690"
+      }
+    ]
+  },
+  {
+    "role": "ff-job",
+    "name": "bard",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff-job-bard.jpg",
+    "sha256": "fd358914970cc0c3441639120bde0c5cfd6eff90d3556d9f101fc92af830e1f2",
+    "sources": [
+      {
+        "id": "fft-bard",
+        "page": "https://www.creativeuncut.com/gallery-04/fft-bard.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/fft-bard.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\fft-bard.jpg",
+        "sha256": "08e3bccd56ffca6fd8e3531f0c8348fb33268804e175b65aa8688bcbe43c7059"
+      },
+      {
+        "id": "ff3-luneth-bard",
+        "page": "https://www.creativeuncut.com/gallery-04/ff3-luneth-bard.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/ff3-luneth-bard.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff3-luneth-bard.jpg",
+        "sha256": "20774ab60108941e43badf29b15eb52c33a627ba39d11108c612dd31d5c7624f"
+      }
+    ]
+  },
+  {
+    "role": "ff-job",
+    "name": "dancer",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff-job-dancer.jpg",
+    "sha256": "34a9adf135c70e4e160c1c233a21f61ac1298d43ce1351e0b8c3fcceff83254f",
+    "sources": [
+      {
+        "id": "fft-dancer",
+        "page": "https://www.creativeuncut.com/gallery-04/fft-dancer.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-04/art/fft-dancer.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\fft-dancer.jpg",
+        "sha256": "bec081074dde16196b8b80eceed68c6a4f3f1200eecec8faf59cccade1d239bd"
+      }
+    ]
+  },
+  {
+    "role": "ff-job",
+    "name": "mystic-knight",
+    "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff-job-mystic-knight.jpg",
+    "sha256": "6b42db636d980eb40dbcbe0495ce338fcb4c125fed31bdd98a79b27ce8cadc20",
+    "sources": [
+      {
+        "id": "ff11-rune-fencer",
+        "page": "https://www.creativeuncut.com/gallery-25/ff11-rune-fencer.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-25/art/ff11-rune-fencer.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff11-rune-fencer.jpg",
+        "sha256": "51ebeeb7d4a8309bdcfc39ea2b59bca5b27829bf18880a8b9c1768d9063b6853"
+      },
+      {
+        "id": "ff11-rune-fencer-armor-design",
+        "page": "https://www.creativeuncut.com/gallery-25/ff11-rune-fencer-armor-design.html",
+        "imageUrl": "https://www.creativeuncut.com/gallery-25/art/ff11-rune-fencer-armor-design.jpg",
+        "path": "build\\art\\illustrated-class-concepts-v2-2026-09-19\\references\\ff11-rune-fencer-armor-design.jpg",
+        "sha256": "e8c1ee433acb9cc7371f15485d7374b7efc8e9ff5911f5017fb80b40216a5336"
+      }
+    ]
+  }
+]

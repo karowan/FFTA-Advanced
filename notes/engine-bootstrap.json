@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "sourceCommit": "706596a350c18efe64980c457f053e6e27b9b262",
+  "engineSha1": "08dbe8aa6f592c7df85e451e7c8e7d0baacec3a6",
+  "combatRomSha1": "ba1c33ea4191abd74d346cc2d22dc39e5d1df1b7",
+  "sourceLayoutAdapter": "scripts/engine_bootstrap_source.py",
+  "purpose": "Build the original shared engine before later job-state providers exist. Restore current sources before compiling the layers that replace its relevant functions. No cached binaries are inputs."
+}

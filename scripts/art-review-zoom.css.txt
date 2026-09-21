@@ -1,0 +1,12 @@
+:root{--sprite-size:192px}
+.player img.actor,.keyframe img.actor,.poses img.actor{width:var(--sprite-size);height:var(--sprite-size);max-width:none;cursor:zoom-in}
+img.actor:focus-visible{outline:3px solid #285d61;outline-offset:3px}
+.poses{grid-template-columns:repeat(auto-fill,minmax(calc(var(--sprite-size) + 14px),1fr))}
+.sequence-body,.poses{overflow-x:auto}
+#sprite-detail{max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);width:max-content;border:1px solid #aaa99f;border-radius:10px;padding:20px;background:#f9f7f1;color:#242b32}
+#sprite-detail::backdrop{background:#182124b8}
+.detail-controls{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.detail-controls h2{font-size:22px;margin:0 auto 0 0}
+#sprite-detail p{margin:10px 0;font-size:14px;max-width:700px}
+.detail-scroll{overflow:auto;max-width:calc(100vw - 76px);max-height:calc(100vh - 230px);background:#e7e5df}
+#sprite-detail-image{max-width:none;object-fit:fill;image-rendering:pixelated}

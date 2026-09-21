@@ -1,0 +1,40 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {root,cleanROM,sha1} from '../src/rom-data.mjs';
+import {ROMBuilder,encodeText} from '../src/rom-builder.mjs';
+const out=path.join(root,'build/expansion/probes');
+const base=fs.readFileSync(path.join(out,'ability-core.gba'));
+const previous=JSON.parse(fs.readFileSync(path.join(out,'ability-core.json')));
+const content=JSON.parse(fs.readFileSync(path.join(out,'content-data.json')));
+if(sha1(base)!==previous.romSha1)throw Error('Stale ability integration probe');
+const registry=JSON.parse(fs.readFileSync(path.join(root,'build/expansion/registry.json')));
+const design=JSON.parse(fs.readFileSync(path.join(root,'notes/job-theme-audit.json')));
+const clean=cleanROM();
+const builder=new ROMBuilder(base,{start:Math.max(...content.allocations.map(a=>a.offset+a.bytes))});
+const others=Buffer.alloc(906*4);
+base.copy(others,0,content.addresses.others-0x08000000,content.addresses.others-0x08000000+896*4);
+const commands=Buffer.alloc(126*4);
+clean.copy(commands,0,0x527244,0x527244+74*4);
+const profiles=[];
+for(const [i,job] of registry.jobs.filter(j=>!j.existing).entries()) {
+  const name=design.commandRules[job.group]?.match(/^\*\*(.*?) — /)?.[1];
+  if(!name)throw Error('Approved command name missing for '+job.name);
+  const nameId=896+i;
+  others.writeUInt32LE(builder.allocate(job.raceName+' '+name+' command name',encodeText(name)),nameId*4);
+  commands.writeUInt16LE(nameId,job.id*4);
+  // Effects and matching battle help are installed together in a later stage.
+  commands.writeUInt16LE(0,job.id*4+2);
+  profiles.push({jobId:job.id,race:job.race,name,nameId,helpId:0});
+}
+const addresses={others:builder.allocate('Other text with command names',others),commands:builder.allocate('extended command descriptors',commands)};
+builder.repoint(content.addresses.others,addresses.others);
+builder.repoint(0x08527244,addresses.commands,11);
+const symbols=Object.fromEntries(fs.readFileSync(path.join(root,'build/expansion/engine.symbols'),'utf8').trim().split(/\r?\n/).map(l=>{const[a,,n]=l.trim().split(/\s+/);return[n,parseInt(a,16)];}));
+if(!base.subarray(0xc8ebc,0xc8ec8).equals(clean.subarray(0xc8ebc,0xc8ec8)))throw Error('Command discovery conflict');
+builder.rom.writeUInt16LE(0x4b00,0xc8ebc);builder.rom.writeUInt16LE(0x4718,0xc8ebe);
+builder.rom.writeUInt32LE(symbols.ffta_commands_entry|1,0xc8ec0);
+builder.rom.writeUInt32LE(0x46c046c0,0xc8ec4);
+builder.changes.push({offset:0xc8ebc,name:'ffta_commands_entry',size:12,expected:clean.subarray(0xc8ebc,0xc8ec8).toString('hex')});
+fs.writeFileSync(path.join(out,'command-data.gba'),builder.rom);
+fs.writeFileSync(path.join(out,'command-data.json'),JSON.stringify({status:'TEST ONLY: command names and reverse resolution; job wheel/action lists/effects remain pending',baseSha1:sha1(base),romSha1:sha1(builder.rom),engineSha1:previous.engineSha1,profiles,addresses,allocations:builder.allocations,changes:builder.changes},null,2));
+console.log('Built extended native command descriptors');

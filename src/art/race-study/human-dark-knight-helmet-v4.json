@@ -1,0 +1,33 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Tool default; version not exposed",
+  "settings": "Prompt and one referenced image path only; other settings tool-managed.",
+  "prompt": "Make the helmet points on the rightmost Dark Knight much smaller, about half their current height, so the helmet feels compact and understated. Keep the rear crest on the right and closed gold-edged visor facing left. Keep everything else, including the body, colors, pixel style and entire row layout, unchanged.",
+  "references": [
+    {
+      "path": "build\\art\\approved-class-sprites-2026-09-19\\human-dark-knight-helmet-v3-generated.png",
+      "role": "Edit target",
+      "sha256": "1f3e9462d86bc87283f8d8fdbcf61b4eb7728a2129e39d7d33a5f9ded414f5e3"
+    }
+  ],
+  "source": "build/art/approved-class-sprites-2026-09-19/human-dark-knight-helmet-v4-generated.png",
+  "conversion": {
+    "logicalGrid": [
+      160,
+      64
+    ],
+    "crop": [
+      128,
+      16,
+      160,
+      48
+    ],
+    "resampling": "nearest",
+    "palette": "Generated colors retained",
+    "sharedPixelOverride": "Closed helmet covers face and hair; do not restore exposed anatomy."
+  },
+  "status": "Helmet points shortened for a subtler silhouette; closed visor and rear crest orientation retained. Awaiting user review. Animation remains paused.",
+  "sourceSha256": "cb018385b87455836891fcf3a7bfbb2c76aaf08808554797cfc349a355295197",
+  "output": "build/art/approved-class-sprites-2026-09-19/human-dark-knight-helmet-v4-grid.png",
+  "outputSha256": "2ab513d2b04c0d27ef7c8046657fb43a898d550693d35c34b4aadd032e3bcf0e"
+}

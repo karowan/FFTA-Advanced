@@ -1,0 +1,130 @@
+[
+  {
+    "pose": "p000",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-c103e674-474f-43b3-88cd-77ff508f2fa7.png",
+    "prompt": "Precise pixel COLOR EDIT only. Image 1 is the 32x32 logical pixel sprite to edit; image 2 is the accepted color reference for this SAME character facing the same direction. Match image 1 costume colors to image 2, while keeping EVERY pixel boundary, cluster shape, silhouette, face, limb position and pose from image 1 unchanged. Do not redraw, rescale, shift, sharpen or add detail. Use the same RED armor ramp, GOLD trim and shins, DARK cloth sleeves/trousers, MUTED gray-mauve waist scarf, and small pale skin areas as image 2. Remove stray white/skin highlights from armor and cloth; restrict pale skin to face and small hands, cream cuffs only at wrists. Image 3 is original concept to distinguish sleeve/armor/scarf/skin, NOT a new style to reproduce. Image 4 is the existing native palette; use only these colors. Preserve the exact 32x32 source grid and all shapes. Return the same single sprite on the same 640x640 canvas with transparent background. Change colors only.",
+    "references": [
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p000-edit.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p001-edit.png",
+      "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png"
+    ],
+    "referenceHashes": [
+      {
+        "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p000-edit.png",
+        "sha256": "a472bccf9c81cf5ae2cc6e965a7ebfb0dc423a2eedf17aea0bd0a338692f046c"
+      },
+      {
+        "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p001-edit.png",
+        "sha256": "e81f0d0e01145429f53a2a73d6ffe8bd1a7024405c1eb92f3b60aa569f822e7c"
+      },
+      {
+        "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+        "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+      },
+      {
+        "path": "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png",
+        "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+      }
+    ],
+    "tool": "image_gen.imagegen",
+    "model": "Tool managed"
+  },
+  {
+    "pose": "p002",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-5fd03358-b9e5-4132-bfb7-26d420c00e1b.png",
+    "prompt": "Precise pixel COLOR EDIT only. Image 1 is the 32x32 logical pixel sprite to edit; image 2 is the accepted color reference for this SAME character facing the same direction. Match image 1 costume colors to image 2, while keeping EVERY pixel boundary, cluster shape, silhouette, face, limb position and pose from image 1 unchanged. Do not redraw, rescale, shift, sharpen or add detail. Use the same RED armor ramp, GOLD trim and shins, DARK cloth sleeves/trousers, MUTED gray-mauve waist scarf, and small pale skin areas as image 2. Remove stray white/skin highlights from armor and cloth; restrict pale skin to face and small hands, cream cuffs only at wrists. Image 3 is original concept to distinguish sleeve/armor/scarf/skin, NOT a new style to reproduce. Image 4 is the existing native palette; use only these colors. Preserve the exact 32x32 source grid and all shapes. Return the same single sprite on the same 640x640 canvas with transparent background. Change colors only.",
+    "references": [
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p002-edit.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p001-edit.png",
+      "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png"
+    ],
+    "registration": {
+      "offset": [
+        0,
+        1
+      ],
+      "reason": "Model shifted the unchanged pixel clusters one row upward; fixed one-pixel vertical registration restores source placement. Best unchanged-index agreement among +/-2-pixel translations."
+    },
+    "referenceHashes": [
+      {
+        "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p002-edit.png",
+        "sha256": "da7c2e2695dae76747888bf3853ec77f7b53c90620429ea5cb678fac2e6f50de"
+      },
+      {
+        "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p001-edit.png",
+        "sha256": "e81f0d0e01145429f53a2a73d6ffe8bd1a7024405c1eb92f3b60aa569f822e7c"
+      },
+      {
+        "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+        "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+      },
+      {
+        "path": "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png",
+        "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+      }
+    ],
+    "tool": "image_gen.imagegen",
+    "model": "Tool managed"
+  },
+  {
+    "pose": "p003",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-92a5a40d-0abd-4657-9e82-c6bacfff1b55.png",
+    "prompt": "Precise pixel COLOR EDIT only. Image 1 is the 32x32 logical pixel sprite to edit; image 2 is the accepted color reference for this SAME character facing the same direction. Match image 1 costume colors to image 2, while keeping EVERY pixel boundary, cluster shape, silhouette, face, limb position and pose from image 1 unchanged. Do not redraw, rescale, shift, sharpen or add detail. Use the same RED armor ramp, GOLD trim and shins, DARK cloth sleeves/trousers, MUTED gray-mauve waist scarf, and small pale skin areas as image 2. Remove stray white/skin highlights from armor and cloth; restrict pale skin to face and small hands, cream cuffs only at wrists. Image 3 is original concept to distinguish sleeve/armor/scarf/skin, NOT a new style to reproduce. Image 4 is the existing native palette; use only these colors. Preserve the exact 32x32 source grid and all shapes. Return the same single sprite on the same 640x640 canvas with transparent background. Change colors only.",
+    "references": [
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p003-edit.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\p004-edit.png",
+      "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+      "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png"
+    ],
+    "registration": {
+      "offset": [
+        0,
+        1
+      ],
+      "reason": "Model shifted the unchanged pixel clusters one row upward; fixed one-pixel vertical registration restores source placement. Best unchanged-index agreement among +/-2-pixel translations."
+    },
+    "referenceHashes": [
+      {
+        "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p003-edit.png",
+        "sha256": "391ee6fe9a218ed01e108f68ea4cbf95fee5705c0260a4b42a319e54a58ff7df"
+      },
+      {
+        "path": "build\\art\\samurai-walk-consistency-2026-09-20\\p004-edit.png",
+        "sha256": "24f0eb1a12c9b1910acbedf7281680aeaafd2b73ce1acb3c2bf45107634f3819"
+      },
+      {
+        "path": "build/art/approved-class-animation-2026-09-19/human-samurai/original-concept-user-reference.png",
+        "sha256": "0ffd01300a95b0d3b67b8184aec531f903995570619663111433b2c496780415"
+      },
+      {
+        "path": "build\\art\\samurai-walk-consistency-2026-09-20\\native-colors.png",
+        "sha256": "950500d61ae6687c9b576f3b8b0e48f4a5b6992bb53eb28bd24f5df673786b1f"
+      }
+    ],
+    "tool": "image_gen.imagegen",
+    "model": "Tool managed"
+  },
+  {
+    "pose": "p005",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-3f78307d-5581-46ec-923f-68839bdadfbb.png",
+    "prompt": "Edit ONLY the colors of the red HELMET in image 1. This is a rear view of a Samurai. The pale peach/cream/pink patches on the helmet dome and lower neck guard are WRONG: they are lacquered armor, not exposed skin. Replace those pale helmet patches with the same RED and DARK RED armor colors as the neutral rear sprite in image 2. Keep gold trim gold. Do not change any pixel shape, position, silhouette, horn, clothing, waist scarf, sleeve, hand, leg or other part of image 1. Keep the repaired dark sleeve and small pale hand exactly unchanged. No new highlights, no beige or skin-colored pixels on the helmet armor. Return the identical single sprite canvas and exact pixel grid, with only the helmet colors corrected.",
+    "references": [
+      "build/art/samurai-walk-consistency-2026-09-20/p005-helmet-target.png",
+      "build/art/samurai-walk-consistency-2026-09-20/p004-edit.png"
+    ],
+    "tool": "image_gen.imagegen",
+    "model": "Tool managed",
+    "referenceHashes": [
+      {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p005-helmet-target.png",
+        "sha256": "fc1d53bb717de7b239a0e823917d846b426922c2414e2c99e40f406203369f6b"
+      },
+      {
+        "path": "build/art/samurai-walk-consistency-2026-09-20/p004-edit.png",
+        "sha256": "24f0eb1a12c9b1910acbedf7281680aeaafd2b73ce1acb3c2bf45107634f3819"
+      }
+    ]
+  }
+]

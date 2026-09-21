@@ -1,0 +1,739 @@
+{
+  "tool": "built-in image_gen",
+  "model": "Tool default; model version not exposed",
+  "settings": "Only prompt and referenced_image_paths supplied. Other settings tool-managed.",
+  "scope": "Ten single-pose class concept studies using user-approved racial bases; not production art or animation.",
+  "concepts": [
+    {
+      "job": 116,
+      "slug": "human-samurai",
+      "race": "human",
+      "label": "Human Samurai",
+      "prompt": "Turn the fifth sprite into a Human Samurai: red lacquered segmented armor, compact crescent-crested kabuto with the face exposed, dark divided trousers. Use the SAME underlying racial pixel base. Keep the shared face, eyes, anatomy, pose, camera angle and pixel positions unchanged. Replace the cook costume completely. Match the simple pixel art of the other four sprites. No held weapon. Keep the entire row and its layout.",
+      "references": [
+        {
+          "actor": 0,
+          "slot": 0,
+          "frame": 1,
+          "pose": "000000-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-000\\000000-000000-pose.png",
+          "sourceSha256": "0463cd302f23228b8e9010de4aab17e44dd54079fe02a36b31c2224cee1bc993",
+          "manifestSha256": "d6b7a674683646e389b9af8f3f71f379e5b32ae5a026d363543a6d53fe9923d0"
+        },
+        {
+          "actor": 2,
+          "slot": 0,
+          "frame": 1,
+          "pose": "009640-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-002\\009640-000000-pose.png",
+          "sourceSha256": "98564b0dd307f0080ebe80383d64917dd6945cc37f8ced108bd9fd6a3807c142",
+          "manifestSha256": "a4330352de544514c1e58e347d045628d2c3983c0ffab79922fc6d2b3c778675"
+        },
+        {
+          "actor": 5,
+          "slot": 0,
+          "frame": 1,
+          "pose": "017500-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-005\\017500-000000-pose.png",
+          "sourceSha256": "8e5dd51f705c41cbf79456707d62f9b8d262f174a40d537586c26dee633fd434",
+          "manifestSha256": "bca78a31560171d6625d3fecd4797827b5855dd4796b9b3830bc0ffdf0e34d9e"
+        },
+        {
+          "actor": 7,
+          "slot": 0,
+          "frame": 1,
+          "pose": "020a60-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-007\\020a60-000000-pose.png",
+          "sourceSha256": "2efcd632b9341b6b81dd414c640d1b8581099999ce4d993d55d9a453e609f75c",
+          "manifestSha256": "e023f7b79a692dc6469cf2140ce7f3d405c342940a99093ee62a2ae7b5f65d13"
+        }
+      ],
+      "approvedBase": "build\\art\\race-study-2026-09-19\\shared-base-v1-locked.png",
+      "approvedBaseSha256": "5188317e55cd89d54e32d63d9fba06708d221fd18f7482e8f7ad0ff9da2ddd3f",
+      "template": "build\\art\\class-concepts-2026-09-19\\human-samurai-template.png",
+      "templateSha256": "190b53604e24af69ed53d09a35e9c8f2ee7880aead23195d10bd684348dda408"
+    },
+    {
+      "job": 117,
+      "slug": "human-dark-knight",
+      "race": "human",
+      "label": "Human Dark Knight",
+      "prompt": "Turn the fifth sprite into a Human Dark Knight: dark steel angular armor, an open-faced black brow guard, high collar and a short burgundy tabard. Use the SAME underlying racial pixel base. Keep the shared face, eyes, anatomy, pose, camera angle and pixel positions unchanged. Replace the cook costume completely. Match the simple pixel art of the other four sprites. No held weapon. Keep the entire row and its layout.",
+      "references": [
+        {
+          "actor": 0,
+          "slot": 0,
+          "frame": 1,
+          "pose": "000000-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-000\\000000-000000-pose.png",
+          "sourceSha256": "0463cd302f23228b8e9010de4aab17e44dd54079fe02a36b31c2224cee1bc993",
+          "manifestSha256": "d6b7a674683646e389b9af8f3f71f379e5b32ae5a026d363543a6d53fe9923d0"
+        },
+        {
+          "actor": 2,
+          "slot": 0,
+          "frame": 1,
+          "pose": "009640-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-002\\009640-000000-pose.png",
+          "sourceSha256": "98564b0dd307f0080ebe80383d64917dd6945cc37f8ced108bd9fd6a3807c142",
+          "manifestSha256": "a4330352de544514c1e58e347d045628d2c3983c0ffab79922fc6d2b3c778675"
+        },
+        {
+          "actor": 5,
+          "slot": 0,
+          "frame": 1,
+          "pose": "017500-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-005\\017500-000000-pose.png",
+          "sourceSha256": "8e5dd51f705c41cbf79456707d62f9b8d262f174a40d537586c26dee633fd434",
+          "manifestSha256": "bca78a31560171d6625d3fecd4797827b5855dd4796b9b3830bc0ffdf0e34d9e"
+        },
+        {
+          "actor": 7,
+          "slot": 0,
+          "frame": 1,
+          "pose": "020a60-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-007\\020a60-000000-pose.png",
+          "sourceSha256": "2efcd632b9341b6b81dd414c640d1b8581099999ce4d993d55d9a453e609f75c",
+          "manifestSha256": "e023f7b79a692dc6469cf2140ce7f3d405c342940a99093ee62a2ae7b5f65d13"
+        }
+      ],
+      "approvedBase": "build\\art\\race-study-2026-09-19\\shared-base-v1-locked.png",
+      "approvedBaseSha256": "5188317e55cd89d54e32d63d9fba06708d221fd18f7482e8f7ad0ff9da2ddd3f",
+      "template": "build\\art\\class-concepts-2026-09-19\\human-dark-knight-template.png",
+      "templateSha256": "190b53604e24af69ed53d09a35e9c8f2ee7880aead23195d10bd684348dda408"
+    },
+    {
+      "job": 118,
+      "slug": "bangaa-viking",
+      "race": "bangaa",
+      "label": "Bangaa Viking",
+      "prompt": "Turn the fifth sprite into a Bangaa Viking: a cream fur shoulder mantle, broad brown leather belt, teal short cloak and bronze arm guards; exposed head and muzzle. Use the SAME underlying racial pixel base. Keep the shared face, eyes, anatomy, pose, camera angle and pixel positions unchanged. Replace the cook costume completely. Match the simple pixel art of the other four sprites. No held weapon. Keep the entire row and its layout.",
+      "references": [
+        {
+          "actor": 11,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0336a0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-011\\0336a0-000000-pose.png",
+          "sourceSha256": "31d9d0793d7d9cbaeecefcdf9db87c4c1f15ca9a6ac7eebcc892174880845e19",
+          "manifestSha256": "33bef4187f72eca9d021dab5c92987662e29dca56821dc924b4ff67421b99723"
+        },
+        {
+          "actor": 13,
+          "slot": 0,
+          "frame": 1,
+          "pose": "03c520-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-013\\03c520-000000-pose.png",
+          "sourceSha256": "6dccbeaeaf314572bbad67aa63ae921ea48aff587a2837e31b76f9daf2c48f1d",
+          "manifestSha256": "7d396e252d1907f50ca69f74a11bd896808e1b4aa5e261439d90e05817d3606e"
+        },
+        {
+          "actor": 14,
+          "slot": 0,
+          "frame": 1,
+          "pose": "040be0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-014\\040be0-000000-pose.png",
+          "sourceSha256": "3ea94489c12eca56ea71141fd5f4f71f7ea40394fd54e63111229bfe51b03831",
+          "manifestSha256": "fc4d19d320b828703f9cc2e3c2705ae416732c7c3a7aeb0bda2966687e2deaed"
+        },
+        {
+          "actor": 16,
+          "slot": 0,
+          "frame": 1,
+          "pose": "049820-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-016\\049820-000000-pose.png",
+          "sourceSha256": "46c1ca821d128ef113b1ab706ba1a1108e8717733c9fb42bb2bf1e01d5967d70",
+          "manifestSha256": "fdf75198c0cafe6f3212cc5566d18565cc5eb7c7d8714d2a264293e9c3622398"
+        }
+      ],
+      "approvedBase": "build\\art\\race-study-2026-09-19\\other-races\\bangaa-locked.png",
+      "approvedBaseSha256": "49e5ac210436669943fe6e36fbbb38e7ca2522d027673a7d51e62519d9d6da6b",
+      "template": "build\\art\\class-concepts-2026-09-19\\bangaa-viking-template.png",
+      "templateSha256": "229371d29370660b15a96df4f3c9959d43b2b99c42a191310d2e5b7b8e0cdc8c"
+    },
+    {
+      "job": 119,
+      "slug": "bangaa-dark-knight",
+      "race": "bangaa",
+      "label": "Bangaa Dark Knight",
+      "prompt": "Turn the fifth sprite into a Bangaa Dark Knight: heavy dark steel segmented armor, low violet head crest, armored neck and burgundy waist cloth; exposed muzzle. Use the SAME underlying racial pixel base. Keep the shared face, eyes, anatomy, pose, camera angle and pixel positions unchanged. Replace the cook costume completely. Match the simple pixel art of the other four sprites. No held weapon. Keep the entire row and its layout.",
+      "references": [
+        {
+          "actor": 11,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0336a0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-011\\0336a0-000000-pose.png",
+          "sourceSha256": "31d9d0793d7d9cbaeecefcdf9db87c4c1f15ca9a6ac7eebcc892174880845e19",
+          "manifestSha256": "33bef4187f72eca9d021dab5c92987662e29dca56821dc924b4ff67421b99723"
+        },
+        {
+          "actor": 13,
+          "slot": 0,
+          "frame": 1,
+          "pose": "03c520-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-013\\03c520-000000-pose.png",
+          "sourceSha256": "6dccbeaeaf314572bbad67aa63ae921ea48aff587a2837e31b76f9daf2c48f1d",
+          "manifestSha256": "7d396e252d1907f50ca69f74a11bd896808e1b4aa5e261439d90e05817d3606e"
+        },
+        {
+          "actor": 14,
+          "slot": 0,
+          "frame": 1,
+          "pose": "040be0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-014\\040be0-000000-pose.png",
+          "sourceSha256": "3ea94489c12eca56ea71141fd5f4f71f7ea40394fd54e63111229bfe51b03831",
+          "manifestSha256": "fc4d19d320b828703f9cc2e3c2705ae416732c7c3a7aeb0bda2966687e2deaed"
+        },
+        {
+          "actor": 16,
+          "slot": 0,
+          "frame": 1,
+          "pose": "049820-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-016\\049820-000000-pose.png",
+          "sourceSha256": "46c1ca821d128ef113b1ab706ba1a1108e8717733c9fb42bb2bf1e01d5967d70",
+          "manifestSha256": "fdf75198c0cafe6f3212cc5566d18565cc5eb7c7d8714d2a264293e9c3622398"
+        }
+      ],
+      "approvedBase": "build\\art\\race-study-2026-09-19\\other-races\\bangaa-locked.png",
+      "approvedBaseSha256": "49e5ac210436669943fe6e36fbbb38e7ca2522d027673a7d51e62519d9d6da6b",
+      "template": "build\\art\\class-concepts-2026-09-19\\bangaa-dark-knight-template.png",
+      "templateSha256": "229371d29370660b15a96df4f3c9959d43b2b99c42a191310d2e5b7b8e0cdc8c"
+    },
+    {
+      "job": 120,
+      "slug": "nu-mou-chemist",
+      "race": "nu-mou",
+      "label": "Nu Mou Chemist",
+      "prompt": "Turn the fifth sprite into a Nu Mou Chemist: a cream apothecary coat, teal work apron, small brass goggles above the eyes and a medicine belt; long ears exposed. Use the SAME underlying racial pixel base. Keep the shared face, eyes, anatomy, pose, camera angle and pixel positions unchanged. Replace the cook costume completely. Match the simple pixel art of the other four sprites. No held weapon. Keep the entire row and its layout.",
+      "references": [
+        {
+          "actor": 18,
+          "slot": 0,
+          "frame": 1,
+          "pose": "052700-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-018\\052700-000000-pose.png",
+          "sourceSha256": "06153a7d3385b9cfc4eb563723b5e9f9089378eda46a2d7669d92f5aeb85b513",
+          "manifestSha256": "d2841e46de217aac0f6fa6690d6c8bccd9d70715286ff862c6fc83e063da2590"
+        },
+        {
+          "actor": 20,
+          "slot": 0,
+          "frame": 1,
+          "pose": "05c020-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-020\\05c020-000000-pose.png",
+          "sourceSha256": "d5ccd2def582800f59c59c371cac1bb8d0174575abd7d5ec7f5f46caf5446ed2",
+          "manifestSha256": "05f87d0ac06147de8058a0283d51c8baede681185fe995c019442942017c1922"
+        },
+        {
+          "actor": 21,
+          "slot": 0,
+          "frame": 1,
+          "pose": "060c60-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-021\\060c60-000000-pose.png",
+          "sourceSha256": "52f695118ef71e266e1d15c315db3e9f8c5631555f0919e84353425c4b959a67",
+          "manifestSha256": "452acdc20b482920ffdf006a08135feb3eb63d9ad771cc51bc072f50d8b6522c"
+        },
+        {
+          "actor": 25,
+          "slot": 0,
+          "frame": 1,
+          "pose": "073c20-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-025\\073c20-000000-pose.png",
+          "sourceSha256": "091687de8267cc8b634f1729dff7ae7c5aee0e533a6d90e42b6fadde20cc40ba",
+          "manifestSha256": "4c0efaadd66c5e9e27d311b4824b2fcaf9751b1909e082e716aec1f2ad88a953"
+        }
+      ],
+      "approvedBase": "build\\art\\race-study-2026-09-19\\other-races\\nu-mou-locked.png",
+      "approvedBaseSha256": "d4dc576a1bed7f08555ca8f67bc35c1d01ef6174abe754d97ff1651c1dc3ba42",
+      "template": "build\\art\\class-concepts-2026-09-19\\nu-mou-chemist-template.png",
+      "templateSha256": "a4e863c368affd91496d36b28ebf0c72b399b476a667bee90a14acf56f51b86c"
+    },
+    {
+      "job": 121,
+      "slug": "nu-mou-geomancer",
+      "race": "nu-mou",
+      "label": "Nu Mou Geomancer",
+      "prompt": "Turn the fifth sprite into a Nu Mou Geomancer: a moss-green shoulder mantle, ochre earth-patterned robe and a large stone clasp; head and long ears exposed. Use the SAME underlying racial pixel base. Keep the shared face, eyes, anatomy, pose, camera angle and pixel positions unchanged. Replace the cook costume completely. Match the simple pixel art of the other four sprites. No held weapon. Keep the entire row and its layout.",
+      "references": [
+        {
+          "actor": 18,
+          "slot": 0,
+          "frame": 1,
+          "pose": "052700-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-018\\052700-000000-pose.png",
+          "sourceSha256": "06153a7d3385b9cfc4eb563723b5e9f9089378eda46a2d7669d92f5aeb85b513",
+          "manifestSha256": "d2841e46de217aac0f6fa6690d6c8bccd9d70715286ff862c6fc83e063da2590"
+        },
+        {
+          "actor": 20,
+          "slot": 0,
+          "frame": 1,
+          "pose": "05c020-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-020\\05c020-000000-pose.png",
+          "sourceSha256": "d5ccd2def582800f59c59c371cac1bb8d0174575abd7d5ec7f5f46caf5446ed2",
+          "manifestSha256": "05f87d0ac06147de8058a0283d51c8baede681185fe995c019442942017c1922"
+        },
+        {
+          "actor": 21,
+          "slot": 0,
+          "frame": 1,
+          "pose": "060c60-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-021\\060c60-000000-pose.png",
+          "sourceSha256": "52f695118ef71e266e1d15c315db3e9f8c5631555f0919e84353425c4b959a67",
+          "manifestSha256": "452acdc20b482920ffdf006a08135feb3eb63d9ad771cc51bc072f50d8b6522c"
+        },
+        {
+          "actor": 25,
+          "slot": 0,
+          "frame": 1,
+          "pose": "073c20-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-025\\073c20-000000-pose.png",
+          "sourceSha256": "091687de8267cc8b634f1729dff7ae7c5aee0e533a6d90e42b6fadde20cc40ba",
+          "manifestSha256": "4c0efaadd66c5e9e27d311b4824b2fcaf9751b1909e082e716aec1f2ad88a953"
+        }
+      ],
+      "approvedBase": "build\\art\\race-study-2026-09-19\\other-races\\nu-mou-locked.png",
+      "approvedBaseSha256": "d4dc576a1bed7f08555ca8f67bc35c1d01ef6174abe754d97ff1651c1dc3ba42",
+      "template": "build\\art\\class-concepts-2026-09-19\\nu-mou-geomancer-template.png",
+      "templateSha256": "a4e863c368affd91496d36b28ebf0c72b399b476a667bee90a14acf56f51b86c"
+    },
+    {
+      "job": 122,
+      "slug": "moogle-chemist",
+      "race": "moogle",
+      "label": "Moogle Chemist",
+      "prompt": "Turn the fifth sprite into a Moogle Chemist: a short cream work coat, amber leather utility apron, brass goggles on the forehead and a teal medicine satchel; ears and pom-pom exposed. Use the SAME underlying racial pixel base. Keep the shared face, eyes, anatomy, pose, camera angle and pixel positions unchanged. Replace the cook costume completely. Match the simple pixel art of the other four sprites. No held weapon. Keep the entire row and its layout.",
+      "references": [
+        {
+          "actor": 35,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0a19e0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-035\\0a19e0-000000-pose.png",
+          "sourceSha256": "afe2f0dbace7aa93594a11488c7ce648033352ecb5798ce2ee828fdea920c006",
+          "manifestSha256": "40d11ed561574de5aeae78b00c65c036037b63392a55f970140dff80621122be"
+        },
+        {
+          "actor": 34,
+          "slot": 0,
+          "frame": 1,
+          "pose": "09d760-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-034\\09d760-000000-pose.png",
+          "sourceSha256": "cb9614a65772e19913a207e8f05c650b049a2f93522fcb671e7588c1ba463db6",
+          "manifestSha256": "59c491fe0f1c26d96807c0af6942d3a2895a8cc7bf48992b0ad0b0aef4c8720a"
+        },
+        {
+          "actor": 37,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0aa0a0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-037\\0aa0a0-000000-pose.png",
+          "sourceSha256": "d595a5ff33996609d325a4b54a28a90b9601203d8bb136380571ef398b9cb8f9",
+          "manifestSha256": "ebdc0c523cea58da2f3da956ebd234df90b56df7c3dd9bb1e386be5f69114ecb"
+        },
+        {
+          "actor": 39,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0b28c0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-039\\0b28c0-000000-pose.png",
+          "sourceSha256": "7a430bfad7afafbfa50ca8c0994f288ac3108f75ad28492f9a1f59d6d7f125d9",
+          "manifestSha256": "d0c94d2b647d5f568325701403a998cdcc317ba6c0ffa70f9ad829897acfe350"
+        }
+      ],
+      "approvedBase": "build\\art\\race-study-2026-09-19\\other-races\\moogle-locked.png",
+      "approvedBaseSha256": "ba9807c0c214cf2feeee3a35cd4c3a5c8c480ea326d749e2ed0937507881845a",
+      "template": "build\\art\\class-concepts-2026-09-19\\moogle-chemist-template.png",
+      "templateSha256": "cfdd9a364ec66e976fca6b9628a61a57b9ab0403a64dd60fc7111e2c82d2996b"
+    },
+    {
+      "job": 123,
+      "slug": "moogle-bard",
+      "race": "moogle",
+      "label": "Moogle Bard",
+      "prompt": "Turn the fifth sprite into a Moogle Bard: a small green feathered beret, blue short performance cape, gold clasp and red cravat; ears and pom-pom exposed. Use the SAME underlying racial pixel base. Keep the shared face, eyes, anatomy, pose, camera angle and pixel positions unchanged. Replace the cook costume completely. Match the simple pixel art of the other four sprites. No held weapon. Keep the entire row and its layout.",
+      "references": [
+        {
+          "actor": 35,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0a19e0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-035\\0a19e0-000000-pose.png",
+          "sourceSha256": "afe2f0dbace7aa93594a11488c7ce648033352ecb5798ce2ee828fdea920c006",
+          "manifestSha256": "40d11ed561574de5aeae78b00c65c036037b63392a55f970140dff80621122be"
+        },
+        {
+          "actor": 34,
+          "slot": 0,
+          "frame": 1,
+          "pose": "09d760-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-034\\09d760-000000-pose.png",
+          "sourceSha256": "cb9614a65772e19913a207e8f05c650b049a2f93522fcb671e7588c1ba463db6",
+          "manifestSha256": "59c491fe0f1c26d96807c0af6942d3a2895a8cc7bf48992b0ad0b0aef4c8720a"
+        },
+        {
+          "actor": 37,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0aa0a0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-037\\0aa0a0-000000-pose.png",
+          "sourceSha256": "d595a5ff33996609d325a4b54a28a90b9601203d8bb136380571ef398b9cb8f9",
+          "manifestSha256": "ebdc0c523cea58da2f3da956ebd234df90b56df7c3dd9bb1e386be5f69114ecb"
+        },
+        {
+          "actor": 39,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0b28c0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-039\\0b28c0-000000-pose.png",
+          "sourceSha256": "7a430bfad7afafbfa50ca8c0994f288ac3108f75ad28492f9a1f59d6d7f125d9",
+          "manifestSha256": "d0c94d2b647d5f568325701403a998cdcc317ba6c0ffa70f9ad829897acfe350"
+        }
+      ],
+      "approvedBase": "build\\art\\race-study-2026-09-19\\other-races\\moogle-locked.png",
+      "approvedBaseSha256": "ba9807c0c214cf2feeee3a35cd4c3a5c8c480ea326d749e2ed0937507881845a",
+      "template": "build\\art\\class-concepts-2026-09-19\\moogle-bard-template.png",
+      "templateSha256": "cfdd9a364ec66e976fca6b9628a61a57b9ab0403a64dd60fc7111e2c82d2996b"
+    },
+    {
+      "job": 124,
+      "slug": "viera-dancer",
+      "race": "viera",
+      "label": "Viera Dancer",
+      "prompt": "Turn the fifth sprite into a Viera Dancer: a jeweled headband, blue and cream layered dance dress, gold waist chain and flowing short sash; tall ears exposed. Use the SAME underlying racial pixel base. Keep the shared face, eyes, anatomy, pose, camera angle and pixel positions unchanged. Replace the cook costume completely. Match the simple pixel art of the other four sprites. No held weapon. Keep the entire row and its layout.",
+      "references": [
+        {
+          "actor": 26,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0786e0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-026\\0786e0-000000-pose.png",
+          "sourceSha256": "f8f8d9a01b50ef54786e1b0692a18655dc40c0bd3e64304ecdd6f7c74d6b4295",
+          "manifestSha256": "6d1f35932e10fab3e6ddb8a9215b963a8ed162d462d4299957b3f6f9a152d7e8"
+        },
+        {
+          "actor": 27,
+          "slot": 0,
+          "frame": 1,
+          "pose": "07d0c0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-027\\07d0c0-000000-pose.png",
+          "sourceSha256": "7948aa6e86c3dabe046f3dbc985d369ef4b138378440bd253b50a5ea4feec599",
+          "manifestSha256": "df90322c92e9aaf777d662bac084042b3fa37695e8f7dfe95f4540560a92f10d"
+        },
+        {
+          "actor": 29,
+          "slot": 0,
+          "frame": 1,
+          "pose": "086720-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-029\\086720-000000-pose.png",
+          "sourceSha256": "99407cd73b34baf9d5104626bc6474957372bcb677772922e7a65a35299b2e41",
+          "manifestSha256": "48b2ead97bc3da5b8435edfc2d0971ce7538493acdfa0881e697762bcc7939c9"
+        },
+        {
+          "actor": 31,
+          "slot": 0,
+          "frame": 1,
+          "pose": "08fae0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-031\\08fae0-000000-pose.png",
+          "sourceSha256": "14699dacb8e79fff2ae987c3a412d543028515475c15a365dc9065cdefdfff07",
+          "manifestSha256": "db578d9a94c8c3efc68f21febdf0aa01e5cf642de383d7896e049850e73511ec"
+        }
+      ],
+      "approvedBase": "build\\art\\race-study-2026-09-19\\other-races\\viera-locked.png",
+      "approvedBaseSha256": "c27c92ff7eb91f4763691cd09fd094d481d2d0af211583b632a9069a28f450c4",
+      "template": "build\\art\\class-concepts-2026-09-19\\viera-dancer-template.png",
+      "templateSha256": "c076dd6165f41589043effa5ae3aa1026b550aad6f77d6b9aadec2a8d7196b2e"
+    },
+    {
+      "job": 125,
+      "slug": "viera-mystic-knight",
+      "race": "viera",
+      "label": "Viera Mystic Knight",
+      "prompt": "Turn the fifth sprite into a Viera Mystic Knight: silver fitted armor over a violet split tunic, a slim runic brow guard and teal shoulder mantle; face and tall ears exposed. Use the SAME underlying racial pixel base. Keep the shared face, eyes, anatomy, pose, camera angle and pixel positions unchanged. Replace the cook costume completely. Match the simple pixel art of the other four sprites. No held weapon. Keep the entire row and its layout.",
+      "references": [
+        {
+          "actor": 26,
+          "slot": 0,
+          "frame": 1,
+          "pose": "0786e0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-026\\0786e0-000000-pose.png",
+          "sourceSha256": "f8f8d9a01b50ef54786e1b0692a18655dc40c0bd3e64304ecdd6f7c74d6b4295",
+          "manifestSha256": "6d1f35932e10fab3e6ddb8a9215b963a8ed162d462d4299957b3f6f9a152d7e8"
+        },
+        {
+          "actor": 27,
+          "slot": 0,
+          "frame": 1,
+          "pose": "07d0c0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-027\\07d0c0-000000-pose.png",
+          "sourceSha256": "7948aa6e86c3dabe046f3dbc985d369ef4b138378440bd253b50a5ea4feec599",
+          "manifestSha256": "df90322c92e9aaf777d662bac084042b3fa37695e8f7dfe95f4540560a92f10d"
+        },
+        {
+          "actor": 29,
+          "slot": 0,
+          "frame": 1,
+          "pose": "086720-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-029\\086720-000000-pose.png",
+          "sourceSha256": "99407cd73b34baf9d5104626bc6474957372bcb677772922e7a65a35299b2e41",
+          "manifestSha256": "48b2ead97bc3da5b8435edfc2d0971ce7538493acdfa0881e697762bcc7939c9"
+        },
+        {
+          "actor": 31,
+          "slot": 0,
+          "frame": 1,
+          "pose": "08fae0-000000",
+          "crop": [
+            32,
+            28,
+            64,
+            60
+          ],
+          "source": "build\\art\\native-reference\\actor-031\\08fae0-000000-pose.png",
+          "sourceSha256": "14699dacb8e79fff2ae987c3a412d543028515475c15a365dc9065cdefdfff07",
+          "manifestSha256": "db578d9a94c8c3efc68f21febdf0aa01e5cf642de383d7896e049850e73511ec"
+        }
+      ],
+      "approvedBase": "build\\art\\race-study-2026-09-19\\other-races\\viera-locked.png",
+      "approvedBaseSha256": "c27c92ff7eb91f4763691cd09fd094d481d2d0af211583b632a9069a28f450c4",
+      "template": "build\\art\\class-concepts-2026-09-19\\viera-mystic-knight-template.png",
+      "templateSha256": "c076dd6165f41589043effa5ae3aa1026b550aad6f77d6b9aadec2a8d7196b2e"
+    }
+  ],
+  "status": "Superseded before acceptance: user clarified full illustrated concepts first, sprite work later."
+}

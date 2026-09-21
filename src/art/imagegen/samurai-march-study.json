@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "model": "built-in default; model name not exposed",
+  "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v1.png",
+  "sourceSha256": "eed9e138920d5c2f4fd516d760380426fce930710c538f5934672c9e83378f47",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-90d23dbb-6b16-474e-acf1-f9a577bb2f1c.png",
+  "prompt": "Create a production-candidate six-frame pixel-art HUMAN SAMURAI idle/marching-in-place sheet for a Final Fantasy Tactics Advance expansion. Image1 is our newly designed red Samurai, the CHARACTER IDENTITY reference. Image2 is original FFTA motion reference ONLY: study its THREE distinct alternating foot/arm poses and native pixel density; DO NOT copy, trace, recolor or decorate its Ninja character. Every new pixel must depict the red Samurai with exposed face, red kabuto and small gold crescent, red lamellar armor, violet underclothes, boots and katana sheathed on anatomical LEFT hip. Same costume/helmet/face/body volume throughout. Transparent sheet, exactly THREE equal columns by TWO equal rows, six sprites fully inside generous clear margins. No duplicate static feet. TOP ROW all face lower LEFT/front three-quarter. Column1: viewer-left foot advanced/down and viewer-right knee slightly raised/back; opposite arm swing. Column2: BOTH feet in neutral passing/rest position under hips, knees lightly bent. Column3: viewer-RIGHT foot advanced/down, viewer-left knee raised/back, reversing the arms from column1. Bottom row: exactly those three stepping phases seen from upper RIGHT/back three-quarter; show the back of the same helmet and back armor with no front face. Preserve sheath on the correct physical hip in back view. This will loop columns1,2,3,2 at16,8,16,8 game ticks, so poses must form a clean restrained march in place, with fixed overall position and same ground line. Moving legs are intentional; armor panels, crest, sheath, and identity must not randomly reshape or swap sides. Head can bob by one logical pixel in neutral phase. Each sprite should be an ACTUAL low-resolution native sprite, approximately17-20 logical pixels wide and29-30 logical pixels high inside a32x32 logical cell; not a detailed illustration reduced to that size. Large coherent square pixel clusters, same logical pixel size in every cell, one-pixel dark colored outlines, visible exposed peach face and a clear white2x3 eye with dark pupil in front view. Small readable gold crescent with a dark center gap. Restrict to12-15 flat colors: #101008 #8b6a73 #ffffee #622952 #ac5208 #ee8b00 #ffee00 #bd0808 #ee4139 #ffac9c #f6d5ff #c5b4c5. No drawn blade or handheld weapon: the katana stays sheathed so native weapon attachments can be separate. Avoid tiny armor trim, small texture noise, extra colors, antialiasing, gradients, perspective scale changes, foot sliding, leg duplicates, Ninja hood/mask, giant helmet, shadows, ground, checkerboard, scenery, labels, letters, grid lines and watermarks. Real alpha transparency. Output1536x1024 showing these six crisp nearest-neighbor enlarged native sprites.",
+  "references": [
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/samurai-native-v2.png",
+      "role": "New character identity; generated artwork"
+    },
+    {
+      "path": "build/art/imagegen/samurai/native-scale-study/original-idle-motion.png",
+      "sha256": "0b1f4c4b5a34cc9dc7f13cd3ed567b1068c8980e2db02daaa6d882302de977d9",
+      "role": "Original native movement/cadence only; no copied donor artwork"
+    }
+  ],
+  "nativeSequence": {
+    "slots": [
+      0,
+      1
+    ],
+    "sourceResource": 4,
+    "durations": [
+      16,
+      8,
+      16,
+      8
+    ],
+    "distinctPoses": 3,
+    "requestedFrameOrder": [
+      [
+        0,
+        1,
+        2,
+        1
+      ],
+      [
+        3,
+        4,
+        5,
+        4
+      ]
+    ]
+  },
+  "review": "Unaccepted motion draft. Bottom-row neutral frame turns to a straighter back view instead of holding the diagonal; helmet/crest vary. Front stride reversal remains weak. Transparency contains low-alpha colored haze; threshold128 removes background but that does not accept art. Prior fixed-feet idle requirement was incorrect: original FFTA idle steps in place.",
+  "productionAccepted": false,
+  "revision": {
+  "source": "build/art/imagegen/samurai/native-scale-study/samurai-march-v2.png",
+  "sourceSha256": "47fd3199ab259a67c8291ae15e3ae757a64b7de5cd361c17e2cc11ab451edb8d",
+  "toolSource": "<LOCAL_USER>/.codex/generated_images/01a0aeb4-74db-7511-bca1-23c2bfa86d12/exec-ba3a7b26-dc03-4a77-aa37-2e02d7e6f747.png",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "prompt": "Precise edit of the attached ORIGINAL RED SAMURAI six-frame sheet. Keep the3-column by2-row arrangement and all sprite positions, scale, logical pixel size, costume, palette, katana sheath, and identity. Change ONLY these TWO CELLS. (1) TOP RIGHT cell: show the OPPOSITE lead leg from top left. The visible near leg now steps forward/down toward lower left while the far leg bends back; swap which knee is raised. Keep head, face and helmet looking lower LEFT exactly like the other front frames. Match original FFTA's alternating march-in-place, not a repeated single-foot pose. (2) BOTTOM MIDDLE cell: rotate its helmet and torso slightly to the upper RIGHT/back diagonal, matching the exact facing angle of bottom LEFT and bottom RIGHT. It must not face straight away; use the same side-biased crest/helmet shape as those neighbors. Both feet are in the neutral passing position under hips. Preserve its role as neutral phase between the two steps. IMPORTANT: Leave the other FOUR sprites unchanged. Do not redesign anything, do not add/remove armor plates, do not change the crescent shape, and keep the sword SHEATH on the same anatomical hip. No weapon drawn. Keep the small native-pixel clusters, no new microdetails or smoothing. Preserve true transparent background; remove only any background haze outside the silhouettes, with no shadows or glow. Output same1536x1024 sheet, no text, no labels, no scenery, no grids. These are sprite frames, not illustrations.",
+  "references": [
+    "build/art/imagegen/samurai/native-scale-study/samurai-march-v1.png"
+  ],
+  "conversion": "build/art/imagegen/samurai/native-scale-study/march-v2-direct",
+  "conversionSettings": {
+    "columns": 3,
+    "rows": 2,
+    "height": 30,
+    "resampling": "nearest",
+    "nativePaletteOffset": "0x419d80"
+  },
+  "review": "Technical import draft only. Neutral back facing improves, but stride reversal remains weak, facial eye detail is lost at native size, and silhouette/armor phase consistency still needs visual revision. No production art acceptance.",
+  "productionAccepted": false
+}
+}

@@ -1,0 +1,31 @@
+{
+  "version": "0.6",
+  "scope": "Document/data consistency only; no gameplay test.",
+  "entries": 122,
+  "counts": {
+    "Action": 78,
+    "Support": 18,
+    "Reaction": 18,
+    "Combo": 8
+  },
+  "apTotals": {
+    "SAM": 3200,
+    "DRK": 3350,
+    "VIK": 2800,
+    "GEO": 3150,
+    "CHM": 2850,
+    "BRD": 3050,
+    "DNC": 3300,
+    "MYK": 4800,
+    "SLD-AX": 1050,
+    "GLD-AX": 1850
+  },
+  "teachingItems": 78,
+  "rosterAndGrowthsPreserved": true,
+  "romSha1": {
+    "roms/clean/FFTA_US_clean.gba": "4ac05441f4de70a4ec3dd932116346c61b8783d9",
+    "roms/play/vanilla/FFTA_US_vanilla.gba": "4ac05441f4de70a4ec3dd932116346c61b8783d9"
+  },
+  "errors": [],
+  "passed": true
+}

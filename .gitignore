@@ -1,0 +1,52 @@
+# Game images and player data must never enter version control.
+*.gba
+*.gb
+*.gbc
+*.nds
+*.rom
+*.iso
+*.sav
+*.srm
+*.ss[0-9]
+*.state
+*.ram
+*.iwram
+/roms/
+/saves/
+
+# Local dependencies, generated artifacts, private fixtures and worktrees.
+/build/
+/downloads/
+/tools/
+/patches/
+# Generated aggregate; full source and attempt history live in per-class JSON.
+/src/art/race-study/full-animation-v1.json
+/.worktrees/
+/.local/
+__pycache__/
+*.pyc
+*.log
+*.elf
+*.bin
+*.map
+*.zip
+*.7z
+*.exe
+*.dll
+notes/mgba-process-id.txt
+notes/patcher-verification.txt
+
+# Local configuration, credentials and editor state.
+.env
+.env.*
+!.env.example
+credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+.venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

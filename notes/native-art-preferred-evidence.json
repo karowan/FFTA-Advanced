@@ -1,0 +1,14 @@
+{
+  "romSha1": "eae534ca40d16f3034e5ed84d0836a04624f1cfc",
+  "manifest": "build/art/connected/eae534ca40d16f3034e5ed84d0836a04624f1cfc/live-palette-view.json",
+  "source": "build/art/live-palette/battle/20260919T055352.720540Z",
+  "inputHashes": {
+    "failed.json": "1bcaf7f782ef4dee7f200be306d9342ff94f1b65e38ff9a3c60f8f95675d5e43",
+    "parent-entry-6.state": "9df4a28dc6d36915d6848914769dfd17b25221b9bcc25e221865a1c9050f02b9",
+    "parent-entry-6.ram": "ca853c10314ded0866cde3a2e19b88aad29f6e3d978147cd1a2a1c608bd9b000",
+    "parent-entry-6.iwram": "d543851a60f295dce7d9c69765af6d46b984e4440083350c86094edb5a6c4639",
+    "candidate-entry-6.state": "ad4a196cf12677521b2216a3f92a19f143d5982a37109a2edde36c88a03d222d",
+    "candidate-entry-6.ram": "51270aaf8cf3ef6fdd51dc21480513d9698f8aa261ad5f226dc83ab3abb2cbf1",
+    "candidate-entry-6.iwram": "4f4642c29294ea8c33016061d3fe6dec03ddd002dd81982ccee48f78dcef3a71"
+  }
+}

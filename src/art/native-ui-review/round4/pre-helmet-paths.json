@@ -1,0 +1,180 @@
+[
+  {
+    "slug": "human-dark-knight",
+    "kind": "portrait",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-1cd653f6-b07f-41c9-a12c-a59635de1095.png"
+  },
+  {
+    "slug": "viera-mystic-knight",
+    "kind": "portrait",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-b3c213b1-786c-47e1-88a2-ca0bca2ef174.png"
+  },
+  {
+    "slug": "human-samurai",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-786a3ae6-c5a5-4375-a20a-77caacb63409.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        553
+      ],
+      "crop": [
+        48,
+        0,
+        64,
+        14
+      ],
+      "layoutDeviation": "Fourth cell edited instead of fifth. Extract observed fourth cell. Remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "human-dark-knight",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-076c1925-94d7-46a0-95e2-c1858c889d59.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        553
+      ],
+      "crop": [
+        48,
+        0,
+        64,
+        14
+      ],
+      "layoutDeviation": "Fourth cell edited instead of fifth. Extract observed fourth cell. Remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "bangaa-viking",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-347308ef-4021-4049-83c6-67395a51a0c9.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "bangaa-dark-knight",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-86640365-5a37-4e5d-a431-5c789c3b7d18.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        553
+      ],
+      "crop": [
+        48,
+        0,
+        64,
+        14
+      ],
+      "layoutDeviation": "Fourth cell edited instead of fifth. Extract observed fourth cell. Remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "nu-mou-chemist",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-6e44b269-4c01-433b-8dc0-1cae439d1122.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "nu-mou-geomancer",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-892d0bdf-79a6-47d0-87fe-b28b2b4e9e69.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        551
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "moogle-chemist",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-354293a8-8aa9-4855-984f-1330a36dea32.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        552
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "moogle-bard",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-5ede03ed-252b-4f9d-9c8d-927e5f119f85.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        172,
+        2170,
+        553
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "viera-dancer",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-71a934e4-d731-4ed7-bacb-317dbea32a88.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        554
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  },
+  {
+    "slug": "viera-mystic-knight",
+    "kind": "icon",
+    "rawName": "generated-worksheet-icon.png",
+    "path": "<LOCAL_USER>\\.codex\\generated_images\\01a0bad8-dd65-7cf0-bcee-55425bd53635\\exec-26a2413f-66ed-4c1e-9b93-d89c65247d07.png",
+    "revision": {
+      "worksheetBox": [
+        0,
+        171,
+        2170,
+        554
+      ],
+      "layoutDeviation": "Fifth cell; remove transparent letterbox using >98% opaque row span."
+    }
+  }
+]

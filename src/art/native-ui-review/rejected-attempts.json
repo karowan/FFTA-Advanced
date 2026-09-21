@@ -1,0 +1,8 @@
+{
+  "worksheetAttempt1": "build\\art\\native-ui-regeneration-2026-09-20",
+  "vieraMysticKnightIcon": {
+    "path": "viera-mystic-knight/rejected-patterned-icon.png",
+    "reason": "Generated checkerboard instead of transparent background",
+    "prompt": "Draw a new Viera Mystic Knight tiny job-head icon in the blank BOTTOM-RIGHT cell of image 1, directly below the small character in the THIRD column. Keep all four references in the LEFT TWO columns. The four other images in that sheet are original jobs of the same race: match their face anatomy, pixel size, framing and style. Use the new character design in image 2. The target is exactly 16 by 14 logical pixels; design directly for that coarse pixel grid, with clear eyes and a readable silhouette. Keep the entire worksheet and cell boundaries unchanged. Transparent background in the new cell. No text, border or extra characters. Only the head, no shoulders or body. Use only colors from image 3, with dark outlines and bright contrast. "
+  }
+}

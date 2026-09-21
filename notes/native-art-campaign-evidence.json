@@ -1,0 +1,759 @@
+{
+  "schema": 1,
+  "candidateSha1": "a28b624bb13c8f2f2597a4d4bd3999b17c234b99",
+  "scope": "Ordinary and ending cold-load54, retained actual result plus placement/world/save/cold suffix16, current native ending14; failed world-heap and missing-placement attempts remain failed. No uninterrupted campaign or capacity completion claim.",
+  "files": [
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/earned-world.iwram",
+      "sha256": "074011b4867fce42715bd520baffb8acdb0689a9d351eea566e1913fbff3da61"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/earned-world.oam",
+      "sha256": "6c7c2291fba574f0c024552dcdc37cee0486b40d9475854224669a9aa0940193"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/earned-world.palette",
+      "sha256": "cbf04d08241583996f04d959d25b5db9de2b231370fc02e8a2dfa96db0d1bc0a"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/earned-world.png",
+      "sha256": "7f049861cf2334075cb460e44f3294731741b877b26b2eac9842c65ef453bdcc"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/earned-world.ram",
+      "sha256": "29eeb24051d0629abd7a12bbb5d62beff098019fceef16fe3dde18c20496dffb"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/earned-world.state",
+      "sha256": "6b27f6919cd3b3294e626a53bfb70e391a12de89494f1013398f3039d8cb20e5"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/earned-world.vram",
+      "sha256": "605ef1b0550712edc3159e8fefb3e493fcdd1a17d4bff9fb1958ea4cd512383f"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/failed.iwram",
+      "sha256": "41064edad211e0d5e065026694969e0e132dcafa8de3a84a0bbff19c7df94a23"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/failed.json",
+      "sha256": "7d27444f82387483397e50e4a5a94d217a2ca4b2b9089e466bfb45b35627a0cd"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/failed.oam",
+      "sha256": "6e7f4982a6d86406393b8f99c6417bfe60f2c4c0332c735e5da455dfc16b8344"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/failed.palette",
+      "sha256": "cbf04d08241583996f04d959d25b5db9de2b231370fc02e8a2dfa96db0d1bc0a"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/failed.png",
+      "sha256": "0e64854ee955b1bbc30e37c769d8b0c226fb41bc89375191fce8d1f305724e58"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/failed.ram",
+      "sha256": "5abbb8966110f8da4016a66700728d2fb3dcefed57271bcdc315250e979f27ca"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/failed.state",
+      "sha256": "9100ebcbfff530a169413a53e86a3da2236fcbd0e88f71cd59e51daa48b10080"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/failed.vram",
+      "sha256": "54dd977a6dd266f3497a0dcaaafedfadb8f0f6ed78a73122d04a67a65438844c"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/result-input.iwram",
+      "sha256": "39c4cffc853138d6e26a43f102a83df0f2a84afd4b5011bb9d227db38756159e"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/result-input.oam",
+      "sha256": "def79e69c4168ecb9ab0fd8e0807649154464c3dcc1f4774a36cde5fd5fb8c44"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/result-input.palette",
+      "sha256": "3474f3e9b8e62f145e09265701e7bc69efd0252f827103b0cda14c1e52feedba"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/result-input.png",
+      "sha256": "1cba10189e86fd50a5597087b7444abb878cc3954427e827017817818771a5d7"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/result-input.ram",
+      "sha256": "a75a636a4f06a6fd7122fe19f8b2e5c71b866537c389ee1ef01e3bc186ec00c4"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/result-input.state",
+      "sha256": "e155424ba38f6962424496462435b20dbc7923717a6424a33c34c89824a5edbb"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/result-input.vram",
+      "sha256": "fc2a254bcd0008fc027d06e6a271cdfc02ff50d7b73f3a0b1497d5cc870e9d84"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/world-party.iwram",
+      "sha256": "41064edad211e0d5e065026694969e0e132dcafa8de3a84a0bbff19c7df94a23"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/world-party.oam",
+      "sha256": "6e7f4982a6d86406393b8f99c6417bfe60f2c4c0332c735e5da455dfc16b8344"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/world-party.palette",
+      "sha256": "cbf04d08241583996f04d959d25b5db9de2b231370fc02e8a2dfa96db0d1bc0a"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/world-party.png",
+      "sha256": "0e64854ee955b1bbc30e37c769d8b0c226fb41bc89375191fce8d1f305724e58"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/world-party.ram",
+      "sha256": "5abbb8966110f8da4016a66700728d2fb3dcefed57271bcdc315250e979f27ca"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/world-party.state",
+      "sha256": "9100ebcbfff530a169413a53e86a3da2236fcbd0e88f71cd59e51daa48b10080"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094452.512705Z/world-party.vram",
+      "sha256": "54dd977a6dd266f3497a0dcaaafedfadb8f0f6ed78a73122d04a67a65438844c"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/cold-current.iwram",
+      "sha256": "4ccf2aac4702ff9510d6f44daef4f8b6caf3cbfe31699db5829751811ef280ec"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/cold-current.oam",
+      "sha256": "2d5fe1a91998fb567d29b34d1ca21043c219c42a25268d3689c931c114c18eec"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/cold-current.palette",
+      "sha256": "3616c1808fd5c99767fab72bf8ae15fa0cf0edda61a6b4e69ea0077996d07f20"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/cold-current.png",
+      "sha256": "3fd6b5e163dd46fdf844dc8e7918f8549c07a02c7877b4d888a322d4e71a208b"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/cold-current.ram",
+      "sha256": "e853d39268d7e97b25a6ea38e4be87d741e050826c3918f1e6d9d57c85d73c66"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/cold-current.state",
+      "sha256": "b78cae0961f4a18dcf16a88c4d84174fe237dfb6d953fcd067a35fd048cee02a"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/cold-current.vram",
+      "sha256": "7661a102c173b7857f0cd3d14ece82309f38ee732382cccea5596954a6212100"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/native-save.iwram",
+      "sha256": "e2733c6ce11992b1c064e7039fc2963db0334ee095de95dae785ff6a1f3ac135"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/native-save.oam",
+      "sha256": "b67af4f7e3178db0c847d8b2d6d4f15c05862eb0dffec4f0ed64fec467261b92"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/native-save.palette",
+      "sha256": "b76f63bf030da629c45c1ffc607231fa260fae635cb91c3a95a6a0645e5a3c26"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/native-save.png",
+      "sha256": "f465816cd0cbe8c7481939fcc8a8434fde11f195f40b614727f6bfcccb94fd6e"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/native-save.ram",
+      "sha256": "908d31c92dab7c36e9d02ece3d7651bdff4250f54c11eca3c0580c30a643b778"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/native-save.state",
+      "sha256": "ab8747ddcaeee04d4067f66eb3e8c0473204c4f4bedcba4d2936920b0256b647"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/native-save.vram",
+      "sha256": "7dfd7eb5dcd8236384067f65c01042201d189ec58da109ea63c28b085934d7a3"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/normal.sav",
+      "sha256": "6f6514315f1c7d6e1f48289c26897a493d01cc9d98e21b1cd3e5f9507de61c32"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/placed-lutia.iwram",
+      "sha256": "ef33862b0010a5d462adf4cb18c1fd5620c29ceb1d02fc3d1e19d5fe62a53dae"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/placed-lutia.oam",
+      "sha256": "4b2dcc37b9a5921506b07a7cbf60485bf23d3fdf37163d64ab3d8b1bedd20858"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/placed-lutia.palette",
+      "sha256": "cbf04d08241583996f04d959d25b5db9de2b231370fc02e8a2dfa96db0d1bc0a"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/placed-lutia.png",
+      "sha256": "d39ecfa2164ec44c18fca55ca7d994434f24a235a3fa28c3abd20c9056ca369b"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/placed-lutia.ram",
+      "sha256": "4034e81b91499a286d6e6db5b691b83441c53ec0ae4bcb65ed1427cfa9ded66b"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/placed-lutia.state",
+      "sha256": "2ba43eabd8665e6e6d92af79c97eb03db4359e4851c0d8366b2041c0a157c521"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/placed-lutia.vram",
+      "sha256": "5271cb3923b11f094e40a1421f9402aa36d62a9111f927584fa76401f1154dda"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/report.json",
+      "sha256": "43b4fc605a0358d8617be7b93028b88729dd0968ff6225a7251bb92b2ac1319e"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/returned-world.iwram",
+      "sha256": "2fc1127d55263dbcc12d4e21101b50a1d2f238320eed9196885fff30b6148c7f"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/returned-world.oam",
+      "sha256": "245a1ff67580d6748855b1b0490ce31075a325062ea18824e67f51287744ef69"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/returned-world.palette",
+      "sha256": "3616c1808fd5c99767fab72bf8ae15fa0cf0edda61a6b4e69ea0077996d07f20"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/returned-world.png",
+      "sha256": "c9cd6623d0c61c626bf94ae1e289d27685ece3822804500a0235c78f72637c95"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/returned-world.ram",
+      "sha256": "15f8b470db3e321f72e5987ea42b09c8b9c805d3e3ce7a88ba8dfdfa89f7ca38"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/returned-world.state",
+      "sha256": "ef6b9b3229b49406bde8bcdb00ff30aa8c1760bb720e59afd3809727cc9767b0"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/returned-world.vram",
+      "sha256": "dad2ae4ec9c865d17b7b9e7474a2f44bce300f443147a38d8635adf426989f99"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/world-party.iwram",
+      "sha256": "db4ffa00600525df407035fdc4574634fedff5223e021bfa4f909e18446e98ae"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/world-party.oam",
+      "sha256": "6bfa375c6577d9352cd2f789170200abf0598953b8bf3c3a6582f379b6a056ef"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/world-party.palette",
+      "sha256": "96f8012b64c280cc1159fccde1445af494c7d9c8a111c6c6726decd04df3311a"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/world-party.png",
+      "sha256": "c911202f7b4aec7c8b0465458c7a135af395ea87e9889d47ce4c480e5275be58"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/world-party.ram",
+      "sha256": "fec3eddba97843a829680b7c863e4e61266da090d0a4edde0433f8131f49b53d"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/world-party.state",
+      "sha256": "55cc737b31ed0d1e5f5770f33f28998ec5bf7dcef1ae837ca2827e57799bdc5c"
+    },
+    {
+      "path": "build/art/battle-exit/20260919T094742.944213Z/world-party.vram",
+      "sha256": "11e233ce6539776a683cd8b56f38d5ab0761c5491bdecbbccd7efb7759c33397"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/cleared.sav",
+      "sha256": "442c1a1d8b13f0ef6830940546dfee41082e9b4288cb966f0f72fd443d0e5e07"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/continued-world.png",
+      "sha256": "8ea5a2903b0cb0cfde6f43634d43a87f73fe2809af0fd1436c68afd57f618a4a"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/continued-world.ram",
+      "sha256": "7c112d3ecc4e4627a477054d331d2317092817edb3981376311dbb5d5a7525e7"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/continued-world.sav",
+      "sha256": "442c1a1d8b13f0ef6830940546dfee41082e9b4288cb966f0f72fd443d0e5e07"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/continued-world.state",
+      "sha256": "e77259ca6c83627057bc1cf67846d0f272428f5356d2fca1d001b3fda5f89a40"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/fixture.gba",
+      "sha256": "cc66ecc96d41a338c21ad8d8ff161da3f8be9d226c0edbd60b3052cad67a8061"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/gcc.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/native-cleared.png",
+      "sha256": "27daf6616c103360a9372636c5d8413c187b9edca11c685c459ec7f4c4e631be"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/native-cleared.ram",
+      "sha256": "cbc230060d4c6020bb9e99f0626e17ae9d47e2ecd6f915814a808c7caf6c7ced"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/native-cleared.sav",
+      "sha256": "442c1a1d8b13f0ef6830940546dfee41082e9b4288cb966f0f72fd443d0e5e07"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/native-cleared.state",
+      "sha256": "a91bf45268e699507135e1e9e5098c56d9b77b24a675f44b9b407e61fb307c56"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/natural-save-opcode.png",
+      "sha256": "49fb9ef5232b3c31135973866bcc103ff6e1da25746c678996bec346e18f6a5c"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/natural-save-opcode.ram",
+      "sha256": "61fcc4212c04a3995b1fa0cd35147f752e4dd6a2102de72f57fb90d0aad074e9"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/natural-save-opcode.sav",
+      "sha256": "635ca798d8c27f75692b0c028e520229638e04db405e43c34176229add2f301d"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/natural-save-opcode.state",
+      "sha256": "ff1ccb629b516be7f1f446cec9e04ea458a1d4e634ab6df3df70104223fd3be6"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/nm.log",
+      "sha256": "d7dfb5e3c499bf22013f82c06fabbf4332a41b2749a733a18b21b213bb18d312"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/objcopy.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/ordinary-input.png",
+      "sha256": "8ea5a2903b0cb0cfde6f43634d43a87f73fe2809af0fd1436c68afd57f618a4a"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/ordinary-input.ram",
+      "sha256": "79b5e28b94e756652d4cf53c901c2ff866f631e96d6b4caf3f7dafc9f5ecc646"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/ordinary-input.sav",
+      "sha256": "635ca798d8c27f75692b0c028e520229638e04db405e43c34176229add2f301d"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/ordinary-input.state",
+      "sha256": "18f53d2a760ac861b928951dac75d334700c464ae45574ee281f5cf96efe4afc"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/probe.bin",
+      "sha256": "126a3d93791c527cdde192a19bea9d7d762d8bd1e56ad2feaae1fe45ea7c366e"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/probe.c",
+      "sha256": "9d10014988475ad393a8ea020081887150f2249816a49b183ec1bdb21be41b23"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/probe.elf",
+      "sha256": "0b9b475f6500fb6762613fa8531a50d877f15dc56ba76dda183b801fdc42418a"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/report.json",
+      "sha256": "27d78ee0a05f61b2ea50a727fd3a4b016326136c18bc4300905acd1ff3cf890d"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/returned-title.png",
+      "sha256": "51bc68f25908e7120853742c05fdd00b18f15b770eaa794df5598f0fc5443e8a"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/returned-title.ram",
+      "sha256": "d3d1992ce2f523b37ce9c42f3464c1209a8acffd53d3cd920b1bd3d6a9d440eb"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/returned-title.sav",
+      "sha256": "442c1a1d8b13f0ef6830940546dfee41082e9b4288cb966f0f72fd443d0e5e07"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/returned-title.state",
+      "sha256": "2b4f5a15c9166c5e70ec22ee59a9160d34246f0768ff0279a63c174fcbbaca2d"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-1.png",
+      "sha256": "152e392ca168f30033101e7b4542f58d95f348fbc670744ebfd5aa2e8c2213e6"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-1.ram",
+      "sha256": "29498a784e417b13941db51a323141c744330ef75bc0448138efba94f985d662"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-1.sav",
+      "sha256": "635ca798d8c27f75692b0c028e520229638e04db405e43c34176229add2f301d"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-1.state",
+      "sha256": "8051163d483b8c36485a8fe2f70b9e26f2c48926d2079163afde52aa5ec239a5"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-2.png",
+      "sha256": "80564bbb325688f59ab9d4cb1e6ca269aa9ed20e697aa373e3f27acdbfbfe848"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-2.ram",
+      "sha256": "d21f0108cd794606296d4169792ee0845ef22ac09184fb377013e22798e019cb"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-2.sav",
+      "sha256": "635ca798d8c27f75692b0c028e520229638e04db405e43c34176229add2f301d"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-2.state",
+      "sha256": "e518cfa860f1c438433cabdc36c8549eb9f48776215047e02f81e659fe170e26"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-3.png",
+      "sha256": "f444c3e77ee7f86859ad64cf098f9da03aaca7643679ec55278d0d34d0c62218"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-3.ram",
+      "sha256": "bc9dcc18030ebf5f7758cdd407f0ccad96c42e7548ae35e48d78012939f4770a"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-3.sav",
+      "sha256": "635ca798d8c27f75692b0c028e520229638e04db405e43c34176229add2f301d"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-3.state",
+      "sha256": "368d5bbf0699fd27cad26268eca4e8676626b4d571bc6648db40cd75242b90f5"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-4.png",
+      "sha256": "3c9640c80f0b6b5c7c26dd45ad79188477c92fafe3043ec5a21ed8b2fb6cc8db"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-4.ram",
+      "sha256": "99f5c9aab505d3eee77f85a1b5a75ea0152065b2d011b11920251bedaea7a272"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-4.sav",
+      "sha256": "635ca798d8c27f75692b0c028e520229638e04db405e43c34176229add2f301d"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/scene-change-4.state",
+      "sha256": "a5672d8150639b10a6ab13e5534dc980eb6be6e473bdd52199d02ce04dc44207"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/script.py",
+      "sha256": "c48693928b1b41e4b6c0235f79de1aace1d930e1744e5877fad2ae739311bf23"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/uninstrumented-cold.png",
+      "sha256": "8ea5a2903b0cb0cfde6f43634d43a87f73fe2809af0fd1436c68afd57f618a4a"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/uninstrumented-cold.ram",
+      "sha256": "5f9bc75ac41b9186b5b1f2ff75d98af5eef40afeacf1643a884b66cf799c23fe"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/uninstrumented-cold.sav",
+      "sha256": "442c1a1d8b13f0ef6830940546dfee41082e9b4288cb966f0f72fd443d0e5e07"
+    },
+    {
+      "path": "build/art/campaign-ending/20260919T095035.310874Z/uninstrumented-cold.state",
+      "sha256": "fbc2289b8eec5262a93857e76dce4fc49072a9e2041b55fcc6cd19356374a0d4"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/failed.json",
+      "sha256": "a208caac30e48a7a5f969807a68d8a775225379901723f2f990f488d5dd798e4"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-cold-world.iwram",
+      "sha256": "41bf2335714b71586de5db7f4b6d67ef4d8b420b7c2d48f9b05a290426fb07ba"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-cold-world.oam",
+      "sha256": "d405c10aa7871a098cbc61568dc0821063421a4cde56336e0151bebbc7ed9be6"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-cold-world.palette",
+      "sha256": "3616c1808fd5c99767fab72bf8ae15fa0cf0edda61a6b4e69ea0077996d07f20"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-cold-world.png",
+      "sha256": "8ea5a2903b0cb0cfde6f43634d43a87f73fe2809af0fd1436c68afd57f618a4a"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-cold-world.ram",
+      "sha256": "79b5e28b94e756652d4cf53c901c2ff866f631e96d6b4caf3f7dafc9f5ecc646"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-cold-world.state",
+      "sha256": "a1dbb8694bdd836a46db43503c20ff074406ccfee3c3ddf8a7fe893b29e4ce2e"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-cold-world.vram",
+      "sha256": "2b86836649bcdeb81a3d21966fae12c104e792b191d37f814854c06bb38f0655"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-failed.iwram",
+      "sha256": "41bf2335714b71586de5db7f4b6d67ef4d8b420b7c2d48f9b05a290426fb07ba"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-failed.oam",
+      "sha256": "d405c10aa7871a098cbc61568dc0821063421a4cde56336e0151bebbc7ed9be6"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-failed.palette",
+      "sha256": "3616c1808fd5c99767fab72bf8ae15fa0cf0edda61a6b4e69ea0077996d07f20"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-failed.png",
+      "sha256": "8ea5a2903b0cb0cfde6f43634d43a87f73fe2809af0fd1436c68afd57f618a4a"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-failed.ram",
+      "sha256": "79b5e28b94e756652d4cf53c901c2ff866f631e96d6b4caf3f7dafc9f5ecc646"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-failed.state",
+      "sha256": "a1dbb8694bdd836a46db43503c20ff074406ccfee3c3ddf8a7fe893b29e4ce2e"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093718.506926Z/ordinary-failed.vram",
+      "sha256": "2b86836649bcdeb81a3d21966fae12c104e792b191d37f814854c06bb38f0655"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-cold-world.iwram",
+      "sha256": "aeea22323241c5a2b6e8252cac241bb0006eaa8b06cc8eefc6bd99f8e6157b6d"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-cold-world.oam",
+      "sha256": "d405c10aa7871a098cbc61568dc0821063421a4cde56336e0151bebbc7ed9be6"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-cold-world.palette",
+      "sha256": "3616c1808fd5c99767fab72bf8ae15fa0cf0edda61a6b4e69ea0077996d07f20"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-cold-world.png",
+      "sha256": "8ea5a2903b0cb0cfde6f43634d43a87f73fe2809af0fd1436c68afd57f618a4a"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-cold-world.ram",
+      "sha256": "5f9bc75ac41b9186b5b1f2ff75d98af5eef40afeacf1643a884b66cf799c23fe"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-cold-world.state",
+      "sha256": "fbc2289b8eec5262a93857e76dce4fc49072a9e2041b55fcc6cd19356374a0d4"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-cold-world.vram",
+      "sha256": "83a91b56b4e7c117749c60f004e457347679fbde2eccfc6ebec21a3783b4e7e4"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-party.iwram",
+      "sha256": "230bad12f5ba5d8c571caef998e7ca3faa3844220e102bc7945d1f5148b255ef"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-party.oam",
+      "sha256": "37264aa64f09d14c67149f79b9145d6372ed760e90d87c2122d7ac2d67015900"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-party.palette",
+      "sha256": "96f8012b64c280cc1159fccde1445af494c7d9c8a111c6c6726decd04df3311a"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-party.png",
+      "sha256": "c5be317397d5b7a311e659d78f069fc4aefb2b030b41b6c6d91202baf897124a"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-party.ram",
+      "sha256": "db863314310e42fde6713b1c9097b72465b90bdd53fe1d80f7a6f19a65dffb3a"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-party.state",
+      "sha256": "ae235ae43dd60e70b33f68e6aef79e47f2bf3e6e212a6855815843b498053240"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-party.vram",
+      "sha256": "95d35595451c3e607edd8fe4f5a69a7807b29d0985d7841df921586e5cde721d"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-returned-world.iwram",
+      "sha256": "c3839f34a8e0b05e2f6652902594bc094783351891cce9ad98f39e4903ce7b89"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-returned-world.oam",
+      "sha256": "b7b5bf776ce52b1557a5fb2b2bf850e3dfa697dfd543fa8d6a8d5874b40785cb"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-returned-world.palette",
+      "sha256": "3616c1808fd5c99767fab72bf8ae15fa0cf0edda61a6b4e69ea0077996d07f20"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-returned-world.png",
+      "sha256": "ed063d0cb2ba9ae9d3a929551d6754024e534c6d8355eab62f2f395f553440b6"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-returned-world.ram",
+      "sha256": "a261c69c5a75fc497c35b8e999e64ce05df4a161d0b5a7ddd9c5a605d964cd22"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-returned-world.state",
+      "sha256": "3d76e6fcc5d9fc458bfdd64e399b91b1c21e96a8dc93a90997dee5012c152ae5"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ending-returned-world.vram",
+      "sha256": "e7b60776790bf12dcfde7784e7ca98fef8d4b5b1d32fbfed400822ec8ec93599"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-cold-world.iwram",
+      "sha256": "41bf2335714b71586de5db7f4b6d67ef4d8b420b7c2d48f9b05a290426fb07ba"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-cold-world.oam",
+      "sha256": "d405c10aa7871a098cbc61568dc0821063421a4cde56336e0151bebbc7ed9be6"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-cold-world.palette",
+      "sha256": "3616c1808fd5c99767fab72bf8ae15fa0cf0edda61a6b4e69ea0077996d07f20"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-cold-world.png",
+      "sha256": "8ea5a2903b0cb0cfde6f43634d43a87f73fe2809af0fd1436c68afd57f618a4a"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-cold-world.ram",
+      "sha256": "79b5e28b94e756652d4cf53c901c2ff866f631e96d6b4caf3f7dafc9f5ecc646"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-cold-world.state",
+      "sha256": "a1dbb8694bdd836a46db43503c20ff074406ccfee3c3ddf8a7fe893b29e4ce2e"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-cold-world.vram",
+      "sha256": "2b86836649bcdeb81a3d21966fae12c104e792b191d37f814854c06bb38f0655"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-party.iwram",
+      "sha256": "19ec8bb19369e949aba51a47515ca39529702ae9f66153225c2889c175b00f0d"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-party.oam",
+      "sha256": "37264aa64f09d14c67149f79b9145d6372ed760e90d87c2122d7ac2d67015900"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-party.palette",
+      "sha256": "96f8012b64c280cc1159fccde1445af494c7d9c8a111c6c6726decd04df3311a"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-party.png",
+      "sha256": "c5be317397d5b7a311e659d78f069fc4aefb2b030b41b6c6d91202baf897124a"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-party.ram",
+      "sha256": "b661cbc1d504e8cfd5d3ce71e74c0c20e17601ad6068c5c7c5803690bafb7b28"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-party.state",
+      "sha256": "7f747e7db3c0b9b3a347eed2c89883209c0aa1ec9844eff83138b00bb7469af3"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-party.vram",
+      "sha256": "b1a81c533c9e1f0b43e27f56beacd070941a11bd727b9d65e5cb5c34a3ced702"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-returned-world.iwram",
+      "sha256": "9a84898e05e1f1c26b5417f1f315cec7d22b2a234ef8f0f4319995e40d7d2f71"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-returned-world.oam",
+      "sha256": "b7b5bf776ce52b1557a5fb2b2bf850e3dfa697dfd543fa8d6a8d5874b40785cb"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-returned-world.palette",
+      "sha256": "3616c1808fd5c99767fab72bf8ae15fa0cf0edda61a6b4e69ea0077996d07f20"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-returned-world.png",
+      "sha256": "ed063d0cb2ba9ae9d3a929551d6754024e534c6d8355eab62f2f395f553440b6"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-returned-world.ram",
+      "sha256": "e0e3c734fa3bf94efd46409b9c2bcc0c5a15f3f302f084c945710c3e8073767b"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-returned-world.state",
+      "sha256": "5d48eea81a4fb444e567f8b293f634d1dd773b1b9058ee9973dd86fb6fcb7d1f"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/ordinary-returned-world.vram",
+      "sha256": "b92930fd1ff63b2d6d95510b352cda4be96a67db4d0bde6ea110ee30164dd01a"
+    },
+    {
+      "path": "build/art/campaign-saves/20260919T093907.228501Z/report.json",
+      "sha256": "61ed748bf714cb275d091b9ae9e16f68c456290a7c30486ce9d11fc5753a5ebf"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T093717.767457Z/001-test-art-campaign-saves.log",
+      "sha256": "d8a812b730756587520edfe1d56375e4fe3f75a19a21c20241b1849aaaa4a5c6"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T093717.767457Z/report.json",
+      "sha256": "e6c4a6610c0dfa77009e82020e72577740d1943c7d5d73ed32290c6267615a52"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T093906.493084Z/001-test-art-campaign-saves.log",
+      "sha256": "b6df570b0f2c632e1612c3fc800d908333e079faace5e89fbe727692da255fac"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T093906.493084Z/report.json",
+      "sha256": "1054c12d202a3076d586063c8defbf2e9b0d19e86aad6a53639d8fe32546a69d"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T094451.812353Z/001-test-art-battle-exit.log",
+      "sha256": "9a98be9dab057dfc78bb399e7cf23ef7d18227f9cb7040e57fa9f647f9af86e6"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T094451.812353Z/report.json",
+      "sha256": "5f589b7aa1a22814da57751138a9f5a2ecbe6c1b2c2aef4c7417ed67710917fc"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T094742.178038Z/001-test-art-battle-exit.log",
+      "sha256": "ae82249148bd96e3ee5d5d3fe5e52b0f8b1830c05fd12fe3fe420fa6331139eb"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T094742.178038Z/report.json",
+      "sha256": "a274f4244d7143c78d4bdaa9a4c403378e841dff3c23811be8c1ffeeb3cc2e78"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T095034.550420Z/001-test-art-campaign-ending.log",
+      "sha256": "2b1b587fdf8c67fdb9656ebff2e5468b112414eb2dc4d87dbac4020f59f19465"
+    },
+    {
+      "path": "build/expansion/test-runs/20260919T095034.550420Z/report.json",
+      "sha256": "cb216a6831182bedca78db3a2ef4d2c3d662c5b34ca477ea250b6d772455f352"
+    },
+    {
+      "path": "build/release-acceptance.json",
+      "sha256": "977ab307c1452ea2e0b0d137975ba3c1bb438ff4ed68aa5b158fd7064db1ef3d"
+    },
+    {
+      "path": "build/reproducibility/20260917T225624.978478Z/report.json",
+      "sha256": "3f58b39ddb7425945f36816d689e69f6cd87106fe0fb1115213b4c8aa29f8c78"
+    },
+    {
+      "path": "notes/native-art-battle-exit-inputs.json",
+      "sha256": "47d884c386db25f3fcfbd21a0402cc1ec956d59d67950d3fd1abbc65b6d735bf"
+    },
+    {
+      "path": "notes/native-art-campaign-save-inputs.json",
+      "sha256": "8f60e8984f9d65d023df7c52c54346a55c1c235fc52a7261eb324e5a3b240181"
+    }
+  ]
+}
