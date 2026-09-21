@@ -1,6 +1,9 @@
-> Public project: FFTA Advanced, licensed MIT. GitHub publication and generated-art inclusion are now authorized. See [release CI](release/README.md) and [artwork](artwork/README.md). Earlier unpublished/private-art statements below describe the cleanup checkpoint.
-
 # Current handoff
+
+FFTA Advanced is [public on GitHub](https://github.com/karowan/FFTA-Advanced),
+with [v0.7.0](https://github.com/karowan/FFTA-Advanced/releases/tag/v0.7.0)
+published on September 21, 2026. Original project contributions use MIT, and
+our isolated generated [artwork](artwork/README.md) is included.
 
 Current release recipe: **0.7-art1-job-visibility**, in
 [scripts/mod-release.json](scripts/mod-release.json). Its accepted game SHA-1 is
@@ -26,13 +29,21 @@ A full campaign playthrough and physical GBA testing remain outstanding.
 Each test proves only its recorded inputs and behavior. The earlier engineering
 acceptance does not establish unlimited scene/actor capacity.
 
-## Public-source preparation
+## Public source and release verification
 
 The cleanup separates current guidance from the old checkpoints, makes runtime
-selection portable and adds source/privacy checks. The intended public repository
-starts with fresh history; the development history and private evidence remain
+selection portable and adds source/privacy checks. The public repository
+starts with fresh history; the original development history and private evidence remain
 local. See [the cleanup checkpoint](notes/public-source-cleanup-2026-09-21.md).
-Nothing has been published. Licensing and redistribution review remain necessary.
+
+[Source CI](https://github.com/karowan/FFTA-Advanced/actions/runs/35585989686)
+and [release CI](https://github.com/karowan/FFTA-Advanced/actions/runs/35586077518)
+passed. The downloaded public ZIP matched the locally verified ZIP byte for byte;
+applying its BPS locally reproduced the accepted game SHA-1 above. ZIP SHA-256:
+`61e1250fce14e6bfaca95def3a719ec152a65fd6e537f2222c8966f2480a7dd5`.
+The [release workflow](release/README.md) verifies and packages an accepted BPS;
+it does not compile or execute the game. Original Square Enix assets, game ROMs,
+saves, private evidence and local tools are excluded from the repository.
 
 Do not rewrite the local history, delete private evidence, migrate saves or run
 broad game tests solely because documentation or release wrappers changed.
