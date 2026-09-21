@@ -4,6 +4,7 @@ Reports paths, lines and object IDs, never matched secret values. No network,
 history rewriting, ROM building, deletion or publication. Reports are private.
 """
 import argparse
+import hashlib
 import ast
 import collections
 import importlib.util
@@ -14,6 +15,7 @@ import subprocess
 from urllib.parse import unquote, urlsplit
 
 from source_hygiene import PRIVATE_NAMES, personal_path_lines, secret_findings
+from public_art import manifest_entries, artwork_errors
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('git_content', ROOT / 'scripts/check-git-content.py')
@@ -33,8 +35,10 @@ def allowed(name):
             and (path.suffix.lower() in guard.ALLOWED or name in guard.SPECIAL))
 
 
-def scan_blob(name, raw):
+def scan_blob(name, raw, art=None):
     errors = []
+    if name.startswith('artwork/') and name.endswith('.png'):
+        return [{'file': name, 'rule': message} for message in artwork_errors(name, raw, art or {})]
     if not allowed(name):
         errors.append({'file': name, 'rule': 'private-or-unapproved-path'})
     if b'\0' in raw or len(raw) > 4 * 1024 * 1024:
@@ -83,6 +87,11 @@ def audit_history():
     blobs = [(oid, objects[oid], int(size)) for oid, kind, size in (line.split() for line in info)
              if kind == 'blob' and oid in objects]
     findings, personal = [], []
+    historical_art = {}
+    revisions = git('log', '--all', '--format=%H', '--', 'artwork/manifest.json').decode().splitlines()
+    for revision in revisions:
+        for name, row in manifest_entries(git('show', revision + ':artwork/manifest.json')).items():
+            historical_art[(name, row['sha256'])] = row
     # Read one object at a time; do not materialize the entire repository history.
     with subprocess.Popen(['git', 'cat-file', '--batch'], cwd=ROOT,
                           stdin=subprocess.PIPE, stdout=subprocess.PIPE) as proc:
@@ -94,7 +103,8 @@ def audit_history():
             raw = proc.stdout.read(size)
             if proc.stdout.read(1) != b'\n':
                 raise RuntimeError('Truncated Git object response')
-            findings.extend(dict(object=oid, **entry) for entry in scan_blob(name, raw))
+            art_row = historical_art.get((name, hashlib.sha256(raw).hexdigest()))
+            findings.extend(dict(object=oid, **entry) for entry in scan_blob(name, raw, {name: art_row} if art_row else {}))
             lines = personal_path_lines(raw)
             if lines:
                 personal.append({'object': oid, 'file': name, 'lines': lines})
@@ -113,6 +123,8 @@ def main():
     args = parser.parse_args()
     names = set(filter(None, git('ls-files', '--cached', '--others', '--exclude-standard', '-z').decode().split('\0')))
     errors, personal, links, private = [], [], [], []
+    art_path = ROOT / 'artwork/manifest.json'
+    art = manifest_entries(art_path.read_bytes()) if art_path.is_file() else {}
     counts = collections.Counter()
     for name in sorted(names):
         path = ROOT / name
@@ -120,7 +132,7 @@ def main():
             # A tracked deletion is valid in the working tree audit.
             continue
         raw = path.read_bytes()
-        errors.extend(scan_blob(name, raw))
+        errors.extend(scan_blob(name, raw, art))
         lines = personal_path_lines(raw)
         if lines:
             personal.append({'file': name, 'lines': lines})
@@ -135,6 +147,8 @@ def main():
                 links.extend(missing); private.extend(local)
         except (ValueError, SyntaxError) as exc:
             errors.append({'file': name, 'rule': 'parse-error', 'detail': type(exc).__name__})
+    for missing in sorted(set(art) - names):
+        errors.append({'file': missing, 'rule': 'missing-inventoried-artwork'})
     result = {'sourceFiles': sum(counts.values()), 'extensions': dict(counts), 'findings': errors,
               'personalPaths': personal, 'brokenLinks': links, 'privateEvidenceLinks': private}
     if args.history:

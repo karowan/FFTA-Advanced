@@ -1,3 +1,5 @@
+> Public project: FFTA Advanced, licensed MIT. GitHub publication and generated-art inclusion are now authorized. See [release CI](release/README.md) and [artwork](artwork/README.md). Earlier unpublished/private-art statements below describe the cleanup checkpoint.
+
 # Current handoff
 
 Current release recipe: **0.7-art1-job-visibility**, in

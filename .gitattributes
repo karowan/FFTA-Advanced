@@ -14,3 +14,6 @@ src/art/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 src/art/race-study/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 # Public bootstrap snapshots are authenticated byte-for-byte, including newlines.
 bootstrap/** -text -whitespace
+artwork/**/*.png binary
+*.yml text eol=lf
+LICENSE text eol=lf

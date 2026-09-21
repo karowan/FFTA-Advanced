@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "source": {
+    "bytes": 16777216,
+    "crc32": "5645e56c",
+    "sha1": "4ac05441f4de70a4ec3dd932116346c61b8783d9",
+    "sha256": "43fc8204c6dceee58828aebc7af0c72eb807e99f35ad641c8bb0a4fa8b6edc19"
+  },
+  "target": {
+    "bytes": 33554432,
+    "crc32": "14ee0ba0",
+    "file": "FFTA_Reviewed_All_Classes.gba",
+    "sha1": "267fd273bffe2c26a7ed3507d236af80a29b74a8",
+    "sha256": "75e4dc97eb8289fe7144378f1f29f88a926db11c460fa07caa31b0813239ba50"
+  },
+  "patch": {
+    "bytes": 5944501,
+    "file": "FFTA_Expansion.bps",
+    "format": "BPS",
+    "sha256": "b0f3970006b379969370db99d4e431845927f95d7a994daa4d2b666db8214a02"
+  },
+  "name": "FFTA Advanced",
+  "version": "0.7.0",
+  "tag": "v0.7.0",
+  "localAcceptance": {
+    "buildVersion": "0.7-art1-job-visibility",
+    "candidateRunSha256": "41d50941eb32c0bd34a0f965a3b736da55cd1dcfc99d445fd025e4562faa6b11",
+    "deterministicPatch": true,
+    "roundtrip": true,
+    "tests": [
+      "build-job-visibility",
+      "test-job-visibility",
+      "test-job-visibility-save"
+    ],
+    "wrongSourceRejected": true
+  }
+}

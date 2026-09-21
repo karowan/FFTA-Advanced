@@ -5,13 +5,15 @@ Checks staged bytes, not merely working files. Run before each commit.
 import pathlib
 import subprocess
 from source_hygiene import PRIVATE_NAMES, secret_findings
+from public_art import manifest_entries, artwork_errors
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 BLOCKED_DIRS = {'roms', 'saves', 'build', 'downloads', 'tools', 'patches',
                 '.worktrees', '.local', '__pycache__'}
 ALLOWED = {'.md', '.txt', '.json', '.mjs', '.js', '.py', '.ps1', '.cmd',
            '.c', '.h', '.s', '.ld', '.inc'}
-SPECIAL = {'.gitignore', '.gitattributes', '.githooks/pre-commit'}
+SPECIAL = {'.gitignore', '.gitattributes', '.githooks/pre-commit', 'LICENSE',
+           '.github/workflows/ci.yml', '.github/workflows/release.yml'}
 
 
 def check_index(root=ROOT):
@@ -19,6 +21,8 @@ def check_index(root=ROOT):
         ['git', 'ls-files', '--cached', '-z'], cwd=root).decode().split('\0')))
     if any('\n' in name or '\r' in name for name in names):
         raise SystemExit('Unexpected newline in tracked path')
+    art = manifest_entries(subprocess.check_output(
+        ['git', 'show', ':artwork/manifest.json'], cwd=root)) if 'artwork/manifest.json' in names else {}
     batch = subprocess.check_output(['git', 'cat-file', '--batch'], cwd=root,
         input=''.join(':' + name + '\n' for name in names).encode())
     cursor = 0
@@ -32,6 +36,10 @@ def check_index(root=ROOT):
         data = batch[end + 1:end + 1 + size]
         cursor = end + 2 + size
         path = pathlib.PurePosixPath(name)
+        if path.suffix == '.png' and name.startswith('artwork/'):
+            errors.extend(f'{message}: {name}' for message in artwork_errors(name, data, art))
+            count += 1
+            continue
         if set(path.parts) & BLOCKED_DIRS or path.name in PRIVATE_NAMES or (
                 path.suffix.lower() not in ALLOWED and name not in SPECIAL):
             errors.append(f'Unapproved staged file type/path: {name}')
@@ -49,9 +57,11 @@ def check_index(root=ROOT):
         for finding in secret_findings(data):
             errors.append(f'Possible credential ({finding["rule"]}): {name}:{finding["line"]}')
         count += 1
+    for missing in sorted(set(art) - set(names)):
+        errors.append('Inventoried artwork missing from index: ' + missing)
     if errors:
         raise SystemExit('\n'.join(errors))
-    print(f'PASS: {count} staged source/document files; no ROMs or private assets.')
+    print(f'PASS: {count} staged source/document/artwork files; no ROMs or private assets.')
 
 
 if __name__ == '__main__':

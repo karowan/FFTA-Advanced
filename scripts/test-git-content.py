@@ -1,5 +1,6 @@
 """Exercise ROM exclusion against a disposable real Git index."""
 import importlib.util
+import json
 import pathlib
 import shutil
 import subprocess
@@ -71,6 +72,20 @@ class ContentGuardTests(unittest.TestCase):
         self.stage('notes.txt', b'-----BEGIN ' + b'PRIVATE KEY-----\nprivate')
         with self.assertRaises(SystemExit):
             guard.check_index(self.path)
+
+    def test_registered_artwork_allowed_and_changed_bytes_rejected(self):
+        row = json.loads((ROOT / 'artwork/manifest.json').read_bytes())['files'][0]
+        raw = (ROOT / row['path']).read_bytes()
+        self.stage('artwork/manifest.json', json.dumps({'schema':1,'files':[row]}).encode())
+        self.stage(row['path'], raw)
+        guard.check_index(self.path)
+        self.stage(row['path'], raw + b'private trailing payload')
+        with self.assertRaises(SystemExit): guard.check_index(self.path)
+
+    def test_unregistered_png_rejected(self):
+        row = json.loads((ROOT / 'artwork/manifest.json').read_bytes())['files'][0]
+        self.stage('artwork/characters/unapproved.png', (ROOT / row['path']).read_bytes())
+        with self.assertRaises(SystemExit): guard.check_index(self.path)
 
 
 if __name__ == '__main__':

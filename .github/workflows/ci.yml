@@ -1,0 +1,32 @@
+name: Source checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12.10'
+      - name: Source privacy, syntax and links
+        run: python scripts/audit-public-source.py --require-private-paths-clean
+      - name: Git asset guard
+        run: python scripts/check-git-content.py
+      - name: Guard rejection tests
+        run: python scripts/test-git-content.py
+      - name: Bootstrap source and runtime tests
+        run: python scripts/test-source-cleanup.py
+      - name: Release packaging tests
+        run: python scripts/test-ci-release.py

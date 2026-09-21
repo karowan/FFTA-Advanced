@@ -29,7 +29,7 @@ They are not installed automatically or bundled with this source.
 
 Supply your own clean USA ROM as `roms/clean/FFTA_US_clean.gba`;
 SHA-1 must be `4ac05441f4de70a4ec3dd932116346c61b8783d9`.
-Generated source artwork, private fixtures and accepted parent artifacts are
+Original reference worksheets, private fixtures and accepted parent artifacts are
 additional inputs. Missing inputs must remain explicit failures, not bypassed
 hash or acceptance checks. See [rebuild limits](REPRODUCIBLE-BUILD.md).
 
@@ -38,7 +38,8 @@ hash or acceptance checks. See [rebuild limits](REPRODUCIBLE-BUILD.md).
 | Path | Purpose |
 |---|---|
 | `src/engine/` | ARM7TDMI code and native hooks |
-| `src/art/` | Art specifications, prompts and provenance; image files stay private |
+| `src/art/` | Art specifications, prompts and provenance |
+| `artwork/` | Generated artwork under MIT; original game references excluded |
 | `scripts/` | Builders, converters, deterministic tests and local launchers |
 | `scripts/*test-plan.json` | Test IDs, dependencies and suites |
 | `notes/` | Design contracts and bounded implementation evidence |

@@ -13,6 +13,7 @@ import subprocess
 
 from historical_sources import source_file, source_tree
 from source_hygiene import personal_path_lines, secret_findings
+from public_art import manifest_entries
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('public_audit', ROOT / 'scripts/audit-public-source.py')
@@ -45,6 +46,8 @@ def main():
     names = set(filter(None, subprocess.check_output(
         ['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'], cwd=ROOT).decode().split('\0')))
     files, redactions, formatting = {}, [], []
+    art_path = ROOT / 'artwork/manifest.json'
+    art = manifest_entries(art_path.read_bytes()) if art_path.is_file() else {}
     for name in sorted(names):
         path = ROOT / name
         if not path.is_file():
@@ -52,7 +55,7 @@ def main():
         if path.is_symlink() or not path.resolve().is_relative_to(ROOT):
             raise ValueError('Refusing source symlink: ' + name)
         raw = path.read_bytes()
-        issues = audit.scan_blob(name, raw)
+        issues = audit.scan_blob(name, raw, art)
         if issues:
             raise ValueError('Source failed publication audit: ' + name)
         if personal_path_lines(raw):

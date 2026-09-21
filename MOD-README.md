@@ -90,7 +90,7 @@ Other towns stock new weapons for these jobs:
 - **Equipment previews:** in Item List, Buy and Sell, use L/R to switch
   eligibility pages and inspect the ten added class entries.
 - **Job wheel:** L/R switches pages when Human jobs exceed one page.
-- **Auto-Potion:** in Pick Abilities → Reaction, choose Potion or Hi-Potion.
+- **Auto-Potion:** in Pick Abilities â†’ Reaction, choose Potion or Hi-Potion.
   The saved choice is marked `- set`.
 - **Morpher visuals:** transformations now show the appropriate monster form.
 - **Pub menu:** Missions appears first.
@@ -146,3 +146,9 @@ command boundary.
 
 For bug reports, include your mod and emulator versions, steps to reproduce the
 problem, and an in-game save if available.
+
+## License
+
+Original project code and generated artwork use MIT. The complete license notice
+is included in manifest.json. Original game assets remain the property of their
+respective rights holders, including Square Enix, and are not licensed here.

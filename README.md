@@ -1,12 +1,15 @@
-# FFTA Expansion
+# FFTA Advanced
+
+[![Source checks](https://github.com/karowan/FFTA-Advanced/actions/workflows/ci.yml/badge.svg)](https://github.com/karowan/FFTA-Advanced/actions/workflows/ci.yml)
 
 A Final Fantasy Tactics Advance (USA) mod with eight new jobs across ten
 race/job options, 129 added ability entries, 85 teaching weapons, native-palette
 spritework, and quality-of-life improvements.
 
 This repository contains source, build tools, specifications and development
-records. Game ROMs, player saves, emulators, generated images and build outputs
-are not included. The new character spritework is AI-generated; artist
+records, plus [our generated artwork](artwork/README.md). Game ROMs, player saves,
+emulators, original Square Enix graphics and build outputs are not included.
+The new character spritework is AI-generated; artist
 contributions to improve or replace it are welcome.
 
 ## Playing
@@ -15,7 +18,7 @@ The player distribution is a ZIP containing a BPS patch, README, changelog and
 checksum manifest. Apply the patch to your own clean USA ROM. See the
 [player guide template](MOD-README.md) for jobs, progression, installation and
 save guidance. Its `{{...}}` fields are filled when a release is packaged.
-No public download URL has been established in this source tree.
+**[Download the latest release](https://github.com/karowan/FFTA-Advanced/releases/latest).**
 
 For an already provisioned developer checkout, **Play Mod.cmd** opens the exact
 release selected by `build/releases/current.json`. **Play New Sprites.cmd** is
@@ -26,6 +29,7 @@ they do not select the current release.
 
 - [Setup and contributions](CONTRIBUTING.md): dependencies, source layout and checks.
 - [Build, package and play](MOD-RELEASE.md): the current release workflow.
+- [GitHub release CI](release/README.md): verified BPS-to-ZIP packaging.
 - [Implementation workflow](PARALLEL-IMPLEMENTATION.md): change and acceptance rules.
 - [Testing](TESTING.md): choose deterministic checks by affected behavior.
 - [Current handoff](HANDOFF.md): accepted scope and remaining limits.
@@ -44,6 +48,6 @@ Testing uses mGBA. A full campaign playthrough and physical GBA testing remain
 outstanding. A Geomancer field outline can temporarily disappear during
 memory-heavy animations while its effect stays active.
 
-The source has no project-wide license yet. Publication and licensing decisions
-must be made before a public release; the presence of source does not establish
-permission to redistribute third-party code or game assets.
+Original project code, documentation and generated artwork use the
+[MIT license](LICENSE). Original game assets and third-party dependencies are
+outside that grant; see [NOTICE.md](NOTICE.md).

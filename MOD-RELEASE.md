@@ -1,3 +1,5 @@
+> For public GitHub releases, use [release/README.md](release/README.md). The local build/acceptance procedure below remains the source of the verified BPS input.
+
 # Build, share and play the mod
 
 The release artifact is a ZIP containing **FFTA_Expansion.bps**, **README.md**,

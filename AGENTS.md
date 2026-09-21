@@ -80,7 +80,10 @@
   handles all subsequent implementation, integration, testing and final review.
 - Never add ROMs, saves, memory dumps, local tools or generated builds to Git.
   Run `scripts/check-git-content.py` against the index before every commit.
-  Never force-add ignored assets. No remote or publication is authorized.
+  Never force-add ignored assets. Publish only when the user authorizes it.
+- Project-generated artwork may be committed only through the authenticated
+  artwork inventory. Never include original game sprites, mixed reference
+  worksheets, UI frames, screenshots, ROMs or third-party reference images.
 - Each implementation agent works only inside its assigned `.worktrees/<job>`
   checkout, with an explicit working directory for shell commands. Do not edit
   the primary checkout or another agent's worktree. Each owns its own branch.

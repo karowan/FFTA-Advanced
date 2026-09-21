@@ -64,8 +64,10 @@ The [approved import checkpoint](notes/approved-first-pass-integration-2026-09-2
 records the accepted first pass and source receipt.
 
 Keep complete animation catalogs and immutable per-ROM provenance. Export/verify
-catalog shards with scripts/snapshot-reviewed-art-catalog.py; original generated
-images remain private inputs. Never rewrite historical source receipts to make a
+catalog shards with scripts/snapshot-reviewed-art-catalog.py. Worksheets containing
+original game references remain private. Standalone custom artwork is public
+under artwork/, with exact hashes and role/dimension checks.
+Never rewrite historical source receipts to make a
 new conversion appear previously accepted.
 
 ## Source hygiene and public export
@@ -83,7 +85,7 @@ Prepare public source in a separate fresh checkout, preserving the private
 original history. Retain required historical build source as authenticated text
 inputs. Personal paths in public provenance are redacted and explicitly labeled;
 original authenticated receipts stay local. Do not claim a fresh source checkout
-includes private images, accepted parent ROMs or the historical evidence archive.
+includes original-game references, accepted parent ROMs or the historical evidence archive.
 [Cleanup checkpoint](notes/public-source-cleanup-2026-09-21.md).
 
 ## Launching and saves
@@ -97,3 +99,12 @@ Preserve separate vanilla, development, legacy engineering and current-art save
 paths. Use launcher -ValidateOnly checks without opening a game. Across updates,
 use an in-game save and cold Continue, not an emulator state. Packaging never
 imports player saves or closes running games.
+
+## GitHub publication
+
+The user authorized publication to karowan/FFTA-Advanced with MIT licensing and
+our generated artwork. Original Square Enix assets remain excluded. Run the
+source/privacy, staged-asset, bootstrap, artwork and packaging checks before
+pushing. Follow [release/README.md](release/README.md) to generate and publish a
+ZIP through GitHub Actions from a checksum-pinned accepted BPS. The workflow
+packages an accepted patch; it does not compile the game or receive a ROM.
