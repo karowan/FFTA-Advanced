@@ -46,12 +46,12 @@ Eight additional items; all non-elemental, with no extra stat bonuses, automatic
 
 | Item | Weapon Attack | Price | Lessons |
 |---|---:|---:|---|
-| Recruit Axe | 20 | 300 gil | Soldier: Chop |
-| Throwing Axe | 24 | 600 gil | Soldier: Tomahawk + Recuperation |
-| Field Axe | 28 | 1,000 gil | Soldier: Overpower + Haft Guard |
-| Breaching Axe | 32 | 1,600 gil | Soldier: Shatter Guard |
-| Bearded Axe | 34 | 2,400 gil | Gladiator: Armor Splitter |
-| Arena Axe | 38 | 3,400 gil | Gladiator: Reaping Arc + Follow Through |
+| Recruit Axe | 29 | 300 gil | Soldier: Chop |
+| Throwing Axe | 31 | 600 gil | Soldier: Tomahawk + Recuperation |
+| Field Axe | 33 | 1,000 gil | Soldier: Overpower + Haft Guard |
+| Breaching Axe | 34 | 1,600 gil | Soldier: Shatter Guard |
+| Bearded Axe | 37 | 2,400 gil | Gladiator: Armor Splitter |
+| Arena Axe | 39 | 3,400 gil | Gladiator: Reaping Arc + Follow Through |
 | Headsman's Axe | 42 | 4,800 gil | Gladiator: Executioner + Axe Reprisal |
 | Titan Axe | 46 | 6,500 gil | Gladiator: Fell Cleave |
 

@@ -88,7 +88,15 @@ states capture old transient state and are not a compatibility guarantee.
 
 ## Verification checkpoint
 
-Current game SHA-1: `267fd273bffe2c26a7ed3507d236af80a29b74a8`, unchanged by this
+Current release: `0.7.1-equipment-revision.zip`, game SHA-1
+`631497ccf8ffedaf3d88e4343124305fb08402e8`, packaged from
+[run 20260924T055206.504473Z](build/expansion/test-runs/20260924T055206.504473Z/report.json)
+through [its adapter](scripts/package-equipment-revision.py); ZIP SHA-256
+`7baf6da23bfc2615889e06226863b06c0889cdc4765e010a34d7a2bc0720dc9a`, 2,881,948 bytes;
+BPS 5,945,233 bytes. The packaging code and launcher are unchanged. The
+remainder of this section records the preceding v0.7.0 checkpoint.
+
+Previous game SHA-1: `267fd273bffe2c26a7ed3507d236af80a29b74a8`, unchanged by that
 packaging work. It retains the new AI-generated spritework and discovery fix.
 Share ZIP: `0.7-art1-job-visibility.zip`, 2,880,796 bytes; BPS: 5,944,501 bytes.
 ZIP SHA-256: `b2b850d845b7aff4b77a57ee7d82de8f9027035aee3b5f3ba03bcf7ef919115a`.

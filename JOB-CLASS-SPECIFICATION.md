@@ -489,7 +489,7 @@ The original W1–W8 tables supply 64 job weapons; six Mystic Knight sabers, sev
 
 These are new proposed item names. An Echo katana teaches the named sword spirit without changing the vanilla weapon bearing a similar name. A teaching weapon's name never grants an unlisted proc or power. Chemist uses the actual FFTA consumable **Cureall**, not an assumed inventory item named Remedy. [FFTA item reference][items].
 
-Weapon Attack targets, W1–W8: Samurai/Dark Knight/Viking/Mystic Knight 18/22/26/30/34/38/42/46; Dancer/Chemist 14/17/20/23/26/29/32/35; Bard 12/15/18/21/24/27/30/33; Geomancer 10/12/14/16/18/20/22/24 with Magic Power bonuses 0/2/4/6/8/10/12/14. Other bonuses are zero; no innate element, proc, or automatic status. Categories use original handedness except new axes, which are two-handed and exclude shields/second weapons.
+Weapon Attack follows the September 24, 2026 revision in [the acquisition ledger](WEAPON-ACQUISITION.md): each shipment matches the original shop weapons of the same family available at about that time. Geomancer rods keep Magic Power bonuses 0/2/4/6/8/10/12/14. Other bonuses are zero; no innate element, proc, or automatic status. Categories use original handedness except new axes, which are two-handed and exclude shields/second weapons.
 
 Prices: 300/600/1,000/1,600/2,400/3,400/4,800/6,500 gil. W1–2 use S0 (opening stock); W3–4 use S1 (clear #005 Twisted Flow); W5–6 use S2 (clear #011 Pale Company); W7–8 use S3 (clear #017 Desert Patrol). The acquisition ledger fixes design gates; their ROM flag addresses and shop record allocation remain to be verified. Gear may be purchased before a job unlocks, but only an eligible active job learns its lessons. All gear must remain repeatably obtainable. A repeatable teaching weapon does not guarantee repeatable ingredients. Ethers are not assumed purchasable, Cureall access is progression-dependent, and no new consumable shop stock is introduced. High Tonic permits using an owned X-Potion without promising early availability or affordability. Verify actual vanilla supply and shop flags.
 
@@ -517,10 +517,10 @@ These are parallel lessons within existing shop tiers, not six stronger endgame 
 
 | New saber | Lesson | AP | Weapon Attack | Gil | Shop tier |
 |---|---|---:|---:|---:|---|
-| Hourglass Saber | MYK-A9 Slow Spellblade | 250 | 30 | 1600 | S1 — clear #005 Twisted Flow |
+| Hourglass Saber | MYK-A9 Slow Spellblade | 250 | 31 | 1600 | S1 — clear #005 Twisted Flow |
 | Aether Saber | MYK-A10 Osmose Spellblade | 300 | 34 | 2400 | S2 — clear #011 Pale Company |
 | Dawn Saber | MYK-A11 Holy Spellblade | 250 | 38 | 3400 | S2 — clear #011 Pale Company |
-| Severance Saber | MYK-A12 Spellbreak | 250 | 26 | 1000 | S1 — clear #005 Twisted Flow |
+| Severance Saber | MYK-A12 Spellbreak | 250 | 28 | 1000 | S1 — clear #005 Twisted Flow |
 | Prism Saber | MYK-A13 Arcane Release | 350 | 34 | 2400 | S2 — clear #011 Pale Company |
 | Stone Saber | MYK-A14 Break Blade | 400 | 46 | 6500 | S3 — clear #017 Desert Patrol |
 
@@ -533,12 +533,12 @@ Seven repeatably obtainable parallel lessons; only the named teaching job learns
 | New weapon | Lesson | AP | Weapon Attack | Gil | Shop tier |
 |---|---|---:|---:|---:|---|
 | Red Spider Katana | SAM-A9 Higanbana | 300 | 42 | 4800 | S3 — clear #017 Desert Patrol |
-| Nightward Sword | DRK-A9 The Blackest Night | 300 | 34 | 2400 | S2 — clear #011 Pale Company |
-| Challenger Axe | VIK-A9 Provoke | 250 | 26 | 1000 | S1 — clear #005 Twisted Flow |
-| Refuge Rod | GEO-A9 Nature's Refuge | 300 | 22 | 3400 | S2 — clear #011 Pale Company |
-| Preventive Knife | CHM-A9 Inoculation | 300 | 32 | 4800 | S3 — clear #017 Desert Patrol |
-| Fortifying Knife | CHM-A10 Guarding Draught | 200 | 23 | 1600 | S1 — clear #005 Twisted Flow |
-| Passing Foil | DNC-A9 Passing Step | 250 | 23 | 1600 | S1 — clear #005 Twisted Flow |
+| Nightward Sword | DRK-A9 The Blackest Night | 300 | 37 | 2400 | S2 — clear #011 Pale Company |
+| Challenger Axe | VIK-A9 Provoke | 250 | 33 | 1000 | S1 — clear #005 Twisted Flow |
+| Refuge Rod | GEO-A9 Nature's Refuge | 300 | 25 | 3400 | S2 — clear #011 Pale Company |
+| Preventive Knife | CHM-A9 Inoculation | 300 | 39 | 4800 | S3 — clear #017 Desert Patrol |
+| Fortifying Knife | CHM-A10 Guarding Draught | 200 | 33 | 1600 | S1 — clear #005 Twisted Flow |
+| Passing Foil | DNC-A9 Passing Step | 250 | 35 | 1600 | S1 — clear #005 Twisted Flow |
 
 Use the stated weapon family and its existing permission/handedness rules. Challenger Axe is two-handed and excludes shields; Passing Foil is a rapier. Refuge Rod has +10 Magic Power, matching its existing rod tier; all other additional bonuses are zero. No innate element, proc, or status. The seven lessons add 1,900 action AP in total; they do not require mastering a whole command before it is useful.
 

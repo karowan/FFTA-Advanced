@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "description": "Bounded equipment-help lesson row fix: merged racial rows, three-row cap, per-lesson AP and first-lesson type icon. Native builder on every item record plus real-core shop R Info, Item List and Equip Items. No battle, save or data-table changes.",
+  "timeoutSeconds": 600,
+  "steps": [
+    {"id":"build-teaching-rows","runtime":"python","kind":"static","suites":["teaching-rows"],"args":["scripts/build-teaching-rows.py"]},
+    {"id":"test-teaching-rows","runtime":"python","kind":"runtime","suites":["teaching-rows"],"requires":["build-teaching-rows"],"args":["scripts/test-teaching-rows.py"]},
+    {"id":"test-teaching-rows-ui","runtime":"python","kind":"runtime","suites":["teaching-rows"],"requires":["test-teaching-rows"],"args":["scripts/test-teaching-rows-ui.py"]}
+  ]
+}

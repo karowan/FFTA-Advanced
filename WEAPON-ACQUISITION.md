@@ -1,6 +1,6 @@
 # Teaching weapons and acquisition
 
-Design 0.7, equipment plan revision 1 — September 14, 2026. **Every one of the 129 adopted abilities has a named teaching weapon and a repeatable acquisition route.** This ledger covers all 85 new weapons, including their support, reaction and combo lessons. It preserves current names, AP, stats, and base prices. The placements are our mod design, not claims about items already present in vanilla or an applied patch.
+Design 0.7, equipment plan revision 1 — September 14, 2026. **Every one of the 129 adopted abilities has a named teaching weapon and a repeatable acquisition route.** This ledger covers all 85 new weapons, including their support, reaction and combo lessons. It preserves current names, AP and base prices. Weapon Attack was revised on September 24, 2026: each shipment now matches the original shop weapons of the same family available at about that time ([revision script](notes/revise-weapon-attack-2026-09-24.mjs), [checkpoint](notes/equipment-revision-2026-09-24.md)). No weapon was weakened. The placements are our mod design, not claims about items already present in vanilla or an applied patch.
 
 ## Where and when
 
@@ -43,12 +43,12 @@ Shops: Cyril. Additional towns retain normal access requirements.
 
 | Weapon | Every lesson and AP | WAtk | MPow + | Base gil | Shipment |
 |---|---|---:|---:|---:|---|
-| Ashura Echo | Ashura [SAM-A1; 100 AP] | 18 | 0 | 300 | S0 |
-| Wind Reed | Wind Draw [SAM-A2; 150 AP]; Composure [SAM-S1; 250 AP] | 22 | 0 | 600 | S0 |
-| Osafune Echo | Osafune [SAM-A3; 200 AP]; Crescent Combo [SAM-C1; 100 AP] | 26 | 0 | 1,000 | S1 |
-| Murasame Echo | Murasame [SAM-A4; 200 AP]; Blade Ward [SAM-R1; 300 AP] | 30 | 0 | 1,600 | S1 |
-| Kiyomori Echo | Kiyomori [SAM-A5; 250 AP]; Poise [SAM-S2; 350 AP] | 34 | 0 | 2,400 | S2 |
-| Guarding Blade | Guarding Draw [SAM-A6; 250 AP]; Counter Draw [SAM-R2; 350 AP] | 38 | 0 | 3,400 | S2 |
+| Ashura Echo | Ashura [SAM-A1; 100 AP] | 29 | 0 | 300 | S0 |
+| Wind Reed | Wind Draw [SAM-A2; 150 AP]; Composure [SAM-S1; 250 AP] | 30 | 0 | 600 | S0 |
+| Osafune Echo | Osafune [SAM-A3; 200 AP]; Crescent Combo [SAM-C1; 100 AP] | 34 | 0 | 1,000 | S1 |
+| Murasame Echo | Murasame [SAM-A4; 200 AP]; Blade Ward [SAM-R1; 300 AP] | 37 | 0 | 1,600 | S1 |
+| Kiyomori Echo | Kiyomori [SAM-A5; 250 AP]; Poise [SAM-S2; 350 AP] | 39 | 0 | 2,400 | S2 |
+| Guarding Blade | Guarding Draw [SAM-A6; 250 AP]; Counter Draw [SAM-R2; 350 AP] | 40 | 0 | 3,400 | S2 |
 | Kiku Echo | Kiku-ichimonji [SAM-A7; 300 AP] | 42 | 0 | 4,800 | S3 |
 | Moonblossom | Moon Blossom [SAM-A8; 400 AP] | 46 | 0 | 6,500 | S3 |
 | Red Spider Katana | Higanbana [SAM-A9; 300 AP] | 42 | 0 | 4,800 | S3 |
@@ -59,15 +59,15 @@ Shops: Cyril, Sprohm. Additional towns retain normal access requirements.
 
 | Weapon | Every lesson and AP | WAtk | MPow + | Base gil | Shipment |
 |---|---|---:|---:|---:|---|
-| Gloom Sword | Blood Edge [DRK-A1; 100 AP] | 18 | 0 | 300 | S0 |
-| Sanguine Edge | Sanguine Sword [DRK-A2; 150 AP]; Desperation [DRK-S1; 300 AP] | 22 | 0 | 600 | S0 |
-| Infernal Edge | Infernal Strike [DRK-A3; 200 AP]; Abyss Combo [DRK-C1; 100 AP] | 26 | 0 | 1,000 | S1 |
-| Veil Sword | Dark Mind [DRK-A4; 200 AP]; Dark Ward [DRK-R1; 300 AP] | 30 | 0 | 1,600 | S1 |
-| Oathbreaker | Last Resort [DRK-A5; 250 AP]; Bloodcasting [DRK-S2; 400 AP] | 34 | 0 | 2,400 | S2 |
-| Crushing Edge | Crushing Blow [DRK-A6; 300 AP]; Vengeful Pulse [DRK-R2; 350 AP] | 38 | 0 | 3,400 | S2 |
+| Gloom Sword | Blood Edge [DRK-A1; 100 AP] | 25 | 0 | 300 | S0 |
+| Sanguine Edge | Sanguine Sword [DRK-A2; 150 AP]; Desperation [DRK-S1; 300 AP] | 28 | 0 | 600 | S0 |
+| Infernal Edge | Infernal Strike [DRK-A3; 200 AP]; Abyss Combo [DRK-C1; 100 AP] | 33 | 0 | 1,000 | S1 |
+| Veil Sword | Dark Mind [DRK-A4; 200 AP]; Dark Ward [DRK-R1; 300 AP] | 35 | 0 | 1,600 | S1 |
+| Oathbreaker | Last Resort [DRK-A5; 250 AP]; Bloodcasting [DRK-S2; 400 AP] | 37 | 0 | 2,400 | S2 |
+| Crushing Edge | Crushing Blow [DRK-A6; 300 AP]; Vengeful Pulse [DRK-R2; 350 AP] | 39 | 0 | 3,400 | S2 |
 | Abyssal Edge | Abyssal Blade [DRK-A7; 300 AP] | 42 | 0 | 4,800 | S3 |
 | Sacrifice Edge | Unholy Sacrifice [DRK-A8; 400 AP] | 46 | 0 | 6,500 | S3 |
-| Nightward Sword | The Blackest Night [DRK-A9; 300 AP] | 34 | 0 | 2,400 | S2 |
+| Nightward Sword | The Blackest Night [DRK-A9; 300 AP] | 37 | 0 | 2,400 | S2 |
 
 ### Viking — Bangaa — Axe
 
@@ -75,15 +75,15 @@ Shops: Cyril, Sprohm. Additional towns retain normal access requirements.
 
 | Weapon | Every lesson and AP | WAtk | MPow + | Base gil | Shipment |
 |---|---|---:|---:|---:|---|
-| Storm Axe | Thunder [VIK-A1; 100 AP] | 18 | 0 | 300 | S0 |
-| Raider Axe | Pickpocket [VIK-A2; 100 AP]; Sea Legs [VIK-S1; 150 AP] | 22 | 0 | 600 | S0 |
-| Plunder Axe | Strong-Arm [VIK-A3; 200 AP]; Tempest Combo [VIK-C1; 100 AP] | 26 | 0 | 1,000 | S1 |
-| Warcaller Axe | War Cry [VIK-A4; 200 AP]; Absorb Damage [VIK-R1; 300 AP] | 30 | 0 | 1,600 | S1 |
-| Stormcall Axe | Stormcall [VIK-A5; 250 AP]; Opportunist [VIK-S2; 350 AP] | 34 | 0 | 2,400 | S2 |
-| Pillage Axe | Pillage [VIK-A6; 300 AP]; Gil Snapper [VIK-R2; 50 AP] | 38 | 0 | 3,400 | S2 |
+| Storm Axe | Thunder [VIK-A1; 100 AP] | 29 | 0 | 300 | S0 |
+| Raider Axe | Pickpocket [VIK-A2; 100 AP]; Sea Legs [VIK-S1; 150 AP] | 31 | 0 | 600 | S0 |
+| Plunder Axe | Strong-Arm [VIK-A3; 200 AP]; Tempest Combo [VIK-C1; 100 AP] | 33 | 0 | 1,000 | S1 |
+| Warcaller Axe | War Cry [VIK-A4; 200 AP]; Absorb Damage [VIK-R1; 300 AP] | 34 | 0 | 1,600 | S1 |
+| Stormcall Axe | Stormcall [VIK-A5; 250 AP]; Opportunist [VIK-S2; 350 AP] | 37 | 0 | 2,400 | S2 |
+| Pillage Axe | Pillage [VIK-A6; 300 AP]; Gil Snapper [VIK-R2; 50 AP] | 39 | 0 | 3,400 | S2 |
 | Thunderhead Axe | Thundaga [VIK-A7; 300 AP] | 42 | 0 | 4,800 | S3 |
 | Tidal Axe | Tsunami [VIK-A8; 400 AP] | 46 | 0 | 6,500 | S3 |
-| Challenger Axe | Provoke [VIK-A9; 250 AP] | 26 | 0 | 1,000 | S1 |
+| Challenger Axe | Provoke [VIK-A9; 250 AP] | 33 | 0 | 1,000 | S1 |
 
 ### Geomancer — Nu Mou — Rod
 
@@ -91,15 +91,15 @@ Shops: Cyril, Cadoan. Additional towns retain normal access requirements.
 
 | Weapon | Every lesson and AP | WAtk | MPow + | Base gil | Shipment |
 |---|---|---:|---:|---:|---|
-| Stone Rod | Stone Pulse [GEO-A1; 100 AP] | 10 | 0 | 300 | S0 |
-| Root Rod | Tanglevine [GEO-A2; 150 AP]; Attunement [GEO-S1; 300 AP] | 12 | 2 | 600 | S0 |
-| River Rod | Torrent [GEO-A3; 200 AP]; Gaia Combo [GEO-C1; 100 AP] | 14 | 4 | 1,000 | S1 |
-| Zephyr Rod | Updraft [GEO-A4; 200 AP]; Stone Skin [GEO-R1; 300 AP] | 16 | 6 | 1,600 | S1 |
-| Wardstone Rod | Earthen Ward [GEO-A5; 250 AP]; Surefoot [GEO-S2; 200 AP] | 18 | 8 | 2,400 | S2 |
-| Wisp Rod | Wisp Flame [GEO-A6; 300 AP]; Nature's Wrath [GEO-R2; 350 AP] | 20 | 10 | 3,400 | S2 |
-| Rime Rod | Rime Field [GEO-A7; 300 AP] | 22 | 12 | 4,800 | S3 |
-| Gaia Rod | Gaia Surge [GEO-A8; 400 AP] | 24 | 14 | 6,500 | S3 |
-| Refuge Rod | Nature's Refuge [GEO-A9; 300 AP] | 22 | 10 | 3,400 | S2 |
+| Stone Rod | Stone Pulse [GEO-A1; 100 AP] | 18 | 0 | 300 | S0 |
+| Root Rod | Tanglevine [GEO-A2; 150 AP]; Attunement [GEO-S1; 300 AP] | 18 | 2 | 600 | S0 |
+| River Rod | Torrent [GEO-A3; 200 AP]; Gaia Combo [GEO-C1; 100 AP] | 21 | 4 | 1,000 | S1 |
+| Zephyr Rod | Updraft [GEO-A4; 200 AP]; Stone Skin [GEO-R1; 300 AP] | 23 | 6 | 1,600 | S1 |
+| Wardstone Rod | Earthen Ward [GEO-A5; 250 AP]; Surefoot [GEO-S2; 200 AP] | 24 | 8 | 2,400 | S2 |
+| Wisp Rod | Wisp Flame [GEO-A6; 300 AP]; Nature's Wrath [GEO-R2; 350 AP] | 25 | 10 | 3,400 | S2 |
+| Rime Rod | Rime Field [GEO-A7; 300 AP] | 27 | 12 | 4,800 | S3 |
+| Gaia Rod | Gaia Surge [GEO-A8; 400 AP] | 29 | 14 | 6,500 | S3 |
+| Refuge Rod | Nature's Refuge [GEO-A9; 300 AP] | 25 | 10 | 3,400 | S2 |
 
 ### Chemist — Nu Mou / Moogle — Knife
 
@@ -107,16 +107,16 @@ Shops: Cyril, Cadoan, Baguba Port. Additional towns retain normal access require
 
 | Weapon | Every lesson and AP | WAtk | MPow + | Base gil | Shipment |
 |---|---|---:|---:|---:|---|
-| Tonic Knife | Potion [CHM-A1; 50 AP] | 14 | 0 | 300 | S0 |
-| Field Remedy Knife | Field Remedy [CHM-A2; 100 AP]; Pharmacology [CHM-S1; 200 AP] | 17 | 0 | 600 | S0 |
-| Phoenix Knife | Phoenix Down [CHM-A3; 150 AP]; Flask Combo [CHM-C1; 100 AP] | 20 | 0 | 1,000 | S1 |
-| High Tonic Knife | High Tonic [CHM-A4; 150 AP]; Auto-Potion [CHM-R1; 300 AP] | 23 | 0 | 1,600 | S1 |
-| Mist Knife | Healing Mist [CHM-A5; 250 AP]; Long Throw [CHM-S2; 350 AP] | 26 | 0 | 2,400 | S2 |
-| Ether Knife | Ether [CHM-A6; 200 AP]; Auto-Cureall [CHM-R2; 350 AP] | 29 | 0 | 3,400 | S2 |
-| Cureall Knife | Cureall [CHM-A7; 250 AP] | 32 | 0 | 4,800 | S3 |
-| Resuscitation Knife | Resuscitating Draught [CHM-A8; 400 AP] | 35 | 0 | 6,500 | S3 |
-| Preventive Knife | Inoculation [CHM-A9; 300 AP] | 32 | 0 | 4,800 | S3 |
-| Fortifying Knife | Guarding Draught [CHM-A10; 200 AP] | 23 | 0 | 1,600 | S1 |
+| Tonic Knife | Potion [CHM-A1; 50 AP] | 22 | 0 | 300 | S0 |
+| Field Remedy Knife | Field Remedy [CHM-A2; 100 AP]; Pharmacology [CHM-S1; 200 AP] | 27 | 0 | 600 | S0 |
+| Phoenix Knife | Phoenix Down [CHM-A3; 150 AP]; Flask Combo [CHM-C1; 100 AP] | 32 | 0 | 1,000 | S1 |
+| High Tonic Knife | High Tonic [CHM-A4; 150 AP]; Auto-Potion [CHM-R1; 300 AP] | 33 | 0 | 1,600 | S1 |
+| Mist Knife | Healing Mist [CHM-A5; 250 AP]; Long Throw [CHM-S2; 350 AP] | 35 | 0 | 2,400 | S2 |
+| Ether Knife | Ether [CHM-A6; 200 AP]; Auto-Cureall [CHM-R2; 350 AP] | 37 | 0 | 3,400 | S2 |
+| Cureall Knife | Cureall [CHM-A7; 250 AP] | 39 | 0 | 4,800 | S3 |
+| Resuscitation Knife | Resuscitating Draught [CHM-A8; 400 AP] | 41 | 0 | 6,500 | S3 |
+| Preventive Knife | Inoculation [CHM-A9; 300 AP] | 39 | 0 | 4,800 | S3 |
+| Fortifying Knife | Guarding Draught [CHM-A10; 200 AP] | 33 | 0 | 1,600 | S1 |
 
 ### Bard — Moogle — Instrument
 
@@ -124,14 +124,14 @@ Shops: Cyril, Baguba Port. Additional towns retain normal access requirements.
 
 | Weapon | Every lesson and AP | WAtk | MPow + | Base gil | Shipment |
 |---|---|---:|---:|---:|---|
-| Etude Pipe | Soul Etude [BRD-A1; 100 AP] | 12 | 0 | 300 | S0 |
-| Battle Pipe | Battle Chant [BRD-A2; 150 AP]; Encouragement [BRD-S1; 250 AP] | 15 | 0 | 600 | S0 |
-| Refrain Pipe | Magickal Refrain [BRD-A3; 200 AP]; Chorus Combo [BRD-C1; 100 AP] | 18 | 0 | 1,000 | S1 |
-| Requiem Pipe | Requiem [BRD-A4; 200 AP]; Magick Boost [BRD-R1; 300 AP] | 21 | 0 | 1,600 | S1 |
-| Angel Pipe | Angelsong [BRD-A5; 250 AP]; Clear Voice [BRD-S2; 300 AP] | 24 | 0 | 2,400 | S2 |
-| Traveler Pipe | Hide [BRD-A6; 150 AP]; Encore [BRD-R2; 350 AP] | 27 | 0 | 3,400 | S2 |
-| Ballad Pipe | Magick Ballad [BRD-A7; 300 AP] | 30 | 0 | 4,800 | S3 |
-| Nameless Pipe | Nameless Song [BRD-A8; 400 AP] | 33 | 0 | 6,500 | S3 |
+| Etude Pipe | Soul Etude [BRD-A1; 100 AP] | 22 | 0 | 300 | S0 |
+| Battle Pipe | Battle Chant [BRD-A2; 150 AP]; Encouragement [BRD-S1; 250 AP] | 24 | 0 | 600 | S0 |
+| Refrain Pipe | Magickal Refrain [BRD-A3; 200 AP]; Chorus Combo [BRD-C1; 100 AP] | 30 | 0 | 1,000 | S1 |
+| Requiem Pipe | Requiem [BRD-A4; 200 AP]; Magick Boost [BRD-R1; 300 AP] | 35 | 0 | 1,600 | S1 |
+| Angel Pipe | Angelsong [BRD-A5; 250 AP]; Clear Voice [BRD-S2; 300 AP] | 36 | 0 | 2,400 | S2 |
+| Traveler Pipe | Hide [BRD-A6; 150 AP]; Encore [BRD-R2; 350 AP] | 37 | 0 | 3,400 | S2 |
+| Ballad Pipe | Magick Ballad [BRD-A7; 300 AP] | 39 | 0 | 4,800 | S3 |
+| Nameless Pipe | Nameless Song [BRD-A8; 400 AP] | 41 | 0 | 6,500 | S3 |
 
 ### Dancer — Viera — Rapier
 
@@ -139,15 +139,15 @@ Shops: Cyril, Muscadet. Additional towns retain normal access requirements.
 
 | Weapon | Every lesson and AP | WAtk | MPow + | Base gil | Shipment |
 |---|---|---:|---:|---:|---|
-| Minuet Foil | Mincing Minuet [DNC-A1; 100 AP] | 14 | 0 | 300 | S0 |
-| Witch Foil | Witch Hunt [DNC-A2; 150 AP]; Grace [DNC-S1; 300 AP] | 17 | 0 | 600 | S0 |
-| Tempo Foil | Slow Dance [DNC-A3; 200 AP]; Waltz Combo [DNC-C1; 100 AP] | 20 | 0 | 1,000 | S1 |
-| Polka Foil | Polka [DNC-A4; 200 AP]; Fury [DNC-R1; 300 AP] | 23 | 0 | 1,600 | S1 |
-| Frolic Foil | Heathen Frolic [DNC-A5; 250 AP]; Light Foot [DNC-S2; 350 AP] | 26 | 0 | 2,400 | S2 |
-| Forbidden Foil | Forbidden Dance [DNC-A6; 300 AP]; Counter Rhythm [DNC-R2; 350 AP] | 29 | 0 | 3,400 | S2 |
-| Jitterbug Foil | Jitterbug [DNC-A7; 300 AP] | 32 | 0 | 4,800 | S3 |
-| Danceblade | Sword Dance [DNC-A8; 400 AP] | 35 | 0 | 6,500 | S3 |
-| Passing Foil | Passing Step [DNC-A9; 250 AP] | 23 | 0 | 1,600 | S1 |
+| Minuet Foil | Mincing Minuet [DNC-A1; 100 AP] | 25 | 0 | 300 | S0 |
+| Witch Foil | Witch Hunt [DNC-A2; 150 AP]; Grace [DNC-S1; 300 AP] | 26 | 0 | 600 | S0 |
+| Tempo Foil | Slow Dance [DNC-A3; 200 AP]; Waltz Combo [DNC-C1; 100 AP] | 31 | 0 | 1,000 | S1 |
+| Polka Foil | Polka [DNC-A4; 200 AP]; Fury [DNC-R1; 300 AP] | 35 | 0 | 1,600 | S1 |
+| Frolic Foil | Heathen Frolic [DNC-A5; 250 AP]; Light Foot [DNC-S2; 350 AP] | 36 | 0 | 2,400 | S2 |
+| Forbidden Foil | Forbidden Dance [DNC-A6; 300 AP]; Counter Rhythm [DNC-R2; 350 AP] | 37 | 0 | 3,400 | S2 |
+| Jitterbug Foil | Jitterbug [DNC-A7; 300 AP] | 39 | 0 | 4,800 | S3 |
+| Danceblade | Sword Dance [DNC-A8; 400 AP] | 41 | 0 | 6,500 | S3 |
+| Passing Foil | Passing Step [DNC-A9; 250 AP] | 35 | 0 | 1,600 | S1 |
 
 ### Mystic Knight — Viera — Saber
 
@@ -155,18 +155,18 @@ Shops: Cyril, Muscadet. Additional towns retain normal access requirements.
 
 | Weapon | Every lesson and AP | WAtk | MPow + | Base gil | Shipment |
 |---|---|---:|---:|---:|---|
-| Ember Saber | Fire Spellblade [MYK-A1; 100 AP] | 18 | 0 | 300 | S0 |
-| Rime Saber | Blizzard Spellblade [MYK-A2; 100 AP]; Spellweave [MYK-S1; 300 AP] | 22 | 0 | 600 | S0 |
-| Spark Saber | Thunder Spellblade [MYK-A3; 100 AP]; Spellblade Combo [MYK-C1; 100 AP] | 26 | 0 | 1,000 | S1 |
-| Venom Saber | Poison Spellblade [MYK-A4; 150 AP]; Magic Shell [MYK-R1; 300 AP] | 30 | 0 | 1,600 | S1 |
+| Ember Saber | Fire Spellblade [MYK-A1; 100 AP] | 23 | 0 | 300 | S0 |
+| Rime Saber | Blizzard Spellblade [MYK-A2; 100 AP]; Spellweave [MYK-S1; 300 AP] | 24 | 0 | 600 | S0 |
+| Spark Saber | Thunder Spellblade [MYK-A3; 100 AP]; Spellblade Combo [MYK-C1; 100 AP] | 28 | 0 | 1,000 | S1 |
+| Venom Saber | Poison Spellblade [MYK-A4; 150 AP]; Magic Shell [MYK-R1; 300 AP] | 31 | 0 | 1,600 | S1 |
 | Dream Saber | Sleep Spellblade [MYK-A5; 250 AP]; Arcane Ward [MYK-S2; 350 AP] | 34 | 0 | 2,400 | S2 |
 | Hush Saber | Silence Spellblade [MYK-A6; 200 AP]; Spell Parry [MYK-R2; 350 AP] | 38 | 0 | 3,400 | S2 |
 | Siphon Saber | Drain Spellblade [MYK-A7; 300 AP] | 42 | 0 | 4,800 | S3 |
 | Flare Saber | Flare Spellblade [MYK-A8; 400 AP] | 46 | 0 | 6,500 | S3 |
-| Hourglass Saber | Slow Spellblade [MYK-A9; 250 AP] | 30 | 0 | 1,600 | S1 |
+| Hourglass Saber | Slow Spellblade [MYK-A9; 250 AP] | 31 | 0 | 1,600 | S1 |
 | Aether Saber | Osmose Spellblade [MYK-A10; 300 AP] | 34 | 0 | 2,400 | S2 |
 | Dawn Saber | Holy Spellblade [MYK-A11; 250 AP] | 38 | 0 | 3,400 | S2 |
-| Severance Saber | Spellbreak [MYK-A12; 250 AP] | 26 | 0 | 1,000 | S1 |
+| Severance Saber | Spellbreak [MYK-A12; 250 AP] | 28 | 0 | 1,000 | S1 |
 | Prism Saber | Arcane Release [MYK-A13; 350 AP] | 34 | 0 | 2,400 | S2 |
 | Stone Saber | Break Blade [MYK-A14; 400 AP] | 46 | 0 | 6,500 | S3 |
 
@@ -176,10 +176,10 @@ Shops: Cyril, Sprohm. Additional towns retain normal access requirements.
 
 | Weapon | Every lesson and AP | WAtk | MPow + | Base gil | Shipment |
 |---|---|---:|---:|---:|---|
-| Recruit Axe | Chop [SLD-AX-A1; 100 AP] | 20 | 0 | 300 | S0 |
-| Throwing Axe | Tomahawk [SLD-AX-A2; 150 AP]; Recuperation [SLD-AX-S1; 150 AP] | 24 | 0 | 600 | S0 |
-| Field Axe | Overpower [SLD-AX-A3; 200 AP]; Haft Guard [SLD-AX-R1; 150 AP] | 28 | 0 | 1,000 | S1 |
-| Breaching Axe | Shatter Guard [SLD-AX-A4; 300 AP] | 32 | 0 | 1,600 | S1 |
+| Recruit Axe | Chop [SLD-AX-A1; 100 AP] | 29 | 0 | 300 | S0 |
+| Throwing Axe | Tomahawk [SLD-AX-A2; 150 AP]; Recuperation [SLD-AX-S1; 150 AP] | 31 | 0 | 600 | S0 |
+| Field Axe | Overpower [SLD-AX-A3; 200 AP]; Haft Guard [SLD-AX-R1; 150 AP] | 33 | 0 | 1,000 | S1 |
+| Breaching Axe | Shatter Guard [SLD-AX-A4; 300 AP] | 34 | 0 | 1,600 | S1 |
 
 ### Gladiator — Bangaa — Axe
 
@@ -187,8 +187,8 @@ Shops: Cyril, Sprohm. Additional towns retain normal access requirements.
 
 | Weapon | Every lesson and AP | WAtk | MPow + | Base gil | Shipment |
 |---|---|---:|---:|---:|---|
-| Bearded Axe | Armor Splitter [GLD-AX-A1; 200 AP] | 34 | 0 | 2,400 | S2 |
-| Arena Axe | Reaping Arc [GLD-AX-A2; 250 AP]; Follow Through [GLD-AX-S1; 350 AP] | 38 | 0 | 3,400 | S2 |
+| Bearded Axe | Armor Splitter [GLD-AX-A1; 200 AP] | 37 | 0 | 2,400 | S2 |
+| Arena Axe | Reaping Arc [GLD-AX-A2; 250 AP]; Follow Through [GLD-AX-S1; 350 AP] | 39 | 0 | 3,400 | S2 |
 | Headsman's Axe | Executioner [GLD-AX-A3; 300 AP]; Axe Reprisal [GLD-AX-R1; 350 AP] | 42 | 0 | 4,800 | S3 |
 | Titan Axe | Fell Cleave [GLD-AX-A4; 400 AP] | 46 | 0 | 6,500 | S3 |
 

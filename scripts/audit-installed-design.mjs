@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {root,cleanROM,sha1,nameAt} from '../src/rom-data.mjs';
 import {equipmentDisplayName} from '../src/equipment-display-names.mjs';
+import {abilityDisplayNames} from '../src/ability-display-names.mjs';
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p)));
 const design=read('notes/job-theme-audit.json'),equipment=read('notes/equipment-acquisition.json');
 const registry=read('build/expansion/registry.json');
@@ -26,7 +27,7 @@ check(design.abilities.length===129&&registry.lessons.length===129,'129 lessons'
 check(equipment.items.length===85&&registry.items.length===85,'85 items');
 // The shared native-text reader leaves expansion hyphens as explicit tokens.
 const decodedName=(image,table,id)=>nameAt(image,table,id).replaceAll('[81][B]','-');
-const aliases={'GEO-R2':'Nature Wrath','DNC-R2':'Counter Rhy.'};
+const aliases=Object.fromEntries(abilityDisplayNames);
 for(const approved of design.abilities){
  const lesson=registry.lessons.find(x=>x.id===approved.id);check(!!lesson,approved.id+' allocated');if(!lesson)continue;
  for(const field of ['name','effect','ap','type'])check(lesson[field]===approved[field],approved.id+' approved '+field);

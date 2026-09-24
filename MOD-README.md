@@ -44,11 +44,11 @@ The numbers in this table count **mastered action abilities on that character**.
 
 - **Samurai:** Centered strengthens follow-up Iaido techniques.
 - **Dark Knight:** damaging and draining sword arts require a suitable sword.
-  Dark Mind, The Blackest Night and self-mode Last Resort are weapon-free,
+  Dark Mind, Black Night and self-mode Last Resort are weapon-free,
   allowing those defensive options in other weapon builds.
 - **Chemist:** Mix combines inventory ingredients into medicines.
 - **Geomancer:** nearby terrain strengthens nature arts. Each caster can maintain
-  one Rime Field or Nature's Refuge at a time.
+  one Rime Field or Nature Haven at a time.
 - **Dancer:** Passing Step lets you move after attacking, using up to two points
   of your remaining movement.
 - **Mystic Knight:** Spellweave rewards alternating physical and magical actions.
@@ -61,8 +61,8 @@ Each of Soldier and Gladiator receives four actions, one support and one reactio
 
 - **Soldier:** Chop, Tomahawk, Overpower and Shatter Guard; Recuperation and Haft
   Guard add healing support and axe defense.
-- **Gladiator:** Armor Splitter, Reaping Arc, Executioner and Fell Cleave; Follow
-  Through rewards positioning, while Axe Reprisal offers an axe counter.
+- **Gladiator:** Armor Splitter, Reaping Arc, Executioner and Fell Cleave;
+  Followthrough rewards positioning, while Axe Reprisal offers an axe counter.
 
 ## Finding the new teaching equipment
 

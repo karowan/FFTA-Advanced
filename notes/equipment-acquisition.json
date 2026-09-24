@@ -118,7 +118,7 @@
       "teachingRaces": [
         "Human"
       ],
-      "weaponAttack": 18,
+      "weaponAttack": 29,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -141,7 +141,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 18
     },
     {
       "id": "EQ-SAM-W2",
@@ -152,7 +153,7 @@
       "teachingRaces": [
         "Human"
       ],
-      "weaponAttack": 22,
+      "weaponAttack": 30,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -181,7 +182,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 22
     },
     {
       "id": "EQ-SAM-W3",
@@ -192,7 +194,7 @@
       "teachingRaces": [
         "Human"
       ],
-      "weaponAttack": 26,
+      "weaponAttack": 34,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -221,7 +223,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 26
     },
     {
       "id": "EQ-SAM-W4",
@@ -232,7 +235,7 @@
       "teachingRaces": [
         "Human"
       ],
-      "weaponAttack": 30,
+      "weaponAttack": 37,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -261,7 +264,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 30
     },
     {
       "id": "EQ-SAM-W5",
@@ -272,7 +276,7 @@
       "teachingRaces": [
         "Human"
       ],
-      "weaponAttack": 34,
+      "weaponAttack": 39,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -301,7 +305,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 34
     },
     {
       "id": "EQ-SAM-W6",
@@ -312,7 +317,7 @@
       "teachingRaces": [
         "Human"
       ],
-      "weaponAttack": 38,
+      "weaponAttack": 40,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -341,7 +346,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 38
     },
     {
       "id": "EQ-SAM-W7",
@@ -421,7 +427,7 @@
         "Human",
         "Bangaa"
       ],
-      "weaponAttack": 18,
+      "weaponAttack": 25,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -446,7 +452,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 18
     },
     {
       "id": "EQ-DRK-W2",
@@ -458,7 +465,7 @@
         "Human",
         "Bangaa"
       ],
-      "weaponAttack": 22,
+      "weaponAttack": 28,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -489,7 +496,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 22
     },
     {
       "id": "EQ-DRK-W3",
@@ -501,7 +509,7 @@
         "Human",
         "Bangaa"
       ],
-      "weaponAttack": 26,
+      "weaponAttack": 33,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -532,7 +540,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 26
     },
     {
       "id": "EQ-DRK-W4",
@@ -544,7 +553,7 @@
         "Human",
         "Bangaa"
       ],
-      "weaponAttack": 30,
+      "weaponAttack": 35,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -575,7 +584,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 30
     },
     {
       "id": "EQ-DRK-W5",
@@ -587,7 +597,7 @@
         "Human",
         "Bangaa"
       ],
-      "weaponAttack": 34,
+      "weaponAttack": 37,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -618,7 +628,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 34
     },
     {
       "id": "EQ-DRK-W6",
@@ -630,7 +641,7 @@
         "Human",
         "Bangaa"
       ],
-      "weaponAttack": 38,
+      "weaponAttack": 39,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -661,7 +672,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 38
     },
     {
       "id": "EQ-DRK-W7",
@@ -746,7 +758,7 @@
       "teachingRaces": [
         "Bangaa"
       ],
-      "weaponAttack": 18,
+      "weaponAttack": 29,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -771,7 +783,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 18
     },
     {
       "id": "EQ-VIK-W2",
@@ -782,7 +795,7 @@
       "teachingRaces": [
         "Bangaa"
       ],
-      "weaponAttack": 22,
+      "weaponAttack": 31,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -813,7 +826,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 22
     },
     {
       "id": "EQ-VIK-W3",
@@ -824,7 +838,7 @@
       "teachingRaces": [
         "Bangaa"
       ],
-      "weaponAttack": 26,
+      "weaponAttack": 33,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -855,7 +869,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 26
     },
     {
       "id": "EQ-VIK-W4",
@@ -866,7 +881,7 @@
       "teachingRaces": [
         "Bangaa"
       ],
-      "weaponAttack": 30,
+      "weaponAttack": 34,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -897,7 +912,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 30
     },
     {
       "id": "EQ-VIK-W5",
@@ -908,7 +924,7 @@
       "teachingRaces": [
         "Bangaa"
       ],
-      "weaponAttack": 34,
+      "weaponAttack": 37,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -939,7 +955,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 34
     },
     {
       "id": "EQ-VIK-W6",
@@ -950,7 +967,7 @@
       "teachingRaces": [
         "Bangaa"
       ],
-      "weaponAttack": 38,
+      "weaponAttack": 39,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -981,7 +998,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 38
     },
     {
       "id": "EQ-VIK-W7",
@@ -1064,7 +1082,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 18,
+      "weaponAttack": 23,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1089,7 +1107,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 18
     },
     {
       "id": "EQ-MYK-W2",
@@ -1100,7 +1119,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 22,
+      "weaponAttack": 24,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1131,7 +1150,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 22
     },
     {
       "id": "EQ-MYK-W3",
@@ -1142,7 +1162,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 26,
+      "weaponAttack": 28,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1173,7 +1193,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 26
     },
     {
       "id": "EQ-MYK-W4",
@@ -1184,7 +1205,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 30,
+      "weaponAttack": 31,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1215,7 +1236,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 30
     },
     {
       "id": "EQ-MYK-W5",
@@ -1383,7 +1405,7 @@
         "Nu Mou",
         "Moogle"
       ],
-      "weaponAttack": 14,
+      "weaponAttack": 22,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1409,7 +1431,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 14
     },
     {
       "id": "EQ-CHM-W2",
@@ -1421,7 +1444,7 @@
         "Nu Mou",
         "Moogle"
       ],
-      "weaponAttack": 17,
+      "weaponAttack": 27,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1453,7 +1476,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 17
     },
     {
       "id": "EQ-CHM-W3",
@@ -1465,7 +1489,7 @@
         "Nu Mou",
         "Moogle"
       ],
-      "weaponAttack": 20,
+      "weaponAttack": 32,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1497,7 +1521,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 20
     },
     {
       "id": "EQ-CHM-W4",
@@ -1509,7 +1534,7 @@
         "Nu Mou",
         "Moogle"
       ],
-      "weaponAttack": 23,
+      "weaponAttack": 33,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1541,7 +1566,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 23
     },
     {
       "id": "EQ-CHM-W5",
@@ -1553,7 +1579,7 @@
         "Nu Mou",
         "Moogle"
       ],
-      "weaponAttack": 26,
+      "weaponAttack": 35,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1585,7 +1611,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 26
     },
     {
       "id": "EQ-CHM-W6",
@@ -1597,7 +1624,7 @@
         "Nu Mou",
         "Moogle"
       ],
-      "weaponAttack": 29,
+      "weaponAttack": 37,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1629,7 +1656,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 29
     },
     {
       "id": "EQ-CHM-W7",
@@ -1641,7 +1669,7 @@
         "Nu Mou",
         "Moogle"
       ],
-      "weaponAttack": 32,
+      "weaponAttack": 39,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1667,7 +1695,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 32
     },
     {
       "id": "EQ-CHM-W8",
@@ -1679,7 +1708,7 @@
         "Nu Mou",
         "Moogle"
       ],
-      "weaponAttack": 35,
+      "weaponAttack": 41,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1705,7 +1734,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 35
     },
     {
       "id": "EQ-DNC-W1",
@@ -1716,7 +1746,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 14,
+      "weaponAttack": 25,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1741,7 +1771,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 14
     },
     {
       "id": "EQ-DNC-W2",
@@ -1752,7 +1783,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 17,
+      "weaponAttack": 26,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1783,7 +1814,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 17
     },
     {
       "id": "EQ-DNC-W3",
@@ -1794,7 +1826,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 20,
+      "weaponAttack": 31,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1825,7 +1857,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 20
     },
     {
       "id": "EQ-DNC-W4",
@@ -1836,7 +1869,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 23,
+      "weaponAttack": 35,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1867,7 +1900,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 23
     },
     {
       "id": "EQ-DNC-W5",
@@ -1878,7 +1912,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 26,
+      "weaponAttack": 36,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1909,7 +1943,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 26
     },
     {
       "id": "EQ-DNC-W6",
@@ -1920,7 +1955,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 29,
+      "weaponAttack": 37,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1951,7 +1986,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 29
     },
     {
       "id": "EQ-DNC-W7",
@@ -1962,7 +1998,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 32,
+      "weaponAttack": 39,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -1987,7 +2023,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 32
     },
     {
       "id": "EQ-DNC-W8",
@@ -1998,7 +2035,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 35,
+      "weaponAttack": 41,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2023,7 +2060,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 35
     },
     {
       "id": "EQ-BRD-W1",
@@ -2034,7 +2072,7 @@
       "teachingRaces": [
         "Moogle"
       ],
-      "weaponAttack": 12,
+      "weaponAttack": 22,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2059,7 +2097,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 12
     },
     {
       "id": "EQ-BRD-W2",
@@ -2070,7 +2109,7 @@
       "teachingRaces": [
         "Moogle"
       ],
-      "weaponAttack": 15,
+      "weaponAttack": 24,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2101,7 +2140,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 15
     },
     {
       "id": "EQ-BRD-W3",
@@ -2112,7 +2152,7 @@
       "teachingRaces": [
         "Moogle"
       ],
-      "weaponAttack": 18,
+      "weaponAttack": 30,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2143,7 +2183,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 18
     },
     {
       "id": "EQ-BRD-W4",
@@ -2154,7 +2195,7 @@
       "teachingRaces": [
         "Moogle"
       ],
-      "weaponAttack": 21,
+      "weaponAttack": 35,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2185,7 +2226,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 21
     },
     {
       "id": "EQ-BRD-W5",
@@ -2196,7 +2238,7 @@
       "teachingRaces": [
         "Moogle"
       ],
-      "weaponAttack": 24,
+      "weaponAttack": 36,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2227,7 +2269,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 24
     },
     {
       "id": "EQ-BRD-W6",
@@ -2238,7 +2281,7 @@
       "teachingRaces": [
         "Moogle"
       ],
-      "weaponAttack": 27,
+      "weaponAttack": 37,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2269,7 +2312,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 27
     },
     {
       "id": "EQ-BRD-W7",
@@ -2280,7 +2324,7 @@
       "teachingRaces": [
         "Moogle"
       ],
-      "weaponAttack": 30,
+      "weaponAttack": 39,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2305,7 +2349,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 30
     },
     {
       "id": "EQ-BRD-W8",
@@ -2316,7 +2361,7 @@
       "teachingRaces": [
         "Moogle"
       ],
-      "weaponAttack": 33,
+      "weaponAttack": 41,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2341,7 +2386,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 33
     },
     {
       "id": "EQ-GEO-W1",
@@ -2352,7 +2398,7 @@
       "teachingRaces": [
         "Nu Mou"
       ],
-      "weaponAttack": 10,
+      "weaponAttack": 18,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2377,7 +2423,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W1",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 10
     },
     {
       "id": "EQ-GEO-W2",
@@ -2388,7 +2435,7 @@
       "teachingRaces": [
         "Nu Mou"
       ],
-      "weaponAttack": 12,
+      "weaponAttack": 18,
       "magicPowerBonus": 2,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2419,7 +2466,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W2",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 12
     },
     {
       "id": "EQ-GEO-W3",
@@ -2430,7 +2478,7 @@
       "teachingRaces": [
         "Nu Mou"
       ],
-      "weaponAttack": 14,
+      "weaponAttack": 21,
       "magicPowerBonus": 4,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2461,7 +2509,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W3",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 14
     },
     {
       "id": "EQ-GEO-W4",
@@ -2472,7 +2521,7 @@
       "teachingRaces": [
         "Nu Mou"
       ],
-      "weaponAttack": 16,
+      "weaponAttack": 23,
       "magicPowerBonus": 6,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2503,7 +2552,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W4",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 16
     },
     {
       "id": "EQ-GEO-W5",
@@ -2514,7 +2564,7 @@
       "teachingRaces": [
         "Nu Mou"
       ],
-      "weaponAttack": 18,
+      "weaponAttack": 24,
       "magicPowerBonus": 8,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2545,7 +2595,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W5",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 18
     },
     {
       "id": "EQ-GEO-W6",
@@ -2556,7 +2607,7 @@
       "teachingRaces": [
         "Nu Mou"
       ],
-      "weaponAttack": 20,
+      "weaponAttack": 25,
       "magicPowerBonus": 10,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2587,7 +2638,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W6",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 20
     },
     {
       "id": "EQ-GEO-W7",
@@ -2598,7 +2650,7 @@
       "teachingRaces": [
         "Nu Mou"
       ],
-      "weaponAttack": 22,
+      "weaponAttack": 27,
       "magicPowerBonus": 12,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2623,7 +2675,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W7",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 22
     },
     {
       "id": "EQ-GEO-W8",
@@ -2634,7 +2687,7 @@
       "teachingRaces": [
         "Nu Mou"
       ],
-      "weaponAttack": 24,
+      "weaponAttack": 29,
       "magicPowerBonus": 14,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2659,7 +2712,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md W8",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 24
     },
     {
       "id": "EQ-MYK-W9",
@@ -2670,7 +2724,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 30,
+      "weaponAttack": 31,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2695,7 +2749,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 30
     },
     {
       "id": "EQ-MYK-W10",
@@ -2778,7 +2833,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 26,
+      "weaponAttack": 28,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2803,7 +2858,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 26
     },
     {
       "id": "EQ-MYK-W13",
@@ -2921,7 +2977,7 @@
         "Human",
         "Bangaa"
       ],
-      "weaponAttack": 34,
+      "weaponAttack": 37,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2946,7 +3002,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 34
     },
     {
       "id": "EQ-VIK-W9",
@@ -2957,7 +3014,7 @@
       "teachingRaces": [
         "Bangaa"
       ],
-      "weaponAttack": 26,
+      "weaponAttack": 33,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -2982,7 +3039,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 26
     },
     {
       "id": "EQ-GEO-W9",
@@ -2993,7 +3051,7 @@
       "teachingRaces": [
         "Nu Mou"
       ],
-      "weaponAttack": 22,
+      "weaponAttack": 25,
       "magicPowerBonus": 10,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -3018,7 +3076,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 22
     },
     {
       "id": "EQ-CHM-W9",
@@ -3030,7 +3089,7 @@
         "Nu Mou",
         "Moogle"
       ],
-      "weaponAttack": 32,
+      "weaponAttack": 39,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -3056,7 +3115,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 32
     },
     {
       "id": "EQ-CHM-W10",
@@ -3068,7 +3128,7 @@
         "Nu Mou",
         "Moogle"
       ],
-      "weaponAttack": 23,
+      "weaponAttack": 33,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -3094,7 +3154,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 23
     },
     {
       "id": "EQ-DNC-W9",
@@ -3105,7 +3166,7 @@
       "teachingRaces": [
         "Viera"
       ],
-      "weaponAttack": 23,
+      "weaponAttack": 35,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -3130,7 +3191,8 @@
       "sourceTable": "JOB-CLASS-SPECIFICATION.md additional teaching weapons",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 23
     },
     {
       "id": "EQ-SLD-AX-W1",
@@ -3141,7 +3203,7 @@
       "teachingRaces": [
         "Human"
       ],
-      "weaponAttack": 20,
+      "weaponAttack": 29,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -3166,7 +3228,8 @@
       "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 20
     },
     {
       "id": "EQ-SLD-AX-W2",
@@ -3177,7 +3240,7 @@
       "teachingRaces": [
         "Human"
       ],
-      "weaponAttack": 24,
+      "weaponAttack": 31,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -3208,7 +3271,8 @@
       "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 24
     },
     {
       "id": "EQ-SLD-AX-W3",
@@ -3219,7 +3283,7 @@
       "teachingRaces": [
         "Human"
       ],
-      "weaponAttack": 28,
+      "weaponAttack": 33,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -3250,7 +3314,8 @@
       "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 28
     },
     {
       "id": "EQ-SLD-AX-W4",
@@ -3261,7 +3326,7 @@
       "teachingRaces": [
         "Human"
       ],
-      "weaponAttack": 32,
+      "weaponAttack": 34,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -3286,7 +3351,8 @@
       "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 32
     },
     {
       "id": "EQ-GLD-AX-W1",
@@ -3297,7 +3363,7 @@
       "teachingRaces": [
         "Bangaa"
       ],
-      "weaponAttack": 34,
+      "weaponAttack": 37,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -3322,7 +3388,8 @@
       "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 34
     },
     {
       "id": "EQ-GLD-AX-W2",
@@ -3333,7 +3400,7 @@
       "teachingRaces": [
         "Bangaa"
       ],
-      "weaponAttack": 38,
+      "weaponAttack": 39,
       "magicPowerBonus": 0,
       "otherStatBonuses": 0,
       "innateElement": null,
@@ -3364,7 +3431,8 @@
       "sourceTable": "AXE-SKILL-EXPANSION.md teaching axes",
       "romItemId": null,
       "romShopRecord": null,
-      "missionFlagAddress": null
+      "missionFlagAddress": null,
+      "previousWeaponAttack": 38
     },
     {
       "id": "EQ-GLD-AX-W3",
@@ -3575,5 +3643,83 @@
     "GLD-AX-A3": "EQ-GLD-AX-W3",
     "GLD-AX-R1": "EQ-GLD-AX-W3",
     "GLD-AX-A4": "EQ-GLD-AX-W4"
+  },
+  "weaponAttackRevision": {
+    "date": "2026-09-24",
+    "script": "notes/revise-weapon-attack-2026-09-24.mjs",
+    "anchors": {
+      "Sword": {
+        "opening": 25,
+        "shipments": [
+          30,
+          35,
+          39,
+          43
+        ]
+      },
+      "Saber": {
+        "opening": 23,
+        "shipments": [
+          25,
+          31,
+          36,
+          40
+        ]
+      },
+      "Knife": {
+        "opening": 22,
+        "shipments": [
+          31,
+          33,
+          37,
+          41
+        ]
+      },
+      "Rapier": {
+        "opening": 25,
+        "shipments": [
+          27,
+          35,
+          37,
+          41
+        ]
+      },
+      "Katana": {
+        "opening": 29,
+        "shipments": [
+          31,
+          37,
+          40,
+          44
+        ]
+      },
+      "Rod": {
+        "opening": 18,
+        "shipments": [
+          18,
+          23,
+          25,
+          29
+        ]
+      },
+      "Instrument": {
+        "opening": 22,
+        "shipments": [
+          25,
+          35,
+          37,
+          41
+        ]
+      },
+      "Axe": {
+        "opening": 29,
+        "shipments": [
+          32,
+          34,
+          39,
+          43
+        ]
+      }
+    }
   }
 }
