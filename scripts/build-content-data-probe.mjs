@@ -3,6 +3,7 @@ import path from 'node:path';
 import {root,cleanROM,sha1} from '../src/rom-data.mjs';
 import {ROMBuilder,encodeText,encodeHelp} from '../src/rom-builder.mjs';
 import {equipmentDisplayName} from '../src/equipment-display-names.mjs';
+import {abilityDisplayName} from '../src/ability-display-names.mjs';
 
 const out=path.join(root,'build/expansion/probes');
 const prior=JSON.parse(fs.readFileSync(path.join(out,'job-data.json')));
@@ -92,7 +93,7 @@ for(const race of registry.races) {
   racePointers.writeUInt32LE(address,race.id*4);races.push({...race,address});
 }
 for(const lesson of registry.lessons)
-  others.writeUInt32LE(builder.allocate(lesson.id+' name',encodeText(lesson.name)),lesson.nameId*4);
+  others.writeUInt32LE(builder.allocate(lesson.id+' name',encodeText(abilityDisplayName(lesson))),lesson.nameId*4);
 const banks=Buffer.alloc(11*8);
 clean.copy(banks,0,0x36da1c,0x36da1c+10*8);
 banks.writeUInt16LE(0x13,80);banks.writeUInt16LE(0x1de,82);banks.writeUInt16LE(helpLast,84);

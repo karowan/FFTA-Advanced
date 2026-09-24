@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "description": "Equipment help fixes plus revision: teaching-row code patch, then data-only compact skill names (eleven-tile native limit) and revised Weapon Attack. Native name widths and item records, the teaching-row native builder and real-core shop R Info, Item List and Equip Items on the final ROM. No battle code, save or AP changes.",
+  "timeoutSeconds": 900,
+  "steps": [
+    {"id":"build-teaching-rows","runtime":"python","kind":"static","suites":["equipment-revision"],"args":["scripts/build-teaching-rows.py"]},
+    {"id":"build-equipment-revision","runtime":"python","kind":"static","suites":["equipment-revision"],"requires":["build-teaching-rows"],"args":["scripts/build-equipment-revision.py"]},
+    {"id":"test-equipment-revision","runtime":"python","kind":"runtime","suites":["equipment-revision"],"requires":["build-equipment-revision"],"args":["scripts/test-equipment-revision.py"]},
+    {"id":"test-revision-teaching-rows","runtime":"python","kind":"runtime","suites":["equipment-revision"],"requires":["test-equipment-revision"],"args":["scripts/test-teaching-rows.py","--current","build/expansion/equipment-revision/current.json"]},
+    {"id":"test-revision-teaching-rows-ui","runtime":"python","kind":"runtime","suites":["equipment-revision"],"requires":["test-revision-teaching-rows"],"args":["scripts/test-teaching-rows-ui.py","--current","build/expansion/equipment-revision/current.json"]}
+  ]
+}
