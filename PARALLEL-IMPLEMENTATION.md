@@ -81,11 +81,17 @@ Use --history when reviewing existing Git history. The staged asset guard is
 scripts/check-git-content.py; run it before every commit. No ROMs, saves, dumps,
 local tools or generated builds enter Git. Never force-add an ignored file.
 
-Prepare public source in a separate fresh checkout, preserving the private
-original history. Retain required historical build source as authenticated text
-inputs. Personal paths in public provenance are redacted and explicitly labeled;
-original authenticated receipts stay local. Do not claim a fresh source checkout
-includes original-game references, accepted parent ROMs or the historical evidence archive.
+Use the main project folder as the single active checkout, tracking
+`origin/main` at `https://github.com/karowan/FFTA-Advanced`. The original private
+history and its working files are archived under ignored `.local/`; never add
+that archive as a public remote or merge its history into this repository.
+Temporary exports are snapshots, not development checkouts. Retain required
+historical build source as authenticated text inputs. Personal paths in public
+documents are redacted and explicitly labeled; executable source with personal
+paths must be fixed manually, never automatically rewritten by the exporter.
+Original authenticated receipts stay in the local archive. A fresh source
+checkout still needs original-game references, accepted parent ROMs and private
+build inputs for the current art rebuild.
 [Cleanup checkpoint](notes/public-source-cleanup-2026-09-21.md).
 
 ## Launching and saves

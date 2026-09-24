@@ -12,8 +12,10 @@ BPS-compatible patcher. No earlier mod installation is needed.
 BPS is supported by [Rom Patcher JS](https://github.com/marcrobledo/RomPatcher.js)
 and [Floating IPS](https://github.com/Sir-Walrus/Flips). The required original
 and patched result checksums are included so a wrong region/revision or already
-modified ROM can be rejected. This is a distribution format, not a publication
-action; nothing has been uploaded.
+modified ROM can be rejected. The public release is available from
+[GitHub Releases](https://github.com/karowan/FFTA-Advanced/releases/latest).
+Local packaging updates only the local channel; public publication uses the
+[release workflow](release/README.md).
 
 ## Build output
 

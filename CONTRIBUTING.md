@@ -8,6 +8,12 @@ and integration are separate steps.
 
 ## Local setup
 
+Work directly in the GitHub-connected project checkout. Confirm that `origin`
+points to `https://github.com/karowan/FFTA-Advanced`; do not use a nested export
+or the archived private development repository for new work. The original
+maintainer workspace has been consolidated at its existing project path, with
+private inputs and save paths retained. See [the workspace repair](notes/workspace-repair-2026-09-23.md).
+
 The development tools currently target Windows and PowerShell. Install Git,
 Node.js and Python 3.11 or later. Entry points accept `-Python` or `FFTA_PYTHON`,
 then try Python on PATH. An optional local Codex runtime fallback preserves the

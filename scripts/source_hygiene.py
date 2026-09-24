@@ -10,7 +10,8 @@ SECRET_PATTERNS = {
     'google-api-key': re.compile(rb'\bAIza[A-Za-z0-9_-]{35}\b'),
     'slack-token': re.compile(rb'\bxox[baprs]-[A-Za-z0-9-]{20,}\b'),
 }
-PERSONAL_PATH = re.compile(rb'(?:[A-Za-z]:[/\\]+Users[/\\]+[^/\\\s\"\'<>]+|<LOCAL_USER>/\s\"\'<>]+|<LOCAL_USER>/\s\"\'<>]+)')
+# Group the POSIX prefixes so the detector does not match its own source text.
+PERSONAL_PATH = re.compile(rb'(?:[A-Za-z]:[/\\]+Users[/\\]+[^/\\\s\"\'<>]+|/(?:Users|home)/[^/\s\"\'<>]+)')
 PRIVATE_NAMES = {'.env', '.env.local', '.env.production', 'credentials.json',
                  'id_rsa', 'id_ed25519'}
 

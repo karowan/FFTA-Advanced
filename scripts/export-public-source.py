@@ -34,6 +34,20 @@ def redact(raw):
     return text.encode('utf-8')
 
 
+def redact_source(name, raw):
+    """Redact documents only; changing executable source requires review."""
+    if not personal_path_lines(raw):
+        return raw
+    if Path(name).suffix not in {'.md', '.txt', '.json'} or name.startswith('bootstrap/'):
+        raise ValueError('Personal path in source; fix manually before export: ' + name)
+    changed = redact(raw)
+    if personal_path_lines(changed):
+        raise ValueError('Unredacted personal path: ' + name)
+    if Path(name).suffix == '.json':
+        json.loads(changed)
+    return changed
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', required=True, help='New directory inside ignored .local/')
@@ -58,12 +72,8 @@ def main():
         issues = audit.scan_blob(name, raw, art)
         if issues:
             raise ValueError('Source failed publication audit: ' + name)
-        if personal_path_lines(raw):
-            changed = redact(raw)
-            if personal_path_lines(changed):
-                raise ValueError('Unredacted personal path: ' + name)
-            if path.suffix == '.json':
-                json.loads(changed)
+        changed = redact_source(name, raw)
+        if changed != raw:
             redactions.append(dict(path=name, originalSha256=sha(raw), publicSha256=sha(changed)))
             raw = changed
         # Remove surplus empty lines at EOF from ordinary source/documents only.

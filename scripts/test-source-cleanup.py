@@ -40,6 +40,39 @@ class CleanupTests(unittest.TestCase):
         self.assertEqual(result, [{'rule': 'github-token', 'line': 2}])
         self.assertNotIn(token.decode(), str(result))
 
+    def test_personal_paths_on_all_supported_platforms(self):
+        paths = ['C:/' + 'Users/example/art.png', 'C:' + '\\Users\\example\\art.png',
+                 '/' + 'Users/example/art.png', '/' + 'home/example/art.png']
+        for path in paths:
+            with self.subTest(path=path):
+                self.assertEqual(personal_path_lines(('first\n' + path).encode()), [2])
+                raw = json.dumps({'path': path, 'prompt': 'Keep colors.', 'sha256': 'a' * 64}).encode()
+                cleaned = export.redact_source('receipt.json', raw)
+                self.assertFalse(personal_path_lines(cleaned))
+                parsed = json.loads(cleaned)
+                self.assertEqual(parsed['prompt'], 'Keep colors.')
+                self.assertEqual(parsed['sha256'], 'a' * 64)
+                self.assertTrue(parsed['path'].startswith('<LOCAL_USER>'))
+
+    def test_export_refuses_to_rewrite_executable_source(self):
+        raw = ('path = ' + repr('/' + 'home/example/art.png') + '\n').encode()
+        for name in ('script.py', 'script.mjs', 'script.ps1', 'source.c', 'bootstrap/revision/data.json'):
+            with self.subTest(name=name), self.assertRaisesRegex(ValueError, 'fix manually'):
+                export.redact_source(name, raw)
+
+    def test_export_preserves_its_own_privacy_tools(self):
+        for name in ('scripts/source_hygiene.py', 'scripts/export-public-source.py'):
+            raw = (ROOT / name).read_bytes()
+            with self.subTest(name=name):
+                self.assertFalse(personal_path_lines(raw))
+                self.assertEqual(export.redact_source(name, raw), raw)
+        # Execute the exported detector to catch syntactically valid corruption.
+        namespace = {}
+        exec(compile(export.redact_source('scripts/source_hygiene.py',
+                     (ROOT / 'scripts/source_hygiene.py').read_bytes()), 'exported-checker', 'exec'), namespace)
+        for prefix in ('/' + 'Users/', '/' + 'home/', 'C:' + '/Users/'):
+            self.assertEqual(namespace['personal_path_lines']((prefix + 'example/a.png').encode()), [1])
+
     def test_historical_paths_reject_traversal(self):
         for name in ('../a.py', '/absolute.py', 'C:/file.py', 'a\\b.py'):
             with self.subTest(name=name), self.assertRaises(ValueError):
