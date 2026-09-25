@@ -28,7 +28,8 @@ unsigned ffta_dancer_preview_choice(const uint8_t *actor,unsigned action,unsigne
            *(const uint32_t *)(m+20)==action && ffta_medicine_choice_valid(action,half(m+16)))return half(m+16);
         return 0;
     }
-    if((uint16_t)action!=FFTA_DNC_A6 && action!=FFTA_GEO_A3 && action!=FFTA_GEO_A8 && action!=FFTA_MYK_A12)return primary;
+    /* Spellbreak has no menu choice; its operand is the ordinary weapon. */
+    if((uint16_t)action!=FFTA_DNC_A6 && action!=FFTA_GEO_A3 && action!=FFTA_GEO_A8)return primary;
     unsigned ai=ffta_ai_preview_choice(actor,action);if(ai)return ai;
     const uint8_t *manager=*(const uint8_t *const *)0x0200f438u;
     /* B4CF0 validates a native target using the weapon operand. Only the
@@ -36,9 +37,8 @@ unsigned ffta_dancer_preview_choice(const uint8_t *actor,unsigned action,unsigne
      * Copied/AI queries must obtain their own explicit choice transport. */
     if(!manager || manager[4]<6 || manager[4]>11 ||
        *(const uint8_t *const *)(manager+24)!=actor ||
-       *(const uint32_t *)(manager+20)!=action)return action==FFTA_DNC_A6 || action==FFTA_MYK_A12?0:primary;
+       *(const uint32_t *)(manager+20)!=action)return action==FFTA_DNC_A6?0:primary;
     unsigned choice=half(manager+16);
-    if(action==FFTA_MYK_A12)return choice>=1 && choice<=FFTA_MYK_DISPEL_CHOICES?choice:0;
     return action==FFTA_GEO_A8?(ffta_geo_element(actor,action,choice)?choice:0):choice>=1 && choice<=4?choice:0;
 }
 void ffta_dancer_context(uint8_t *context,unsigned action,unsigned selected,unsigned flags){
@@ -57,12 +57,10 @@ static const uint8_t *actor(void){
  return m?*(const uint8_t *const *)(m+24):0;
 }
 static unsigned options(unsigned action,uint8_t *out){
- if(action==FFTA_MYK_A12){for(unsigned i=0;i<FFTA_MYK_DISPEL_CHOICES;i++)out[i]=(uint8_t)(i+1);return FFTA_MYK_DISPEL_CHOICES;}
  if(action==FFTA_DNC_A6){for(unsigned i=0;i<4;i++)out[i]=(uint8_t)(i+1);return 4;}
  return ffta_geo_choices(actor(),action,out);
 }
 static const uint8_t *label(unsigned action,unsigned choice){
- if(action==FFTA_MYK_A12 && choice>=1 && choice<=FFTA_MYK_DISPEL_CHOICES)return ffta_mystic_choice_labels[choice-1];
  if(action==FFTA_DNC_A6 && choice>=1 && choice<=4)return ffta_dancer_choice_labels[choice-1];
  if(action==FFTA_GEO_A3 && choice>=1 && choice<=4)return ffta_geomancer_choice_labels[choice-1];
  if(action==FFTA_GEO_A8 && choice>=1 && choice<=5)return ffta_geomancer_choice_labels[choice+3];
@@ -95,8 +93,7 @@ static void expand(uint8_t *menu,uint8_t *descriptor){
    if(width>descriptor[7])descriptor[7]=(uint8_t)width;
   }
   if(!copies)copies=1;
-  while(copies--){unsigned dst=--end;rows[dst]=lesson;flags[dst]=(uint8_t)(enabled &&
-   (action!=FFTA_MYK_A12 || ffta_myk_dispel_available(actor(),copies+1)));}
+  while(copies--){unsigned dst=--end;rows[dst]=lesson;flags[dst]=(uint8_t)enabled;}
  }
 }
 void ffta_dancer_menu(uint8_t *menu,uint8_t *descriptor){ffta_chemist_menu(menu,descriptor);expand(menu,descriptor);}

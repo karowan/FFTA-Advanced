@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "description": "Viera Sniper with a greatbow and the Mystic Knight Spellblade command as secondary; all fourteen Spellblade actions learned.",
+  "units": [
+    {"slot": 5, "job": 35, "hp": 300, "mp": 120, "secondary": 125, "equipment": [174, 303],
+     "lessons": ["MYK-A1","MYK-A2","MYK-A3","MYK-A4","MYK-A5","MYK-A6","MYK-A7","MYK-A8","MYK-A9","MYK-A10","MYK-A11","MYK-A12","MYK-A13","MYK-A14"]}
+  ]
+}

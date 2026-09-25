@@ -21,13 +21,13 @@ const help={
  'MYK-A9':'Enchant self or strike a foe. Damaging primary hits try Slow. Icon SW.',
  'MYK-A10':'Enchant self or strike a foe. Capped MP siphon on primary hits. Icon OS.',
  'MYK-A11':'Self: enchant. Foe: strike and enchant. Holy on primary Fight. Icon HO.',
- 'MYK-A12':'Choose one buff to remove on a hit, then strike. Keeps your enchantment.',
+ 'MYK-A12':'On a hit, remove one random buff from the target. Keeps enchantment.',
  'MYK-A13':'Spend Fire, Ice, Thunder, Holy or Flare enchantment for a magical cross.',
- 'MYK-A14':'Attempt Petrify. No HP damage or enchantment change. Rapier or saber.',
+ 'MYK-A14':'Attempt Petrify. No HP damage or enchantment change.',
  'MYK-S1':'Alternate physical and magic actions for stronger hits. M or P: next.',
  'MYK-S2':'Take less magic HP damage while MP is at least half full and nonzero.',
  'MYK-R1':'Before magic HP damage would leave half HP or less, gain ordinary Shell.',
- 'MYK-R2':'An enemy physical hit spends your enchantment to halve that action.',
+ 'MYK-R2':'Rapier or saber: an enemy physical hit spends your enchantment to halve it.',
  'MYK-C1':'Use JP for a rapier or saber combo. Enchantments add no extra effects.'
 };
 const last=first+Object.keys(help).length-1,builder=new ROMBuilder(image,{start:0x1330000,end:0x1340000});

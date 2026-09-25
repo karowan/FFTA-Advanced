@@ -1,5 +1,6 @@
 #include "mystic-knight.h"
 #include "action-snapshot.h"
+extern unsigned ffta_primary_weapon(const uint8_t *);
 
 /* Readiness is frozen for an incoming action. The claim records its actual
  * successful hit, so misses cannot spend the blade and later hits keep the
@@ -13,6 +14,8 @@ unsigned ffta_myk_parry_factor(const uint8_t *a,const uint8_t *t,unsigned id){
  /* Original AI evaluates thousands of candidates. Reject the ordinary
   * no-reaction case before resolving both units' expensive job flags. */
  if(id==265 || !(ffta_action_unit_extension_reaction_flags(t)&FFTA_MYK_PARRY_READY) || !enemy(a,t))return 2;
+ /* Enchantments work with any weapon; parrying needs a rapier or saber. */
+ if(!ffta_myk_blade(ffta_primary_weapon(t)))return 2;
  unsigned origin=ffta_action_origin();
  if(origin==FFTA_ACTION_NATIVE_REACTION || origin==FFTA_ACTION_EXPLICIT_COMBO ||
     !ffta_action_reaction_forecast_enabled())return 2;

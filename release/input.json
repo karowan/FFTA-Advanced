@@ -8,31 +8,37 @@
   },
   "target": {
     "bytes": 33554432,
-    "crc32": "e9a8234e",
+    "crc32": "faf5643c",
     "file": "FFTA_Reviewed_All_Classes.gba",
-    "sha1": "631497ccf8ffedaf3d88e4343124305fb08402e8",
-    "sha256": "75b7eb9f0ccf742f7df6fb68205512435a784654a17b8ddbf45e3213e84047c6"
+    "sha1": "cc9465277898509fda703b1163cad877fc694405",
+    "sha256": "fa11016d55937d67ceaeff6cb70619f98e176a7b5415c8cd1bf65a487b39aaf3"
   },
   "patch": {
-    "bytes": 5945233,
+    "bytes": 5967909,
     "file": "FFTA_Expansion.bps",
     "format": "BPS",
-    "sha256": "738a1b5766060f16b344ebeef66a3c230ed0b6672180cfbdcf96f1ffe31e9f4a"
+    "sha256": "ea719e8ec2960bd95f76931d8bb0efda69ec99b2d6deddb010d4016bdc86e1a6"
   },
   "name": "FFTA Advanced",
-  "version": "0.7.1",
-  "tag": "v0.7.1",
+  "version": "0.7.2",
+  "tag": "v0.7.2",
   "localAcceptance": {
-    "buildVersion": "0.7.1-equipment-revision",
-    "candidateRunSha256": "6af0363f2f4e7c00d86f12629da58c1bc100e728cced34ac2da9ca8c6c721fc9",
+    "buildVersion": "0.7.2-enchantments-help",
+    "candidateRunSha256": "35b5a83917126484190262adf0e5270989c46e992566e4ef948eeb94270a7142",
     "deterministicPatch": true,
     "roundtrip": true,
     "tests": [
       "build-teaching-rows",
       "build-equipment-revision",
       "test-equipment-revision",
-      "test-revision-teaching-rows",
-      "test-revision-teaching-rows-ui"
+      "build-enchant-weapons",
+      "test-enchant-weapons",
+      "test-enchant-weapons-ui",
+      "build-help-pages",
+      "test-help-pages",
+      "test-help-pages-teaching-rows",
+      "test-help-pages-teaching-rows-ui",
+      "test-help-pages-ui"
     ],
     "wrongSourceRejected": true
   }

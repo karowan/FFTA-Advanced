@@ -2,7 +2,7 @@
 
 FFTA Advanced is [public on GitHub](https://github.com/karowan/FFTA-Advanced),
 with [v0.7.0](https://github.com/karowan/FFTA-Advanced/releases/tag/v0.7.0)
-published on September 21, 2026 and v0.7.1 prepared on September 24, 2026. Original project contributions use MIT, and
+published on September 21, 2026, v0.7.1 on September 24, 2026 and v0.7.2 prepared on September 25, 2026. Original project contributions use MIT, and
 our isolated generated [artwork](artwork/README.md) is included.
 
 The main project folder now tracks the public `origin/main`. The old nested
@@ -11,12 +11,15 @@ archived locally. See [workspace repair](notes/workspace-repair-2026-09-23.md).
 The [whole-game balance proposal](notes/whole-game-balance-council-2026-09-21.md)
 is retained as an unimplemented proposal, not a change to the release.
 
-Current release recipe: **0.7.1-equipment-revision** (public v0.7.1), in
+Current release recipe: **0.7.2-enchantments-help** (public v0.7.2), in
 [scripts/mod-release.json](scripts/mod-release.json). Its accepted game SHA-1 is
-`631497ccf8ffedaf3d88e4343124305fb08402e8`. It adds the
+`cc9465277898509fda703b1163cad877fc694405`. On top of v0.7.1 (the
 [equipment-help row fix](notes/teaching-rows-fix-2026-09-23.md) and
-[compact skill names and Weapon Attack revision](notes/equipment-revision-2026-09-24.md)
-as bounded patches on the v0.7.0 game `267fd273`.
+[compact skill names and Weapon Attack revision](notes/equipment-revision-2026-09-24.md))
+it adds [enchantments on every weapon](notes/enchant-weapons-2026-09-24.md) and
+[paged help](notes/help-pages-2026-09-24.md), all bounded patches on the v0.7.0
+game `267fd273`. The [damage simulation](notes/damage-simulation-2026-09-24.md)
+is analysis only.
 
 Use [MOD-RELEASE.md](MOD-RELEASE.md) for build and packaging procedures and
 **Play Mod.cmd** for the selected local release. The launcher authenticates the
@@ -26,7 +29,7 @@ The older **Play Expansion.cmd** remains a separate engineering release.
 ## Accepted scope
 
 The mod includes the v0.7 jobs, abilities and equipment, followed by native-palette
-art integration, the job-discovery menu fix and the v0.7.1 equipment fixes. The accepted first-pass artwork
+art integration, the job-discovery menu fix, the v0.7.1 equipment fixes and the v0.7.2 enchantment and help changes. The accepted first-pass artwork
 includes all 675 class poses, ten portraits and ten badges. The later menu fix
 preserves the accepted art parent outside its bounded patch.
 

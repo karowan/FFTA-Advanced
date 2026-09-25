@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "description": "Release 0.7.2 acceptance. Mystic Knight enchantments on every weapon with random Spellbreak (bounded code patch plus action-range and help data) and paged expansion help (137 bank-19 entries: 114 three-line descriptions split into native two-line pages, 30 weapon descriptions refreshed to menu skill names), built on the equipment revision. Rebuilds the chain; native enchant gates/geometry, native help decoding of every help ID, teaching rows on the final ROM, and real-core greatbow Sniper enchantments, Spellbreak and Holy Ench. help paging. No save or AP changes.",
+  "timeoutSeconds": 1800,
+  "steps": [
+    {"id":"build-teaching-rows","runtime":"python","kind":"static","suites":["help-pages"],"args":["scripts/build-teaching-rows.py"]},
+    {"id":"build-equipment-revision","runtime":"python","kind":"static","suites":["help-pages"],"requires":["build-teaching-rows"],"args":["scripts/build-equipment-revision.py"]},
+    {"id":"test-equipment-revision","runtime":"python","kind":"runtime","suites":["help-pages"],"requires":["build-equipment-revision"],"args":["scripts/test-equipment-revision.py"]},
+    {"id":"build-enchant-weapons","runtime":"python","kind":"static","suites":["help-pages"],"requires":["test-equipment-revision"],"args":["scripts/build-enchant-weapons.py"]},
+    {"id":"test-enchant-weapons","runtime":"python","kind":"runtime","suites":["help-pages"],"requires":["build-enchant-weapons"],"args":["scripts/test-enchant-weapons.py"]},
+    {"id":"test-enchant-weapons-ui","runtime":"python","kind":"runtime","suites":["help-pages"],"requires":["test-enchant-weapons"],"args":["scripts/test-enchant-weapons-ui.py"]},
+    {"id":"build-help-pages","runtime":"python","kind":"static","suites":["help-pages"],"requires":["test-enchant-weapons-ui"],"args":["scripts/build-help-pages.py"]},
+    {"id":"test-help-pages","runtime":"python","kind":"runtime","suites":["help-pages"],"requires":["build-help-pages"],"args":["scripts/test-help-pages.py"]},
+    {"id":"test-help-pages-teaching-rows","runtime":"python","kind":"runtime","suites":["help-pages"],"requires":["test-help-pages"],"args":["scripts/test-teaching-rows.py","--current","build/expansion/help-pages/current.json"]},
+    {"id":"test-help-pages-teaching-rows-ui","runtime":"python","kind":"runtime","suites":["help-pages"],"requires":["test-help-pages-teaching-rows"],"args":["scripts/test-teaching-rows-ui.py","--current","build/expansion/help-pages/current.json"]},
+    {"id":"test-help-pages-ui","runtime":"python","kind":"runtime","suites":["help-pages"],"requires":["test-help-pages-teaching-rows-ui"],"args":["scripts/test-help-pages-ui.py"]}
+  ]
+}

@@ -69,6 +69,18 @@ unsigned ffta_myk_dispel(uint8_t *u,unsigned choice){
  }
  return 1;
 }
+/* Spellbreak removes one random buff the target actually has. The native RNG
+ * (2804) is drawn only when a hit resolves, never by previews or admission. */
+unsigned ffta_myk_dispel_random(uint8_t *u){
+ uint8_t present[FFTA_MYK_DISPEL_CHOICES];unsigned count=0;
+ for(unsigned choice=1;choice<=FFTA_MYK_DISPEL_CHOICES;choice++)
+  if(ffta_myk_dispellable(u,choice))present[count++]=(uint8_t)choice;
+ if(!count)return 0;
+ /* 2804 returns bits16..30 of its state: 0..32767. */
+ unsigned roll=((unsigned (*)(void))0x08002805u)()&0x7fffu;
+ unsigned choice=present[(roll*count)>>15];
+ return ffta_myk_dispel(u,choice)?choice:0;
+}
 /* Choice admission is read-only and uses only the supplied owner's complete
  * cohort. A copied forecast must never inspect or mutate live opponents. */
 unsigned ffta_myk_dispel_available(const uint8_t *a,unsigned choice){

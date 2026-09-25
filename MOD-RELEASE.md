@@ -88,12 +88,16 @@ states capture old transient state and are not a compatibility guarantee.
 
 ## Verification checkpoint
 
-Current release: `0.7.1-equipment-revision.zip`, game SHA-1
-`631497ccf8ffedaf3d88e4343124305fb08402e8`, packaged from
-[run 20260924T055206.504473Z](build/expansion/test-runs/20260924T055206.504473Z/report.json)
-through [its adapter](scripts/package-equipment-revision.py); ZIP SHA-256
-`7baf6da23bfc2615889e06226863b06c0889cdc4765e010a34d7a2bc0720dc9a`, 2,881,948 bytes;
-BPS 5,945,233 bytes. The packaging code and launcher are unchanged. The
+Current release: `0.7.2-enchantments-help.zip`, game SHA-1
+`cc9465277898509fda703b1163cad877fc694405`, packaged from
+[run 20260925T010005.954289Z](build/expansion/test-runs/20260925T010005.954289Z/report.json)
+(all eleven steps of [its plan](scripts/help-pages-test-plan.json)) through
+[its adapter](scripts/package-help-pages.py); ZIP SHA-256
+`f92516b81988a5ceb55fd73aadae1cefa8d20dbe9a12df5048be01cfa14b0972`, 2,889,567 bytes; BPS 5,967,909 bytes.
+Previous release: `0.7.1-equipment-revision.zip`, game SHA-1
+`631497ccf8ffedaf3d88e4343124305fb08402e8` (run 20260924T055206.504473Z,
+[adapter](scripts/package-equipment-revision.py)). The packaging code and
+launcher are unchanged. The
 remainder of this section records the preceding v0.7.0 checkpoint.
 
 Previous game SHA-1: `267fd273bffe2c26a7ed3507d236af80a29b74a8`, unchanged by that
