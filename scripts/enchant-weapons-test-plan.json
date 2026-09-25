@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "description": "Mystic Knight enchantments on every weapon, on the equipment-help fixes and revision: bounded code patch (weapon gate, weapon-range strikes with self preparation, blade-only Spell Parry, targeting self bit) plus action-range and help data. Native gates/geometry for every weapon category, teaching-row checks on the final ROM, and real-core greatbow Sniper self and range-five strikes. No save or AP changes.",
+  "timeoutSeconds": 1200,
+  "steps": [
+    {"id":"build-teaching-rows","runtime":"python","kind":"static","suites":["enchant-weapons"],"args":["scripts/build-teaching-rows.py"]},
+    {"id":"build-equipment-revision","runtime":"python","kind":"static","suites":["enchant-weapons"],"requires":["build-teaching-rows"],"args":["scripts/build-equipment-revision.py"]},
+    {"id":"test-equipment-revision","runtime":"python","kind":"runtime","suites":["enchant-weapons"],"requires":["build-equipment-revision"],"args":["scripts/test-equipment-revision.py"]},
+    {"id":"build-enchant-weapons","runtime":"python","kind":"static","suites":["enchant-weapons"],"requires":["test-equipment-revision"],"args":["scripts/build-enchant-weapons.py"]},
+    {"id":"test-enchant-weapons","runtime":"python","kind":"runtime","suites":["enchant-weapons"],"requires":["build-enchant-weapons"],"args":["scripts/test-enchant-weapons.py"]},
+    {"id":"test-enchant-teaching-rows","runtime":"python","kind":"runtime","suites":["enchant-weapons"],"requires":["test-enchant-weapons"],"args":["scripts/test-teaching-rows.py","--current","build/expansion/enchant-weapons/current.json"]},
+    {"id":"test-enchant-teaching-rows-ui","runtime":"python","kind":"runtime","suites":["enchant-weapons"],"requires":["test-enchant-teaching-rows"],"args":["scripts/test-teaching-rows-ui.py","--current","build/expansion/enchant-weapons/current.json"]},
+    {"id":"test-enchant-weapons-ui","runtime":"python","kind":"runtime","suites":["enchant-weapons"],"requires":["test-enchant-teaching-rows-ui"],"args":["scripts/test-enchant-weapons-ui.py"]}
+  ]
+}

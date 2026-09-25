@@ -10,7 +10,8 @@ width routine `80161BC`; equipment help, command lists and previews are sized
 for that. 26 approved expansion names were wider (up to 18 tiles) and were
 clipped. [Compact display names](../src/ability-display-names.mjs) now cover
 them, the two earlier aliases (Nature Wrath, Counter Rhy.) and, for a
-consistent family, all Mystic Knight Spellblades ("Fire Blade" etc.). Full
+consistent family, all Mystic Knight Spellblades (first "Fire Blade" etc., renamed
+"Fire Ench." etc. by the [any-weapon change](enchant-weapons-2026-09-24.md)). Full
 approved names remain in the design documents and ability help. The source
 build and [install audit](../scripts/audit-installed-design.mjs) use the map.
 

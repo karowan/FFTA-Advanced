@@ -8,10 +8,13 @@ const compact=new Map([
   ['CHM-A8','Resuscitate'],['CHM-A10','Guard Tonic'],
   ['BRD-A3','Refrain'],['BRD-S1','Encourage'],
   ['DNC-A1','Minuet'],['DNC-A6','Taboo Dance'],['DNC-R2','Counter Rhy.'],
-  ['MYK-A1','Fire Blade'],['MYK-A2','Blizzard Blade'],['MYK-A3','Thunder Blade'],
-  ['MYK-A4','Poison Blade'],['MYK-A5','Sleep Blade'],['MYK-A6','Silence Blade'],
-  ['MYK-A7','Drain Blade'],['MYK-A8','Flare Blade'],['MYK-A9','Slow Blade'],
-  ['MYK-A10','Osmose Blade'],['MYK-A11','Holy Blade'],['MYK-A13','Arcane Burst'],
+  // Enchantments and Break work with any primary weapon ("Ench." for
+  // enchant); Blade Combo remains rapier/saber-only.
+  ['MYK-A1','Fire Ench.'],['MYK-A2','Blizzard Ench.'],['MYK-A3','Thunder Ench.'],
+  ['MYK-A4','Poison Ench.'],['MYK-A5','Sleep Ench.'],['MYK-A6','Silence Ench.'],
+  ['MYK-A7','Drain Ench.'],['MYK-A8','Flare Ench.'],['MYK-A9','Slow Ench.'],
+  ['MYK-A10','Osmose Ench.'],['MYK-A11','Holy Ench.'],['MYK-A13','Arcane Burst'],
+  ['MYK-A14','Break Ench.'],
   ['MYK-C1','Blade Combo'],['GLD-AX-S1','Followthrough'],
 ]);
 export const abilityDisplayNames=compact;

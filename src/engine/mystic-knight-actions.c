@@ -31,16 +31,6 @@ extern int ffta_samurai_magnitude(const uint8_t *,uint8_t *,uint8_t *);
 extern unsigned ffta_samurai_law_hit(const uint8_t *,unsigned,const uint8_t *,unsigned);
 extern int ffta_physical_effective_defense(int,unsigned);
 static unsigned half(const uint8_t *p){return p[0]|((unsigned)p[1]<<8);}
-/* Admission constructs a query with the weapon as its extra argument. An
- * authenticated AI scope owns the actual selected buff; actual execution
- * always retains its explicit choice, even if interception removed it. */
-static unsigned selected_choice(const uint8_t *c){
- if((c[0x26]&16u) && half(c+12)==FFTA_MYK_A12){
-  unsigned choice=ffta_ai_preview_choice(*(const uint8_t *const *)c,FFTA_MYK_A12);
-  if(choice)return choice;
- }
- return half(c+14);
-}
 static unsigned alive(const uint8_t *u){return u && half(u+0x18) && !(u[0xe8]&64u);}
 static unsigned hostile(const uint8_t *a,const uint8_t *t){return a!=t && (((a[0x29]>>7)^((a[0xeb]>>5)&1u))!=(t[0x29]>>7));}
 static unsigned kind(const uint8_t *a){return ffta_action_unit_extension_flags(a)&FFTA_MYK_ENCHANT_MASK;}
@@ -49,30 +39,31 @@ unsigned ffta_myk_payment_gate(uint8_t *a,unsigned id,unsigned selected,const un
  if(ffta_myk_action(id)){
   if(!alive(a)||(a[0xeb]&24u)||!ffta_myk_weapon(ffta_primary_weapon(a)))return 0;
   if(id==FFTA_MYK_A13 && !ffta_myk_release_kind(kind(a)))return 0;
-  if(id==FFTA_MYK_A12){
-   if(!frame || !selected || selected>FFTA_MYK_DISPEL_CHOICES)return 0;
-   uint8_t *peers[FFTA_JOB_UNIT_COUNT],*target=0;
-   unsigned count=ffta_job_peers(a,peers,FFTA_JOB_UNIT_COUNT);
-   for(unsigned i=0;i<count;i++)if(peers[i][0xf6]==frame[0x44/4] && peers[i][0xf7]==frame[0x48/4]){
-    if(target)return 0;
-    target=peers[i];
-   }
-   if(!target || !hostile(a,target) || !ffta_myk_dispellable(target,selected))return 0;
-  }
  }
  return ffta_chemist_payment_gate(a,id,selected,frame);
 }
 extern unsigned ffta_chemist_geometry(const uint8_t *,unsigned,unsigned,unsigned,unsigned,unsigned,unsigned,unsigned);
 extern unsigned ffta_projectile_los(unsigned,unsigned,unsigned,unsigned);
+/* Strikes use the native weapon-relative range (action bytes 80/80), which
+ * treats the action like Fight and rejects the actor's own tile. The eleven
+ * enchantments keep their self-preparation target there. */
 unsigned ffta_myk_geometry(const uint8_t *u,unsigned ax,unsigned ay,unsigned tx,unsigned ty,unsigned id,unsigned item,unsigned mode){
+ if((uint16_t)id>=FFTA_MYK_A1 && (uint16_t)id<=FFTA_MYK_A11 && (uint8_t)ax==(uint8_t)tx && (uint8_t)ay==(uint8_t)ty)return 1;
  unsigned result=ffta_chemist_geometry(u,ax,ay,tx,ty,id,item,mode);
  return result && id==FFTA_MYK_A13?ffta_projectile_los((uint8_t)ax,(uint8_t)ay,(uint8_t)tx,(uint8_t)ty):result;
+}
+/* The targeting UI's native range mode word (B42E4, entry-hooked) always sets
+ * 0x100 "exclude the actor's tile" for weapon-relative ranges, ignoring the
+ * action's self flag. Enchantments keep their self-preparation target. */
+extern unsigned ffta_original_target_mode(unsigned,unsigned);
+unsigned ffta_myk_target_mode(unsigned action,unsigned item){
+ unsigned mode=ffta_original_target_mode(action,item);
+ return (uint16_t)action>=FFTA_MYK_A1 && (uint16_t)action<=FFTA_MYK_A11?mode&~0x100u:mode;
 }
 unsigned ffta_myk_usable(uint8_t *a,unsigned id,unsigned item){
  if(ffta_chemist_action((uint16_t)id) && !ffta_medicine_available(a,(uint16_t)id))return 0;
  if(ffta_myk_action((uint16_t)id)){
   if(!alive(a)||(a[0xeb]&24u)||!ffta_myk_weapon(ffta_primary_weapon(a)))return 0;
-  if(id==FFTA_MYK_A12 && !ffta_myk_dispel_available(a,0))return 0;
   if(id==FFTA_MYK_A13 && !ffta_myk_release_kind(kind(a)))return 0;
  }
  return ffta_drk_usable(a,id,item);
@@ -85,12 +76,6 @@ unsigned ffta_myk_eligibility(const uint8_t *c){
  if(id==FFTA_MYK_A13)return a!=t && ffta_myk_release_kind(kind(a));
  if(a==t)return id<=FFTA_MYK_A11 && !c[0x28];
  if(!hostile(a,t))return 0;
- if(id==FFTA_MYK_A12){
-  /* Only admission chooses a status. Once the native result has passed the
-   * hit/interception boundary, losing that exact status cannot cancel HP. */
-  if(!(c[0x26]&16u) && ffta_action_phase()==FFTA_ACTION_RESULT && ffta_action_id()==id)return 1;
-  return ffta_myk_dispellable(t,selected_choice(c));
- }
  if(!c[0x28])return 1;
  if(id!=FFTA_MYK_A4 && id!=FFTA_MYK_A5 && id!=FFTA_MYK_A6 && id!=FFTA_MYK_A9)return 0;
  if(!(c[0x26]&16u) && ffta_action_phase()==FFTA_ACTION_RESULT && ffta_action_id()==id)
@@ -135,36 +120,23 @@ int ffta_myk_magnitude(const uint8_t *c){
   return ((int (*)(const uint8_t *))0x0813189du)(copy);
  }
  if(!ffta_myk_strike(id)||!ffta_myk_weapon(ffta_primary_weapon(a)))return 0;
- FFTA_EvaluatedUnit predicted;unsigned opened=0;
- if(id==FFTA_MYK_A12){
-  opened=ffta_snapshotted_evaluated_init(&predicted,t);
-  if(!opened)return 0;
-  ffta_myk_dispel(predicted.unit,selected_choice(c));t=predicted.unit;
- }
- MysticDamageScope scope,*previous=*MYK_DAMAGE_SCOPE;
- if(id==FFTA_MYK_A12){
-  scope.self=(uintptr_t)&scope;scope.actor=a;scope.target=t;scope.selected=selected_choice(c);
-  *MYK_DAMAGE_SCOPE=&scope;
- }
- int result=((int (*)(const uint8_t *,const uint8_t *,unsigned,unsigned,unsigned,unsigned,unsigned))0x0812fe39u)
+ /* Spellbreak's random buff is only drawn on a resolved hit, so previews use
+  * the target as it stands. */
+ return ((int (*)(const uint8_t *,const uint8_t *,unsigned,unsigned,unsigned,unsigned,unsigned))0x0812fe39u)
   (a,t,id,ffta_primary_weapon(a),0,(c[0x26]&16u)?2:0,0);
- if(id==FFTA_MYK_A12)*MYK_DAMAGE_SCOPE=previous;
- if(opened)ffta_snapshotted_evaluated_close(&predicted);
- return result;
 }
 int ffta_myk_success(const uint8_t *c,uint8_t *object,uint8_t *row){
  extern unsigned ffta_integrated_direct_kind(const uint8_t *);
  if(c && ffta_integrated_direct_kind(c)==1)
   ffta_myk_parry_hit(*(const uint8_t *const *)c,*(uint8_t *const *)(c+8),half(c+12));
  if(c && ffta_integrated_direct_kind(c)==2)ffta_myk_shell_hit(c);
- if(c && half(c+12)==FFTA_MYK_A12 && !c[0x28])ffta_myk_dispel(*(uint8_t *const *)(c+8),half(c+14));
+ if(c && half(c+12)==FFTA_MYK_A12 && !c[0x28])ffta_myk_dispel_random(*(uint8_t *const *)(c+8));
  return ffta_samurai_magnitude(c,object,row);
 }
 unsigned ffta_myk_law_hit(const uint8_t *c,unsigned removal,const uint8_t *byte,unsigned bit){
- if(half(c+12)!=FFTA_MYK_A12 || c[0x28])return ffta_samurai_law_hit(c,removal,byte,bit);
- unsigned choice=half(c+14),status=ffta_myk_dispel_native(choice);
- unsigned removed=ffta_myk_dispel(*(uint8_t *const *)(c+8),choice);
- return removed && removal && status<44 && byte==c+0x10+status/8 && bit==status%8;
+ /* Spellbreak no longer pre-selects a status; its random removal happens at
+  * the hit (ffta_myk_success), so laws see an ordinary strike. */
+ return ffta_samurai_law_hit(c,removal,byte,bit);
 }
 static void put(uint8_t *p,unsigned n){p[0]=(uint8_t)n;p[1]=(uint8_t)(n>>8);}
 /* Pure plan shared by committed execution and forecasts. Low16 is target MP

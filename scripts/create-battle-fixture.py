@@ -58,9 +58,13 @@ try:
    unit[5]=unit[7]=unit[0x35]=job;unit[8]=0;unit[0x36:0x38]=bytes(2)
    unit[0x3a:0x3c]=bytes(2);unit[0x40:0xd0]=bytes(0x90)
    struct.pack_into('<4H',unit,0x18,entry['hp'],entry['hp'],entry['mp'],entry['mp'])
+   # Optional declared loadout: secondary command (selection +36 and resolved
+   # job +8, as the native commit stores them) and five equipment slots.
+   secondary=entry.get('secondary',0);unit[8]=unit[0x36]=secondary
+   if 'equipment' in entry:struct.pack_into('<5H',unit,0x2a,*(list(entry['equipment'])+[0]*5)[:5])
    for lesson_id in entry['lessons']:
     lesson=next(l for l in registry['lessons'] if l['id']==lesson_id)
-    owner=next(o for o in lesson['owners'] if o['race']==race and o['jobId']==job)
+    owner=next(o for o in lesson['owners'] if o['race']==race and o['jobId'] in (job,secondary))
     assert 0<=owner['abilityIndex']<0x90
     unit[0x40+owner['abilityIndex']]=255
    assignments.append((address,unit))

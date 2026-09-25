@@ -13,10 +13,17 @@ static unsigned support(const uint8_t *u){return u?((unsigned (*)(const uint8_t 
 static unsigned reaction(const uint8_t *u){return u?((unsigned (*)(const uint8_t *))0x080cd4d5u)(u):0;}
 unsigned ffta_myk_action(unsigned id){return id>=FFTA_MYK_A1 && id<=FFTA_MYK_A14;}
 unsigned ffta_myk_strike(unsigned id){return id>=FFTA_MYK_A1 && id<=FFTA_MYK_A12;}
+/* Enchantments accept any primary weapon: native categories 1..19 and the
+ * expansion's axes (31). Spell Parry and Spellblade Combo stay blade-only. */
 unsigned ffta_myk_weapon(unsigned item){
  if(!item || item>460)return 0;
  unsigned type=((unsigned (*)(unsigned,unsigned))0x080ca7a5u)(item,3);
- return type==8 || type==3; /* Rapier or saber; knives belong to Dance. */
+ return (type>=1 && type<=19) || type==31;
+}
+unsigned ffta_myk_blade(unsigned item){
+ if(!item || item>460)return 0;
+ unsigned type=((unsigned (*)(unsigned,unsigned))0x080ca7a5u)(item,3);
+ return type==8 || type==3; /* Rapier or saber. */
 }
 unsigned ffta_myk_enchantment(const uint8_t *u){
  const uint8_t *s=ffta_job_state((uint8_t *)u);if(!alive(u)||!s)return 0;

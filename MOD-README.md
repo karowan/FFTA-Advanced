@@ -53,7 +53,9 @@ The numbers in this table count **mastered action abilities on that character**.
   of your remaining movement.
 - **Mystic Knight:** Spellweave rewards alternating physical and magical actions.
   Spellblade strikes count as magic for this bonus, although they deal physical
-  damage.
+  damage. Enchantments work with any weapon and strike at that weapon's normal
+  attack range, so a Sniper can enchant and shoot; Spell Parry and Blade Combo
+  still need a rapier or saber.
 
 ### Axe additions to the original jobs
 
@@ -90,6 +92,8 @@ Other towns stock new weapons for these jobs:
 - **Equipment previews:** in Item List, Buy and Sell, use L/R to switch
   eligibility pages and inspect the ten added class entries.
 - **Job wheel:** L/R switches pages when Human jobs exceed one page.
+- **Long help text:** descriptions longer than two lines continue on a second
+  page, as in the original game; press A to read it.
 - **Auto-Potion:** in Pick Abilities â†’ Reaction, choose Potion or Hi-Potion.
   The saved choice is marked `- set`.
 - **Morpher visuals:** transformations now show the appropriate monster form.

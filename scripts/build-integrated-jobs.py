@@ -634,7 +634,10 @@ for n,cost in enumerate(myk_costs,1):
     donor=23 if n==13 else 180
     row=bytearray(base[0x55187c+donor*28:0x55187c+(donor+1)*28])
     struct.pack_into('<H',row,0,lesson['nameId']);struct.pack_into('<H',row,22,0)
-    row[2]={1:1,2:5,3:6,11:7}.get(n,0);row[4]=cost;row[5]=int(n<=12);row[6]=3 if n==13 else 1;row[7]=2;row[8]=1
+    row[2]={1:1,2:5,3:6,11:7}.get(n,0);row[4]=cost;row[5]=int(n<=12)
+    # Strikes use the equipped weapon's native range/height (80/80); the
+    # geometry hook keeps enchantment self-preparation. Release is area 3.
+    row[6],row[7]=(3,2) if n==13 else (0x80,0x80) if n<=12 else (1,2);row[8]=1
     row[9]=5 if n==13 else 1;row[10]=2 if n==13 else 0;row[11]=40 if n==13 else 0
     row[12:16]=bytes((98,1,1,1) if n==14 else (63,myk_status.get(action,1),1,1))
     flags=struct.unpack_from('<I',row,16)[0]&~((1<<7)|(1<<8)|(1<<9)|(1<<15)|(1<<17))
