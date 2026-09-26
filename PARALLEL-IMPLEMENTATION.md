@@ -61,8 +61,10 @@ animation commands, timing, frame counts, OAM and unused slots. Check each actua
 consumer separately: actors, portraits, miniatures, badges, weapons and effects.
 A later build stage can overwrite earlier artwork, so inspect the assembled ROM.
 For new equipment icon drafts, use the [item-art checkpoint](notes/item-art-drafts-2026-09-25.md)
-and its authenticated original icon references; review the indexed 16×16
-result before replacing shared donor icons.
+and its authenticated original icon references. Supply the native palette guide
+to image generation, limit each prompt to colors in that palette, enforce those
+prompt-listed colors during conversion, and review the indexed 16×16 result
+before replacing shared donor icons.
 The [approved import checkpoint](notes/approved-first-pass-integration-2026-09-20.md)
 records the accepted first pass and source receipt.
 

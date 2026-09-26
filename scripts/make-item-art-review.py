@@ -10,38 +10,11 @@ from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parents[1]
 REFS = ROOT / "build/art/native-reference/equipment-original"
 DRAFTS = ROOT / "build/art/item-drafts"
-PILOT_ROWS = [
-    (376, "Ashura Echo", 106, "376-ashura-echo-retry"),
-    (384, "Gloom Sword", 1, "384-gloom-sword"),
-    (392, "Storm Axe", 52, "392-storm-axe"),
-    (400, "Ember Saber", 32, "400-ember-saber"),
-    (408, "Tonic Knife", 74, "408-tonic-knife"),
-    (416, "Minuet Foil", 88, "416-minuet-foil"),
-    (424, "Etude Pipe", 201, "424-etude-pipe"),
-    (432, "Stone Rod", 135, "432-stone-rod-retry"),
-]
-PIPE_ROWS = [(item_id, name, 201, folder) for item_id, name, folder in (
-    (424, "Etude Pipe", "424-etude-pipe"),
-    (425, "Battle Pipe", "425-battle-pipe"),
-    (426, "Refrain Pipe", "426-refrain-pipe"),
-    (427, "Requiem Pipe", "427-requiem-pipe"),
-    (428, "Angel Pipe", "428-angel-pipe"),
-    (429, "Traveler Pipe", "429-traveler-pipe"),
-    (430, "Ballad Pipe", "430-ballad-pipe"),
-    (431, "Nameless Pipe", "431-nameless-pipe"),
-)]
-ROD_ROWS = [(item_id, name, 135, folder) for item_id, name, folder in (
-    (432, "Stone Rod", "432-stone-rod-retry"),
-    (433, "Root Rod", "433-root-rod"),
-    (434, "River Rod", "434-river-rod"),
-    (435, "Zephyr Rod", "435-zephyr-rod"),
-    (436, "Wardstone Rod", "436-wardstone-rod"),
-    (437, "Wisp Rod", "437-wisp-rod"),
-    (438, "Rime Rod", "438-rime-rod"),
-    (439, "Gaia Rod", "439-gaia-rod"),
-    (449, "Refuge Rod", "449-refuge-rod"),
-)]
-SETS = {"pilot": PILOT_ROWS, "pipes": PIPE_ROWS, "rods": ROD_ROWS}
+SETS = {
+    "pilot": {376, 384, 392, 400, 408, 416, 424, 432},
+    "pipes": set(range(424, 432)),
+    "rods": {*range(432, 440), 449},
+}
 
 
 def paste_icon(page, source, x, y, size, method):
@@ -78,11 +51,15 @@ def render(rows, destination):
 
 
 def main(selection):
-    if selection != "all":
-        render(SETS[selection], DRAFTS / f"review-{selection}.png")
-        return
     profiles = json.loads((ROOT / "build/expansion/probes/content-data.json").read_text(encoding="utf-8"))["itemProfiles"]
     selected = json.loads((DRAFTS / "selection.json").read_text(encoding="utf-8"))
+    if selection != "all":
+        rows = [
+            (item["id"], item["name"], item["donor"], selected[str(item["id"])])
+            for item in profiles if item["id"] in SETS[selection]
+        ]
+        render(rows, DRAFTS / f"review-{selection}.png")
+        return
     families = {}
     for item in profiles:
         families.setdefault(item["donor"], []).append((

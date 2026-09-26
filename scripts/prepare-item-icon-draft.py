@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -30,6 +31,19 @@ def prepare(source, reference, output, item_id, name, prompt, mirror=False):
     colors = original.getpalette()[:48]
     if len(colors) != 48:
         raise ValueError("Original icon does not expose a complete 16-color palette")
+    native_hex = {
+        index: f"#{colors[index * 3]:02X}{colors[index * 3 + 1]:02X}{colors[index * 3 + 2]:02X}"
+        for index in range(1, 16)
+    }
+    requested_hex = {value.upper() for value in re.findall(r"#[0-9A-Fa-f]{6}", prompt)}
+    if requested_hex - set(native_hex.values()):
+        raise ValueError("Prompt requests a color outside the authenticated native palette")
+    allowed_indices = [
+        index for index, value in native_hex.items()
+        if not requested_hex or value in requested_hex
+    ]
+    if not allowed_indices:
+        raise ValueError("Prompt does not permit an opaque native palette color")
     image = Image.open(source).convert("RGBA")
     bounds = image.getchannel("A").point(lambda value: 255 if value >= 128 else 0).getbbox()
     if bounds is None:
@@ -51,7 +65,7 @@ def prepare(source, reference, output, item_id, name, prompt, mirror=False):
             red, green, blue, alpha = cropped.getpixel((x, y))
             if alpha < 128:
                 continue
-            choice = min(range(1, 16), key=lambda index: sum(
+            choice = min(allowed_indices, key=lambda index: sum(
                 (channel - colors[index * 3 + offset]) ** 2
                 for offset, channel in enumerate((red, green, blue))
             ))
@@ -89,7 +103,8 @@ def prepare(source, reference, output, item_id, name, prompt, mirror=False):
         "alphaBounds": list(bounds),
         "croppedScale": list(cropped.size),
         "horizontalMirror": mirror,
-        "conversion": "alpha>=128; crop alpha bounds; optional horizontal mirror; BOX fit within 14x14; center in 16x16; nearest RGB among original palette indices 1..15",
+        "allowedPaletteColors": [native_hex[index] for index in allowed_indices],
+        "conversion": "alpha>=128; crop alpha bounds; optional horizontal mirror; BOX fit within 14x14; center in 16x16; nearest RGB among prompt-listed original palette colors, or indices 1..15 when none are listed",
     }
     (output / "draft.json").write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
     return record

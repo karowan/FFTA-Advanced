@@ -60,6 +60,13 @@ def audit():
                 icon.info.get("transparency") != 0 or
                 icon.getpalette()[:48] != Image.open(original).getpalette()[:48]):
             raise ValueError(f"Native format mismatch for item {item_id}")
+        palette = icon.getpalette()
+        used_colors = {
+            f"#{palette[index * 3]:02X}{palette[index * 3 + 1]:02X}{palette[index * 3 + 2]:02X}"
+            for index in icon.get_flattened_data() if index
+        }
+        if not used_colors <= set(metadata["allowedPaletteColors"]):
+            raise ValueError(f"Prompt palette restriction violated for item {item_id}")
         pixels = pack_tiles(icon, 4)
         if len(pixels) != 128 or metadata["nativePixelsSha256"] != hashlib.sha256(pixels).hexdigest():
             raise ValueError(f"Native pixel hash mismatch for item {item_id}")

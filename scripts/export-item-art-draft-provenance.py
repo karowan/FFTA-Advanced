@@ -28,6 +28,7 @@ def main():
             "indexedPreviewSha256": metadata["nativePreviewSha256"],
             "nativePixelsSha256": metadata["nativePixelsSha256"],
             "horizontalMirror": metadata["horizontalMirror"],
+            "allowedPaletteColors": metadata["allowedPaletteColors"],
             "conversion": metadata["conversion"],
         })
     result = {
