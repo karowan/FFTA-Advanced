@@ -22,22 +22,21 @@ Local packaging updates only the local channel; public publication uses the
 Run [Build Mod Release.ps1](Build%20Mod%20Release.ps1). It reads the build recipe
 in [scripts/mod-release.json](scripts/mod-release.json), builds the current
 candidate through its declared deterministic plan, runs that candidate's required
-checks, and packages the accepted result. A failed check stops packaging. Current
-recipe: new AI-generated spritework plus the job-discovery fix, compiled onto
-the authenticated approved-art parent. This entry point does not claim a new
-from-scratch rebuild of every historical gameplay/art stage.
+checks, and packages the accepted result. A failed check stops packaging. The
+current recipe applies the pub return fix to the authenticated v0.7.3 ROM. It
+does not repeat the historical gameplay and art builds.
 
 To package already accepted, unchanged game code without rerunning gameplay:
 
 ```powershell
-& '.\Build Mod Release.ps1' -Run build/expansion/test-runs/20260921T052326.612995Z/report.json
+& '.\Build Mod Release.ps1' -Run build/expansion/test-runs/20260926T090601.197057Z/report.json
 ```
 
 The candidate comes from that exact run's build log, not a mutable candidate
-pointer. The job-visibility adapter verifies the complete required step set,
-candidate/report ROM hashes and current wheel source hash before calling the
-general packager. Future build pipelines should supply their corresponding
-acceptance adapter and recipe; never remove acceptance to make packaging pass.
+pointer. The pub return adapter verifies the accepted parent, the one-byte
+change and the fixed-input gameplay replay before calling the general packager.
+Future build pipelines should supply their corresponding acceptance adapter and
+recipe; never remove acceptance to make packaging pass.
 
 The output path is printed and saved in `build/releases/current.json`. Each ZIP
 is immutable under `build/releases/artifacts/<ZIP-SHA256>/`. The ZIP's identity
@@ -88,7 +87,14 @@ states capture old transient state and are not a compatibility guarantee.
 
 ## Verification checkpoint
 
-Current release: `0.7.3-memory-fixes.zip`, game SHA-1
+Current local release: `0.7.4.zip`, game SHA-1
+`dd20c5771418cf470594c3e79c6d197b3bae4848`, packaged from
+[run 20260926T090601.197057Z](build/expansion/test-runs/20260926T090601.197057Z/report.json)
+([focused plan](scripts/pub-return-test-plan.json)) through
+[its adapter](scripts/package-pub-return.py); ZIP SHA-256
+`b5606b848b6803ee5706d056f466819d28a2a174cd6c657cbe259fc22ea6757a`,
+BPS 5,832,922 bytes. The only game-byte change from v0.7.3 is at `0x5D76C`.
+Prior release: `0.7.3-memory-fixes.zip`, game SHA-1
 `40c9bbb9115c53ddbab6381e93c963ae0bd31ee4`, packaged from
 [run 20260926T065902.911740Z](build/expansion/test-runs/20260926T065902.911740Z/report.json)
 (all 28 steps of [its plan](scripts/memory-fixes-test-plan.json)) through

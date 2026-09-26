@@ -63,6 +63,12 @@ pubAction:
 POIN pubOrder
 pubOrder:
 BYTE 0 1 1 0 2 2 3 3
+// The original paid mission acceptance returns with action 1 (Missions).
+// The reordered pub menu maps action 1 to Rumors, so return with action 0.
+PUSH
+ORG $5D76C
+SHORT $2000
+POP
 PUSH
 ORG $5567F0+(4*0x29)
 POIN $55431E $554316 $554328 $554341

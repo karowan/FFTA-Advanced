@@ -8,55 +8,26 @@
   },
   "target": {
     "bytes": 33554432,
-    "crc32": "e0b67d41",
+    "crc32": "80872c5b",
     "file": "FFTA_Reviewed_All_Classes.gba",
-    "sha1": "40c9bbb9115c53ddbab6381e93c963ae0bd31ee4",
-    "sha256": "4b972fc6d4c6db712c1c026e4c951228cf89bb8b6c6d54bd3411f11c87033eb3"
+    "sha1": "dd20c5771418cf470594c3e79c6d197b3bae4848",
+    "sha256": "55c798b7e368b2597a2127dae0e955bb92ae73b0e90afa5f01883a818ed69847"
   },
   "patch": {
-    "bytes": 5832918,
+    "bytes": 5832922,
     "file": "FFTA_Expansion.bps",
     "format": "BPS",
-    "sha256": "7f17d94ee8d3b6dde5b0f8d7e8c9ab570c158ae6858fb13c29f9a05d261e72ff"
+    "sha256": "db06326d9f9c78b97a10327467c50110f9b2349f04f8ec3d4bd4f53315e43eed"
   },
   "name": "FFTA Advanced",
-  "version": "0.7.3",
-  "tag": "v0.7.3",
+  "version": "0.7.4",
+  "tag": "v0.7.4",
   "localAcceptance": {
-    "buildVersion": "0.7.3-memory-fixes",
-    "candidateRunSha256": "05b88d4cc20d2e03c4e6621f4dafec01401b6a5813c1fe396393b831b573cc69",
+    "buildVersion": "0.7.4",
+    "candidateRunSha256": "859eff2ef0abe004973ebd213384bc4b091d80d170290d589a4f03bf008d4cf2",
     "deterministicPatch": true,
     "roundtrip": true,
-    "tests": [
-      "build-teaching-rows",
-      "build-equipment-revision",
-      "test-equipment-revision",
-      "build-enchant-weapons",
-      "test-enchant-weapons",
-      "test-enchant-weapons-ui",
-      "build-help-pages",
-      "test-help-pages",
-      "test-help-pages-ui",
-      "build-palette-removal",
-      "test-palette-removal",
-      "test-palette-removal-teaching-rows",
-      "test-palette-removal-teaching-rows-ui",
-      "test-palette-removal-ui",
-      "build-memory-fixes",
-      "test-memory-fixes",
-      "build-item-icons",
-      "test-item-icons",
-      "test-item-icons-ui",
-      "test-memory-fixes-ui",
-      "test-memory-fixes-removal-ui",
-      "test-memory-fixes-enchant-ui",
-      "test-action-sweep",
-      "test-game-pass",
-      "test-game-pass-reactions-a1",
-      "test-game-pass-reactions-a2",
-      "test-game-pass-reactions-b1",
-      "test-game-pass-reactions-b2"
-    ],
+    "tests": ["build-pub-return", "test-pub-return"],
     "wrongSourceRejected": true
   }
 }
