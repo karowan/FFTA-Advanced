@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "timeoutSeconds": 180,
+  "scope": "Fixed-input clean-versus-expansion comparison of the pub screen after native Dueling Sub dispatch acceptance.",
+  "steps": [
+    {
+      "id": "build-pub-return",
+      "runtime": "python",
+      "args": ["scripts/build-pub-return.py"],
+      "suites": ["pub-return"],
+      "kind": "build"
+    },
+    {
+      "id": "test-pub-return",
+      "runtime": "python",
+      "args": ["scripts/test-pub-return.py"],
+      "suites": ["pub-return"],
+      "kind": "test",
+      "requires": ["build-pub-return"]
+    }
+  ]
+}
