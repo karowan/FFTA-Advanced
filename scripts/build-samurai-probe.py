@@ -59,7 +59,7 @@ exposed=once(exposed,'    return incoming(ffta_original_exposed_combo(actor,targ
     if(opened)ffta_snapshot_end(&snapshot);
     return damage;''')
 (OUT/'exposed-effects.c').write_text(exposed)
-sources=[OUT/'exposed-effects.c',ROOT/'src/engine/exposed-effects.s',OUT/'combat.c',OUT/'combat-hooks.s',OUT/'combat-geometry.c',ROOT/'src/engine/combat-geometry.s',OUT/'dark-hooks.s',OUT/'bindings.s']+[ROOT/f'src/engine/{n}' for n in ('action-snapshot.c','reaction-queue.c','samurai-state.c','samurai-state.s','samurai-actions.c','samurai-actions.s','samurai-lifecycle.c','samurai-lifecycle.s','samurai-restoration.c','samurai-restoration.s','samurai-area.c','samurai-area.s','execution-scope.c','samurai-wound.c','samurai-wound.s','samurai-pulse.c','samurai-pulse.s','samurai-status-display.c','samurai-wound-law.c','samurai-wound-law.s')]
+sources=[OUT/'exposed-effects.c',ROOT/'src/engine/exposed-effects.s',OUT/'combat.c',OUT/'combat-hooks.s',OUT/'combat-geometry.c',ROOT/'src/engine/combat-geometry.s',OUT/'dark-hooks.s',OUT/'bindings.s']+[ROOT/f'src/engine/{n}' for n in ('action-snapshot.c','reaction-queue.c','samurai-state.c','samurai-state.s','samurai-actions.c','samurai-execute.c','snapshot-lend.c','samurai-actions.s','samurai-lifecycle.c','samurai-lifecycle.s','samurai-restoration.c','samurai-restoration.s','samurai-area.c','samurai-area.s','execution-scope.c','samurai-wound.c','samurai-wound.s','samurai-pulse.c','samurai-pulse.s','samurai-status-display.c','samurai-wound-law.c','samurai-wound-law.s')]
 sources.append(ROOT/'src/engine/action-snapshot.s')
 sources.append(ROOT/'src/engine/reaction-queue.s')
 status_asm=(ROOT/'src/engine/status-display.s').read_text()

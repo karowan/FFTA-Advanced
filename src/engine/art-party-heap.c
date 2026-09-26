@@ -1,4 +1,7 @@
 #include <stdint.h>
+/* Historical art-stage source: scripts/build-palette-removal.py patches the
+ * installed binary to heap limits 0x0203EFF0/0x0203F000 and moves the party
+ * record to 0x0203F200. Keep these values so the parent stage reproduces. */
 
 /* The native Status destructor individually releases its context, glyph
  * backing, text heap and secondary buffer. Its outer parent is not needed

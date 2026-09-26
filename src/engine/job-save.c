@@ -30,6 +30,9 @@ int ffta_job_load(uint8_t *state) {
     if(result<0)return result;
     unsigned extended=state[0x1f04]=='J' && state[0x1f05]=='S' &&
                       state[0x1f06]=='T' && state[0x1f07]=='1';
+    /* The marker exists only inside a suspend save's flash image; keep it out
+     * of live state so later normal saves never carry it. */
+    for(unsigned i=0;i<4;i++)state[0x1f04+i]=0;
     if(state[0x10]!=2 || !extended) { ffta_job_reset();return result; }
     uint8_t descriptor[24]={0},footer[FFTA_JOB_FOOTER_BYTES];
     unsigned found=((unsigned (*)(unsigned,uint8_t *))0x0813b061u)(2,descriptor);

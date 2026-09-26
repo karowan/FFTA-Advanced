@@ -9,6 +9,8 @@
 
 struct InventoryEntry { uint16_t id; uint8_t owned, equipped; };
 _Static_assert(sizeof(struct InventoryEntry)==4,"Native inventory record layout");
+/* One entry per item; the copy-owner root (unit-copies.c) starts at 0x0203FF30. */
+_Static_assert(0x0203f800u+FFTA_MAX_ITEM*sizeof(struct InventoryEntry)<=0x0203ff30u,"inventory view below the copy-owner root");
 
 static unsigned view_index(unsigned item) {
     return item<=361 ? item-1 : item<=375 ? EQUIPMENT_SLOTS+item-362 : item-15;

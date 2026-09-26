@@ -223,6 +223,13 @@
     "lifetime": "One live player or native AI selection and its authenticated paid primary action; retired on cancellation, completed movement, invalidation or turn/battle lifecycle; excluded from saves and AI unit copies.",
     "diagnosticBank": "0x0203F220..0x0203F3FF remains separate and unchanged"
   },
+  "partyHeapRecordRAM": {
+    "bank": "0x0203F200..0x0203F20F",
+    "bytes": 16,
+    "owner": "Kept art party-heap helpers (ffta_art_party_*), relocated by scripts/build-palette-removal.py from 0x0203EFF0, which is heap again",
+    "lifetime": "Reset at every battle-heap setup; RAM only, never saved",
+    "boundaries": "After the 512-byte Passing Step reservation and before the diagnostic bank at 0x0203F220"
+  },
   "nativeResultSnapshotRAM": {
     "bank": "Exact live manager-owned pool+0x10..0x19CF",
     "slots": 8,

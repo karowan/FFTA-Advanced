@@ -11,6 +11,8 @@
 typedef struct { uint32_t magic; uint8_t reserved[12];
     uint8_t units[FFTA_JOB_UNIT_COUNT][FFTA_JOB_RECORD_BYTES]; } JobBank;
 _Static_assert(sizeof(JobBank)==FFTA_JOB_BANK_BYTES,"reserved job-state bank");
+/* Fixed high EWRAM: the AI choice root (ai-choice.c) starts at 0x0203F728. */
+_Static_assert(0x0203f400u+FFTA_JOB_BANK_BYTES<=0x0203f728u,"job-state bank below the AI choice root");
 extern uint8_t *ffta_copied_job_state(uint8_t *) __attribute__((weak));
 extern unsigned ffta_copied_job_origin(const uint8_t *) __attribute__((weak));
 extern uint8_t *ffta_copied_job_potion(uint8_t *) __attribute__((weak));

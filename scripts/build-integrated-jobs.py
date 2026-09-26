@@ -724,6 +724,10 @@ for job,(start,length) in job_regions.items():
 for start,length in [(0,0x1000000),*base_regions,*job_regions.values(),(CODE,len(code)),(GEO_AI,len(geo_code)),(MYK_CODE,len(myk_code)),(RECOVERY_CODE,len(recovery_code))]:
     for offset in range(start,start+length-3,4):
         value=ptr(rom,offset)
+        # The native reaction mask table (16 rows at 527D5C, read only via
+        # 1339EC) begins at application row 92 but is a separate table; its
+        # rows 1..15 lie past the copied application rows. Keep it native.
+        if value==0x08527d5c:continue
         for old,size,new in table_maps:
             if 0x08000000+old<=value<0x08000000+old+size:
                 if start==0 and not native_literal_allowed(native_clean,rom,offset):

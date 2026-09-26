@@ -16,8 +16,9 @@ abilities and equipment, spritework, and menu improvements.
 - A **two-handed axe weapon family** for Soldier, Gladiator and Viking, with
   new skills inside Soldier's Battle Tech and Gladiator's Spellblade Tech.
 - New AI-generated spritework for all ten added class options, including battle
-  sprites and animations, portraits, job-wheel figures and equipment icons,
-  using the game's existing native palettes.
+  sprites and animations, portraits, job-wheel figures, equipment icons and
+  inventory icons for all 85 new weapons, using the game's existing native
+  palettes.
 - Mission-item safeguards, repeatable access to otherwise missable monster
   ability sources, eligible secret-recruit retries and rare-equipment recovery.
 - Manual clan sorting, visible Morpher transformations, Missions first in the

@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "description": "Viera Mystic Knight (the widest job name, 11 tiles) with all fourteen Spellblade actions learned; for status/Info name-span and display-buffer checks.",
+  "units": [
+    {"slot": 5, "job": 125, "hp": 300, "mp": 120,
+     "lessons": ["MYK-A1","MYK-A2","MYK-A3","MYK-A4","MYK-A5","MYK-A6","MYK-A7","MYK-A8","MYK-A9","MYK-A10","MYK-A11","MYK-A12","MYK-A13","MYK-A14"]}
+  ]
+}

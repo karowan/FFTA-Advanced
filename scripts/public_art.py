@@ -7,7 +7,8 @@ import zlib
 
 ROLES = {'native-pose': (32, 32), 'source-pose': (32, 32),
          'portrait': (48, 56), 'head-icon': (16, 14), 'miniature-source': (32, 32),
-         'generated-axe': (1312, 1199), 'generated-impact': (2172, 724), 'generated-status': (1254, 1254)}
+         'generated-axe': (1312, 1199), 'generated-impact': (2172, 724), 'generated-status': (1254, 1254),
+         'item-icon': (16, 16)}
 
 
 def manifest_entries(raw):
@@ -17,7 +18,7 @@ def manifest_entries(raw):
     entries = {}
     for row in document['files']:
         path = PurePosixPath(row['path'])
-        if (path.parts[:2] not in {('artwork', 'characters'), ('artwork', 'extras')} or '..' in path.parts
+        if (path.parts[:2] not in {('artwork', 'characters'), ('artwork', 'extras'), ('artwork', 'items')} or '..' in path.parts
                 or path.suffix != '.png' or row['path'] in entries or row['role'] not in ROLES):
             raise ValueError('Invalid or duplicate public artwork entry')
         entries[row['path']] = row

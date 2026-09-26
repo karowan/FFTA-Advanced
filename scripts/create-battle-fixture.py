@@ -20,7 +20,11 @@ e=h['Emulator'](ROM)
 def tap(key,wait=180):e.run(8,key);e.run(wait)
 def capture(label):
  ram=e.memory()
- assert ram[0x3ff44:0x40000]==guard,('Reserved view/AP-root guard changed',label)
+ # 0x0203FF44/48 are the execution-scope and snapshot chain heads: battle
+ # setup may open and close a scope (equipped reactions/supports), leaving 0.
+ scopes=ram[0x3ff44:0x3ff4c]
+ assert all(scopes[i:i+4] in (guard[:4],bytes(4)) for i in (0,4)),('Scope pointer left set',label,scopes.hex())
+ assert ram[0x3ff4c:0x40000]==guard[8:],('Reserved view/AP-root guard changed',label)
  e.screenshot(OUT/(label+'.png'));e.save(OUT/(label+'.state'));(OUT/(label+'.ram')).write_bytes(ram)
  (OUT/(label+'.iwram')).write_bytes(C.string_at(*e.maps[0x03000000]))
  if label.startswith(('deployment-','battle-')):
@@ -47,10 +51,10 @@ try:
   # Never write battle results, fields, native allocation headers or save bytes.
   assert profile['schema']==1
   registry=json.loads((ROOT/'build/expansion/registry.json').read_text())
-  original=e.memory();assignments=[]
+  original=e.memory();assignments=[];sidecar=[]
   for entry in profile['units']:
    slot=entry['slot'];source=entry.get('copyFrom',slot)
-   assert 2<=slot<6 and 2<=source<6
+   assert 1<=slot<6 and 1<=source<6   # slot 1 is Montblanc, the only Moogle
    address=0x80+264*slot;source_address=0x80+264*source
    unit=bytearray(original[source_address:source_address+264])
    unit[:5]=original[address:address+5] # Preserve destination slot identity/existence.
@@ -62,14 +66,28 @@ try:
    # job +8, as the native commit stores them) and five equipment slots.
    secondary=entry.get('secondary',0);unit[8]=unit[0x36]=secondary
    if 'equipment' in entry:struct.pack_into('<5H',unit,0x2a,*(list(entry['equipment'])+[0]*5)[:5])
-   for lesson_id in entry['lessons']:
+   # Optional declared original-game lessons by racial ability index.
+   for index in entry.get('abilityIndices',[]):
+    assert 0<index<0x90;unit[0x40+index]=255
+   for lesson_id in entry.get('lessons',[]):
     lesson=next(l for l in registry['lessons'] if l['id']==lesson_id)
     owner=next(o for o in lesson['owners'] if o['race']==race and o['jobId'] in (job,secondary))
-    assert 0<=owner['abilityIndex']<0x90
-    unit[0x40+owner['abilityIndex']]=255
+    index=owner['abilityIndex']
+    if index<0x90:unit[0x40+index]=255
+    else:
+     # Human lessons 144..177 live in the clan AP sidecar, 34 bytes per roster slot.
+     assert race==1 and 144<=index<178
+     sidecar.append((0x1b40+34*slot+index-144,255))
+   # Optional equipped reaction/support/combo lessons (+0x3A/+0x3B/+0x3C hold racial indices).
+   for field,offset in (('reaction',0x3a),('support',0x3b),('combo',0x3c)):
+    if field in entry:
+     lesson=next(l for l in registry['lessons'] if l['id']==entry[field])
+     owner=next(o for o in lesson['owners'] if o['race']==race and o['jobId'] in (job,secondary))
+     assert 0<owner['abilityIndex']<256;unit[offset]=owner['abilityIndex']
    assignments.append((address,unit))
   assert len({p for p,_ in assignments})==len(assignments)
   for address,unit in assignments:e.set_memory(address,bytes(unit))
+  for address,value in sidecar:e.set_memory(address,bytes((value,)))
   capture('party-profile')
  # Native placement lookup and coordinates are evaluated against this live
  # world state. Movement itself uses ordinary game input, never RAM writes.

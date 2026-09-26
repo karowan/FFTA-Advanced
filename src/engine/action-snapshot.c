@@ -582,7 +582,7 @@ static __attribute__((noinline)) unsigned run_result(uint8_t *object,uint8_t *wr
 /* Put the large local in a separate, non-inlined function. Merely declaring it
  * in the public wrapper reserves820 bytes even for an ordinary continuation;
  * the nested native result calculators can then overwrite IWRAM code. */
-static __attribute__((noinline)) unsigned stack_result(uint8_t *object,uint8_t *wrapper,uint8_t *manager,unsigned flags_value,
+static __attribute__((noinline)) unsigned stack_snapshot_result(uint8_t *object,uint8_t *wrapper,uint8_t *manager,unsigned flags_value,
     unsigned mode,void *scratch,unsigned secondary,unsigned last,unsigned caller,const unsigned *native_frame) {
     uint8_t *actor=object && *(uint8_t **)object?**(uint8_t ***)object:0;
     FFTA_ActionSnapshot snapshot;
@@ -590,6 +590,15 @@ static __attribute__((noinline)) unsigned stack_result(uint8_t *object,uint8_t *
     unsigned result=run_result(object,wrapper,manager,flags_value,mode,scratch,secondary,last,caller,native_frame);
     if(opened)ffta_snapshot_end(&snapshot);
     return result;
+}
+/* No bank frame (workspace allocation failed, or all eight slots busy): keep
+ * the snapshot on the stack only with room for the deepest nested result
+ * chain; otherwise resolve without one, like bank-less forecasts. */
+static __attribute__((noinline)) unsigned stack_result(uint8_t *object,uint8_t *wrapper,uint8_t *manager,unsigned flags_value,
+    unsigned mode,void *scratch,unsigned secondary,unsigned last,unsigned caller,const unsigned *native_frame) {
+    if(ffta_stack_room(sizeof(FFTA_ActionSnapshot)+FFTA_RESULT_STACK_RESERVE))
+        return stack_snapshot_result(object,wrapper,manager,flags_value,mode,scratch,secondary,last,caller,native_frame);
+    return run_result(object,wrapper,manager,flags_value,mode,scratch,secondary,last,caller,native_frame);
 }
 static __attribute__((noinline)) unsigned fresh_result(uint8_t *object,uint8_t *wrapper,uint8_t *manager,unsigned flags_value,
     unsigned mode,void *scratch,unsigned secondary,unsigned last,unsigned caller,const unsigned *native_frame) {

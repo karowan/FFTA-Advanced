@@ -1,0 +1,152 @@
+{
+  "schema": 1,
+  "description": "Reaction sweep group B: slot 1 Chemist, slot 2 Dark Knight, slot 3 Dark Knight, slot 4 Geomancer, slot 5 Mystic Knight; every lesson learned, R2/S2 and the combo equipped, HP/MP 400, first weapon. For the reaction battles in scripts/test-game-pass.py.",
+  "units": [
+    {
+      "slot": 1,
+      "job": 122,
+      "hp": 400,
+      "mp": 400,
+      "equipment": [
+        408
+      ],
+      "lessons": [
+        "CHM-A1",
+        "CHM-A2",
+        "CHM-A3",
+        "CHM-A4",
+        "CHM-A5",
+        "CHM-A6",
+        "CHM-A7",
+        "CHM-A8",
+        "CHM-A9",
+        "CHM-A10",
+        "CHM-S1",
+        "CHM-S2",
+        "CHM-R1",
+        "CHM-R2",
+        "CHM-C1"
+      ],
+      "reaction": "CHM-R1",
+      "support": "CHM-S2",
+      "combo": "CHM-C1"
+    },
+    {
+      "slot": 2,
+      "job": 117,
+      "hp": 400,
+      "mp": 400,
+      "equipment": [
+        384
+      ],
+      "lessons": [
+        "DRK-A1",
+        "DRK-A2",
+        "DRK-A3",
+        "DRK-A4",
+        "DRK-A5",
+        "DRK-A6",
+        "DRK-A7",
+        "DRK-A8",
+        "DRK-A9",
+        "DRK-S1",
+        "DRK-S2",
+        "DRK-R1",
+        "DRK-R2",
+        "DRK-C1"
+      ],
+      "reaction": "DRK-R2",
+      "support": "DRK-S2",
+      "combo": "DRK-C1"
+    },
+    {
+      "slot": 3,
+      "job": 119,
+      "hp": 400,
+      "mp": 400,
+      "equipment": [
+        384
+      ],
+      "lessons": [
+        "DRK-A1",
+        "DRK-A2",
+        "DRK-A3",
+        "DRK-A4",
+        "DRK-A5",
+        "DRK-A6",
+        "DRK-A7",
+        "DRK-A8",
+        "DRK-A9",
+        "DRK-S1",
+        "DRK-S2",
+        "DRK-R1",
+        "DRK-R2",
+        "DRK-C1"
+      ],
+      "reaction": "DRK-R2",
+      "support": "DRK-S2",
+      "combo": "DRK-C1"
+    },
+    {
+      "slot": 4,
+      "job": 121,
+      "hp": 400,
+      "mp": 400,
+      "equipment": [
+        432
+      ],
+      "lessons": [
+        "GEO-A1",
+        "GEO-A2",
+        "GEO-A3",
+        "GEO-A4",
+        "GEO-A5",
+        "GEO-A6",
+        "GEO-A7",
+        "GEO-A8",
+        "GEO-A9",
+        "GEO-S1",
+        "GEO-S2",
+        "GEO-R1",
+        "GEO-R2",
+        "GEO-C1"
+      ],
+      "reaction": "GEO-R2",
+      "support": "GEO-S2",
+      "combo": "GEO-C1"
+    },
+    {
+      "slot": 5,
+      "job": 125,
+      "hp": 400,
+      "mp": 400,
+      "equipment": [
+        400
+      ],
+      "lessons": [
+        "MYK-A1",
+        "MYK-A2",
+        "MYK-A3",
+        "MYK-A4",
+        "MYK-A5",
+        "MYK-A6",
+        "MYK-A7",
+        "MYK-A8",
+        "MYK-A9",
+        "MYK-A10",
+        "MYK-A11",
+        "MYK-A12",
+        "MYK-A13",
+        "MYK-A14",
+        "MYK-S1",
+        "MYK-S2",
+        "MYK-R1",
+        "MYK-R2",
+        "MYK-C1"
+      ],
+      "reaction": "MYK-R2",
+      "support": "MYK-S2",
+      "combo": "MYK-C1"
+    }
+  ]
+}
