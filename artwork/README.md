@@ -10,6 +10,8 @@ The [inventory](manifest.json) pins every PNG's exact bytes, dimensions and sour
 - 675 extracted source drawings before final native palette conversion.
 - Ten portraits, ten standalone head icons and ten miniature source figures.
 - Generated axe, impact-effect and status-symbol source images.
+- 85 native-palette 16×16 inventory icons for the expansion weapons in
+  `items/`, pinned by the [approval receipt](../src/art/imagegen/new-item-icons-approved.json).
 
 `characters/<class>/native-pose/` contains the accepted final pose inputs.
 `source-pose/` contains the earlier generated drawings; the four later Samurai

@@ -70,6 +70,10 @@ def main():
         rows.append(dict(path=name, sha256=hashlib.sha256(cleaned).hexdigest(), bytes=len(cleaned), size=list(size),
                          role=role, originalSource=row['sourceArt'], originalSourceSha256=row['sourceArtSha256'],
                          removedMetadataChunks=removed, conversion='PNG chunk copy; all image data bytes unchanged'))
+    # Item icons have their own approval receipt and exporter
+    # (scripts/export-item-icons.py); keep their authenticated rows.
+    existing = json.loads((destination / 'manifest.json').read_text(encoding='utf-8'))['files'] if (destination / 'manifest.json').exists() else []
+    rows += [row for row in existing if row['role'] == 'item-icon']
     for name, raw in pending.items():
         path = ROOT / name; path.parent.mkdir(parents=True, exist_ok=True)
         if path.exists():

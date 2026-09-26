@@ -14,12 +14,14 @@ import ctypes as C, datetime, hashlib, json, runpy, struct, subprocess, sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from native_battle_wrappers import fixed_giza_formation
-meta=json.loads(Path(json.loads((ROOT/'build/expansion/enchant-weapons/current.json').read_text())['manifest']).read_text())
+current=ROOT/'build/expansion/enchant-weapons/current.json'
+if '--current' in sys.argv:current=ROOT/sys.argv[sys.argv.index('--current')+1]   # a later stage built on this change
+meta=json.loads(Path(json.loads(current.read_text())['manifest']).read_text())
 rom_path=Path(meta['path']);rom=rom_path.read_bytes();assert hashlib.sha1(rom).hexdigest()==meta['romSha1']
 out=rom_path.parent/('ui-enchant-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ'));out.mkdir()
 profile=ROOT/'scripts/fixtures/enchant-sniper-profile.json'
 subprocess.run([sys.executable,str(ROOT/'scripts/create-battle-fixture.py'),'--rom',str(rom_path),'--out',str(out/'fixture'),
-    '--party-profile',str(profile),'--confirm-pub-exit','--heap-end','0x0203c000'],check=True,capture_output=True)
+    '--party-profile',str(profile),'--confirm-pub-exit','--heap-end','0x0203f000' if 'paletteRemoval' in meta else '0x0203c000'],check=True,capture_output=True)
 FIX=out/'fixture';assert (FIX/'frozen.gba').read_bytes()==rom
 E=runpy.run_path(str(ROOT/'scripts/emulator-test.py'))['Emulator']
 observe=runpy.run_path(str(ROOT/'scripts/battle-menu-observation.py'))

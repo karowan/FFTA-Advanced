@@ -88,13 +88,16 @@ states capture old transient state and are not a compatibility guarantee.
 
 ## Verification checkpoint
 
-Current release: `0.7.2-enchantments-help.zip`, game SHA-1
-`cc9465277898509fda703b1163cad877fc694405`, packaged from
-[run 20260925T010005.954289Z](build/expansion/test-runs/20260925T010005.954289Z/report.json)
-(all eleven steps of [its plan](scripts/help-pages-test-plan.json)) through
-[its adapter](scripts/package-help-pages.py); ZIP SHA-256
-`f92516b81988a5ceb55fd73aadae1cefa8d20dbe9a12df5048be01cfa14b0972`, 2,889,567 bytes; BPS 5,967,909 bytes.
-Previous release: `0.7.1-equipment-revision.zip`, game SHA-1
+Current release: `0.7.3-memory-fixes.zip`, game SHA-1
+`40c9bbb9115c53ddbab6381e93c963ae0bd31ee4`, packaged from
+[run 20260926T065902.911740Z](build/expansion/test-runs/20260926T065902.911740Z/report.json)
+(all 28 steps of [its plan](scripts/memory-fixes-test-plan.json)) through
+[its adapter](scripts/package-memory-fixes.py); ZIP SHA-256
+`5e8ee88315369fe071fa7fd66805e9a479a734678b122763ddf3cca38d71613e`, 2,879,344 bytes; BPS 5,832,918 bytes.
+Previous release: `0.7.2-enchantments-help.zip`, game SHA-1
+`cc9465277898509fda703b1163cad877fc694405` (run 20260925T010005.954289Z,
+[adapter](scripts/package-help-pages.py)).
+Earlier release: `0.7.1-equipment-revision.zip`, game SHA-1
 `631497ccf8ffedaf3d88e4343124305fb08402e8` (run 20260924T055206.504473Z,
 [adapter](scripts/package-equipment-revision.py)). The packaging code and
 launcher are unchanged. The

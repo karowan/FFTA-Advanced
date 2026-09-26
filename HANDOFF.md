@@ -2,7 +2,7 @@
 
 FFTA Advanced is [public on GitHub](https://github.com/karowan/FFTA-Advanced),
 with [v0.7.0](https://github.com/karowan/FFTA-Advanced/releases/tag/v0.7.0)
-published on September 21, 2026, v0.7.1 on September 24, 2026 and v0.7.2 prepared on September 25, 2026. Original project contributions use MIT, and
+published on September 21, 2026, v0.7.1 on September 24, v0.7.2 on September 25 and v0.7.3 on September 26, 2026. Original project contributions use MIT, and
 our isolated generated [artwork](artwork/README.md) is included.
 
 The main project folder now tracks the public `origin/main`. The old nested
@@ -11,15 +11,21 @@ archived locally. See [workspace repair](notes/workspace-repair-2026-09-23.md).
 The [whole-game balance proposal](notes/whole-game-balance-council-2026-09-21.md)
 is retained as an unimplemented proposal, not a change to the release.
 
-Current release recipe: **0.7.2-enchantments-help** (public v0.7.2), in
+Current release recipe: **0.7.3-memory-fixes** (public v0.7.3), in
 [scripts/mod-release.json](scripts/mod-release.json). Its accepted game SHA-1 is
-`cc9465277898509fda703b1163cad877fc694405`. On top of v0.7.1 (the
-[equipment-help row fix](notes/teaching-rows-fix-2026-09-23.md) and
-[compact skill names and Weapon Attack revision](notes/equipment-revision-2026-09-24.md))
-it adds [enchantments on every weapon](notes/enchant-weapons-2026-09-24.md) and
-[paged help](notes/help-pages-2026-09-24.md), all bounded patches on the v0.7.0
-game `267fd273`. The [damage simulation](notes/damage-simulation-2026-09-24.md)
-is analysis only.
+`40c9bbb9115c53ddbab6381e93c963ae0bd31ee4`. On top of v0.7.2 (enchantments on
+every weapon and paged help) it adds the
+[retired art palette engine](notes/palette-removal-2026-09-25.md), which fixes the
+deployment R Info garbage/black screen, the
+[RAM audit and whole-game pass fixes](notes/memory-fixes-2026-09-25.md) (executor
+stack, reaction masks, old item-list builders, suspend marker, menu recolor
+corruption, Chemist softlock and area, job wheel label, EXP for the new jobs)
+and the approved [weapon icons](notes/item-icons-2026-09-26.md), all bounded
+patches on the v0.7.0 game `267fd273`. The
+[damage simulation](notes/damage-simulation-2026-09-24.md) is analysis only.
+The whole-game pass ([test-game-pass.py](scripts/test-game-pass.py),
+[test-action-sweep.py](scripts/test-action-sweep.py)) is part of release
+acceptance.
 
 Use [MOD-RELEASE.md](MOD-RELEASE.md) for build and packaging procedures and
 **Play Mod.cmd** for the selected local release. The launcher authenticates the

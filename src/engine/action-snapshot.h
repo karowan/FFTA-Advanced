@@ -104,6 +104,22 @@ unsigned ffta_action_hp_lost(const uint8_t *);
 void ffta_action_note_hp_loss(uint8_t *,unsigned,unsigned);
 unsigned ffta_snapshot_begin(FFTA_ActionSnapshot *,const uint8_t *,const uint8_t *,unsigned);
 void ffta_snapshot_end(FFTA_ActionSnapshot *);
+/* Lend/return a root result-bank frame (snapshot-lend.c); zero when none. */
+FFTA_ActionSnapshot *ffta_snapshot_lend(uintptr_t *token);
+void ffta_snapshot_return(uintptr_t *token);
+/* The IWRAM stack grows down onto resident native code ending at 03006D68;
+ * IRQs share it (VBlank ~136 bytes). A fallback may place a snapshot on the
+ * stack only when the frame plus the deepest measured nesting below it still
+ * fits: 3000 bytes under the executor, 2580 under a result (Sept. 25 audit,
+ * Doublecast into a Shell target), each with IRQ and margin. */
+#define FFTA_STACK_FLOOR 0x03006d68u
+#define FFTA_EXECUTE_STACK_RESERVE 3328u
+#define FFTA_RESULT_STACK_RESERVE 2944u
+static inline unsigned ffta_stack_room(unsigned bytes) {
+    uintptr_t sp;
+    __asm__ volatile("mov %0, sp":"=r"(sp));
+    return sp>=FFTA_STACK_FLOOR+bytes && sp<=0x03008000u;
+}
 void ffta_snapshot_copy(uint8_t *,const uint8_t *);
 unsigned ffta_poise_factor(const uint8_t *);
 unsigned ffta_poise_hp_factor(const uint8_t *,const uint8_t *,unsigned);

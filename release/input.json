@@ -8,23 +8,23 @@
   },
   "target": {
     "bytes": 33554432,
-    "crc32": "faf5643c",
+    "crc32": "e0b67d41",
     "file": "FFTA_Reviewed_All_Classes.gba",
-    "sha1": "cc9465277898509fda703b1163cad877fc694405",
-    "sha256": "fa11016d55937d67ceaeff6cb70619f98e176a7b5415c8cd1bf65a487b39aaf3"
+    "sha1": "40c9bbb9115c53ddbab6381e93c963ae0bd31ee4",
+    "sha256": "4b972fc6d4c6db712c1c026e4c951228cf89bb8b6c6d54bd3411f11c87033eb3"
   },
   "patch": {
-    "bytes": 5967909,
+    "bytes": 5832918,
     "file": "FFTA_Expansion.bps",
     "format": "BPS",
-    "sha256": "ea719e8ec2960bd95f76931d8bb0efda69ec99b2d6deddb010d4016bdc86e1a6"
+    "sha256": "7f17d94ee8d3b6dde5b0f8d7e8c9ab570c158ae6858fb13c29f9a05d261e72ff"
   },
   "name": "FFTA Advanced",
-  "version": "0.7.2",
-  "tag": "v0.7.2",
+  "version": "0.7.3",
+  "tag": "v0.7.3",
   "localAcceptance": {
-    "buildVersion": "0.7.2-enchantments-help",
-    "candidateRunSha256": "35b5a83917126484190262adf0e5270989c46e992566e4ef948eeb94270a7142",
+    "buildVersion": "0.7.3-memory-fixes",
+    "candidateRunSha256": "05b88d4cc20d2e03c4e6621f4dafec01401b6a5813c1fe396393b831b573cc69",
     "deterministicPatch": true,
     "roundtrip": true,
     "tests": [
@@ -36,9 +36,26 @@
       "test-enchant-weapons-ui",
       "build-help-pages",
       "test-help-pages",
-      "test-help-pages-teaching-rows",
-      "test-help-pages-teaching-rows-ui",
-      "test-help-pages-ui"
+      "test-help-pages-ui",
+      "build-palette-removal",
+      "test-palette-removal",
+      "test-palette-removal-teaching-rows",
+      "test-palette-removal-teaching-rows-ui",
+      "test-palette-removal-ui",
+      "build-memory-fixes",
+      "test-memory-fixes",
+      "build-item-icons",
+      "test-item-icons",
+      "test-item-icons-ui",
+      "test-memory-fixes-ui",
+      "test-memory-fixes-removal-ui",
+      "test-memory-fixes-enchant-ui",
+      "test-action-sweep",
+      "test-game-pass",
+      "test-game-pass-reactions-a1",
+      "test-game-pass-reactions-a2",
+      "test-game-pass-reactions-b1",
+      "test-game-pass-reactions-b2"
     ],
     "wrongSourceRejected": true
   }

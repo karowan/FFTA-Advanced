@@ -17992,6 +17992,1281 @@
         "caBX"
       ],
       "conversion": "PNG chunk copy; all image data bytes unchanged"
+    },
+    {
+      "path": "artwork/items/376-ashura-echo.png",
+      "sha256": "96364ddf434853942d0f9c9964f29423fcbb0ef9511ec2a8eef4c8016d5320bd",
+      "bytes": 199,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 376,
+      "originalSource": "build/art/item-drafts/item-376-ashura-echo-v2/native-preview.png",
+      "nativePixelsSha256": "64f4f1bc823f45684fe408b552aaa75f522770182a58893bc8189d4fca7ba7ca",
+      "donorIcon": 106,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/377-wind-reed.png",
+      "sha256": "8a677e906f74987b8d8b08907cf5d650065f6f8edff88371c98734c87a2f9e46",
+      "bytes": 187,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 377,
+      "originalSource": "build/art/item-drafts/item-377-wind-reed-v2/native-preview.png",
+      "nativePixelsSha256": "d81048e2acd9076f8513b9a222ab73da0f5beb1ce6e21c6b17cd1aa1349b9c90",
+      "donorIcon": 106,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/378-osafune-echo.png",
+      "sha256": "5f6fdbf7f2c8d666f496bc77750a305829842db9ec676fe2d6522862bbd0fb87",
+      "bytes": 202,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 378,
+      "originalSource": "build/art/item-drafts/item-378-osafune-echo-v2/native-preview.png",
+      "nativePixelsSha256": "46b20d2104434e5efa7fea995cc140f20c473c76eadb432c5d21ce840580b4d3",
+      "donorIcon": 106,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/379-murasame-echo.png",
+      "sha256": "962e590e6c94cfff381c98ea388ce07d539a543dc1061cf49c471d5d24f45846",
+      "bytes": 194,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 379,
+      "originalSource": "build/art/item-drafts/item-379-murasame-echo-v2/native-preview.png",
+      "nativePixelsSha256": "d104ef763f7ae53349f49aad190f865ca09198ba040ba74396f558f9a363a39d",
+      "donorIcon": 106,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/380-kiyomori-echo.png",
+      "sha256": "d98443d6d725a4911cd5fa9fd1c501915062487ffd06bd0585887448164d3160",
+      "bytes": 217,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 380,
+      "originalSource": "build/art/item-drafts/item-380-kiyomori-echo-v2/native-preview.png",
+      "nativePixelsSha256": "b326704654ac0fd4f5dcff45436e2d49a65d9012395b36d8e4993cb6eb4d71ea",
+      "donorIcon": 106,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/381-guarding-blade.png",
+      "sha256": "2e18355194e45dc49a7b39cf4a63c9699d4a1773b26301f02c55b4251bc475ef",
+      "bytes": 208,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 381,
+      "originalSource": "build/art/item-drafts/item-381-guarding-blade-v2/native-preview.png",
+      "nativePixelsSha256": "497a09c945d4e5790b8b74ed0e31b334d0678e89feddf719a0038f20a89f6b20",
+      "donorIcon": 106,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/382-kiku-echo.png",
+      "sha256": "90d43b7652b5b590b66cd3942dc761199e6a9741e18365ea625f08995a3b02f0",
+      "bytes": 222,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 382,
+      "originalSource": "build/art/item-drafts/item-382-kiku-echo-v2/native-preview.png",
+      "nativePixelsSha256": "e5d66f8286fe43d99f51cac178298be422f7892cd995cf1fb2c458949ef7f370",
+      "donorIcon": 106,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/383-moonblossom.png",
+      "sha256": "57109232c507bdb36fd36484206b335e7c40ae5e38cf2a84c0474d1d769e6e2b",
+      "bytes": 194,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 383,
+      "originalSource": "build/art/item-drafts/item-383-moonblossom-v2/native-preview.png",
+      "nativePixelsSha256": "d7c89f993761f7110278aa8b1d00c8ee14df0424d965ff18b307305020668a55",
+      "donorIcon": 106,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/384-gloom-sword.png",
+      "sha256": "72e4fd6ea0374e257e6a7ccf374b11d5c2236296adf3e04feb544dba0a8164c4",
+      "bytes": 222,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 384,
+      "originalSource": "build/art/item-drafts/item-384-gloom-sword-v2/native-preview.png",
+      "nativePixelsSha256": "34fc7cfa68eeff76c1bc2b68243d82c8d7a4b1eeb964dc0b6a07531ab96333f3",
+      "donorIcon": 1,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/385-sanguine-edge.png",
+      "sha256": "c29dbd308e879a14969f2d4ca2b3ecb6650145633584a55eb2c8839a772ba8da",
+      "bytes": 220,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 385,
+      "originalSource": "build/art/item-drafts/385-sanguine-edge-v3/native-preview.png",
+      "nativePixelsSha256": "7ffe110515b5292320b945bb94c655e314a14b2bc5c93b1069470638197b9377",
+      "donorIcon": 1,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/386-infernal-edge.png",
+      "sha256": "41ef479b23647cb661f96a758a80e5d2376d3b22c76bab55b7855303cf8bd1d8",
+      "bytes": 224,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 386,
+      "originalSource": "build/art/item-drafts/item-386-infernal-edge-v2/native-preview.png",
+      "nativePixelsSha256": "b0f2e27394f44bd161d59bd0aea3b6c4721fce8df38b8f55edfa879f9113cbf2",
+      "donorIcon": 1,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/387-veil-sword.png",
+      "sha256": "5b77ccdb688c824ead24cdf291519fa918a50cd5a7c357bf010f4c863875fe75",
+      "bytes": 203,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 387,
+      "originalSource": "build/art/item-drafts/item-387-veil-sword-v2/native-preview.png",
+      "nativePixelsSha256": "8126632c582c0e66d557541dbe7676c6acbd35b8d8bbeb8771b0dade16290cf9",
+      "donorIcon": 1,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/388-oathbreaker.png",
+      "sha256": "c0cb41b68a82206af89ba08256e7420826ff1cd6334abadedd6f4203b6e7a201",
+      "bytes": 210,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 388,
+      "originalSource": "build/art/item-drafts/item-388-oathbreaker-v2/native-preview.png",
+      "nativePixelsSha256": "40ebef7ab9b9aa52e6e6d6daffcde26e72d71b29b7c5c24b1b756b1b8202d1e1",
+      "donorIcon": 1,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/389-crushing-edge.png",
+      "sha256": "d21af6818d5b39faf998821165b7436d75eac30a2386ca0e3c6e63409ba7a576",
+      "bytes": 232,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 389,
+      "originalSource": "build/art/item-drafts/item-389-crushing-edge-v2/native-preview.png",
+      "nativePixelsSha256": "2af0ca0e799de353473c8cf937a3591fcbaefbded1c14dfbc2fd0600892eaf9e",
+      "donorIcon": 1,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/390-abyssal-edge.png",
+      "sha256": "8414e45e4988d7a1eba25a50f8866945be6b33e50de1825f02acf915e24f1c30",
+      "bytes": 208,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 390,
+      "originalSource": "build/art/item-drafts/item-390-abyssal-edge-v2/native-preview.png",
+      "nativePixelsSha256": "c30428ecbf730aa352d6ba819ffe0e5427252537923237ebc92a675e603f39ad",
+      "donorIcon": 1,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/391-sacrifice-edge.png",
+      "sha256": "1ee374079e0529f50c687a42cbd00f37b9f5cce743a00c218008eee4ebc46fe6",
+      "bytes": 211,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 391,
+      "originalSource": "build/art/item-drafts/item-391-sacrifice-edge-v2/native-preview.png",
+      "nativePixelsSha256": "4b537f6ad9fa1f34389945c40cb89af61a0a2df7f98180757af255f15c904837",
+      "donorIcon": 1,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/392-storm-axe.png",
+      "sha256": "cf826b717c0d94615c112cfef1a791a015b21d63ef652f8f81329179ad725707",
+      "bytes": 229,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 392,
+      "originalSource": "build/art/item-drafts/item-392-storm-axe-v2/native-preview.png",
+      "nativePixelsSha256": "3547d49935cdeb5548600d0767a1f0d03dc1379e0c01cc2b9177bae3c128bc7f",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/393-raider-axe.png",
+      "sha256": "28c4e75a8c7f2fd1cee5de6989678e7ba457946dbf5a322c4067f3fb070c9bf6",
+      "bytes": 223,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 393,
+      "originalSource": "build/art/item-drafts/item-393-raider-axe-v2/native-preview.png",
+      "nativePixelsSha256": "efb1859ed6e2b8182d139bb07acf6d7ea19677cf6085a44a36920c01cca16c78",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/394-plunder-axe.png",
+      "sha256": "524460cd9e538d4f8e13312e841534c6f25d37f3fb2f68d6dc631013d15df65b",
+      "bytes": 211,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 394,
+      "originalSource": "build/art/item-drafts/item-394-plunder-axe-v2/native-preview.png",
+      "nativePixelsSha256": "b353701220c23033dcea5d0349f06ae0e0b3e127c0856aab9e5a435decea308d",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/395-warcaller-axe.png",
+      "sha256": "927a7c57ae1b5843fb1bd349df0c69533e11e37b972279c7d68419f88ca0e6d7",
+      "bytes": 211,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 395,
+      "originalSource": "build/art/item-drafts/item-395-warcaller-axe-v2/native-preview.png",
+      "nativePixelsSha256": "4eda95043cdc0ad1ddecb969073073485e0ae79fda6e6eb030fb59b2de10a24e",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/396-stormcall-axe.png",
+      "sha256": "cdce901df09039e0307834619d252ce9ddeac95c64ba539e2ca5e169e4b1114a",
+      "bytes": 206,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 396,
+      "originalSource": "build/art/item-drafts/item-396-stormcall-axe-v2/native-preview.png",
+      "nativePixelsSha256": "fe8e809043117996ff5c47c42e6ffe9ebffa3e69aabe53f134d0ce30fe3d0e3f",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/397-pillage-axe.png",
+      "sha256": "3058c33c5b76e2de45696636d6b89966bfb8439b18efae164bd1fbdb07b402ce",
+      "bytes": 218,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 397,
+      "originalSource": "build/art/item-drafts/item-397-pillage-axe-v2/native-preview.png",
+      "nativePixelsSha256": "00a50093b56f0e14006afbac1c86cb8646b1b8106dba0dc3beb098322d273ffa",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/398-thunderhead-axe.png",
+      "sha256": "99b4226c74b098e4a48c5b415d02dd0e3f5df329c10b42a603d505169efb961a",
+      "bytes": 210,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 398,
+      "originalSource": "build/art/item-drafts/item-398-thunderhead-axe-v2/native-preview.png",
+      "nativePixelsSha256": "b34f53690e9791185975ce463b366e15b3b78b071851da021d61d631fef03b32",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/399-tidal-axe.png",
+      "sha256": "15c30a2b0ba0f7bc8e7195547f705ede254680e60ba8debb9ef2af3697d69340",
+      "bytes": 213,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 399,
+      "originalSource": "build/art/item-drafts/item-399-tidal-axe-v2/native-preview.png",
+      "nativePixelsSha256": "5edf4c6fec400436c0df59e555220308afc622478b4dbeb956afbb3a59cb1b90",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/400-ember-saber.png",
+      "sha256": "9995099e80128c21d224e1dbeb8456418bae8130f6309b84a1d093fffab4ed07",
+      "bytes": 218,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 400,
+      "originalSource": "build/art/item-drafts/item-400-ember-saber-v2/native-preview.png",
+      "nativePixelsSha256": "462ec61fb5538b9f2e6ed0fdf514a3653868fe374a2602cafcd90747474abea8",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/401-rime-saber.png",
+      "sha256": "d4b6d292243b65bbbc8a2a2f4ccadbc696bb1de464f0d230f935df27a2528fbd",
+      "bytes": 210,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 401,
+      "originalSource": "build/art/item-drafts/item-401-rime-saber-v2/native-preview.png",
+      "nativePixelsSha256": "f33907eadf6e7b237f2a89db1d92b3eb6a577df97b6c7912e15d83b29ea5a1e4",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/402-spark-saber.png",
+      "sha256": "43614f932be24d0ad9007a070968b8c2662dd1db5619fb5294f5fb5b308c8802",
+      "bytes": 206,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 402,
+      "originalSource": "build/art/item-drafts/item-402-spark-saber-v2/native-preview.png",
+      "nativePixelsSha256": "4379356eb7d3c78bce173df1012df504405596f8a3d63719bf556b0d5bd4cea6",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/403-venom-saber.png",
+      "sha256": "ad58fd283d148acba613d6435c1133ff5680e908c6fdee060fc701de9c625429",
+      "bytes": 212,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 403,
+      "originalSource": "build/art/item-drafts/item-403-venom-saber-v2/native-preview.png",
+      "nativePixelsSha256": "a5e1d852b6f2e9c69e659ae02d716d43a1590faba703a9dcb08586059e49daf7",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/404-dream-saber.png",
+      "sha256": "14b57d71a47a8412f139fb090d9d5141b9243052c23b978e28bcd08ceb1cec6c",
+      "bytes": 215,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 404,
+      "originalSource": "build/art/item-drafts/item-404-dream-saber-v2/native-preview.png",
+      "nativePixelsSha256": "ce21d61f639671fbfd1d25d15fde594de8f8bbc679a25e67e11f7bcdf78ae204",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/405-hush-saber.png",
+      "sha256": "696b473c832f81a262e42cb68e7a904a75050ee0dc6d33fea5abeb9f26e7730f",
+      "bytes": 208,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 405,
+      "originalSource": "build/art/item-drafts/405-hush-saber-v3/native-preview.png",
+      "nativePixelsSha256": "b2c58eb251b98b1db82c8aa936f31e613943d763a86c62c4f8a826e53cdf8f11",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/406-siphon-saber.png",
+      "sha256": "2f34065fc45570137cd5bdc69ea84616bdf87ecff20dd5aeca89e228c840fb37",
+      "bytes": 221,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 406,
+      "originalSource": "build/art/item-drafts/item-406-siphon-saber-v2/native-preview.png",
+      "nativePixelsSha256": "085155526aa6ac7642f0c1b57ca20ff1c0f2c34322ae74979fb5693181ea282e",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/407-flare-saber.png",
+      "sha256": "7361a1fdcdfc25a9b02708d972d9d89e8788ab5f20d07cbcf5a11b4d18573bcd",
+      "bytes": 218,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 407,
+      "originalSource": "build/art/item-drafts/item-407-flare-saber-v3/native-preview.png",
+      "nativePixelsSha256": "81da9dd7bd2cd147e06dbaf90b080fe0dbbbc599ccb9215d1e1cea9dcc8d9f9e",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/408-tonic-knife.png",
+      "sha256": "4ed49e06d9098d1304ecc8267a7cc07c3e17109b7286ef459d73d7ade6984e51",
+      "bytes": 215,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 408,
+      "originalSource": "build/art/item-drafts/item-408-tonic-knife-v2/native-preview.png",
+      "nativePixelsSha256": "be26a0f680f9e33ea9ce2ffc252f00af29d934f8d330692d4d2e4f12d4253203",
+      "donorIcon": 74,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/409-field-remedy-knife.png",
+      "sha256": "0f09842215ad42319139b72d39dd890b3d2f88466612d1382a11eeb0c065012d",
+      "bytes": 214,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 409,
+      "originalSource": "build/art/item-drafts/item-409-field-remedy-knife-v2/native-preview.png",
+      "nativePixelsSha256": "2a894dcab1624ed5cc354eefb2932da32352bd510d80df30d5f0f9d70c29e103",
+      "donorIcon": 74,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/410-phoenix-knife.png",
+      "sha256": "b3b6e36d9b9f33502295b5af55d4d761683868ed125e46b74551defec57170c8",
+      "bytes": 219,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 410,
+      "originalSource": "build/art/item-drafts/item-410-phoenix-knife-v2/native-preview.png",
+      "nativePixelsSha256": "20cc9edf7eafe82bd3700bde9d6d45e28dfa6b28c297498a5927125c852629d2",
+      "donorIcon": 74,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/411-high-tonic-knife.png",
+      "sha256": "077af88cdd45f31d1a0702fade97ae0e89ce15f20901e6a8a49c2fc6a388580a",
+      "bytes": 224,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 411,
+      "originalSource": "build/art/item-drafts/item-411-high-tonic-knife-v2/native-preview.png",
+      "nativePixelsSha256": "b9d8bccd28d4c48bb909566c3ab43555477c5c40dfbbc70591f9b19853a66624",
+      "donorIcon": 74,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/412-mist-knife.png",
+      "sha256": "2f54a595d608906eabbd92f0c04b0cc76d970d698d4050c248dacc33ce111411",
+      "bytes": 205,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 412,
+      "originalSource": "build/art/item-drafts/item-412-mist-knife-v2/native-preview.png",
+      "nativePixelsSha256": "599146ae3fa072aa720056f86f0b9024ed659ed253fc5c543f552e475c657995",
+      "donorIcon": 74,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/413-ether-knife.png",
+      "sha256": "f2f4130f1b243fb9be7cd00749701fd5e7b58ab631cd71b5fcad43210dcdc5d1",
+      "bytes": 209,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 413,
+      "originalSource": "build/art/item-drafts/item-413-ether-knife-v2/native-preview.png",
+      "nativePixelsSha256": "80070207419438fa3931913fe9c21502091b63f25736e8ea27e285141001be61",
+      "donorIcon": 74,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/414-cureall-knife.png",
+      "sha256": "8d78687de76d36b03b11879d210439677644c4d73a0309738c06ac03fdd2e070",
+      "bytes": 209,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 414,
+      "originalSource": "build/art/item-drafts/item-414-cureall-knife-v2/native-preview.png",
+      "nativePixelsSha256": "d030ce5e50d8d61c3302b838e5e56089df04f990c6ceed7cf2484edd1f52c2cb",
+      "donorIcon": 74,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/415-resuscitation-knife.png",
+      "sha256": "8ceb4b84254a6448cee870135acb1d061ee7cda9e33f91db57540441c672e020",
+      "bytes": 223,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 415,
+      "originalSource": "build/art/item-drafts/item-415-resuscitation-knife-v2/native-preview.png",
+      "nativePixelsSha256": "f6c0c5bc05024a51de1626e8f54fafaebb8e78a42bb00558cf133331fe7f1b1b",
+      "donorIcon": 74,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/416-minuet-foil.png",
+      "sha256": "0612e4d7a21749f0748adf9858cf4481c5dc2cfd7fb28d2aecfce68adf089cda",
+      "bytes": 215,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 416,
+      "originalSource": "build/art/item-drafts/item-416-minuet-foil-v2/native-preview.png",
+      "nativePixelsSha256": "8338f436466c0848bf00b941787ec3ffd6d915a14d95ec68ae91d2cadbf153cd",
+      "donorIcon": 88,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/417-witch-foil.png",
+      "sha256": "900ca565f5a6193c512505b8329aedbe976b5f96776ef38a5fb6ef194a445fad",
+      "bytes": 187,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 417,
+      "originalSource": "build/art/item-drafts/item-417-witch-foil-v2/native-preview.png",
+      "nativePixelsSha256": "dbd0eb4863b0466362895d7215defb6c3086d008d8b1d36984f705ea481c6ff3",
+      "donorIcon": 88,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/418-tempo-foil.png",
+      "sha256": "29d0ce77ca3151fd73a6ca87ea7f8f321c646dbb2a7e0896c75106a61a0aae8b",
+      "bytes": 209,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 418,
+      "originalSource": "build/art/item-drafts/418-tempo-foil-v3/native-preview.png",
+      "nativePixelsSha256": "ea8829775f2fa2b8f66f5bb98b694027e0b494fe379f5ec9f7b83feb7a4d1a22",
+      "donorIcon": 88,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/419-polka-foil.png",
+      "sha256": "f403083a8d48752c3ce72c92bd4d09c5ae5188d2c4ae3ca09d119f7211b5f14e",
+      "bytes": 178,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 419,
+      "originalSource": "build/art/item-drafts/item-419-polka-foil-v2/native-preview.png",
+      "nativePixelsSha256": "8b8a9a392801ae552c3c16e39bee2e58ad36f85bc8e8af732592cb590b0452cc",
+      "donorIcon": 88,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/420-frolic-foil.png",
+      "sha256": "903f625c3765a19e425a5224dd9ea35958b48125f6b6799afd263e7bcf257934",
+      "bytes": 208,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 420,
+      "originalSource": "build/art/item-drafts/item-420-frolic-foil-v2/native-preview.png",
+      "nativePixelsSha256": "a1d6e1c0ac05ade7952e365cfaea5c73dc4b875a1066b5ac4ac7db281dfcbaaf",
+      "donorIcon": 88,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/421-forbidden-foil.png",
+      "sha256": "6171afe8dc80f641ac316368b987ab2e21cba9089f29a579355d2cf963221ed5",
+      "bytes": 201,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 421,
+      "originalSource": "build/art/item-drafts/item-421-forbidden-foil-v2/native-preview.png",
+      "nativePixelsSha256": "1a4aa4a03bcc1bdce41cc5d4fe58ed5af0a260df1764bc770c207e6e65bee551",
+      "donorIcon": 88,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/422-jitterbug-foil.png",
+      "sha256": "39c27b8629ca13a968d3fa113287f88c2fa61497b1d8cea3920e16433006f444",
+      "bytes": 202,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 422,
+      "originalSource": "build/art/item-drafts/item-422-jitterbug-foil-v3/native-preview.png",
+      "nativePixelsSha256": "1445741406186d4b36f2703e691e660b71538aef85c9fd9b0075ed7760f0e2af",
+      "donorIcon": 88,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/423-danceblade.png",
+      "sha256": "247e9e1dc35bd189611cac67695d7e5367d323076e3a5a9e081214ac79c7d483",
+      "bytes": 194,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 423,
+      "originalSource": "build/art/item-drafts/item-423-danceblade-v2/native-preview.png",
+      "nativePixelsSha256": "69f1425169fc613348f38787f2de75dce0531ca1246c91be6c59a3c9080de5a8",
+      "donorIcon": 88,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/424-etude-pipe.png",
+      "sha256": "988dacf367bdcecc3a8ddce53d32588ac0e3a56c457f7508f3dc06370b0701ca",
+      "bytes": 215,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 424,
+      "originalSource": "build/art/item-drafts/item-424-etude-pipe-v2/native-preview.png",
+      "nativePixelsSha256": "1c88a20296cb7e9f73387c45adac71e2f593ed167938dcce0ba9de8e70185364",
+      "donorIcon": 201,
+      "paletteBank": 1
+    },
+    {
+      "path": "artwork/items/425-battle-pipe.png",
+      "sha256": "22281dce0bf9628aead27d0be1a810b26ca1c483181b039574d03bf5a75dabe0",
+      "bytes": 211,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 425,
+      "originalSource": "build/art/item-drafts/item-425-battle-pipe-v2/native-preview.png",
+      "nativePixelsSha256": "501c87d5433d1b04f44095d2d3770d111b7dcc3ca255f9449d2c4399b8bf53dd",
+      "donorIcon": 201,
+      "paletteBank": 1
+    },
+    {
+      "path": "artwork/items/426-refrain-pipe.png",
+      "sha256": "3bdc3560a9867a94101fbd2e263d22ade361f379f915a5e91b93703fca450d0e",
+      "bytes": 206,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 426,
+      "originalSource": "build/art/item-drafts/item-426-refrain-pipe-v2/native-preview.png",
+      "nativePixelsSha256": "68691ab7a0d63a28dcd4c879d4750f1b2a9d0a2a91338a3a9e9703691a307171",
+      "donorIcon": 201,
+      "paletteBank": 1
+    },
+    {
+      "path": "artwork/items/427-requiem-pipe.png",
+      "sha256": "fdfef9289daa0fe2f2bacb0fe8c6cc764c30384df4aaebbfa233d1b556e8055e",
+      "bytes": 220,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 427,
+      "originalSource": "build/art/item-drafts/item-427-requiem-pipe-v2/native-preview.png",
+      "nativePixelsSha256": "5fb8e8f3777b754b148fb653ca1c9480c191df0e0c36bcfd0b3b0f72d8e77b5d",
+      "donorIcon": 201,
+      "paletteBank": 1
+    },
+    {
+      "path": "artwork/items/428-angel-pipe.png",
+      "sha256": "aced878efafb45a0c38bfd43704218cf81ca3931bdd02f2dc8d72f3ee40b4f7d",
+      "bytes": 214,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 428,
+      "originalSource": "build/art/item-drafts/item-428-angel-pipe-v2/native-preview.png",
+      "nativePixelsSha256": "44d0d2151897dd4a48af1206f6d5b76fe1164a57c8464a024e7ca7f8a5e938f7",
+      "donorIcon": 201,
+      "paletteBank": 1
+    },
+    {
+      "path": "artwork/items/429-traveler-pipe.png",
+      "sha256": "e87d7482bf84932b3c21edb12747214c3cb0ef2e96d06f342baa552d3c3e5edb",
+      "bytes": 213,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 429,
+      "originalSource": "build/art/item-drafts/item-429-traveler-pipe-v2/native-preview.png",
+      "nativePixelsSha256": "e12b6d23940cb199188e22989de6e1376e547e7c9d9b2e5a0d32e50ad1dfd0b1",
+      "donorIcon": 201,
+      "paletteBank": 1
+    },
+    {
+      "path": "artwork/items/430-ballad-pipe.png",
+      "sha256": "c94f4d5bfc82576f6ebe72cb4dcc0c3cff8db8765e8f25ea0e3c954047cd1ede",
+      "bytes": 202,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 430,
+      "originalSource": "build/art/item-drafts/item-430-ballad-pipe-v2/native-preview.png",
+      "nativePixelsSha256": "9bb5e17407cb0f9780e48620f3124c699390737328e1ad4bf0e6660d388b16b9",
+      "donorIcon": 201,
+      "paletteBank": 1
+    },
+    {
+      "path": "artwork/items/431-nameless-pipe.png",
+      "sha256": "89dd4904629722bca9f47be0abff714581e63b3b3e09e5642081dae468b2924c",
+      "bytes": 209,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 431,
+      "originalSource": "build/art/item-drafts/item-431-nameless-pipe-v2/native-preview.png",
+      "nativePixelsSha256": "57cccff19a780ec305af12e8f210d301034bf80689f8c0a727d45756978e770e",
+      "donorIcon": 201,
+      "paletteBank": 1
+    },
+    {
+      "path": "artwork/items/432-stone-rod.png",
+      "sha256": "0b55eeefbd53422f655c8bda0fd0937ff8c2556a5826d0122c576d4edc48b50f",
+      "bytes": 213,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 432,
+      "originalSource": "build/art/item-drafts/432-stone-rod-v3/native-preview.png",
+      "nativePixelsSha256": "3d872b1d595a97a1987bffa66ac165a5162fbe1d0bfd002fd33274aec35b9278",
+      "donorIcon": 135,
+      "paletteBank": 2
+    },
+    {
+      "path": "artwork/items/433-root-rod.png",
+      "sha256": "1b1801a8e5fd6089d09809192ce5df83b031da1c8fafe48a2fa629c3014ee50f",
+      "bytes": 214,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 433,
+      "originalSource": "build/art/item-drafts/item-433-root-rod-v2/native-preview.png",
+      "nativePixelsSha256": "c8c4197dd3c3a2878986f455b627225b86ddb68325a595fb69481dd1039399c8",
+      "donorIcon": 135,
+      "paletteBank": 2
+    },
+    {
+      "path": "artwork/items/434-river-rod.png",
+      "sha256": "78d1dbd1a7e8c94d190fafe87ae11c7f72692d0dfecffa24f47ed58450775b74",
+      "bytes": 199,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 434,
+      "originalSource": "build/art/item-drafts/item-434-river-rod-v2/native-preview.png",
+      "nativePixelsSha256": "9ef4dac37694163296071e34bea3e17bb765e77dbb158828aca8f9a7a08be585",
+      "donorIcon": 135,
+      "paletteBank": 2
+    },
+    {
+      "path": "artwork/items/435-zephyr-rod.png",
+      "sha256": "1d1842a06820d5a7f4480c2f0539e5c23c9ba54fc2ed80713a42f0bc332ee397",
+      "bytes": 200,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 435,
+      "originalSource": "build/art/item-drafts/item-435-zephyr-rod-v2/native-preview.png",
+      "nativePixelsSha256": "9e48cfdeeafa0e2ac259aeccc0a28eb7a72534754e289890123a692176668ef3",
+      "donorIcon": 135,
+      "paletteBank": 2
+    },
+    {
+      "path": "artwork/items/436-wardstone-rod.png",
+      "sha256": "250d4ae0d1bb33337515e3509c49304a71dc26258d62bec2ee416e733c7e06b0",
+      "bytes": 193,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 436,
+      "originalSource": "build/art/item-drafts/item-436-wardstone-rod-v2/native-preview.png",
+      "nativePixelsSha256": "ec53fc31a60fc41c290713dd2cc2e2548e2bbbfc4780e165b02821864930c2cf",
+      "donorIcon": 135,
+      "paletteBank": 2
+    },
+    {
+      "path": "artwork/items/437-wisp-rod.png",
+      "sha256": "b9ac03627f7f2d6770896119c7d92b96e5a02b61552fb5186a23b13fd7991811",
+      "bytes": 200,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 437,
+      "originalSource": "build/art/item-drafts/item-437-wisp-rod-v2/native-preview.png",
+      "nativePixelsSha256": "8f23edc7e49d42b22c0ea2451aa27e5fb74439db5c2e892afebbd6cc258e9c58",
+      "donorIcon": 135,
+      "paletteBank": 2
+    },
+    {
+      "path": "artwork/items/438-rime-rod.png",
+      "sha256": "e7059f1975676a30ce0917c06ea3b3a8d4f206729f510c98308c5b61e41a50d0",
+      "bytes": 214,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 438,
+      "originalSource": "build/art/item-drafts/item-438-rime-rod-v2/native-preview.png",
+      "nativePixelsSha256": "eef85e771c02589af434cb3a446c223ae61f6d3099531c0ec4f2c3d361017b13",
+      "donorIcon": 135,
+      "paletteBank": 2
+    },
+    {
+      "path": "artwork/items/439-gaia-rod.png",
+      "sha256": "13989d8d4a754bd83cc862cf3c774e8c7a417d3708c3a205d2010692755a615e",
+      "bytes": 219,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 439,
+      "originalSource": "build/art/item-drafts/item-439-gaia-rod-v2/native-preview.png",
+      "nativePixelsSha256": "81f2ac0462c56abb77d7140dc039515219731c1561207e1a6070ec94aaf10c01",
+      "donorIcon": 135,
+      "paletteBank": 2
+    },
+    {
+      "path": "artwork/items/440-hourglass-saber.png",
+      "sha256": "c113bf77e0afb2beda0d97997614452af396d9b60022416b734e15f932a4372e",
+      "bytes": 206,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 440,
+      "originalSource": "build/art/item-drafts/item-440-hourglass-saber-v2/native-preview.png",
+      "nativePixelsSha256": "e6ab05fa99fb951c512ad4c66c046efc14887325ecd45b49de20120bcb676a4c",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/441-aether-saber.png",
+      "sha256": "d39115a67b56a4337431dca4cf3d8a2c265b1e9c5fa240a5448c6b314377bc0f",
+      "bytes": 204,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 441,
+      "originalSource": "build/art/item-drafts/item-441-aether-saber-v2/native-preview.png",
+      "nativePixelsSha256": "7ae902dd6bbbbe0924f5f7e6d8603113ba965f72bce8ded26f6bc6477a447cb5",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/442-dawn-saber.png",
+      "sha256": "6b9ad13b7534004a3a71678048f02d12b4ee09792aed2efae248bb0a7ad6903e",
+      "bytes": 201,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 442,
+      "originalSource": "build/art/item-drafts/item-442-dawn-saber-v2/native-preview.png",
+      "nativePixelsSha256": "e64fb6a640ca02e5d2771f6a19fb3d92f3e31fe361ca1637072bd11b73172497",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/443-severance-saber.png",
+      "sha256": "e037364db133ea857ccbf84e80ebf7121dce733db1f2572a09060700bb96aebf",
+      "bytes": 211,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 443,
+      "originalSource": "build/art/item-drafts/item-443-severance-saber-v2/native-preview.png",
+      "nativePixelsSha256": "4770bd92bdce84dda599f277999ef7df69f1686ed362579c07e3898ca2b78f19",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/444-prism-saber.png",
+      "sha256": "dcd00a3dfe7e4c32f0ac01c0c6550da781e9362da8157c52d52dc22d62b50f33",
+      "bytes": 213,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 444,
+      "originalSource": "build/art/item-drafts/item-444-prism-saber-v2/native-preview.png",
+      "nativePixelsSha256": "2f4ee3a00d522570f553860699e48080f489db5ba865bedfe97a0111568c26b2",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/445-stone-saber.png",
+      "sha256": "6c6f387e1d9fac8fbd62c880cb2e3a09c7d00114871b187fca9814894517be64",
+      "bytes": 211,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 445,
+      "originalSource": "build/art/item-drafts/item-445-stone-saber-v2/native-preview.png",
+      "nativePixelsSha256": "a7f7a767f32010eea35ec48fff9f81e5402a5e90c3e9388d20a5abb9b839fc11",
+      "donorIcon": 32,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/446-red-spider-katana.png",
+      "sha256": "20864c308d57cafd006157efeb8814f2d0192a917b37d9a5b374ec985892760a",
+      "bytes": 214,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 446,
+      "originalSource": "build/art/item-drafts/446-red-spider-katana-v3/native-preview.png",
+      "nativePixelsSha256": "6e92e29ac9dafc838fd30db1171c319b63611afab95c14e439f1e4de6376bd66",
+      "donorIcon": 106,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/447-nightward-sword.png",
+      "sha256": "e4dfc705411e202204143943da8e3cd3ca033f07c908dd3ee635a6955cd55706",
+      "bytes": 216,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 447,
+      "originalSource": "build/art/item-drafts/item-447-nightward-sword-v2/native-preview.png",
+      "nativePixelsSha256": "a107af50cae39766fb65151f3dafc780d440702b992f1e28b09f9568d7677881",
+      "donorIcon": 1,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/448-challenger-axe.png",
+      "sha256": "e07ec0dc887cd7714b63422c389af7bc556dc6a189b67579281fcee84604073b",
+      "bytes": 219,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 448,
+      "originalSource": "build/art/item-drafts/item-448-challenger-axe-v2/native-preview.png",
+      "nativePixelsSha256": "35d1194ca870313ad0bf3cb33f8361eb3e23658f57a5bf1d4eaf6327d06b54b9",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/449-refuge-rod.png",
+      "sha256": "af815df382bb8607bf2ac77605ba769e26d0445a040f6b0266ec4011b8b93474",
+      "bytes": 196,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 449,
+      "originalSource": "build/art/item-drafts/item-449-refuge-rod-v2/native-preview.png",
+      "nativePixelsSha256": "89635609f8c23e079f93cf04d7203af0a9e5354c5ba576e009d70e754e596cd0",
+      "donorIcon": 135,
+      "paletteBank": 2
+    },
+    {
+      "path": "artwork/items/450-preventive-knife.png",
+      "sha256": "1069ea0651e23e9f9199a0ee994114e419e9d53d348d1eb965140bfcccda72bb",
+      "bytes": 216,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 450,
+      "originalSource": "build/art/item-drafts/item-450-preventive-knife-v2/native-preview.png",
+      "nativePixelsSha256": "347cdcf92b2523c4165ce7715839cb745ce692de65b517b1db6c08c9b603f5fc",
+      "donorIcon": 74,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/451-fortifying-knife.png",
+      "sha256": "3c7314aeb8fdba9c347d2b48eb82286fcf803a4e95d886034a71e9baf05e6286",
+      "bytes": 220,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 451,
+      "originalSource": "build/art/item-drafts/item-451-fortifying-knife-v2/native-preview.png",
+      "nativePixelsSha256": "50f67ee762206ef8798a43aa404e1aebc8e55ee5d84694bef992d7eca2191ba5",
+      "donorIcon": 74,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/452-passing-foil.png",
+      "sha256": "c6e929cd2a59e74eb8aa753dcbc19ae34f1142f77790273aacdb94a4fe5d645b",
+      "bytes": 218,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 452,
+      "originalSource": "build/art/item-drafts/item-452-passing-foil-v4/native-preview.png",
+      "nativePixelsSha256": "ebe0c39792a1be4662f5a0cade824b3a9b0671fa9160e4d5d6e9a03f57a030ca",
+      "donorIcon": 88,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/453-recruit-axe.png",
+      "sha256": "9d22366e118ea505f35f0ebca31df102a9ef4e6e05e455b943fe5c720f386075",
+      "bytes": 228,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 453,
+      "originalSource": "build/art/item-drafts/item-453-recruit-axe-v2/native-preview.png",
+      "nativePixelsSha256": "c71a2a1c40eff38a8aa959721e471134eb86129cb146276b6aeed58d628b4719",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/454-throwing-axe.png",
+      "sha256": "f97df372621a71495f1d46f8f6a27b0db36680d9cdcb63329e8d0abf110e95f7",
+      "bytes": 234,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 454,
+      "originalSource": "build/art/item-drafts/item-454-throwing-axe-v2/native-preview.png",
+      "nativePixelsSha256": "6d0e78827e139a963e7c01c3665b29d46cd8c581fac689d426348d11e44cbb47",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/455-field-axe.png",
+      "sha256": "278f6d94d8551f74af9556253e4d744eb58b9d8434ce2a9b3ce792aa8a7e986e",
+      "bytes": 207,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 455,
+      "originalSource": "build/art/item-drafts/item-455-field-axe-v2/native-preview.png",
+      "nativePixelsSha256": "6519a270c5b6525b2ede0d273c190e7bf9dfef0bfcd3414c1d3c6e05806cfcba",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/456-breaching-axe.png",
+      "sha256": "aafe7978985b3adca7be92678dab7a75777f540ba5edaed676982e3efd7e2f58",
+      "bytes": 207,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 456,
+      "originalSource": "build/art/item-drafts/item-456-breaching-axe-v2/native-preview.png",
+      "nativePixelsSha256": "7f6b6c67e5e5ea0e127f182e09545b1731b2c15f46a1d4e896ad1a5d8cbdd4f4",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/457-bearded-axe.png",
+      "sha256": "fa3ec92a8883607e8990595d04d102ea7001fcb0b1dff6daa040d66b42692e85",
+      "bytes": 231,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 457,
+      "originalSource": "build/art/item-drafts/item-457-bearded-axe-v2/native-preview.png",
+      "nativePixelsSha256": "e46a78ff9729f4d0cbf19183bd74fe06fef3d57780bb48511380ce4eb349dfb6",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/458-arena-axe.png",
+      "sha256": "9a89136263764d8663bad664991d082c90adcf1573c0fcd0c5845bb52e568c31",
+      "bytes": 217,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 458,
+      "originalSource": "build/art/item-drafts/item-458-arena-axe-v2/native-preview.png",
+      "nativePixelsSha256": "4c53c3713f0799460e43d356216cc86a9501f3df2734a390fee91b95c5569ea4",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/459-headsman-s-axe.png",
+      "sha256": "b4775534797e7fde4420d90126cc408598eaf7c3c6a38bb3e0581737176a787e",
+      "bytes": 212,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 459,
+      "originalSource": "build/art/item-drafts/item-459-headsman-s-axe-v2/native-preview.png",
+      "nativePixelsSha256": "e8d9ea2131532371599abb89883e2e5f04afa2f58b4e7992b33aed48ed621ddf",
+      "donorIcon": 52,
+      "paletteBank": 0
+    },
+    {
+      "path": "artwork/items/460-titan-axe.png",
+      "sha256": "7b906f8c6060c191c7b8740d2c85dc4d2842b6f635ad2f7c589532c3e9a8b31b",
+      "bytes": 216,
+      "size": [
+        16,
+        16
+      ],
+      "role": "item-icon",
+      "item": 460,
+      "originalSource": "build/art/item-drafts/item-460-titan-axe-v2/native-preview.png",
+      "nativePixelsSha256": "f50c7b71f976d26eb0570bde9ce66c84a9915372bb6e7719691667ef3867d40a",
+      "donorIcon": 52,
+      "paletteBank": 0
     }
   ]
 }

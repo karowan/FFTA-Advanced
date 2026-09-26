@@ -16,6 +16,8 @@ typedef struct { uint32_t magic; Snapshot *snapshots; uint8_t *manager,*selectio
 #define OWNERS ((Owners *)0x0203ff30u)
 _Static_assert(sizeof(Snapshot)==0x1140,"snapshot allocation");
 _Static_assert(sizeof(Extra)==61,"unit copy stride");
+/* Execution-scope and snapshot chain pointers follow at 0x0203FF44/48. */
+_Static_assert(0x0203ff30u+sizeof(Owners)<=0x0203ff44u,"copy-owner root below the scope pointers");
 
 static int in_ram(const void *p,unsigned size) {
     uintptr_t address=(uintptr_t)p;

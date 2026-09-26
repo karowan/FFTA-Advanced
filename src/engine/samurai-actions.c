@@ -158,22 +158,4 @@ unsigned ffta_samurai_law_hit(const uint8_t *context,unsigned removal,
     return !removal && status_byte==context+0x13 && bit==1;
 }
 
-extern unsigned ffta_original_samurai_execute(uint8_t *,uint8_t *,unsigned,unsigned,
-    unsigned,unsigned,unsigned,unsigned);
-unsigned ffta_samurai_execute(uint8_t *output,uint8_t *wrapper,unsigned x,unsigned y,
-    unsigned action,unsigned item,unsigned mode,unsigned last) {
-    uint8_t *actor=wrapper?*(uint8_t **)wrapper:0;
-    unsigned nested=ffta_centered_factor(actor,FFTA_SAM_A3)==5 && !ffta_centered_active(actor);
-    FFTA_ExecutionScope scope;
-    unsigned opened=ffta_execution_open(&scope,actor,action);
-    FFTA_ActionSnapshot snapshot;
-    unsigned snapshotted=ffta_snapshot_begin(&snapshot,actor,0,1);
-    if(snapshotted)ffta_action_started(actor,action,FFTA_ACTION_NATIVE_PRIMARY,FFTA_ACTION_UNCLASSIFIED);
-    unsigned result=ffta_original_samurai_execute(output,wrapper,x,y,action,item,mode,last);
-    ffta_samurai_completed_results(actor,action,1,output);
-    if(snapshotted)ffta_action_completed(actor);
-    if(!nested)ffta_centered_retire(actor);
-    if(opened)ffta_execution_close(&scope);
-    if(snapshotted)ffta_snapshot_end(&snapshot);
-    return result;
-}
+/* ffta_samurai_execute (native executor entry) lives in samurai-execute.c. */

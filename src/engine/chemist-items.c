@@ -109,35 +109,7 @@ int ffta_chemist_revive(const uint8_t *c) {
      * no healing support, item support or numerical 200-HP ceiling applies. */
     return ((int (*)(const uint8_t *))0x08131a61u)(c);
 }
-extern unsigned ffta_previous_paid(uint8_t *,unsigned);
-unsigned ffta_chemist_payment_gate(uint8_t *actor,unsigned action,unsigned selected,const unsigned *frame) {
-    if(ffta_chemist_action(action)) {
-        unsigned origin=ffta_job_origin(actor);
-        if(!origin || origin>24)return 0;
-        if(action!=FFTA_CHM_A5) {
-            /* Native A433C saved selected coordinates, not a preview pointer.
-             * Resolve only this actor's exact owner cohort after movement. */
-            if(!frame)return 0;
-            uint8_t *peers[36],*target=0;
-            unsigned count=ffta_job_peers(actor,peers,36);
-            for(unsigned i=0;i<count;i++)if(peers[i][0xf6]==frame[0x44/4] && peers[i][0xf7]==frame[0x48/4]) {
-                if(target)return 0; /* ambiguous occupied tile is not authority */
-                target=peers[i];
-            }
-            if(!target || (((actor[0x29]>>7)^((actor[0xeb]>>5)&1u))!=(target[0x29]>>7)))return 0;
-            /* Revival eligibility reads native context flags as well. Give
-             * every single-target recipe a complete zeroed context instead
-             * of borrowing stale preview memory at the payment boundary. */
-            unsigned context[13];
-            for(unsigned i=0;i<13;i++)context[i]=0;
-            context[0]=(uintptr_t)actor;
-            context[1]=context[2]=(uintptr_t)target;context[3]=action|(selected<<16);
-            if(!ffta_chemist_eligibility((const uint8_t *)context))return 0;
-        }
-        return ffta_chemist_pay(action,selected);
-    }
-    return ffta_previous_paid(actor,action);
-}
+/* ffta_chemist_payment_gate lives in chemist-payment.c. */
 extern int ffta_chemist_reaction_consumption(unsigned,unsigned,const uint8_t *);
 int ffta_chemist_consumption(unsigned item,unsigned amount,const uint8_t *object) {
     /* Native A2E70 is per recipient, not a whole-action cost boundary.

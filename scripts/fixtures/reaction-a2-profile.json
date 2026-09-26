@@ -1,0 +1,146 @@
+{
+  "schema": 1,
+  "description": "Reaction sweep group A: slot 1 Bard, slot 2 Samurai, slot 3 Viking, slot 4 Chemist, slot 5 Dancer; every lesson learned, R2/S2 and the combo equipped, HP/MP 400, first weapon. For the reaction battles in scripts/test-game-pass.py.",
+  "units": [
+    {
+      "slot": 1,
+      "job": 123,
+      "hp": 400,
+      "mp": 400,
+      "equipment": [
+        424
+      ],
+      "lessons": [
+        "BRD-A1",
+        "BRD-A2",
+        "BRD-A3",
+        "BRD-A4",
+        "BRD-A5",
+        "BRD-A6",
+        "BRD-A7",
+        "BRD-A8",
+        "BRD-S1",
+        "BRD-S2",
+        "BRD-R1",
+        "BRD-R2",
+        "BRD-C1"
+      ],
+      "reaction": "BRD-R2",
+      "support": "BRD-S2",
+      "combo": "BRD-C1"
+    },
+    {
+      "slot": 2,
+      "job": 116,
+      "hp": 400,
+      "mp": 400,
+      "equipment": [
+        376
+      ],
+      "lessons": [
+        "SAM-A1",
+        "SAM-A2",
+        "SAM-A3",
+        "SAM-A4",
+        "SAM-A5",
+        "SAM-A6",
+        "SAM-A7",
+        "SAM-A8",
+        "SAM-A9",
+        "SAM-S1",
+        "SAM-S2",
+        "SAM-R1",
+        "SAM-R2",
+        "SAM-C1"
+      ],
+      "reaction": "SAM-R2",
+      "support": "SAM-S2",
+      "combo": "SAM-C1"
+    },
+    {
+      "slot": 3,
+      "job": 118,
+      "hp": 400,
+      "mp": 400,
+      "equipment": [
+        392
+      ],
+      "lessons": [
+        "VIK-A1",
+        "VIK-A2",
+        "VIK-A3",
+        "VIK-A4",
+        "VIK-A5",
+        "VIK-A6",
+        "VIK-A7",
+        "VIK-A8",
+        "VIK-A9",
+        "VIK-S1",
+        "VIK-S2",
+        "VIK-R1",
+        "VIK-R2",
+        "VIK-C1"
+      ],
+      "reaction": "VIK-R2",
+      "support": "VIK-S2",
+      "combo": "VIK-C1"
+    },
+    {
+      "slot": 4,
+      "job": 120,
+      "hp": 400,
+      "mp": 400,
+      "equipment": [
+        408
+      ],
+      "lessons": [
+        "CHM-A1",
+        "CHM-A2",
+        "CHM-A3",
+        "CHM-A4",
+        "CHM-A5",
+        "CHM-A6",
+        "CHM-A7",
+        "CHM-A8",
+        "CHM-A9",
+        "CHM-A10",
+        "CHM-S1",
+        "CHM-S2",
+        "CHM-R1",
+        "CHM-R2",
+        "CHM-C1"
+      ],
+      "reaction": "CHM-R2",
+      "support": "CHM-S2",
+      "combo": "CHM-C1"
+    },
+    {
+      "slot": 5,
+      "job": 124,
+      "hp": 400,
+      "mp": 400,
+      "equipment": [
+        416
+      ],
+      "lessons": [
+        "DNC-A1",
+        "DNC-A2",
+        "DNC-A3",
+        "DNC-A4",
+        "DNC-A5",
+        "DNC-A6",
+        "DNC-A7",
+        "DNC-A8",
+        "DNC-A9",
+        "DNC-S1",
+        "DNC-S2",
+        "DNC-R1",
+        "DNC-R2",
+        "DNC-C1"
+      ],
+      "reaction": "DNC-R2",
+      "support": "DNC-S2",
+      "combo": "DNC-C1"
+    }
+  ]
+}
