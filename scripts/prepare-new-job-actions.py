@@ -77,7 +77,7 @@ def prepare(plan_path, approval_path, out):
             meaning=old.get('generation',{}).get('poseMeaning',{}).get('label',f'{use["lifetime"]} slot {slot}, frame {phase}')
             material=('ivory cap and coat, dark teal cap band and shoulder yoke, ochre cuffs, brown medicine case, pale teal Nu Mou face and exposed drooping ears' if slug=='physician' else 'ochre cap, dark goggles ABOVE the eyes, cream ears and face, orange-gold pom-pom, dark teal utility vest, orange gloves, small brown charges and satchel')
             prompt=(f'Fill ONLY the empty bottom-right cell of image 1 with the approved {spec["label"]} from image 2, performing exactly the pose of the four bottom-row native references. '
-                f'Pose: {meaning}. Image 1 fixes the 160x96 logical grid, scale, anatomy and pose; top-right is the approved neutral. Image 2 is the exact approved native design and COLORS. Image 3 is the original costume concept, costume information only. '
+                f'Pose: {meaning}. Image 1 fixes the 160x96 logical grid, scale, anatomy and pose; top-right is the approved neutral. Image 2 is the exact approved native design and COLORS. Image 3 supplies the ONLY allowed native palette colors. Image 4 is the original costume concept, costume information only; never use its skin colors or fine illustration detail. '
                 f'Keep {material} consistent across the new pose. Preserve the same coarse logical pixel clusters, facial landmarks and compact silhouette. '
                 'Only change limb positions and head/body orientation to match this specific native pose. No new costume, equipment, weapons, spell effects or fine illustration detail. '
                 'Target cell x128..159,y56..87. Return the ENTIRE unchanged 5-column 2-row worksheet on its flat gray background, no labels. Do not move or resize the other cells. ')
@@ -89,8 +89,19 @@ def prepare(plan_path, approval_path, out):
                     prompt+='For this normal rear orientation, the medicine case stays on screen LEFT exactly as in image 2; never swap it to screen right. '
             if slot in (0,1,2,3):
                 prompt+='Keep the approved head and costume material colors fixed while reproducing this exact stride, arm swing and foot position. '
+            if slot in (2,3):
+                prompt+='This running frame is in the air: no black ground oval. Follow native foot positions exactly. '
+            if slug=='sapper' and slot in (42,43,60,61):
+                prompt=prompt.replace('This is a REAR view: no face or front goggle lenses on the back; keep equipment on the same anatomical side. ','')
+                prompt+='This sequence turns the body: match the lower native reference pose\'s exact facing at this instant, even when it differs from the neutral above. Never put eyes on the rear of the head; when the head turns toward camera the face may become visible. '
+            if slot in (70,71):
+                prompt+='Preserve the small native status sparkles visible above the reference head in this specific frame, at the same positions; these existing actor details are required, not a new spell effect. '
+            if slot in (20,21,22,23,24,25,42,43,60,61):
+                for sentence in ['This is a REAR view: no face or front goggle lenses on the back; keep equipment on the same anatomical side. ','For this normal rear orientation, the medicine case stays on screen LEFT exactly as in image 2; never swap it to screen right. ']:
+                    prompt=prompt.replace(sentence,'')
+                prompt+='POSE FACING TAKES PRIORITY: copy the exact head and body orientation of the BOTTOM native row. The top neutral is identity only and can face differently. This is a turning action; preserve anatomical equipment sides through the turn, not fixed screen sides. '
             request=dict(schema=1,tool='image_gen.imagegen',model='Tool managed; version not exposed',prompt=prompt,
-                references=[record(template),record(design),spec['concept']],nativeReferences=refs,
+                references=[record(template),record(design),record(ROOT/plan['outputDirectory']/'palette-0.png'),spec['concept']],nativeReferences=refs,
                 logicalGrid=[160,96],crop=[128,56,160,88],strip=[128,48,160,96],
                 paletteROM=plan['paletteROM'],palette=plan['palette'],meaning=meaning,status='prepared-not-generated')
             request_path=folder/(pose['id']+'-request.json');request_path.write_text(json.dumps(request,indent=2)+'\n')

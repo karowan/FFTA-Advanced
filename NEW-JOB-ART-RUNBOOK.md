@@ -10,6 +10,9 @@ recoverable before they spread to dozens of poses.
 Worked example: [Physician and Sapper checkpoint](notes/chemist-job-art-2026-09-26.md).
 The [source receipt](src/art/new-job-review/chemist-base-2026-09-26.json)
 preserves the actual prompts, references, conversions and separate base approval.
+The [complete proposal receipt](src/art/new-job-review/chemist-proposals-2026-09-27.json)
+records all chosen action revisions and the independent UI preparation, with
+worked exact requests. Its status is awaiting animation/UI review, not approval.
 The user separately approved both concept directions and then both native
 front/rear bases on September 26. Preserve the separate approval receipts; do
 not infer native approval from a concept response in future jobs.
@@ -312,6 +315,17 @@ guesswork. Inherited attack variants may need extra same-race references; each
 fallback to the actual native drawing is recorded. Never claim this inheritance
 implements a new class's runtime animations.
 
+Inspect those fallbacks before sending the worksheet. Several Moogle jobs lack
+the same action, so three apparent references can actually repeat a Black Mage.
+That repeated pointed hat caused Sapper headgear drift even with a written
+warning. For a focused revision, retain the authenticated reference column that
+really implements the action and the approved new-job neutral column; leave the
+other reference cells empty. Preserve the worksheet coordinates, original-sheet
+hash and retained column in the request receipt. This is reference composition,
+not hand-drawn replacement art. Use the approved native base as the identity
+reference and describe the required cap, ears and goggles explicitly. Do not
+silently change the already-generated request or copy the donor's costume.
+
 ## Gate 5 — Portrait, head, badge and wheel independently
 
 | Asset | Generate against | Acceptance check |
@@ -335,6 +349,55 @@ Restore only authenticated common face pixels, and check the full eye region for
 duplicates. Never copy a source job's whole portrait or costume into the new job.
 
 ## Gate 6 — Final review and import
+
+### Worked UI preparation and review commands
+
+The Physician/Sapper adapters are explicit contracts for these two jobs, not a
+generic installer. `new-job-ui-art.py prepare` reads the approved base receipt,
+authenticated original race portraits and head icons, and existing ROM palettes.
+It prepares independent portrait and head requests. Generate each request with
+its ordered references using imagegen, then ingest that exact returned file:
+
+```powershell
+python scripts/new-job-ui-art.py prepare --base-plan build/art/chemist-job-art-2026-09-26/base-plan.json --out build/art/chemist-job-art-2026-09-26/ui-new-round
+python scripts/new-job-ui-art.py ingest --request build/art/chemist-job-art-2026-09-26/ui-new-round/physician/portrait-request.json --image RAW_IMAGE_PATH --revision v1
+```
+
+Use the request filenames actually emitted by preparation. Preserve each raw
+attempt. A new revision must have a new ID; never overwrite a failed attempt.
+Portraits have a 144×112 logical worksheet with a 48×56 target. Heads have an
+80×14 worksheet: four authenticated original heads and a fifth target containing
+only the bounded common face anchors. Original costume pixels are not a base.
+
+The model sometimes pads a whole head worksheet vertically. If inspection
+establishes the exact full-row rectangle, `ingest --worksheet-box L T R B
+--registration-note "observed whole-row padding"` records that rectangle against
+the immutable raw hash before the one logical-grid sample. This must include
+the entire five-cell row. Do not fit the individual generated head by its bounds.
+Opaque cream in a native head is also face/ear color: preserve it. Connected
+background removal appropriate to a body or portrait can erase these features.
+
+`prepare-new-job-menu.py` composes the separately generated head with existing
+badge frames and the existing six-pixel UI lettering. It pads the exact approved
+body indices vertically into the 32×40 wheel canvas; it does not redraw, resize
+or requantize the character. The ineligible badge preview uses a preserved
+native UI capture palette. That preview does not establish runtime eligibility
+routing or a new palette ROM offset.
+
+```powershell
+python scripts/prepare-new-job-menu.py --base-plan build/art/chemist-job-art-2026-09-26/base-plan.json --ui-folder build/art/chemist-job-art-2026-09-26/ui-v2 --out build/art/chemist-job-art-2026-09-26/menu-new-round
+python scripts/review-new-job-actions.py --manifest build/art/chemist-job-art-2026-09-26/actions/actions.json --selections build/art/chemist-job-art-2026-09-26/actions/selections.json --base-page build/art/chemist-job-art-2026-09-26/index.html --menu build/art/chemist-job-art-2026-09-26/menu/menu.json --output build/art/chemist-job-art-2026-09-26/review.html
+```
+
+The selection manifest explicitly maps each native pose ID to a native PNG path
+and SHA-256. Approved neutral entries come from the approved base receipt; each
+other selection is a proposal. Never select the newest filename implicitly.
+The review shows every populated land/water sequence in original record order,
+including repeated drawings and control records. Playback previews drawing
+durations only; it does not simulate engine commands. Missing drawings remain
+visibly pending and block a complete-coverage claim. Enlarge any image, stop a
+preview and annotate with Codex's browser comments. No page-owned annotation
+storage is needed.
 
 Freeze a source receipt listing exact approved body/UI image hashes and their
 native palette selections. Show all consumers and complete pose coverage on a
@@ -380,6 +443,9 @@ player saves as test fixtures or publish without authorization.
 | Duplicate eyes after anchors | Regenerate alignment; inspect full face, not only matching coordinates |
 | Muddy or wrong material color | Compare existing bank choices or regenerate with native swatches; no new palette |
 | Color changes between poses | Hold neutral reference fixed; revise each affected drawing; inspect whole cycle |
+| Concept skin/fine detail leaks into action | Order inputs as native worksheet, approved native design, native palette guide, concept; state that concept supplies costume information only |
+| Turning pose faces the wrong way | Follow the actual bottom-row native frame, not sequence parity or the neutral reference; keep equipment on its anatomical side through the turn |
+| Running sprite gains a standing shadow | Regenerate the airborne pose using native foot positions; do not erase the shadow by painting |
 | Model changes anatomy with costume | Stronger same-race worksheet and shared landmarks; do not paint a repair |
 | Same focused issue survives two retries | Preserve failures, show native comparisons, ask for design tradeoff; no endless hidden retries |
 | Large source looks good, 32px looks bad | Reject native result; the large source is not the acceptance view |
@@ -414,7 +480,11 @@ keep this evidence distinct from in-game tests.
 The worked offline check is `python scripts/test-new-job-art.py`. It replays the
 seven preserved base studies, compares every native output hash, and verifies
 rejection of changed source hashes, altered native palette words, clipped bodies
-and wrong worksheet aspect ratios. It requires the private real inputs. A pass
+and wrong worksheet aspect ratios. It also replays both portraits and both head
+icons against their saved hashes and checks rejection of unknown pose selections.
+The review builder requires each selected pose to name its exact attempt and
+hashed conversion receipt, then verifies the source, plan and native output.
+It requires the private real inputs. A pass
 proves those technical checks only; it does not approve a generated costume,
 animation or in-game consumer.
 
