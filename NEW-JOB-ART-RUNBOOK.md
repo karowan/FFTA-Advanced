@@ -7,6 +7,13 @@ retries and approval boundaries. Image generation itself is not deterministic:
 no prompt guarantees good artwork. This runbook makes failures visible and
 recoverable before they spread to dozens of poses.
 
+**September 27 correction:** the Physician animation pass failed visual review
+for distorted proportions and frame-to-frame positioning. Palette, provenance,
+canvas-size and coverage checks passed but did not test anatomy. The four
+approved neutral bases remain approved; the action proposals are not accepted.
+Follow the fixed-coordinate reference audit at Gate 4 before further generation.
+The previous action preparer is now historical-replay-only.
+
 Worked example: [Physician and Sapper checkpoint](notes/chemist-job-art-2026-09-26.md).
 The [source receipt](src/art/new-job-review/chemist-base-2026-09-26.json)
 preserves the actual prompts, references, conversions and separate base approval.
@@ -252,6 +259,97 @@ Only then propagate colors and identity across animations.
 
 ## Gate 4 — All animations, one drawing at a time
 
+### Required correction: measure original positions before generating
+
+The old action worksheet is insufficient. `native_pose` in
+`prepare-reviewed-actions.py` dynamically chooses a crop and, for some large
+poses, fits the original into 32x32. It does not preserve one coordinate system
+across every reference. Missing same-race actions were also substituted with
+the canonical donor. Both operations remain in historical receipts; neither is
+an acceptable basis for new positional constraints.
+
+The rejected Physician walk did **not** use resized native references. Its
+generated anatomy drifted even where the original reference crops were fixed.
+Therefore removing resizing alone is not a fix. On a common nominal origin,
+the p000 proposal occupies 20x22 pixels versus the original's 16x25; its bottom
+edge is five pixels higher. The approved p001 occupies 17x26 versus 16x26.
+Bounds include clothes and shadows, so this diagnoses extent/registration drift,
+not a measured five-pixel foot displacement. Do not repair it by stretching the
+finished image or cropping each frame to its silhouette.
+
+Build the complete native reference atlas first:
+
+```powershell
+python scripts/audit-new-job-animation-anchors.py `
+  --manifest build/art/chemist-job-art-2026-09-26/actions/actions.json `
+  --selections build/art/chemist-job-art-2026-09-26/actions/selections.json `
+  --out build/art/chemist-animation-anchors-2026-09-27
+python scripts/test-animation-anchors.py `
+  --atlas build/art/chemist-animation-anchors-2026-09-27
+```
+
+The reusable extractor currently accepts these two worked-job contracts. It
+reads all eight original jobs per race from authenticated ROM job records. Its
+`anchors.json` covers all 336 inherited slots: 150 populated sequences, 533
+drawing records, 204 control records, 186 null slots and all 148 unique drawings.
+Each populated record retains its original address, descriptor, command,
+duration, parameters and actual source actor. Sapper actions can have different
+canonical actors; never assume all action slots belong to one donor.
+
+Use these distinct forms of evidence:
+
+| Evidence | Meaning and permitted use |
+| --- | --- |
+| OAM origin `(0,0)` | Exact encoded registration, rendered at `(48,64)` on a 96x96 canvas; not a foot or ground joint |
+| Object x/y, size, flip and tile | Exact native part placement; object rectangles are not anatomical segments |
+| Occupied bounds and per-row spans | Exact silhouette extent including clothing, shadows and actor-contained effects |
+| Shared pixel patches | Connected groups of at least two nontransparent palette-index matches, unanimous across at least three corresponding original jobs |
+| Named face/hand/foot landmarks | Must be visually identified on the original pose; the ROM does not supply a named skeleton |
+
+Native images use one fixed inspection crop `[16,8,80,72]`, without resampling.
+The displayed origin is consequently `(32,56)`. A display enlargement uses
+nearest-neighbor pixels and does not change stored geometry. Original images
+and coordinate exports remain ignored; they must not enter the public artwork
+inventory. No new palette or runtime registration system is introduced.
+
+Cross-job comparisons require identical ordered duration/command/parameter
+schedules before contributing shared patches. Missing actions stay empty; never
+repeat the canonical donor in missing columns. Matching schedules are necessary
+but do not prove matching anatomical pose. Inspect the original row. Patch IDs
+are local to one frame: patch 1 in another frame is **not** automatically the
+same eye or limb. Unanimous patches may be outlines or shadows. Where there is
+no shared patch (23 drawing records in this audit), retain the exact canonical
+pose and visibly mark the absence of cross-job landmark evidence.
+
+Before the next generation pass:
+
+1. Use the atlas to identify the visible face/eye or muzzle location, head/body
+   connection, hand/contact locations, and supporting or airborne feet for each
+   distinct pose. Record a landmark as occluded or unresolved instead of guessing.
+   Store the source actor, record, coordinates, interpretation and review status.
+   Shared-pixel extraction alone does not complete this semantic review.
+2. Prepare each target on the same origin as the originals. Keep the approved
+   new-job neutral as the identity reference, and the actual original action as
+   the positional reference. Give wide/tall poses a larger fixed reference canvas
+   rather than shrinking anatomy to 32x32. Native storage feasibility is a
+   separate technical gate; a 64x64 reference export is not a new runtime format.
+3. Preserve head proportions, facial landmarks and costume identity while
+   changing only the parts that move. Ask imagegen for a visual revision if the
+   anatomy drifts. Code may annotate reference diagrams, never draw new limbs,
+   faces or corrective replacement pixels.
+4. Review the complete front and rear walk/run cycles on the fixed grid before
+   extending to every other action. Compare each output with the measured native
+   pose and the approved new-job base. A palette/hash/size check cannot approve
+   this gate, nor can a good neutral stand in for the moving frames.
+5. For every later animation, retain the same positional evidence, ordered
+   keyframes and original controls. Require explicit per-pose landmark review;
+   do not silently propagate unreviewed geometry to the whole set again.
+
+The atlas intentionally does not alter any generated art or ROM. The approved
+bases remain immutable. Existing proposals are displayed at a **diagnostic**
+placement (nominal crop `[32,28,64,60]` plus any recorded extraction translation),
+not a claim that those files already have authenticated runtime registration.
+
 1. Inventory the new job's actual land/water resource descriptors from its
    authenticated candidate. Adapt the extraction in
    [prepare-reviewed-actions.py](scripts/prepare-reviewed-actions.py); do not
@@ -285,7 +383,11 @@ positions in Fight and relevant ability playback; avoid drawing a duplicate held
 weapon into the body. New Sapper trap/fuse effects are separate assets and runtime
 consumers, not completed by its costume canisters.
 
-### Worked action preparation for Physician/Sapper
+### Historical action preparation for Physician/Sapper
+
+This recipe reproduces the rejected proposal process for provenance only. Do
+not use it to prepare another generation batch. The CLI requires the explicit
+historical flag; the fixed-coordinate audit above is the current entry point.
 
 These two jobs have no allocated runtime graphics resources yet. Their authoring
 inventory inherits the existing race Chemists' complete native land/water
@@ -295,6 +397,7 @@ it against the eventual new-job resource tables before import.
 
 ```powershell
 python scripts/prepare-new-job-actions.py `
+  --historical-replay `
   --plan build/art/chemist-job-art-2026-09-26/base-plan.json `
   --approval build/art/chemist-job-art-2026-09-26/base-approval.json `
   --out build/art/my-chemist-actions

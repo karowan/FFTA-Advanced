@@ -3,6 +3,8 @@
 This is offline artwork preparation, not job/runtime implementation. It carries
 all native sequence uses and commands forward, but never assigns new ROM IDs.
 Each generated drawing must still be inspected and approved before import.
+Historical only: the 2026-09-27 geometry review rejected this worksheet method.
+See audit-new-job-animation-anchors.py before preparing further artwork.
 """
 import argparse
 import copy
@@ -123,5 +125,11 @@ if __name__=='__main__':
     parser.add_argument('--plan',type=Path,required=True)
     parser.add_argument('--approval',type=Path,required=True)
     parser.add_argument('--out',type=Path,required=True)
+    parser.add_argument('--historical-replay',action='store_true',
+                        help='Reproduce the superseded 2026-09-26 worksheet process; not for new generation')
     args=parser.parse_args()
+    if not args.historical_replay:
+        parser.error('This worksheet process was superseded after animation distortion. '
+                     'Run audit-new-job-animation-anchors.py and follow Gate 4 of '
+                     'NEW-JOB-ART-RUNBOOK.md. --historical-replay is only for provenance reproduction.')
     prepare(args.plan.resolve(),args.approval.resolve(),args.out)

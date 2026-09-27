@@ -47,6 +47,9 @@ ROM bytes and verify affected real-core menu/save paths. See the
 For a new class, start with the [executable new-job art runbook](NEW-JOB-ART-RUNBOOK.md).
 It specifies the actual reference worksheets, crops, commands, approval gates
 and recovery steps, with Physician/Sapper as the worked example. The
+September 27 animation review requires its Gate 4 fixed-coordinate native
+anchor audit before further pose generation; the old fitted action worksheet
+is historical-replay-only. Palette and hash checks do not prove anatomy. The
 [working art pipeline](src/art/native-ui-review/README.md) retains the accepted
 ten-class import history; its job-specific scripts are not generic new-job tools.
 Use the game's existing class/side palettes, bright contrast and readable native

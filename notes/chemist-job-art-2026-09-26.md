@@ -82,6 +82,52 @@ control commands. The data-only jobs remain unplayable and are not enabled.
 
 ## Reproduce and continue
 
+### September 27: animation geometry review supersedes proposal completeness
+
+The user rejected the Physician front walk as distorted and requested anchor
+points and positions for every animation. The earlier coverage/replay checks
+remain valid for their narrow purpose; they did not establish anatomical
+consistency. All non-neutral animations remain unapproved.
+
+`build/art/chemist-animation-anchors-2026-09-27/index.html` compares the originals
+and current proposals on a fixed native grid. `anchors.json` preserves exact OAM
+origins, object rectangles, silhouette row spans, all original records and
+unanimous shared-pixel patches. It covers both races' eight original jobs, all
+148 proposed poses, 150 populated sequences and 737 records. Original assets and
+pixel-coordinate exports stay ignored. The ROM and approved bases are unchanged.
+
+The rejected p000 is 20x22 occupied pixels, compared with the canonical native
+frame's 16x25. Its bottom extent is five pixels higher under nominal worksheet
+placement. The approved neutral is 17x26 versus the original's 16x26. These
+measurements include clothing/shadows, not isolated skeletal measurements.
+
+Separately, the old native reference helper dynamically cropped poses and fitted
+some oversized originals into 32x32. Three canonical Physician poses have a
+recorded `referenceFit`. That did not cause the front walk's defect (its native
+crops were fixed), but it invalidates using the old worksheets as universal
+position contracts. Missing reference jobs could also duplicate another donor.
+
+The new atlas never resizes or recentres originals. It excludes missing or
+differently scheduled originals from shared-pixel evidence. Shared patches exist
+for 510 of 533 drawing records; 23 have original geometry but no qualifying
+cross-job patch. Their semantic anatomy remains to be labelled and reviewed;
+the extracted origin/patches are not an automatically discovered skeleton.
+
+Next art work must review named landmarks on these originals, then regenerate
+and inspect walk/run cycles before another full propagation. The old action
+preparer now rejects normal use, retaining `--historical-replay` solely for
+reproduction. This is a preparation correction, not a claim of fixed artwork.
+
+Verification: `scripts/test-animation-anchors.py` passed against all 1,024 unique
+original drawings and 737 records. It verified 8,464 shared pixel occurrences,
+227 absent original-reference records with no substitute, exact fixed-window
+pixel replay and proposal placement. All available compared schedules matched;
+the different-schedule path was not exercised by these originals. Python and
+page JavaScript syntax, changed-document links and whitespace checks passed.
+The fixed-position walk contact sheet was visually inspected. Opening the page
+in Codex returned queued, and browser automation denied the local file URL;
+interactive browser layout remains unverified.
+
 Follow [NEW-JOB-ART-RUNBOOK.md](../NEW-JOB-ART-RUNBOOK.md). To rebuild the approved
 base review from the preserved raw inputs:
 
