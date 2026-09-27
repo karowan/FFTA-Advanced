@@ -350,6 +350,116 @@ bases remain immutable. Existing proposals are displayed at a **diagnostic**
 placement (nominal crop `[32,28,64,60]` plus any recorded extraction translation),
 not a claim that those files already have authenticated runtime registration.
 
+### Fixed-origin revision workflow
+
+The September 27 motion retry uses `prepare-anchored-job-revisions.py`. Each
+128x128 logical worksheet contains four 64x64 cells: original neutral/action on
+top, approved new neutral/target below. Each original is the atlas's unchanged
+fixed-window export. The neutral is from the **same actor** as that action,
+including inherited Sapper actions that use another native actor. The model
+receives the worksheet, one matching approved view, and the native palette.
+Supplying separate front **and** rear identity images caused the model to
+rearrange some action requests into front/rear studies; those attempts are
+preserved and excluded. More references were not automatically more useful.
+
+```powershell
+python scripts/prepare-anchored-job-revisions.py `
+  --atlas build/art/chemist-animation-anchors-2026-09-27/anchors.json `
+  --pose-notes build/art/my-reviewed-pose-notes.json `
+  --out build/art/my-anchored-motion
+```
+
+`--pose-notes` is a reviewed JSON map keyed by job slug and pose ID. Each entry
+can specify `note` (observed anatomical landmarks and occlusions), `identity`
+(`front` or `back`, when a turn changes the visible view), and `blankTarget`.
+This is a worked two-job preparer, not an automatic anatomical landmark detector.
+Do not infer final facing from odd/even sequence numbers: the later frame of a
+rear action can face front. The original action image is the authority.
+
+Use the approved neutral as the editable target for small walk/run movements.
+For collapsed poses and substantial turns, an empty target is often necessary:
+an upright neutral can bias the generator into drawing a shortened standing or
+kneeling character. Name where the head, torso and feet actually are. For the
+Physician's face-down fall, the cap is the lower-left mass, the torso is above
+and right, and the eyes are occluded. Merely asking for the correct bounds did
+not produce that posture. Water frames must retain the native waterline and
+occluded legs; airborne frames must not acquire a standing shadow.
+
+Inspect the composed inputs before calling built-in imagegen with the recorded
+prompt and ordered references. Generate one requested drawing, preserving the
+whole worksheet. Conversion is a separate explicit operation:
+
+```powershell
+python scripts/convert-anchored-job-revision.py `
+  --request build/art/my-anchored-motion/physician/p000-request.json `
+  --source "<actual PNG path returned by imagegen>" --revision v1
+```
+
+The converter samples the whole grid once, extracts the declared bottom-right
+cell, removes the connected backdrop, and maps to **existing palette indices
+used by the approved base**. This prevents new material colors leaking into a
+frame. It does not create a palette bank or change palette words. It preserves
+the raw output and rejects clipping, wrong aspect, changed references/palette,
+and reused result names. The 64x64 result is a review window, not an allocation
+of new runtime graphics. Import still needs a native storage/layout proof.
+
+Inspect every result against the original and the approved identity, then inspect
+the full timed sequence. Bounds are a diagnostic, not a pass/fail anatomy score.
+A frame may match all four bounds while retaining the wrong arm pose or shadow.
+For a retry, preserve the old request and prepare a new one:
+
+```powershell
+python scripts/revise-anchored-job-request.py `
+  --request build/art/my-anchored-motion/physician/p016-request.json `
+  --revision v2 --blank-target --note "<specific observed pose correction>"
+```
+
+If inspection establishes correct anatomy but a uniform worksheet displacement,
+the same helper accepts `--translation DX DY --source <exact raw PNG>`. This
+records a source-hash-bound rigid translation and its required inspection reason.
+Convert that request under a new revision. Translation never changes relative
+pixel positions, colors or proportions, and clipping still fails. Do not use it
+to disguise a changed height, tilted limb, misplaced head or wrong posture.
+
+If a water or adjacent frame keeps reverting to an upright neutral, use a
+reviewed related motion as the identity anchor. `--motion-anchor` accepts that
+motion's conversion receipt. It pairs the original related pose with the exact
+original target above, and the corresponding new pose with a blank target
+below. For example, the Sapper's corrected land collapse anchored its water
+collapse; the neighboring bowed water pose anchored its second ripple frame.
+This transfers a small observed change without asking the model to solve the
+entire fall again. The helper records the anchor receipt hash and keeps its
+native reference, origin and palette consistent. It does not grant user approval
+to the anchor or copy original-game pixels into the new character.
+
+```powershell
+python scripts/revise-anchored-job-request.py `
+  --request build/art/my-anchored-motion/sapper/p070-request-v3.json `
+  --revision v4 `
+  --motion-anchor build/art/my-anchored-motion/sapper/p016-v3-receipt.json `
+  --note "Keep the fallen head low and feet above; transfer the original submersion and ripples."
+```
+
+Inspect that worksheet before generating. A changed pose is still model-created
+art and must be reviewed after native conversion. Do not confuse a matching
+outer rectangle with matching anatomy or approve a frame solely from its receipt.
+
+`choices.json` explicitly maps each job/pose to the chosen revision; `v1` is the
+declared default, not a newest-file search. Approved neutral bases are copied
+unchanged and checked separately. Build and validate the single review page:
+
+```powershell
+python scripts/review-anchored-job-revisions.py --out build/art/my-anchored-motion
+python scripts/test-anchored-job-revisions.py --out build/art/my-anchored-motion --require-complete
+```
+
+The page retains every repeated drawing, duration and native control record,
+with image enlargement and stepping. Missing drawings remain visibly pending;
+incomplete sequences do not pretend to be complete players. The test checks
+source/alpha/palette integrity, immutable bases, record order and page targets.
+It does not approve anatomy, simulate native control commands or prove runtime
+integration. Use Codex's own browser comments for art review.
+
 1. Inventory the new job's actual land/water resource descriptors from its
    authenticated candidate. Adapt the extraction in
    [prepare-reviewed-actions.py](scripts/prepare-reviewed-actions.py); do not
@@ -358,9 +468,10 @@ not a claim that those files already have authenticated runtime registration.
    pointer and native use. Deduplicate identical drawings while retaining **all**
    uses. Empty slots remain identified. Commands without drawings need no invented
    image. Never report slot count as authored-pose coverage.
-3. For each distinct drawing, create the same two-row worksheet: accepted neutral
-   design at top right, native pose/anatomy references below, empty target cell.
-   Pass the isolated accepted front/rear and concept as references. Generate one
+3. For each distinct drawing, use the fixed-origin worksheet above: matched
+   original neutral/action on top, new neutral/target below. Use one appropriate
+   identity view and the native palette; use a related motion anchor for stubborn
+   changes as described above. Generate one
    target drawing per call. Start with walk steps; continue with all native action,
    hit, cast, incapacitated and water drawings actually in the inventory.
 4. Preserve native pose shape, facing, contact baseline and command timing. Freeze

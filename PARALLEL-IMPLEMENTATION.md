@@ -50,6 +50,11 @@ and recovery steps, with Physician/Sapper as the worked example. The
 September 27 animation review requires its Gate 4 fixed-coordinate native
 anchor audit before further pose generation; the old fitted action worksheet
 is historical-replay-only. Palette and hash checks do not prove anatomy. The
+fixed-origin revision workflow in that runbook uses matched neutral/action
+reference pairs, one approved identity view, explicit pose notes and preserved
+retries. Inspect turns, falls, airborne shadows and waterlines separately.
+Whole-drawing registration corrections must be source-bound rigid translations;
+never stretch a generated body to meet a bounding box. The
 [working art pipeline](src/art/native-ui-review/README.md) retains the accepted
 ten-class import history; its job-specific scripts are not generic new-job tools.
 Use the game's existing class/side palettes, bright contrast and readable native
