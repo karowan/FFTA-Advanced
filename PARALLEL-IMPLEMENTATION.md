@@ -44,7 +44,11 @@ ROM bytes and verify affected real-core menu/save paths. See the
 
 ## Native artwork
 
-Start with the [working art pipeline](src/art/native-ui-review/README.md).
+For a new class, start with the [executable new-job art runbook](NEW-JOB-ART-RUNBOOK.md).
+It specifies the actual reference worksheets, crops, commands, approval gates
+and recovery steps, with Physician/Sapper as the worked example. The
+[working art pipeline](src/art/native-ui-review/README.md) retains the accepted
+ten-class import history; its job-specific scripts are not generic new-job tools.
 Use the game's existing class/side palettes, bright contrast and readable native
 faces. No custom palette bank or runtime ownership/remapping system. Generate
 new class designs from blank designs, with original sprites as references.
