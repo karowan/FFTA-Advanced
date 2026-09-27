@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "status": "Design allocation only; effects and teaching equipment require native integration",
+  "jobs": [
+    {
+      "id": 126,
+      "name": "Physician",
+      "race": 3,
+      "donor": 27,
+      "move": 4,
+      "jump": 2,
+      "evade": 45,
+      "base": [32, 38, 56, 68, 88, 86, 96],
+      "growth": [6.4, 3.8, 5.8, 7.0, 8.8, 8.6, 1.1],
+      "prerequisites": [[120, 4], [20, 3]],
+      "equipmentTypes": [10, 12, 23, 25, 26],
+      "lessons": [
+        ["Suture", "Suture", "Action", 446, 150],
+        ["Triage", "Triage", "Action", 447, 200],
+        ["Purge", "Purge", "Action", 448, 250],
+        ["Aftercare", "Aftercare", "Action", 449, 250],
+        ["Rescue Team", "Rescue Team", "Action", 450, 400],
+        ["Mass Triage", "Mass Triage", "Action", 451, 350],
+        ["Trauma Ward", "Trauma Ward", "Action", 452, 400],
+        ["Follow-up Care", "Follow Care", "Support", 146, 300],
+        ["Emergency Dressing", "Emerg.Dress", "Reaction", 146, 350],
+        ["Physician Combo", "Medic Combo", "Combo", 136, 100]
+      ]
+    },
+    {
+      "id": 127,
+      "name": "Sapper",
+      "race": 5,
+      "donor": 41,
+      "move": 4,
+      "jump": 3,
+      "evade": 45,
+      "base": [31, 32, 65, 67, 80, 76, 106],
+      "growth": [6.2, 3.2, 6.4, 6.8, 8.0, 7.6, 1.5],
+      "prerequisites": [[122, 3], [41, 2]],
+      "equipmentTypes": [7, 12, 23, 25, 26],
+      "lessons": [
+        ["Breach Charge", "Breach", "Action", 453, 150],
+        ["Flash Charge", "Flash", "Action", 454, 200],
+        ["Concussion Charge", "Concussion", "Action", 455, 200],
+        ["Tripwire", "Tripwire", "Action", 456, 300],
+        ["Smoke Charge", "Smoke", "Action", 457, 250],
+        ["Springboard", "Springboard", "Action", 458, 250],
+        ["Timed Fuse", "Timed Fuse", "Action", 459, 350],
+        ["Spotter", "Spotter", "Support", 147, 300],
+        ["Duck and Cover", "Duck Cover", "Reaction", 147, 350],
+        ["Sapper Combo", "Sap Combo", "Combo", 137, 100]
+      ]
+    }
+  ]
+}

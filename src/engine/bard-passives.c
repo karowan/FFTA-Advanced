@@ -22,7 +22,7 @@ static unsigned own_turn(const uint8_t *u){
  return manager && *(const uint8_t *const *)(manager+24)==u;
 }
 static unsigned enemy(const uint8_t *a,const uint8_t *t){
- unsigned af=ffta_action_unit_flags(a),tf=ffta_action_unit_flags(t);
+ unsigned af=ffta_action_unit_flags_masked(a,0x180u),tf=ffta_action_unit_flags_masked(t,0x184u);
  return a && t && a!=t && !(tf&4u) && ((((af>>7)^(af>>8))&1u)!=((tf>>7)&1u));
 }
 /* Moogle's legal original incantations: Black Magic23..32 and Time Magic
@@ -38,18 +38,18 @@ unsigned ffta_bard_passive_flags(const uint8_t *u){
  if(!alive(u))return 0;
  unsigned value=support(u)==FFTA_BRD_S1?FFTA_BARD_ENCOURAGEMENT:0,r=reaction(u);
  if(u[0xeb]&0x30u)value|=FFTA_BARD_FORCED;
- const uint8_t *s=ffta_job_state((uint8_t *)u);
+ const uint8_t *s=r==FFTA_BRD_R1?ffta_job_state((uint8_t *)u):0;
  if(r==FFTA_BRD_R1 && s && (s[11]&1u))value|=FFTA_BARD_CHARGED;
- if(ffta_viking_reaction_ready(u)){
+ if((r==FFTA_BRD_R1 || r==FFTA_BRD_R2) && ffta_viking_reaction_ready(u)){
   if(r==FFTA_BRD_R1)value|=FFTA_BARD_BOOST_READY;
   if(r==FFTA_BRD_R2 && !(u[0xeb]&8u))value|=FFTA_BARD_ENCORE_READY;
  }
  return value;
 }
 unsigned ffta_bard_magick_numerator(const uint8_t *a,unsigned action){
- return a && !(ffta_action_unit_extra_flags(a)&FFTA_BARD_FORCED) && ffta_bard_incanted(action) && ffta_action_origin()!=FFTA_ACTION_NATIVE_REACTION &&
+ return a && !(ffta_action_unit_extra_flags_masked(a,FFTA_BARD_FORCED)) && ffta_bard_incanted(action) && ffta_action_origin()!=FFTA_ACTION_NATIVE_REACTION &&
   ffta_action_origin()!=FFTA_ACTION_EXPLICIT_COMBO &&
-  (ffta_action_unit_extra_flags(a)&FFTA_BARD_CHARGED)?13:10;
+  (ffta_action_unit_extra_flags_masked(a,FFTA_BARD_CHARGED))?13:10;
 }
 static void clear_haste(uint8_t *u);
 void ffta_bard_passive_event(uint8_t *u,unsigned event){
@@ -70,7 +70,7 @@ void ffta_bard_passive_turn_end(uint8_t *u){
  s[11]=(uint8_t)((s[11]&~28u)|(timer<<2));
 }
 void ffta_bard_action_event(const uint8_t *u,unsigned action,unsigned event){
- if(u && !(ffta_action_unit_extra_flags(u)&FFTA_BARD_FORCED) && event==3 && ffta_action_origin()==FFTA_ACTION_NATIVE_PRIMARY && ffta_action_paid_count() && ffta_bard_incanted(action)){
+ if(u && !(ffta_action_unit_extra_flags_masked(u,FFTA_BARD_FORCED)) && event==3 && ffta_action_origin()==FFTA_ACTION_NATIVE_PRIMARY && ffta_action_paid_count() && ffta_bard_incanted(action)){
   uint8_t *s=ffta_job_state((uint8_t *)u);if(s)s[11]&=(uint8_t)~3u;
  }
 }
@@ -109,8 +109,8 @@ uint8_t *ffta_bard_application(uint8_t *c){
  uint8_t *t=*(uint8_t **)(c+8);const uint8_t *a=*(const uint8_t *const *)c;
  unsigned real=!(c[0x26]&16u) && ffta_action_phase()==FFTA_ACTION_RESULT;
  unsigned eligible=real && ffta_action_origin()==FFTA_ACTION_NATIVE_PRIMARY && ffta_action_paid_count() &&
-  (ffta_action_unit_extra_flags(a)&FFTA_BARD_ENCOURAGEMENT) && a!=t &&
-  !(ffta_action_unit_flags(t)&4u) && !enemy(a,t) && !(ffta_action_unit_extra_flags(a)&FFTA_BARD_FORCED) && !ffta_native_undead(t);
+  (ffta_action_unit_extra_flags_masked(a,FFTA_BARD_ENCOURAGEMENT)) && a!=t &&
+  !(ffta_action_unit_flags(t)&4u) && !enemy(a,t) && !(ffta_action_unit_extra_flags_masked(a,FFTA_BARD_FORCED)) && !ffta_native_undead(t);
  unsigned before=eligible?tags(t):0;
  uint8_t *result=ffta_bard_original_application(c,application);
  if(eligible && (tags(t)&~before))ffta_action_claim_extra(t,FFTA_BARD_ENCOURAGE_ADMITTED);

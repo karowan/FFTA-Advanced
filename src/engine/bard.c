@@ -18,7 +18,12 @@ unsigned ffta_bard_buff(const uint8_t *u,unsigned magic){
     uint8_t *s=ffta_job_state((uint8_t *)u);unsigned v=s?(s[10]>>(magic?3:0))&7u:0;
     return alive(u) && (v&3u) && (v&3u)<=2;
 }
-unsigned ffta_bard_snapshot_flags(const uint8_t *u){return (ffta_bard_buff(u,0)?FFTA_BARD_MARCH:0)|(ffta_bard_buff(u,1)?FFTA_BARD_INSPIRED:0);}
+unsigned ffta_bard_snapshot_flags(const uint8_t *u){
+    if(!alive(u))return 0;
+    const uint8_t *s=ffta_job_state((uint8_t *)u);
+    unsigned v=s?s[10]:0,physical=v&3u,magic=(v>>3)&3u;
+    return ((physical==1 || physical==2)?FFTA_BARD_MARCH:0)|((magic==1 || magic==2)?FFTA_BARD_INSPIRED:0);
+}
 void ffta_bard_event(uint8_t *u,unsigned event){
     uint8_t *s=ffta_job_state(u);if(s && ((event>=2 && event<=5)||event==7))s[10]=0;
 }
@@ -68,13 +73,13 @@ uint8_t *ffta_bard_buff_apply(uint8_t *c){
 }
 unsigned ffta_bard_outgoing(const uint8_t *a,const uint8_t *t,unsigned action,unsigned physical){
     if(!a||!t||ffta_action_origin()==FFTA_ACTION_NATIVE_REACTION||ffta_action_origin()==FFTA_ACTION_EXPLICIT_COMBO)return 50;
-    unsigned tf=ffta_action_unit_flags(t);
+    unsigned tf=ffta_action_unit_flags_masked(t,24u);
     /* Match the established HP-versus-MP interception contract. */
     if((tf&24u)==24u)return 50;
     if(!(tf&8u) && a!=t && action!=265 && ((unsigned (*)(const uint8_t *))0x0812e6a5u)(t)==13 &&
        ((unsigned (*)(const uint8_t *,unsigned))0x080c7ea5u)(t,0x15) &&
        (!action || !((unsigned (*)(unsigned,unsigned))0x080ccd51u)(action,17)))return 50;
-    unsigned base=ffta_action_unit_extra_flags(a)&(physical?FFTA_BARD_MARCH:FFTA_BARD_INSPIRED)?6:5;
+    unsigned base=ffta_action_unit_extra_flags_masked(a,physical?FFTA_BARD_MARCH:FFTA_BARD_INSPIRED)?6:5;
     return base*(physical?10:ffta_bard_magick_numerator(a,action));
 }
 
@@ -124,5 +129,13 @@ void ffta_bard_ai_row(uint8_t *row,const uint8_t *a,const uint8_t *t,unsigned ac
 extern void ffta_centered_event(uint8_t *,unsigned);
 extern void ffta_centered_turn_end(uint8_t *);
 #include "passing-step.h"
-void ffta_bard_lifecycle_event(uint8_t *u,unsigned e){ffta_centered_event(u,e);ffta_bard_event(u,e);ffta_bard_passive_event(u,e);ffta_turn_event(u,e);ffta_dancer_event(u,e);ffta_passing_lifecycle(u,e);ffta_geo_event(u,e);ffta_myk_event(u,e);}
-void ffta_bard_lifecycle_turn_end(uint8_t *u){ffta_centered_turn_end(u);ffta_bard_turn_end(u);ffta_bard_passive_turn_end(u);ffta_turn_end(u);ffta_dancer_turn_end(u);ffta_passing_turn_end(u);ffta_geo_turn_end(u);}
+void ffta_bard_lifecycle_event(uint8_t *u,unsigned e){
+#if FFTA_CHEMIST_PROGRESSION
+ffta_cp_event(u,e);
+#endif
+ffta_centered_event(u,e);ffta_bard_event(u,e);ffta_bard_passive_event(u,e);ffta_turn_event(u,e);ffta_dancer_event(u,e);ffta_passing_lifecycle(u,e);ffta_geo_event(u,e);ffta_myk_event(u,e);}
+void ffta_bard_lifecycle_turn_end(uint8_t *u){
+#if FFTA_CHEMIST_PROGRESSION
+ffta_cp_turn_end(u);
+#endif
+ffta_centered_turn_end(u);ffta_bard_turn_end(u);ffta_bard_passive_turn_end(u);ffta_turn_end(u);ffta_dancer_turn_end(u);ffta_passing_turn_end(u);ffta_geo_turn_end(u);}

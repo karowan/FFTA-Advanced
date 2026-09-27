@@ -154,18 +154,37 @@ def execute(plan, steps, selection):
                       directory=str(output), inputs=source_identity(), steps=[], started=stamp,
                       resources=dict(admission=admission, limits={k: resource_guard.setting(k)
                                                                   for k in resource_guard.DEFAULTS}))
-        meta = json.loads((ROOT / 'build/expansion/probes/combat.json').read_text())
+        candidate = plan.get('candidateManifest')
+        if candidate:
+            manifest = (ROOT / candidate).resolve()
+            if not manifest.is_relative_to(ROOT / 'build'):
+                raise ValueError('Candidate manifest must be inside workspace build output')
+            meta = json.loads(manifest.read_text())
+            if 'manifest' in meta:
+                manifest = pathlib.Path(meta['manifest']).resolve()
+                if not manifest.is_relative_to(ROOT / 'build'):
+                    raise ValueError('Candidate receipt must be inside workspace build output')
+                meta = json.loads(manifest.read_text())
+            rom_path = pathlib.Path(meta['path']).resolve()
+            if not rom_path.is_relative_to(ROOT / 'build'):
+                raise ValueError('Candidate ROM must be inside workspace build output')
+            report['candidateManifest'] = str(manifest)
+            report['candidateInputs'] = {str(p.relative_to(ROOT)):digest(p)
+                                        for p in (ROOT / candidate,manifest,rom_path)}
+        else:
+            meta = json.loads((ROOT / 'build/expansion/probes/combat.json').read_text())
+            rom_path = ROOT / 'build/expansion/probes/combat.gba'
         report['romSha1'] = meta['romSha1']
-        actual = hashlib.sha1((ROOT / 'build/expansion/probes/combat.gba').read_bytes()).hexdigest()
+        actual = hashlib.sha1(rom_path.read_bytes()).hexdigest()
         if actual != report['romSha1']:
             raise ValueError('Combat ROM does not match its manifest')
         engine = (ROOT / 'build/expansion/engine.bin').read_bytes()
         report['engineSha1'] = hashlib.sha1(engine).hexdigest()
-        if report['engineSha1'] != meta['engineSha1']:
+        if not candidate and report['engineSha1'] != meta['engineSha1']:
             raise ValueError('Engine binary does not match the combat manifest; finish the build first')
-        with (ROOT / 'build/expansion/probes/combat.gba').open('rb') as stream:
+        with rom_path.open('rb') as stream:
             stream.seek(0x1100000)
-            if stream.read(len(engine)) != engine:
+            if not candidate and stream.read(len(engine)) != engine:
                 raise ValueError('Combat ROM does not contain the declared engine')
         for step in steps:
             report['steps'].append(dict(id=step['id'], kind=step['kind'], status='not_run'))
@@ -173,6 +192,7 @@ def execute(plan, steps, selection):
         atomic_json(RUNS / 'latest.json', dict(report=str(output / 'report.json')))
         print(f'{selection}: {len(steps)} steps; ROM {actual}; reports {output}', flush=True)
         environment = dict(os.environ, PYTHONHASHSEED='0', PYTHONUNBUFFERED='1')
+        if candidate: environment['FFTA_TEST_CANDIDATE_MANIFEST'] = str(manifest)
         environment.pop('PYTHONOPTIMIZE', None)  # Native checks use assertions.
         continue_independent = plan.get('continueIndependent') is True
         results_by_id = {result['id']: result for result in report['steps']}
@@ -229,6 +249,9 @@ def execute(plan, steps, selection):
                 if not continue_independent or result['status'] == 'interrupted':
                     break
         report['inputsUnchanged'] = report['inputs'] == source_identity()
+        if candidate:
+            report['inputsUnchanged'] &= all((ROOT / p).is_file() and digest(ROOT / p)==value
+                                            for p,value in report['candidateInputs'].items())
         passed = all(s['status'] == 'passed' for s in report['steps'])
         report['status'] = 'passed' if passed and report['inputsUnchanged'] else 'failed'
         if not report['inputsUnchanged']:

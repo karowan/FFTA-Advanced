@@ -67,24 +67,6 @@ void ffta_viking_event(uint8_t *unit,unsigned event) {
         if(other && other[5]==token)other[5]=0;
     }
 }
-unsigned ffta_viking_snapshot_flags(const uint8_t *unit) {
-    if(!unit)return 0;
-    unsigned result=0;
-    /* Poison9, Blind10, Slow22, Sleep26, Silence27, Confuse28,
-     * Immobilize30 and Disable31. Other jobs OR their explicit custom tags
-     * into harmful bit9 at the common provider composition point. */
-    if((unit[0xe9]&6u) || (unit[0xea]&0x40u) ||
-       (unit[0xeb]&0xdcu) || ffta_viking_challenger(unit))result|=1u<<9;
-    if(((unsigned (*)(const uint8_t *))0x080cd50du)(unit)==FFTA_VIK_S2)
-        result|=1u<<10;
-    if(ffta_viking_reaction_ready(unit)) {
-        unsigned reaction=((unsigned (*)(const uint8_t *))0x080cd4d5u)(unit);
-        if(reaction==FFTA_VIK_R1)result|=FFTA_VIK_FLAG_ABSORB_READY;
-        if(reaction==FFTA_VIK_R2)result|=FFTA_VIK_FLAG_GIL_READY;
-    }
-    result|=ffta_viking_challenger(unit)<<FFTA_VIK_CHALLENGER_SHIFT;
-    return result;
-}
 unsigned ffta_viking_gil_award(uint8_t *unit,unsigned actual_hp_lost) {
     uint8_t *s=state(unit);
     if(!s || !alive(unit) || s[6]>=50)return 0;

@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include "job-icons.h"
+#include "chemist-progression.h"
 
 /* The original 7x6 panel is retained. A second page contains jobs116..125.
  * Page identity belongs to an offscreen tilemap cell on this modal surface;
@@ -37,7 +38,7 @@ static void pixel(uint8_t *tiles,unsigned width,unsigned x,unsigned y,unsigned c
 }
 unsigned ffta_preview_job(unsigned page,unsigned cell) {
     if(page==0&&cell<42)return 2+cell;
-    if(page==1&&cell<10)return 116+cell;
+    if(page==1&&cell<10+2*FFTA_CHEMIST_PROGRESSION)return 116+cell;
     return 0;
 }
 static volatile uint16_t *map(unsigned shop) {
@@ -57,8 +58,12 @@ static void hint(unsigned shop,unsigned page) {
     m[19*32+31]=(uint16_t)(0xa700u|page);
 }
 static void label(uint8_t *tiles,unsigned job) {
-    static const char labels[10][4]={"SAM","DKN","VIK","DKN","CHM","GEO","CHM","BRD","DNC","MYK"};
-    if(job<116||job>125)return;
+    static const char labels[10+2*FFTA_CHEMIST_PROGRESSION][4]={"SAM","DKN","VIK","DKN","CHM","GEO","CHM","BRD","DNC","MYK"
+#if FFTA_CHEMIST_PROGRESSION
+    ,"PHY","SAP"
+#endif
+    };
+    if(job<116||job>125+2*FFTA_CHEMIST_PROGRESSION)return;
     /* Restore the colored panel, then draw a one-pixel native dark outline.
      * Palette indices3/4 are the original lettering's light/dark pair. */
     for(unsigned y=4;y<12;++y)for(unsigned x=17;x<31;++x)pixel(tiles,32,x,y,12);
@@ -80,7 +85,7 @@ static void label(uint8_t *tiles,unsigned job) {
 }
 unsigned ffta_icon_decode(void *destination,unsigned job) {
     job&=255;
-    if(job<116||job>125)
+    if(job<116||job>125+2*FFTA_CHEMIST_PROGRESSION)
         return ((unsigned (*)(void *,unsigned))FFTA_ORIGINAL_ICON)(destination,job);
     uint8_t *pixels=(uint8_t *)destination;
     for(unsigned i=0;i<256;++i)pixels[i]=original_job_icons[job-116][i];

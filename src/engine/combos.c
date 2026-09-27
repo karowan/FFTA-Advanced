@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include "registry.h"
+#include "chemist-progression.h"
 
 extern unsigned ffta_primary_weapon(const uint8_t *unit);
 extern unsigned ffta_original_combo_chance(const uint8_t *,const uint8_t *,unsigned);
@@ -13,7 +14,7 @@ static unsigned custom_combo(const uint8_t *unit) {
     typedef const uint8_t *(*Lesson)(unsigned,unsigned);
     const uint8_t *record=((Lesson)0x080cd481u)(unit[6],unit[0x3c]);
     unsigned id=record[4]|((unsigned)record[5]<<8);
-    return record[6]==5 && id>=FFTA_SAM_C1 && id<=FFTA_MYK_C1 ? id : 0;
+    return record[6]==5 && id>=FFTA_SAM_C1 && id<=FFTA_MYK_C1+2*FFTA_CHEMIST_PROGRESSION ? id : 0;
 }
 
 unsigned ffta_combo_permitted(const uint8_t *unit) {
@@ -31,6 +32,10 @@ unsigned ffta_combo_permitted(const uint8_t *unit) {
     case FFTA_BRD_C1: return category==16;
     case FFTA_DNC_C1: return category==7 || category==8;
     case FFTA_MYK_C1: return category==8 || category==3;
+#if FFTA_CHEMIST_PROGRESSION
+    case 136:return category==10 || category==12;
+    case 137:return category==7 || category==12;
+#endif
     default: return 0;
     }
 }

@@ -1,9 +1,10 @@
+#include "expansion-memory.h"
 #include "execution-scope.h"
 #include "registry.h"
 #define SCOPE_MAGIC 0x31584546u
 /* Private Samurai build reserves four additional bytes beyond the existing
  * twenty-byte copy-owner root. There is no implicit mutable ROM-module BSS. */
-#define ACTIVE ((FFTA_ExecutionScope *volatile *)0x0203ff44u)
+#define ACTIVE ((FFTA_ExecutionScope *volatile *)FFTA_EXECUTION_ROOT)
 static unsigned half(const uint8_t *p) { return p[0]|((unsigned)p[1]<<8); }
 static unsigned stack_scope(const FFTA_ExecutionScope *scope) {
     uintptr_t p=(uintptr_t)scope,sp;

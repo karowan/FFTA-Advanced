@@ -3,6 +3,7 @@
 #include "ai-choice.h"
 #include "chemist-items.h"
 #include "medicine-ai.h"
+#include "chemist-progression.h"
 
 /* Native C01D0 owns this node and its buffers. One proposed origin is examined
  * per callback, then C0B46 publishes the winning native action/extra/coordinates.
@@ -132,6 +133,9 @@ __attribute__((noinline)) static unsigned choice_search(uint8_t *node,unsigned f
  * Utility forecasts must not inherit that unrelated IWRAM stack frame. */
 unsigned ffta_geo_ai_search(uint8_t *node,unsigned flags){
  unsigned action=h(node+8);
+#if FFTA_CHEMIST_PROGRESSION
+ if(action==456)return ffta_cp_ai_trap_search(node,flags);
+#endif
  if(ffta_geo_ai_utility(action))return ffta_geo_ai_utility_search(node,flags);
  if(ffta_chemist_action(action))return ffta_medicine_ai_search(node,flags);
  /* The compiled multi-choice frame is764 bytes, even on its early fallback.

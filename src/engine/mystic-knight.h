@@ -17,7 +17,11 @@
 void ffta_myk_resource(uint8_t *,unsigned,uint8_t *,uint8_t *);
 void ffta_myk_resource_for_action(uint8_t *,unsigned,uint8_t *,uint8_t *,unsigned);
 void ffta_myk_fight_after_hp(uint8_t *,unsigned);
+#if defined(FFTA_CHEMIST_PROGRESSION) && FFTA_CHEMIST_PROGRESSION
+#define FFTA_MYK_DISPEL_CHOICES 24u
+#else
 #define FFTA_MYK_DISPEL_CHOICES 21u
+#endif
 #define FFTA_MYK_FLARE_RELEASE 445u
 int ffta_myk_ai_self_value(int,const uint8_t *);
 void ffta_myk_ai_self_row(uint8_t *,const uint8_t *);

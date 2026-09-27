@@ -1,3 +1,4 @@
+#include "expansion-memory.h"
 #include <stdint.h>
 #include "registry.h"
 #include "geomancer.h"
@@ -9,15 +10,16 @@
 #include "viking-state.h"
 #include "medicine-ai.h"
 #include "chemist-items.h"
+#include "chemist-progression.h"
 
 /* A synchronous forecast owns this stack token. It is never a saved option,
  * a unit identity guess, or a choice left over from a previous AI turn. */
 typedef FFTA_AIChoiceScope ChoiceScope;
-#define ROOT ((ChoiceScope *volatile *)0x0203f728u)
+#define ROOT ((ChoiceScope *volatile *)FFTA_AI_CHOICE_ROOT)
 #define MAGIC 0x41494348u
 static unsigned half(const uint8_t *p){return p[0]|((unsigned)p[1]<<8);}
-static unsigned supported(unsigned action){return action==FFTA_CHM_A2 || action==FFTA_CHM_A4 || action==FFTA_DNC_A6 || action==FFTA_GEO_A3 || action==FFTA_GEO_A8 || action==FFTA_MYK_A12;}
-static unsigned valid(unsigned action,unsigned choice){return ffta_chemist_action(action)?ffta_medicine_choice_valid(action,choice):choice>=1 && choice<=(action==FFTA_MYK_A12?FFTA_MYK_DISPEL_CHOICES:action==FFTA_GEO_A8?5u:4u);}
+static unsigned supported(unsigned action){return (FFTA_CHEMIST_PROGRESSION && action==453) || action==FFTA_CHM_A2 || action==FFTA_CHM_A4 || action==FFTA_DNC_A6 || action==FFTA_GEO_A3 || action==FFTA_GEO_A8 || action==FFTA_MYK_A12;}
+static unsigned valid(unsigned action,unsigned choice){return ffta_chemist_action(action)?ffta_medicine_choice_valid(action,choice):choice>=1 && choice<=((FFTA_CHEMIST_PROGRESSION && action==453)?2u:action==FFTA_MYK_A12?FFTA_MYK_DISPEL_CHOICES:action==FFTA_GEO_A8?5u:4u);}
 void ffta_ai_choice_begin(ChoiceScope *s,const uint8_t *actor,unsigned action,unsigned choice,unsigned position){
  s->magic=MAGIC;s->self=s;s->actor=actor;s->action=action;s->choice=choice;s->position=position;s->previous=*ROOT;*ROOT=s;
 }
@@ -132,6 +134,9 @@ static unsigned repeated_challenge(const uint8_t *a,const uint8_t *t,unsigned ac
  * Preserve that native policy for original statuses and all other commands. */
 unsigned ffta_martial_ai_custom_benefit(const uint8_t *row,const uint8_t *a,const uint8_t *t){
  unsigned action=half(row);
+#if FFTA_CHEMIST_PROGRESSION
+ if(ffta_cp_ai_buff(action))return half(row+10) && ffta_cp_ai_value(-1,a,t,action)<0;
+#endif
  if(action==FFTA_CHM_A9)return half(row+10) && ffta_medicine_ai_value(a,t,action,half(row+2))<0;
  if(action!=FFTA_DRK_A9 && action!=FFTA_VIK_A4 && !(action==FFTA_DRK_A5 && a==t))return 0;
  return half(row+10) && (int16_t)half(row+12)<0 && martial_value(-1,a,t,action)<0;
@@ -149,6 +154,9 @@ void ffta_ai_choice_row(uint8_t *row,const uint8_t *actor,const uint8_t *target,
             *(const uint8_t *const *)target,(uint16_t)action);
         martial_row(row,*(const uint8_t *const *)actor,
             *(const uint8_t *const *)target,(uint16_t)action);
+#if FFTA_CHEMIST_PROGRESSION
+        ffta_cp_ai_row(row,*(const uint8_t *const *)actor,*(const uint8_t *const *)target,(uint16_t)action);
+#endif
         if(ffta_dancer_ai_redundant(*(const uint8_t *const *)target,(uint16_t)action) ||
            repeated_challenge(*(const uint8_t *const *)actor,*(const uint8_t *const *)target,(uint16_t)action))
             for(unsigned i=4;i<20;i++)row[i]=0;
@@ -177,6 +185,7 @@ void ffta_ai_choice_row(uint8_t *row,const uint8_t *actor,const uint8_t *target,
      * non-applicable statuses (including an existing ailment) score zero.
      * Ties are stable in menu order. Native action/target ranking follows. */
     uint8_t options[5]={1,2,3,4,0};unsigned positions[5]={0,0,0,0,0},count=4;
+    if(FFTA_CHEMIST_PROGRESSION && action==453)count=2;
     if(action==FFTA_GEO_A8)count=ffta_geo_ai_row_options(&scope,options,positions);
     for(unsigned ordinal=0;ordinal<count;ordinal++){
         unsigned choice=options[ordinal];
@@ -222,6 +231,9 @@ int ffta_ai_choice_score(const uint8_t *actor,const uint8_t *target,unsigned act
             *(const uint8_t *const *)target,(uint16_t)action);
         score=martial_value(score,*(const uint8_t *const *)actor,
             *(const uint8_t *const *)target,(uint16_t)action);
+#if FFTA_CHEMIST_PROGRESSION
+        score=ffta_cp_ai_value(score,*(const uint8_t *const *)actor,*(const uint8_t *const *)target,(uint16_t)action);
+#endif
         if(ffta_dancer_ai_redundant(*(const uint8_t *const *)target,(uint16_t)action) ||
            repeated_challenge(*(const uint8_t *const *)actor,*(const uint8_t *const *)target,(uint16_t)action))return 0;
         if(ffta_geo_ai_utility((uint16_t)action))

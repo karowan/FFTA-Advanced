@@ -104,7 +104,7 @@ unsigned ffta_shop_buy_list(uint8_t *destination,unsigned tab,unsigned tier_key,
     // original battle/turf stock rules. Merely accepting a mission is not a
     // completion and cannot satisfy this separate additive pass.
     unsigned town=(uint8_t)special_key;
-    if((uintptr_t)item_data(0)>=0x09000000u && tab==2 && town>=2 && town<=6)for(unsigned i=0;i<85;++i) {
+    if((uintptr_t)item_data(0)>=0x09000000u && tab==2 && town>=2 && town<=6)for(unsigned i=0;i<sizeof(ffta_stock)/sizeof(ffta_stock[0]);++i) {
         if(!(ffta_stock[i].towns&(1u<<town)))continue;
         unsigned flag=ffta_stock[i].flag;
         if(flag&&!((OneArg)0x080c9541u)(flag))continue;

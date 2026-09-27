@@ -2,6 +2,7 @@
 #include "registry.h"
 #include "action-snapshot.h"
 #include "turn-supports.h"
+#include "chemist-progression.h"
 
 enum { SELECT_MAP=1,SELECT_ROUTE,CONFIRM,ARMED,REVALIDATE,MOVING,RETIRED,AI_MAP };
 typedef struct {
@@ -9,6 +10,7 @@ typedef struct {
  uint8_t *owner,*wrapper,*actor;
  unsigned budget,cost,count,old38,originX,originY,completed,started;
  uint8_t cursor[36],route[128],fresh[128];
+ uint8_t *caster,*caster_wrapper;unsigned action,old_move;
 } Passing;
 /* Explicit transient reservation inside the permanent4KiB reserved region.
  * No pointers or route data enter persistent/copy-owned unit records. */
@@ -29,8 +31,28 @@ static unsigned movable(const uint8_t *u){
 }
 static unsigned owned(void){
  return s->magic==MAGIC && s->wrapper && s->actor &&
-  *(uint8_t **)(battle+4)==s->wrapper && *(uint8_t **)s->wrapper==s->actor;
+  *(uint8_t **)(battle+4)==(s->phase==MOVING?s->wrapper:s->caster_wrapper) && *(uint8_t **)s->caster_wrapper==s->caster &&
+  *(uint8_t **)s->wrapper==s->actor;
 }
+static unsigned spring(unsigned id){return FFTA_CHEMIST_PROGRESSION && id==458;}
+static uint8_t *selected_ally(uint8_t *caster,unsigned x,unsigned y){
+ uint8_t *manager=*(uint8_t **)0x0200f4b0u,*wrappers[36];
+ if(!caster || x>=16 || y>=16 || !manager)return 0;
+ unsigned n=((unsigned (*)(void *,void *))0x08099cddu)(manager,wrappers);
+ if(n>36)return 0;
+ for(unsigned i=0;i<n;i++){
+  uint8_t *w=wrappers[i],*u=w?*(uint8_t **)w:0;
+  if(u && u!=caster && movable(u) && !(u[0xeb]&48u) &&
+     (((caster[0x29]>>7)^((caster[0xeb]>>5)&1u))==(u[0x29]>>7)) &&
+     (h(w+8)>>5)==x && (h(w+12)>>5)==y)return w;
+ }
+ return 0;
+}
+/* Springboard moves a different unit inside the caster's paid Act. The
+ * native movement-complete flag belongs to the caster's menu, so preserve
+ * that flag and its movement ledger; never grant either unit more Move. */
+unsigned ffta_passing_preserve_move(void){return owned() && spring(s->action) && s->phase==MOVING;}
+unsigned ffta_passing_old_move(void){return s->old_move;}
 static uint8_t *grid(void){return *(uint8_t **)(s->wrapper+0x3c);}
 static unsigned at_origin(void){return (h(s->wrapper+8)>>5)==s->originX && (h(s->wrapper+12)>>5)==s->originY;}
 static void grid_visibility(unsigned yes){
@@ -59,6 +81,19 @@ static unsigned route(unsigned x,unsigned y,uint8_t *out){
 static unsigned distance(unsigned x,unsigned y,unsigned tx,unsigned ty){
  return (x>tx?x-tx:tx-x)+(y>ty?y-ty:ty-y);
 }
+static unsigned threat_distance(unsigned x,unsigned y){
+ uint8_t *wrappers[36];void *manager=*(void **)0x0200f4b0u;
+ unsigned n=manager?((unsigned (*)(void *,uint8_t **))0x08099cddu)(manager,wrappers):0,best=32;
+ if(n>36)return 0;
+ for(unsigned i=0;i<n;i++){
+  const uint8_t *u=*(const uint8_t *const *)wrappers[i];
+  if(!h(u+0x18) || (u[0xe8]&64u) ||
+     (((s->caster[0x29]>>7)^((s->caster[0xeb]>>5)&1u))==(u[0x29]>>7)))continue;
+  unsigned d=distance(x,y,h(wrappers[i]+8)>>5,h(wrappers[i]+12)>>5);
+  if(d<best)best=d;
+ }
+ return best;
+}
 unsigned ffta_passing_ai_prepare(void){
  /* The native AI has already chosen its action and approach. Preselect the
   * optional retreat here, before the Act flag/payment, without changing its
@@ -66,25 +101,30 @@ unsigned ffta_passing_ai_prepare(void){
   * costs and occupancy, just as the player's path does. */
  const uint8_t *ai=(const uint8_t *)0x020101f8u,*node=ai+0x5290;
  uint8_t *w=*(uint8_t **)(battle+4);
- if(h(ai+0x54be)!=FFTA_DNC_A9 || !w || !movable(*(uint8_t **)w) ||
-    *(uint8_t *const *)node!=w || h(node+8)!=FFTA_DNC_A9 || node[0x1b1]!=1){
-  if(owned() && !s->owner && s->phase==AI_MAP){sh(w+0x38,s->old38);grid_visibility(0);retire();}
+ unsigned action=h(ai+0x54be);
+ if((action!=FFTA_DNC_A9 && !spring(action)) || !w || !movable(*(uint8_t **)w) ||
+    *(uint8_t *const *)node!=w || h(node+8)!=action || node[0x1b1]!=1){
+  if(owned() && !s->owner && s->phase==AI_MAP){sh(s->wrapper+0x38,s->old38);grid_visibility(0);retire();}
   return 0;
  }
  if(!owned() || s->owner || s->phase!=AI_MAP){
-  unsigned budget=ffta_turn_step_remaining(*(uint8_t **)w);
+  uint8_t *caster=*(uint8_t **)w,*caster_wrapper=w;
+  if(spring(action)){w=selected_ally(caster,ai[0x54b2],ai[0x54b3]);if(!w)return 0;}
+  unsigned budget=spring(action)?2:ffta_turn_step_remaining(*(uint8_t **)w);
   if(!budget)return 0;
   clear();s->magic=MAGIC;s->phase=AI_MAP;s->wrapper=w;s->actor=*(uint8_t **)w;
+  s->caster=caster;s->caster_wrapper=caster_wrapper;s->action=action;
+  s->old_move=((unsigned (*)(unsigned))0x080c9541u)(4);
   s->budget=budget;s->originX=h(w+8)>>5;s->originY=h(w+12)>>5;
   prepare_grid();return 1;
  }
  grid_visibility(1);
  if(!ready())return 1;
- sh(w+0x38,s->old38);
+ sh(s->wrapper+0x38,s->old38);
  unsigned tx=ai[0x54b2],ty=ai[0x54b3];
- unsigned best=distance(s->originX,s->originY,tx,ty),best_cost=0;
+ unsigned best=spring(action)?threat_distance(s->originX,s->originY):distance(s->originX,s->originY,tx,ty),best_cost=0;
  if(tx<=15 && ty<=15 && at_origin())for(unsigned y=0;y<16;y++)for(unsigned x=0;x<16;x++){
-  unsigned d=distance(x,y,tx,ty);
+  unsigned d=spring(action)?threat_distance(x,y):distance(x,y,tx,ty);
   if(d<best)continue;
   unsigned n=route(x,y,s->fresh);
   if(n && (d>best || (s->count && s->cost<best_cost))){
@@ -98,13 +138,18 @@ void ffta_passing_begin(uint8_t *owner){
  const uint8_t *m=*(const uint8_t *const *)0x0200f438u;
  uint8_t *w=*(uint8_t **)(battle+4);
  if(s->magic==MAGIC && s->phase!=MOVING)clear();
- if(!m || *(unsigned *)(m+20)!=FFTA_DNC_A9 || *(void **)(battle+0x60)!=owner ||
+ unsigned action=m?*(unsigned *)(m+20):0;
+ if(!m || (action!=FFTA_DNC_A9 && !spring(action)) || *(void **)(battle+0x60)!=owner ||
     !w || *(void **)w!=*(void **)(m+24) || !movable(*(uint8_t **)w)){
   ffta_passing_original_confirm();return;
  }
- unsigned budget=ffta_turn_step_remaining(*(uint8_t **)w);
+ uint8_t *caster=*(uint8_t **)w,*caster_wrapper=w;
+ if(spring(action)){w=selected_ally(caster,h(cursor+12),h(cursor+16));if(!w){ffta_passing_original_confirm();return;}}
+ unsigned budget=spring(action)?2:ffta_turn_step_remaining(*(uint8_t **)w);
  if(!budget){ffta_passing_original_confirm();return;}
  clear();s->magic=MAGIC;s->phase=SELECT_MAP;s->owner=owner;s->wrapper=w;s->actor=*(uint8_t **)w;
+ s->caster=caster;s->caster_wrapper=caster_wrapper;s->action=action;
+ s->old_move=((unsigned (*)(unsigned))0x080c9541u)(4);
  s->budget=budget;s->originX=h(w+8)>>5;s->originY=h(w+12)>>5;
  copy(s->cursor,cursor,sizeof(s->cursor));prepare_grid();
 }
@@ -135,10 +180,16 @@ int ffta_passing_poll(uint8_t *owner,unsigned pressed,unsigned repeat){
   s->phase=SELECT_ROUTE;return 0;
  }
  ((unsigned (*)(void *))0x08098a89u)(s->wrapper);
- if((pressed&2u) || !movable(s->actor)){s->count=0;finish_selection();return 0;}
+ if((pressed&2u) || !movable(s->actor)){
+  if(spring(s->action)){
+   grid_visibility(0);sh(s->wrapper+0x38,s->old38);copy(cursor,s->cursor,sizeof(s->cursor));
+   ((void (*)(void))0x080231adu)();retire();return -1;
+  }
+  s->count=0;finish_selection();return 0;
+ }
  if(!(pressed&1u))return 0;
  unsigned x=h(cursor+12),y=h(cursor+16);
- if(x==s->originX && y==s->originY){s->count=0;finish_selection();return 0;}
+ if(x==s->originX && y==s->originY){if(spring(s->action))return 0;s->count=0;finish_selection();return 0;}
  unsigned n=route(x,y,s->route);
  if(n){s->count=n;finish_selection();}
  return 0;
@@ -146,7 +197,7 @@ int ffta_passing_poll(uint8_t *owner,unsigned pressed,unsigned repeat){
 void ffta_passing_action_event(const uint8_t *u,unsigned action,unsigned event){
  /* A copied prediction, another actor or a nested reaction cannot arm the
   * player route. A confirmation alone does not prove payment/execution. */
- if(!owned() || s->phase!=ARMED || u!=s->actor || action!=FFTA_DNC_A9 ||
+ if(!owned() || s->phase!=ARMED || u!=s->caster || action!=s->action ||
     ffta_action_origin()!=FFTA_ACTION_NATIVE_PRIMARY)return;
  if(event==0)s->started=1;
  if(event==3 && s->started && ffta_action_paid_count())s->completed=1;
@@ -159,7 +210,7 @@ unsigned ffta_passing_after_action(void){
    * Traps may interrupt the animation; retain the tile actually reached. */
   s->actor[0xf6]=(uint8_t)(h(s->wrapper+8)>>5);
   s->actor[0xf7]=(uint8_t)(h(s->wrapper+12)>>5);
-  if(!s->owner){
+  if(!s->owner && !spring(s->action)){
    /* Native AI may have planned Act -> Move -> Wait. A completed finishing
     * step spends Move, so skip only subsequent Move commands (2). Native
     * command1 advances the list without executing a command. */
@@ -168,14 +219,19 @@ unsigned ffta_passing_after_action(void){
    if(count<=4 && current<count)for(unsigned i=current+1;i<count;i++)
     if(ai[0x54e4+i]==2)ai[0x54e4+i]=1;
   }
-  ffta_turn_close_movement(s->actor);retire();return 0;
+  if(!spring(s->action))ffta_turn_close_movement(s->actor);
+#if FFTA_CHEMIST_PROGRESSION
+  ffta_cp_position_changed(s->actor,s->actor[0xf6],s->actor[0xf7]);
+#endif
+  *(uint8_t **)(battle+4)=s->caster_wrapper;
+  retire();return 0;
  }
  if(!s->completed || s->count<2 || !movable(s->actor) || !at_origin()){
   if(s->phase==REVALIDATE){sh(s->wrapper+0x38,s->old38);grid_visibility(0);}
   retire();return 0;
  }
  if(s->phase==ARMED){
-  unsigned remaining=ffta_turn_step_remaining(s->actor);
+  unsigned remaining=spring(s->action)?2:ffta_turn_step_remaining(s->actor);
   if(remaining<s->budget)s->budget=remaining;
   if(!s->budget){retire();return 0;}
   prepare_grid();s->phase=REVALIDATE;return 1;
@@ -192,6 +248,9 @@ unsigned ffta_passing_after_action(void){
  unsigned depth=h(battle+0xde);
  if(depth>=32){retire();return 0;}
  copy(battle+0x124,s->route,4*n);*(unsigned *)(battle+0x1a4)=n;*(void **)(battle+8)=s->wrapper;
+ /* Native phases40..43 read +4 for the walker, including its graphics,
+  * route construction and completion. +8 alone is the camera subject. */
+ *(void **)(battle+4)=s->wrapper;
  sh(battle+0xe0+2*depth,19);sh(battle+0xde,depth+1);sh(battle+0xdc,40);
  s->phase=MOVING;return 1;
 }
@@ -203,6 +262,6 @@ void ffta_passing_lifecycle(uint8_t *u,unsigned event){
  unsigned live=(p>=0x02000080u && p<0x02000080u+24u*264u && (p-0x02000080u)%264u==0) ||
                (p>=0x02002fc4u && p<0x02002fc4u+12u*264u && (p-0x02002fc4u)%264u==0);
  if(!live)return;
- if(event==1 || event==4 || (u==s->actor && event>=2 && event<=5 && s->phase!=MOVING))clear();
+ if(event==1 || event==4 || ((u==s->actor || u==s->caster) && event>=2 && event<=5 && s->phase!=MOVING))clear();
 }
-void ffta_passing_turn_end(uint8_t *u){if(s->magic==MAGIC && u==s->actor)clear();}
+void ffta_passing_turn_end(uint8_t *u){if(s->magic==MAGIC && (u==s->actor || u==s->caster))clear();}

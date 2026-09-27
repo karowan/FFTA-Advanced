@@ -9,7 +9,7 @@ typedef struct {
     uint8_t exposed, wound[2], reserved;
     uint8_t job[FFTA_JOB_RECORD_BYTES], origin, potion, job_reserved[2];
 } FFTA_EvaluatedUnit;
-_Static_assert(sizeof(FFTA_EvaluatedUnit)==304,"evaluated unit container");
+_Static_assert(sizeof(FFTA_EvaluatedUnit)==(FFTA_CHEMIST_PROGRESSION?308u:304u),"evaluated unit container");
 unsigned ffta_evaluated_init(FFTA_EvaluatedUnit *scope,const uint8_t *source);
 void ffta_evaluated_close(FFTA_EvaluatedUnit *scope);
 void *ffta_evaluated_allocate(unsigned requested);

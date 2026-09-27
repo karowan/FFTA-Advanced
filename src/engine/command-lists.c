@@ -1,6 +1,11 @@
 #include <stdint.h>
 #include "abilities.h"
 
+#ifndef FFTA_CHEMIST_PROGRESSION
+#define FFTA_CHEMIST_PROGRESSION 0
+#endif
+#define FFTA_EXP_JOB_LAST (125+2*FFTA_CHEMIST_PROGRESSION)
+
 static const uint8_t *job_record(unsigned job) {
     return *(const uint8_t *const *)0x080c8598+52*job;
 }
@@ -11,8 +16,8 @@ unsigned ffta_command_job(const uint8_t *unit,unsigned slot) {
     if (slot==3 || unit[0x34+slot]==1) return 1;
     unsigned job=slot==1 ? unit[5] : unit[8];
     unsigned fallback=slot==1 ? unit[7] : unit[8];
-    for (unsigned n=0;n<126;++n) {
-        if (job>125) return 0;
+    for (unsigned n=0;n<=FFTA_EXP_JOB_LAST;++n) {
+        if (job>FFTA_EXP_JOB_LAST) return 0;
         unsigned alias=job_record(job)[5];
         if (!alias) return job;
         unsigned next=alias==255 ? fallback : alias;

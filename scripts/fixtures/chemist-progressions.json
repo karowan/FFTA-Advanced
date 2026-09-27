@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "units": [
+    {"slot":1,"job":127,"hp":500,"mp":100,"equipment":[466],"abilityIndices":[116,117,118,119,120,121,122,123,124,125]},
+    {"slot":2,"copyFrom":4,"job":126,"hp":500,"mp":100,"equipment":[461],"abilityIndices":[124,125,126,127,128,129,130,131,132,133]},
+    {"slot":3,"copyFrom":1,"job":127,"hp":500,"mp":100,"equipment":[467],"abilityIndices":[116,117,118,119,120,121,122,123,124,125]},
+    {"slot":4,"job":126,"hp":500,"mp":100,"equipment":[462],"abilityIndices":[124,125,126,127,128,129,130,131,132,133]}
+  ]
+}

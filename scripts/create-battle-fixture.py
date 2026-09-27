@@ -6,6 +6,10 @@ observe=runpy.run_path(str(ROOT/'scripts/battle-menu-observation.py'))
 a=runpy.run_path(str(ROOT/'scripts/test-battle-inventory.py'))
 hp=runpy.run_path(str(ROOT/'scripts/probe-ap-copy-heap.py'))
 guard=bytes([0xD7])*0xbc
+chemist_progression='--chemist-progression' in sys.argv
+vanilla='--vanilla' in sys.argv
+assert not (vanilla and chemist_progression), 'Choose vanilla or expansion ownership'
+guard_start=0x3ff88 if chemist_progression else 0x3ff44
 snapshots=[]
 OUT=ROOT/'build/expansion/probes/battle-fixture'
 expected_heap_end=int(sys.argv[sys.argv.index('--heap-end')+1],0) if '--heap-end' in sys.argv else 0x0203f800
@@ -22,22 +26,38 @@ def capture(label):
  ram=e.memory()
  # 0x0203FF44/48 are the execution-scope and snapshot chain heads: battle
  # setup may open and close a scope (equipped reactions/supports), leaving 0.
- scopes=ram[0x3ff44:0x3ff4c]
- assert all(scopes[i:i+4] in (guard[:4],bytes(4)) for i in (0,4)),('Scope pointer left set',label,scopes.hex())
- assert ram[0x3ff4c:0x40000]==guard[8:],('Reserved view/AP-root guard changed',label)
+ if vanilla:
+  # The clean game owns the whole native heap. Never poison its tail with
+  # expansion-only canaries or require an expansion allocation boundary.
+  pass
+ elif chemist_progression:
+  # Schema3 owns ff60..ff87. The expanded inventory legitimately reaches
+  # ff57; the former ff44 guard would overwrite that inventory and roots.
+  assert ram[guard_start:]==bytes([0xD7])*(0x40000-guard_start),('Schema3 reserved guard changed',label)
+ else:
+  scopes=ram[0x3ff44:0x3ff4c]
+  assert all(scopes[i:i+4] in (guard[:4],bytes(4)) for i in (0,4)),('Scope pointer left set',label,scopes.hex())
+  assert ram[0x3ff4c:0x40000]==guard[8:],('Reserved view/AP-root guard changed',label)
  e.screenshot(OUT/(label+'.png'));e.save(OUT/(label+'.state'));(OUT/(label+'.ram')).write_bytes(ram)
  (OUT/(label+'.iwram')).write_bytes(C.string_at(*e.maps[0x03000000]))
  if label.startswith(('deployment-','battle-')):
-  entry=hp['heap'](ram);assert entry['end']==expected_heap_end
+  entry=hp['heap'](ram)
+  if not vanilla:assert entry['end']==expected_heap_end
   snapshots.append({'label':label,**entry})
 try:
- e.set_memory(0,(ROOT/'build/test-lab/early-town.sav').read_bytes(),0);e.run(3600);e.set_memory(0x3ff44,guard)
+ e.set_memory(0,(ROOT/'build/test-lab/early-town.sav').read_bytes(),0);e.run(3600)
+ if not vanilla:e.set_memory(guard_start,bytes([0xD7])*(0x40000-guard_start))
  for key,wait in [(8,180),(256,60),(256,60),(256,180)]:tap(key,wait)
+ if '--trace-pub' in sys.argv:capture('pub-before')
  # Full renderer hooks slightly shift the native pub transition boundary.
  # Keep the same buttons/count, but release long enough for the next dialogue
  # before sending another confirmation (old180-frame inputs lost one page).
- for _ in range(3):tap(256,240)
- for _ in range(20):tap(256,240)
+ for i in range(23):
+  # Vanilla lists Rumors first; the mod deliberately lists Missions first.
+  # This route difference is outside any measured battle interval.
+  if vanilla and i==2:tap(32,180)
+  tap(256,240)
+  if '--trace-pub' in sys.argv:capture('pub-'+str(i))
  for _ in range(4):tap(1,240)
  if '--confirm-pub-exit' in sys.argv:
   # Explicit alternate route for the retained cold-entry screenshot showing
@@ -132,7 +152,7 @@ try:
          'battle':'Herb Picking, Giza Plains','manager':manager,'actors':count,'partyUnitPointers':party,
          'confirmPubExit':'--confirm-pub-exit' in sys.argv,
          'otherUnitPointers':[p for p in pointers if p not in party],'heapSnapshots':snapshots,
-         'guard':'0203FF44..02040000 unchanged from title through first battle turn',
+         'guard':('Not applicable: clean-ROM native heap ownership' if vanilla else f'{0x02000000+guard_start:08X}..02040000 reserved bytes unchanged from title through first battle turn'),
          'readyState':str(OUT/'battle-ready.state'),'matchingROM':str(ROM)}
  (OUT/'report.json').write_text(json.dumps(report,indent=2))
  print(json.dumps({k:v for k,v in report.items() if k!='heapSnapshots'},indent=2))

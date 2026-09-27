@@ -9,6 +9,11 @@ ffta_dancer_choice_transport_entry:
  pop {r3}
  @ A447A..A4484 normally admits the supplied extra only for item actions.
  @ A dance uses that extra as a choice, without gaining item/debit semantics.
+ .ifdef FFTA_CHEMIST_PROGRESSION
+ ldr r0,=453
+ cmp r4,r0
+ beq .Lchoice
+ .endif
  ldr r0,=406
  cmp r4,r0
  beq .Lchoice

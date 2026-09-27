@@ -17,6 +17,7 @@ samurai = json.loads((P / 'samurai/current.json').read_text())
 parent = json.loads((P / 'job-state/current.json').read_text())
 base = pathlib.Path(parent['path']).read_bytes()
 assert sha(base) == parent['romSha1']
+assert base[0x527d5c+5*12:0x527d5c+6*12].hex()=='544555775515451554551500', 'Reaction permission row changed'
 clean = (ROOT / 'roms/clean/FFTA_US_clean.gba').read_bytes()
 registry = json.loads((ROOT / 'build/expansion/registry.json').read_text())
 rom = bytearray(base)
@@ -28,7 +29,7 @@ work.mkdir(exist_ok=True)
 prefix = str(ROOT / 'tools/arm-gnu/bin/arm-none-eabi-')
 elf = work / 'viking.elf'
 binary = work / 'viking.bin'
-sources = [ROOT / 'src/engine/viking.c', ROOT / 'src/engine/viking.s', ROOT/'src/engine/viking-state.c', ROOT/'src/engine/viking-status-display.c', ROOT/'src/engine/viking-damage.c', ROOT/'src/engine/viking-tsunami.c', ROOT/'src/engine/viking-reactions.c']
+sources = [ROOT / 'src/engine/viking.c', ROOT / 'src/engine/viking.s', ROOT/'src/engine/viking-state.c', ROOT/'src/engine/viking-snapshot.c', ROOT/'src/engine/viking-status-display.c', ROOT/'src/engine/viking-damage.c', ROOT/'src/engine/viking-modifiers.c', ROOT/'src/engine/viking-tsunami.c', ROOT/'src/engine/viking-reactions.c']
 samurai_work = pathlib.Path(samurai['path']).parent.parent
 combat=(samurai_work/'combat.c').read_text()
 start=combat.index('typedef struct { unsigned action,numerator,denominator; }')

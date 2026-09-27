@@ -1,12 +1,13 @@
 #ifndef FFTA_JOB_STATE_H
 #define FFTA_JOB_STATE_H
 #include <stdint.h>
+#include "chemist-progression.h"
 /* Shared API contract for independent job implementation. Integration and
  * native persistence acceptance are owned by the primary checkout. */
-#define FFTA_JOB_RECORD_BYTES 22u
+#define FFTA_JOB_RECORD_BYTES (22u+5u*FFTA_CHEMIST_PROGRESSION)
 #define FFTA_JOB_UNIT_COUNT 36u
 #define FFTA_JOB_BANK_BYTES (16u+FFTA_JOB_UNIT_COUNT*FFTA_JOB_RECORD_BYTES)
-#define FFTA_JOB_FOOTER_BYTES (32u+FFTA_JOB_UNIT_COUNT*FFTA_JOB_RECORD_BYTES)
+#define FFTA_JOB_FOOTER_BYTES (32u+FFTA_JOB_UNIT_COUNT*22u)
 /* Remaining-job reservation; allocation does not implement the effects.
  * Preserve full native coordinate bytes, not a guessed smaller map domain.
  * Byte3 was unused in schema1; all established effect offsets stay fixed. */
@@ -42,6 +43,6 @@ void ffta_job_reset(void);
 void ffta_job_record_reindex(uint8_t *record,unsigned a,unsigned b);
 void ffta_job_swap(unsigned a,unsigned b);
 void ffta_job_forget_origin(unsigned token);
-void ffta_job_footer_encode(uint8_t *output,unsigned generation);
+unsigned ffta_job_footer_encode(uint8_t *output,unsigned generation);
 unsigned ffta_job_footer_decode(uint8_t *input,unsigned generation);
 #endif

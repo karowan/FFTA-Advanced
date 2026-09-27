@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include "registry.h"
+#include "chemist-progression.h"
 #include "battle-state.h"
 #include "blade-wound.h"
 
@@ -16,8 +17,16 @@
 static const uint8_t format_magic[8] = {'F','F','T','A','E','X','P','1'};
 
 int ffta_storage_format(const uint8_t *state) {
-    for (unsigned i=0; i<8; ++i)
-        if (state[METADATA+i] != format_magic[i]) return 0;
+    /* This check is on every forecast's state lookup. Validate all eight
+     * bytes with aligned loads on native blocks; retain byte reads for
+     * unaligned save staging. Never cache a result across loads/migration. */
+    if (!((uintptr_t)state&3u)) {
+        const uint32_t *magic=(const uint32_t *)(state+METADATA);
+        if(magic[0]!=0x41544646u || magic[1]!=0x31505845u)return 0;
+    } else {
+        for (unsigned i=0; i<8; ++i)
+            if (state[METADATA+i] != format_magic[i]) return 0;
+    }
     return state[METADATA+8] == 1 ? 1 : -1;
 }
 
@@ -92,7 +101,7 @@ int ffta_pay_recipe(uint8_t *state, const uint16_t *ids,
 }
 
 uint8_t *ffta_party_ap_address(uint8_t *state, uint8_t *unit, unsigned index) {
-    static const uint8_t counts[6]={0,178,111,124,118,116};
+    static const uint8_t counts[6]={0,178,111,124+10*FFTA_CHEMIST_PROGRESSION,118,116+10*FFTA_CHEMIST_PROGRESSION};
     uintptr_t relative=(uintptr_t)unit-(uintptr_t)(state+UNIT_START);
     if (relative>=UNIT_SIZE*UNIT_COUNT || relative%UNIT_SIZE) return 0;
     unsigned race=unit[6];

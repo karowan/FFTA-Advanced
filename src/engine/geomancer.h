@@ -21,6 +21,7 @@
 #define FFTA_GEO_STONE_KIND 145u
 #define FFTA_GEO_WRATH_KIND 146u
 unsigned ffta_geo_flags(const uint8_t *);
+unsigned ffta_geo_flags_masked(const uint8_t *,unsigned);
 unsigned ffta_geo_weakness(const uint8_t *,const uint8_t *,unsigned);
 unsigned ffta_geo_factor(const uint8_t *,const uint8_t *,unsigned,unsigned);
 void ffta_geo_hp_loss(uint8_t *,unsigned,unsigned);

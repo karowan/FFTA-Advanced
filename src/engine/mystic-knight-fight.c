@@ -1,3 +1,4 @@
+#include "expansion-memory.h"
 #include "mystic-knight.h"
 #include "action-snapshot.h"
 
@@ -5,7 +6,7 @@
  * transient and outside the saved bank; nested calls restore its prior value.
  * Spellbreak owns a different cell, so either scope can nest the other. */
 typedef struct { uintptr_t self;const uint8_t *actor,*object;unsigned item,kind;uint8_t *damaged; } FightScope;
-#define FIGHT_SCOPE ((FightScope *volatile *)0x0203f730u)
+#define FIGHT_SCOPE ((FightScope *volatile *)FFTA_FIGHT_ROOT)
 _Static_assert(sizeof(FightScope)==24,"Fight component scope ABI");
 extern unsigned ffta_primary_weapon(const uint8_t *);
 extern unsigned ffta_original_snapshot_result(uint8_t *,uint8_t *,uint8_t *,unsigned,unsigned,void *,unsigned,unsigned);

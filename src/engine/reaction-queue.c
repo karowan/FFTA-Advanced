@@ -43,7 +43,7 @@ static const uint8_t *wrapper_for(const unsigned *f,const uint8_t *unit) {
 }
 unsigned ffta_reaction_queue_append(unsigned *f,const uint8_t *acting,const uint8_t *target,
  unsigned action,unsigned kind,unsigned payload) {
- if(!valid_frame(f) || !acting || !target || !known_unit(acting) || !known_unit(target) || kind<128 || kind>255 || action>=action_limit() || payload>65535 ||
+ if(!valid_frame(f) || !acting || !target || !known_unit(acting) || !known_unit(target) || kind<128 || kind>255 || action>=action_limit() || action==445 || payload>65535 ||
     ffta_action_phase()!=FFTA_ACTION_COMPLETING || ffta_action_origin()!=FFTA_ACTION_NATIVE_PRIMARY)return 0;
  const uint8_t *output=(const uint8_t *)f[0x20/4];
  /* Fourteen native object slots include the scratch-next slot touched even
@@ -79,7 +79,7 @@ unsigned ffta_reaction_queue_dispatch(unsigned *f) {
  if(!*(unsigned *)r || r[14]<128)return 0;
  if(!valid_ram(*(unsigned *)r,4))return 0;
  const uint8_t *actor=**(const uint8_t *const *const *)r;
- if(!actor || half(r+8)>=action_limit() || *(unsigned *)(r+4)!=f[0x24/4])return 0;
+ if(!actor || (half(r+8)>=action_limit() || half(r+8)==445) || *(unsigned *)(r+4)!=f[0x24/4])return 0;
  f[0x44/4]=r[10];f[0x48/4]=r[11];f[0x4c/4]=half(r+8);
  f[0x50/4]=0;f[0x74/4]=*(unsigned *)r;f[0x38/4]=1;
  /* Reuse the native weapon/item argument buffer exactly as native queued

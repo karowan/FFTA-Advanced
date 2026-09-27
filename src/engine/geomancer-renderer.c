@@ -4,6 +4,7 @@
 #include "geomancer-assets.h"
 #include "battle-workspace.h"
 #include "job-state.h"
+#include "chemist-progression.h"
 
 #define MAGIC 0x31524746u
 #define MAP ((uint8_t *)0x02007f40u)
@@ -198,8 +199,12 @@ void ffta_geo_renderer_update(unsigned map_state){
  /* The canonical bank is contiguous. Ordinary play has no fields: avoid36
   * repeated ownership/format/division queries on every native map frame. */
  const uint8_t *bank=ffta_job_state((uint8_t *)0x02000080u);unsigned any=0;
- if(bank)for(unsigned i=0;i<FFTA_JOB_UNIT_COUNT;i++)
+ if(bank)for(unsigned i=0;i<FFTA_JOB_UNIT_COUNT;i++){
   any|=bank[i*FFTA_JOB_RECORD_BYTES+FFTA_JOB_GEO_FIELD_FLAGS]&31u;
+#if FFTA_CHEMIST_PROGRESSION
+  any|=bank[i*FFTA_JOB_RECORD_BYTES+FFTA_CP_TIMERS]&24u;
+#endif
+ }
  if(!any){Renderer *old=owner();if(old)old->retiring=1;return;}
  Renderer *r=owner();
  if(r && !map_matches(r)){retire(3);r=0;}
@@ -213,13 +218,29 @@ void ffta_geo_renderer_update(unsigned map_state){
   const uint8_t *s=bank+i*FFTA_JOB_RECORD_BYTES;
   const uint8_t *u=(const uint8_t *)(i<24?0x02000080u+i*264u:0x02002fc4u+(i-24)*264u);
   inputs[i]=s[15]|((unsigned)s[16]<<8)|((s[17]&31u)<<16)|
-   ((unsigned)(half(u+0x18)!=0 && !(u[0xe8]&64u))<<24);
+   ((unsigned)(half(u+0x18)!=0 && !(u[0xe8]&64u))<<31);
+#if FFTA_CHEMIST_PROGRESSION
+  /* Eight tile bits and one active bit fit the unused part of the exact
+   * cache key. Retain the renderer allocation ABI and native field bits. */
+  inputs[i]|=(unsigned)s[FFTA_CP_TRAP_TILE]<<21;
+  if(s[FFTA_CP_TIMERS]&24u)inputs[i]|=1u<<29;
+#endif
   if(r && r->field_inputs[i]!=inputs[i])board_changed=1;
  }
  uint8_t board[256];
- if(board_changed && !ffta_geo_field_board((uint8_t *)0x02000080u,board)){
-  if(r)r->retiring=1;
-  return;
+ if(board_changed){
+  unsigned covered=ffta_geo_field_board((uint8_t *)0x02000080u,board);
+#if FFTA_CHEMIST_PROGRESSION
+  /* A trap is a single marked tile, using the existing dashed field outline.
+   * The compositor retains terrain depth, occlusion and palette ownership.
+   * Do not synthesize replacement artwork or allocate another tile bank. */
+  for(unsigned i=0;i<36;i++)if((inputs[i]&0xa0000000u)==0xa0000000u){
+   unsigned tile=(inputs[i]>>21)&255u;
+   if(!board[tile])covered++;
+   board[tile]|=1u;
+  }
+#endif
+  if(!covered){if(r)r->retiring=1;return;}
  }
  unsigned prior=LOCK;LOCK=1;
  if(!r)r=create();

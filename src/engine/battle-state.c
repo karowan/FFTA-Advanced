@@ -1,15 +1,18 @@
 #include "battle-state.h"
 #include "persistent.h"
+#include "unit-slot.h"
 
 uint8_t *ffta_state_exposed(uint8_t *state,const uint8_t *unit) {
     if (!state || !unit || ffta_storage_format(state)!=1) return 0;
     uintptr_t relative=(uintptr_t)unit-(uintptr_t)state;
     uintptr_t delta=relative-0x80u;
-    if (delta<24u*264u && delta%264u==0)
-        return state+FFTA_EXPOSED_OFFSET+delta/264u;
+    int slot=ffta_unit_slot(delta,24);
+    if (slot>=0)
+        return state+FFTA_EXPOSED_OFFSET+(unsigned)slot;
     delta=relative-0x2fc4u;
-    if (delta<12u*264u && delta%264u==0)
-        return state+FFTA_EXPOSED_OFFSET+24u+delta/264u;
+    slot=ffta_unit_slot(delta,12);
+    if (slot>=0)
+        return state+FFTA_EXPOSED_OFFSET+24u+(unsigned)slot;
     return 0;
 }
 void ffta_state_exposed_swap(uint8_t *state,unsigned a,unsigned b) {

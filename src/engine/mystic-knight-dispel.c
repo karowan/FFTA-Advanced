@@ -7,6 +7,7 @@
 #include "bard.h"
 #include "dancer.h"
 #include "geomancer.h"
+#include "chemist-progression.h"
 
 static unsigned half(const uint8_t *p){return p[0]|((unsigned)p[1]<<8);}
 static unsigned alive(const uint8_t *u){return u && half(u+0x18) && !(u[0xe8]&64u);}
@@ -39,6 +40,11 @@ unsigned ffta_myk_dispellable(const uint8_t *u,unsigned choice){
  case 19:return ffta_geo_updraft(u,1);
  case 20:return ffta_geo_steady(u);
  case 21:return !!ffta_myk_enchantment(u);
+#if FFTA_CHEMIST_PROGRESSION
+ case 22:return !!(ffta_cp_flags(u)&FFTA_CP_TRIAGE);
+ case 23:return !!(ffta_cp_flags(u)&FFTA_CP_WARD);
+ case 24:return !!(ffta_cp_flags(u)&FFTA_CP_SMOKE);
+#endif
  default:return 0;
  }
 }
@@ -65,6 +71,11 @@ unsigned ffta_myk_dispel(uint8_t *u,unsigned choice){
  case 18:s[FFTA_JOB_GEO_TRAVERSAL]&=241u;ffta_geo_mobility(u);break;
  case 19:s[FFTA_JOB_GEO_TRAVERSAL]&=143u;ffta_geo_mobility(u);break;
  case 20:s[FFTA_JOB_GEO_STEADY]&=248u;break;
+#if FFTA_CHEMIST_PROGRESSION
+ case 22:s[FFTA_CP_MEDIC]&=248u;break;
+ case 23:s[FFTA_CP_MEDIC]&=199u;break;
+ case 24:s[FFTA_CP_TIMERS]&=248u;break;
+#endif
  default:return 0;
  }
  return 1;

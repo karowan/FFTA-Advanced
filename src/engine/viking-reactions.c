@@ -7,10 +7,6 @@
 #include "reaction-ids.h"
 #include "viking-native.h"
 static unsigned half(const uint8_t *p) { return p[0]|((unsigned)p[1]<<8); }
-unsigned ffta_viking_reaction_ready(const uint8_t *unit) {
-    return unit && !((unsigned (*)(const uint8_t *))0x080c8281u)(unit) &&
-        ((unsigned (*)(const uint8_t *,unsigned))0x08133addu)(unit+0xe8,5);
-}
 unsigned ffta_viking_action_category(const uint8_t *actor,unsigned action) {
     (void)actor;action=(uint16_t)action;
     if(!action)return FFTA_ACTION_PHYSICAL;

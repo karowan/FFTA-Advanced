@@ -18,7 +18,7 @@ typedef struct {
 } Continuation;
 typedef struct { unsigned magic;Continuation *record;uint8_t *heap;unsigned reserved; } Slot;
 _Static_assert(sizeof(Slot)==16,"Doublecast pool reservation");
-_Static_assert(sizeof(Continuation)==1836,"Doublecast native allocation");
+_Static_assert(sizeof(Continuation)==(FFTA_CHEMIST_PROGRESSION?2092u:1836u),"Doublecast native allocation");
 #define MAGIC 0x3243444du
 static unsigned half(const uint8_t *p){return p[0]|((unsigned)p[1]<<8);}
 static unsigned valid(const void *p,unsigned bytes){
@@ -131,7 +131,7 @@ unsigned ffta_myk_doublecast_event(const uint8_t *u,unsigned id,unsigned event){
  if(!c || !c->active || c->actor!=u || ffta_action_origin()!=FFTA_ACTION_NATIVE_PRIMARY)return 0;
  if(event!=3)return 0;
  if((ffta_action_paid_count() || !id) && (ffta_action_unit_extension_flags(u)&FFTA_MYK_WEAVE) &&
-    !(ffta_action_unit_extra_flags(u)&FFTA_BARD_FORCED)){
+    !(ffta_action_unit_extra_flags_masked(u,FFTA_BARD_FORCED))){
   unsigned category=ffta_myk_sequence_category(u,id);
   c->seen|=category?category:4u;
  }

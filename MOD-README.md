@@ -2,22 +2,22 @@
 
 Release: **{{VERSION}}**
 
-A mod for **Final Fantasy Tactics Advance (USA)** that adds eight jobs, new
+A mod for **Final Fantasy Tactics Advance (USA)** that adds ten jobs, new
 abilities and equipment, spritework, and menu improvements.
 
 ## What the mod includes
 
-- **Eight new jobs across ten race/job options:** two additions for each
-  of the five playable races. Dark Knight and Chemist each belong to two races.
-- **129 added ability entries:** 85 actions, 18 supports, 18 reactions and eight
+- **Ten new jobs across twelve race/job options.** Dark Knight and Chemist
+  each belong to two races; Physician and Sapper are Chemist progression jobs.
+- **149 added ability entries:** 99 actions, 20 supports, 20 reactions and ten
   combos, including the extensions to the original Soldier and Gladiator jobs.
-- **85 new teaching weapons**, introduced through normal shop progression and
+- **95 new teaching weapons**, introduced through normal shop progression and
   available for repeat purchase.
 - A **two-handed axe weapon family** for Soldier, Gladiator and Viking, with
   new skills inside Soldier's Battle Tech and Gladiator's Spellblade Tech.
-- New AI-generated spritework for all ten added class options, including battle
+- New AI-generated spritework for all twelve added class options, including battle
   sprites and animations, portraits, job-wheel figures, equipment icons and
-  inventory icons for all 85 new weapons, using the game's existing native
+  inventory icons for all 95 new weapons, using the game's existing native
   palettes.
 - Mission-item safeguards, repeatable access to otherwise missable monster
   ability sources, eligible secret-recruit retries and rare-equipment recovery.
@@ -36,8 +36,10 @@ The numbers in this table count **mastered action abilities on that character**.
 | Bangaa | Dark Knight | Gladiator 2 + Bishop 1 | Sword attacks, HP sacrifice and drain. |
 | Nu Mou | Chemist | None | Ranged healing, revival and ingredient mixtures. |
 | Nu Mou | Geomancer | Sage 2 + Black Mage 3 | Nature magic, terrain bonuses and battlefield fields. |
+| Nu Mou | Physician | Chemist 4 + White Mage 3 | Preventive wards, healing and emergency recovery. |
 | Moogle | Chemist | None | Ranged healing, revival and ingredient mixtures. |
 | Moogle | Bard | Animist 2 + Juggler 2 | Songs that buff and heal allies. |
+| Moogle | Sapper | Chemist 3 + Gadgeteer 2 | Explosives, traps, smoke and ally repositioning. |
 | Viera | Dancer | Fencer 2 + White Mage 2 | Debuffs, evasion and movement skills. |
 | Viera | Mystic Knight | Red Mage 2 + Elementalist 2 | Weapon enchantments and Spellblade attacks. |
 
@@ -48,6 +50,12 @@ The numbers in this table count **mastered action abilities on that character**.
   Dark Mind, Black Night and self-mode Last Resort are weapon-free,
   allowing those defensive options in other weapon builds.
 - **Chemist:** Mix combines inventory ingredients into medicines.
+- **Physician:** Triage prepares a recovery after the next damaging enemy hit;
+  Trauma Ward softens that hit. Emergency Dressing helps a wounded Physician
+  survive, while Follow-up Care rewards curing another ally.
+- **Sapper:** Tripwire punishes enemy entry, Smoke Screen softens ranged hits,
+  and Springboard moves an ally up to two movement points. A Timed Fuse bursts
+  at the end of its carrier's next turn; moving or curing it prevents the burst.
 - **Geomancer:** nearby terrain strengthens nature arts. Each caster can maintain
   one Rime Field or Nature Haven at a time.
 - **Dancer:** Passing Step lets you move after attacking, using up to two points
@@ -73,10 +81,10 @@ Cyril stocks every unlocked new teaching weapon. Shipments are cumulative:
 
 | Campaign progress | New teaching weapons available in total |
 |---|---:|
-| First normal Cyril shop visit | 18 |
-| Complete Twisted Flow | 41 |
-| Complete Pale Company | 64 |
-| Complete Desert Patrol | 85 |
+| First normal Cyril shop visit | 20 |
+| Complete Twisted Flow | 47 |
+| Complete Pale Company | 74 |
+| Complete Desert Patrol | 95 |
 
 Other towns stock new weapons for these jobs:
 
@@ -91,8 +99,8 @@ Other towns stock new weapons for these jobs:
   then press Select again to swap them. Marche and Montblanc keep their protected
   story positions.
 - **Equipment previews:** in Item List, Buy and Sell, use L/R to switch
-  eligibility pages and inspect the ten added class entries.
-- **Job wheel:** L/R switches pages when Human jobs exceed one page.
+  eligibility pages and inspect the twelve added class entries.
+- **Job wheel:** L/R switches pages when a race's jobs exceed one page.
 - **Long help text:** descriptions longer than two lines continue on a second
   page, as in the original game; press A to read it.
 - **Auto-Potion:** in Pick Abilities â†’ Reaction, choose Potion or Hi-Potion.

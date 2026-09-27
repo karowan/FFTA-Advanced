@@ -1,3 +1,4 @@
+#include "expansion-memory.h"
 #include "action-snapshot.h"
 /* Lend a root result-bank frame to a caller that would otherwise hold an
  * 820-byte FFTA_ActionSnapshot on the IWRAM stack. Same ownership rules as
@@ -6,7 +7,7 @@
  * the live snapshot chain; the borrower's stack token authenticates the frame
  * (stack_frame requires the token address above SP and holding the frame). */
 #define MAGIC 0x31534e41u
-#define ACTIVE ((FFTA_ActionSnapshot *volatile *)0x0203ff48u)
+#define ACTIVE ((FFTA_ActionSnapshot *volatile *)FFTA_SNAPSHOT_ROOT)
 typedef struct { uintptr_t *token; FFTA_ActionSnapshot frame; } ResultStorage;
 _Static_assert(sizeof(ResultStorage)==824,"external result snapshot ABI");
 extern ResultStorage *ffta_additional_result_storage(void);

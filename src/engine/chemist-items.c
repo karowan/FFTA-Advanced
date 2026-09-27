@@ -105,6 +105,9 @@ int ffta_chemist_mp(const uint8_t *c) {
     return (int)(amount<missing?amount:missing);
 }
 int ffta_chemist_revive(const uint8_t *c) {
+#if FFTA_CHEMIST_PROGRESSION
+    if(half(c+12)==450)return ffta_cp_revive(c);
+#endif
     /* Both approved revivals use the native Phoenix Down half-max formula;
      * no healing support, item support or numerical 200-HP ceiling applies. */
     return ((int (*)(const uint8_t *))0x08131a61u)(c);

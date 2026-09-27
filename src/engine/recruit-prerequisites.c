@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include "chemist-progression.h"
 
 extern unsigned ffta_job_prerequisite_count(uint8_t *,unsigned);
 
@@ -6,6 +7,6 @@ extern unsigned ffta_job_prerequisite_count(uint8_t *,unsigned);
  * Only expanded lesson lists need replacing; retain the original loop for
  * every other job, including native special/monster records. */
 int ffta_recruit_prerequisite_count(uint8_t *unit,unsigned job) {
-    if(job!=2 && job!=16 && (job<116 || job>125)) return -1;
+    if(job!=2 && job!=16 && (job<116 || job>125+2*FFTA_CHEMIST_PROGRESSION)) return -1;
     return (int)ffta_job_prerequisite_count(unit,job);
 }

@@ -1,0 +1,645 @@
+{
+  "schema": 1,
+  "status": "user-approved-for-class-integration",
+  "date": "2026-09-27",
+  "userInstruction": "ok looks good hook the whole classes up",
+  "review": {
+    "path": "build/art/chemist-anchored-revisions-2026-09-27/review-receipt.json",
+    "sha256": "27ce855c5007e89293c6316f0e41c56cb917671be6a80c9b17a4355c420132bc"
+  },
+  "page": {
+    "path": "build/art/chemist-anchored-revisions-2026-09-27/index.html",
+    "sha256": "d0cb6d44e35fdd89f61032d6427d50927e9cd0c0aa408111e048a4cd9bcd437d"
+  },
+  "menu": {
+    "path": "build/art/chemist-job-art-2026-09-26/menu/menu.json",
+    "sha256": "ee0a6f38927c120a8e022e960d3bf7eabb910fb2490ef21427fa990346a9a5ee"
+  },
+  "selections": {
+    "physician": {
+      "p000": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p000-v1-receipt.json",
+        "sha256": "7f25cedba85014f24979603831bdd46764d3e3913fdcd14de4ec73acd625cd60"
+      },
+      "p001": {
+        "approvedSource": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-front-anchored-native.png",
+          "sha256": "a880c6b298e5f1d374c8fdb61f93d410cb9ca55e3a960eec079cc7b3eac02473"
+        },
+        "preview": {
+          "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p001-approved-base.png",
+          "sha256": "4e497becfcef2750a7c6ab9d202fdc9c243372a4089554d498cecdc1a7385c3d"
+        }
+      },
+      "p002": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p002-v1-receipt.json",
+        "sha256": "2e3d40493ca4b541a1e09e9421ead84709bb7b54c2502ca64c0e993279c91f99"
+      },
+      "p003": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p003-v1-receipt.json",
+        "sha256": "655d4a630b08a2d7b940df08b11674bb4b886b3dee2b41ba8cc08ba7106cd025"
+      },
+      "p004": {
+        "approvedSource": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-rear-native.png",
+          "sha256": "fe06ec6b93063ed60cd295e94b254733a59adc2301f35c35038ff2b16af0bc61"
+        },
+        "preview": {
+          "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p004-approved-base.png",
+          "sha256": "784b99963621080a55aca2c22c6c09a148c88f2b283f190c6ce493cfd13a3014"
+        }
+      },
+      "p005": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p005-v1-receipt.json",
+        "sha256": "ee487939d012110963c8eb5e262ed04512688e2f7b15854329a36b0e10f8beb6"
+      },
+      "p006": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p006-v1-receipt.json",
+        "sha256": "19d3477cc48c62fe70f509c4362208cb2955329fd91dfb80b9c48c96192b5a04"
+      },
+      "p007": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p007-v1-receipt.json",
+        "sha256": "9a243470a4077413cbcd5b980b5b85d42f39ea7781d7b5c57d71cdeca75b0811"
+      },
+      "p008": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p008-v1-receipt.json",
+        "sha256": "5ca3375534fde047e997c8a186f6da5b7c3be07b9f6a7f7f6f43949dfd1c36a7"
+      },
+      "p009": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p009-v1-receipt.json",
+        "sha256": "1da700bc454adbcc38749c808332e72d6bac0dfa6f03aa600c923287c4ced868"
+      },
+      "p010": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p010-v1-receipt.json",
+        "sha256": "668770b30fb092a9c0aca5ebe7188b11d7001cfc6dca1fa91d67e2647f91766b"
+      },
+      "p011": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p011-v1-receipt.json",
+        "sha256": "9217da380244f58ea6543e34b06b3dab47a529f64d6001de0204a900b5137c32"
+      },
+      "p012": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p012-v2-receipt.json",
+        "sha256": "0ffaafaad5691ce1e1706deb2de1ee342ed5a95fde6c18a2e6f844d2a99abd90"
+      },
+      "p013": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p013-v2-receipt.json",
+        "sha256": "b01836f2a6cd204e1df7d0808084b08c9ddf1019ba52b29daa3ae2dfd70f3923"
+      },
+      "p014": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p014-v2-receipt.json",
+        "sha256": "9643559c264c8850fdf06e560390d892e0a163e41dc6ed41fdc2d307d1e67fca"
+      },
+      "p015": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p015-v2-receipt.json",
+        "sha256": "f007f29d3ba7d55645adcd69c8b3e749acbde14a9a322285d2d96572d79766da"
+      },
+      "p016": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p016-v3-receipt.json",
+        "sha256": "061a1218fbe528e94dd91b20d75abbdd4476365b82986765220dd7d069c0aef5"
+      },
+      "p017": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p017-v4-receipt.json",
+        "sha256": "66412dd88b018a8234226897ab3d690924e24e042c0a02ed61a9277ed5fc879d"
+      },
+      "p018": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p018-v2-receipt.json",
+        "sha256": "92a023ba8065d93765c099780a2eb4dda2ecbc7c08f3223d05c6dea84cec3e1a"
+      },
+      "p019": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p019-v2-receipt.json",
+        "sha256": "f4dded75dce781d87c10a071d944c8f1931c7ccee6de00c8c93d87af5813f940"
+      },
+      "p020": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p020-v2-receipt.json",
+        "sha256": "98e8760fef94162b2fadf9eac4e7ed7d3bf8eb4b5055794607608549a699a22f"
+      },
+      "p021": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p021-v2-receipt.json",
+        "sha256": "ef00a243b95118637f94d5f6de8aff4ff4f34b0da5a093d650ec7c1e094fe8b9"
+      },
+      "p022": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p022-v2-receipt.json",
+        "sha256": "b9b4afa23c7f6f472332cf102bd9e19f8a28cb8f60431a2d39fdad3dd2f2ff4e"
+      },
+      "p023": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p023-v2-receipt.json",
+        "sha256": "899fc3e4c1d328421b838b620987f73ab6207ceb028e2587cb080e2f5204a6c9"
+      },
+      "p024": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p024-v2-receipt.json",
+        "sha256": "bdfcab6a9cf2fabeff5e66c0dbcc080e9bb7a7aa6491f677ae926be4f31b8d11"
+      },
+      "p025": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p025-v2-receipt.json",
+        "sha256": "2a548e78b81cc5382d9a0ba4c14a6831f88aee5387bfa608bc697f0581941105"
+      },
+      "p026": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p026-v3-receipt.json",
+        "sha256": "b7bc033dc0b2b08e1109aa241a836ac9ebcb131036a7d45ee138050aeb2238dd"
+      },
+      "p027": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p027-v2-receipt.json",
+        "sha256": "844f3b72fdb213e4a833ac3e567b3c504219f0d6308e656eff5550927f75e796"
+      },
+      "p028": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p028-v3-receipt.json",
+        "sha256": "56f005886ccd89d0f019262eaff78ff8ccdf84be80abd60ac32228c3191bc69c"
+      },
+      "p029": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p029-v2-receipt.json",
+        "sha256": "1e55e0c4cd8584236475ea79abe9cc0c6845b1392e1550e900894f08460ebf44"
+      },
+      "p030": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p030-v3-receipt.json",
+        "sha256": "30ed4da667ce0f253fba263ec0bd4b4f3a80c831594078722133f9338c315370"
+      },
+      "p031": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p031-v3-receipt.json",
+        "sha256": "e945e40783f2fbbfc67682a400855469742240ae2cb03c79161db4969f68d4da"
+      },
+      "p032": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p032-v3-receipt.json",
+        "sha256": "8afdff3d3bc576c90857ef39e716f075662336b82349bdfcf195e3da40f63023"
+      },
+      "p033": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p033-v3-receipt.json",
+        "sha256": "3ca478d7f2bc90c59f528fe152144d1d80a576139a3e00c5ca1138afc23457bb"
+      },
+      "p034": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p034-v3-receipt.json",
+        "sha256": "0454e24d4eda318220150133707128318d01f859f6459c6919b803d4b62e271b"
+      },
+      "p035": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p035-v3-receipt.json",
+        "sha256": "afbd5db22a18ae8f0f273ff907e6c66b11988617270b060a82130fd0bae3cb92"
+      },
+      "p036": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p036-v3-receipt.json",
+        "sha256": "57d4ad3ad198e043bf3980e389696c5d3e6d141ea3eb2cc36d4922670059cbc8"
+      },
+      "p037": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p037-v3-receipt.json",
+        "sha256": "74be4c4eea99e4f9f8496c95fe3095a513ad31c2d7ec04921fd634ddfe2fb1ff"
+      },
+      "p038": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p038-v3-receipt.json",
+        "sha256": "dc137354dff5ed51dc0ce0e447b246f1be7e6b7bc22a7a637b73cf01f437f264"
+      },
+      "p039": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p039-v3-receipt.json",
+        "sha256": "ee5e8fa7e15a99a67d4cc4a11481303f7af2afb48baeb1f843373e67403f77ab"
+      },
+      "p040": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p040-v3-receipt.json",
+        "sha256": "bc121166932936ed7c37f77a840f0a1f9719454f8221b8cbf0a64c8fa734badc"
+      },
+      "p041": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p041-v3-receipt.json",
+        "sha256": "3323cab16b9766ab3c2b06b7647a6523a37bf98118636984766aaa97056a9ebd"
+      },
+      "p042": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p042-v4-receipt.json",
+        "sha256": "26760cb2dee2b8a45dd08f8ad257e926adf409f3746d33c25ba8a37b50660688"
+      },
+      "p043": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p043-v5-receipt.json",
+        "sha256": "fed96a84193d4a1f8f54c0c233e2a16faa7bea320196b83ea53c914a04abcc32"
+      },
+      "p044": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p044-v3-receipt.json",
+        "sha256": "faf0567ce1dd7bf7c7605147db9e0dc66bb2190c2a940ac52e611afb7e1dbce6"
+      },
+      "p045": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p045-v3-receipt.json",
+        "sha256": "90ef680efc592cb6096f96a728f6f3f2a7fcd30618025b1efee7699e69aa0307"
+      },
+      "p046": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p046-v3-receipt.json",
+        "sha256": "d04877b54c12abad93512fd60fb5d793dc843ba4324f9c72f3fb57f494f65d6e"
+      },
+      "p047": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p047-v3-receipt.json",
+        "sha256": "42aea265f5c0132cd9be0c686587b3f8c97c53953c5e7db3d079f5cf585f165b"
+      },
+      "p048": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p048-v4-receipt.json",
+        "sha256": "9b4465f14d9de3233d9d86f82ca0695ef7c2d6f356ff72520e1045f52f00d1c1"
+      },
+      "p049": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p049-v4-receipt.json",
+        "sha256": "edfd0ab8b0decd0c0bedc50026adac21dbb0afe7f51bb007cf5d214e8935ae03"
+      },
+      "p050": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p050-v3-receipt.json",
+        "sha256": "07500b6945a68ba7d862f7924a53b02172c95112646bd9f2f738fe3c0000a7cf"
+      },
+      "p051": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p051-v3-receipt.json",
+        "sha256": "eff875231b9558e717ea280ff1820072431a95ac5b1e918ac8239966ae6d2bbe"
+      },
+      "p052": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p052-v4-receipt.json",
+        "sha256": "740658b7bbfe6300c6d392b758a1070eb3eb49f9e0f933fa81353570d8735160"
+      },
+      "p053": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p053-v3-receipt.json",
+        "sha256": "dc449712b70590f27e3e449a1e838010bc79788dabef1948ef3fb3f6755c5673"
+      },
+      "p054": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p054-v3-receipt.json",
+        "sha256": "38fa64d0ed267a6af7a49153b58e71932b29094ed95f3c6587345a1441fb8811"
+      },
+      "p055": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p055-v4-receipt.json",
+        "sha256": "0943be50237b0530deb3da1b482311e2e75d193c513f35db6d311fb19233cb3c"
+      },
+      "p056": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p056-v5-receipt.json",
+        "sha256": "ada01b03e4832f6c81e9bcf693225f6052b9e568a7fa3e8ed6a1b7ac687e4a84"
+      },
+      "p057": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p057-v3-receipt.json",
+        "sha256": "c86570e00e3c649e9defe7346a3f4a67e035fcd52ea5aa8746e5d8e46ffc5941"
+      },
+      "p058": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p058-v4-receipt.json",
+        "sha256": "88c9bf1c47a9b9c7758bd63c75da1b6b4e44c36469c01318791c8d22ee0e3bae"
+      },
+      "p059": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p059-v4-receipt.json",
+        "sha256": "08fb00d3ffb64b7fb17e0b94e7ca7a50393dca5d8b675eff31357983b6f99585"
+      },
+      "p060": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p060-v4-receipt.json",
+        "sha256": "82243c6e26a256c496d990c00374c78e0e5f6f998c596f05dd48880b1289652d"
+      },
+      "p061": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p061-v4-receipt.json",
+        "sha256": "943fa0a720cfbcbd999c84101ee13a71e97229d98790b7207b7737a83e0298db"
+      },
+      "p062": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p062-v4-receipt.json",
+        "sha256": "e68b21fff325ed283a5ab1193c88f30d0003d2edfd44beb6a07fd18eff2f4129"
+      },
+      "p063": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p063-v4-receipt.json",
+        "sha256": "6da26a92f7c9c480b3c55e18cc20890becd3d4beeaa592322aef44794e2b8c7b"
+      },
+      "p064": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p064-v4-receipt.json",
+        "sha256": "d1c1efbc3d1cee4362b89deb9c454d7484aa7bb062c1c74c260fa5de696d25bc"
+      },
+      "p065": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p065-v4-receipt.json",
+        "sha256": "535cd97580b8046047740b8cb89e2a8cf43dd453377b27ca831a5d8904dba3c6"
+      },
+      "p066": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p066-v3-receipt.json",
+        "sha256": "6b7bdff6dbda768cc6f5d264ff19868aacb01aaaf1de1b785b7b820d0deaddf2"
+      },
+      "p067": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/physician/p067-v4-receipt.json",
+        "sha256": "05bb91728a1fbcc613bd6bf32bd1156ff7bfc13bdd22c2706e73c04a5a34cf19"
+      }
+    },
+    "sapper": {
+      "p000": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p000-v1-receipt.json",
+        "sha256": "91437a9621b3bc936849a6c95ecf1d80bc322a49523101980e7646470baf620b"
+      },
+      "p001": {
+        "approvedSource": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-front-anchored-native.png",
+          "sha256": "5113d43095adeb85a68f0eeb02243d997a495dcaacf801a5745494f1f1b7413a"
+        },
+        "preview": {
+          "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p001-approved-base.png",
+          "sha256": "b74507f7a06e2a1d0e5c7e045f92f282bde8942b0f660ca49a3631375633bd53"
+        }
+      },
+      "p002": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p002-v1-receipt.json",
+        "sha256": "ebe991f4e3538ffb9164e225779c71e1f0519953bd3e0ebd48a069bc73d4eaa8"
+      },
+      "p003": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p003-v1-receipt.json",
+        "sha256": "e015d16464e37c78225758ab0c7d26005c6b2f93510e63fe9f4c7d5fdccd071b"
+      },
+      "p004": {
+        "approvedSource": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-rear-native.png",
+          "sha256": "2bc34fa03d0b93618a3ce9b22fdd3a1b1d668d2f0b17a6ab85b2cca750b75953"
+        },
+        "preview": {
+          "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p004-approved-base.png",
+          "sha256": "598549498099c9088a28820e2d0977533ed132b4b6d774a40e368eb0315fa59f"
+        }
+      },
+      "p005": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p005-v1-receipt.json",
+        "sha256": "310a22d08469192a7d5621179a5d445d19beb808126f70e3030d0ff3fdef7ae9"
+      },
+      "p006": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p006-v1-receipt.json",
+        "sha256": "63aa2aefb367f46dc821be3b4ecec7d2b437240feccb9db6d332c0b8feab0fbf"
+      },
+      "p007": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p007-v1-receipt.json",
+        "sha256": "bdf45670c16f78cfbfee6f5deabe5c5d309db018ef50af55cb3f391df0de210d"
+      },
+      "p008": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p008-v1-receipt.json",
+        "sha256": "62c01038024ebb74a789644cb8ad98682e61ceebaa0f4009f62f9771c5f21e80"
+      },
+      "p009": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p009-v1-receipt.json",
+        "sha256": "9dd6a2f7c7d3ad88b2fbe9657e411cd25ae045970211ae605b4ac62e836fa4f9"
+      },
+      "p010": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p010-v1-receipt.json",
+        "sha256": "727a86465b7a4033136ff0cf2bda6619ea191216a00eb73d5f756c9b461e8571"
+      },
+      "p011": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p011-v1-receipt.json",
+        "sha256": "4d24cf252142bcff9ea3942dfb049d70c50c44dcb5cfdab3f98cf26240451633"
+      },
+      "p012": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p012-v2-receipt.json",
+        "sha256": "73b125e722833e5fe0196bb9fa6e1854ebdcb3b0dd859696ac88dc1c6b901197"
+      },
+      "p013": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p013-v2-receipt.json",
+        "sha256": "d7581d1316a487bc1ee3bc1c3191f008226ac79c9bdb07fac6096f4e3cd8c577"
+      },
+      "p014": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p014-v3-receipt.json",
+        "sha256": "4cb373995f121ebd2a7bcc2ada89803f0f8f3f65e3f139c3804c4ad623283c51"
+      },
+      "p015": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p015-v3-receipt.json",
+        "sha256": "cd8f5dfa802e0098cded5f47b9d0d11edd90db08f97f974ebcb98d3e29112110"
+      },
+      "p016": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p016-v3-receipt.json",
+        "sha256": "8d94154dc252bc548c9db0691b2f0d7a0cdbb3ea12dffcae1f963ba78253053f"
+      },
+      "p017": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p017-v3-receipt.json",
+        "sha256": "e21ffd1f36bda9f2fbbac1882a6e9da5eabfcfe61ec6bd10e4c987d9fb1d34a5"
+      },
+      "p018": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p018-v2-receipt.json",
+        "sha256": "5a1ff484526a68429fd193a55f1e03e14bc33342de898c7e850608c70f4b99cc"
+      },
+      "p019": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p019-v4-receipt.json",
+        "sha256": "ede99917749faa243ee3edb702233bb37c0f9bccf9126ea6e0502c2f1b921209"
+      },
+      "p020": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p020-v2-receipt.json",
+        "sha256": "48bd4c0787648f79760430359fdce73103a407542bb298d311fd0156b8aa2c91"
+      },
+      "p021": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p021-v2-receipt.json",
+        "sha256": "359d2a9c3f5f1ace3df68ccb3d3e26bed94f3f16cf25a074d71b9c347f95892e"
+      },
+      "p022": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p022-v3-receipt.json",
+        "sha256": "741f473af41052031c196af6a3233a2938f1d99f6ab6c0ca9a5625fbf23a0cf9"
+      },
+      "p023": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p023-v4-receipt.json",
+        "sha256": "3ec5e37af25e792735f5dac6013e3b96a42ff97f1d88f1cffececb86eb7d98cb"
+      },
+      "p024": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p024-v2-receipt.json",
+        "sha256": "bfab75a4c07df4c3c7d38360eefcecb6ff318d5e9f439de19457afb5a888258d"
+      },
+      "p025": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p025-v2-receipt.json",
+        "sha256": "b2bd4c33985f714727610e04bab5257df4e34c2db57bfcfbff5bd071e268ed08"
+      },
+      "p026": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p026-v2-receipt.json",
+        "sha256": "95be86d3b2718ef9774d2f3dd1756ee411988746815f4e679672451d73ba0435"
+      },
+      "p027": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p027-v2-receipt.json",
+        "sha256": "0bd5df818e1bd9a25b4e47649f92e87c24dc3585aa48ccce9d48a80db0a9231a"
+      },
+      "p028": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p028-v2-receipt.json",
+        "sha256": "d62e41f411df279ab44c4d0e93d43243fa1bec17b7be6e13aa5ae266fb92a12f"
+      },
+      "p029": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p029-v3-receipt.json",
+        "sha256": "d29191bfa39fad8ba11cbfc4de02748510d08495606f30c82e2a4403e488f397"
+      },
+      "p030": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p030-v3-receipt.json",
+        "sha256": "b604a356b7c62b945039d37082e3118926ac698768d66dec78c59487c7e29a03"
+      },
+      "p031": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p031-v3-receipt.json",
+        "sha256": "7e8323076ac2d8ce52ba5251c4d091273e794f28f84de8763c47921d6f099905"
+      },
+      "p032": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p032-v3-receipt.json",
+        "sha256": "8f63c6aacd0e899031f0d1d5a02e0644f26363eb7a0ddb3b30f5bc42308ce8c7"
+      },
+      "p033": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p033-v3-receipt.json",
+        "sha256": "5250c7bdc8d7957ce4095d8eb61d76c5b8ef689b0432d1e06778e9d9c7fd88cc"
+      },
+      "p034": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p034-v3-receipt.json",
+        "sha256": "3a5191834d5a440fdab9c3d8af6f7e48caf3cd293f8136fbc826b02e746b3918"
+      },
+      "p035": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p035-v3-receipt.json",
+        "sha256": "64437e3f088cac5a68d8d010bbe6c871ed0a69f7bf51e03d6bf30c958148544b"
+      },
+      "p036": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p036-v3-receipt.json",
+        "sha256": "254d758203ca05da2b3eb27f76be1352b6231cb813ff955b27cf6ab6fd989106"
+      },
+      "p037": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p037-v3-receipt.json",
+        "sha256": "6641d86ae29082fa2420f67fdb1557b62d4b3ffffdfaee48fcc597491328d113"
+      },
+      "p038": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p038-v3-receipt.json",
+        "sha256": "8d3570dbc8dad0206d127fd960da4eaa677e0d56f0979ec05fe988847f58df34"
+      },
+      "p039": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p039-v3-receipt.json",
+        "sha256": "92fd93f38fdde0cae48a4e31e3fb88ca1171f6047b03f7dae1fd7aa48fb9a740"
+      },
+      "p040": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p040-v3-receipt.json",
+        "sha256": "3c1576a9ef66f3212faa4743ff5503c13f0c30c12bc8b446504f26b5da4d45c7"
+      },
+      "p041": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p041-v3-receipt.json",
+        "sha256": "11e0caec16998ae0cbaaed05db5aea51feddde92f688bae4941c6e1da348715d"
+      },
+      "p042": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p042-v3-receipt.json",
+        "sha256": "83c305ba6973308dfe07dee9aa33a3728f10f566e2ac3ca8e5d407f8e0a03250"
+      },
+      "p043": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p043-v3-receipt.json",
+        "sha256": "f38dd8c469ce7c66425002df8d834205136dcde1643ed6a9b728333e2dad01be"
+      },
+      "p044": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p044-v3-receipt.json",
+        "sha256": "9c7032979499495a9a8a43273f59c21498fb8ebdbc6b6c5281c68ab603efbc80"
+      },
+      "p045": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p045-v3-receipt.json",
+        "sha256": "b1216273832f1b649f229d23fa18b688a67c69b24e2215bb748bdc2bd28684df"
+      },
+      "p046": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p046-v3-receipt.json",
+        "sha256": "f5cc763d9d55929cae24878a85215b4091eb9e85a5745ff40d76782094c92612"
+      },
+      "p047": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p047-v3-receipt.json",
+        "sha256": "5eb45e345b5bb05c0f2a56630b004e71b5fc5c938d6e8f193ac72cf0a6f66ac8"
+      },
+      "p048": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p048-v3-receipt.json",
+        "sha256": "a12a4329287278d6cc0ddb94b00fe10382afa930f7b8f9a78011a844c5b9a4bb"
+      },
+      "p049": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p049-v3-receipt.json",
+        "sha256": "1d9f719664f11b4af3e1a70019414b32983a963e7055f23a1c0d48b204942488"
+      },
+      "p050": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p050-v3-receipt.json",
+        "sha256": "f6506cffe7b2ef85d946c71e70e34eb599d5f4a2a7212e978770aea6fcd99c36"
+      },
+      "p051": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p051-v4-receipt.json",
+        "sha256": "acd78e22ad83c7e915544a5669c4242286b34ffb5f93ff493e789410561d4111"
+      },
+      "p052": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p052-v3-receipt.json",
+        "sha256": "e7927d46bd256b4baa68792932b55b4c85a60365a1af5d0eb29208afefc32269"
+      },
+      "p053": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p053-v3-receipt.json",
+        "sha256": "a09f6291c72cf23a30f61f7f99ee88cffb805c3d1b59ce3f52102f73f025db1c"
+      },
+      "p054": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p054-v3-receipt.json",
+        "sha256": "428ddf0895899334c80784d375e94fc32c8c74f75d639107ac5468f19005ae6e"
+      },
+      "p055": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p055-v3-receipt.json",
+        "sha256": "ddafd0fd3e1ee06425ba76c4bbac376b5e5039d4f75c25460ea5b14a3e3bbf6d"
+      },
+      "p056": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p056-v3-receipt.json",
+        "sha256": "b53f56b1b8b8e7ae03456ec7d37ce4be9c3f0ffaacf24b3178b250df1097908d"
+      },
+      "p057": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p057-v3-receipt.json",
+        "sha256": "3a5192a848b8a9359e9fc13153ffcabbc4a7be6db9d5c6e0cbe518cc56f654a4"
+      },
+      "p058": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p058-v4-receipt.json",
+        "sha256": "56f2d8f4ed734e0c38a5898274040c5e7f8d8e47c83bdb81acd473ba594866f7"
+      },
+      "p059": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p059-v3-receipt.json",
+        "sha256": "fb84b5cff4501fb0c968f715733b8eead2d65dfc6f1690da4c089d87cddf8624"
+      },
+      "p060": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p060-v4-receipt.json",
+        "sha256": "fac5f11dfa6efef6942da4a2d64e6f0b55d11d4223aa16fa9f2b4525d9f2dec8"
+      },
+      "p061": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p061-v4-receipt.json",
+        "sha256": "d2f8f6b4b867406fb9f3decc367dcd9fee52cbf639673ce9645515a7d01a9957"
+      },
+      "p062": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p062-v4-receipt.json",
+        "sha256": "433fd8df99e873587800fe9ac4ed9553b84a98ad8aebfd022a7a29e9d97ba188"
+      },
+      "p063": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p063-v4-receipt.json",
+        "sha256": "020e568b7328e6c8b449bbb5cc4c35547719cc18b26a76b993f8ae6ea71371d3"
+      },
+      "p064": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p064-v5-receipt.json",
+        "sha256": "ff4bd38e8d83adeabac200f80924a94ec60c80d1352f95ad38f148e6f8c14fd6"
+      },
+      "p065": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p065-v3-receipt.json",
+        "sha256": "c951a870fa5413ff668a53c032e5d546bd424e2685ee142286c0142c663086b7"
+      },
+      "p066": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p066-v5-receipt.json",
+        "sha256": "47c39269a2120f175e5ae70456cc4b9eff2b06369a7607ac9a2ed7d008f9d4a8"
+      },
+      "p067": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p067-v4-receipt.json",
+        "sha256": "1efbd1072fe6e89c3238751fc3024a3733bae4185b6f4a25104fa9f032140a53"
+      },
+      "p068": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p068-v3-receipt.json",
+        "sha256": "1f61c49ec7cd2e439258f1e75374b346a9a9220df5c0680bef70cad4c942d431"
+      },
+      "p069": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p069-v3-receipt.json",
+        "sha256": "85bb964fb978e36a4a48047cdf589e31a98fa87c6dd845bd0f6fd80a38db5ea3"
+      },
+      "p070": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p070-v5-receipt.json",
+        "sha256": "a33a4a60ac57b8dcf75928096c80e85c31795f811ccb6ff8d8c5f5f13722af50"
+      },
+      "p071": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p071-v5-receipt.json",
+        "sha256": "ff938943855565007fc06ecacc1d0000bae9ffd927cec1b56d60657cafbf52f0"
+      },
+      "p072": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p072-v3-receipt.json",
+        "sha256": "b2c07e260ad6d810dbe2c7e5687fdb07a3e1f02fa94af92106f40499ef8b6b4a"
+      },
+      "p073": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p073-v4-receipt.json",
+        "sha256": "a7c09851bcafc75df0c4efbada3f94310b76f64692efd74648add124251707da"
+      },
+      "p074": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p074-v4-receipt.json",
+        "sha256": "099baae278b2c5e74f886f3e0fb4fb0925a42cb00a4301801c80b0a0579b409b"
+      },
+      "p075": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p075-v4-receipt.json",
+        "sha256": "a7db930c3f2e7bf30e680e9503ffd53c1a02a64e9d25734831efddd33ebc0e94"
+      },
+      "p076": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p076-v4-receipt.json",
+        "sha256": "cc845ad92c4552789ee8970c5ed71963cc153114719a0c6685ce3658f0f416f8"
+      },
+      "p077": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p077-v4-receipt.json",
+        "sha256": "b4bfe30c2316dbf87bebfd9383ea433b253b6dc2279b1b1feee2fea15bd94b91"
+      },
+      "p078": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p078-v3-receipt.json",
+        "sha256": "4d65af94218e4e69e7f0a7c3d2a13fc85c8b983c542615ec444dd52c6ab8cae9"
+      },
+      "p079": {
+        "path": "build/art/chemist-anchored-revisions-2026-09-27/sapper/p079-v5-receipt.json",
+        "sha256": "394c4aaf9a134e7652cd09bc6e23f81eb1b29015b72099c66f40b87a314defb3"
+      }
+    }
+  },
+  "scope": "Exact selected body drawings and retained portrait/head proposals on the reviewed page; native palette only. Approval does not replace runtime verification.",
+  "jobs": {
+    "physician": 126,
+    "sapper": 127
+  }
+}

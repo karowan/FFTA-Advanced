@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "candidateManifest": "build/expansion/chemist-progressions/help/current.json",
+  "description": "Vanilla/current AI timing and forecast-equivalence checks. Tests use disposable native allocations, never player saves.",
+  "scope": "Matched original-job AI decisions on Giza; frame-quantized decision time, not whole-game performance acceptance.",
+  "timeoutSeconds": 600,
+  "steps": [
+    {"id":"ai-timing-budget","runtime":"python","kind":"static","suites":["ai-timing-acceptance"],"args":["scripts/test-ai-timing-budget.py"]},
+    {"id":"ai-forecast-fast","runtime":"python","kind":"runtime","suites":["ai-forecast-correctness"],"args":["scripts/test-ai-forecast-fast.py"]},
+    {"id":"ai-timing-fixtures","runtime":"python","kind":"runtime","suites":["ai-timing-prepare"],"args":["scripts/prepare-ai-timing-fixtures.py"]},
+    {"id":"ai-timing-pilot","runtime":"python","kind":"runtime","suites":["ai-timing-pilot"],"args":["scripts/investigate-ai-timing.py","--pilot"]},
+    {"id":"ai-timing-original-jobs","runtime":"python","kind":"runtime","suites":["ai-timing"],"args":["scripts/investigate-ai-timing.py"]},
+    {"id":"ai-timing-profile","runtime":"python","kind":"runtime","suites":["ai-timing-profile"],"args":["scripts/profile-ai-timing.py"]},
+    {"id":"ai-timing-starting-jobs","runtime":"python","kind":"runtime","suites":["ai-timing"],"args":["scripts/investigate-ai-timing.py","--starting-skills"]}
+  ]
+}
