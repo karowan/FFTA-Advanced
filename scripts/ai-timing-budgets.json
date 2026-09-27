@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "referenceModSha1": "97e3c99087d206001b968c760270ef46223e10a4",
+  "vanillaSha1": "4ac05441f4de70a4ec3dd932116346c61b8783d9",
+  "coreSha256": "b7008c1a834fef42c9c2b66594855f63924d419fb33af2863e86b1a032d03560",
+  "seeds": [0, 5, 18],
+  "allowancePercent": 5,
+  "scope": "Giza controlled original-job workload only. Reference decision frames; each candidate decision must remain within 5 percent, rounded up. These budgets retain the v0.7.7 improvement, not vanilla parity. Do not raise them automatically after failure.",
+  "profiles": {
+    "fully learned primary job": {
+      "index": "latest-measurement.json",
+      "jobs": {
+        "Human Soldier": {"vanilla": [167, 137, 159], "mod": [269, 225, 262]},
+        "Moogle Black Mage": {"vanilla": [272, 263, 264], "mod": [528, 518, 520]},
+        "Nu Mou White Mage": {"vanilla": [135, 197, 158], "mod": [228, 301, 259]},
+        "Viera Archer": {"vanilla": [139, 158, 194], "mod": [237, 263, 329]}
+      }
+    },
+    "original starting mastery": {
+      "index": "latest-starting.json",
+      "jobs": {
+        "Human Soldier": {"vanilla": [54, 59, 59], "mod": [91, 98, 98]},
+        "Moogle Black Mage": {"vanilla": [110, 110, 110], "mod": [212, 218, 212]},
+        "Nu Mou White Mage": {"vanilla": [54, 54, 54], "mod": [80, 80, 80]},
+        "Viera Archer": {"vanilla": [74, 44, 73], "mod": [109, 62, 107]}
+      }
+    }
+  }
+}

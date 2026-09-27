@@ -1,6 +1,7 @@
 #ifndef FFTA_ACTION_SNAPSHOT_H
 #define FFTA_ACTION_SNAPSHOT_H
 #include <stdint.h>
+#include "chemist-progression.h"
 typedef struct FFTA_ActionSnapshot FFTA_ActionSnapshot;
 /* Existing bits0..8 retain Poise/Ward/actor/native-reaction/side semantics.
  * Additional providers own only their declared bits; claims are separate. */
@@ -70,6 +71,17 @@ const uint8_t *ffta_action_result_object(void);
 unsigned ffta_action_in_result(const uint8_t *object,const uint8_t *actor);
 unsigned ffta_action_unit_flags(const uint8_t *);
 unsigned ffta_action_unit_extra_flags(const uint8_t *);
+#if FFTA_CHEMIST_PROGRESSION
+unsigned ffta_action_unit_flags_masked(const uint8_t *,unsigned);
+unsigned ffta_action_unit_extra_flags_masked(const uint8_t *,unsigned);
+#else
+static inline unsigned ffta_action_unit_flags_masked(const uint8_t *u,unsigned mask) {
+    return ffta_action_unit_flags(u)&mask;
+}
+static inline unsigned ffta_action_unit_extra_flags_masked(const uint8_t *u,unsigned mask) {
+    return ffta_action_unit_extra_flags(u)&mask;
+}
+#endif
 unsigned ffta_action_claim_extra(uint8_t *,unsigned);
 /* Compressed extension: public bits0..9 are frozen data,16..21 are claims.
  * Other bits are rejected. Eight arrays of64 halfwords share the exact owner
@@ -82,8 +94,12 @@ unsigned ffta_action_claim_extension(uint8_t *,unsigned);
 /* Controller-owned continuation may restore this bank only at native action
  * start; it never writes claims from a query/result or invents a new unit. */
 void ffta_action_restore_extension(const uint8_t *,unsigned);
-typedef struct { FFTA_SnapshotUnit unit;unsigned extra,extension; } FFTA_ActionCarry;
-_Static_assert(sizeof(FFTA_ActionCarry)==20,"action continuation unit");
+typedef struct { FFTA_SnapshotUnit unit;unsigned extra,extension;
+#if FFTA_CHEMIST_PROGRESSION
+    unsigned medicine;
+#endif
+} FFTA_ActionCarry;
+_Static_assert(sizeof(FFTA_ActionCarry)==(FFTA_CHEMIST_PROGRESSION?24u:20u),"action continuation unit");
 unsigned ffta_action_export_unit(const uint8_t *,FFTA_ActionCarry *);
 void ffta_action_restore_unit(const FFTA_ActionCarry *);
 /* Called only by the installed queue-entry assembly with its actual native

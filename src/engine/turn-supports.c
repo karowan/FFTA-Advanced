@@ -3,6 +3,7 @@
 #include "job-state.h"
 #include "action-snapshot.h"
 #include "bard.h"
+#include "chemist-progression.h"
 static unsigned half(const uint8_t *p){return p[0]|((unsigned)p[1]<<8);}
 static unsigned support(const uint8_t *u){return u?((unsigned (*)(const uint8_t *))0x080cd50du)(u):0;}
 /* Owned12/13: turn-start tile.14 low3: active1, movement2, net>=2 4.
@@ -51,6 +52,10 @@ void ffta_turn_event(uint8_t *u,unsigned event){
 void ffta_turn_end(uint8_t *u){uint8_t *s=ffta_job_state(u);if(s)clear_turn(s);}
 extern unsigned ffta_original_turn_flag(unsigned,unsigned);
 unsigned ffta_turn_flag(unsigned flag,unsigned value,unsigned caller){
+#if FFTA_CHEMIST_PROGRESSION
+ extern unsigned ffta_passing_preserve_move(void),ffta_passing_old_move(void);
+ if(flag==4 && ffta_passing_preserve_move())return ffta_original_turn_flag(flag,ffta_passing_old_move());
+#endif
  if(flag==4 && ((caller==0x080968d3u && value) || (caller==0x08096343u && !value))){
   const uint8_t *w=*(const uint8_t *const *)0x0200f4ecu;
   if(w){
@@ -79,20 +84,23 @@ static unsigned readiness(const uint8_t *u){
  return u && s && half(u+0x18) && !(u[0xe8]&0x40u) && !(u[0xeb]&0x30u)?s[14]:0;
 }
 unsigned ffta_turn_snapshot_flags(const uint8_t *u){
- return (readiness(u)&3u)==1 && support(u)==FFTA_SAM_S1?FFTA_COMPOSURE_READY:0;
+ return support(u)==FFTA_SAM_S1 && (readiness(u)&3u)==1?FFTA_COMPOSURE_READY:0;
 }
 unsigned ffta_turn_extra_flags(const uint8_t *u){
- return (readiness(u)&7u)==7 && support(u)==FFTA_GLD_AX_S1?FFTA_FOLLOW_THROUGH_READY:0;
+ return support(u)==FFTA_GLD_AX_S1 && (readiness(u)&7u)==7?FFTA_FOLLOW_THROUGH_READY:0;
 }
 static unsigned factor(const uint8_t *a,unsigned physical){
  if(!a || ffta_action_origin()==FFTA_ACTION_NATIVE_REACTION || ffta_action_origin()==FFTA_ACTION_EXPLICIT_COMBO ||
-    (ffta_action_unit_extra_flags(a)&FFTA_BARD_FORCED))return 20;
- if(ffta_action_unit_flags(a)&FFTA_COMPOSURE_READY)return 25;
- return physical && (ffta_action_unit_extra_flags(a)&FFTA_FOLLOW_THROUGH_READY)?27:20;
+    (ffta_action_unit_extra_flags_masked(a,FFTA_BARD_FORCED)))return 20;
+ if(ffta_action_unit_flags_masked(a,FFTA_COMPOSURE_READY))return 25;
+ return physical && ffta_action_unit_extra_flags_masked(a,FFTA_FOLLOW_THROUGH_READY)?27:20;
 }
 unsigned ffta_turn_damage_numerator(const uint8_t *a,const uint8_t *t,unsigned action,unsigned physical){
  if(!a || !t || action==265)return 20;
- unsigned f=ffta_action_unit_flags(t);
+#if FFTA_CHEMIST_PROGRESSION
+ if(action==463)return 20; /* Fuse is delayed, outside the caster's turn. */
+#endif
+ unsigned f=ffta_action_unit_flags_masked(t,24u);
  if((f&24u)==24u)return 20;
  if(!(f&8u) && a!=t && action!=265 && ((unsigned (*)(const uint8_t *))0x0812e6a5u)(t)==13 &&
     ((unsigned (*)(const uint8_t *,unsigned))0x080c7ea5u)(t,0x15) &&

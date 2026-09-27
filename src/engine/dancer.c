@@ -29,7 +29,7 @@ static unsigned gear_power(const uint8_t *u){
  if(((unsigned (*)(const uint8_t *))0x080cd95du)(u))return 0;
  unsigned level=u[9],v=12u+3u*level/5u;if(v>35)v=35;
  for(unsigned i=0;i<5;i++){
-  unsigned item=half(u+0x2a+2*i);if(!item || item>460)continue;
+  unsigned item=half(u+0x2a+2*i);if(!item || item>FFTA_MAX_ITEM)continue;
   unsigned hands=((unsigned (*)(unsigned,unsigned))0x080ca7a5u)(item,6);
   unsigned type=((unsigned (*)(unsigned,unsigned))0x080ca7a5u)(item,3);
   if((hands==1||hands==2)&&type!=20)continue;
@@ -38,6 +38,9 @@ static unsigned gear_power(const uint8_t *u){
  return v;
 }
 int ffta_dancer_attack(const uint8_t *u,unsigned action,unsigned item,int base){
+#if FFTA_CHEMIST_PROGRESSION
+ if(action==453)item=0;
+#endif
  if(action==FFTA_GEO_A3 || action==FFTA_GEO_A8)item=0; /* Cast choice is not equipment. */
  if(!ffta_dancer_virtual(action))return ((int (*)(const uint8_t *,unsigned,unsigned,int))0x0812f691u)(u,action,item,base);
  return (int16_t)(base+(int)gear_power(u));
@@ -73,9 +76,10 @@ int ffta_dancer_witch_hunt(const uint8_t *c){
  if(amount>24)amount=24;
  return (int)(amount<half(t+0x1c)?amount:half(t+0x1c));
 }
+static unsigned debuff_timer(unsigned n){return (n&3u)==1 || (n&3u)==2;}
 unsigned ffta_dancer_debuff(const uint8_t *u,unsigned magic){
  const uint8_t *s=ffta_job_state((uint8_t *)u);unsigned n=s?(s[FFTA_JOB_DNC_FLAGS]>>(magic?3:0))&7u:0;
- return alive(u)&&(n&3u)&&(n&3u)<=2;
+ return alive(u)&&debuff_timer(n);
 }
 /* Native resource/status AI rows include a fixed benefit even for an empty
  * resource pool or an existing ailment. Suppress only these no-op dances;
@@ -87,15 +91,17 @@ unsigned ffta_dancer_ai_redundant(const uint8_t *t,unsigned action){
 }
 unsigned ffta_dancer_flags(const uint8_t *u){
  if(!alive(u))return 0;
- unsigned f=(ffta_dancer_debuff(u,0)?FFTA_DNC_POLKA:0)|(ffta_dancer_debuff(u,1)?FFTA_DNC_FROLIC:0),r=reaction(u);
  const uint8_t *s=ffta_job_state((uint8_t *)u);
+ unsigned bits=s?s[FFTA_JOB_DNC_FLAGS]:0;
+ unsigned f=(debuff_timer(bits)?FFTA_DNC_POLKA:0)|(debuff_timer(bits>>3)?FFTA_DNC_FROLIC:0),r=reaction(u);
  if(r==FFTA_DNC_R1 && s && (s[FFTA_JOB_DNC_FLAGS]&64u))f|=FFTA_DNC_CHARGED;
- if(ffta_viking_reaction_ready(u))f|=r==FFTA_DNC_R1?FFTA_DNC_FURY_READY:r==FFTA_DNC_R2?FFTA_DNC_RHYTHM_READY:0;
+ if((r==FFTA_DNC_R1 || r==FFTA_DNC_R2) && ffta_viking_reaction_ready(u))f|=r==FFTA_DNC_R1?FFTA_DNC_FURY_READY:FFTA_DNC_RHYTHM_READY;
  return f;
 }
 uint64_t ffta_dancer_scaled(uint64_t product,uint64_t denominator,const uint8_t *a,const uint8_t *t,unsigned action,unsigned physical){
  if(!a||!t)return product/denominator;
- unsigned n=1,d=1,flags=ffta_action_unit_extra_flags(a),tf=ffta_action_unit_flags(t);
+ unsigned n=1,d=1,flags=ffta_action_unit_extra_flags_masked(a,FFTA_DNC_POLKA|FFTA_DNC_FROLIC|FFTA_DNC_CHARGED|FFTA_BARD_FORCED),tf=ffta_action_unit_flags_masked(t,0x19cu);
+ unsigned incoming=0;
  unsigned direct=action!=265;
  if((tf&24u)==24u)direct=0;
  if(!(tf&8u)&&a!=t&&((unsigned (*)(const uint8_t *))0x0812e6a5u)(t)==13&&
@@ -104,14 +110,16 @@ uint64_t ffta_dancer_scaled(uint64_t product,uint64_t denominator,const uint8_t 
  if(direct && physical){n*=ffta_myk_parry_factor(a,t,action);d*=2;}
  if(direct && !physical){
   n*=ffta_myk_ward_factor(t);d*=4;
-  unsigned incoming=ffta_action_unit_extra_flags(t);
+  incoming=ffta_action_unit_extra_flags_masked(t,FFTA_GEO_WISP|FFTA_GEO_WISP_STRONG|FFTA_GEO_REFUGE);
   if(incoming&(FFTA_GEO_WISP|FFTA_GEO_WISP_STRONG)){n*=incoming&FFTA_GEO_WISP_STRONG?25:23;d*=20;}
   if(action==FFTA_GEO_A1 && (ffta_geo_affinity(a)&FFTA_GEO_ROCK)){n*=6;d*=5;}
  }
  /* Refuge is incoming protection, so the outgoing-bonus reaction exclusion
   * below does not remove it from an enemy's direct magical retaliation. */
- if(direct && !physical && (ffta_action_unit_extra_flags(t)&FFTA_GEO_REFUGE) &&
-    a!=t && !(tf&4u) && ((((ffta_action_unit_flags(a)>>7)^(ffta_action_unit_flags(a)>>8))&1u)!=((tf>>7)&1u))){n*=4;d*=5;}
+ if(direct && !physical && (incoming&FFTA_GEO_REFUGE) && a!=t && !(tf&4u)){
+  unsigned af=ffta_action_unit_flags_masked(a,0x180u);
+  if((((af>>7)^(af>>8))&1u)!=((tf>>7)&1u)){n*=4;d*=5;}
+ }
  if(eligible){
   n*=ffta_myk_weave_factor(a,action);d*=20;
   n*=ffta_geo_factor(a,t,action,physical);d*=16;
@@ -120,6 +128,22 @@ uint64_t ffta_dancer_scaled(uint64_t product,uint64_t denominator,const uint8_t 
  }
  /* Keep every factor in the same final rounding step, including Ward and
   * Spellweave. Neither denominator*d nor the full numerator must wrap. */
+#if FFTA_CHEMIST_PROGRESSION
+ /* Reduce the existing and new factors before multiplying. The base product
+  * already carries the older modifiers and must never be multiplied by 500
+  * in uint64_t: maximal custom physical hits can overflow that product. */
+ unsigned cp=ffta_cp_damage_factor(a,t,action),cd=500u,x=n,y=d;
+ while(y){unsigned r=x%y;x=y;y=r;}n/=x;d/=x;
+ x=cp;y=cd;while(y){unsigned r=x%y;x=y;y=r;}cp/=x;cd/=x;
+ x=n;y=cd;while(y){unsigned r=x%y;x=y;y=r;}n/=x;cd/=x;
+ x=cp;y=d;while(y){unsigned r=x%y;x=y;y=r;}cp/=x;d/=x;
+ n*=cp;d*=cd;
+ /* Publish only a nonzero damage amount BEFORE Trauma Ward. An immune
+  * target can still reach a zero HP-write callback; that must not spend it.
+  * The exact result scope guards this transient fact from forecast writes. */
+ unsigned ward=(ffta_action_cp_combat_flags(t)&FFTA_CP_WARD) && action<460 && direct;
+ ffta_cp_candidate(a,t,action,ward && ffta_damage_ratio(product,denominator,n*5u,d*3u)>0);
+#endif
  return ffta_damage_ratio(product,denominator,n,d);
 }
 static unsigned tick(unsigned t){return (t&3u)>2?0:(t&4u)?t&3u:t?t-1:0;}

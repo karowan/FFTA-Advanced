@@ -3,6 +3,7 @@
 #include "registry.h"
 #include "evaluated-units.h"
 #include "native-unit.h"
+#include "chemist-progression.h"
 
 extern int ffta_ai_original_score(const uint8_t *,const uint8_t *,unsigned,unsigned);
 extern unsigned ffta_primary_weapon(const uint8_t *);
@@ -69,6 +70,11 @@ void ffta_myk_ai_self_row(uint8_t *row,const uint8_t *a){
 extern unsigned ffta_myk_ai_original_self_search(uint8_t *,unsigned);
 unsigned ffta_myk_ai_self_search(uint8_t *node,unsigned flags){
  unsigned action=half(node+8);
+#if FFTA_CHEMIST_PROGRESSION
+ /* Tripwire's preliminary row uses the caster as a virtual recipient, so
+  * native C01D0 selects this self-search entry before tile placement. */
+ if(action==456)return ffta_cp_ai_trap_search(node,flags);
+#endif
  if(ffta_geo_ai_utility(action))return ffta_geo_ai_utility_search(node,flags);
  const uint8_t *w=*(const uint8_t *const *)node;
  if(action<FFTA_MYK_A1 || action>FFTA_MYK_A11 ||

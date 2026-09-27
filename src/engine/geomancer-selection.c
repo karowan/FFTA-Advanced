@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include "registry.h"
+#include "chemist-progression.h"
 static unsigned half(const uint8_t *p){return p[0]|((unsigned)p[1]<<8);}
 extern unsigned ffta_geo_original_center(const uint8_t *,unsigned,unsigned,unsigned,unsigned);
 unsigned ffta_geo_center(const uint8_t *wrapper,unsigned x,unsigned y,unsigned choice,
@@ -8,7 +9,7 @@ unsigned ffta_geo_center(const uint8_t *wrapper,unsigned x,unsigned y,unsigned c
   * Field placement needs a legal center, not an eligible recipient. Keep the
   * true empty recipient list; inventing a target would corrupt forecasts,
   * laws and the final result object. Other callers keep native behavior. */
- if((action==FFTA_GEO_A7 || action==FFTA_GEO_A9) &&
+ if((action==FFTA_GEO_A7 || action==FFTA_GEO_A9 || (FFTA_CHEMIST_PROGRESSION && action==456)) &&
     (caller==0x080b780fu || caller==0x080b76b3u) && selection && wrapper &&
     *(const uint8_t *const *)selection==wrapper &&
     *(const uint8_t *const *)0x0200f4ecu==wrapper && half(selection+0xec)==action &&
@@ -19,7 +20,12 @@ unsigned ffta_geo_center(const uint8_t *wrapper,unsigned x,unsigned y,unsigned c
      count<=25 && selection[0xf6]<=1 && ((unsigned (*)(unsigned,unsigned))0x0801cc7du)(x,y)){
    for(unsigned i=0;i<count;i++){
     const uint8_t *tile=selection+0x112+4*i;
-    if(tile[0]==x && tile[1]==y)return 1;
+    if(tile[0]==x && tile[1]==y){
+#if FFTA_CHEMIST_PROGRESSION
+     if(action==456)return ffta_cp_empty_tile(*(const uint8_t *const *)wrapper,x,y);
+#endif
+     return 1;
+    }
    }
   }
  }

@@ -2,7 +2,7 @@
 extern void ffta_manager_register(uint8_t *);
 extern void ffta_copy_owner_free(void *);
 #define MAGIC 0x31535742u
-#define POOL_BYTES 0x2660u
+#define POOL_BYTES FFTA_WORKSPACE_BYTES
 typedef struct { unsigned magic,self;uint8_t *pool,*heap; } Header;
 typedef struct { unsigned magic,owner,self; } Pool;
 static unsigned valid(const uint8_t *p,unsigned size) {
@@ -21,7 +21,7 @@ static unsigned allocated(const uint8_t *p,unsigned size) {
 static Header *header(void) {
  uint8_t *m=ffta_owned_battle_manager();
  if(!allocated(m,FFTA_WORKSPACE_MANAGER_BYTES))return 0;
- Header *h=(Header *)(m+0x430);
+ Header *h=(Header *)(m+FFTA_WORKSPACE_HEADER_OFFSET);
  return h->magic==MAGIC && h->self==(unsigned)m ? h:0;
 }
 static uint8_t *pool(Header *h) {
@@ -32,7 +32,7 @@ static uint8_t *pool(Header *h) {
 void ffta_battle_workspace_register(uint8_t *manager) {
  if(!allocated(manager,FFTA_WORKSPACE_MANAGER_BYTES))return;
  ffta_manager_register(manager);
- Header *h=(Header *)(manager+0x430);
+ Header *h=(Header *)(manager+FFTA_WORKSPACE_HEADER_OFFSET);
  h->self=(unsigned)manager;h->pool=0;h->heap=0;h->magic=MAGIC;
 }
 unsigned ffta_additional_workspace_prepare(void) {
@@ -53,7 +53,8 @@ void *ffta_battle_workspace(unsigned offset) {
  uint8_t *p=pool(header());
  if(!p || (offset!=FFTA_WORKSPACE_GEOMANCER && offset!=FFTA_WORKSPACE_RESULTS && offset!=FFTA_WORKSPACE_EXTRA &&
            offset!=FFTA_WORKSPACE_EXTENSION && offset!=FFTA_WORKSPACE_DOUBLECAST &&
-           offset!=FFTA_WORKSPACE_FIGHT_LAWS))return 0;
+           offset!=FFTA_WORKSPACE_FIGHT_LAWS &&
+           !(FFTA_CHEMIST_PROGRESSION && (offset==FFTA_WORKSPACE_CHEMIST || offset==FFTA_WORKSPACE_DELAYED))))return 0;
  return p+offset;
 }
 void ffta_additional_workspace_retire(void *allocation) {

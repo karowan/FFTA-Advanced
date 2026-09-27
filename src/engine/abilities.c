@@ -2,6 +2,11 @@
 #include "job-lessons.h"
 #include "persistent.h"
 
+#ifndef FFTA_CHEMIST_PROGRESSION
+#define FFTA_CHEMIST_PROGRESSION 0
+#endif
+#define FFTA_EXP_JOB_LAST (125+2*FFTA_CHEMIST_PROGRESSION)
+
 extern uint8_t *ffta_party_ap_address(uint8_t *, uint8_t *, unsigned);
 extern uint8_t *ffta_owned_extra_ap(uint8_t *,unsigned);
 
@@ -18,14 +23,14 @@ static int custom_list(unsigned job) {
     return -1;
 }
 unsigned ffta_job_lesson_count(unsigned job) {
-    if (job>125) return 0;
+    if (job>FFTA_EXP_JOB_LAST) return 0;
     int list=custom_list(job);
     if (list>=0) return ffta_job_lessons[list].count;
     unsigned first=job_value(job,0x25),last=job_value(job,0x26);
     return last>=first ? last-first+1 : 0;
 }
 unsigned ffta_job_lesson_at(unsigned job, unsigned position) {
-    if (job>125) return 0;
+    if (job>FFTA_EXP_JOB_LAST) return 0;
     int list=custom_list(job);
     if (list>=0) return position<ffta_job_lessons[list].count ? ffta_job_lessons[list].indices[position] : 0;
     unsigned first=job_value(job,0x25),last=job_value(job,0x26);
@@ -70,7 +75,7 @@ static const uint8_t *ability_record(unsigned race,unsigned index) {
     return races[race]+8*index;
 }
 unsigned ffta_job_mastered(uint8_t *unit,unsigned job) {
-    if (!unit || job>125) return 0;
+    if (!unit || job>FFTA_EXP_JOB_LAST) return 0;
     job=(uint8_t)job;
     unsigned count=ffta_job_lesson_count(job);
     for (unsigned i=0;i<count;++i) {
@@ -83,7 +88,7 @@ unsigned ffta_job_mastered(uint8_t *unit,unsigned job) {
     return 1;
 }
 unsigned ffta_job_action_count(uint8_t *unit,unsigned job,unsigned include_equipped) {
-    if (!unit || job>125 || unit[6]!=job_value(job,1)) return 0;
+    if (!unit || job>FFTA_EXP_JOB_LAST || unit[6]!=job_value(job,1)) return 0;
     unsigned result=0,count=ffta_job_lesson_count(job);
     for (unsigned i=0;i<count;++i) {
         unsigned index=ffta_job_lesson_at(job,i);
@@ -95,7 +100,7 @@ unsigned ffta_job_action_count(uint8_t *unit,unsigned job,unsigned include_equip
     return result;
 }
 unsigned ffta_job_prerequisite_count(uint8_t *unit,unsigned job) {
-    if (!unit || job>125 || unit[6]!=job_value(job,1)) return 0;
+    if (!unit || job>FFTA_EXP_JOB_LAST || unit[6]!=job_value(job,1)) return 0;
     unsigned result=0;
     for (unsigned i=0;i<ffta_job_lesson_count(job);++i) {
         unsigned index=ffta_job_lesson_at(job,i);
@@ -104,10 +109,10 @@ unsigned ffta_job_prerequisite_count(uint8_t *unit,unsigned job) {
     }
     return result;
 }
-/* Original unlock rules remain native. Only the ten approved jobs use this
+/* Original unlock rules remain native. Only allocated expansion jobs use this
  * predicate; visibility elsewhere must not turn a clan flag into per-unit AP. */
 unsigned ffta_new_job_eligible(uint8_t *unit,unsigned job) {
-    if (!unit || job<116 || job>125 || unit[6]!=job_record(job)[4]) return 0;
+    if (!unit || job<116 || job>FFTA_EXP_JOB_LAST || unit[6]!=job_record(job)[4]) return 0;
     const uint8_t *requirements=*(const uint8_t *const *)0x080c8b18;
     requirements+=4*job_record(job)[0x30];
     for (unsigned i=0;i<2;++i) {
@@ -121,6 +126,10 @@ unsigned ffta_new_lesson_job(unsigned race,unsigned index) {
     static const uint8_t original_counts[6]={0,142,77,95,85,88};
     race=(uint8_t)race;index=(uint16_t)index;
     if (!race || race>5 || index<original_counts[race]) return 0;
+#if FFTA_CHEMIST_PROGRESSION
+    if (race==3 && index>=124 && index<=133) return 126;
+    if (race==5 && index>=116 && index<=125) return 127;
+#endif
     for (unsigned i=0;i<sizeof(ffta_job_lessons)/sizeof(ffta_job_lessons[0]);++i) {
         if (ffta_job_lessons[i].race!=race) continue;
         for (unsigned j=0;j<ffta_job_lessons[i].count;++j)
@@ -130,7 +139,7 @@ unsigned ffta_new_lesson_job(unsigned race,unsigned index) {
 }
 unsigned ffta_new_secondary_job(const uint8_t *unit) {
     unsigned command=unit[0x36];
-    return command>=116 && command<=125 && job_record(command)[4]==unit[6] ? command : 0;
+    return command>=116 && command<=FFTA_EXP_JOB_LAST && job_record(command)[4]==unit[6] ? command : 0;
 }
 
 extern unsigned ffta_original_commands(uint8_t *,uint8_t *);
@@ -138,7 +147,7 @@ unsigned ffta_commands(uint8_t *unit,uint8_t *output) {
     unsigned count=ffta_original_commands(unit,output);
     /* All five native callers have a 256-byte output buffer. Retain native
      * ordering and special/Item rules, then append only this race's additions. */
-    for (unsigned job=116;job<=125;++job) {
+    for (unsigned job=116;job<=FFTA_EXP_JOB_LAST;++job) {
         if (unit[6]!=job_record(job)[4]) continue;
         unsigned known=ffta_new_job_eligible(unit,job);
         for (unsigned i=0;!known && i<ffta_job_lesson_count(job);++i) {
@@ -157,14 +166,14 @@ unsigned ffta_commands(uint8_t *unit,uint8_t *output) {
 extern unsigned ffta_original_command_browse(unsigned);
 unsigned ffta_command_browse(unsigned command) {
     command=(uint8_t)command;
-    if (command!=2 && command!=8 && (command<116 || command>125))
+    if (command!=2 && command!=8 && (command<116 || command>FFTA_EXP_JOB_LAST))
         return ffta_original_command_browse(command);
     uint8_t *menu=*(uint8_t **)0x03002818u;
     uint8_t *preview=menu+0x1be4;
     preview[0x36]=(uint8_t)command;
     unsigned job=((unsigned (*)(uint8_t *))0x080c9079)(preview);
     preview[8]=(uint8_t)job;
-    if (job!=2 && job!=16 && (job<116 || job>125))
+    if (job!=2 && job!=16 && (job<116 || job>FFTA_EXP_JOB_LAST))
         return command>=116 ? 0 : ffta_original_command_browse(command);
     uint8_t *unit=*(uint8_t **)(menu+0x1d0c);
     if (!unit || unit[6]!=job_record(job)[4]) return 0;

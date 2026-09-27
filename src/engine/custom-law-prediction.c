@@ -14,7 +14,8 @@ typedef struct {uintptr_t self;const uint8_t *actor,*target;unsigned action,uppe
 typedef struct {uintptr_t *token;FFTA_ActionSnapshot frame;} Storage;
 _Static_assert(sizeof(Storage)==824,"law query snapshot stride");
 static unsigned half(const uint8_t *p){return p[0]|((unsigned)p[1]<<8);}
-static unsigned tag(unsigned action){return action==355?1:action==373?2:action==379?3:action==404?4:action==405?5:0;}
+static unsigned tag(unsigned action){return action==355?1:action==373?2:action==379?3:action==404?4:action==405?5:
+ FFTA_CHEMIST_PROGRESSION && action==459?FFTA_CURABLE_TIMED_FUSE:0;}
 static Bound **owner(void){uint8_t *p=ffta_battle_workspace(FFTA_WORKSPACE_FIGHT_LAWS);return p?(Bound **)(p+60):0;}
 int ffta_custom_law_reference(int n,unsigned action,const uint8_t *a,const uint8_t *t){
  if(n<=0 || !tag(action))return n;

@@ -4,6 +4,10 @@
 #include "mystic-knight.h"
 #include "medicine-ai.h"
 #include "dancer-choice-labels.h"
+#include "chemist-progression.h"
+#if FFTA_CHEMIST_PROGRESSION
+#include "chemist-choice-labels.h"
+#endif
 
 extern void ffta_chemist_menu(uint8_t *,uint8_t *);
 extern void ffta_chemist_restricted_menu(uint8_t *,uint8_t *);
@@ -19,6 +23,15 @@ static const uint8_t vectors[5][4]={
     {1,1,1,1},{87,1,1,1},{111,1,1,1},{125,1,1,1},{95,1,1,1}
 };
 unsigned ffta_dancer_preview_choice(const uint8_t *actor,unsigned action,unsigned primary){
+#if FFTA_CHEMIST_PROGRESSION
+    if(action==453){
+        unsigned ai=ffta_ai_preview_choice(actor,action);if(ai)return ai;
+        const uint8_t *m=*(const uint8_t *const *)0x0200f438u;
+        if(m && m[4]>=6 && m[4]<=11 && *(const uint8_t *const *)(m+24)==actor &&
+           *(const uint32_t *)(m+20)==action && half(m+16)>=1 && half(m+16)<=2)return half(m+16);
+        return 0;
+    }
+#endif
     if(action==FFTA_CHM_A2 || action==FFTA_CHM_A4){
         unsigned ai=ffta_ai_preview_choice(actor,action);if(ai)return ai;
         /* Ordinary item forecasts already carry their explicit operand. */
@@ -57,10 +70,16 @@ static const uint8_t *actor(void){
  return m?*(const uint8_t *const *)(m+24):0;
 }
 static unsigned options(unsigned action,uint8_t *out){
+#if FFTA_CHEMIST_PROGRESSION
+ if(action==453){out[0]=1;out[1]=2;return 2;}
+#endif
  if(action==FFTA_DNC_A6){for(unsigned i=0;i<4;i++)out[i]=(uint8_t)(i+1);return 4;}
  return ffta_geo_choices(actor(),action,out);
 }
 static const uint8_t *label(unsigned action,unsigned choice){
+#if FFTA_CHEMIST_PROGRESSION
+ if(action==453 && choice>=1 && choice<=2)return ffta_chemist_choice_labels[choice-1];
+#endif
  if(action==FFTA_DNC_A6 && choice>=1 && choice<=4)return ffta_dancer_choice_labels[choice-1];
  if(action==FFTA_GEO_A3 && choice>=1 && choice<=4)return ffta_geomancer_choice_labels[choice-1];
  if(action==FFTA_GEO_A8 && choice>=1 && choice<=5)return ffta_geomancer_choice_labels[choice+3];

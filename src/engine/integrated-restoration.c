@@ -1,4 +1,5 @@
 #include "native-unit.h"
+#include "chemist-progression.h"
 #include <stdint.h>
 #include "registry.h"
 #include "samurai-state.h"
@@ -44,6 +45,9 @@ int ffta_integrated_item_healing(const uint8_t *c){
 }
 int ffta_integrated_technique_healing(const uint8_t *c){
     unsigned action=half(c+12);
+#if FFTA_CHEMIST_PROGRESSION
+    if(action==446 || action==449 || action==451 || (action>=460 && action<=462))return ffta_cp_healing(c);
+#endif
     if(action==FFTA_BRD_A1 || action==FFTA_BRD_A5)return ffta_bard_healing(c);
     if(action!=FFTA_SAM_A4 && action!=FFTA_DRK_A4)return ffta_drk_healing(c);
     const uint8_t *actor=*(const uint8_t *const *)c,*target=*(const uint8_t *const *)(c+4);
@@ -60,6 +64,9 @@ int ffta_integrated_technique_healing(const uint8_t *c){
 int ffta_integrated_restoration_stage(int signed_amount,const uint8_t *c){
     if(!c || signed_amount>=0)return signed_amount;
     unsigned action=half(c+12);
+#if FFTA_CHEMIST_PROGRESSION
+    if(action>=446 && action<=462)return signed_amount;
+#endif
     if(item_action(action) || action==FFTA_SAM_A4 || action==FFTA_DRK_A4 || action==FFTA_BRD_A1 || action==FFTA_BRD_A5)return signed_amount;
     const uint8_t *d=*(const uint8_t *const *)(c+0x30);
     if(!d || d[1]>=93 || d[3]==18 || d[3]==40 || d[3]==41)return signed_amount; /* Drain and revival are separate. */

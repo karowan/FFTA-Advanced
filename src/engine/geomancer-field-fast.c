@@ -1,5 +1,5 @@
 #include "job-state.h"
-_Static_assert(FFTA_JOB_UNIT_COUNT==36u && FFTA_JOB_RECORD_BYTES==22u,
+_Static_assert(FFTA_JOB_UNIT_COUNT==36u && FFTA_JOB_RECORD_BYTES==(FFTA_CHEMIST_PROGRESSION?27u:22u),
                "Authenticated canonical cohort layout");
 
 /* Current-query canonical cohort traversal. No cached fields, ownership or

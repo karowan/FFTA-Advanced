@@ -5,6 +5,25 @@ review. Do not start additional agents without a new explicit request. Historica
 worktree assignments and long experiment records are in the
 [procedure archive](notes/history/PARALLEL-IMPLEMENTATION.md).
 
+For AI performance comparisons, use the [paired timing procedure and findings](notes/ai-timing-investigation-2026-09-27.md).
+Build fresh native allocations separately for vanilla and the candidate; never
+transfer a savestate across ROMs. Match canonical combat inputs, action lists
+and RNG at the planning boundary. Measure emulated planning frames separately
+from camera preparation and attack animations; host wall time is not game latency.
+
+Forecast optimizations must keep action snapshots frozen and temporary-unit
+ownership authenticated. Request only the flags a damage formula consumes;
+check equipped reaction/support eligibility before expensive readiness or
+terrain queries. Never make a narrow query fall back to live values during an
+active snapshot. Validate projected flags against the full query and modified
+formulas against the previous binary, including active buffs, reactions and
+freed/reused copies (`ai-forecast-fast`). Run timing separately for starting and
+fully learned jobs; preserve baseline reports and inspect every paired choice.
+Finish with `ai-timing-budget` against both completed profiles. It pins the
+workload and allows at most 5% above each reviewed decision; investigate a
+failure instead of automatically raising its budget. This guards the measured
+improvement, not vanilla parity or unmeasured campaign cases.
+
 ## Current release path
 
 [MOD-RELEASE.md](MOD-RELEASE.md) defines the build/share/play workflow. Build with
@@ -42,9 +61,55 @@ a newer-CPU simulator alone can miss invalid linker veneers. Preserve unrelated
 ROM bytes and verify affected real-core menu/save paths. See the
 [job-visibility checkpoint](notes/job-visibility-fix-2026-09-20.md).
 
+When replacing coordinated engine modules, resolve installed weak extension
+callbacks explicitly as well as strong imports. A successful link can silently
+turn an omitted weak callback into zero, disabling snapshots, reactions or
+lifecycle events. Check those paths through native execution. If an existing
+captured battle predates an allocation change, use native allocation and owner
+registration for the new capacity; never alter heap headers to make it pass.
+
+When a shared record layout changes, retain every authenticated historical
+entry address from the original engine and component symbol/import maps. Patch
+all retained callers, including older import veneers; replacing only the newest
+symbol value leaves old machine code reading the wrong stride. Recompile direct
+stride consumers as well as accessors. Preserve installed fast dispatch paths
+inside replacements and test them explicitly. Check all canonical unit slots,
+ordinary movement without effects, and genuine buffs through the native status
+query. Keep short native-input movement checks so slower replacements cannot
+silently consume button presses during long calculations.
+
+Do not merge component-local `original` aliases by name and assume they retain
+their meaning. A wrapper's predecessor belongs to that component's authenticated
+parent; a later symbol dictionary can turn a lifecycle chain into recursion.
+Verify the ordered chain and one invocation of each lifecycle stage. When a
+unit-copy tail grows, check the following list/array start as well as allocation
+sizes. Physician/Sapper's 66-byte tail ends at +7282, so the full party item list
+starts at +7290. The accepted native-palette build uses full battle Status;
+the retired compact-palette constructor is not its runtime contract.
+
+For a new assembled candidate, declare `candidateManifest` in the test plan.
+The runner authenticates that manifest and ROM and passes the resolved path to
+each test. Per-test reports must repeat the same hash; separately compiled codec
+tests must explicitly identify their narrower scope. Run the complete new-job
+acceptance gate once at integration, then package through its adapter. See the
+[Physician/Sapper checkpoint](notes/chemist-progression-implementation.md) for
+the exact build order and covered consumers.
+
 ## Native artwork
 
-Start with the [working art pipeline](src/art/native-ui-review/README.md).
+For a new class, start with the [executable new-job art runbook](NEW-JOB-ART-RUNBOOK.md).
+It specifies the actual reference worksheets, crops, commands, approval gates
+and recovery steps, with Physician/Sapper as the worked example. The
+September 27 animation review requires its Gate 4 fixed-coordinate native
+anchor audit before further pose generation; the old fitted action worksheet
+is historical-replay-only. Palette and hash checks do not prove anatomy. The
+fixed-origin revision workflow in that runbook uses matched neutral/action
+reference pairs, one approved identity view, explicit pose notes and preserved
+retries. Inspect turns, falls, airborne shadows and waterlines separately.
+Whole-drawing registration corrections must be source-bound rigid translations;
+never stretch a generated body to meet a bounding box. The
+[working art pipeline](src/art/native-ui-review/README.md) retains the accepted
+ten-class import history; its job-specific scripts are not generic new-job tools.
 Use the game's existing class/side palettes, bright contrast and readable native
 faces. No custom palette bank or runtime ownership/remapping system. Generate
 new class designs from blank designs, with original sprites as references.

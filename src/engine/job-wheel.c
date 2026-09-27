@@ -3,6 +3,14 @@
 #include "persistent.h"
 extern unsigned ffta_ap_value(uint8_t *,unsigned);
 
+/* The current release remains a ten-job build. A future integrated build may
+ * opt into the two Chemist progressions only after their effects and art land. */
+#ifndef FFTA_CHEMIST_PROGRESSION
+#define FFTA_CHEMIST_PROGRESSION 0
+#endif
+#define FFTA_EXP_JOB_COUNT (10+2*FFTA_CHEMIST_PROGRESSION)
+#define FFTA_EXP_JOB_LAST (115+FFTA_EXP_JOB_COUNT)
+
 /* Expansion-format reserved bytes, following Quin history at 1E79 and before
  * per-unit preferences at 1E80. Existing saves have zero here. No layout or
  * version change: the native save already transports this entire block. */
@@ -14,7 +22,11 @@ static unsigned discovered(unsigned job) {
     if (known&bit) return 1;
     for (unsigned slot=0;slot<24;++slot) {
         uint8_t *member=state+0x80+264*slot;
-        static const uint8_t races[10]={1,1,2,2,3,3,5,5,4,4};
+        static const uint8_t races[FFTA_EXP_JOB_COUNT]={1,1,2,2,3,3,5,5,4,4
+#if FFTA_CHEMIST_PROGRESSION
+            ,3,5
+#endif
+        };
         if (!member[4] || member[6]!=races[job-116]) continue;
         unsigned found=member[7]==job || ffta_new_job_eligible(member,job);
         /* Recover prior use from old saves without mistaking an equipment
@@ -37,8 +49,12 @@ static unsigned discovered(unsigned job) {
 static unsigned candidates(uint8_t *unit,uint8_t *list) {
     unsigned count=((unsigned (*)(uint8_t *,uint8_t *))0x080c8a25)(unit,list);
     if (!count || count>12 || unit[6]<1 || unit[6]>5) return count;
-    static const uint8_t races[10]={1,1,2,2,3,3,5,5,4,4};
-    for (unsigned n=0;n<10;++n) if (races[n]==unit[6]) {
+    static const uint8_t races[FFTA_EXP_JOB_COUNT]={1,1,2,2,3,3,5,5,4,4
+#if FFTA_CHEMIST_PROGRESSION
+        ,3,5
+#endif
+    };
+    for (unsigned n=0;n<FFTA_EXP_JOB_COUNT;++n) if (races[n]==unit[6]) {
         unsigned job=116+n;
         unsigned eligible=ffta_new_job_eligible(unit,job);
         if (!discovered(job) && !eligible) continue;
@@ -94,14 +110,18 @@ unsigned ffta_wheel_can_confirm(void) {
     unsigned index=menu[0x1275],count=*(uint32_t *)(menu+0x1270);
     if (index>=count || count>12) return 0;
     unsigned job=menu[0x1287+28*index];
-    if (job<116 || job>125) return 1;
+    if (job<116 || job>FFTA_EXP_JOB_LAST) return 1;
     return ffta_new_job_eligible(*(uint8_t **)(menu+0x1d0c),job);
 }
 static unsigned donor(unsigned job) {
     /* Approved frontal Dancer badge shares the native plum colors of job30. */
-    static const uint8_t donors[10]={6,3,13,15,25,27,41,36,30,30};
+    static const uint8_t donors[FFTA_EXP_JOB_COUNT]={6,3,13,15,25,27,41,36,30,30
+#if FFTA_CHEMIST_PROGRESSION
+        ,27,41 /* Development-only donors; production art needs approval. */
+#endif
+    };
     job=(uint8_t)job;
-    return job>=116 && job<=125 ? donors[job-116] : job;
+    return job>=116 && job<=FFTA_EXP_JOB_LAST ? donors[job-116] : job;
 }
 extern void ffta_original_job_icon(void *,unsigned);
 extern unsigned ffta_original_job_palette(unsigned);

@@ -10,6 +10,10 @@ Push-Location -LiteralPath $PSScriptRoot
 try {
     $fftaConfig=Get-Content -LiteralPath $Config -Raw | ConvertFrom-Json
     if(-not $Run) {
+        if($fftaConfig.builder) {
+            & $Python $fftaConfig.builder
+            if($LASTEXITCODE -ne 0) { throw 'Candidate build failed.' }
+        }
         & '.\Test Expansion.ps1' -Plan $fftaConfig.plan -Suite $fftaConfig.suite -Python $Python
         $Run=(Get-Content 'build/expansion/test-runs/latest.json' -Raw | ConvertFrom-Json).report
     }

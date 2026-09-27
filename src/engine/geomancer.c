@@ -5,6 +5,7 @@
 #include "bard.h"
 #include "battle-state.h"
 #include "evaluated-units.h"
+#include "chemist-progression.h"
 extern unsigned ffta_primary_weapon(const uint8_t *);
 extern unsigned ffta_viking_reaction_ready(const uint8_t *);
 extern unsigned ffta_integrated_direct_kind(const uint8_t *);
@@ -14,20 +15,28 @@ static unsigned alive(const uint8_t *u){return u && half(u+0x18) && !(u[0xe8]&64
 static unsigned support(const uint8_t *u){return u?((unsigned (*)(const uint8_t *))0x080cd50du)(u):0;}
 static unsigned reaction(const uint8_t *u){return u?((unsigned (*)(const uint8_t *))0x080cd4d5u)(u):0;}
 static unsigned enemy(const uint8_t *a,const uint8_t *t){
- unsigned af=ffta_action_unit_flags(a),tf=ffta_action_unit_flags(t);
+ unsigned af=ffta_action_unit_flags_masked(a,0x180u),tf=ffta_action_unit_flags_masked(t,0x184u);
  return a&&t&&a!=t&&!(tf&4u)&&((((af>>7)^(af>>8))&1u)!=((tf>>7)&1u));
 }
 static unsigned range(const uint8_t *a,const uint8_t *t){
  int dx=(int)a[0xf6]-t[0xf6],dy=(int)a[0xf7]-t[0xf7];
  return (unsigned)(dx<0?-dx:dx)+(unsigned)(dy<0?-dy:dy)<=4;
 }
-unsigned ffta_geo_flags(const uint8_t *u){
+unsigned ffta_geo_flags_masked(const uint8_t *u,unsigned mask){
  if(!alive(u))return 0;
- unsigned f=support(u)==FFTA_GEO_S1?FFTA_GEO_ATTUNEMENT:0,r=reaction(u);
- if(ffta_viking_reaction_ready(u))f|=r==FFTA_GEO_R1?FFTA_GEO_STONE_READY:r==FFTA_GEO_R2?FFTA_GEO_WRATH_READY:0;
- unsigned wisp=ffta_geo_wisp(u);
- return f|(ffta_geo_refuge(u)?FFTA_GEO_REFUGE:0)|(wisp==2?FFTA_GEO_WISP_STRONG:wisp?FFTA_GEO_WISP:0);
+ unsigned f=0;
+ if((mask&FFTA_GEO_ATTUNEMENT) && support(u)==FFTA_GEO_S1)f|=FFTA_GEO_ATTUNEMENT;
+ if(mask&(FFTA_GEO_STONE_READY|FFTA_GEO_WRATH_READY)){
+  unsigned r=reaction(u);
+  if((r==FFTA_GEO_R1 || r==FFTA_GEO_R2) && ffta_viking_reaction_ready(u))f|=r==FFTA_GEO_R1?FFTA_GEO_STONE_READY:FFTA_GEO_WRATH_READY;
+ }
+ if(mask&(FFTA_GEO_WISP|FFTA_GEO_WISP_STRONG)){
+  unsigned wisp=ffta_geo_wisp(u);f|=wisp==2?FFTA_GEO_WISP_STRONG:wisp?FFTA_GEO_WISP:0;
+ }
+ if((mask&FFTA_GEO_REFUGE) && ffta_geo_refuge(u))f|=FFTA_GEO_REFUGE;
+ return f&mask;
 }
+unsigned ffta_geo_flags(const uint8_t *u){return ffta_geo_flags_masked(u,~0u);}
 unsigned ffta_geo_weakness(const uint8_t *a,const uint8_t *t,unsigned action){
  if(!a||!t)return 0;
  unsigned primary=ffta_primary_weapon(a);
@@ -51,10 +60,10 @@ unsigned ffta_geo_weakness(const uint8_t *a,const uint8_t *t,unsigned action){
  return affinity[element]==0;
 }
 unsigned ffta_geo_factor(const uint8_t *a,const uint8_t *t,unsigned action,unsigned physical){
- unsigned n=4,d=4,origin=ffta_action_origin(),f=ffta_action_unit_extra_flags(a);
+ unsigned n=4,d=4,origin=ffta_action_origin(),f=ffta_action_unit_extra_flags_masked(a,FFTA_GEO_ATTUNEMENT);
  if(action!=265 && origin!=FFTA_ACTION_NATIVE_REACTION && origin!=FFTA_ACTION_EXPLICIT_COMBO &&
     (f&FFTA_GEO_ATTUNEMENT) && ffta_geo_weakness(a,t,action))n=5;
- if(physical && enemy(a,t) && (ffta_action_unit_extra_flags(t)&FFTA_GEO_STONE_READY) &&
+ if(physical && (ffta_action_unit_extra_flags_masked(t,FFTA_GEO_STONE_READY)) && enemy(a,t) &&
     origin!=FFTA_ACTION_NATIVE_REACTION && origin!=FFTA_ACTION_EXPLICIT_COMBO &&
     (ffta_action_phase()!=FFTA_ACTION_RESULT || ffta_action_reactions_enabled()))d=3;
  return n*d; /* denominator16, one division with the other final factors */
@@ -136,6 +145,15 @@ void ffta_geo_tile(uint8_t *grid,int x,int y,const uint8_t *wrapper){
  /* Low nibble is the entering-tile cost. All native blocked/occupancy bits,
   * height and the independent jump-over-gap cost remain untouched. */
  if(!(tile[0]&128u))return;
+#if FFTA_CHEMIST_PROGRESSION
+ /* The active AI actor avoids entering visible hostile traps. Restrict this
+  * to its own turn/map: player ranges and forced ally routes retain ordinary
+  * terrain legality. A jump may still pass over an unlanded tile. */
+ if(u && (u[0x29]&128u) && *(const uint8_t *const *)0x0200f4ecu==wrapper &&
+    ffta_cp_trap_at(u,(unsigned)x,(unsigned)y)){
+  tile[0]&=127u;return;
+ }
+#endif
  unsigned cost=tile[1]&15u;
  if(ffta_geo_grounded(u) && ffta_geo_field_at(u,x,y,1) && cost<15)cost++;
  if(support(u)==FFTA_GEO_S2 && cost>1)cost=1;

@@ -16,12 +16,12 @@ unsigned ffta_myk_strike(unsigned id){return id>=FFTA_MYK_A1 && id<=FFTA_MYK_A12
 /* Enchantments accept any primary weapon: native categories 1..19 and the
  * expansion's axes (31). Spell Parry and Spellblade Combo stay blade-only. */
 unsigned ffta_myk_weapon(unsigned item){
- if(!item || item>460)return 0;
+ if(!item || item>FFTA_MAX_ITEM)return 0;
  unsigned type=((unsigned (*)(unsigned,unsigned))0x080ca7a5u)(item,3);
  return (type>=1 && type<=19) || type==31;
 }
 unsigned ffta_myk_blade(unsigned item){
- if(!item || item>460)return 0;
+ if(!item || item>FFTA_MAX_ITEM)return 0;
  unsigned type=((unsigned (*)(unsigned,unsigned))0x080ca7a5u)(item,3);
  return type==8 || type==3; /* Rapier or saber. */
 }
@@ -101,7 +101,7 @@ unsigned ffta_myk_weave_factor(const uint8_t *u,unsigned id){
  unsigned f=ffta_action_unit_extension_support_flags(u),previous=(f>>FFTA_MYK_SEQUENCE_SHIFT)&3u;
  if(!(f&FFTA_MYK_WEAVE) || !previous || previous>2)return 20;
  if(ffta_action_origin()==FFTA_ACTION_NATIVE_REACTION || ffta_action_origin()==FFTA_ACTION_EXPLICIT_COMBO ||
-    (ffta_action_unit_extra_flags(u)&FFTA_BARD_FORCED))return 20;
+    (ffta_action_unit_extra_flags_masked(u,FFTA_BARD_FORCED)))return 20;
  unsigned next=ffta_myk_sequence_category(u,id);
  return next && next!=previous?27:20;
 }
@@ -119,12 +119,12 @@ void ffta_myk_action_event(const uint8_t *u,unsigned id,unsigned event){
  if(event==2){
   if(id>=FFTA_MYK_A1 && id<=FFTA_MYK_A11 && ffta_action_claim_extension((uint8_t *)u,FFTA_MYK_ENCHANTED))
    ffta_myk_grant((uint8_t *)u,id-FFTA_MYK_A1+1u);
-  if((f&FFTA_MYK_WEAVE) && !(ffta_action_unit_extra_flags(u)&FFTA_BARD_FORCED)){
+  if((f&FFTA_MYK_WEAVE) && !(ffta_action_unit_extra_flags_masked(u,FFTA_BARD_FORCED))){
    unsigned category=ffta_myk_sequence_category(u,id);
    if(category)ffta_action_claim_extension((uint8_t *)u,category==1?FFTA_MYK_SEEN_PHYSICAL:FFTA_MYK_SEEN_MAGIC);
   }
  }
- if(event==3 && (f&FFTA_MYK_WEAVE) && !(ffta_action_unit_extra_flags(u)&FFTA_BARD_FORCED)){
+ if(event==3 && (f&FFTA_MYK_WEAVE) && !(ffta_action_unit_extra_flags_masked(u,FFTA_BARD_FORCED))){
   unsigned seen=(f>>16)&3u;if(!seen)return;
   uint8_t *s=ffta_job_state((uint8_t *)u);
   if(s)put(s+FFTA_JOB_MYK_BLADE,(half(s+FFTA_JOB_MYK_BLADE)&0x1fffu)|((seen==3?0:seen)<<13));

@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "candidateManifest": "build/expansion/chemist-progressions/help/current.json",
+  "description": "Physician/Sapper integration. Tests are bounded per consumer; state tests execute ARM code with deterministic inputs. No player saves are used.",
+  "scope": "Final assembled Physician/Sapper acceptance: codec migration, native effects, cold fixture, periodic damage, paid movement, AI, cold suspend/resume, menu copy lifetimes, AP/shop progression and law receipts. Existing original jobs participate in mixed-class checks. This does not prove campaign completion or final balance.",
+  "timeoutSeconds": 300,
+  "steps": [
+    {"id":"cp-state-codec","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-progression-state.py"]},
+    {"id":"cp-effects","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-progression-effects.py"]},
+    {"id":"cp-fixture","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-progression-fixture.py"]},
+    {"id":"cp-fixture-diagnostic","runtime":"python","kind":"runtime","suites":["chemist-progression-diagnostic"],"args":["scripts/test-chemist-progression-fixture.py","--trace-exception"]},
+    {"id":"cp-periodic","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-progression-periodic.py"]},
+    {"id":"cp-movement","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-progression-movement.py"]},
+    {"id":"cp-ai","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-progression-ai.py"]},
+    {"id":"cp-save","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-progression-save.py"]},
+    {"id":"cp-ui","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-progression-ui.py"]},
+    {"id":"cp-learning","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-progression-learning.py"]},
+    {"id":"cp-laws","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-progression-laws.py"]},
+    {"id":"cp-status-records","runtime":"python","kind":"runtime","suites":["chemist-progression"],"args":["scripts/test-chemist-status-records.py"]}
+  ]
+}

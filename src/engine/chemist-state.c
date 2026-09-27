@@ -1,6 +1,7 @@
 #include "chemist-state.h"
 #include "curable-status.h"
 #include "job-state.h"
+#include "chemist-progression.h"
 static unsigned half(const uint8_t *p) { return p[0]|((unsigned)p[1]<<8); }
 static uint8_t *owned(const uint8_t *unit) {
  uint8_t *p=ffta_job_state((uint8_t *)unit);
@@ -57,7 +58,7 @@ unsigned ffta_chemist_prevent_custom(const uint8_t *context,unsigned tag) {
  /* All five named tags share the approved policy. Only Blade Wound and
   * Challenged have current provider integrations; later reservations do not
   * enable their actions. No inventory or action claims are changed here. */
- return tag>=FFTA_CURABLE_BLADE_WOUND && tag<=FFTA_CURABLE_HEATHEN_FROLIC &&
+ return tag>=FFTA_CURABLE_BLADE_WOUND && tag<=(FFTA_CHEMIST_PROGRESSION?FFTA_CURABLE_TIMED_FUSE:FFTA_CURABLE_HEATHEN_FROLIC) &&
      ((enemy_application(context) && ffta_inoculated_active(*(const uint8_t *const *)(context+8))) || ffta_chemist_auto_cureall(context));
 }
 uint8_t *ffta_chemist_inoculation(uint8_t *context) {
@@ -103,8 +104,22 @@ unsigned ffta_chemist_status_gate(const uint8_t *context,unsigned status,unsigne
 extern void ffta_previous_centered_event(uint8_t *,unsigned);
 extern void ffta_previous_centered_turn_end(uint8_t *);
 void ffta_chemist_combined_event(uint8_t *unit,unsigned event) {
+#if FFTA_CHEMIST_PROGRESSION
+ /* The assembled lifecycle is Dark Knight -> Viking -> Chemist -> Bard
+  * -> base Samurai. "previous_centered" is a component-local import name:
+  * the last symbol map with that name belongs to Viking and points back to
+  * this function. A coordinated build must name the actual predecessor. */
+ extern void ffta_bard_lifecycle_event(uint8_t *,unsigned);
+ ffta_bard_lifecycle_event(unit,event);ffta_chemist_event(unit,event);
+#else
  ffta_previous_centered_event(unit,event);ffta_chemist_event(unit,event);
+#endif
 }
 void ffta_chemist_combined_turn_end(uint8_t *unit) {
+#if FFTA_CHEMIST_PROGRESSION
+ extern void ffta_bard_lifecycle_turn_end(uint8_t *);
+ ffta_bard_lifecycle_turn_end(unit);ffta_chemist_turn_end(unit);
+#else
  ffta_previous_centered_turn_end(unit);ffta_chemist_turn_end(unit);
+#endif
 }

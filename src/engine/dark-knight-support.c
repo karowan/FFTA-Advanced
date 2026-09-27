@@ -33,7 +33,7 @@ void ffta_drk_action_event(const uint8_t *actor,unsigned action,unsigned event) 
 /* Caller has established a positive direct HP stage. Preserve native MP
  * interception unscaled, including its already-resolved actual selection. */
 static unsigned hp_payable(const uint8_t *actor,const uint8_t *target,unsigned action) {
-    unsigned flags=ffta_action_unit_flags(target);
+    unsigned flags=ffta_action_unit_flags_masked(target,24u);
     if(flags&8u)return !(flags&16u);
     return !(actor && target && actor!=target && action!=265 &&
         ((unsigned (*)(const uint8_t *))0x0812e6a5u)(target)==13 &&
@@ -43,7 +43,7 @@ static unsigned hp_payable(const uint8_t *actor,const uint8_t *target,unsigned a
 unsigned ffta_drk_outgoing_numerator(const uint8_t *actor,const uint8_t *target,unsigned action,unsigned physical) {
     if(!actor || !target || ffta_action_origin()==FFTA_ACTION_NATIVE_REACTION ||
        !hp_payable(actor,target,action))return 8;
-    unsigned flags=ffta_action_unit_flags(actor),active=0;
+    unsigned flags=ffta_action_unit_flags_masked(actor,FFTA_ACTION_FLAG_DESPERATION|FFTA_ACTION_FLAG_DESPERATION_ACTIVE|FFTA_DRK_LAST_RESORT),active=0;
     if(flags&FFTA_ACTION_FLAG_DESPERATION) {
         active=flags&FFTA_ACTION_FLAG_DESPERATION_ACTIVE;
         if(ffta_action_phase()==FFTA_ACTION_QUERY)active=low(actor,ffta_drk_hp_cost(actor,action));
@@ -52,7 +52,7 @@ unsigned ffta_drk_outgoing_numerator(const uint8_t *actor,const uint8_t *target,
 }
 unsigned ffta_drk_incoming_effects(const uint8_t *actor,const uint8_t *target,unsigned action,unsigned physical,unsigned removed) {
     if(!actor || !target || !hp_payable(actor,target,action))return 40;
-    unsigned a=ffta_action_unit_flags(actor),t=ffta_action_unit_flags(target)&~removed;
+    unsigned a=ffta_action_unit_flags_masked(actor,0x180u),t=ffta_action_unit_flags_masked(target,0x184u|FFTA_DRK_LAST_RESORT|FFTA_DRK_TBN|(1u<<27))&~removed;
     unsigned reaction=ffta_action_origin()==FFTA_ACTION_NATIVE_REACTION;
     unsigned enemy=actor!=target && !(t&4u) && ((((a>>7)^(a>>8))&1u)!=((t>>7)&1u));
     unsigned last=physical && (t&FFTA_DRK_LAST_RESORT)?6u:5u;

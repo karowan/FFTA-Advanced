@@ -26,6 +26,16 @@ unsigned ffta_geo_grounded(const uint8_t *u){
 }
 unsigned ffta_geo_field_at(const uint8_t *u,int x,int y,unsigned kind){
  if(!u || !tile(x,y) || (kind!=1 && kind!=2))return 0;
+#if FFTA_CHEMIST_PROGRESSION
+ /* Replacing every historical entry also replaces the installed canonical
+  * dispatcher. Retain its fast path in the replacement itself: movement
+  * previews ask this question for many tiles, and constructing 36 peers for
+  * each query can delay native input sampling across several video frames.
+  * Evaluated/simulated cohorts must still use their own explicit owners. */
+ extern unsigned ffta_geo_field_canonical(const uint8_t *);
+ extern unsigned ffta_geo_field_fast(const uint8_t *,int,int,unsigned);
+ if(ffta_geo_field_canonical(u))return ffta_geo_field_fast(u,x,y,kind);
+#endif
  uint8_t *peers[FFTA_JOB_UNIT_COUNT];
  unsigned count=ffta_job_peers((uint8_t *)u,peers,FFTA_JOB_UNIT_COUNT);
  /* The peer API returns the complete canonical cohort in slot order.

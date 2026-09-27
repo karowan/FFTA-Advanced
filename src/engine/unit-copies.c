@@ -1,9 +1,11 @@
+#include "expansion-memory.h"
 #include <stdint.h>
 #include "persistent.h"
 #include "battle-state.h"
 #include "evaluated-units.h"
 #include "blade-wound.h"
 #include "job-state.h"
+#include "unit-slot.h"
 
 /* These tails belong to enlarged native allocations, not to guessed character
  * identities. The small root lives beyond the inventory compatibility view. */
@@ -13,11 +15,11 @@ typedef struct { uint8_t ap[34], potion, exposed, wound[2], job[FFTA_JOB_RECORD_
 typedef struct Snapshot Snapshot;
 struct Snapshot { uint8_t native[0xe1c]; Snapshot *next; uint32_t magic; Extra units[13]; };
 typedef struct { uint32_t magic; Snapshot *snapshots; uint8_t *manager,*selection,*party; } Owners;
-#define OWNERS ((Owners *)0x0203ff30u)
-_Static_assert(sizeof(Snapshot)==0x1140,"snapshot allocation");
-_Static_assert(sizeof(Extra)==61,"unit copy stride");
+#define OWNERS ((Owners *)FFTA_COPY_ROOT)
+_Static_assert(sizeof(Snapshot)==(FFTA_CHEMIST_PROGRESSION?0x1180u:0x1140u),"snapshot allocation");
+_Static_assert(sizeof(Extra)==(FFTA_CHEMIST_PROGRESSION?66u:61u),"unit copy stride");
 /* Execution-scope and snapshot chain pointers follow at 0x0203FF44/48. */
-_Static_assert(0x0203ff30u+sizeof(Owners)<=0x0203ff44u,"copy-owner root below the scope pointers");
+_Static_assert(FFTA_COPY_ROOT+sizeof(Owners)<=FFTA_EXECUTION_ROOT,"copy-owner root below the scope pointers");
 
 static int in_ram(const void *p,unsigned size) {
     uintptr_t address=(uintptr_t)p;
@@ -39,7 +41,7 @@ static Extra *copy_extra(uint8_t *unit) {
     if (!r) return 0;
     if (r->manager && r->manager==*(uint8_t **)0x0200f4b0u) {
         uintptr_t delta=(uintptr_t)unit-(uintptr_t)(r->manager+0x40);
-        if (delta==0 || delta==264) return (Extra *)(r->manager+0x3b4)+delta/264;
+        if (delta==0 || delta==264) return (Extra *)(r->manager+0x3b4)+(delta!=0);
     }
     if (r->selection && r->selection==*(uint8_t **)0x0200f454u && unit==r->selection+0xa4c)
         return (Extra *)(r->selection+0x3800);
@@ -50,14 +52,15 @@ static Extra *copy_extra(uint8_t *unit) {
     for (unsigned n=0;s && n<64;++n) {
         if (!in_ram(s,sizeof(*s)) || s->magic!=NODE_MAGIC) return 0;
         uintptr_t delta=(uintptr_t)unit-(uintptr_t)(s->native+4);
-        if (delta<13*264 && delta%264==0) return &s->units[delta/264];
+        int slot=ffta_unit_slot(delta,13);
+        if (slot>=0) return &s->units[slot];
         s=s->next;
     }
     return 0;
 }
 static int roster_slot(uint8_t *unit) {
     uintptr_t delta=(uintptr_t)unit-0x02000080u;
-    return delta<24*264 && delta%264==0 ? (int)(delta/264) : -1;
+    return ffta_unit_slot(delta,24);
 }
 uint8_t *ffta_owned_extra_ap(uint8_t *unit,unsigned index) {
     if (index<144 || index>=178) return 0;
@@ -143,23 +146,23 @@ void ffta_snapshot_register(Snapshot *snapshot) {
     r->snapshots=snapshot;
 }
 void ffta_manager_register(uint8_t *manager) {
-    if (!in_ram(manager,0x430)) return;
+    if (!in_ram(manager,FFTA_CHEMIST_PROGRESSION?0x440:0x430)) return;
     Owners *r=owners(1);r->manager=manager;
     for (unsigned i=0;i<2*sizeof(Extra);++i) manager[0x3b4+i]=0;
 }
 uint8_t *ffta_owned_battle_manager(void) {
     Owners *r=owners(0);
     return r && r->manager && r->manager==*(uint8_t **)0x0200f4b0u &&
-        in_ram(r->manager,0x430) ? r->manager : 0;
+        in_ram(r->manager,FFTA_CHEMIST_PROGRESSION?0x440:0x430) ? r->manager : 0;
 }
 void ffta_selection_register(uint8_t *selection) {
-    if (!in_ram(selection,0x3840)) return;
+    if (!in_ram(selection,FFTA_CHEMIST_PROGRESSION?0x3850:0x3840)) return;
     Owners *r=owners(1);r->selection=selection;
     for (unsigned i=0;i<sizeof(Extra);++i) selection[0x3800+i]=0;
 }
 void ffta_party_copy_register(void) {
     uint8_t *party=*(uint8_t **)0x03002818u;
-    if (!in_ram(party,0x7280)) return;
+    if (!in_ram(party,FFTA_CHEMIST_PROGRESSION?0x7290:0x7280)) return;
     Owners *r=owners(1);r->party=party;
     for (unsigned i=0;i<sizeof(Extra);++i) party[0x7240+i]=0;
 }

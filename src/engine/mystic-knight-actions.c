@@ -1,3 +1,4 @@
+#include "expansion-memory.h"
 #include "native-unit.h"
 #include "ai-choice.h"
 #include "mystic-knight.h"
@@ -12,7 +13,7 @@
  * state, a guessed current target, or a mutation of the frozen snapshot. */
 typedef struct { uintptr_t self;const uint8_t *actor,*target;unsigned selected; } MysticDamageScope;
 _Static_assert(sizeof(MysticDamageScope)==16,"Mystic formula scope ABI");
-#define MYK_DAMAGE_SCOPE ((MysticDamageScope *volatile *)0x0203f72cu)
+#define MYK_DAMAGE_SCOPE ((MysticDamageScope *volatile *)FFTA_MYSTIC_DAMAGE_ROOT)
 unsigned ffta_myk_incoming_flags(const uint8_t *a,const uint8_t *t,unsigned id,unsigned flags){
  if(id!=FFTA_MYK_A12)return flags;
  const MysticDamageScope *s=*MYK_DAMAGE_SCOPE;uintptr_t p=(uintptr_t)s,sp;
@@ -95,7 +96,11 @@ unsigned ffta_myk_accuracy(const uint8_t *c){
  const uint8_t *a=*(const uint8_t *const *)c,*t=*(const uint8_t *const *)(c+4);
  unsigned id=half(c+12);
  if(id>=FFTA_MYK_A1 && id<=FFTA_MYK_A11 && a==t)return 100;
- return ((unsigned (*)(const uint8_t *))0x0813112du)(c);
+ unsigned result=((unsigned (*)(const uint8_t *))0x0813112du)(c);
+#if FFTA_CHEMIST_PROGRESSION
+ result=ffta_cp_accuracy(c,result);
+#endif
+ return result;
 }
 unsigned ffta_myk_element(const uint8_t *a,unsigned id,unsigned item){
  (void)item;

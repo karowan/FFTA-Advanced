@@ -18,7 +18,10 @@ unsigned ffta_job_save(unsigned slot,uint8_t *source) {
     uint8_t tail[FFTA_JOB_FOOTER_BYTES],marker[4];
     for(unsigned i=0;i<FFTA_JOB_FOOTER_BYTES;i++)tail[i]=source[0x3ca8+i];
     for(unsigned i=0;i<4;i++)marker[i]=source[0x1f04+i];
-    ffta_job_footer_encode(source+0x3ca8,*(const unsigned *)0x03000860u+1u);
+    if(!ffta_job_footer_encode(source+0x3ca8,*(const unsigned *)0x03000860u+1u)) {
+        for(unsigned i=0;i<FFTA_JOB_FOOTER_BYTES;i++)source[0x3ca8+i]=tail[i];
+        return 0;
+    }
     source[0x1f04]='J';source[0x1f05]='S';source[0x1f06]='T';source[0x1f07]='1';
     unsigned result=ffta_job_original_save(slot,source);
     for(unsigned i=0;i<FFTA_JOB_FOOTER_BYTES;i++)source[0x3ca8+i]=tail[i];

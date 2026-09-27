@@ -23,18 +23,19 @@ Run [Build Mod Release.ps1](Build%20Mod%20Release.ps1). It reads the build recip
 in [scripts/mod-release.json](scripts/mod-release.json), builds the current
 candidate through its declared deterministic plan, runs that candidate's required
 checks, and packages the accepted result. A failed check stops packaging. The
-current recipe applies the pub return fix to the authenticated v0.7.3 ROM. It
-does not repeat the historical gameplay and art builds.
+current recipe assembles Physician and Sapper from the authenticated v0.7.4 ROM
+and approved art, then runs all eleven new-job acceptance gates. See the
+[reproduction checkpoint](notes/chemist-progression-implementation.md).
 
 To package already accepted, unchanged game code without rerunning gameplay:
 
 ```powershell
-& '.\Build Mod Release.ps1' -Run build/expansion/test-runs/20260926T090601.197057Z/report.json
+& '.\Build Mod Release.ps1' -Run build/expansion/test-runs/20260927T194549.078118Z/report.json
 ```
 
-The candidate comes from that exact run's build log, not a mutable candidate
-pointer. The pub return adapter verifies the accepted parent, the one-byte
-change and the fixed-input gameplay replay before calling the general packager.
+The candidate comes from that exact run's authenticated manifest, not a mutable
+candidate pointer. The Physician/Sapper adapter checks the required gates,
+per-test ROM identity and compiled source/header hashes before packaging.
 Future build pipelines should supply their corresponding acceptance adapter and
 recipe; never remove acceptance to make packaging pass.
 
@@ -87,7 +88,36 @@ states capture old transient state and are not a compatibility guarantee.
 
 ## Verification checkpoint
 
-Current local release: `0.7.4.zip`, game SHA-1
+Current local release: `0.7.7.zip`, game SHA-1
+`97e3c99087d206001b968c760270ef46223e10a4`, accepted by all eleven gates in
+`build/expansion/test-runs/20260927T233903.605277Z/report.json`.
+ZIP SHA-256: `d272c175bb3fd2a32d2684568e6b67fddfcfd51fa7e184bffb97551402e6763d`.
+All 32 package checks passed. Matched AI decisions take 52-54% less planning
+time than v0.7.6; see the [timing evidence and limits](notes/ai-timing-investigation-2026-09-27.md).
+The public ZIP uses the same accepted BPS with public release documentation.
+
+Previous local release: `0.7.6.zip`, game SHA-1
+`b7d011755c998e23935a53d416bea252fef356ef`, accepted by all eleven gates in
+[run 20260927T222305.555070Z](build/expansion/test-runs/20260927T222305.555070Z/report.json).
+ZIP SHA-256: `1df63f188737a60cdba6c3639069d6204e5891756e4a71dcdeba3de4c79db138`.
+This repairs retained older status accessors that interpreted movement records
+as buffs. The captured player-state regression passed in
+[run 20260927T222512.014113Z](build/expansion/test-runs/20260927T222512.014113Z/report.json);
+32 package/launcher checks passed in
+[run 20260927T222554.831905Z](build/expansion/test-runs/20260927T222554.831905Z/report.json).
+Packaging did not restart the running game or change player saves. Use a normal
+in-game save and cold Continue to update; cached old emulator states are not a
+visual-repair guarantee. See the
+[regression checkpoint](notes/chemist-progression-implementation.md).
+
+Historical local release: `0.7.5.zip`, game SHA-1
+`3cefd6479739d7bb24a1fb4cde36b06f8bbebd98`, accepted by all ten gates in
+[run 20260927T194549.078118Z](build/expansion/test-runs/20260927T194549.078118Z/report.json).
+ZIP SHA-256: `a7bb4856cd8af71f2950661a2db3278cdc1d0d5de1ea51dfbcb0ff09e853cf15`.
+This is the first playable Physician/Sapper balance pass, including cold
+Suspend/Resume and native menu/movement checks; it is not a campaign playthrough.
+
+Prior local release: `0.7.4.zip`, game SHA-1
 `dd20c5771418cf470594c3e79c6d197b3bae4848`, packaged from
 [run 20260926T090601.197057Z](build/expansion/test-runs/20260926T090601.197057Z/report.json)
 ([focused plan](scripts/pub-return-test-plan.json)) through
@@ -140,10 +170,10 @@ test-only and is never selected by the real channel or launched.
 ```
 
 The earlier job-specific raw-ROM package remains historical. Current packaging
-and launch procedures above supersede the packaging section of the
-[job-visibility checkpoint](notes/job-visibility-fix-2026-09-20.md). Its gameplay
-evidence remains valid because the patched output is byte-identical. No new
-battle/campaign run is warranted by the delivery-only change.
+and launch procedures supersede the packaging section of the
+[job-visibility checkpoint](notes/job-visibility-fix-2026-09-20.md). Older gameplay
+evidence applies to its recorded ROMs and inputs; the new jobs have their own
+assembled acceptance gate.
 
 Local requirements are the existing Python, Node.js, mGBA and RomPatcher.js
 installations. They are not bundled into the ZIP; recipients only need their

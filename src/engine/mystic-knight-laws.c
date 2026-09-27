@@ -40,7 +40,8 @@ void ffta_myk_law_record(const uint8_t *object,const unsigned *frame,unsigned ki
  if(!object || kind>11 || !frame || ffta_action_phase()!=FFTA_ACTION_RESULT ||
     ffta_action_origin()!=FFTA_ACTION_NATIVE_PRIMARY || ffta_action_result_object()!=object)return;
  unsigned action=half(object+16);
- if(!kind && action!=355 && action!=373 && action!=379 && action!=404 && action!=405 && action!=381 && action!=422 && !weapon_elemental(action))return;
+ if(!kind && action!=355 && action!=373 && action!=379 && action!=404 && action!=405 && action!=381 && action!=422 &&
+    !(FFTA_CHEMIST_PROGRESSION && action==459) && !weapon_elemental(action))return;
  const uint8_t *container=(const uint8_t *)frame[8];
  if(!valid(container,0x26d0) || object<container || object>=container+14u*0x2c4u ||
     (unsigned)(object-container)%0x2c4u || (kind && half(object+16)))return;
@@ -112,7 +113,8 @@ void ffta_custom_law_applied(const uint8_t *unit){
  * Custom effects never acquire a fabricated Poison/Sleep/etc. identity. */
 static int custom_committed(const unsigned *frame,unsigned movement){
  unsigned action=frame[7];
- if(movement || (action!=355 && action!=373 && action!=379 && action!=404 && action!=405) ||
+ if(movement || (action!=355 && action!=373 && action!=379 && action!=404 && action!=405 &&
+    !(FFTA_CHEMIST_PROGRESSION && action==459)) ||
     ((const uint8_t *)frame[22])[4]!=16)return -1;
  if(!frame[21])return ffta_custom_law_forecast((const uint8_t *)frame[5],(const uint8_t *)frame[6],action);
  FightReceipt *r=receipt();const uint8_t *mask=(const uint8_t *)frame[21];

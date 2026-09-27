@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "candidateManifest": "build/expansion/chemist-progressions/help/current.json",
+  "description": "Read-only diagnosis of the captured September 27 player battle; never writes player saves.",
+  "scope": "cp-user-render-diagnostic loads the separately captured bug state and observes four fixed video boundaries with no gameplay inputs. Records original and new actor allocations, uploads and OAM to distinguish status indicators from corrupted graphics. cp-user-status-regression verifies all retained status accessors and rejects phantom buffs in that capture. Not gameplay acceptance.",
+  "timeoutSeconds": 120,
+  "steps": [
+    {"id":"cp-user-render-diagnostic","runtime":"python","kind":"runtime","suites":["battle-render-diagnostic"],"args":["scripts/inspect-battle-render-state.py","--state","build/expansion/bugs/2026-09-27-white-monk/live-user-battle.ss0","--out","build/expansion/bugs/2026-09-27-white-monk/inspection"]},
+    {"id":"cp-user-status-regression","runtime":"python","kind":"runtime","suites":["battle-render-regression"],"args":["scripts/inspect-battle-render-state.py","--state","build/expansion/bugs/2026-09-27-white-monk/live-user-battle.ss0","--out","build/expansion/bugs/2026-09-27-white-monk/repaired","--verify-status-records"]}
+  ]
+}

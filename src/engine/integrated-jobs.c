@@ -59,16 +59,39 @@ unsigned ffta_integrated_snapshot_flags(const uint8_t *u) {
     return result|ffta_turn_snapshot_flags(u);
 }
 unsigned ffta_integrated_beneficial(const uint8_t *u) {
+#if FFTA_CHEMIST_PROGRESSION
+    if(ffta_cp_flags(u)&(FFTA_CP_TRIAGE|FFTA_CP_WARD|FFTA_CP_SMOKE))return 1;
+#endif
     return ffta_drk_beneficial(u)||ffta_viking_war_cry(u)||ffta_chemist_beneficial(u)||ffta_bard_snapshot_flags(u)||ffta_geo_updraft(u,0)||ffta_geo_updraft(u,1)||ffta_geo_steady(u)||ffta_myk_enchantment(u);
 }
 unsigned ffta_integrated_extra_snapshot_flags(const uint8_t *u){return ffta_bard_snapshot_flags(u)|ffta_bard_passive_flags(u)|ffta_turn_extra_flags(u)|ffta_dancer_flags(u)|ffta_geo_flags(u);}
+#if FFTA_CHEMIST_PROGRESSION
+unsigned ffta_integrated_extra_flags_masked(const uint8_t *u,unsigned mask){
+    if(!u)return 0;
+    unsigned value=0;
+    /* FORCED depends only on native living/Petrify/Confuse/Berserk, exactly
+     * as in bard_passive_flags. It must not trigger a Refuge terrain search. */
+    if((mask&FFTA_BARD_FORCED) && (u[0x18]|u[0x19]) && !(u[0xe8]&64u) && (u[0xeb]&48u))value|=FFTA_BARD_FORCED;
+    if(mask&(FFTA_BARD_MARCH|FFTA_BARD_INSPIRED))value|=ffta_bard_snapshot_flags(u);
+    if(mask&(FFTA_BARD_ENCOURAGEMENT|FFTA_BARD_BOOST_READY|FFTA_BARD_ENCORE_READY|FFTA_BARD_CHARGED))value|=ffta_bard_passive_flags(u);
+    if(mask&FFTA_FOLLOW_THROUGH_READY)value|=ffta_turn_extra_flags(u);
+    if(mask&(FFTA_DNC_POLKA|FFTA_DNC_FROLIC|FFTA_DNC_FURY_READY|FFTA_DNC_RHYTHM_READY|FFTA_DNC_CHARGED))value|=ffta_dancer_flags(u);
+    if(mask&(FFTA_GEO_ATTUNEMENT|FFTA_GEO_STONE_READY|FFTA_GEO_WRATH_READY|FFTA_GEO_REFUGE|FFTA_GEO_WISP|FFTA_GEO_WISP_STRONG))value|=ffta_geo_flags_masked(u,mask);
+    /* Other extra bits are action claims; unsnapshotted providers never set
+     * them. Masking the result also prevents cross-provider bit leakage. */
+    return value&mask;
+}
+#endif
 /*445 is an internal formula template, never an executable queued action. */
-unsigned ffta_integrated_action_limit(void){return 445;}
+unsigned ffta_integrated_action_limit(void){return FFTA_CHEMIST_PROGRESSION?465:445;}
 /* The live manager owns both banks; slots share exact live snapshot owners. */
 void *ffta_integrated_snapshot_storage(void){return ffta_battle_workspace(FFTA_WORKSPACE_EXTRA);}
 uint16_t *ffta_additional_extension_snapshot_storage(void){return ffta_battle_workspace(FFTA_WORKSPACE_EXTENSION);}
 void ffta_integrated_action_event(const uint8_t *u,unsigned action,unsigned event) {
     if(!event){ffta_myk_doublecast_restore(u);ffta_myk_law_begin();}
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_cp_action_event(u,action,event);
+#endif
     ffta_drk_action_event(u,action,event);
     ffta_viking_action_event(u,action,event);
     ffta_bard_action_event(u,action,event);
@@ -85,6 +108,9 @@ void ffta_integrated_hp_loss(uint8_t *u,unsigned before,unsigned after) {
     ffta_bard_hp_loss(u,before,after);
     ffta_dancer_hp_loss(u,before,after);
     ffta_geo_hp_loss(u,before,after);
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_cp_hp_loss(u,before,after);
+#endif
 }
 extern unsigned ffta_original_action_hp_apply(uint8_t *,int);
 unsigned ffta_integrated_direct_hp_apply(uint8_t *unit,int delta) {
@@ -94,6 +120,9 @@ unsigned ffta_integrated_direct_hp_apply(uint8_t *unit,int delta) {
      * when the eligible pre-barrier amount was rounded from one to zero.
      * Misses, previews, MP-only writes and displacement never reach here. */
     unsigned flags=ffta_action_unit_flags(unit);
+#if FFTA_CHEMIST_PROGRESSION
+    if(delta>=0 && before)ffta_cp_direct_hit(unit,(unsigned)delta);
+#endif
     if(delta>=0 && before && ffta_action_origin()==FFTA_ACTION_NATIVE_PRIMARY &&
        (flags&(FFTA_DRK_TBN|FFTA_DRK_TBN_CONSUMING))==(FFTA_DRK_TBN|FFTA_DRK_TBN_CONSUMING))
         ffta_action_claim(unit,32u);
@@ -127,11 +156,17 @@ void ffta_integrated_reaction_queue(unsigned *frame) {
     ffta_bard_queue(frame);
     ffta_dancer_queue(frame);
     ffta_geo_queue(frame);
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_cp_queue(frame);
+#endif
 }
 const uint8_t *ffta_integrated_reaction_wrapper(const unsigned *frame,const uint8_t *unit) {
     return ffta_myk_doublecast_wrapper(frame,unit);
 }
 unsigned ffta_integrated_action_category(const uint8_t *u,unsigned action) {
+#if FFTA_CHEMIST_PROGRESSION
+    if(action>=446 && action<=459)return FFTA_ACTION_MAGICAL;
+#endif
     if(ffta_myk_action(action))return ffta_myk_strike(action)?FFTA_ACTION_PHYSICAL:FFTA_ACTION_MAGICAL;
     if(action>=FFTA_GEO_A1 && action<=FFTA_GEO_A9)return FFTA_ACTION_MAGICAL;
     if(action>=FFTA_DNC_A1 && action<=FFTA_DNC_A9)return ffta_dancer_physical(action)?FFTA_ACTION_PHYSICAL:0;
@@ -147,6 +182,9 @@ unsigned ffta_integrated_weapon_valid(unsigned action,unsigned item) {
 }
 unsigned ffta_integrated_eligibility(const uint8_t *context) {
     unsigned action=half(context+12);
+#if FFTA_CHEMIST_PROGRESSION
+    if(action>=446 && action<=464)return ffta_cp_eligibility(context);
+#endif
     if(ffta_myk_action(action))return ffta_myk_eligibility(context);
     if(action>=FFTA_GEO_A1 && action<=FFTA_GEO_A9)return ffta_geo_field_eligibility(context);
     if(action==FFTA_GEO_STONE_ACTION||action==FFTA_GEO_WRATH_ACTION)return ffta_geo_reaction_eligibility(context);
@@ -234,8 +272,8 @@ int ffta_integrated_exposed_native_stage(int damage,const uint8_t *context) {
     uint64_t product=(uint64_t)(unsigned)damage*ffta_poise_hp_factor(actor,target,action)*
         ffta_drk_outgoing_numerator(actor,target,action,0)*ffta_integrated_incoming_numerator(actor,target,action,0)*
         ffta_viking_outgoing_numerator(actor,target,action)*ffta_bard_outgoing(actor,target,action,0)*ffta_turn_damage_numerator(actor,target,action,0);
-    ffta_integrated_barrier_candidate(actor,target,action,(unsigned)ffta_dancer_scaled(product*2u,1280000000u,actor,target,action,0));
-    return (int)ffta_dancer_scaled(product,1280000000u,actor,target,action,0);
+    ffta_integrated_barrier_candidate(actor,target,action,(unsigned)ffta_dancer_scaled(product*2u,1280000000ULL,actor,target,action,0));
+    return (int)ffta_dancer_scaled(product,1280000000ULL,actor,target,action,0);
 }
 extern int ffta_integrated_original_exposed_preview(const uint8_t *,const uint8_t *,unsigned,unsigned,unsigned,unsigned);
 /* Effect forecasts own two evaluated units. Borrow an existing authenticated
@@ -311,6 +349,9 @@ extern unsigned ffta_viking_status_visual(uint8_t *,unsigned);
 extern unsigned ffta_chemist_status_visual(uint8_t *,unsigned);
 unsigned ffta_integrated_status_icon(const uint8_t *u,unsigned key) {
     key=(uint16_t)key;
+#if FFTA_CHEMIST_PROGRESSION
+    if(key>=56 && key<=59)return ffta_cp_status_icon(u,key);
+#endif
     if(key>=43 && key<=55)return ffta_myk_status_icon(u,key);
     if(key==39)return ffta_geo_updraft(u,0)||ffta_geo_updraft(u,1)?39:0;
     if(key==40)return ffta_geo_field_kind(u)?40:0;
@@ -334,11 +375,23 @@ unsigned ffta_integrated_status_next_key(const uint8_t *u,unsigned previous) {
     if((int8_t)next<=24)return next;
     unsigned sequence=ffta_myk_sequence(u),blade=ffta_myk_enchantment(u);
     unsigned limit=sequence==2?55:sequence==1?54:blade?42+blade:42;
+#if FFTA_CHEMIST_PROGRESSION
+    limit=59;
+#endif
     while(limit>27 && !ffta_integrated_status_icon(u,limit))--limit;
     if(limit==27)return ffta_wound_status_next_key(u,previous);
     return (int8_t)next>(int)limit?1:next;
 }
 unsigned ffta_integrated_status_visual(uint8_t *sprite,unsigned icon) {
+#if FFTA_CHEMIST_PROGRESSION
+    /* Reuse the resident native atlas: recovery, physical ward, ranged ward,
+     * and the one-turn countdown. These are display aliases only, never
+     * native Regen/Protect/Shell/Doom status flags or their mechanics. */
+    if(icon>=56 && icon<=59){
+        static const uint8_t native_icons[4]={5,3,2,16};
+        return ffta_wound_status_visual(sprite,native_icons[icon-56]);
+    }
+#endif
     if(icon>=43 && icon<=55)return ffta_myk_status_visual(sprite,icon);
     if(icon>=39&&icon<=42)return ffta_geo_status_visual(sprite,icon);
     if(icon==28 || icon==29)return ffta_drk_status_visual(sprite,icon);

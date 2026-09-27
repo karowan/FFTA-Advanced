@@ -1,0 +1,603 @@
+{
+  "schema": 1,
+  "scope": "Physician and Sapper base generation and separate user approval, not animation or runtime acceptance",
+  "basePlan": {
+    "schema": 1,
+    "status": "base-study-awaiting-review",
+    "outputDirectory": "build/art/chemist-job-art-2026-09-26",
+    "paletteROM": {
+      "path": "roms/clean/FFTA_US_clean.gba",
+      "sha256": "43fc8204c6dceee58828aebc7af0c72eb807e99f35ad641c8bb0a4fa8b6edc19"
+    },
+    "palette": {
+      "selector": 0,
+      "offset": 4300128,
+      "words": [
+        18995,
+        1090,
+        14860,
+        30719,
+        10533,
+        1333,
+        573,
+        991,
+        27972,
+        32267,
+        30511,
+        30680,
+        23316,
+        1508,
+        4872,
+        5040
+      ]
+    },
+    "assets": [
+      {
+        "id": "physician-front",
+        "source": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-front-generated.png",
+          "sha256": "725a52c30294bfdf5a7df03afd7a8d5c35a7f8c1011733e84d9f0f7598d2df4b"
+        },
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/physician-front-worksheet.png",
+            "sha256": "a4e863c368affd91496d36b28ebf0c72b399b476a667bee90a14acf56f51b86c"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/physician-concept.png",
+            "sha256": "8888e3f71e1294a1f6d288b084d5474baca28ea3d62fac0d41b28f540dcc8e3e"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "logicalGrid": [
+          160,
+          64
+        ],
+        "crop": [
+          128,
+          16,
+          160,
+          48
+        ]
+      },
+      {
+        "id": "sapper-front",
+        "source": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-front-generated.png",
+          "sha256": "dc1edcb17b5e9dd36aacfcb27f69b25a864fa1588b0b913b291a8d366fa3cf4b"
+        },
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-front-worksheet.png",
+            "sha256": "cfdd9a364ec66e976fca6b9628a61a57b9ab0403a64dd60fc7111e2c82d2996b"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-concept.png",
+            "sha256": "a95da4becb70c896f689969b05ccb145501b47b07eeffcbff7cfcfc6cf0b5ad4"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "logicalGrid": [
+          160,
+          64
+        ],
+        "crop": [
+          128,
+          16,
+          160,
+          48
+        ]
+      },
+      {
+        "id": "sapper-front-v2",
+        "source": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-front-v2-generated.png",
+          "sha256": "c98911536707723787fe713c6a993ad669ef1eb4379c8ef040552ebd38db5641"
+        },
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-front-worksheet.png",
+            "sha256": "cfdd9a364ec66e976fca6b9628a61a57b9ab0403a64dd60fc7111e2c82d2996b"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-front-generated.png",
+            "sha256": "dc1edcb17b5e9dd36aacfcb27f69b25a864fa1588b0b913b291a8d366fa3cf4b"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "logicalGrid": [
+          160,
+          64
+        ],
+        "crop": [
+          128,
+          16,
+          160,
+          48
+        ]
+      },
+      {
+        "id": "physician-front-anchored",
+        "source": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-front-generated.png",
+          "sha256": "725a52c30294bfdf5a7df03afd7a8d5c35a7f8c1011733e84d9f0f7598d2df4b"
+        },
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/physician-front-worksheet.png",
+            "sha256": "a4e863c368affd91496d36b28ebf0c72b399b476a667bee90a14acf56f51b86c"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/physician-concept.png",
+            "sha256": "8888e3f71e1294a1f6d288b084d5474baca28ea3d62fac0d41b28f540dcc8e3e"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "logicalGrid": [
+          160,
+          64
+        ],
+        "crop": [
+          128,
+          16,
+          160,
+          48
+        ],
+        "sharedFace": {
+          "region": [
+            9,
+            12,
+            16,
+            17
+          ],
+          "references": [
+            {
+              "path": "build/art/native-reference/actor-018/052700-000000-pose.png",
+              "sha256": "06153a7d3385b9cfc4eb563723b5e9f9089378eda46a2d7669d92f5aeb85b513",
+              "crop": [
+                32,
+                28,
+                64,
+                60
+              ]
+            },
+            {
+              "path": "build/art/native-reference/actor-020/05c020-000000-pose.png",
+              "sha256": "d5ccd2def582800f59c59c371cac1bb8d0174575abd7d5ec7f5f46caf5446ed2",
+              "crop": [
+                32,
+                28,
+                64,
+                60
+              ]
+            },
+            {
+              "path": "build/art/native-reference/actor-021/060c60-000000-pose.png",
+              "sha256": "52f695118ef71e266e1d15c315db3e9f8c5631555f0919e84353425c4b959a67",
+              "crop": [
+                32,
+                28,
+                64,
+                60
+              ]
+            },
+            {
+              "path": "build/art/native-reference/actor-025/073c20-000000-pose.png",
+              "sha256": "091687de8267cc8b634f1729dff7ae7c5aee0e533a6d90e42b6fadde20cc40ba",
+              "crop": [
+                32,
+                28,
+                64,
+                60
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "sapper-front-anchored",
+        "source": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-front-v2-generated.png",
+          "sha256": "c98911536707723787fe713c6a993ad669ef1eb4379c8ef040552ebd38db5641"
+        },
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-front-worksheet.png",
+            "sha256": "cfdd9a364ec66e976fca6b9628a61a57b9ab0403a64dd60fc7111e2c82d2996b"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-front-generated.png",
+            "sha256": "dc1edcb17b5e9dd36aacfcb27f69b25a864fa1588b0b913b291a8d366fa3cf4b"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "logicalGrid": [
+          160,
+          64
+        ],
+        "crop": [
+          128,
+          16,
+          160,
+          48
+        ],
+        "sharedFace": {
+          "region": [
+            10,
+            14,
+            17,
+            19
+          ],
+          "references": [
+            {
+              "path": "build/art/native-reference/actor-035/0a19e0-000000-pose.png",
+              "sha256": "afe2f0dbace7aa93594a11488c7ce648033352ecb5798ce2ee828fdea920c006",
+              "crop": [
+                32,
+                28,
+                64,
+                60
+              ]
+            },
+            {
+              "path": "build/art/native-reference/actor-034/09d760-000000-pose.png",
+              "sha256": "cb9614a65772e19913a207e8f05c650b049a2f93522fcb671e7588c1ba463db6",
+              "crop": [
+                32,
+                28,
+                64,
+                60
+              ]
+            },
+            {
+              "path": "build/art/native-reference/actor-037/0aa0a0-000000-pose.png",
+              "sha256": "d595a5ff33996609d325a4b54a28a90b9601203d8bb136380571ef398b9cb8f9",
+              "crop": [
+                32,
+                28,
+                64,
+                60
+              ]
+            },
+            {
+              "path": "build/art/native-reference/actor-039/0b28c0-000000-pose.png",
+              "sha256": "7a430bfad7afafbfa50ca8c0994f288ac3108f75ad28492f9a1f59d6d7f125d9",
+              "crop": [
+                32,
+                28,
+                64,
+                60
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "physician-rear",
+        "source": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-rear-generated.png",
+          "sha256": "853a6ab3f76c7086af3b705ab161f09f567964bb5bfc66d8cceac62210a65936"
+        },
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/physician-rear-worksheet.png",
+            "sha256": "ceb43d95d26b7c1012fe7b1e134ad166b112f576edabd575f521ff127e1f48ae"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/physician-concept.png",
+            "sha256": "8888e3f71e1294a1f6d288b084d5474baca28ea3d62fac0d41b28f540dcc8e3e"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "logicalGrid": [
+          160,
+          96
+        ],
+        "crop": [
+          128,
+          56,
+          160,
+          88
+        ],
+        "strip": [
+          128,
+          48,
+          160,
+          96
+        ]
+      },
+      {
+        "id": "sapper-rear",
+        "source": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-rear-generated.png",
+          "sha256": "a958ff9c3bd03b8fbccaf8ba6a769ef21d00700da06fd8cb2c2b6dad359cdf15"
+        },
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-rear-worksheet.png",
+            "sha256": "dccd680d63f4d3849b3994827fe43cd7f112ca5bce5bfaa242839bf6373232f3"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-concept.png",
+            "sha256": "a95da4becb70c896f689969b05ccb145501b47b07eeffcbff7cfcfc6cf0b5ad4"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "logicalGrid": [
+          160,
+          96
+        ],
+        "crop": [
+          128,
+          56,
+          160,
+          88
+        ],
+        "strip": [
+          128,
+          48,
+          160,
+          96
+        ]
+      }
+    ],
+    "jobs": [
+      {
+        "slug": "physician",
+        "label": "Nu Mou Physician",
+        "concept": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-concept.png",
+          "sha256": "8888e3f71e1294a1f6d288b084d5474baca28ea3d62fac0d41b28f540dcc8e3e"
+        },
+        "front": "physician-front-anchored",
+        "rear": "physician-rear",
+        "frontWorksheet": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-front-worksheet.png",
+          "sha256": "a4e863c368affd91496d36b28ebf0c72b399b476a667bee90a14acf56f51b86c"
+        },
+        "rearWorksheet": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-rear-worksheet.png",
+          "sha256": "ceb43d95d26b7c1012fe7b1e134ad166b112f576edabd575f521ff127e1f48ae"
+        },
+        "comparisonIDs": [
+          "physician-front"
+        ],
+        "note": "New costume on shared native anatomy anchors. Please review face, headgear, front/rear continuity and native colors before the animation set."
+      },
+      {
+        "slug": "sapper",
+        "label": "Moogle Sapper",
+        "concept": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-concept.png",
+          "sha256": "a95da4becb70c896f689969b05ccb145501b47b07eeffcbff7cfcfc6cf0b5ad4"
+        },
+        "front": "sapper-front-anchored",
+        "rear": "sapper-rear",
+        "frontWorksheet": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-front-worksheet.png",
+          "sha256": "cfdd9a364ec66e976fca6b9628a61a57b9ab0403a64dd60fc7111e2c82d2996b"
+        },
+        "rearWorksheet": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-rear-worksheet.png",
+          "sha256": "dccd680d63f4d3849b3994827fe43cd7f112ca5bce5bfaa242839bf6373232f3"
+        },
+        "comparisonIDs": [
+          "sapper-front",
+          "sapper-front-v2"
+        ],
+        "note": "New costume on shared native anatomy anchors. Please review face, headgear, front/rear continuity and native colors before the animation set."
+      }
+    ],
+    "approval": {
+      "path": "build/art/chemist-job-art-2026-09-26/base-approval.json",
+      "sha256": "757057550bb99c5cba39eb18b45dcda46600650b88effcbe72265597d8048e38"
+    }
+  },
+  "baseApproval": {
+    "schema": 1,
+    "scope": "native-front-rear-designs-and-colors",
+    "approved": true,
+    "userResponse": "Approve both native bases",
+    "date": "2026-09-26",
+    "images": [
+      {
+        "path": "build/art/chemist-job-art-2026-09-26/physician-front-anchored-native.png",
+        "sha256": "a880c6b298e5f1d374c8fdb61f93d410cb9ca55e3a960eec079cc7b3eac02473"
+      },
+      {
+        "path": "build/art/chemist-job-art-2026-09-26/physician-rear-native.png",
+        "sha256": "fe06ec6b93063ed60cd295e94b254733a59adc2301f35c35038ff2b16af0bc61"
+      },
+      {
+        "path": "build/art/chemist-job-art-2026-09-26/sapper-front-anchored-native.png",
+        "sha256": "5113d43095adeb85a68f0eeb02243d997a495dcaacf801a5745494f1f1b7413a"
+      },
+      {
+        "path": "build/art/chemist-job-art-2026-09-26/sapper-rear-native.png",
+        "sha256": "2bc34fa03d0b93618a3ce9b22fdd3a1b1d668d2f0b17a6ab85b2cca750b75953"
+      }
+    ],
+    "excludes": [
+      "Other poses",
+      "Portraits",
+      "Badges",
+      "Runtime integration"
+    ]
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "model": "Tool managed; exact version not exposed",
+    "settings": "Prompt and listed references only; other settings tool-managed",
+    "records": [
+      {
+        "id": "physician-concept",
+        "prompt": "Design an original Nu Mou Physician full-body concept illustration for Final Fantasy Tactics Advance. The attached panel of original FFTA Nu Mou jobs is the authority for racial anatomy, compact proportions, clean ink lines and simple flat shaded colors. A tier-three field physician descended from Chemist and White Mage: gentle elderly Nu Mou with a broad long drooping muzzle, small readable eyes, very long pendulous ears, stooped rounded body and short limbs. A distinctive ivory open-front medical overcoat with a short dark teal shoulder yoke, warm ochre sleeve cuffs and a dark leather medicine case at the hip; a modest close-fitting ivory physician cap with a single teal band, ears fully exposed. A large simple brass clasp and two broad strapped dressing rolls, no tiny clutter. Keep the outfit clearly different from both the red-triangle White Mage and olive-capped Chemist, but equally believable in FFTA. Costume shapes must simplify into a 32x32 sprite. No modern surgical mask, no modern medical logos, no plague-doctor beak, no spectacles obscuring the eye, no staff hiding the body. Relaxed neutral full-body pose, one complete original character on white, no text. Match the reference illustration's economical detail and hand-inked style; do not repaint or decorate any existing character.",
+        "references": [
+          {
+            "path": "build/art/illustrated-class-concepts-v2-2026-09-19/references/ffta-race-nu-mou.jpg",
+            "sha256": "2607eeecd2bcb2c17e04968931074b5cad4c3bdbf154b528270755fe59309d4c"
+          }
+        ],
+        "output": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-concept.png",
+          "sha256": "8888e3f71e1294a1f6d288b084d5474baca28ea3d62fac0d41b28f540dcc8e3e"
+        },
+        "status": "User approved direction: Yes, develop both directions"
+      },
+      {
+        "id": "physician-front",
+        "prompt": "Use image 1 as the exact pixel-size, anatomical-anchor and layout worksheet. Create the NEW Nu Mou Physician design from image 2 in ONLY the fifth/rightmost slot of image 1. The first four original sprites remain unchanged references for Nu Mou anatomy, eye position, baseline, slightly elevated three-quarter camera and coarse native pixel clusters. The fifth is a previously generated racial anatomy anchor, not a costume to preserve. Replace its outfit completely with the new Physician: compact ivory medical cap with dark teal band, ivory open overcoat, dark teal shoulder yoke, ochre cuffs, one brown medicine case and pale bandage-roll indication. Keep long hanging Nu Mou ears and readable muzzle/eye from the anatomical anchor; no tiny embellishments. Image 3 is the ONLY available native battle palette: pale ivory highlights, teal/blue-gray skin shadows exactly like neighboring sprites, dark teal cloth, ochre accents and dark outline. Do not introduce warm pink skin absent from this palette. The target must have exactly the same scale and baseline as its four neighbors, body contained in logical cell x128..159,y16..47 on a 160x64 worksheet. Keep entire 5-column row, original canvas proportions and flat gray background. Coarse actual 32x32 pixel sprite; no finer detail, no antialias, no border, text, held weapon or effects. The large concept is costume guidance ONLY, never shrink the illustration itself. Return the entire unchanged-layout worksheet with the fifth sprite newly designed.",
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/physician-front-worksheet.png",
+            "sha256": "a4e863c368affd91496d36b28ebf0c72b399b476a667bee90a14acf56f51b86c"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/physician-concept.png",
+            "sha256": "8888e3f71e1294a1f6d288b084d5474baca28ea3d62fac0d41b28f540dcc8e3e"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "output": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-front-generated.png",
+          "sha256": "725a52c30294bfdf5a7df03afd7a8d5c35a7f8c1011733e84d9f0f7598d2df4b"
+        },
+        "status": "draft; native conversion awaiting user review"
+      },
+      {
+        "id": "physician-rear",
+        "prompt": "Fill ONLY the empty bottom-right cell of image 1 with a REAR view of the Nu Mou Physician in the TOP-RIGHT cell. Turn the exact same character away facing upper-right, with the pose, anatomy, coarse pixel size and baseline of the four bottom-row native Nu Mou references. Keep ivory medical cap with dark teal band, teal short shoulder yoke, ivory coat back, ochre cuffs, hanging ears and medicine case attached on the same anatomical side. The costume concept is image 2, but the top-right NATIVE SPRITE is the authority for simplicity and material colors. Image 3 is the only available palette. Do not redraw an illustration, add face/eyes on the back, increase detail, or reuse one of the other jobs' costumes. Retain every existing reference and the complete 160x96 logical worksheet. New sprite wholly within 32x32 cell [128,56,160,88]. Same flat neutral background, no text, weapon or effect. Return the full two-row worksheet.",
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/physician-rear-worksheet.png",
+            "sha256": "ceb43d95d26b7c1012fe7b1e134ad166b112f576edabd575f521ff127e1f48ae"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/physician-concept.png",
+            "sha256": "8888e3f71e1294a1f6d288b084d5474baca28ea3d62fac0d41b28f540dcc8e3e"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "output": {
+          "path": "build/art/chemist-job-art-2026-09-26/physician-rear-generated.png",
+          "sha256": "853a6ab3f76c7086af3b705ab161f09f567964bb5bfc66d8cceac62210a65936"
+        },
+        "status": "draft; native conversion awaiting user review"
+      },
+      {
+        "id": "sapper-concept",
+        "prompt": "Design an original Moogle Sapper full-body concept illustration for Final Fantasy Tactics Advance. The attached panel of original FFTA Moogle jobs is the authority for racial anatomy, compact proportions, clean ink lines and simple flat shaded colors. A tier-three field engineer descended from Chemist and Gadgeteer, using charges, tripwires and smoke, NOT a gunner. Cream-white Moogle with small readable dark eyes, long upright ears, red pom-pom and small bat wings. A compact ochre leather engineer skullcap between exposed ears, dark teal padded short utility vest over an ivory shirt, warm orange leather gloves and sturdy little boots. Distinctive pair of rounded brass-rimmed safety goggles parked above the forehead, not covering the eyes. Broad diagonal belt with two simple squat dark charge canisters and a small square leather tool pouch at the hip. Simple robust silhouette, not an oversized modern bomb suit, not military camouflage, not a gas mask. No gun or firearm, no large held weapon, no sparks or explosion hiding the design. Original neutral full-body stance. Keep costume shapes economical enough for a 32x32 sprite and distinct from the existing Moogle Chemist and Gadgeteer. One complete original character on white, no text. Match the reference's hand-inked lines and flat shaded colors; do not recolor or decorate an existing character.",
+        "references": [
+          {
+            "path": "build/art/illustrated-class-concepts-v2-2026-09-19/references/ffta-race-moogle.jpg",
+            "sha256": "320eeadffe27b7ee78d451d14050b6436842a9e4d848ac08785a86e39295bf4f"
+          }
+        ],
+        "output": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-concept.png",
+          "sha256": "a95da4becb70c896f689969b05ccb145501b47b07eeffcbff7cfcfc6cf0b5ad4"
+        },
+        "status": "User approved direction: Yes, develop both directions"
+      },
+      {
+        "id": "sapper-front",
+        "prompt": "Use image 1 as the exact pixel-size, anatomical-anchor and layout worksheet. Create the NEW Moogle Sapper design from image 2 in ONLY the fifth/rightmost slot of image 1. The first four original sprites remain unchanged references for Moogle face/eye/ear positions, short body, feet baseline, slightly elevated three-quarter camera and coarse native pixel clusters. The fifth is a previously generated racial anatomy anchor, not a costume to preserve. Replace its outfit completely: compact ochre engineer cap, two small brass-rimmed dark goggle lenses ABOVE the exposed face, dark teal short padded vest, ivory sleeves, orange gloves, broad brown utility belt and TWO small dark charge canisters. Keep cream face/fur, upright ears, little wings and pom-pom silhouette. Image 3 is the ONLY available native palette. Use its orange/gold for the pom-pom instead of unavailable red, ivory and pale cyan/teal for fur shading like the original neighbors, dark teal vest, ochre leather. Make goggles+dark vest+charges recognizable with a few clean pixel clusters. The body must remain the same scale and baseline as its four neighbors, wholly inside logical cell x128..159,y16..47 of a 160x64 worksheet. Keep entire five-column row, original canvas proportions and flat gray background. Coarse actual 32x32 pixel sprite, no microdetail or antialias, no lettering/border, no gun, held weapon or effects. Concept image is costume guidance ONLY; never shrink the illustration itself. Return the entire unchanged-layout worksheet with the fifth sprite newly designed.",
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-front-worksheet.png",
+            "sha256": "cfdd9a364ec66e976fca6b9628a61a57b9ab0403a64dd60fc7111e2c82d2996b"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-concept.png",
+            "sha256": "a95da4becb70c896f689969b05ccb145501b47b07eeffcbff7cfcfc6cf0b5ad4"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "output": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-front-generated.png",
+          "sha256": "dc1edcb17b5e9dd36aacfcb27f69b25a864fa1588b0b913b291a8d366fa3cf4b"
+        },
+        "status": "draft; native conversion awaiting user review"
+      },
+      {
+        "id": "sapper-rear",
+        "prompt": "Fill ONLY the empty bottom-right cell of image 1 with a REAR view of the Moogle Sapper in the TOP-RIGHT cell. Turn the same character away facing upper-right, matching the pose, anatomy, coarse pixel size and baseline of the four bottom-row native Moogle references. Keep ochre cap with goggle strap going around the back (no lenses visible on back), orange/gold pom-pom, exposed ears, dark teal padded short vest back, cream sleeves, orange gloves, little wings and utility belt. Two front belt charges should not appear pasted on the back. The concept is image 2 but the top-right NATIVE SPRITE sets the simple pixel clusters and colors. Image 3 is the only native palette. No rear face or rear eyes; no gun, weapon or effects. Retain every existing reference and the full160x96logical worksheet. New body entirely in32x32cell[128,56,160,88], samepixel scale andbaseline, flatgraybackground. Return the full two-row worksheet, not a cropped sprite.",
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-rear-worksheet.png",
+            "sha256": "dccd680d63f4d3849b3994827fe43cd7f112ca5bce5bfaa242839bf6373232f3"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-concept.png",
+            "sha256": "a95da4becb70c896f689969b05ccb145501b47b07eeffcbff7cfcfc6cf0b5ad4"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "output": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-rear-generated.png",
+          "sha256": "a958ff9c3bd03b8fbccaf8ba6a769ef21d00700da06fd8cb2c2b6dad359cdf15"
+        },
+        "status": "draft; native conversion awaiting user review"
+      },
+      {
+        "id": "sapper-front-v2",
+        "prompt": "Image 1 is the exact original five-sprite worksheet. Image 2 is the proposed new Sapper costume worksheet. Redraw ONLY the fifth sprite of IMAGE 1 as the Sapper, using the much simpler native pixel language of the first four. Keep the fifth anchor's face silhouette and single black eye at EXACTLY the same coordinates as image 1, with the SAME large square pixel blocks. Keep that cream face completely exposed and unobstructed. The goggles belong on the cap ABOVE the face, drawn as two simple dark 2x2 pixel blocks with ONE gold highlight each, not round detailed spectacles. Ochre cap, dark teal vest, cream sleeves, orange gloves, two dark square belt charges. Simplify equipment to a few solid pixel clusters, no microdetails, no subpixel shading. The fifth sprite's outline and internal pixels must use exactly the grid of its neighbors: one shared 32x32 logical cell per sprite. Preserve all other four sprites and the whole160x64 logical worksheet, target32x32cell[128,16,160,48], samebodyposition andbaseline. Image 3 is the allowed native palette. No text or effects. Return the FULL row, not a close-up. Do not create higher-resolution illustration details anywhere.",
+        "references": [
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-front-worksheet.png",
+            "sha256": "cfdd9a364ec66e976fca6b9628a61a57b9ab0403a64dd60fc7111e2c82d2996b"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/sapper-front-generated.png",
+            "sha256": "dc1edcb17b5e9dd36aacfcb27f69b25a864fa1588b0b913b291a8d366fa3cf4b"
+          },
+          {
+            "path": "build/art/chemist-job-art-2026-09-26/palette-0.png",
+            "sha256": "9159282141d2a216691b62ba8c1b4ba193f85b34e4b98f06ab1fc9dc0eaacd32"
+          }
+        ],
+        "output": {
+          "path": "build/art/chemist-job-art-2026-09-26/sapper-front-v2-generated.png",
+          "sha256": "c98911536707723787fe713c6a993ad669ef1eb4379c8ef040552ebd38db5641"
+        },
+        "reason": "First Sapper lost eye and goggle definition at native size",
+        "status": "revised generation; shared face conversion candidate"
+      }
+    ],
+    "conceptDirectionsApproved": true,
+    "nativeBasesApproved": false
+  }
+}
