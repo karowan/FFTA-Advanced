@@ -1,15 +1,17 @@
 """Read-only frame-boundary PC sampling of retained AI timing cases.
 
-This uses the authenticated core ABI to READ CPU registers, without installing
-instruction callbacks or changing the native dispatch table. Samples locate
+This uses the authenticated core ABI to READ CPU registers, with a one-time declared RNG input controller at candidate construction.
+The PC sampler itself never changes game state. Samples locate
 likely hot paths, not exact inclusive/exclusive function costs. Each replay
 must reproduce the complete retained decision-boundary RAM byte for byte.
 """
+from contextlib import ExitStack
 import collections, hashlib, json, runpy
 from pathlib import Path
 from datetime import datetime, timezone
 from chemist_candidate import ROOT, candidate
 from mgba_instruction_trace import InstructionTrace
+from ai_planner_seed import PlannerSeed, BOUNDARY
 
 BASE = ROOT / 'build/expansion/ai-timing'
 source = Path(json.loads((BASE/'latest-measurement.json').read_text())['report'])
@@ -37,20 +39,26 @@ for row in report['records']:
             names=[n for start,end,n in functions if start<=pc<end]
             if len(names)==1:return names[0]
         return f'native/unresolved {pc&~0xfff:08x}'
-    with E(rom) as e:
+    with E(rom) as e, ExitStack() as seed_scope:
         e.load(folder/'planning-start.state')
+        pin = PlannerSeed(e,row['seed']) if report.get('seedBoundary')==BOUNDARY else None
         reader=InstructionTrace(e,{})  # No context entry: no host hooks installed.
         original=reader.slot.value
+        if pin: seed_scope.enter_context(pin)
         samples=[]
         for frame in range(row['decisionFrames']):
             r=e.memory()
             phase=int.from_bytes(r[0x156ec:0x156ee],'little')
+            if phase==1: seed_scope.close()
             pc,lr,cpsr=reader.registers[15],reader.registers[14],reader.registers[16]
             samples.append(dict(frame=frame,phase=phase,pc=hex(pc),lr=hex(lr),mode=cpsr&31,
                                 symbol=symbol(pc),caller=symbol(lr&~1)))
             e.run(1)
         assert e.memory()==(folder/'choice-published.ram').read_bytes(), 'Observed replay differs from ordinary execution'
-        assert reader.slot.value==original, 'No host observer installed'
+        if pin:
+            seed_scope.close()
+            assert len(pin.pins)==1
+        assert reader.slot.value==original, 'Host dispatch restored'
         hot=collections.Counter(s['symbol'] for s in samples if s['phase']==1)
         callers=collections.Counter(s['caller'] for s in samples if s['phase']==1)
         rec=dict(build=row['build'],job=row['label'],seed=5,romSha1=row['romSha1'],

@@ -34,6 +34,12 @@ unsigned ffta_job_origin(const uint8_t *unit);
  * Single lookup returns NULL for unrepresented or ambiguous duplicate origins.
  * Missing representation is not evidence that the source has died. */
 unsigned ffta_job_peers(uint8_t *unit,uint8_t **output,unsigned capacity);
+#if FFTA_CHEMIST_PROGRESSION
+/* Synchronous view of one authenticated copied cohort; never cache it across
+ * allocation/copy/retirement. Native units are 264 bytes apart. */
+typedef struct {uint8_t *units,*records;unsigned count,record_stride;} FFTA_JobCohort;
+unsigned ffta_job_copied_cohort(uint8_t *,FFTA_JobCohort *);
+#endif
 uint8_t *ffta_job_peer(uint8_t *unit,unsigned origin);
 /* Existing saved preference, including explicit owned/evaluated copies. */
 uint8_t *ffta_job_potion(uint8_t *unit);

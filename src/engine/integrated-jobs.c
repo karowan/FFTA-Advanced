@@ -17,6 +17,7 @@
 #include "mystic-knight.h"
 #include "battle-workspace.h"
 #include "custom-laws.h"
+#include "evaluated-units.h"
 extern unsigned ffta_counter_draw_flags(const uint8_t *);
 extern void ffta_counter_draw_hp_loss(uint8_t *,unsigned,unsigned);
 extern void ffta_counter_draw_queue(unsigned *);
@@ -242,23 +243,47 @@ unsigned ffta_integrated_direct_kind(const uint8_t *context) {
     return ((unsigned (*)(unsigned,unsigned))0x080ccd51u)(action,28) &&
         (d[3]==30 || d[3]==39 || d[3]==43)?2:0;
 }
-static int physical(int damage,const uint8_t *actor,const uint8_t *target,unsigned action,unsigned *deferred_barrier) {
+static int physical_calculation(int damage,const uint8_t *actor,const uint8_t *target,unsigned action,unsigned *deferred_barrier,unsigned need_barrier) {
     if(damage<=0) {
         if(deferred_barrier)*deferred_barrier=0;
         else ffta_integrated_barrier_candidate(actor,target,action,0);
         return damage;
     }
+    /* Original actions have no intrinsic expansion multiplier. Only a pure
+     * query with proved empty live/captured banks may bypass the neutral chain.
+     * A deferred real-result consumer always uses the complete calculation. */
+    if(action<347 && !need_barrier && ffta_action_neutral_query(actor,target) &&
+       ffta_exposed_incoming_numerator(damage,target)==5) {
+        if(deferred_barrier)*deferred_barrier=0;
+        return damage>999?999:damage;
+    }
     uint64_t result=(uint64_t)(unsigned)damage*ffta_exposed_incoming_numerator(damage,target)*
         ffta_poise_hp_factor(actor,target,action)*ffta_blade_ward_factor(actor,target)*
         ffta_drk_outgoing_numerator(actor,target,action,1)*ffta_integrated_incoming_numerator(actor,target,action,1)*
         ffta_viking_outgoing_numerator(actor,target,action)*ffta_bard_outgoing(actor,target,action,1)*ffta_turn_damage_numerator(actor,target,action,1);
-    unsigned pre_barrier=(unsigned)ffta_dancer_scaled(result*2u,128000000000ULL,actor,target,action,1);
+    /* A pure forecast discards the barrier-consumption ledger. Computing its
+     * second complete modifier chain only to discard it doubles that work.
+     * Real Fight can run inside a child QUERY and publish after it closes:
+     * its caller must explicitly retain the deferred amount (need_barrier=1).
+     * Do not infer that case from the child's current phase. */
+    unsigned pre_barrier=need_barrier?(unsigned)ffta_dancer_scaled(result*2u,128000000000ULL,actor,target,action,1):0;
     if(deferred_barrier)*deferred_barrier=pre_barrier;
     else ffta_integrated_barrier_candidate(actor,target,action,pre_barrier);
     result=ffta_dancer_scaled(result,128000000000ULL,actor,target,action,1);
     return result>999u?999:(int)result;
 }
-int ffta_integrated_exposed_native_stage(int damage,const uint8_t *context) {
+static int physical(int damage,const uint8_t *actor,const uint8_t *target,unsigned action,unsigned *deferred_barrier,unsigned need_barrier) {
+#if FFTA_CHEMIST_PROGRESSION
+    FFTA_UnitReadScope a,t;
+    ffta_unit_read_begin(&a,actor);ffta_unit_read_begin(&t,target);
+#endif
+    int result=physical_calculation(damage,actor,target,action,deferred_barrier,need_barrier);
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_unit_read_end(&t);ffta_unit_read_end(&a);
+#endif
+    return result;
+}
+static int native_stage(int damage,const uint8_t *context) {
     if(!context)return damage;
     if(damage<0)return ffta_integrated_restoration_stage(damage,context);
     unsigned action=half(context+12);
@@ -267,13 +292,30 @@ int ffta_integrated_exposed_native_stage(int damage,const uint8_t *context) {
     const uint8_t *target=*(const uint8_t *const *)(context+8);
     if(damage<=0) { ffta_integrated_barrier_candidate(actor,target,action,0);return damage; }
     unsigned kind=ffta_integrated_direct_kind(context);
-    if(kind==1)return physical(damage,actor,target,action,0);
+    if(kind==1)return physical(damage,actor,target,action,0,ffta_action_phase()==FFTA_ACTION_RESULT);
     if(kind!=2) { ffta_integrated_barrier_candidate(actor,target,action,0);return damage; }
+    if(action<347 && ffta_action_neutral_query(actor,target))return damage;
     uint64_t product=(uint64_t)(unsigned)damage*ffta_poise_hp_factor(actor,target,action)*
         ffta_drk_outgoing_numerator(actor,target,action,0)*ffta_integrated_incoming_numerator(actor,target,action,0)*
         ffta_viking_outgoing_numerator(actor,target,action)*ffta_bard_outgoing(actor,target,action,0)*ffta_turn_damage_numerator(actor,target,action,0);
-    ffta_integrated_barrier_candidate(actor,target,action,(unsigned)ffta_dancer_scaled(product*2u,1280000000ULL,actor,target,action,0));
+    /* Outside RESULT both barrier_candidate and the scaler's CP candidate
+     * publication are no-ops. The actual damage calculation still runs. */
+    if(ffta_action_phase()==FFTA_ACTION_RESULT)
+        ffta_integrated_barrier_candidate(actor,target,action,(unsigned)ffta_dancer_scaled(product*2u,1280000000ULL,actor,target,action,0));
     return (int)ffta_dancer_scaled(product,1280000000ULL,actor,target,action,0);
+}
+int ffta_integrated_exposed_native_stage(int damage,const uint8_t *context) {
+    if(!context)return damage;
+#if FFTA_CHEMIST_PROGRESSION
+    FFTA_UnitReadScope a,t;
+    ffta_unit_read_begin(&a,*(const uint8_t *const *)context);
+    ffta_unit_read_begin(&t,*(const uint8_t *const *)(context+8));
+#endif
+    int result=native_stage(damage,context);
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_unit_read_end(&t);ffta_unit_read_end(&a);
+#endif
+    return result;
 }
 extern int ffta_integrated_original_exposed_preview(const uint8_t *,const uint8_t *,unsigned,unsigned,unsigned,unsigned);
 /* Effect forecasts own two evaluated units. Borrow an existing authenticated
@@ -297,7 +339,7 @@ static int bank_preview(const uint8_t *actor,const uint8_t *target,unsigned acti
          * A native cap can make this conservative, which is safe for a warning. */
         if(minimum && damage>0)damage-=damage/10;
         unsigned ignored_barrier=0;
-        if(!action)damage=physical(damage,actor,target,0,&ignored_barrier);
+        if(!action)damage=physical(damage,actor,target,0,&ignored_barrier,0);
         if(opened)ffta_snapshot_end(snapshot);
         else for(unsigned j=0;j<sizeof(*snapshot);j++)((uint8_t *)snapshot)[j]=0;
         bank[i].token=0;return damage;
@@ -319,6 +361,9 @@ int ffta_integrated_exposed_preview(const uint8_t *actor,const uint8_t *target,u
      * 820-byte local snapshot left no room for the native audio interrupt and
      * overwrote resident renderer code. Use the same eight owned bank slots
      * as other forecasts, retaining this path's deferred barrier publication. */
+    /* Capture the enclosing consumer before opening the child QUERY. Only
+     * a real Fight RESULT can consume the deferred amount after it closes. */
+    unsigned need_barrier=ffta_action_phase()==FFTA_ACTION_RESULT && ffta_action_id()==0;
     typedef struct { uintptr_t *token;FFTA_ActionSnapshot frame; } Storage;
     _Static_assert(sizeof(Storage)==824,"Result forecast bank stride");
     extern unsigned ffta_additional_workspace_prepare(void);
@@ -331,7 +376,7 @@ int ffta_integrated_exposed_preview(const uint8_t *actor,const uint8_t *target,u
         int damage=ffta_integrated_original_exposed_preview(actor,target,action,item,index,mode);
         if(action && mode==2)damage=ffta_myk_shell_preview(damage,actor,target,action,item,index,mode,0);
         unsigned pre_barrier=0;
-        if((uint16_t)action==0)damage=physical(damage,actor,target,(uint16_t)action,&pre_barrier);
+        if((uint16_t)action==0)damage=physical(damage,actor,target,(uint16_t)action,&pre_barrier,need_barrier);
         if(opened)ffta_snapshot_end(snapshot);
         bank[i].token=0;
         /* Publish only to the enclosing real result after retiring the query. */
@@ -373,6 +418,19 @@ unsigned ffta_integrated_status_next_key(const uint8_t *u,unsigned previous) {
     /* Every status list includes native keys1..24. Below that boundary no
      * status lookup can affect the next key. Preserve native signed wrap. */
     if((int8_t)next<=24)return next;
+#if FFTA_CHEMIST_PROGRESSION
+    /* Every custom icon above27 needs a stored effect/charge. An empty
+     * owned record proves the whole extension empty in one read; movement
+     * bookkeeping (12..14) never creates an icon. Keep Exposed/Wound's native
+     * tail and exact wrap rule. Nonempty records use the complete providers. */
+    const uint8_t *record=ffta_job_state((uint8_t *)u);
+    if(record) {
+        unsigned bits=0;
+        for(unsigned i=0;i<12;i++)bits|=record[i];
+        for(unsigned i=15;i<FFTA_JOB_RECORD_BYTES;i++)bits|=record[i];
+        if(!bits)return ffta_wound_status_next_key(u,previous);
+    }
+#endif
     unsigned sequence=ffta_myk_sequence(u),blade=ffta_myk_enchantment(u);
     unsigned limit=sequence==2?55:sequence==1?54:blade?42+blade:42;
 #if FFTA_CHEMIST_PROGRESSION

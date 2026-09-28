@@ -60,7 +60,7 @@ try:
   check('cold-equipped-teaching-items',after[u+0x2a:u+0x34],before[u+0x2a:u+0x34])
  check('cold-inventory',after[0x1940:0x1e70],before[0x1940:0x1e70])
  check('cold-transient-route-empty',after[0x3f000:0x3f008],bytes(8))
- check('cold-action-roots-empty',after[0x3ff74:0x3ff88],bytes(20))
+ check('cold-action-roots-empty',after[0x3ff74:0x3ff8c],bytes(24))
  report=dict(passed=True,romSha1=meta['romSha1'],checks=dict(checks),inputs=inputs,actors=observed,
   saveSha1=hashlib.sha1(saved).hexdigest())
 except BaseException as error:

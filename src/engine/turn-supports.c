@@ -100,11 +100,13 @@ unsigned ffta_turn_damage_numerator(const uint8_t *a,const uint8_t *t,unsigned a
 #if FFTA_CHEMIST_PROGRESSION
  if(action==463)return 20; /* Fuse is delayed, outside the caster's turn. */
 #endif
+ unsigned numerator=factor(a,physical);
+ if(numerator==20)return 20; /* No HP modifier, regardless of interception. */
  unsigned f=ffta_action_unit_flags_masked(t,24u);
  if((f&24u)==24u)return 20;
  if(!(f&8u) && a!=t && action!=265 && ((unsigned (*)(const uint8_t *))0x0812e6a5u)(t)==13 &&
     ((unsigned (*)(const uint8_t *,unsigned))0x080c7ea5u)(t,0x15) &&
     (!action || !((unsigned (*)(unsigned,unsigned))0x080ccd51u)(action,17)))return 20;
- return factor(a,physical);
+ return numerator;
 }
 unsigned ffta_turn_healing_numerator(const uint8_t *a){return factor(a,0);}

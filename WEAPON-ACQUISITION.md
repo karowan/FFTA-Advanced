@@ -1,5 +1,11 @@
 # Teaching weapons and acquisition
 
+**Current shop update:** [September 28 progression and pricing](notes/shop-progression-2026-09-28.md)
+supersedes the story-only S1/S2 gates and base prices below. Those shipments
+also unlock at the native 10/20-battle upgrades. S3 remains Desert Patrol only.
+The historical tables remain build inputs; the final shop stage applies the
+documented price floors to all 95 teachers, including Physician/Sapper.
+
 Design 0.7, equipment plan revision 1 — September 14, 2026. **Every one of the 129 adopted abilities has a named teaching weapon and a repeatable acquisition route.** This ledger covers all 85 new weapons, including their support, reaction and combo lessons. It preserves current names, AP and base prices. Weapon Attack was revised on September 24, 2026: each shipment now matches the original shop weapons of the same family available at about that time ([revision script](notes/revise-weapon-attack-2026-09-24.mjs), [checkpoint](notes/equipment-revision-2026-09-24.md)). No weapon was weakened. The placements are our mod design, not claims about items already present in vanilla or an applied patch.
 
 ## Where and when

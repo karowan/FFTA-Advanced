@@ -1,0 +1,259 @@
+{
+  "schema": 1,
+  "seeds": [
+    0,
+    5,
+    18
+  ],
+  "scope": "First-decision evaluations on native Giza terrain. Desired tactical outcomes, not exact action scripts or campaign acceptance.",
+  "cases": [
+    {
+      "id": "melee-finish",
+      "actor": 656,
+      "category": "targeting",
+      "purpose": "Finish the adjacent 1-HP opponent with a free basic attack.",
+      "units": {
+        "128": {
+          "hp": 1
+        }
+      },
+      "expect": {
+        "actions": [
+          0
+        ],
+        "target": 128
+      },
+      "onlyLivingOpponent": 128
+    },
+    {
+      "id": "caster-use-effective-damage",
+      "actor": 392,
+      "category": "offense",
+      "purpose": "Use elemental magic when magical attack greatly exceeds weapon attack and enemies are healthy.",
+      "actorStats": [
+        20,
+        100,
+        250,
+        100
+      ],
+      "expect": {
+        "actions": [
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      },
+      "units": {}
+    },
+    {
+      "id": "caster-free-finish",
+      "actor": 392,
+      "category": "resources",
+      "purpose": "Conserve MP when the adjacent opponent has only 1 HP.",
+      "units": {
+        "128": {
+          "hp": 1
+        }
+      },
+      "expect": {
+        "actions": [
+          0
+        ],
+        "target": 128
+      },
+      "onlyLivingOpponent": 128
+    },
+    {
+      "id": "caster-no-mp",
+      "actor": 392,
+      "category": "legality",
+      "purpose": "Still choose a useful attack without casting an unaffordable spell.",
+      "units": {
+        "actor": {
+          "mp": 0
+        }
+      },
+      "expect": {
+        "actions": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "caster-silenced",
+      "actor": 392,
+      "category": "legality",
+      "purpose": "Use a legal fallback while silenced.",
+      "units": {
+        "actor": {
+          "statusBits": [
+            27
+          ]
+        }
+      },
+      "expect": {
+        "actions": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "healer-critical-ally",
+      "actor": 1184,
+      "category": "healing",
+      "purpose": "Heal the nearby allied White Monk at 5/500 HP instead of attacking or buffing.",
+      "units": {
+        "12492": {
+          "hp": 5
+        }
+      },
+      "expect": {
+        "actions": [
+          1,
+          2,
+          3
+        ],
+        "cover": 12492
+      },
+      "beneficiaryTemplate": 920
+    },
+    {
+      "id": "healer-revive",
+      "actor": 1184,
+      "category": "revival",
+      "purpose": "Revive the nearby KO ally while all living allies are healthy.",
+      "units": {
+        "12492": {
+          "hp": 0
+        }
+      },
+      "expect": {
+        "actions": [
+          5,
+          6
+        ],
+        "cover": 12492
+      },
+      "beneficiaryTemplate": 920
+    },
+    {
+      "id": "healer-cleanse-caster",
+      "actor": 1184,
+      "category": "support",
+      "purpose": "Restore a healthy allied Black Mage's ability to cast by curing Silence.",
+      "units": {
+        "12492": {
+          "statusBits": [
+            27
+          ]
+        }
+      },
+      "expect": {
+        "actions": [
+          4
+        ],
+        "cover": 12492
+      },
+      "beneficiaryTemplate": 392
+    },
+    {
+      "id": "healer-no-overheal",
+      "actor": 1184,
+      "category": "resources",
+      "purpose": "Do not spend a turn on ordinary HP healing when every unit has full HP.",
+      "units": {
+        "12492": {}
+      },
+      "expect": {
+        "excludeActions": [
+          1,
+          2,
+          3
+        ]
+      },
+      "beneficiaryTemplate": 920
+    },
+    {
+      "id": "healer-no-redundant-ward",
+      "actor": 1184,
+      "category": "support",
+      "purpose": "Do not reapply Protect or Shell when all living allies already have both effects.",
+      "units": {
+        "12492": {
+          "statusBits": [
+            24,
+            25
+          ]
+        },
+        "actor": {
+          "statusBits": [
+            24,
+            25
+          ]
+        },
+        "12756": {
+          "statusBits": [
+            24,
+            25
+          ]
+        },
+        "13020": {
+          "statusBits": [
+            24,
+            25
+          ]
+        },
+        "13284": {
+          "statusBits": [
+            24,
+            25
+          ]
+        }
+      },
+      "expect": {
+        "excludeActions": [
+          8,
+          9
+        ]
+      },
+      "beneficiaryTemplate": 920
+    },
+    {
+      "id": "archer-spacing",
+      "actor": 1448,
+      "category": "positioning",
+      "purpose": "End outside adjacency to living opponents; a useful self-buff is also acceptable.",
+      "expect": {
+        "minimumEnemyDistance": 2
+      },
+      "units": {}
+    },
+    {
+      "id": "caster-fragile-ally",
+      "actor": 392,
+      "category": "area-safety",
+      "purpose": "Choose an attack that does not include the nearby 1-HP ally in its elemental blast.",
+      "actorStats": [
+        20,
+        100,
+        250,
+        100
+      ],
+      "units": {
+        "12492": {
+          "hp": 1
+        }
+      },
+      "expect": {
+        "avoidElementalArea": 12492
+      },
+      "beneficiaryTemplate": 920
+    }
+  ]
+}

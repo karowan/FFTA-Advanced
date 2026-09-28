@@ -7,6 +7,9 @@ unsigned ffta_viking_outgoing_numerator(const uint8_t *actor,const uint8_t *targ
     (void)action;
     if(!actor || !target || ffta_action_origin()==FFTA_ACTION_NATIVE_REACTION)return 1000;
     unsigned a=ffta_action_unit_flags_masked(actor,0x180u|FFTA_ACTION_FLAG_OPPORTUNIST|FFTA_VIK_CHALLENGER_MASK),t=ffta_action_unit_flags_masked(target,24u);
+    /* With neither effect there is no multiplier for interception to suppress.
+     * Challenger belongs to the unit state, not necessarily its current job. */
+    if(!(a&(FFTA_ACTION_FLAG_OPPORTUNIST|FFTA_VIK_CHALLENGER_MASK)))return 1000;
     /* Damage to MP is a resource interception, not direct HP damage. Known
      * native selection is authoritative. Prediction uses the same positive-HP
      * admission subset as Poise, without recursively evaluating magnitude. */

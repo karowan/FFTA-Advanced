@@ -202,7 +202,9 @@ try:
     hits+=1;check('Duck-area-only',reduced>base,action==454)
    else:check('Duck-miss',reduced,base)
   check('Duck-nonvacuous-'+str(action),hits>0,True)
- for action in (453,454,459):
+ # Original Fight and Fire exercise the shared physical/magical finalizers;
+ # new commands alone do not cover deferred native Fight barrier publication.
+ for action in (0,23,453,454,459):
   hits=0
   for seed in range(8):
    case=('native-damage-recovery',action,seed)
@@ -222,6 +224,26 @@ try:
    check('Dressing-queued-native-healing',healed,min(500,base+100))
    check('Dressing-turn-lock',state&64,64)
   check('native-charge-positive-hit-'+str(action),hits>0,True)
+ # Dark Knight's barrier has a separate ledger from Trauma Ward. Its real
+ # consumption must survive removing discarded ledger calculations in AI.
+ # This unchanged helper remains at its authenticated inherited entry, rather
+ # than being exported by the new overlay. Its job-state call is redirected.
+ tbn_entry=integrated['symbols']['ffta_drk_grant_tbn']
+ tbn_offset=(tbn_entry&~1)-0x08000000
+ assert rom[tbn_offset:tbn_offset+32]==Path(integrated['path']).read_bytes()[tbn_offset:tbn_offset+32]
+ def tbn():check('TBN-native-grant',m.call(tbn_entry,TARGET,OTHER,stack=STACK),1)
+ for action in (0,23,453):
+  hits=0
+  for seed in range(8):
+   case=('native-TBN-ledger',action,seed)
+   base,_=execute_damage(action,seed)
+   reduced,_=execute_damage(action,seed,setup=tbn)
+   if base<200:
+    hits+=1
+    check('TBN-reduces-native-hit',reduced>base,True)
+    check('TBN-consumed-by-real-hit',m.read(record(TARGET)+2,1),b'\x00')
+   else:check('TBN-miss-retains-barrier',m.read(record(TARGET)+2,1),b'\x01')
+  check('TBN-nonvacuous-'+str(action),hits>0,True)
  for action in (453,459):
   case=('immune-Ward',action);remaining,state=execute_damage(action,ward=True,immune=True)
   check('immunity-no-HP-loss',remaining,200);check('immunity-preserves-Ward',state&56,16)

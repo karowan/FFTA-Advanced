@@ -1,4 +1,5 @@
 #include "job-state.h"
+#include "unit-slot.h"
 _Static_assert(FFTA_JOB_UNIT_COUNT==36u && FFTA_JOB_RECORD_BYTES==(FFTA_CHEMIST_PROGRESSION?27u:22u),
                "Authenticated canonical cohort layout");
 
@@ -7,9 +8,9 @@ _Static_assert(FFTA_JOB_UNIT_COUNT==36u && FFTA_JOB_RECORD_BYTES==(FFTA_CHEMIST_
  * The installer authenticates the canonical record/peer accessor contract. */
 unsigned ffta_geo_field_canonical(const uint8_t *u) {
     uintptr_t d=(uintptr_t)u-0x02000080u;
-    if(d<24u*264u && d%264u==0)return 1;
+    if(ffta_unit_slot(d,24)>=0)return 1;
     d=(uintptr_t)u-0x02002fc4u;
-    return d<12u*264u && d%264u==0;
+    return ffta_unit_slot(d,12)>=0;
 }
 static unsigned tile(int x,int y) {
     return x>=0 && x<16 && y>=0 && y<16 &&

@@ -2,6 +2,8 @@
 #include "battle-state.h"
 #include "blade-wound.h"
 #include "job-state.h"
+#include "expansion-memory.h"
+#include "aligned-memory.h"
 
 #define EVALUATED_MAGIC 0x31564546u
 static unsigned half(const uint8_t *p) { return p[0]|((unsigned)p[1]<<8); }
@@ -45,13 +47,46 @@ static FFTA_EvaluatedUnit *tagged(uint8_t *unit) {
     FFTA_EvaluatedUnit *scope=(FFTA_EvaluatedUnit *)unit;
     return scope->magic==EVALUATED_MAGIC && scope->self==p ? scope : 0;
 }
+#if FFTA_CHEMIST_PROGRESSION
+#define READ_SCOPE ((FFTA_UnitReadScope *volatile *)FFTA_UNIT_READ_ROOT)
+static unsigned read_scope_valid(const FFTA_UnitReadScope *s) {
+    uintptr_t p=(uintptr_t)s,sp;
+    __asm__ volatile("mov %0, sp":"=r"(sp));
+    return !(p&3u) && p>=sp && p>=0x03000000u &&
+        p<=0x03008000u-sizeof(*s) && s->self==p;
+}
+void ffta_unit_read_invalidate(void) { *READ_SCOPE=0; }
+void ffta_unit_read_begin(FFTA_UnitReadScope *s,const uint8_t *unit) {
+    /* Authenticate first, before publishing this scope. Null results are not
+     * cached: a later registration must always take the ordinary checked path. */
+    uint8_t *exposed=ffta_evaluated_exposed((uint8_t *)unit);
+    s->self=(uintptr_t)s;s->unit=(uint8_t *)unit;s->exposed=exposed;
+    s->previous=read_scope_valid(*READ_SCOPE)?*READ_SCOPE:0;
+    if(exposed)*READ_SCOPE=s;
+}
+void ffta_unit_read_end(FFTA_UnitReadScope *s) {
+    if(*READ_SCOPE==s)*READ_SCOPE=s->previous;
+    s->self=0;
+}
+#endif
 uint8_t *ffta_evaluated_exposed(uint8_t *unit) {
     FFTA_EvaluatedUnit *scope=tagged(unit);
     if (!scope) return 0; /* Common unregistered copies never walk the heap. */
+#if FFTA_CHEMIST_PROGRESSION
+    /* Stack-only dynamic extent, exact unit and tag retained on every read.
+     * Free/copy/reset invalidates the complete chain before storage changes. */
+    FFTA_UnitReadScope *s=*READ_SCOPE;
+    for(unsigned depth=0;depth<8 && read_scope_valid(s);depth++,s=s->previous) {
+        if(s->unit==unit && s->exposed==&scope->exposed)return s->exposed;
+    }
+#endif
     return stack_container((uintptr_t)unit) || heap_container((uintptr_t)unit) ? &scope->exposed : 0;
 }
 unsigned ffta_evaluated_init(FFTA_EvaluatedUnit *scope,const uint8_t *source) {
     if (!scope || !source || !stack_container((uintptr_t)scope)) return 0;
+#if FFTA_CHEMIST_PROGRESSION
+    FFTA_UnitReadScope read;ffta_unit_read_begin(&read,source);
+#endif
     uint8_t *owned=ffta_owned_exposed((uint8_t *)source);
     uint8_t exposed=owned ? *owned : 0;
     uint8_t *wound=ffta_owned_wound((uint8_t *)source);
@@ -61,7 +96,10 @@ unsigned ffta_evaluated_init(FFTA_EvaluatedUnit *scope,const uint8_t *source) {
     unsigned origin=ffta_job_origin(source);
     uint8_t *potion=ffta_job_potion((uint8_t *)source);
     unsigned preference=potion ? *potion : 0;
-    for (unsigned i=0;i<264;++i) scope->unit[i]=source[i];
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_unit_read_end(&read);
+#endif
+    ffta_copy_aligned_or_bytes(scope->unit,source,264);
     scope->exposed=exposed;
     scope->wound[0]=saved_wound[0];scope->wound[1]=saved_wound[1];scope->reserved=0;
     scope->self=(uintptr_t)scope;scope->magic=EVALUATED_MAGIC;
@@ -71,6 +109,9 @@ unsigned ffta_evaluated_init(FFTA_EvaluatedUnit *scope,const uint8_t *source) {
     return 1;
 }
 void ffta_evaluated_close(FFTA_EvaluatedUnit *scope) {
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_unit_read_invalidate();
+#endif
     if (!tagged((uint8_t *)scope)) return;
     scope->magic=0;scope->self=0;scope->exposed=0;
     scope->wound[0]=0;scope->wound[1]=0;scope->reserved=0;
@@ -78,6 +119,9 @@ void ffta_evaluated_close(FFTA_EvaluatedUnit *scope) {
     scope->origin=scope->potion=scope->job_reserved[0]=scope->job_reserved[1]=0;
 }
 void *ffta_evaluated_allocate(unsigned requested) {
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_unit_read_invalidate();
+#endif
     unsigned size=requested==264 ? sizeof(FFTA_EvaluatedUnit) : requested;
     FFTA_EvaluatedUnit *scope=((void *(*)(unsigned))0x08022841u)(size);
     if (!scope || requested!=264) return scope;

@@ -6,6 +6,7 @@
 #include "blade-wound.h"
 #include "job-state.h"
 #include "unit-slot.h"
+#include <stddef.h>
 
 /* These tails belong to enlarged native allocations, not to guessed character
  * identities. The small root lives beyond the inventory compatibility view. */
@@ -34,6 +35,9 @@ static Owners *owners(int initialize) {
     return r;
 }
 void ffta_copy_owners_reset(void) {
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_unit_read_invalidate();
+#endif
     OWNERS->magic=0;OWNERS->snapshots=0;OWNERS->manager=0;OWNERS->selection=0;OWNERS->party=0;
 }
 static Extra *copy_extra(uint8_t *unit) {
@@ -84,7 +88,59 @@ uint8_t *ffta_owned_exposed(uint8_t *unit) {
     Extra *e=copy_extra(unit);
     return e ? &e->exposed : 0;
 }
-void ffta_on_unit_copy(uint8_t *destination,uint8_t *source,unsigned length) {
+#if FFTA_CHEMIST_PROGRESSION
+typedef struct {
+    uint8_t *job,*exposed,*wound,*ap,*potion,*origin_address;
+    unsigned origin;
+} CopyView;
+/* A successful ffta_job_state call has already authenticated the exact owner
+ * and the storage/bank signatures. Derive its sibling fields synchronously:
+ * there is no allocation, native call or persistent pointer cache in this
+ * operation. Canonical records and the two copied layouts stay distinct. */
+static CopyView copy_view(uint8_t *unit,uint8_t *job) {
+    CopyView v={job,0,0,0,0,0,0};
+    int slot=ffta_unit_slot((uintptr_t)unit-0x02000080u,24);
+    if(slot>=0) {
+        v.origin=1u+(unsigned)slot;
+        v.ap=(uint8_t *)0x02001b40u+34u*(unsigned)slot;
+        v.potion=(uint8_t *)0x02001e80u+(unsigned)slot;
+    } else {
+        slot=ffta_unit_slot((uintptr_t)unit-0x02002fc4u,12);
+        if(slot>=0) {slot+=24;v.origin=1u+(unsigned)slot;}
+    }
+    if(slot>=0) {
+        v.exposed=(uint8_t *)0x02000000u+FFTA_EXPOSED_OFFSET+(unsigned)slot;
+        v.wound=(uint8_t *)0x02000000u+FFTA_WOUND_OFFSET+2u*(unsigned)slot;
+    } else if(job==unit+offsetof(FFTA_EvaluatedUnit,job)) {
+        FFTA_EvaluatedUnit *e=(FFTA_EvaluatedUnit *)unit;
+        v.exposed=&e->exposed;v.wound=e->wound;v.potion=&e->potion;
+        v.origin_address=&e->origin;v.origin=e->origin;
+    } else {
+        Extra *e=(Extra *)(job - offsetof(Extra,job));
+        v.exposed=&e->exposed;v.wound=e->wound;v.ap=e->ap;v.potion=&e->potion;
+        v.origin_address=&e->origin;v.origin=e->origin;
+    }
+    return v;
+}
+static unsigned copy_complete_state(uint8_t *destination,uint8_t *source) {
+    uint8_t *from=ffta_job_state(source),*to=ffta_job_state(destination);
+    if(!from || !to)return 0; /* Unknown sources must still clear known targets. */
+    CopyView s=copy_view(source,from),d=copy_view(destination,to);
+    /* Capture all values before writing, including self-copy and aliasing. */
+    Extra saved;
+    for(unsigned i=0;i<FFTA_JOB_RECORD_BYTES;i++)saved.job[i]=s.job[i];
+    saved.exposed=*s.exposed;saved.wound[0]=s.wound[0];saved.wound[1]=s.wound[1];
+    saved.potion=s.potion?*s.potion:0;saved.origin=(uint8_t)s.origin;
+    if(d.ap)for(unsigned i=0;i<34;i++)saved.ap[i]=s.ap?s.ap[i]:0;
+    for(unsigned i=0;i<FFTA_JOB_RECORD_BYTES;i++)d.job[i]=saved.job[i];
+    *d.exposed=saved.exposed;d.wound[0]=saved.wound[0];d.wound[1]=saved.wound[1];
+    if(d.origin_address)*d.origin_address=saved.origin;
+    if(d.potion)*d.potion=saved.potion;
+    if(d.ap)for(unsigned i=0;i<34;i++)d.ap[i]=saved.ap[i];
+    return 1;
+}
+#endif
+static void copy_unit_state(uint8_t *destination,uint8_t *source,unsigned length) {
     if (length!=264 || ffta_storage_format((uint8_t *)0x02000000u)!=1) return;
     uint8_t job[FFTA_JOB_RECORD_BYTES],*job_from=ffta_job_state(source);
     unsigned origin=ffta_job_origin(source);
@@ -117,6 +173,23 @@ void ffta_on_unit_copy(uint8_t *destination,uint8_t *source,unsigned length) {
     saved.potion=(uint8_t)potion;
     for (unsigned i=0;i<34;++i) to[i]=saved.ap[i];
     *potion_address(destination)=saved.potion;
+}
+void ffta_on_unit_copy(uint8_t *destination,uint8_t *source,unsigned length) {
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_unit_read_invalidate();
+    /* The native transfer hook also handles arbitrary non-unit buffers. They
+     * cannot acquire unit state; reject before authenticating either address. */
+    if(length!=264 || ffta_storage_format((uint8_t *)0x02000000u)!=1)return;
+    if(copy_complete_state(destination,source))return;
+    FFTA_UnitReadScope from,to;
+    ffta_unit_read_begin(&from,source);ffta_unit_read_begin(&to,destination);
+#endif
+    /* Writes affect values in already-owned records, never their container
+     * identity or allocation. No native allocator is called by this body. */
+    copy_unit_state(destination,source,length);
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_unit_read_end(&to);ffta_unit_read_end(&from);
+#endif
 }
 void ffta_clear_copy_extra(uint8_t *unit) {
     uint8_t *evaluated=ffta_evaluated_exposed(unit);
@@ -167,6 +240,9 @@ void ffta_party_copy_register(void) {
     for (unsigned i=0;i<sizeof(Extra);++i) party[0x7240+i]=0;
 }
 void ffta_copy_owner_free(void *allocation) {
+#if FFTA_CHEMIST_PROGRESSION
+    ffta_unit_read_invalidate();
+#endif
     ffta_evaluated_retire_heap(allocation);
     Owners *r=owners(0);
     if (!r) return;
@@ -254,7 +330,7 @@ unsigned ffta_copied_job_peers(uint8_t *unit,uint8_t **output,unsigned capacity)
     for(unsigned n=0;s && n<64;n++) {
         if(!in_ram(s,sizeof(*s)) || s->magic!=NODE_MAGIC)return 0;
         uintptr_t delta=(uintptr_t)unit-(uintptr_t)(s->native+4);
-        if(delta<13*264 && delta%264==0) {
+        if(ffta_unit_slot(delta,13)>=0) {
             if(capacity<13)return 0;
             for(unsigned i=0;i<13;i++)output[i]=s->native+4+i*264;
             return 13;
@@ -263,3 +339,29 @@ unsigned ffta_copied_job_peers(uint8_t *unit,uint8_t **output,unsigned capacity)
     }
     return 0;
 }
+#if FFTA_CHEMIST_PROGRESSION
+unsigned ffta_job_copied_cohort(uint8_t *unit,FFTA_JobCohort *view) {
+    if(!view || !ffta_job_state(unit))return 0;
+    uint8_t *evaluated=ffta_evaluated_job(unit);
+    if(evaluated){*view=(FFTA_JobCohort){unit,evaluated,1,0};return 1;}
+    Extra *own=copy_extra(unit);Owners *r=owners(0);
+    if(!own || !r)return 0;
+    if(r->manager && r->manager==*(uint8_t **)0x0200f4b0u &&
+       (unit==r->manager+0x40 || unit==r->manager+0x148)) {
+        *view=(FFTA_JobCohort){r->manager+0x40,((Extra *)(r->manager+0x3b4))->job,2,sizeof(Extra)};
+        return 1;
+    }
+    if((r->selection && r->selection==*(uint8_t **)0x0200f454u && unit==r->selection+0xa4c) ||
+       (r->party && r->party==*(uint8_t **)0x03002818u && unit==r->party+0x1be4)) {
+        *view=(FFTA_JobCohort){unit,own->job,1,0};return 1;
+    }
+    Snapshot *s=r->snapshots;
+    for(unsigned n=0;s && n<64;n++,s=s->next) {
+        if(!in_ram(s,sizeof(*s)) || s->magic!=NODE_MAGIC)return 0;
+        if(ffta_unit_slot((uintptr_t)unit-(uintptr_t)(s->native+4),13)>=0) {
+            *view=(FFTA_JobCohort){s->native+4,s->units[0].job,13,sizeof(Extra)};return 1;
+        }
+    }
+    return 0;
+}
+#endif

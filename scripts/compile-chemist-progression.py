@@ -58,6 +58,22 @@ def main():
  shutil.copyfile(Path(menu['header']['path']),OUT/'job-icons.h')
  combat=(work/'combat.c').read_text().replace('item>460','item>470')
  combat='#include "chemist-progression.h"\n'+combat
+ # The complete composed table contains expansion actions only. Keep an
+ # explicit compile-time assertion for every row, rather than assuming a
+ # numeric range if a future builder adds an original action to that table.
+ definition='static const PhysicalDefinition *physical_definition(unsigned action) {\n'
+ assert combat.count(definition)==1
+ table_text=combat.split('static const PhysicalDefinition physical_definitions[]={',1)[1].split('};',1)[0]
+ ids=re.findall(r'\{\s*([A-Za-z_0-9]+)\s*,',table_text)
+ assert ids
+ assertions=''.join(f'_Static_assert(({id})>=347,"expansion-only physical lookup");\n' for id in ids)
+ combat=combat.replace(definition,assertions+definition+'    if(action<347)return 0;\n')
+ # The composed custom-physical finalizer has the same discarded forecast
+ # ledger as integrated-jobs.c. Gate only that second calculation. Actual
+ # RESULT publication and the ordinary, once-rounded damage stay unchanged.
+ barrier='    ffta_integrated_barrier_candidate(actor,target,action,\n'
+ assert combat.count(barrier)==1,'Custom physical barrier call changed'
+ combat=combat.replace(barrier,'    if(ffta_action_phase()==FFTA_ACTION_RESULT)\n'+barrier)
  combat=combat.replace('if(ffta_myk_action(action))return ffta_myk_magnitude(context);','if(action>=453 && action<=459)return ffta_cp_magnitude(context);\n    if(ffta_myk_action(action))return ffta_myk_magnitude(context);')
  (OUT/'combat.c').write_text(combat)
  # Preserve the native badge decoder behind the already-installed hook.
@@ -83,29 +99,35 @@ def main():
  (OUT/'cp-choice-transport.s').write_text('.equ FFTA_CHEMIST_PROGRESSION,1\n'+(ROOT/'src/engine/dancer-choice.s').read_text().split('.global ffta_dancer_preview_choice_entry')[0])
  sources=[ROOT/'src/engine'/f'{s}.c' for s in SOURCES]+[ROOT/'src/engine/chemist-controller.s']+[OUT/n for n in ('combat.c','applications.c','cp-callbacks.s','cp-choice-transport.s')]
  objects=[];exports=[];failures=[]
+ # These measured forecast/ownership hot paths prefer speed over code size.
+ # The fixed ROM reservation and stack-usage receipts still bound the output;
+ # native ABI, ownership predicates and allocation layouts are unchanged.
+ speed_sources={'action-snapshot','battle-workspace','evaluated-units','unit-copies','job-state','persistent',
+  'geomancer-fields','geomancer-field-fast','geomancer','integrated-jobs','dancer','chemist-progression','combat'}
  for source in sources:
-  obj=OUT/(source.stem+'.o');cmd=[prefix+'gcc.exe',*flags,'-c',str(source),'-o',str(obj)]
-  run=subprocess.run(cmd,capture_output=True,text=True);(OUT/(source.stem+'.log')).write_text(run.stdout+run.stderr)
+  obj=OUT/(source.stem+'.o');cmd=[prefix+'gcc.exe',*flags,*(['-O3','-funroll-loops'] if source.stem in speed_sources else []),*(['-flto'] if source.suffix=='.c' else []),'-c',str(source),'-o',str(obj)]
+  run=subprocess.run(cmd,cwd=OUT,capture_output=True,text=True);(OUT/(source.stem+'.log')).write_text(run.stdout+run.stderr)
   if run.returncode:failures.append(dict(source=str(source),errors=run.stderr));continue
   objects.append(obj)
-  exports.extend(p[2] for line in subprocess.check_output([prefix+'nm.exe',str(obj)],text=True).splitlines() if len(p:=line.split())==3 and p[1]=='T')
+  exports.extend(p[2] for line in subprocess.check_output([prefix+'gcc-nm.exe',str(obj)],text=True).splitlines() if len(p:=line.split())==3 and p[1]=='T')
  assert not failures,json.dumps(failures,indent=2)
+ assert len(exports)>=500,'Incomplete native export inventory; LTO objects require gcc-nm'
  # Weak extension callbacks are still real integration dependencies when the
  # installed engine supplies them. The linker silently resolves an omitted
  # weak reference to zero, disabling snapshots/reactions without an error.
  # Authenticate and import these explicitly before resolving strong imports.
  weak=set()
  for obj in objects:
-  for line in subprocess.check_output([prefix+'nm.exe','-u',str(obj)],text=True).splitlines():
+  for line in subprocess.check_output([prefix+'gcc-nm.exe','-u',str(obj)],text=True).splitlines():
    p=line.split()
    if len(p)==2 and p[0]=='w' and p[1] in symbols and p[1] not in exports:weak.add(p[1])
  helpers=OUT/'imports.s';needed=sorted(weak);elf=OUT/'jobs.elf';binary=OUT/'jobs.bin'
  for attempt in range(4):
   helpers.write_text('.syntax unified\n.cpu arm7tdmi\n.thumb\n.text\n'+''.join(
    f'.align 2\n.global {n}\n.thumb_func\n{n}:\n push {{r3}}\n ldr r3,={hex(symbols[n]|1)}\n mov ip,r3\n pop {{r3}}\n bx ip\n.ltorg\n' for n in needed))
-  cmd=[prefix+'gcc.exe',*flags,'-nostdlib','-Wl,--gc-sections,-Ttext=0x09a50000,-e,ffta_cp_apply',
-    *[f'-Wl,-u,{n}' for n in exports],*map(str,objects),str(helpers),'-lgcc','-o',str(elf)]
-  run=subprocess.run(cmd,capture_output=True,text=True);(OUT/'link.log').write_text(run.stdout+run.stderr)
+  cmd=[prefix+'gcc.exe',*flags,'-O3','-funroll-loops','-flto','-save-temps','-nostdlib','-Wl,--gc-sections,-Ttext=0x09a50000,-e,ffta_cp_apply',
+    *[f'-Wl,-u,{n}' for n in exports],*map(str,objects),str(helpers),'-lgcc','-o',elf.name]
+  run=subprocess.run(cmd,cwd=OUT,capture_output=True,text=True);(OUT/'link.log').write_text(run.stdout+run.stderr)
   if not run.returncode:break
   missing=sorted(set(re.findall(r"undefined reference to `([A-Za-z0-9_]+)'",run.stderr))-set(needed))
   assert missing and all(n in symbols for n in missing),dict(unresolved=[n for n in missing if n not in symbols],log=str(OUT/'link.log'))
@@ -122,11 +144,11 @@ def main():
   if len(p)==3 and p[1] in ('T','t'):built[p[2]]=dict(address=int(p[0],16),bytes=0)
  assert len(binary.read_bytes())<=0x40000
  receipt=dict(status='Compiled only; no hooks installed',romSha1=menu['romSha1'],parent=str(menupath),elf=str(elf),binary=str(binary),
-  binarySha256=hashlib.sha256(binary.read_bytes()).hexdigest(),symbols=built,exports=exports,
+  binarySha256=hashlib.sha256(binary.read_bytes()).hexdigest(),symbols=built,exports=exports,speedSources=sorted(speed_sources),linkTimeOptimization=True,speedOptimization="O3 with loop unrolling",
   imports={n:dict(address=symbols[n],installedBytes=rom[(symbols[n]&~1)-0x08000000:(symbols[n]&~1)-0x08000000+16].hex()) for n in needed},
   installedSymbols=symbols,installedEntries={n:sorted(v) for n,v in installed_entries.items()},
   sourceSha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
-  headerSha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'src/engine').glob('*.h'))+sorted(OUT.glob('*.h'))},command=cmd)
+  headerSha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'src/engine').glob('*.h'))+sorted(OUT.glob('*.h'))},command=cmd,workingDirectory=str(OUT))
  (OUT/'manifest.json').write_text(json.dumps(receipt,indent=2)+'\n')
  print(json.dumps(dict(status='compiled',sources=len(sources),exports=len(exports),imports=len(needed),bytes=len(binary.read_bytes()))))
 

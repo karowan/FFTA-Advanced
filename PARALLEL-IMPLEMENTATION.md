@@ -11,6 +11,15 @@ transfer a savestate across ROMs. Match canonical combat inputs, action lists
 and RNG at the planning boundary. Measure emulated planning frames separately
 from camera preparation and attack animations; host wall time is not game latency.
 
+Pin the declared RNG seed once at native candidate-constructor entry
+(`0x080c1eb4`), using `ai_planner_seed.py`. A frame-sampled phase-zero pin can
+straddle the native main-loop RNG advance as hook costs change. Keep the timer
+starting at phase zero, execute every instruction, require exactly one seed
+pin, and verify all vanilla frame counts still match the locked workload.
+The input controller is explicitly mutating; PC/function observers are read-only
+and must reproduce final EWRAM exactly. Retain failed reports. See the
+[fully learned optimization checkpoint](notes/ai-under-four-seconds-2026-09-28.md).
+
 Forecast optimizations must keep action snapshots frozen and temporary-unit
 ownership authenticated. Request only the flags a damage formula consumes;
 check equipped reaction/support eligibility before expensive readiness or
@@ -23,6 +32,36 @@ Finish with `ai-timing-budget` against both completed profiles. It pins the
 workload and allows at most 5% above each reviewed decision; investigate a
 failure instead of automatically raising its budget. This guards the measured
 improvement, not vanilla parity or unmeasured campaign cases.
+
+For deliberate AI behavior changes, start with the
+[tactical evaluation contract](notes/ai-tactical-evaluations.md). Collect desired
+failures separately from hard correctness, preserve every previously passing
+seed/assertion, and retain the faster per-decision timing baseline. Verify native
+faction cohorts before judging support or friendly-fire behavior; changing a
+unit's control flag alone does not move it between battle-manager cohorts.
+Do not promote failing observations into passing baselines or remove the old
+timing gate's choice comparisons to accommodate unexplained differences.
+
+Borrow evaluated-unit ownership only during an audited synchronous scope that
+cannot allocate or free. Authenticate the complete heap chain on entry, retain
+exact unit/tag checks, read values live, and invalidate scopes on copy, free,
+allocation and reset. Never cache heap admission across native calls. A neutral
+forecast shortcut needs a proof over every relevant flag bank, not a class-ID
+assumption; active snapshots must never fall back to live values for missing
+units. Real result and deferred barrier consumers retain full calculation.
+
+When using LTO, inventory object exports and weak imports with `gcc-nm`, retain
+every native export explicitly at link time, and inspect final `ltrans.su` stack
+receipts rather than old per-source output. Keep compiler intermediates in the
+ignored build directory, enforce the ROM reservation, and verify the assembled
+native copy/save/effect consumers. Run both timing profiles before the budget
+gate; `-Only` selects plan order, not the argument order.
+
+Skip consumption-ledger calculations in pure forecasts only when their values
+have no consumer. Capture the enclosing RESULT before opening a child QUERY:
+native Fight can defer publication until that child closes. Verify actual
+barrier consumption on hits and retention on misses, in addition to forecast
+equivalence. See the [post-release timing follow-up](notes/ai-timing-followup-2026-09-28.md).
 
 ## Current release path
 
@@ -94,6 +133,17 @@ tests must explicitly identify their narrower scope. Run the complete new-job
 acceptance gate once at integration, then package through its adapter. See the
 [Physician/Sapper checkpoint](notes/chemist-progression-implementation.md) for
 the exact build order and covered consumers.
+
+For additive shop changes, compare the installed Buy entry with clean-ROM
+ordinary and town stock at the 9/10 and 19/20 battle boundaries and independent
+story flags. Test prices after town/clan discounts and real purchase commits,
+including the highest added item ID. Keep each item's lesson gate separate
+from its weapon strength, and prevent later shipments becoming cheaper when
+raising earlier prices. The [shop update](notes/shop-progression-2026-09-28.md)
+documents the final overlay, bounded compiler, exact parent and targeted plan.
+Apply that price overlay after the historical content builders; regenerating
+the old registry alone restores the old prices. Rebase its authenticated
+parent explicitly when composing a later candidate.
 
 ## Native artwork
 

@@ -82,9 +82,13 @@ Cyril stocks every unlocked new teaching weapon. Shipments are cumulative:
 | Campaign progress | New teaching weapons available in total |
 |---|---:|
 | First normal Cyril shop visit | 20 |
-| Complete Twisted Flow | 47 |
-| Complete Pale Company | 74 |
+| First shop upgrade (10 battles) **or** complete Twisted Flow | 47 |
+| Second shop upgrade (20 battles) **or** complete Pale Company | 74 |
 | Complete Desert Patrol | 95 |
+
+Either condition unlocks its shipment. Later teaching weapons are priced
+against comparable original weapons; opening teaching weapons retain their
+entry prices.
 
 Other towns stock new weapons for these jobs:
 

@@ -11,4 +11,6 @@
 #define FFTA_AI_CHOICE_ROOT (FFTA_CHEMIST_PROGRESSION?0x0203ff7cu:0x0203f728u)
 #define FFTA_MYSTIC_DAMAGE_ROOT (FFTA_CHEMIST_PROGRESSION?0x0203ff80u:0x0203f72cu)
 #define FFTA_FIGHT_ROOT (FFTA_CHEMIST_PROGRESSION?0x0203ff84u:0x0203f730u)
+/* Stack-owned read scopes only; not part of any save or allocation layout. */
+#define FFTA_UNIT_READ_ROOT 0x0203ff88u
 #endif

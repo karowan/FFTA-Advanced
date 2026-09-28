@@ -5,6 +5,7 @@ plan first. Every report must describe the current ROM and original test core;
 partial pilots, changed scenarios, altered choices and per-case slowdowns fail.
 The 5% allowance is frame-based, never adjusted for host execution speed.
 """
+from ai_planner_seed import BOUNDARY
 import copy
 import hashlib
 import json
@@ -23,6 +24,10 @@ def validate(report, profile, spec):
     assert report['status'] == 'completed' and report['error'] is None
     assert report['skillProfile'] == profile and report['seeds'] == budget['seeds']
     assert report['coreSha256'] == budget['coreSha256']
+    assert report.get('seedBoundary') == BOUNDARY, 'Explicit constructor seed required'
+    for row in report['records']:
+        pins=row.get('seedPins',[])
+        assert len(pins)==1 and pins[0]['seed']==row['seed'], 'Exactly one declared seed pin'
     assert report['fps'] == 16777216 / 280896
     rows = {(r['build'], r['label'], r['seed']): r for r in report['records']}
     expected = {(b, j, s) for b in ('vanilla', 'mod') for j in spec['jobs'] for s in budget['seeds']}
@@ -50,12 +55,13 @@ for profile, spec in budget['profiles'].items():
         assert sha(p) == digest, ('Fixture changed', p)
     # Verify that the gate rejects partial, stale, slower and changed-choice
     # evidence without making new game fixtures or touching saved reports.
-    for fault in ('partial', 'rom', 'slow', 'choice'):
+    for fault in ('partial', 'rom', 'slow', 'choice','seed'):
         bad = copy.deepcopy(report)
         row = next(r for r in bad['records'] if r['build'] == 'mod')
         if fault == 'partial': bad['records'].pop()
         elif fault == 'rom': row['romSha1'] = '0' * 40
         elif fault == 'slow': row['decisionFrames'] *= 2
+        elif fault == 'seed':row['seedPins']=[]
         else: row['choice'] ^= 1
         try: validate(bad, profile, spec)
         except AssertionError: rejections += 1

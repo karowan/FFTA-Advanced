@@ -23,19 +23,20 @@ Run [Build Mod Release.ps1](Build%20Mod%20Release.ps1). It reads the build recip
 in [scripts/mod-release.json](scripts/mod-release.json), builds the current
 candidate through its declared deterministic plan, runs that candidate's required
 checks, and packages the accepted result. A failed check stops packaging. The
-current recipe assembles Physician and Sapper from the authenticated v0.7.4 ROM
-and approved art, then runs all eleven new-job acceptance gates. See the
-[reproduction checkpoint](notes/chemist-progression-implementation.md).
+current recipe builds the shop progression update on its authenticated AI
+baseline, runs the three focused stock/menu/learning checks, and authenticates
+the baseline's assembled gameplay and AI timing receipts. See the
+[shop checkpoint](notes/shop-progression-2026-09-28.md).
 
 To package already accepted, unchanged game code without rerunning gameplay:
 
 ```powershell
-& '.\Build Mod Release.ps1' -Run build/expansion/test-runs/20260927T194549.078118Z/report.json
+& '.\Build Mod Release.ps1' -Run build/expansion/test-runs/20260928T050544.713117Z/report.json
 ```
 
 The candidate comes from that exact run's authenticated manifest, not a mutable
-candidate pointer. The Physician/Sapper adapter checks the required gates,
-per-test ROM identity and compiled source/header hashes before packaging.
+candidate pointer. The shop adapter checks the required gates, per-test ROM
+identity, changed bytes, source hashes and accepted parent receipts before packaging.
 Future build pipelines should supply their corresponding acceptance adapter and
 recipe; never remove acceptance to make packaging pass.
 
@@ -88,7 +89,15 @@ states capture old transient state and are not a compatibility guarantee.
 
 ## Verification checkpoint
 
-Current local release: `0.7.7.zip`, game SHA-1
+Current local release: `0.7.8.zip`, game SHA-1
+`e13b1c7afa34fcb608a8360911b0425eb27e46fc`. The three shop checks passed in
+`build/expansion/test-runs/20260928T050544.713117Z/report.json`, with the AI
+parent's assembled and timing receipts authenticated by the packager. The ZIP
+SHA-256 is `98e760a964299d8035655205579e743de969a6c6d72f3e1f04a001bb3b8f0283`.
+The BPS roundtrip, wrong-source rejection, launcher validation and 32 package
+checks passed. Player saves remained unchanged.
+
+Previous local release: `0.7.7.zip`, game SHA-1
 `97e3c99087d206001b968c760270ef46223e10a4`, accepted by all eleven gates in
 `build/expansion/test-runs/20260927T233903.605277Z/report.json`.
 ZIP SHA-256: `d272c175bb3fd2a32d2684568e6b67fddfcfd51fa7e184bffb97551402e6763d`.

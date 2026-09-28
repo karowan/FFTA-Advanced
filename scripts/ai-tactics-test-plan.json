@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "candidateManifest": "build/expansion/chemist-progressions/help/current.json",
+  "description": "Desired tactical behavior is tracked separately from hard native correctness and retained timing baselines.",
+  "scope": "Controlled original-job first decisions on Giza. No player saves or live game are touched. Does not establish execution, campaign or all-job tactical quality.",
+  "timeoutSeconds": 900,
+  "steps": [
+    {"id":"ai-tactics-observe","runtime":"python","kind":"runtime","suites":["ai-tactics-observe"],"args":["scripts/evaluate-ai-tactics.py","--mode","observe"]},
+    {"id":"ai-tactics-strict","runtime":"python","kind":"runtime","suites":["ai-tactics-strict"],"args":["scripts/evaluate-ai-tactics.py","--mode","strict"]},
+    {"id":"ai-tactics-ratchet","runtime":"python","kind":"runtime","suites":["ai-tactics"],"args":["scripts/evaluate-ai-tactics.py","--mode","ratchet"]},
+    {"id":"ai-tactics-contract","runtime":"python","kind":"static","suites":["ai-tactics"],"args":["scripts/test-ai-tactics-contract.py"]},
+    {"id":"ai-tactics-quality-gate","runtime":"python","kind":"static","suites":["ai-tactics-quality"],"args":["scripts/test-ai-tactics-contract.py","--strict"]},
+    {"id":"ai-tactics-retained-timing","runtime":"python","kind":"static","suites":["ai-tactics"],"args":["scripts/test-ai-timing-budget.py"]}
+  ]
+}
