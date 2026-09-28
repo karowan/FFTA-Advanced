@@ -33,6 +33,15 @@ workload and allows at most 5% above each reviewed decision; investigate a
 failure instead of automatically raising its budget. This guards the measured
 improvement, not vanilla parity or unmeasured campaign cases.
 
+For deliberate AI behavior changes, start with the
+[tactical evaluation contract](notes/ai-tactical-evaluations.md). Collect desired
+failures separately from hard correctness, preserve every previously passing
+seed/assertion, and retain the faster per-decision timing baseline. Verify native
+faction cohorts before judging support or friendly-fire behavior; changing a
+unit's control flag alone does not move it between battle-manager cohorts.
+Do not promote failing observations into passing baselines or remove the old
+timing gate's choice comparisons to accommodate unexplained differences.
+
 Borrow evaluated-unit ownership only during an audited synchronous scope that
 cannot allocate or free. Authenticate the complete heap chain on entry, retain
 exact unit/tag checks, read values live, and invalidate scopes on copy, free,

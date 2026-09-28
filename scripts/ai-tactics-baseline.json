@@ -1,0 +1,1136 @@
+{
+  "specSha256": "40509d92ae325440efff9c997502a277024ff7a3c05485159205a4fdd687bd10",
+  "harnessSha256": "bd37a3ab448a6029c535c5f3c4b420dd4567221ca377f3620390799249cfe592",
+  "probeSha256": "ac487e9bf5effc62aa34fbb68645a34ef462c390c57cd9caec9be781ab4ab9d4",
+  "coreSha256": "b7008c1a834fef42c9c2b66594855f63924d419fb33af2863e86b1a032d03560",
+  "seedBoundary": "native-candidate-constructor-v2",
+  "schema": 1,
+  "referenceRomSha1": "7bbd46a45bcaab5482d45cb4d4965bb291045512",
+  "sourceReport": "build/expansion/ai-tactics/20260928T041613.201112Z/report.json",
+  "sourceReportSha256": "7f1aad456f2f00d4f7be486baf594b8796145ffbf030b296a9a118171d341bb4",
+  "scope": "First-decision evaluations on native Giza terrain. Desired tactical outcomes, not exact action scripts or campaign acceptance.",
+  "timing": {
+    "fully learned primary job": {
+      "index": "latest-measurement.json",
+      "sourceReport": "build/expansion/ai-timing/measure-20260928T015516.111824Z/report.json",
+      "sourceReportSha256": "e2b1d50f99bf91a42d0be49f3ef01bada625997f82431167b1c78324dcb7228f",
+      "records": [
+        {
+          "label": "Human Soldier",
+          "seed": 0,
+          "inputSha256": "854b2cc4434424bb4df7d30e2156fb25ed9f6c9ec238c4f0ddc7311c1e1d9396",
+          "frames": 221
+        },
+        {
+          "label": "Human Soldier",
+          "seed": 5,
+          "inputSha256": "854b2cc4434424bb4df7d30e2156fb25ed9f6c9ec238c4f0ddc7311c1e1d9396",
+          "frames": 182
+        },
+        {
+          "label": "Human Soldier",
+          "seed": 18,
+          "inputSha256": "854b2cc4434424bb4df7d30e2156fb25ed9f6c9ec238c4f0ddc7311c1e1d9396",
+          "frames": 205
+        },
+        {
+          "label": "Moogle Black Mage",
+          "seed": 0,
+          "inputSha256": "7a5f26e3088564ef65e47f0750abb2529a6075cd5a362d39ed32923c4ea310ec",
+          "frames": 378
+        },
+        {
+          "label": "Moogle Black Mage",
+          "seed": 5,
+          "inputSha256": "7a5f26e3088564ef65e47f0750abb2529a6075cd5a362d39ed32923c4ea310ec",
+          "frames": 372
+        },
+        {
+          "label": "Moogle Black Mage",
+          "seed": 18,
+          "inputSha256": "7a5f26e3088564ef65e47f0750abb2529a6075cd5a362d39ed32923c4ea310ec",
+          "frames": 370
+        },
+        {
+          "label": "Nu Mou White Mage",
+          "seed": 0,
+          "inputSha256": "01a5239c572d35db6d3d1247a54616e223f6702346b17d1e9e9938534b757286",
+          "frames": 174
+        },
+        {
+          "label": "Nu Mou White Mage",
+          "seed": 5,
+          "inputSha256": "01a5239c572d35db6d3d1247a54616e223f6702346b17d1e9e9938534b757286",
+          "frames": 247
+        },
+        {
+          "label": "Nu Mou White Mage",
+          "seed": 18,
+          "inputSha256": "01a5239c572d35db6d3d1247a54616e223f6702346b17d1e9e9938534b757286",
+          "frames": 210
+        },
+        {
+          "label": "Viera Archer",
+          "seed": 0,
+          "inputSha256": "795a16115db964491baa4d2c4ae0085c95046d0cd965514a918867ca1e1adbd3",
+          "frames": 183
+        },
+        {
+          "label": "Viera Archer",
+          "seed": 5,
+          "inputSha256": "795a16115db964491baa4d2c4ae0085c95046d0cd965514a918867ca1e1adbd3",
+          "frames": 205
+        },
+        {
+          "label": "Viera Archer",
+          "seed": 18,
+          "inputSha256": "795a16115db964491baa4d2c4ae0085c95046d0cd965514a918867ca1e1adbd3",
+          "frames": 254
+        }
+      ]
+    },
+    "original starting mastery": {
+      "index": "latest-starting.json",
+      "sourceReport": "build/expansion/ai-timing/measure-20260928T020536.433351Z/report.json",
+      "sourceReportSha256": "2a66b5811bd48af07379a326766b2140a1ee0129881de9f414a41bb1f1b036e8",
+      "records": [
+        {
+          "label": "Human Soldier",
+          "seed": 0,
+          "inputSha256": "663a76cc2c778d746b617b7f796e39fdacc134c8ed3855a0b53aec474bd5af1c",
+          "frames": 73
+        },
+        {
+          "label": "Human Soldier",
+          "seed": 5,
+          "inputSha256": "663a76cc2c778d746b617b7f796e39fdacc134c8ed3855a0b53aec474bd5af1c",
+          "frames": 78
+        },
+        {
+          "label": "Human Soldier",
+          "seed": 18,
+          "inputSha256": "663a76cc2c778d746b617b7f796e39fdacc134c8ed3855a0b53aec474bd5af1c",
+          "frames": 74
+        },
+        {
+          "label": "Moogle Black Mage",
+          "seed": 0,
+          "inputSha256": "7c14441543847ba541ba026b103e55f78ebbd054eb0d09a8454e3df7124b8251",
+          "frames": 157
+        },
+        {
+          "label": "Moogle Black Mage",
+          "seed": 5,
+          "inputSha256": "7c14441543847ba541ba026b103e55f78ebbd054eb0d09a8454e3df7124b8251",
+          "frames": 149
+        },
+        {
+          "label": "Moogle Black Mage",
+          "seed": 18,
+          "inputSha256": "7c14441543847ba541ba026b103e55f78ebbd054eb0d09a8454e3df7124b8251",
+          "frames": 157
+        },
+        {
+          "label": "Nu Mou White Mage",
+          "seed": 0,
+          "inputSha256": "f285c9151074dfb7aa80b178ce179ddb1beec5665a910cafa1ae8ee9c888639d",
+          "frames": 64
+        },
+        {
+          "label": "Nu Mou White Mage",
+          "seed": 5,
+          "inputSha256": "f285c9151074dfb7aa80b178ce179ddb1beec5665a910cafa1ae8ee9c888639d",
+          "frames": 65
+        },
+        {
+          "label": "Nu Mou White Mage",
+          "seed": 18,
+          "inputSha256": "f285c9151074dfb7aa80b178ce179ddb1beec5665a910cafa1ae8ee9c888639d",
+          "frames": 71
+        },
+        {
+          "label": "Viera Archer",
+          "seed": 0,
+          "inputSha256": "ba6a073ad3a7d9a3dd5796fddefe1ee7a0791f15268a59a5d074ecac3b5bb6b0",
+          "frames": 90
+        },
+        {
+          "label": "Viera Archer",
+          "seed": 5,
+          "inputSha256": "ba6a073ad3a7d9a3dd5796fddefe1ee7a0791f15268a59a5d074ecac3b5bb6b0",
+          "frames": 52
+        },
+        {
+          "label": "Viera Archer",
+          "seed": 18,
+          "inputSha256": "ba6a073ad3a7d9a3dd5796fddefe1ee7a0791f15268a59a5d074ecac3b5bb6b0",
+          "frames": 85
+        }
+      ]
+    }
+  },
+  "records": [
+    {
+      "id": "melee-finish",
+      "seed": 0,
+      "inputSha256": "37e03053befad623d83f8e1bca5163293c7f20bf528f9c483a9bad0a82a9a2a3",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "intended-target": true
+      },
+      "decisionFrames": 159,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 1,
+        "success": 1,
+        "destination": [
+          1,
+          13
+        ],
+        "center": [
+          2,
+          13
+        ],
+        "target": 128,
+        "decisionFrames": 159,
+        "decisionSeconds": 2.662090301513672
+      }
+    },
+    {
+      "id": "melee-finish",
+      "seed": 5,
+      "inputSha256": "37e03053befad623d83f8e1bca5163293c7f20bf528f9c483a9bad0a82a9a2a3",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "intended-target": true
+      },
+      "decisionFrames": 131,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 1,
+        "success": 1,
+        "destination": [
+          1,
+          13
+        ],
+        "center": [
+          2,
+          13
+        ],
+        "target": 128,
+        "decisionFrames": 131,
+        "decisionSeconds": 2.1932945251464844
+      }
+    },
+    {
+      "id": "melee-finish",
+      "seed": 18,
+      "inputSha256": "37e03053befad623d83f8e1bca5163293c7f20bf528f9c483a9bad0a82a9a2a3",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "intended-target": true
+      },
+      "decisionFrames": 159,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 1,
+        "success": 1,
+        "destination": [
+          1,
+          13
+        ],
+        "center": [
+          2,
+          13
+        ],
+        "target": 128,
+        "decisionFrames": 159,
+        "decisionSeconds": 2.662090301513672
+      }
+    },
+    {
+      "id": "caster-use-effective-damage",
+      "seed": 0,
+      "inputSha256": "bc5e169787a26f17f2b85115f22fb6630e3b61449af6d8450012e73f3db65920",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true
+      },
+      "decisionFrames": 348,
+      "referenceDecision": {
+        "action": 31,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          4,
+          13
+        ],
+        "center": [
+          1,
+          14
+        ],
+        "target": 920,
+        "decisionFrames": 348,
+        "decisionSeconds": 5.8264617919921875
+      }
+    },
+    {
+      "id": "caster-use-effective-damage",
+      "seed": 5,
+      "inputSha256": "bc5e169787a26f17f2b85115f22fb6630e3b61449af6d8450012e73f3db65920",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true
+      },
+      "decisionFrames": 353,
+      "referenceDecision": {
+        "action": 25,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          4,
+          13
+        ],
+        "center": [
+          1,
+          14
+        ],
+        "target": 1448,
+        "decisionFrames": 353,
+        "decisionSeconds": 5.910175323486328
+      }
+    },
+    {
+      "id": "caster-use-effective-damage",
+      "seed": 18,
+      "inputSha256": "bc5e169787a26f17f2b85115f22fb6630e3b61449af6d8450012e73f3db65920",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": false
+      },
+      "decisionFrames": 340,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          2,
+          14
+        ],
+        "center": [
+          1,
+          14
+        ],
+        "target": 920,
+        "decisionFrames": 340,
+        "decisionSeconds": 5.6925201416015625
+      }
+    },
+    {
+      "id": "caster-free-finish",
+      "seed": 0,
+      "inputSha256": "5c943378a90791e13c0efe638258ffd826c60fafcafed754aa1ae398632f078e",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": false,
+        "intended-target": true
+      },
+      "decisionFrames": 294,
+      "referenceDecision": {
+        "action": 28,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          4,
+          13
+        ],
+        "center": [
+          2,
+          13
+        ],
+        "target": 128,
+        "decisionFrames": 294,
+        "decisionSeconds": 4.922355651855469
+      }
+    },
+    {
+      "id": "caster-free-finish",
+      "seed": 5,
+      "inputSha256": "5c943378a90791e13c0efe638258ffd826c60fafcafed754aa1ae398632f078e",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": false,
+        "intended-target": true
+      },
+      "decisionFrames": 295,
+      "referenceDecision": {
+        "action": 31,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          4,
+          13
+        ],
+        "center": [
+          2,
+          13
+        ],
+        "target": 128,
+        "decisionFrames": 295,
+        "decisionSeconds": 4.939098358154297
+      }
+    },
+    {
+      "id": "caster-free-finish",
+      "seed": 18,
+      "inputSha256": "5c943378a90791e13c0efe638258ffd826c60fafcafed754aa1ae398632f078e",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "intended-target": true
+      },
+      "decisionFrames": 292,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          2,
+          14
+        ],
+        "center": [
+          2,
+          13
+        ],
+        "target": 128,
+        "decisionFrames": 292,
+        "decisionSeconds": 4.8888702392578125
+      }
+    },
+    {
+      "id": "caster-no-mp",
+      "seed": 0,
+      "inputSha256": "b053ae4a7638292deeb9eb438f6ccd3283b0cb4bbc7660c889efbde59a997a12",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true
+      },
+      "decisionFrames": 36,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          2,
+          14
+        ],
+        "center": [
+          2,
+          13
+        ],
+        "target": 128,
+        "decisionFrames": 36,
+        "decisionSeconds": 0.6027374267578125
+      }
+    },
+    {
+      "id": "caster-no-mp",
+      "seed": 5,
+      "inputSha256": "b053ae4a7638292deeb9eb438f6ccd3283b0cb4bbc7660c889efbde59a997a12",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true
+      },
+      "decisionFrames": 34,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          2,
+          15
+        ],
+        "center": [
+          1,
+          15
+        ],
+        "target": 1184,
+        "decisionFrames": 34,
+        "decisionSeconds": 0.5692520141601562
+      }
+    },
+    {
+      "id": "caster-no-mp",
+      "seed": 18,
+      "inputSha256": "b053ae4a7638292deeb9eb438f6ccd3283b0cb4bbc7660c889efbde59a997a12",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true
+      },
+      "decisionFrames": 36,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          2,
+          14
+        ],
+        "center": [
+          2,
+          13
+        ],
+        "target": 128,
+        "decisionFrames": 36,
+        "decisionSeconds": 0.6027374267578125
+      }
+    },
+    {
+      "id": "caster-silenced",
+      "seed": 0,
+      "inputSha256": "0a99cfaaba18d903ddd1ccf85a56cd4a0671bbf88d5c5f9457f0be5afd1adc90",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true
+      },
+      "decisionFrames": 45,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          2,
+          14
+        ],
+        "center": [
+          2,
+          13
+        ],
+        "target": 128,
+        "decisionFrames": 45,
+        "decisionSeconds": 0.7534217834472656
+      }
+    },
+    {
+      "id": "caster-silenced",
+      "seed": 5,
+      "inputSha256": "0a99cfaaba18d903ddd1ccf85a56cd4a0671bbf88d5c5f9457f0be5afd1adc90",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true
+      },
+      "decisionFrames": 45,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          2,
+          15
+        ],
+        "center": [
+          1,
+          15
+        ],
+        "target": 1184,
+        "decisionFrames": 45,
+        "decisionSeconds": 0.7534217834472656
+      }
+    },
+    {
+      "id": "caster-silenced",
+      "seed": 18,
+      "inputSha256": "0a99cfaaba18d903ddd1ccf85a56cd4a0671bbf88d5c5f9457f0be5afd1adc90",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true
+      },
+      "decisionFrames": 45,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          2,
+          14
+        ],
+        "center": [
+          2,
+          13
+        ],
+        "target": 128,
+        "decisionFrames": 45,
+        "decisionSeconds": 0.7534217834472656
+      }
+    },
+    {
+      "id": "healer-critical-ally",
+      "seed": 0,
+      "inputSha256": "b873d33a6508896c708593e3ebddc4b594c697ee3a92cc90080fe032da61f18d",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "covers-beneficiary": true
+      },
+      "decisionFrames": 175,
+      "referenceDecision": {
+        "action": 2,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          1,
+          15
+        ],
+        "target": 12492,
+        "decisionFrames": 175,
+        "decisionSeconds": 2.929973602294922
+      }
+    },
+    {
+      "id": "healer-critical-ally",
+      "seed": 5,
+      "inputSha256": "b873d33a6508896c708593e3ebddc4b594c697ee3a92cc90080fe032da61f18d",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "covers-beneficiary": true
+      },
+      "decisionFrames": 172,
+      "referenceDecision": {
+        "action": 1,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          1,
+          15
+        ],
+        "target": 12492,
+        "decisionFrames": 172,
+        "decisionSeconds": 2.8797454833984375
+      }
+    },
+    {
+      "id": "healer-critical-ally",
+      "seed": 18,
+      "inputSha256": "b873d33a6508896c708593e3ebddc4b594c697ee3a92cc90080fe032da61f18d",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "covers-beneficiary": true
+      },
+      "decisionFrames": 199,
+      "referenceDecision": {
+        "action": 2,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          1,
+          15
+        ],
+        "target": 12492,
+        "decisionFrames": 199,
+        "decisionSeconds": 3.331798553466797
+      }
+    },
+    {
+      "id": "healer-revive",
+      "seed": 0,
+      "inputSha256": "904938f9474c5b7c16b262c6ca9f337bfec065b248b4d991b4da1f26d007ab9c",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "covers-beneficiary": true
+      },
+      "decisionFrames": 167,
+      "referenceDecision": {
+        "action": 6,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          1,
+          14
+        ],
+        "target": 12492,
+        "decisionFrames": 167,
+        "decisionSeconds": 2.796031951904297
+      }
+    },
+    {
+      "id": "healer-revive",
+      "seed": 5,
+      "inputSha256": "904938f9474c5b7c16b262c6ca9f337bfec065b248b4d991b4da1f26d007ab9c",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "covers-beneficiary": true
+      },
+      "decisionFrames": 161,
+      "referenceDecision": {
+        "action": 5,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          1,
+          14
+        ],
+        "target": 12492,
+        "decisionFrames": 161,
+        "decisionSeconds": 2.695575714111328
+      }
+    },
+    {
+      "id": "healer-revive",
+      "seed": 18,
+      "inputSha256": "904938f9474c5b7c16b262c6ca9f337bfec065b248b4d991b4da1f26d007ab9c",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "covers-beneficiary": true
+      },
+      "decisionFrames": 184,
+      "referenceDecision": {
+        "action": 5,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          1,
+          14
+        ],
+        "target": 12492,
+        "decisionFrames": 184,
+        "decisionSeconds": 3.080657958984375
+      }
+    },
+    {
+      "id": "healer-cleanse-caster",
+      "seed": 0,
+      "inputSha256": "1b92a21d6b0399bc51ca429068adeac41ffe0bf3fb8c0c7fd0d8eee5b49b1dd9",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "covers-beneficiary": true
+      },
+      "decisionFrames": 188,
+      "referenceDecision": {
+        "action": 4,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          3,
+          14
+        ],
+        "target": 12492,
+        "decisionFrames": 188,
+        "decisionSeconds": 3.1476287841796875
+      }
+    },
+    {
+      "id": "healer-cleanse-caster",
+      "seed": 5,
+      "inputSha256": "1b92a21d6b0399bc51ca429068adeac41ffe0bf3fb8c0c7fd0d8eee5b49b1dd9",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": true,
+        "covers-beneficiary": true
+      },
+      "decisionFrames": 217,
+      "referenceDecision": {
+        "action": 4,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          3,
+          14
+        ],
+        "target": 12492,
+        "decisionFrames": 217,
+        "decisionSeconds": 3.633167266845703
+      }
+    },
+    {
+      "id": "healer-cleanse-caster",
+      "seed": 18,
+      "inputSha256": "1b92a21d6b0399bc51ca429068adeac41ffe0bf3fb8c0c7fd0d8eee5b49b1dd9",
+      "checks": {
+        "published-action": true,
+        "appropriate-action": false,
+        "covers-beneficiary": false
+      },
+      "decisionFrames": 206,
+      "referenceDecision": {
+        "action": 7,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          5,
+          14
+        ],
+        "target": 13284,
+        "decisionFrames": 206,
+        "decisionSeconds": 3.4489974975585938
+      }
+    },
+    {
+      "id": "healer-no-overheal",
+      "seed": 0,
+      "inputSha256": "94545be612c90badd912ab3405f59be7a188b230f0172e011f930de8bb00c492",
+      "checks": {
+        "published-action": true,
+        "no-wasted-action": true
+      },
+      "decisionFrames": 229,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          0,
+          15
+        ],
+        "center": [
+          0,
+          14
+        ],
+        "target": 1448,
+        "decisionFrames": 229,
+        "decisionSeconds": 3.8340797424316406
+      }
+    },
+    {
+      "id": "healer-no-overheal",
+      "seed": 5,
+      "inputSha256": "94545be612c90badd912ab3405f59be7a188b230f0172e011f930de8bb00c492",
+      "checks": {
+        "published-action": true,
+        "no-wasted-action": true
+      },
+      "decisionFrames": 224,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          2,
+          15
+        ],
+        "center": [
+          2,
+          14
+        ],
+        "target": 392,
+        "decisionFrames": 224,
+        "decisionSeconds": 3.7503662109375
+      }
+    },
+    {
+      "id": "healer-no-overheal",
+      "seed": 18,
+      "inputSha256": "94545be612c90badd912ab3405f59be7a188b230f0172e011f930de8bb00c492",
+      "checks": {
+        "published-action": true,
+        "no-wasted-action": true
+      },
+      "decisionFrames": 216,
+      "referenceDecision": {
+        "action": 7,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          5,
+          14
+        ],
+        "target": 13284,
+        "decisionFrames": 216,
+        "decisionSeconds": 3.616424560546875
+      }
+    },
+    {
+      "id": "healer-no-redundant-ward",
+      "seed": 0,
+      "inputSha256": "538f748df9d1ad84ba32e6e6f70caa19097b4ba33e4ba9fe9c971530a4a95de3",
+      "checks": {
+        "published-action": true,
+        "no-wasted-action": true
+      },
+      "decisionFrames": 236,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          0,
+          15
+        ],
+        "center": [
+          0,
+          14
+        ],
+        "target": 1448,
+        "decisionFrames": 236,
+        "decisionSeconds": 3.9512786865234375
+      }
+    },
+    {
+      "id": "healer-no-redundant-ward",
+      "seed": 5,
+      "inputSha256": "538f748df9d1ad84ba32e6e6f70caa19097b4ba33e4ba9fe9c971530a4a95de3",
+      "checks": {
+        "published-action": true,
+        "no-wasted-action": true
+      },
+      "decisionFrames": 234,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          2,
+          15
+        ],
+        "center": [
+          2,
+          14
+        ],
+        "target": 392,
+        "decisionFrames": 234,
+        "decisionSeconds": 3.9177932739257812
+      }
+    },
+    {
+      "id": "healer-no-redundant-ward",
+      "seed": 18,
+      "inputSha256": "538f748df9d1ad84ba32e6e6f70caa19097b4ba33e4ba9fe9c971530a4a95de3",
+      "checks": {
+        "published-action": true,
+        "no-wasted-action": true
+      },
+      "decisionFrames": 222,
+      "referenceDecision": {
+        "action": 7,
+        "choice": 121,
+        "success": 1,
+        "destination": [
+          4,
+          15
+        ],
+        "center": [
+          5,
+          14
+        ],
+        "target": 13284,
+        "decisionFrames": 222,
+        "decisionSeconds": 3.7168807983398438
+      }
+    },
+    {
+      "id": "archer-spacing",
+      "seed": 0,
+      "inputSha256": "f4410d5165f8dc3bd018810c7aa02072ff13e6827adf75915b3f6dcf73d4c02f",
+      "checks": {
+        "published-action": true,
+        "safe-ranged-distance": true
+      },
+      "decisionFrames": 173,
+      "referenceDecision": {
+        "action": 174,
+        "choice": 162,
+        "success": 1,
+        "destination": [
+          0,
+          11
+        ],
+        "center": [
+          2,
+          14
+        ],
+        "target": 392,
+        "decisionFrames": 173,
+        "decisionSeconds": 2.8964881896972656
+      }
+    },
+    {
+      "id": "archer-spacing",
+      "seed": 5,
+      "inputSha256": "f4410d5165f8dc3bd018810c7aa02072ff13e6827adf75915b3f6dcf73d4c02f",
+      "checks": {
+        "published-action": true,
+        "safe-ranged-distance": true
+      },
+      "decisionFrames": 148,
+      "referenceDecision": {
+        "action": 172,
+        "choice": 162,
+        "success": 1,
+        "destination": [
+          0,
+          10
+        ],
+        "center": [
+          0,
+          10
+        ],
+        "target": 12228,
+        "decisionFrames": 148,
+        "decisionSeconds": 2.4779205322265625
+      }
+    },
+    {
+      "id": "archer-spacing",
+      "seed": 18,
+      "inputSha256": "f4410d5165f8dc3bd018810c7aa02072ff13e6827adf75915b3f6dcf73d4c02f",
+      "checks": {
+        "published-action": true,
+        "safe-ranged-distance": true
+      },
+      "decisionFrames": 259,
+      "referenceDecision": {
+        "action": 0,
+        "choice": 162,
+        "success": 1,
+        "destination": [
+          0,
+          11
+        ],
+        "center": [
+          1,
+          15
+        ],
+        "target": 1184,
+        "decisionFrames": 259,
+        "decisionSeconds": 4.336360931396484
+      }
+    },
+    {
+      "id": "caster-fragile-ally",
+      "seed": 0,
+      "inputSha256": "5f08e2026880f9fd4db39bd495bbf3e04ba0c8dedd522bdaf53e0d8d13f86749",
+      "checks": {
+        "published-action": true,
+        "no-lethal-friendly-blast": true,
+        "hostile-attack": true
+      },
+      "decisionFrames": 362,
+      "referenceDecision": {
+        "action": 31,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          3,
+          12
+        ],
+        "center": [
+          6,
+          11
+        ],
+        "target": 920,
+        "decisionFrames": 362,
+        "decisionSeconds": 6.060859680175781
+      }
+    },
+    {
+      "id": "caster-fragile-ally",
+      "seed": 5,
+      "inputSha256": "5f08e2026880f9fd4db39bd495bbf3e04ba0c8dedd522bdaf53e0d8d13f86749",
+      "checks": {
+        "published-action": true,
+        "no-lethal-friendly-blast": true,
+        "hostile-attack": true
+      },
+      "decisionFrames": 358,
+      "referenceDecision": {
+        "action": 25,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          4,
+          13
+        ],
+        "center": [
+          0,
+          13
+        ],
+        "target": 1448,
+        "decisionFrames": 358,
+        "decisionSeconds": 5.993888854980469
+      }
+    },
+    {
+      "id": "caster-fragile-ally",
+      "seed": 18,
+      "inputSha256": "5f08e2026880f9fd4db39bd495bbf3e04ba0c8dedd522bdaf53e0d8d13f86749",
+      "checks": {
+        "published-action": true,
+        "no-lethal-friendly-blast": true,
+        "hostile-attack": true
+      },
+      "decisionFrames": 360,
+      "referenceDecision": {
+        "action": 31,
+        "choice": 135,
+        "success": 1,
+        "destination": [
+          3,
+          12
+        ],
+        "center": [
+          6,
+          11
+        ],
+        "target": 920,
+        "decisionFrames": 360,
+        "decisionSeconds": 6.027374267578125
+      }
+    }
+  ],
+  "dependencies": {
+    "scripts/native_battle_wrappers.py": "96aeac045f27b8baf0e4a959f5d0d3ef8958c0681d8c818352ca924730e229fa",
+    "scripts/ai_planner_seed.py": "f2d00bf6c1006fb803a49d93832898dca0c24d0df16296f7c38a33b6021b5d79",
+    "scripts/mgba_instruction_trace.py": "49a1d5906de4813563a10c39e827e570dd688fac0c5d528bbb01e52de47b2c0a",
+    "scripts/emulator-test.py": "75563f1f3428e13fc2419b5d550848d1d0a66dd18835ffe2ae0b278429af25c0",
+    "scripts/battle-menu-observation.py": "89a1473cf996a83b591d00d7a1732cb90f927faa963820a3956b4b086466094a",
+    "scripts/test-equipment-legality.py": "8406b3749f021f6dfcd589778c7d3c10c301904f60f2dc149202b48342e960af"
+  }
+}
