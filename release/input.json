@@ -8,26 +8,29 @@
   },
   "target": {
     "bytes": 33554432,
-    "crc32": "c39a6f88",
+    "crc32": "84bcc4be",
     "file": "FFTA_Reviewed_All_Classes.gba",
-    "sha1": "97e3c99087d206001b968c760270ef46223e10a4",
-    "sha256": "73ef9992f57b237c43c5d78cb2f64a66bc3aead33ea9369363ba1fd9041c182f"
+    "sha1": "e13b1c7afa34fcb608a8360911b0425eb27e46fc",
+    "sha256": "02ebad08f5e0d2b66b3a8a63e537ea5115f89ff8900c33b6f82ee4faa68cb6e0"
   },
   "patch": {
-    "bytes": 6291828,
+    "bytes": 6349487,
     "file": "FFTA_Expansion.bps",
     "format": "BPS",
-    "sha256": "5ab2d970c5875ad4be827de9b49c3895e6c46ccbb4b7de3a7b0eaf751f5b4096"
+    "sha256": "6bd0b4cb57fbcfdc54199bc30c52ae5f23dda409a84c46a33a7e110f5973ce8e"
   },
   "name": "FFTA Advanced",
-  "version": "0.7.7",
-  "tag": "v0.7.7",
+  "version": "0.7.8",
+  "tag": "v0.7.8",
   "localAcceptance": {
-    "buildVersion": "0.7.7",
-    "candidateRunSha256": "b455ec55b7ad973ec03f061209c81ee6d1f0cf1d56fa2ca6e895931ee07db85c",
+    "buildVersion": "0.7.8",
+    "candidateRunSha256": "bcdd626fbf3771b58e08ceef7988d973071e0d3c5843128723dbda49e19b98b4",
     "deterministicPatch": true,
     "roundtrip": true,
     "tests": [
+      "shop-progression-native",
+      "shop-progression-ui",
+      "shop-progression-learning",
       "cp-state-codec",
       "cp-effects",
       "cp-fixture",
@@ -40,9 +43,11 @@
       "cp-laws",
       "cp-status-records",
       "ai-forecast-fast",
+      "ai-timing-fixtures",
       "ai-timing-original-jobs",
       "ai-timing-starting-jobs",
-      "ai-timing-budget"
+      "ai-timing-budget",
+      "ai-timing-profile"
     ],
     "wrongSourceRejected": true
   }

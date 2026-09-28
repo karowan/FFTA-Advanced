@@ -1,29 +1,35 @@
-# FFTA Advanced v0.7.7
+# FFTA Advanced v0.7.8
 
-This release adds the Nu Mou Physician and Moogle Sapper, with their approved
-artwork, abilities, equipment progression and in-game help. It also fixes false
-status icons after movement and substantially reduces AI thinking time.
+New teaching weapons now follow the original shop upgrades. At 10 completed
+battles, or after Twisted Flow, Cyril offers 47 new teaching weapons in total.
+At 20 battles, or after Pale Company, it offers 74. Opening stock has 20; the
+final 95 still require Desert Patrol. The shipments are cumulative. Regional
+shops continue to carry their assigned new weapons.
 
-In matched original-job tests, average planning time fell from 11.33 to 5.50
-seconds with fully learned jobs, and from 4.35 to 2.02 seconds with starting
-abilities. Vanilla averaged 3.13 and 1.19 seconds respectively. The mod still
-has overhead; these are controlled test cases, not campaign-wide averages.
-All 24 matched decisions retained the same action and choice IDs.
+Later teaching weapons now have prices comparable to original weapons available
+at the same shop tier. Prices rose for 56 weapons; weapon stats, lessons and AP
+costs did not change.
 
-Download **FFTA-Advanced-v0.7.7.zip** and apply its BPS patch to your own clean
+This release also includes the subsequent AI planning work. In the controlled
+four-job benchmark, the fully learned mean is 4.19 seconds per decision, down
+from 5.50 seconds in v0.7.7; the starting-skill mean is 1.56 seconds, down from
+2.02. All 24 matched decisions kept the same available actions and final
+choices. These measurements exclude camera and attack playback and do not
+describe every campaign battle.
+
+Download **FFTA-Advanced-v0.7.8.zip** and apply its BPS patch to your own clean
 Final Fantasy Tactics Advance (USA) ROM. The ZIP contains no ROM or emulator.
 
 - Clean ROM SHA-1: `4ac05441f4de70a4ec3dd932116346c61b8783d9`
-- Patched ROM SHA-1: `97e3c99087d206001b968c760270ef46223e10a4`
+- Patched ROM SHA-1: `e13b1c7afa34fcb608a8360911b0425eb27e46fc`
 
-Back up your normal in-game save and load it through Continue after updating.
-The save migration preserves earlier expansion progress. Do not carry an
-emulator savestate across versions.
+Back up your normal in-game save, restart the game and load it through Continue
+after updating. Do not carry an emulator savestate across versions.
 
-Eleven assembled checks cover effects, AI, movement, save/resume, menus,
-learning, laws and status records. Additional forecast comparisons and 32
-package checks passed. This remains a first playable balance pass for the two
-new jobs, not a full campaign or physical GBA certification.
+The exact shop ROM passed native stock and purchase checks, real shop-menu
+checks, and new-job teaching checks. The AI parent, whose non-shop bytes are
+preserved, passed assembled effects, AI, save/resume and timing checks. This is
+bounded release acceptance, not a full campaign or physical GBA certification.
 
 New job artwork is AI-generated. Artist contributions to improve or replace
 it are welcome.
