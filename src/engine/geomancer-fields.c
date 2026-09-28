@@ -36,6 +36,11 @@ unsigned ffta_geo_field_at(const uint8_t *u,int x,int y,unsigned kind){
  extern unsigned ffta_geo_field_fast(const uint8_t *,int,int,unsigned);
  if(ffta_geo_field_canonical(u))return ffta_geo_field_fast(u,x,y,kind);
 #endif
+#if FFTA_CHEMIST_PROGRESSION
+ FFTA_JobCohort cohort;
+ if(!ffta_job_copied_cohort((uint8_t *)u,&cohort))return 0;
+ unsigned count=cohort.count;
+#else
  uint8_t *peers[FFTA_JOB_UNIT_COUNT];
  unsigned count=ffta_job_peers((uint8_t *)u,peers,FFTA_JOB_UNIT_COUNT);
  /* The peer API returns the complete canonical cohort in slot order.
@@ -43,8 +48,13 @@ unsigned ffta_geo_field_at(const uint8_t *u,int x,int y,unsigned kind){
   * cohorts keep their own per-peer lookup and never fall back to it. */
  const uint8_t *live=count==FFTA_JOB_UNIT_COUNT && peers[0]==(uint8_t *)0x02000080u &&
   peers[24]==(uint8_t *)0x02002fc4u?ffta_job_state(peers[0]):0;
+ #endif
  for(unsigned i=0;i<count;i++){
+#if FFTA_CHEMIST_PROGRESSION
+  const uint8_t *caster=cohort.units+i*264u,*s=cohort.records+i*cohort.record_stride;
+#else
   const uint8_t *caster=peers[i],*s=live?live+i*FFTA_JOB_RECORD_BYTES:ffta_job_state(peers[i]);
+#endif
   if(!s || (s[FFTA_JOB_GEO_FIELD_FLAGS]&3u)!=kind || !valid_timer((s[FFTA_JOB_GEO_FIELD_FLAGS]>>2)&7u) ||
      !alive(caster) || (kind==2 && hostile(caster,u)))continue;
   int cx=s[FFTA_JOB_GEO_FIELD_X],cy=s[FFTA_JOB_GEO_FIELD_Y];

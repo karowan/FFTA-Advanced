@@ -3,6 +3,10 @@
 #include "samurai-state.h"
 #include "registry.h"
 #include "reaction-queue.h"
+#include "evaluated-units.h"
+#include "battle-state.h"
+#include "blade-wound.h"
+#include "aligned-memory.h"
 #if FFTA_CHEMIST_PROGRESSION
 #include "dark-knight-state.h"
 #include "viking-state.h"
@@ -45,18 +49,30 @@ typedef struct { FFTA_ActionSnapshot *owner;unsigned flags[64]; } ExtraSnapshot;
 _Static_assert(sizeof(ExtraSnapshot)==260,"external snapshot bank ABI");
 extern ExtraSnapshot *ffta_additional_snapshot_storage(void) __attribute__((weak));
 extern uint16_t *ffta_additional_extension_snapshot_storage(void) __attribute__((weak));
+#if !FFTA_CHEMIST_PROGRESSION
 static uint16_t *extension_slot(ExtraSnapshot *slot) {
     uint16_t *bank=ffta_additional_extension_snapshot_storage?ffta_additional_extension_snapshot_storage():0;
     if(!slot || !bank)return 0;
     return bank+64u*(unsigned)(slot-ffta_additional_snapshot_storage());
 }
+#endif
 #if FFTA_CHEMIST_PROGRESSION
 #include "battle-workspace.h"
-static unsigned *cp_slot(ExtraSnapshot *slot) {
-    unsigned *bank=ffta_battle_workspace(FFTA_WORKSPACE_CHEMIST);
-    return slot && bank?bank+64u*(unsigned)(slot-ffta_additional_snapshot_storage()):0;
-}
 #endif
+typedef struct { ExtraSnapshot *extra;uint16_t *extension;unsigned *medicine; } ExtraView;
+/* One validated pool, one slot search. These pointers never escape this
+ * synchronous accessor: no allocation, mutation callback or cached root can
+ * carry them into another lifetime. All arrays belong to the same pool ABI. */
+static ExtraView extra_view(ExtraSnapshot *bank,unsigned index) {
+    ExtraView v={bank+index,0,0};
+#if FFTA_CHEMIST_PROGRESSION
+    v.extension=(uint16_t *)((uint8_t *)bank+FFTA_WORKSPACE_EXTENSION-FFTA_WORKSPACE_EXTRA)+64u*index;
+    v.medicine=(unsigned *)((uint8_t *)bank+FFTA_WORKSPACE_CHEMIST-FFTA_WORKSPACE_EXTRA)+64u*index;
+#else
+    v.extension=extension_slot(bank+index);
+#endif
+    return v;
+}
 static unsigned extra_owner_active(const FFTA_ActionSnapshot *owner) {
     FFTA_ActionSnapshot *s=current();
     for(unsigned i=0;s && i<8;i++,s=s->previous) {
@@ -65,54 +81,68 @@ static unsigned extra_owner_active(const FFTA_ActionSnapshot *owner) {
     }
     return 0;
 }
-static ExtraSnapshot *extra_slot(FFTA_ActionSnapshot *owner,unsigned create) {
-    ExtraSnapshot *bank=ffta_additional_snapshot_storage?ffta_additional_snapshot_storage():0,*free=0;
-    if(!bank)return 0;
-    for(unsigned i=0;i<8;i++) {
-        if(bank[i].owner==owner)return bank+i;
-        if(create && !free && (!bank[i].owner || !extra_owner_active(bank[i].owner)))free=bank+i;
-    }
-    if(!create || !free)return 0;
-    uint16_t *extension=extension_slot(free);
-    #if FFTA_CHEMIST_PROGRESSION
-    unsigned *medicine=cp_slot(free);
-    if(medicine)for(unsigned i=0;i<64;i++)medicine[i]=0;
+static ExtraView extra_slot(FFTA_ActionSnapshot *owner,unsigned create) {
+    ExtraView empty={0,0,0};unsigned free=8;
+#if FFTA_CHEMIST_PROGRESSION
+    ExtraSnapshot *bank=ffta_battle_workspace(FFTA_WORKSPACE_EXTRA);
+#else
+    ExtraSnapshot *bank=ffta_additional_snapshot_storage?ffta_additional_snapshot_storage():0;
 #endif
-    for(unsigned i=0;i<64;i++){free->flags[i]=0;if(extension)extension[i]=0;}
-    free->owner=owner;return free;
+    if(!bank)return empty;
+    for(unsigned i=0;i<8;i++) {
+        if(bank[i].owner==owner)return extra_view(bank,i);
+        if(create && free==8 && (!bank[i].owner || !extra_owner_active(bank[i].owner)))free=i;
+    }
+    if(!create || free==8)return empty;
+    ExtraView v=extra_view(bank,free);
+    for(unsigned i=0;i<64;i++){
+        v.extra->flags[i]=0;if(v.extension)v.extension[i]=0;
+        if(v.medicine)v.medicine[i]=0;
+    }
+    v.extra->owner=owner;return v;
 }
 static unsigned extra_get(FFTA_ActionSnapshot *s,unsigned i) {
-    ExtraSnapshot *slot=extra_slot(s,0);return slot?slot->flags[i]:0;
+    ExtraView v=extra_slot(s,0);return v.extra?v.extra->flags[i]:0;
 }
 static void extra_set(FFTA_ActionSnapshot *s,unsigned i,unsigned value) {
-    ExtraSnapshot *slot=extra_slot(s,value!=0);if(slot)slot->flags[i]=value;
+    ExtraView v=extra_slot(s,value!=0);if(v.extra)v.extra->flags[i]=value;
 }
 static unsigned extension_get(FFTA_ActionSnapshot *s,unsigned i) {
-    uint16_t *slot=extension_slot(extra_slot(s,0));unsigned v=slot?slot[i]:0;
+    ExtraView view=extra_slot(s,0);unsigned v=view.extension?view.extension[i]:0;
     return (v&1023u)|((v&0xfc00u)<<6);
 }
 static void extension_set(FFTA_ActionSnapshot *s,unsigned i,unsigned value) {
     if(value&~0x003f03ffu)return;
-    uint16_t *slot=extension_slot(extra_slot(s,value!=0));
+    uint16_t *slot=extra_slot(s,value!=0).extension;
     if(slot)slot[i]=(uint16_t)((value&1023u)|((value>>6)&0xfc00u));
 }
 #if FFTA_CHEMIST_PROGRESSION
 static unsigned cp_get(FFTA_ActionSnapshot *s,unsigned i) {
-    unsigned *p=cp_slot(extra_slot(s,0));return p?p[i]:0;
+    unsigned *p=extra_slot(s,0).medicine;return p?p[i]:0;
 }
 static void cp_set(FFTA_ActionSnapshot *s,unsigned i,unsigned value) {
-    unsigned *p=cp_slot(extra_slot(s,value!=0));if(p)p[i]=value;
+    unsigned *p=extra_slot(s,value!=0).medicine;if(p)p[i]=value;
 }
 #endif
+static void inherit_flags(FFTA_ActionSnapshot *to,unsigned d,FFTA_ActionSnapshot *from,unsigned i) {
+    /* Values are already frozen. Resolve the two owner slots once; never run
+     * live providers for a destination whose values will be overwritten. */
+    ExtraView source=extra_slot(from,0);
+    unsigned extra=source.extra?source.extra->flags[i]:0;
+    unsigned extension=source.extension?source.extension[i]:0;
+    unsigned medicine=source.medicine?source.medicine[i]:0;
+    ExtraView target=extra_slot(to,(extra|extension|medicine)!=0);
+    if(target.extra)target.extra->flags[d]=extra;
+    if(target.extension)target.extension[d]=(uint16_t)extension;
+    if(target.medicine)target.medicine[d]=medicine;
+}
 static void extra_release(FFTA_ActionSnapshot *s) {
-    ExtraSnapshot *slot=extra_slot(s,0);if(!slot)return;
-    uint16_t *extension=extension_slot(slot);
-    #if FFTA_CHEMIST_PROGRESSION
-    unsigned *medicine=cp_slot(slot);
-    if(medicine)for(unsigned i=0;i<64;i++)medicine[i]=0;
-#endif
-    for(unsigned i=0;i<64;i++){slot->flags[i]=0;if(extension)extension[i]=0;}
-    slot->owner=0;
+    ExtraView v=extra_slot(s,0);if(!v.extra)return;
+    for(unsigned i=0;i<64;i++){
+        v.extra->flags[i]=0;if(v.extension)v.extension[i]=0;
+        if(v.medicine)v.medicine[i]=0;
+    }
+    v.extra->owner=0;
 }
 /* These are native status bits, established by their actual application
  * callbacks: Regen31->3, Conceal60->12, Haste52->21, Shell83->24,
@@ -150,18 +180,58 @@ static int find(const FFTA_ActionSnapshot *s,const uint8_t *unit) {
     if(s)for(unsigned i=0;i<s->count;++i)if(s->units[i].unit==unit)return (int)i;
     return -1;
 }
-static void record(FFTA_ActionSnapshot *s,const uint8_t *unit,unsigned value) {
+/* Conservative zero-provider proof. Native statuses, any custom R/S, owned
+ * effect bytes, Exposed/Wound or an allied Refuge field take the full path.
+ * The only ignored record bytes are the documented movement ledger, whose
+ * modifiers additionally require custom supports. No class-ID assumption. */
+static unsigned plain_unit(const uint8_t *unit) {
+#if FFTA_CHEMIST_PROGRESSION
+    if(!((uintptr_t)unit&3u)) {
+        const FFTA_AliasWord *status=(const FFTA_AliasWord *)(unit+0xe8);
+        if(status[0]|status[1])return 0;
+    } else for(unsigned i=0;i<8;i++)if(unit[0xe8+i])return 0;
+    if(((unsigned (*)(const uint8_t *))0x080cd50du)(unit)>=128 ||
+       ((unsigned (*)(const uint8_t *))0x080cd4d5u)(unit)>=128)return 0;
+    const uint8_t *state=ffta_job_state((uint8_t *)unit);
+    if(state) {
+        unsigned bits=0;
+        for(unsigned i=0;i<12;i++)bits|=state[i];
+        bits|=state[15]|state[16]|state[17]|state[18]|(state[19]&7u);
+        for(unsigned i=20;i<FFTA_JOB_RECORD_BYTES;i++)bits|=state[i];
+        if(bits)return 0;
+    }
+    const uint8_t *exposed=ffta_owned_exposed((uint8_t *)unit);
+    const uint8_t *wound=ffta_owned_wound((uint8_t *)unit);
+    if((exposed && *exposed) || (wound && (wound[0]|wound[1])))return 0;
+    extern unsigned ffta_geo_refuge(const uint8_t *);
+    return !ffta_geo_refuge(unit);
+#else
+    (void)unit;return 0;
+#endif
+}
+enum { CAPTURE_FULL, CAPTURE_PLAIN, CAPTURE_INHERITED };
+static void record(FFTA_ActionSnapshot *s,const uint8_t *unit,unsigned value,unsigned plain) {
     if(!unit)return;
     int i=find(s,unit);
     if(i<0) {
         if(s->count==64)return;
         i=(int)s->count++;
         s->units[i].hp_lost=0;s->units[i].claims=0;
-        extra_set(s,(unsigned)i,ffta_additional_extra_snapshot_flags?ffta_additional_extra_snapshot_flags(unit):0);
-        extension_set(s,(unsigned)i,ffta_additional_extension_snapshot_flags?ffta_additional_extension_snapshot_flags(unit):0);
+        if(plain!=CAPTURE_INHERITED) {
+            unsigned extra=!plain && ffta_additional_extra_snapshot_flags?ffta_additional_extra_snapshot_flags(unit):0;
+            unsigned extension=!plain && ffta_additional_extension_snapshot_flags?ffta_additional_extension_snapshot_flags(unit):0;
+            unsigned medicine=0;
 #if FFTA_CHEMIST_PROGRESSION
-    cp_set(s,(unsigned)i,ffta_cp_flags(unit)|ffta_cp_spotter_adjacency(s->actor,unit));
+            medicine=(plain?0:ffta_cp_flags(unit))|ffta_cp_spotter_adjacency(s->actor,unit);
 #endif
+            /* Providers have finished before borrowing a pool view. Keep one
+             * ownership check for this record's three disjoint flag arrays. */
+            ExtraView v=extra_slot(s,(extra|extension|medicine)!=0);
+            if(v.extra)v.extra->flags[i]=extra;
+            if(v.extension && !(extension&~0x003f03ffu))
+                v.extension[i]=(uint16_t)((extension&1023u)|((extension>>6)&0xfc00u));
+            if(v.medicine)v.medicine[i]=medicine;
+        }
     }
     s->units[i].unit=unit;s->units[i].flags=value;
 }
@@ -192,7 +262,11 @@ unsigned ffta_snapshot_begin(FFTA_ActionSnapshot *s,const uint8_t *actor,const u
     s->post_cost_hp=same_action?previous->post_cost_hp:0;
     s->post_cost_mp=same_action?previous->post_cost_mp:0;
     s->actor=actor;s->result_object=0;
-    const uint8_t *units[36];unsigned count=0,enabled=battle || previous!=0;
+    /* A neutral query is still a valid frozen snapshot. Dropping it makes
+     * each damage factor rediscover the same empty providers, including heap
+     * ownership and terrain scans. Keep the already-captured values for the
+     * query's exact lifetime; copies still inherit through snapshot_copy. */
+    const uint8_t *units[36];unsigned count=0,enabled=battle || previous!=0 || FFTA_CHEMIST_PROGRESSION;
     if(battle) {
         uint8_t *manager=*(uint8_t **)0x0200f4b0u;
         if(manager) {
@@ -205,24 +279,28 @@ unsigned ffta_snapshot_begin(FFTA_ActionSnapshot *s,const uint8_t *actor,const u
         const uint8_t *unit=i<count?units[i]:(i==count?actor:target);
         if(!unit)continue;
         int inherited=same_action?find(previous,unit):-1;
-        unsigned value=inherited>=0?previous->units[inherited].flags:flags(unit);
-        if(unit==actor)value|=4u;
-        record(s,unit,value);enabled|=value&(34u|FFTA_ACTION_FLAG_JOB_MASK);
-        enabled|=extra_get(s,(unsigned)find(s,unit));
-        enabled|=extension_get(s,(unsigned)find(s,unit));
 #if FFTA_CHEMIST_PROGRESSION
-    enabled|=cp_get(s,(unsigned)find(s,unit));
+        FFTA_UnitReadScope read;
+        if(inherited<0)ffta_unit_read_begin(&read,unit);
 #endif
+        unsigned plain=inherited<0 && plain_unit(unit);
+        unsigned value=inherited>=0?previous->units[inherited].flags:plain?((unsigned)unit[0x29]>>7)*128u:flags(unit);
+        if(unit==actor)value|=4u;
+        record(s,unit,value,inherited>=0?CAPTURE_INHERITED:plain);enabled|=value&(34u|FFTA_ACTION_FLAG_JOB_MASK);
+        unsigned at=(unsigned)find(s,unit);
+        ExtraView view=extra_slot(s,0);
+        if(view.extra)enabled|=view.extra->flags[at];
+        if(view.extension)enabled|=view.extension[at];
+        if(view.medicine)enabled|=view.medicine[at];
         if(inherited>=0) {
             int at=find(s,unit);
             s->units[at].hp_lost=previous->units[inherited].hp_lost;
             s->units[at].claims=previous->units[inherited].claims;
-            extra_set(s,(unsigned)at,extra_get(previous,(unsigned)inherited));
-            extension_set(s,(unsigned)at,extension_get(previous,(unsigned)inherited));
-#if FFTA_CHEMIST_PROGRESSION
-    cp_set(s,(unsigned)at,cp_get(previous,(unsigned)inherited));
-#endif
+            inherit_flags(s,(unsigned)at,previous,(unsigned)inherited);
         }
+#if FFTA_CHEMIST_PROGRESSION
+        if(inherited<0)ffta_unit_read_end(&read);
+#endif
     }
     if(!enabled) { s->self=0;s->previous=0;s->count=0;return 0; }
     s->magic=MAGIC;*ACTIVE=s;return 1;
@@ -231,17 +309,39 @@ void ffta_snapshot_end(FFTA_ActionSnapshot *s) {
     if(!s || current()!=s)return;
     extra_release(s);
     *ACTIVE=s->previous;
-    for(unsigned i=0;i<sizeof(*s);++i)((uint8_t *)s)[i]=0;
+    _Static_assert(sizeof(*s)%4u==0,"aligned snapshot clearing");
+    ffta_zero_aligned(s,sizeof(*s));
+}
+unsigned ffta_action_neutral_query(const uint8_t *actor,const uint8_t *target) {
+#if FFTA_CHEMIST_PROGRESSION
+    FFTA_ActionSnapshot *s=current();
+    /* Native spell AI also calls its final damage stage without opening a
+     * snapshot. Prove neutrality from current owned records in that case.
+     * This is never a fallback for a missing unit in an active snapshot. */
+    if(!s)return (!actor || plain_unit(actor)) && (!target || plain_unit(target)) &&
+        (!actor || !target || !ffta_cp_spotter_adjacency(actor,target));
+    if(!actor || !target)return 0;
+    if(s->phase!=FFTA_ACTION_QUERY)return 0;
+    int a=find(s,actor),t=find(s,target);
+    if(a<0 || t<0 || ((s->units[a].flags|s->units[t].flags)&~0x184u))return 0;
+    ExtraView v=extra_slot(s,0);
+    return !v.extra || !(v.extra->flags[a]|v.extra->flags[t]|
+        (v.extension?(v.extension[a]|v.extension[t]):0)|
+        (v.medicine?(v.medicine[a]|v.medicine[t]):0));
+#else
+    (void)actor;(void)target;return 0;
+#endif
 }
 void ffta_snapshot_copy(uint8_t *destination,const uint8_t *source) {
     FFTA_ActionSnapshot *s=current();
     if(!s || !destination || !source)return;
     int i=find(s,source);
-    record(s,destination,i>=0?s->units[i].flags:flags(source));
+    record(s,destination,i>=0?s->units[i].flags:flags(source),i>=0?CAPTURE_INHERITED:CAPTURE_FULL);
     int d=find(s,destination);
     if(d>=0) {
         s->units[d].hp_lost=i>=0?s->units[i].hp_lost:0;
         s->units[d].claims=i>=0?s->units[i].claims:0;
+        if(i>=0) {inherit_flags(s,(unsigned)d,s,(unsigned)i);return;}
         extra_set(s,(unsigned)d,i>=0?extra_get(s,(unsigned)i):(ffta_additional_extra_snapshot_flags?ffta_additional_extra_snapshot_flags(source):0));
         extension_set(s,(unsigned)d,i>=0?extension_get(s,(unsigned)i):(ffta_additional_extension_snapshot_flags?ffta_additional_extension_snapshot_flags(source):0));
 #if FFTA_CHEMIST_PROGRESSION
@@ -577,7 +677,7 @@ void ffta_snapshot_native_reaction(const uint8_t *frame) {
     int i=find(s,unit);
     unsigned value=i>=0?s->units[i].flags:flags(unit);
     unsigned reaction=*(const unsigned *)(frame+0x30c);
-    record(s,unit,(value&~24u)|8u|(reaction==13?16u:0));
+    record(s,unit,(value&~24u)|8u|(reaction==13?16u:0),0);
     if(ffta_additional_before_fight)ffta_additional_before_fight(s->actor,(uint8_t *)unit);
 }
 extern void ffta_on_unit_copy(uint8_t *,uint8_t *,unsigned);
@@ -585,7 +685,6 @@ void ffta_snapshotted_unit_copy(uint8_t *destination,uint8_t *source,unsigned le
     ffta_on_unit_copy(destination,source,length);
     if(length==264)ffta_snapshot_copy(destination,source);
 }
-extern unsigned ffta_evaluated_init(void *,const uint8_t *);
 unsigned ffta_snapshotted_evaluated_init(void *destination,const uint8_t *source) {
     unsigned result=ffta_evaluated_init(destination,source);
     if(result)ffta_snapshot_copy(destination,source);
@@ -611,7 +710,6 @@ static void forget(uintptr_t first,uintptr_t last) {
         s=s->previous;
     }
 }
-extern void ffta_evaluated_close(void *);
 void ffta_snapshotted_evaluated_close(void *unit) {
     ffta_evaluated_close(unit);
     forget((uintptr_t)unit,(uintptr_t)unit+1);

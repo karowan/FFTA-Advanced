@@ -9,7 +9,7 @@ guard=bytes([0xD7])*0xbc
 chemist_progression='--chemist-progression' in sys.argv
 vanilla='--vanilla' in sys.argv
 assert not (vanilla and chemist_progression), 'Choose vanilla or expansion ownership'
-guard_start=0x3ff88 if chemist_progression else 0x3ff44
+guard_start=0x3ff8c if chemist_progression else 0x3ff44
 snapshots=[]
 OUT=ROOT/'build/expansion/probes/battle-fixture'
 expected_heap_end=int(sys.argv[sys.argv.index('--heap-end')+1],0) if '--heap-end' in sys.argv else 0x0203f800
@@ -31,7 +31,7 @@ def capture(label):
   # expansion-only canaries or require an expansion allocation boundary.
   pass
  elif chemist_progression:
-  # Schema3 owns ff60..ff87. The expanded inventory legitimately reaches
+  # Schema3 plus the scoped read root owns ff60..ff8b. The inventory reaches
   # ff57; the former ff44 guard would overwrite that inventory and roots.
   assert ram[guard_start:]==bytes([0xD7])*(0x40000-guard_start),('Schema3 reserved guard changed',label)
  else:

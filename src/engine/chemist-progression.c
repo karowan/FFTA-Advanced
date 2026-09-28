@@ -255,10 +255,26 @@ void ffta_cp_action_event(const uint8_t *u,unsigned action,unsigned event){
 }
 unsigned ffta_cp_trap_at(const uint8_t *u,unsigned x,unsigned y){
  if(!u||x>=16||y>=16)return 0;
- uint8_t *peers[36];unsigned n=ffta_job_peers((uint8_t *)u,peers,36);
+ extern unsigned ffta_geo_field_canonical(const uint8_t *);
+ unsigned canonical=ffta_geo_field_canonical(u);
+ FFTA_JobCohort view;
+ const uint8_t *record;
+ unsigned n,stride;
+ if(canonical){
+  record=ffta_job_state((uint8_t *)0x02000080u);
+  if(!record)return 0;
+  n=36;stride=FFTA_JOB_RECORD_BYTES;
+ }else{
+  if(!ffta_job_copied_cohort((uint8_t *)u,&view))return 0;
+  record=view.records;n=view.count;stride=view.record_stride;
+ }
+ /* Each tile query sees current values in its exact owned cohort. Test the
+  * trap bytes first; ordinary empty records need no unit/provider lookups. */
  for(unsigned i=0;i<n;i++){
-  const uint8_t *s=ffta_job_state(peers[i]);
-  if(s && alive(peers[i]) && hostile(peers[i],u) && active((s[23]>>3)&7u) && s[25]==(x|(y<<4)))return ffta_job_origin(peers[i]);
+  const uint8_t *s=record+i*stride;
+  if(!active((s[23]>>3)&7u) || s[25]!=(x|(y<<4)))continue;
+  const uint8_t *peer=canonical?(const uint8_t *)(i<24?0x02000080u+i*264u:0x02002fc4u+(i-24)*264u):view.units+i*264u;
+  if(alive(peer) && hostile(peer,u))return canonical?i+1:ffta_job_origin(peer);
  }
  return 0;
 }

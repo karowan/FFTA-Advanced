@@ -5,6 +5,7 @@ terrain and fixed formation. Observe every video frame, including during input
 holds. The elapsed emulated frames include time spent in hooks and VBlank, but
 exclude movement/attack animation after the planner publishes phase 8.
 """
+from contextlib import ExitStack
 import ctypes as C
 import hashlib
 import json
@@ -16,6 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from chemist_candidate import candidate, ROOT
 from native_battle_wrappers import from_emulator, fixed_giza_formation
+from ai_planner_seed import PlannerSeed, BOUNDARY
 
 BASE = ROOT / 'build/expansion/ai-timing'
 index = json.loads((BASE / 'fixtures.json').read_text())
@@ -51,7 +53,7 @@ def result(status, error=None):
     report = dict(status=status, error=error, scope=__doc__, fixtureDirectory=str(FIX),
                   skillProfile='original starting mastery' if STARTING else 'fully learned primary job',
                   coreSha256=hashlib.sha256((ROOT / 'tools/mgba-test-core/mgba_libretro.dll').read_bytes()).hexdigest(),
-                  fps=FPS, seeds=SEEDS, records=rows, inputs=inputs, pins=pins)
+                  fps=FPS, seeds=SEEDS, seedBoundary=BOUNDARY, records=rows, inputs=inputs, pins=pins)
     if status == 'completed':
         report['summary'] = {}
         for name in ('vanilla', 'mod'):
@@ -75,7 +77,7 @@ try:
                 image = path.read_bytes()
                 proof = json.loads((FIX / build / 'report.json').read_text())
                 assert hashlib.sha1(image).hexdigest() == proof['romSha1']
-                with E(path) as e:
+                with E(path) as e, ExitStack() as seed_scope:
                     e.load(FIX / build / 'battle-ready.state')
                     wrappers = from_emulator(image, e)
                     fixed_giza_formation(image, e)
@@ -103,6 +105,7 @@ try:
                     activated = started = finished = None
                     canonical_hash = None
                     available_actions = None
+                    planner_seed = None
                     prior = None
                     for frame in range(20000):
                         r = e.memory()
@@ -136,7 +139,11 @@ try:
                                 # statuses, native flags, equipment and positions.
                                 canonical_hash = hashlib.sha256(b''.join(r[u+2:u+264] for u in sorted(wrappers))).hexdigest()
                                 checkpoint(e, folder, 'planning-start')
+                                planner_seed = PlannerSeed(e, seed)
+                                seed_scope.enter_context(planner_seed)
                             if phase == 1 and available_actions is None:
+                                seed_scope.close()
+                                assert len(planner_seed.pins)==1, 'Exactly one native constructor seed'
                                 base = word(r,0x101f8)-0x02000000
                                 assert 0<=base<0x3a000
                                 count=half(r,base+0x58)
@@ -158,6 +165,7 @@ try:
                         activationFrame=activated,planningStartFrame=started,choiceFrame=finished,
                         decisionFrames=finished-started,activationToChoiceFrames=finished-activated,
                         canonicalInputSha256=canonical_hash,availableActions=available_actions,
+                        seedPins=planner_seed.pins,
                         action=half(r,0x156b6),choice=half(r,0x156b8),success=r[0x15639],
                         trace=trace,folder=str(folder))
                     rows.append(row)

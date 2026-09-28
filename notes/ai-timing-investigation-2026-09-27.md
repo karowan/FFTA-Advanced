@@ -1,5 +1,13 @@
 # AI timing regression and v0.7.7 optimization
 
+**Later benchmark correction:** the measurements below preserve the historical
+frame-sampled phase-zero seed procedure. Current tests pin the same declared
+seed once at native candidate-constructor entry, because changing hook costs
+can move a main-loop RNG advance across the earlier sample. The planning timer
+still begins at phase zero; all locked vanilla frame counts remain identical.
+See the [fully learned follow-up](ai-under-four-seconds-2026-09-28.md) for the
+trace evidence, current procedure and final local candidate.
+
 The v0.7.6 baseline had a substantial AI planning regression in these controlled
 comparisons. With original starting abilities, mean planning time was **1.193 s
 in vanilla and 4.353 s in v0.7.6 (3.65 times as long)**. With fully learned primary

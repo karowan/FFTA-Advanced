@@ -120,6 +120,8 @@ unsigned ffta_action_hp_lost(const uint8_t *);
 void ffta_action_note_hp_loss(uint8_t *,unsigned,unsigned);
 unsigned ffta_snapshot_begin(FFTA_ActionSnapshot *,const uint8_t *,const uint8_t *,unsigned);
 void ffta_snapshot_end(FFTA_ActionSnapshot *);
+/* Exact captured units, QUERY only; all expansion modifier banks are empty. */
+unsigned ffta_action_neutral_query(const uint8_t *,const uint8_t *);
 /* Lend/return a root result-bank frame (snapshot-lend.c); zero when none. */
 FFTA_ActionSnapshot *ffta_snapshot_lend(uintptr_t *token);
 void ffta_snapshot_return(uintptr_t *token);
