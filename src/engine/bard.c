@@ -73,14 +73,16 @@ uint8_t *ffta_bard_buff_apply(uint8_t *c){
 }
 unsigned ffta_bard_outgoing(const uint8_t *a,const uint8_t *t,unsigned action,unsigned physical){
     if(!a||!t||ffta_action_origin()==FFTA_ACTION_NATIVE_REACTION||ffta_action_origin()==FFTA_ACTION_EXPLICIT_COMBO)return 50;
+    unsigned base=ffta_action_unit_extra_flags_masked(a,physical?FFTA_BARD_MARCH:FFTA_BARD_INSPIRED)?6:5;
+    unsigned factor=base*(physical?10:ffta_bard_magick_numerator(a,action));
+    if(factor==50)return 50; /* MP interception cannot change a neutral factor. */
     unsigned tf=ffta_action_unit_flags_masked(t,24u);
     /* Match the established HP-versus-MP interception contract. */
     if((tf&24u)==24u)return 50;
     if(!(tf&8u) && a!=t && action!=265 && ((unsigned (*)(const uint8_t *))0x0812e6a5u)(t)==13 &&
        ((unsigned (*)(const uint8_t *,unsigned))0x080c7ea5u)(t,0x15) &&
        (!action || !((unsigned (*)(unsigned,unsigned))0x080ccd51u)(action,17)))return 50;
-    unsigned base=ffta_action_unit_extra_flags_masked(a,physical?FFTA_BARD_MARCH:FFTA_BARD_INSPIRED)?6:5;
-    return base*(physical?10:ffta_bard_magick_numerator(a,action));
+    return factor;
 }
 
 /* A native status row assigns value even to an already present effect; its

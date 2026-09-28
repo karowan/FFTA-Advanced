@@ -242,7 +242,7 @@ unsigned ffta_integrated_direct_kind(const uint8_t *context) {
     return ((unsigned (*)(unsigned,unsigned))0x080ccd51u)(action,28) &&
         (d[3]==30 || d[3]==39 || d[3]==43)?2:0;
 }
-static int physical(int damage,const uint8_t *actor,const uint8_t *target,unsigned action,unsigned *deferred_barrier) {
+static int physical(int damage,const uint8_t *actor,const uint8_t *target,unsigned action,unsigned *deferred_barrier,unsigned need_barrier) {
     if(damage<=0) {
         if(deferred_barrier)*deferred_barrier=0;
         else ffta_integrated_barrier_candidate(actor,target,action,0);
@@ -252,7 +252,12 @@ static int physical(int damage,const uint8_t *actor,const uint8_t *target,unsign
         ffta_poise_hp_factor(actor,target,action)*ffta_blade_ward_factor(actor,target)*
         ffta_drk_outgoing_numerator(actor,target,action,1)*ffta_integrated_incoming_numerator(actor,target,action,1)*
         ffta_viking_outgoing_numerator(actor,target,action)*ffta_bard_outgoing(actor,target,action,1)*ffta_turn_damage_numerator(actor,target,action,1);
-    unsigned pre_barrier=(unsigned)ffta_dancer_scaled(result*2u,128000000000ULL,actor,target,action,1);
+    /* A pure forecast discards the barrier-consumption ledger. Computing its
+     * second complete modifier chain only to discard it doubles that work.
+     * Real Fight can run inside a child QUERY and publish after it closes:
+     * its caller must explicitly retain the deferred amount (need_barrier=1).
+     * Do not infer that case from the child's current phase. */
+    unsigned pre_barrier=need_barrier?(unsigned)ffta_dancer_scaled(result*2u,128000000000ULL,actor,target,action,1):0;
     if(deferred_barrier)*deferred_barrier=pre_barrier;
     else ffta_integrated_barrier_candidate(actor,target,action,pre_barrier);
     result=ffta_dancer_scaled(result,128000000000ULL,actor,target,action,1);
@@ -267,12 +272,15 @@ int ffta_integrated_exposed_native_stage(int damage,const uint8_t *context) {
     const uint8_t *target=*(const uint8_t *const *)(context+8);
     if(damage<=0) { ffta_integrated_barrier_candidate(actor,target,action,0);return damage; }
     unsigned kind=ffta_integrated_direct_kind(context);
-    if(kind==1)return physical(damage,actor,target,action,0);
+    if(kind==1)return physical(damage,actor,target,action,0,ffta_action_phase()==FFTA_ACTION_RESULT);
     if(kind!=2) { ffta_integrated_barrier_candidate(actor,target,action,0);return damage; }
     uint64_t product=(uint64_t)(unsigned)damage*ffta_poise_hp_factor(actor,target,action)*
         ffta_drk_outgoing_numerator(actor,target,action,0)*ffta_integrated_incoming_numerator(actor,target,action,0)*
         ffta_viking_outgoing_numerator(actor,target,action)*ffta_bard_outgoing(actor,target,action,0)*ffta_turn_damage_numerator(actor,target,action,0);
-    ffta_integrated_barrier_candidate(actor,target,action,(unsigned)ffta_dancer_scaled(product*2u,1280000000ULL,actor,target,action,0));
+    /* Outside RESULT both barrier_candidate and the scaler's CP candidate
+     * publication are no-ops. The actual damage calculation still runs. */
+    if(ffta_action_phase()==FFTA_ACTION_RESULT)
+        ffta_integrated_barrier_candidate(actor,target,action,(unsigned)ffta_dancer_scaled(product*2u,1280000000ULL,actor,target,action,0));
     return (int)ffta_dancer_scaled(product,1280000000ULL,actor,target,action,0);
 }
 extern int ffta_integrated_original_exposed_preview(const uint8_t *,const uint8_t *,unsigned,unsigned,unsigned,unsigned);
@@ -297,7 +305,7 @@ static int bank_preview(const uint8_t *actor,const uint8_t *target,unsigned acti
          * A native cap can make this conservative, which is safe for a warning. */
         if(minimum && damage>0)damage-=damage/10;
         unsigned ignored_barrier=0;
-        if(!action)damage=physical(damage,actor,target,0,&ignored_barrier);
+        if(!action)damage=physical(damage,actor,target,0,&ignored_barrier,0);
         if(opened)ffta_snapshot_end(snapshot);
         else for(unsigned j=0;j<sizeof(*snapshot);j++)((uint8_t *)snapshot)[j]=0;
         bank[i].token=0;return damage;
@@ -319,6 +327,9 @@ int ffta_integrated_exposed_preview(const uint8_t *actor,const uint8_t *target,u
      * 820-byte local snapshot left no room for the native audio interrupt and
      * overwrote resident renderer code. Use the same eight owned bank slots
      * as other forecasts, retaining this path's deferred barrier publication. */
+    /* Capture the enclosing consumer before opening the child QUERY. Only
+     * a real Fight RESULT can consume the deferred amount after it closes. */
+    unsigned need_barrier=ffta_action_phase()==FFTA_ACTION_RESULT && ffta_action_id()==0;
     typedef struct { uintptr_t *token;FFTA_ActionSnapshot frame; } Storage;
     _Static_assert(sizeof(Storage)==824,"Result forecast bank stride");
     extern unsigned ffta_additional_workspace_prepare(void);
@@ -331,7 +342,7 @@ int ffta_integrated_exposed_preview(const uint8_t *actor,const uint8_t *target,u
         int damage=ffta_integrated_original_exposed_preview(actor,target,action,item,index,mode);
         if(action && mode==2)damage=ffta_myk_shell_preview(damage,actor,target,action,item,index,mode,0);
         unsigned pre_barrier=0;
-        if((uint16_t)action==0)damage=physical(damage,actor,target,(uint16_t)action,&pre_barrier);
+        if((uint16_t)action==0)damage=physical(damage,actor,target,(uint16_t)action,&pre_barrier,need_barrier);
         if(opened)ffta_snapshot_end(snapshot);
         bank[i].token=0;
         /* Publish only to the enclosing real result after retiring the query. */

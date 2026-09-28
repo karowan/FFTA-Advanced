@@ -136,7 +136,13 @@ for race,count,job in ((1,178,115),(2,111,118),(3,134,126),(4,118,125),(5,126,12
                 ('ffta_viking_outgoing_numerator',(unit,0x02000188,0)),
                 ('ffta_drk_outgoing_numerator',(unit,0x02000188,0,1)),
                 ('ffta_bard_magick_numerator',(unit,23)),
-                ('ffta_turn_damage_numerator',(unit,0x02000188,0,1))):
+                ('ffta_turn_damage_numerator',(unit,0x02000188,0,1)),
+                *[(name,args) for action in (0,1,23,265,463) for physical in (0,1)
+                  for name,args in (
+                    ('ffta_drk_outgoing_numerator',(unit,0x02000188,action,physical)),
+                    ('ffta_drk_incoming_numerator',(unit,0x02000188,action,physical)),
+                    ('ffta_bard_outgoing',(unit,0x02000188,action,physical)),
+                    ('ffta_turn_damage_numerator',(unit,0x02000188,action,physical)))]):
                 expected=old.call(old_meta['symbols'][name],*args)
                 check('factor-equivalence-'+name,call(name,*args),expected)
                 outcomes[name].add(expected)

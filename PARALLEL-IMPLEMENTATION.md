@@ -24,6 +24,12 @@ workload and allows at most 5% above each reviewed decision; investigate a
 failure instead of automatically raising its budget. This guards the measured
 improvement, not vanilla parity or unmeasured campaign cases.
 
+Skip consumption-ledger calculations in pure forecasts only when their values
+have no consumer. Capture the enclosing RESULT before opening a child QUERY:
+native Fight can defer publication until that child closes. Verify actual
+barrier consumption on hits and retention on misses, in addition to forecast
+equivalence. See the [post-release timing follow-up](notes/ai-timing-followup-2026-09-28.md).
+
 ## Current release path
 
 [MOD-RELEASE.md](MOD-RELEASE.md) defines the build/share/play workflow. Build with

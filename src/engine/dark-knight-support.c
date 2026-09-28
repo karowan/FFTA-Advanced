@@ -41,17 +41,20 @@ static unsigned hp_payable(const uint8_t *actor,const uint8_t *target,unsigned a
         (!action || !((unsigned (*)(unsigned,unsigned))0x080ccd51u)(action,17)));
 }
 unsigned ffta_drk_outgoing_numerator(const uint8_t *actor,const uint8_t *target,unsigned action,unsigned physical) {
-    if(!actor || !target || ffta_action_origin()==FFTA_ACTION_NATIVE_REACTION ||
-       !hp_payable(actor,target,action))return 8;
+    if(!actor || !target || ffta_action_origin()==FFTA_ACTION_NATIVE_REACTION)return 8;
     unsigned flags=ffta_action_unit_flags_masked(actor,FFTA_ACTION_FLAG_DESPERATION|FFTA_ACTION_FLAG_DESPERATION_ACTIVE|FFTA_DRK_LAST_RESORT),active=0;
     if(flags&FFTA_ACTION_FLAG_DESPERATION) {
         active=flags&FFTA_ACTION_FLAG_DESPERATION_ACTIVE;
         if(ffta_action_phase()==FFTA_ACTION_QUERY)active=low(actor,ffta_drk_hp_cost(actor,action));
     }
-    return (active?3u:2u)*((physical && (flags&FFTA_DRK_LAST_RESORT))?5u:4u);
+    unsigned factor=(active?3u:2u)*((physical && (flags&FFTA_DRK_LAST_RESORT))?5u:4u);
+    /* A neutral factor stays neutral whether native damage is HP or MP.
+     * Read the actual frozen/live effects first; job identity is not enough
+     * because these buffs and supports can be carried by other classes. */
+    return factor==8 || hp_payable(actor,target,action)?factor:8;
 }
 unsigned ffta_drk_incoming_effects(const uint8_t *actor,const uint8_t *target,unsigned action,unsigned physical,unsigned removed) {
-    if(!actor || !target || !hp_payable(actor,target,action))return 40;
+    if(!actor || !target)return 40;
     unsigned a=ffta_action_unit_flags_masked(actor,0x180u),t=ffta_action_unit_flags_masked(target,0x184u|FFTA_DRK_LAST_RESORT|FFTA_DRK_TBN|(1u<<27))&~removed;
     unsigned reaction=ffta_action_origin()==FFTA_ACTION_NATIVE_REACTION;
     unsigned enemy=actor!=target && !(t&4u) && ((((a>>7)^(a>>8))&1u)!=((t>>7)&1u));
@@ -59,7 +62,8 @@ unsigned ffta_drk_incoming_effects(const uint8_t *actor,const uint8_t *target,un
     unsigned ward=!reaction && enemy && (t&FFTA_DRK_TBN)?1u:2u;
     unsigned dark=!physical && !reaction && enemy && (t&(1u<<27)) &&
         (ffta_action_phase()!=FFTA_ACTION_RESULT || ffta_action_reactions_enabled())?3u:4u;
-    return last*ward*dark;
+    unsigned factor=last*ward*dark;
+    return factor==40 || hp_payable(actor,target,action)?factor:40;
 }
 unsigned ffta_drk_incoming_numerator(const uint8_t *actor,const uint8_t *target,unsigned action,unsigned physical) {
     return ffta_drk_incoming_effects(actor,target,action,physical,0);

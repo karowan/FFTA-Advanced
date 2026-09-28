@@ -216,6 +216,7 @@ unsigned ffta_cp_rider(const uint8_t *c){
 }
 static unsigned spotter(const uint8_t *a,const uint8_t *t,unsigned id){
  unsigned f=ffta_action_cp_combat_flags(a),origin=ffta_action_origin();
+ if((f&(FFTA_CP_SPOTTER|FFTA_CP_FORCED))!=FFTA_CP_SPOTTER)return 0;
  if(!a||!t||!hostile(a,t)||distance(a,t)<=1||id>=460 || id==265 ||
     origin==FFTA_ACTION_NATIVE_REACTION || origin==FFTA_ACTION_EXPLICIT_COMBO ||
     (ffta_action_category()&FFTA_ACTION_ITEM))return 0;

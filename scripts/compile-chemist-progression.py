@@ -58,6 +58,12 @@ def main():
  shutil.copyfile(Path(menu['header']['path']),OUT/'job-icons.h')
  combat=(work/'combat.c').read_text().replace('item>460','item>470')
  combat='#include "chemist-progression.h"\n'+combat
+ # The composed custom-physical finalizer has the same discarded forecast
+ # ledger as integrated-jobs.c. Gate only that second calculation. Actual
+ # RESULT publication and the ordinary, once-rounded damage stay unchanged.
+ barrier='    ffta_integrated_barrier_candidate(actor,target,action,\n'
+ assert combat.count(barrier)==1,'Custom physical barrier call changed'
+ combat=combat.replace(barrier,'    if(ffta_action_phase()==FFTA_ACTION_RESULT)\n'+barrier)
  combat=combat.replace('if(ffta_myk_action(action))return ffta_myk_magnitude(context);','if(action>=453 && action<=459)return ffta_cp_magnitude(context);\n    if(ffta_myk_action(action))return ffta_myk_magnitude(context);')
  (OUT/'combat.c').write_text(combat)
  # Preserve the native badge decoder behind the already-installed hook.
