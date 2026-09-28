@@ -134,6 +134,17 @@ acceptance gate once at integration, then package through its adapter. See the
 [Physician/Sapper checkpoint](notes/chemist-progression-implementation.md) for
 the exact build order and covered consumers.
 
+For additive shop changes, compare the installed Buy entry with clean-ROM
+ordinary and town stock at the 9/10 and 19/20 battle boundaries and independent
+story flags. Test prices after town/clan discounts and real purchase commits,
+including the highest added item ID. Keep each item's lesson gate separate
+from its weapon strength, and prevent later shipments becoming cheaper when
+raising earlier prices. The [shop update](notes/shop-progression-2026-09-28.md)
+documents the final overlay, bounded compiler, exact parent and targeted plan.
+Apply that price overlay after the historical content builders; regenerating
+the old registry alone restores the old prices. Rebase its authenticated
+parent explicitly when composing a later candidate.
+
 ## Native artwork
 
 For a new class, start with the [executable new-job art runbook](NEW-JOB-ART-RUNBOOK.md).

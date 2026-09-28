@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "candidateManifest": "build/expansion/shop-progression/current.json",
+  "description": "Shop-only update on the retained AI-speed baseline; no player save or live game is touched.",
+  "scope": "Native stock boundaries, original merchandise, all 95 teacher prices and purchases, real-core shop menus and existing Physician/Sapper learning. Combat is unchanged byte-for-byte outside shop entry, new code reservation and teacher price fields.",
+  "timeoutSeconds": 600,
+  "steps": [
+    {"id":"shop-progression-native","runtime":"python","kind":"runtime","suites":["shop"],"args":["scripts/test-shop-progression.py"]},
+    {"id":"shop-progression-ui","runtime":"python","kind":"runtime","suites":["shop"],"args":["scripts/test-shop-progression-ui.py"]},
+    {"id":"shop-progression-learning","runtime":"python","kind":"runtime","suites":["shop"],"args":["scripts/test-chemist-progression-learning.py"]}
+  ]
+}

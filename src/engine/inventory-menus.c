@@ -100,14 +100,17 @@ unsigned ffta_shop_buy_list(uint8_t *destination,unsigned tab,unsigned tier_key,
         stock_entry(destination+count*4,id);++count;
     }
     // special_key is the native town identity (2 Cyril,3 Sprohm,4 Muscadet,
-    // 5 Cadoan,6 Baguba Port). Completion flags persist independently of the
-    // original battle/turf stock rules. Merely accepting a mission is not a
-    // completion and cannot satisfy this separate additive pass.
+    // 5 Cadoan,6 Baguba Port). First/second shipments catch up with the
+    // native 10/20-battle upgrades OR their existing story completion.
+    // Physician/Sapper share those same completion flags despite numbering
+    // their opening shipment S1. The final flag (786, Desert Patrol) remains
+    // story-only. Territory stock and merely accepted missions grant nothing.
     unsigned town=(uint8_t)special_key;
     if((uintptr_t)item_data(0)>=0x09000000u && tab==2 && town>=2 && town<=6)for(unsigned i=0;i<sizeof(ffta_stock)/sizeof(ffta_stock[0]);++i) {
         if(!(ffta_stock[i].towns&(1u<<town)))continue;
         unsigned flag=ffta_stock[i].flag;
-        if(flag&&!((OneArg)0x080c9541u)(flag))continue;
+        unsigned native_unlock=(flag==774u && tier>=1u) || (flag==780u && tier>=2u);
+        if(flag && !native_unlock && !((OneArg)0x080c9541u)(flag))continue;
         stock_entry(destination+count*4,ffta_stock[i].item);++count;
     }
     return count;
